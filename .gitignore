@@ -33,15 +33,3 @@ libs/
 *.ini
 
 **/webapp/**
-
-**/imgui/imgui-core/src/main/java/**
-**/imgui/imgui-teavm/src/main/java/**
-
-**/extensions/imlayout/imlayout-core/src/main/java/**
-**/extensions/imlayout/imlayout-teavm/src/main/java/**
-
-**/extensions/imgui-node-editor/nodeeditor-core/src/main/java/**
-**/extensions/imgui-node-editor/nodeeditor-teavm/src/main/java/**
-
-**/extensions/ImGuiColorTextEdit/textedit-core/src/main/java/**
-**/extensions/ImGuiColorTextEdit/textedit-teavm/src/main/java/**

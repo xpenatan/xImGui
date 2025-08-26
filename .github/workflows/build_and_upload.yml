@@ -340,6 +340,18 @@ jobs:
           name: teavm-natives
           path: ./imgui/imgui-build/build/c++/libs/
 
+      - name: Delete generated files
+        run: |
+          rm -rf imgui/imgui-core/src/main/java/*
+          rm -rf imgui/imgui-teavm/src/main/java/*
+          rm -rf extensions/imlayout/imlayout-core/src/main/java/*
+          rm -rf extensions/imlayout/imlayout-teavm/src/main/java/*
+          rm -rf extensions/imgui-node-editor/nodeeditor-core/src/main/java/*
+          rm -rf extensions/imgui-node-editor/nodeeditor-teavm/src/main/java/*
+          rm -rf extensions/ImGuiColorTextEdit/textedit-core/src/main/java/*
+          rm -rf extensions/ImGuiColorTextEdit/textedit-teavm/src/main/java/*
+          echo "Deleted generated files"
+
       - name: Generate ImGui classes
         run: ./gradlew :imgui:imgui-build:build_project
 
@@ -351,6 +363,17 @@ jobs:
 
       - name: Generate imgui-node-editor library
         run: ./gradlew :extensions:imgui-node-editor:nodeeditor-build:build_project
+
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "bot@github.com"
+
+      - name: Commit generated code
+        run: |
+          git add .
+          git commit -m "Commit generated code" || echo "No changes to commit"
+          git push origin HEAD
 
       - name: Upload Release to repository
         uses: nick-fields/retry@v3
