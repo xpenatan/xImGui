@@ -9,7 +9,6 @@ target/
 test-classes/
 war/
 gwt-unitCache/
-gen/
 dist/
 **/webapp/assets
 .gradle/
