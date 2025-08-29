@@ -138,8 +138,8 @@ public class ImGuiIO extends IDLBase {
     @org.teavm.jso.JSBody(params = {"addr"}, script = "var io = imgui.wrapPointer(addr, imgui.ImGuiIO); return imgui.ImHelper.prototype.containsIniFilename();")
     private static native boolean containsIniFilenameNATIVE(int addr);
 
-    public void SetFontTexID(long id) {
-        SetFontTexIDNATIVE((int) native_address, (int) id);
+    public void SetFontTexID(int id) {
+        SetFontTexIDNATIVE((int) native_address, id);
     }
 
     /*
