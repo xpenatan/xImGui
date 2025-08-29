@@ -46,6 +46,7 @@ include(":examples:basic:core")
 include(":examples:basic:desktop")
 include(":examples:basic:desktop-wgpu")
 include(":examples:basic:teavm")
+include(":examples:basic:teavm-wgpu")
 include(":examples:basic:android")
 
 include(":examples:imlayout:core")
@@ -87,5 +88,13 @@ include(":examples:imgui-node-editor:teavm")
 //        substitute(module("com.github.xpenatan.jParser:jParser-teavm")).using(project(":jParser:teavm"))
 //        substitute(module("com.github.xpenatan.jParser:loader-core")).using(project(":jParser:loader:loader-core"))
 //        substitute(module("com.github.xpenatan.jParser:loader-teavm")).using(project(":jParser:loader:loader-teavm"))
+//    }
+//}
+
+//includeBuild("E:\\Dev\\Projects\\java\\gdx-webgpu") {
+//    dependencySubstitution {
+//        substitute(module("io.github.monstroussoftware.gdx-webgpu:gdx-webgpu")).using(project(":gdx-webgpu"))
+//        substitute(module("io.github.monstroussoftware.gdx-webgpu:gdx-desktop-webgpu")).using(project(":backends:gdx-desktop-webgpu"))
+//        substitute(module("io.github.monstroussoftware.gdx-webgpu:gdx-teavm-webgpu")).using(project(":backends:gdx-teavm-webgpu"))
 //    }
 //}

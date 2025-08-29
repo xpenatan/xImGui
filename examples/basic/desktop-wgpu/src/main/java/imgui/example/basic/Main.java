@@ -15,7 +15,7 @@ public class Main {
         config.setTitle("WGPU ImGui Basic Example");
         config.enableGPUtiming = false;
         config.useVsync(false);
-        config.backendWebGPU = JWebGPUBackend.WGPU;
+        config.backendWebGPU = JWebGPUBackend.DAWN;
         new WgDesktopApplication(new ImGuiGame(), config);
     }
 }

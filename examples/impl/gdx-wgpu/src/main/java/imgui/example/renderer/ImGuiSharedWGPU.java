@@ -4,7 +4,7 @@ import com.badlogic.gdx.InputMultiplexer;
 import com.monstrous.gdx.webgpu.graphics.utils.WgScreenUtils;
 import imgui.ImGuiImpl;
 import imgui.gdx.ImGuiGdxInputMultiplexer;
-import imgui.gdx.ImGuiGdxWGPUImpl;
+import imgui.gdx.ImGuiGdxWebGPUImpl;
 
 public class ImGuiSharedWGPU implements ImGuiShared.ImGuiSharedInstance {
     @Override
@@ -14,7 +14,7 @@ public class ImGuiSharedWGPU implements ImGuiShared.ImGuiSharedInstance {
 
     @Override
     public ImGuiImpl createImpl() {
-        return new ImGuiGdxWGPUImpl();
+        return new ImGuiGdxWebGPUImpl();
     }
 
     @Override

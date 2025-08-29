@@ -139,7 +139,7 @@ public class ImGuiIO extends IDLBase {
     */
     private static native boolean containsIniFilenameNATIVE(long addr);
 
-    public void SetFontTexID(int id) {
+    public void SetFontTexID(long id) {
         SetFontTexIDNATIVE(native_address, id);
     }
 
@@ -151,7 +151,7 @@ public class ImGuiIO extends IDLBase {
         ImGuiIO* io = (ImGuiIO*)addr;
         io->Fonts->TexID = (ImTextureID)id;
     */
-    private static native void SetFontTexIDNATIVE(long addr, int id);
+    private static native void SetFontTexIDNATIVE(long addr, long id);
 
     public void UpdateKeyTyped(int c) {
         updateKeyTyped(native_address, c);
