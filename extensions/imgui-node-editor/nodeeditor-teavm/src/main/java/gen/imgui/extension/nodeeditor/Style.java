@@ -9,13 +9,13 @@ import gen.imgui.idl.IDLBase;
 
 public class Style extends IDLBase {
 
-    static public final Style NULL = Style.createInstance();
+    static public final Style NULL = Style.native_new();
 
-    static public final Style T_01 = Style.createInstance();
+    static public final Style T_01 = Style.native_new();
 
-    static public final Style T_02 = Style.createInstance();
+    static public final Style T_02 = Style.native_new();
 
-    static public final Style T_03 = Style.createInstance();
+    static public final Style T_03 = Style.native_new();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -27,7 +27,7 @@ public class Style extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static Style createInstance() {
+    public static Style native_new() {
         return new Style((byte) 0, (char) 0);
     }
 

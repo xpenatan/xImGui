@@ -9,13 +9,13 @@ import imgui.idl.IDLBase;
 
 public class VecVtxBuffer extends IDLBase {
 
-    static public final VecVtxBuffer NULL = VecVtxBuffer.createInstance();
+    static public final VecVtxBuffer NULL = VecVtxBuffer.native_new();
 
-    static public final VecVtxBuffer T_01 = VecVtxBuffer.createInstance();
+    static public final VecVtxBuffer T_01 = VecVtxBuffer.native_new();
 
-    static public final VecVtxBuffer T_02 = VecVtxBuffer.createInstance();
+    static public final VecVtxBuffer T_02 = VecVtxBuffer.native_new();
 
-    static public final VecVtxBuffer T_03 = VecVtxBuffer.createInstance();
+    static public final VecVtxBuffer T_03 = VecVtxBuffer.native_new();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -27,7 +27,7 @@ public class VecVtxBuffer extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static VecVtxBuffer createInstance() {
+    public static VecVtxBuffer native_new() {
         return new VecVtxBuffer((byte) 0, (char) 0);
     }
 

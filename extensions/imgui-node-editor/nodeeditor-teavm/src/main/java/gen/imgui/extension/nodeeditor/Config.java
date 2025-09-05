@@ -9,13 +9,13 @@ import gen.imgui.idl.IDLBase;
 
 public class Config extends IDLBase {
 
-    static public final Config NULL = Config.createInstance();
+    static public final Config NULL = Config.native_new();
 
-    static public final Config T_01 = Config.createInstance();
+    static public final Config T_01 = Config.native_new();
 
-    static public final Config T_02 = Config.createInstance();
+    static public final Config T_02 = Config.native_new();
 
-    static public final Config T_03 = Config.createInstance();
+    static public final Config T_03 = Config.native_new();
 
     public Config() {
         int addr = internal_native_create();
@@ -39,7 +39,7 @@ return imgui.getPointer(jsObj);
     /**
      * @return An empty instance without a native address
      */
-    public static Config createInstance() {
+    public static Config native_new() {
         return new Config((byte) 0, (char) 0);
     }
 

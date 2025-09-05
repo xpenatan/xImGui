@@ -11,13 +11,13 @@ public class ImGuiLastItemData extends IDLBase {
 
     private ImRect ImRect_TEMP_GEN_0;
 
-    static public final ImGuiLastItemData NULL = ImGuiLastItemData.createInstance();
+    static public final ImGuiLastItemData NULL = ImGuiLastItemData.native_new();
 
-    static public final ImGuiLastItemData T_01 = ImGuiLastItemData.createInstance();
+    static public final ImGuiLastItemData T_01 = ImGuiLastItemData.native_new();
 
-    static public final ImGuiLastItemData T_02 = ImGuiLastItemData.createInstance();
+    static public final ImGuiLastItemData T_02 = ImGuiLastItemData.native_new();
 
-    static public final ImGuiLastItemData T_03 = ImGuiLastItemData.createInstance();
+    static public final ImGuiLastItemData T_03 = ImGuiLastItemData.native_new();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -29,7 +29,7 @@ public class ImGuiLastItemData extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static ImGuiLastItemData createInstance() {
+    public static ImGuiLastItemData native_new() {
         return new ImGuiLastItemData((byte) 0, (char) 0);
     }
 
@@ -48,7 +48,7 @@ delete nativeObject;
         if (pointer == 0)
             return null;
         if (ImRect_TEMP_GEN_0 == null)
-            ImRect_TEMP_GEN_0 = ImRect.createInstance();
+            ImRect_TEMP_GEN_0 = ImRect.native_new();
         ImRect_TEMP_GEN_0.internal_reset(pointer, false);
         return ImRect_TEMP_GEN_0;
     }

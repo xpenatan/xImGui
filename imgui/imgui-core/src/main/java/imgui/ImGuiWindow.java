@@ -57,13 +57,13 @@ public class ImGuiWindow extends IDLBase {
 
     private ImRect ImRect_TEMP_GEN_3;
 
-    static public final ImGuiWindow NULL = ImGuiWindow.createInstance();
+    static public final ImGuiWindow NULL = ImGuiWindow.native_new();
 
-    static public final ImGuiWindow T_01 = ImGuiWindow.createInstance();
+    static public final ImGuiWindow T_01 = ImGuiWindow.native_new();
 
-    static public final ImGuiWindow T_02 = ImGuiWindow.createInstance();
+    static public final ImGuiWindow T_02 = ImGuiWindow.native_new();
 
-    static public final ImGuiWindow T_03 = ImGuiWindow.createInstance();
+    static public final ImGuiWindow T_03 = ImGuiWindow.native_new();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -75,7 +75,7 @@ public class ImGuiWindow extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static ImGuiWindow createInstance() {
+    public static ImGuiWindow native_new() {
         return new ImGuiWindow((byte) 0, (char) 0);
     }
 
@@ -104,7 +104,7 @@ return nativeObject->GetIDFromRectangle(*((ImRect* )r_abs_addr));
         if (pointer == 0)
             return null;
         if (ImRect_TEMP_GEN_0 == null)
-            ImRect_TEMP_GEN_0 = ImRect.createInstance();
+            ImRect_TEMP_GEN_0 = ImRect.native_new();
         ImRect_TEMP_GEN_0.internal_reset(pointer, false);
         return ImRect_TEMP_GEN_0;
     }
@@ -131,7 +131,7 @@ return nativeObject->CalcFontSize();
         if (pointer == 0)
             return null;
         if (ImRect_TEMP_GEN_1 == null)
-            ImRect_TEMP_GEN_1 = ImRect.createInstance();
+            ImRect_TEMP_GEN_1 = ImRect.native_new();
         ImRect_TEMP_GEN_1.internal_reset(pointer, false);
         return ImRect_TEMP_GEN_1;
     }
@@ -148,7 +148,7 @@ return (jlong)&copy_addr;*/
         if (pointer == 0)
             return null;
         if (ImRect_TEMP_GEN_2 == null)
-            ImRect_TEMP_GEN_2 = ImRect.createInstance();
+            ImRect_TEMP_GEN_2 = ImRect.native_new();
         ImRect_TEMP_GEN_2.internal_reset(pointer, false);
         return ImRect_TEMP_GEN_2;
     }
@@ -165,7 +165,7 @@ return (jlong)&copy_addr;*/
         if (pointer == 0)
             return null;
         if (ImVectorInt_TEMP_GEN_0 == null)
-            ImVectorInt_TEMP_GEN_0 = ImVectorInt.createInstance();
+            ImVectorInt_TEMP_GEN_0 = ImVectorInt.native_new();
         ImVectorInt_TEMP_GEN_0.internal_reset(pointer, false);
         return ImVectorInt_TEMP_GEN_0;
     }
@@ -181,7 +181,7 @@ return (jlong)&nativeObject->IDStack;
         if (pointer == 0)
             return null;
         if (ImGuiWindowTempData_TEMP_GEN_0 == null)
-            ImGuiWindowTempData_TEMP_GEN_0 = ImGuiWindowTempData.createInstance();
+            ImGuiWindowTempData_TEMP_GEN_0 = ImGuiWindowTempData.native_new();
         ImGuiWindowTempData_TEMP_GEN_0.internal_reset(pointer, false);
         return ImGuiWindowTempData_TEMP_GEN_0;
     }
@@ -239,7 +239,7 @@ return nativeObject->ViewportId;
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_0 == null)
-            ImVec2_TEMP_GEN_0 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_0;
     }
@@ -285,7 +285,7 @@ nativeObject->ViewportAllowPlatformMonitorExtend = ViewportAllowPlatformMonitorE
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_1 == null)
-            ImVec2_TEMP_GEN_1 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_1;
     }
@@ -311,7 +311,7 @@ nativeObject->Pos = *((ImVec2*)Pos_addr);
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_2 == null)
-            ImVec2_TEMP_GEN_2 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_2 = ImVec2.native_new();
         ImVec2_TEMP_GEN_2.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_2;
     }
@@ -337,7 +337,7 @@ nativeObject->Size = *((ImVec2*)Size_addr);
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_3 == null)
-            ImVec2_TEMP_GEN_3 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_3 = ImVec2.native_new();
         ImVec2_TEMP_GEN_3.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_3;
     }
@@ -363,7 +363,7 @@ nativeObject->SizeFull = *((ImVec2*)SizeFull_addr);
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_4 == null)
-            ImVec2_TEMP_GEN_4 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_4 = ImVec2.native_new();
         ImVec2_TEMP_GEN_4.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_4;
     }
@@ -389,7 +389,7 @@ nativeObject->ContentSize = *((ImVec2*)ContentSize_addr);
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_5 == null)
-            ImVec2_TEMP_GEN_5 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_5 = ImVec2.native_new();
         ImVec2_TEMP_GEN_5.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_5;
     }
@@ -415,7 +415,7 @@ nativeObject->ContentSizeIdeal = *((ImVec2*)ContentSizeIdeal_addr);
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_6 == null)
-            ImVec2_TEMP_GEN_6 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_6 = ImVec2.native_new();
         ImVec2_TEMP_GEN_6.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_6;
     }
@@ -441,7 +441,7 @@ nativeObject->ContentSizeExplicit = *((ImVec2*)ContentSizeExplicit_addr);
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_7 == null)
-            ImVec2_TEMP_GEN_7 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_7 = ImVec2.native_new();
         ImVec2_TEMP_GEN_7.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_7;
     }
@@ -677,7 +677,7 @@ return nativeObject->ChildId;
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_8 == null)
-            ImVec2_TEMP_GEN_8 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_8 = ImVec2.native_new();
         ImVec2_TEMP_GEN_8.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_8;
     }
@@ -703,7 +703,7 @@ nativeObject->Scroll = *((ImVec2*)Scroll_addr);
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_9 == null)
-            ImVec2_TEMP_GEN_9 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_9 = ImVec2.native_new();
         ImVec2_TEMP_GEN_9.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_9;
     }
@@ -729,7 +729,7 @@ nativeObject->ScrollMax = *((ImVec2*)ScrollMax_addr);
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_10 == null)
-            ImVec2_TEMP_GEN_10 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_10 = ImVec2.native_new();
         ImVec2_TEMP_GEN_10.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_10;
     }
@@ -755,7 +755,7 @@ nativeObject->ScrollTarget = *((ImVec2*)ScrollTarget_addr);
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_11 == null)
-            ImVec2_TEMP_GEN_11 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_11 = ImVec2.native_new();
         ImVec2_TEMP_GEN_11.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_11;
     }
@@ -781,7 +781,7 @@ nativeObject->ScrollTargetCenterRatio = *((ImVec2*)ScrollTargetCenterRatio_addr)
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_12 == null)
-            ImVec2_TEMP_GEN_12 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_12 = ImVec2.native_new();
         ImVec2_TEMP_GEN_12.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_12;
     }
@@ -807,7 +807,7 @@ nativeObject->ScrollTargetEdgeSnapDist = *((ImVec2*)ScrollTargetEdgeSnapDist_add
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_13 == null)
-            ImVec2_TEMP_GEN_13 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_13 = ImVec2.native_new();
         ImVec2_TEMP_GEN_13.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_13;
     }
@@ -1113,7 +1113,7 @@ nativeObject->HasCloseButton = HasCloseButton;
         if (pointer == 0)
             return null;
         if (ImGuiStorage_TEMP_GEN_0 == null)
-            ImGuiStorage_TEMP_GEN_0 = ImGuiStorage.createInstance();
+            ImGuiStorage_TEMP_GEN_0 = ImGuiStorage.native_new();
         ImGuiStorage_TEMP_GEN_0.internal_reset(pointer, false);
         return ImGuiStorage_TEMP_GEN_0;
     }
@@ -1139,7 +1139,7 @@ nativeObject->StateStorage = *((ImGuiStorage*)StateStorage_addr);
         if (pointer == 0)
             return null;
         if (ImDrawList_TEMP_GEN_0 == null)
-            ImDrawList_TEMP_GEN_0 = ImDrawList.createInstance();
+            ImDrawList_TEMP_GEN_0 = ImDrawList.native_new();
         ImDrawList_TEMP_GEN_0.internal_reset(pointer, false);
         return ImDrawList_TEMP_GEN_0;
     }
@@ -1246,7 +1246,7 @@ nativeObject->DockTabWantClose = DockTabWantClose;
         if (pointer == 0)
             return null;
         if (ImGuiDockNode_TEMP_GEN_0 == null)
-            ImGuiDockNode_TEMP_GEN_0 = ImGuiDockNode.createInstance();
+            ImGuiDockNode_TEMP_GEN_0 = ImGuiDockNode.native_new();
         ImGuiDockNode_TEMP_GEN_0.internal_reset(pointer, false);
         return ImGuiDockNode_TEMP_GEN_0;
     }
@@ -1273,7 +1273,7 @@ nativeObject->DockNode = (ImGuiDockNode*)DockNode_addr;
         if (pointer == 0)
             return null;
         if (ImGuiDockNode_TEMP_GEN_1 == null)
-            ImGuiDockNode_TEMP_GEN_1 = ImGuiDockNode.createInstance();
+            ImGuiDockNode_TEMP_GEN_1 = ImGuiDockNode.native_new();
         ImGuiDockNode_TEMP_GEN_1.internal_reset(pointer, false);
         return ImGuiDockNode_TEMP_GEN_1;
     }
@@ -1340,7 +1340,7 @@ nativeObject->DockTabItemStatusFlags = DockTabItemStatusFlags;
         if (pointer == 0)
             return null;
         if (ImRect_TEMP_GEN_3 == null)
-            ImRect_TEMP_GEN_3 = ImRect.createInstance();
+            ImRect_TEMP_GEN_3 = ImRect.native_new();
         ImRect_TEMP_GEN_3.internal_reset(pointer, false);
         return ImRect_TEMP_GEN_3;
     }

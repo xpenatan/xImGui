@@ -39,7 +39,7 @@ public class IDLArrayBase extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static IDLArrayBase createInstance() {
+    public static IDLArrayBase native_new() {
         return new IDLArrayBase((byte) 0, (char) 0);
     }
 

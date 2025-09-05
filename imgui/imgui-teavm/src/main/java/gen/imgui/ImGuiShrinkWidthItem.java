@@ -9,13 +9,13 @@ import gen.imgui.idl.IDLBase;
 
 public class ImGuiShrinkWidthItem extends IDLBase {
 
-    static public final ImGuiShrinkWidthItem NULL = ImGuiShrinkWidthItem.createInstance();
+    static public final ImGuiShrinkWidthItem NULL = ImGuiShrinkWidthItem.native_new();
 
-    static public final ImGuiShrinkWidthItem T_01 = ImGuiShrinkWidthItem.createInstance();
+    static public final ImGuiShrinkWidthItem T_01 = ImGuiShrinkWidthItem.native_new();
 
-    static public final ImGuiShrinkWidthItem T_02 = ImGuiShrinkWidthItem.createInstance();
+    static public final ImGuiShrinkWidthItem T_02 = ImGuiShrinkWidthItem.native_new();
 
-    static public final ImGuiShrinkWidthItem T_03 = ImGuiShrinkWidthItem.createInstance();
+    static public final ImGuiShrinkWidthItem T_03 = ImGuiShrinkWidthItem.native_new();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -27,7 +27,7 @@ public class ImGuiShrinkWidthItem extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static ImGuiShrinkWidthItem createInstance() {
+    public static ImGuiShrinkWidthItem native_new() {
         return new ImGuiShrinkWidthItem((byte) 0, (char) 0);
     }
 

@@ -19,13 +19,13 @@ public class ImGuiViewport extends IDLBase {
 
     private ImDrawData ImDrawData_TEMP_GEN_0;
 
-    static public final ImGuiViewport NULL = ImGuiViewport.createInstance();
+    static public final ImGuiViewport NULL = ImGuiViewport.native_new();
 
-    static public final ImGuiViewport T_01 = ImGuiViewport.createInstance();
+    static public final ImGuiViewport T_01 = ImGuiViewport.native_new();
 
-    static public final ImGuiViewport T_02 = ImGuiViewport.createInstance();
+    static public final ImGuiViewport T_02 = ImGuiViewport.native_new();
 
-    static public final ImGuiViewport T_03 = ImGuiViewport.createInstance();
+    static public final ImGuiViewport T_03 = ImGuiViewport.native_new();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -37,7 +37,7 @@ public class ImGuiViewport extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static ImGuiViewport createInstance() {
+    public static ImGuiViewport native_new() {
         return new ImGuiViewport((byte) 0, (char) 0);
     }
 
@@ -102,7 +102,7 @@ jsObj.set_Flags(Flags);
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_0 == null)
-            ImVec2_TEMP_GEN_0 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_0;
     }
@@ -132,7 +132,7 @@ jsObj.set_Pos(Pos_addr);
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_1 == null)
-            ImVec2_TEMP_GEN_1 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_1;
     }
@@ -162,7 +162,7 @@ jsObj.set_Size(Size_addr);
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_2 == null)
-            ImVec2_TEMP_GEN_2 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_2 = ImVec2.native_new();
         ImVec2_TEMP_GEN_2.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_2;
     }
@@ -192,7 +192,7 @@ jsObj.set_WorkPos(WorkPos_addr);
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_3 == null)
-            ImVec2_TEMP_GEN_3 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_3 = ImVec2.native_new();
         ImVec2_TEMP_GEN_3.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_3;
     }
@@ -266,7 +266,7 @@ jsObj.set_ParentViewportId(ParentViewportId);
         if (pointer == 0)
             return null;
         if (ImDrawData_TEMP_GEN_0 == null)
-            ImDrawData_TEMP_GEN_0 = ImDrawData.createInstance();
+            ImDrawData_TEMP_GEN_0 = ImDrawData.native_new();
         ImDrawData_TEMP_GEN_0.internal_reset(pointer, false);
         return ImDrawData_TEMP_GEN_0;
     }

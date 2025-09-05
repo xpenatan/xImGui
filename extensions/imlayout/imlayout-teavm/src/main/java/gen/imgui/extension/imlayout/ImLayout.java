@@ -35,7 +35,7 @@ public class ImLayout extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static ImLayout createInstance() {
+    public static ImLayout native_new() {
         return new ImLayout((byte) 0, (char) 0);
     }
 
@@ -221,7 +221,7 @@ public class ImLayout extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImGuiLayout_TEMP_STATIC_GEN_0 == null)
-            ImGuiLayout_TEMP_STATIC_GEN_0 = ImGuiLayout.createInstance();
+            ImGuiLayout_TEMP_STATIC_GEN_0 = ImGuiLayout.native_new();
         ImGuiLayout_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImGuiLayout_TEMP_STATIC_GEN_0;
     }
@@ -587,7 +587,7 @@ public class ImLayout extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImRect_TEMP_STATIC_GEN_0 == null)
-            ImRect_TEMP_STATIC_GEN_0 = ImRect.createInstance();
+            ImRect_TEMP_STATIC_GEN_0 = ImRect.native_new();
         ImRect_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImRect_TEMP_STATIC_GEN_0;
     }

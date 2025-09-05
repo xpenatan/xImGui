@@ -64,7 +64,7 @@ public class NodeEditor extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static NodeEditor createInstance() {
+    public static NodeEditor native_new() {
         return new NodeEditor((byte) 0, (char) 0);
     }
 
@@ -94,7 +94,7 @@ public class NodeEditor extends IDLBase {
         if (pointer == 0)
             return null;
         if (EditorContext_TEMP_STATIC_GEN_0 == null)
-            EditorContext_TEMP_STATIC_GEN_0 = EditorContext.createInstance();
+            EditorContext_TEMP_STATIC_GEN_0 = EditorContext.native_new();
         EditorContext_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return EditorContext_TEMP_STATIC_GEN_0;
     }
@@ -110,7 +110,7 @@ public class NodeEditor extends IDLBase {
         if (pointer == 0)
             return null;
         if (EditorContext_TEMP_STATIC_GEN_1 == null)
-            EditorContext_TEMP_STATIC_GEN_1 = EditorContext.createInstance();
+            EditorContext_TEMP_STATIC_GEN_1 = EditorContext.native_new();
         EditorContext_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
         return EditorContext_TEMP_STATIC_GEN_1;
     }
@@ -126,7 +126,7 @@ public class NodeEditor extends IDLBase {
         if (pointer == 0)
             return null;
         if (EditorContext_TEMP_STATIC_GEN_2 == null)
-            EditorContext_TEMP_STATIC_GEN_2 = EditorContext.createInstance();
+            EditorContext_TEMP_STATIC_GEN_2 = EditorContext.native_new();
         EditorContext_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
         return EditorContext_TEMP_STATIC_GEN_2;
     }
@@ -152,7 +152,7 @@ public class NodeEditor extends IDLBase {
         if (pointer == 0)
             return null;
         if (Config_TEMP_STATIC_GEN_0 == null)
-            Config_TEMP_STATIC_GEN_0 = Config.createInstance();
+            Config_TEMP_STATIC_GEN_0 = Config.native_new();
         Config_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return Config_TEMP_STATIC_GEN_0;
     }
@@ -168,7 +168,7 @@ public class NodeEditor extends IDLBase {
         if (pointer == 0)
             return null;
         if (Config_TEMP_STATIC_GEN_1 == null)
-            Config_TEMP_STATIC_GEN_1 = Config.createInstance();
+            Config_TEMP_STATIC_GEN_1 = Config.native_new();
         Config_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
         return Config_TEMP_STATIC_GEN_1;
     }
@@ -184,7 +184,7 @@ public class NodeEditor extends IDLBase {
         if (pointer == 0)
             return null;
         if (Style_TEMP_STATIC_GEN_0 == null)
-            Style_TEMP_STATIC_GEN_0 = Style.createInstance();
+            Style_TEMP_STATIC_GEN_0 = Style.native_new();
         Style_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return Style_TEMP_STATIC_GEN_0;
     }
@@ -200,7 +200,7 @@ public class NodeEditor extends IDLBase {
         if (pointer == 0)
             return null;
         if (IDLString_TEMP_STATIC_GEN_0 == null)
-            IDLString_TEMP_STATIC_GEN_0 = IDLString.createInstance();
+            IDLString_TEMP_STATIC_GEN_0 = IDLString.native_new();
         IDLString_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return IDLString_TEMP_STATIC_GEN_0;
     }
@@ -438,7 +438,7 @@ public class NodeEditor extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_0 == null)
-            ImVec2_TEMP_STATIC_GEN_0 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_0;
     }
@@ -456,7 +456,7 @@ public class NodeEditor extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_1 == null)
-            ImVec2_TEMP_STATIC_GEN_1 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_1;
     }
@@ -474,7 +474,7 @@ public class NodeEditor extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImDrawList_TEMP_STATIC_GEN_0 == null)
-            ImDrawList_TEMP_STATIC_GEN_0 = ImDrawList.createInstance();
+            ImDrawList_TEMP_STATIC_GEN_0 = ImDrawList.native_new();
         ImDrawList_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImDrawList_TEMP_STATIC_GEN_0;
     }
@@ -490,7 +490,7 @@ public class NodeEditor extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImDrawList_TEMP_STATIC_GEN_1 == null)
-            ImDrawList_TEMP_STATIC_GEN_1 = ImDrawList.createInstance();
+            ImDrawList_TEMP_STATIC_GEN_1 = ImDrawList.native_new();
         ImDrawList_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
         return ImDrawList_TEMP_STATIC_GEN_1;
     }
@@ -516,7 +516,7 @@ public class NodeEditor extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImDrawList_TEMP_STATIC_GEN_2 == null)
-            ImDrawList_TEMP_STATIC_GEN_2 = ImDrawList.createInstance();
+            ImDrawList_TEMP_STATIC_GEN_2 = ImDrawList.native_new();
         ImDrawList_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
         return ImDrawList_TEMP_STATIC_GEN_2;
     }
@@ -852,7 +852,7 @@ public class NodeEditor extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_2 == null)
-            ImVec2_TEMP_STATIC_GEN_2 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_2 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_2;
     }
@@ -870,7 +870,7 @@ public class NodeEditor extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_3 == null)
-            ImVec2_TEMP_STATIC_GEN_3 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_3 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_3;
     }
@@ -1498,7 +1498,7 @@ public class NodeEditor extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_4 == null)
-            ImVec2_TEMP_STATIC_GEN_4 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_4 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_4.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_4;
     }
@@ -1516,7 +1516,7 @@ public class NodeEditor extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_5 == null)
-            ImVec2_TEMP_STATIC_GEN_5 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_5 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_5.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_5;
     }
@@ -1534,7 +1534,7 @@ public class NodeEditor extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_6 == null)
-            ImVec2_TEMP_STATIC_GEN_6 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_6 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_6.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_6;
     }

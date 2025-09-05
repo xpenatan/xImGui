@@ -19,7 +19,7 @@ public class ImRect extends IDLBase {
 
     private ImVec2 ImVec2_TEMP_GEN_3;
 
-    public final static ImRect NULL = createInstance();
+    public final static ImRect NULL = native_new();
 
     public static ImRect TMP_1 = new ImRect();
 
@@ -29,7 +29,7 @@ public class ImRect extends IDLBase {
 
     public static ImRect TMP_4 = new ImRect();
 
-    public static ImRect createInstance() {
+    public static ImRect native_new() {
         return new ImRect((byte) 0, (char) 0);
     }
 
@@ -86,7 +86,7 @@ public class ImRect extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_0 == null)
-            ImVec2_TEMP_GEN_0 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_0;
     }
@@ -105,7 +105,7 @@ public class ImRect extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_1 == null)
-            ImVec2_TEMP_GEN_1 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_1;
     }
@@ -157,7 +157,7 @@ public class ImRect extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_2 == null)
-            ImVec2_TEMP_GEN_2 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_2 = ImVec2.native_new();
         ImVec2_TEMP_GEN_2.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_2;
     }
@@ -185,7 +185,7 @@ public class ImRect extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_3 == null)
-            ImVec2_TEMP_GEN_3 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_3 = ImVec2.native_new();
         ImVec2_TEMP_GEN_3.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_3;
     }

@@ -9,12 +9,12 @@ package gen.imgui.idl.helper;
 
 public class IDLLongArray extends IDLArrayBase {
 
-    public static final IDLLongArray NULL = createInstance();
+    public static final IDLLongArray NULL = native_new();
 
     /**
      * @return An empty instance without a native address
      */
-    public static IDLLongArray createInstance() {
+    public static IDLLongArray native_new() {
         return new IDLLongArray((byte) 1, (char) 1);
     }
 

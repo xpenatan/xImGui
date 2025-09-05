@@ -11,13 +11,13 @@ public class ImGuiDockNode extends IDLBase {
 
     private ImGuiTabBar ImGuiTabBar_TEMP_GEN_0;
 
-    static public final ImGuiDockNode NULL = ImGuiDockNode.createInstance();
+    static public final ImGuiDockNode NULL = ImGuiDockNode.native_new();
 
-    static public final ImGuiDockNode T_01 = ImGuiDockNode.createInstance();
+    static public final ImGuiDockNode T_01 = ImGuiDockNode.native_new();
 
-    static public final ImGuiDockNode T_02 = ImGuiDockNode.createInstance();
+    static public final ImGuiDockNode T_02 = ImGuiDockNode.native_new();
 
-    static public final ImGuiDockNode T_03 = ImGuiDockNode.createInstance();
+    static public final ImGuiDockNode T_03 = ImGuiDockNode.native_new();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -29,7 +29,7 @@ public class ImGuiDockNode extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static ImGuiDockNode createInstance() {
+    public static ImGuiDockNode native_new() {
         return new ImGuiDockNode((byte) 0, (char) 0);
     }
 
@@ -93,7 +93,7 @@ jsObj.set_SelectedTabId(SelectedTabId);
         if (pointer == 0)
             return null;
         if (ImGuiTabBar_TEMP_GEN_0 == null)
-            ImGuiTabBar_TEMP_GEN_0 = ImGuiTabBar.createInstance();
+            ImGuiTabBar_TEMP_GEN_0 = ImGuiTabBar.native_new();
         ImGuiTabBar_TEMP_GEN_0.internal_reset(pointer, false);
         return ImGuiTabBar_TEMP_GEN_0;
     }

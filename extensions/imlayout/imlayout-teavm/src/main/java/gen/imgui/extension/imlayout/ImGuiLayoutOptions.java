@@ -9,13 +9,13 @@ import gen.imgui.idl.IDLBase;
 
 public class ImGuiLayoutOptions extends IDLBase {
 
-    static public final ImGuiLayoutOptions NULL = ImGuiLayoutOptions.createInstance();
+    static public final ImGuiLayoutOptions NULL = ImGuiLayoutOptions.native_new();
 
-    static public final ImGuiLayoutOptions T_01 = ImGuiLayoutOptions.createInstance();
+    static public final ImGuiLayoutOptions T_01 = ImGuiLayoutOptions.native_new();
 
-    static public final ImGuiLayoutOptions T_02 = ImGuiLayoutOptions.createInstance();
+    static public final ImGuiLayoutOptions T_02 = ImGuiLayoutOptions.native_new();
 
-    static public final ImGuiLayoutOptions T_03 = ImGuiLayoutOptions.createInstance();
+    static public final ImGuiLayoutOptions T_03 = ImGuiLayoutOptions.native_new();
 
     public ImGuiLayoutOptions() {
         int addr = internal_native_create();
@@ -39,7 +39,7 @@ return imgui.getPointer(jsObj);
     /**
      * @return An empty instance without a native address
      */
-    public static ImGuiLayoutOptions createInstance() {
+    public static ImGuiLayoutOptions native_new() {
         return new ImGuiLayoutOptions((byte) 0, (char) 0);
     }
 

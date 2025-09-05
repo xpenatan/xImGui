@@ -9,13 +9,13 @@ import imgui.idl.IDLBase;
 
 public class ImGuiPlatformIO extends IDLBase {
 
-    static public final ImGuiPlatformIO NULL = ImGuiPlatformIO.createInstance();
+    static public final ImGuiPlatformIO NULL = ImGuiPlatformIO.native_new();
 
-    static public final ImGuiPlatformIO T_01 = ImGuiPlatformIO.createInstance();
+    static public final ImGuiPlatformIO T_01 = ImGuiPlatformIO.native_new();
 
-    static public final ImGuiPlatformIO T_02 = ImGuiPlatformIO.createInstance();
+    static public final ImGuiPlatformIO T_02 = ImGuiPlatformIO.native_new();
 
-    static public final ImGuiPlatformIO T_03 = ImGuiPlatformIO.createInstance();
+    static public final ImGuiPlatformIO T_03 = ImGuiPlatformIO.native_new();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -27,7 +27,7 @@ public class ImGuiPlatformIO extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static ImGuiPlatformIO createInstance() {
+    public static ImGuiPlatformIO native_new() {
         return new ImGuiPlatformIO((byte) 0, (char) 0);
     }
 

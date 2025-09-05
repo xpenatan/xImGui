@@ -43,7 +43,7 @@ public class TextEditor extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static TextEditor createInstance() {
+    public static TextEditor native_new() {
         return new TextEditor((byte) 0, (char) 0);
     }
 
@@ -219,7 +219,7 @@ public class TextEditor extends IDLBase {
         if (pointer == 0)
             return null;
         if (IDLString_TEMP_GEN_0 == null)
-            IDLString_TEMP_GEN_0 = IDLString.createInstance();
+            IDLString_TEMP_GEN_0 = IDLString.native_new();
         IDLString_TEMP_GEN_0.internal_reset(pointer, false);
         return IDLString_TEMP_GEN_0;
     }
@@ -600,7 +600,7 @@ public class TextEditor extends IDLBase {
         if (pointer == 0)
             return null;
         if (IDLString_TEMP_GEN_1 == null)
-            IDLString_TEMP_GEN_1 = IDLString.createInstance();
+            IDLString_TEMP_GEN_1 = IDLString.native_new();
         IDLString_TEMP_GEN_1.internal_reset(pointer, false);
         return IDLString_TEMP_GEN_1;
     }

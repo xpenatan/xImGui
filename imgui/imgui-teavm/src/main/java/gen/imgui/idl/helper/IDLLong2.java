@@ -9,7 +9,7 @@ package gen.imgui.idl.helper;
 
 public class IDLLong2 extends IDLLongArray {
 
-    public static final IDLLong2 NULL = createInstance();
+    public static final IDLLong2 NULL = native_new();
 
     public static IDLLong2 TMP_1 = new IDLLong2();
 
@@ -23,7 +23,7 @@ public class IDLLong2 extends IDLLongArray {
     /**
      * @return An empty instance without a native address
      */
-    public static IDLLong2 createInstance() {
+    public static IDLLong2 native_new() {
         return new IDLLong2((byte) 1, (char) 1);
     }
 

@@ -15,10 +15,10 @@ public class IDLBase {
     public final static IDLBase NULL;
 
     static {
-        NULL = createInstance();
+        NULL = native_new();
     }
 
-    public static IDLBase createInstance() {
+    public static IDLBase native_new() {
         return new IDLBase((byte) 0, (char) 0);
     }
 

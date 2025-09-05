@@ -9,13 +9,13 @@ import imgui.idl.IDLBase;
 
 public class ImGuiStorage extends IDLBase {
 
-    static public final ImGuiStorage NULL = ImGuiStorage.createInstance();
+    static public final ImGuiStorage NULL = ImGuiStorage.native_new();
 
-    static public final ImGuiStorage T_01 = ImGuiStorage.createInstance();
+    static public final ImGuiStorage T_01 = ImGuiStorage.native_new();
 
-    static public final ImGuiStorage T_02 = ImGuiStorage.createInstance();
+    static public final ImGuiStorage T_02 = ImGuiStorage.native_new();
 
-    static public final ImGuiStorage T_03 = ImGuiStorage.createInstance();
+    static public final ImGuiStorage T_03 = ImGuiStorage.native_new();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -27,7 +27,7 @@ public class ImGuiStorage extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static ImGuiStorage createInstance() {
+    public static ImGuiStorage native_new() {
         return new ImGuiStorage((byte) 0, (char) 0);
     }
 

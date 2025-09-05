@@ -15,7 +15,7 @@ import imgui.idl.helper.IDLString;
 */
 public abstract class ClipboardTextFunction extends IDLBase {
 
-    IDLString TMP = IDLString.createInstance();
+    IDLString TMP = IDLString.native_new();
 
     /*
       [-JNI;-NATIVE]

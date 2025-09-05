@@ -4,13 +4,13 @@ import idl.IDLBase;
 
 public class ImVec2 extends IDLBase {
 
-    public final static ImVec2 NULL = createInstance();
+    public final static ImVec2 NULL = native_new();
     public static ImVec2 TMP_1 = new ImVec2();
     public static ImVec2 TMP_2 = new ImVec2();
     public static ImVec2 TMP_3 = new ImVec2();
     public static ImVec2 TMP_4 = new ImVec2();
 
-    public static ImVec2 createInstance() {
+    public static ImVec2 native_new() {
         return new ImVec2((byte) 0, (char) 0);
     }
 

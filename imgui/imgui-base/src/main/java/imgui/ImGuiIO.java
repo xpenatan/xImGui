@@ -6,11 +6,11 @@ import idl.helper.IDLIntArray;
 
 public class ImGuiIO extends IDLBase {
 
-    public final static ImGuiIO NULL = createInstance();
+    public final static ImGuiIO NULL = native_new();
 
     public static ImGuiIO TMP_EMPTY = new ImGuiIO(false);
 
-    public static ImGuiIO createInstance() {
+    public static ImGuiIO native_new() {
         return new ImGuiIO((byte) 0, (char) 0);
     }
 

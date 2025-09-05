@@ -21,7 +21,7 @@ public class ImDrawCmd extends IDLBase {
               #include <stdint.h>     // intptr_t
               #endif
     */
-    public static ImDrawCmd createInstance() {
+    public static ImDrawCmd native_new() {
         return new ImDrawCmd((byte) 0, (char) 0);
     }
 
@@ -89,7 +89,7 @@ public class ImDrawCmd extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec4_TEMP_GEN_0 == null)
-            ImVec4_TEMP_GEN_0 = ImVec4.createInstance();
+            ImVec4_TEMP_GEN_0 = ImVec4.native_new();
         ImVec4_TEMP_GEN_0.internal_reset(pointer, false);
         return ImVec4_TEMP_GEN_0;
     }

@@ -33,7 +33,7 @@ public class ImGuiPayload extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static ImGuiPayload createInstance() {
+    public static ImGuiPayload native_new() {
         return new ImGuiPayload((byte) 0, (char) 0);
     }
 

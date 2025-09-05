@@ -9,12 +9,12 @@ package gen.imgui.idl.helper;
 
 public class IDLByteArray extends IDLArrayBase {
 
-    public static final IDLByteArray NULL = createInstance();
+    public static final IDLByteArray NULL = native_new();
 
     /**
      * @return An empty instance without a native address
      */
-    public static IDLByteArray createInstance() {
+    public static IDLByteArray native_new() {
         return new IDLByteArray((byte) 1, (char) 1);
     }
 

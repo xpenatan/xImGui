@@ -41,9 +41,9 @@ public class ImDrawList extends IDLBase {
     public ByteBuffer vtxByteBuffer;
     public ByteBuffer idxByteBuffer;
 
-    private ImDrawCmd imDrawCmd = ImDrawCmd.createInstance();
+    private ImDrawCmd imDrawCmd = ImDrawCmd.native_new();
 
-    public static ImDrawList createInstance() {
+    public static ImDrawList native_new() {
         return new ImDrawList((byte) 0, (char) 0);
     }
 

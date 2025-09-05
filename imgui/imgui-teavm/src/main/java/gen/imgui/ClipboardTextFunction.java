@@ -49,7 +49,7 @@ public abstract class ClipboardTextFunction extends IDLBase {
     @org.teavm.jso.JSBody(params = { "onGetClipboardText", "onSetClipboardText" }, script = "var jsFunction = new imgui.ClipboardTextFunctionImpl(); jsFunction.onGetClipboardText = onGetClipboardText; jsFunction.onSetClipboardText = onSetClipboardText; return imgui.getPointer(jsFunction);")
     private static native int createNative(OnGetClipboardText onGetClipboardText, OnSetClipboardText onSetClipboardText);
 
-    IDLString TMP = IDLString.createInstance();
+    IDLString TMP = IDLString.native_new();
 
     /*
       [-TEAVM;-ADD]

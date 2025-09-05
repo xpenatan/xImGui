@@ -7,13 +7,13 @@ package gen.imgui.extension.imlayout;
 
 public class ImGuiCollapseLayoutOptions extends ImGuiLayoutOptions {
 
-    static public final ImGuiCollapseLayoutOptions NULL = ImGuiCollapseLayoutOptions.createInstance();
+    static public final ImGuiCollapseLayoutOptions NULL = ImGuiCollapseLayoutOptions.native_new();
 
-    static public final ImGuiCollapseLayoutOptions T_01 = ImGuiCollapseLayoutOptions.createInstance();
+    static public final ImGuiCollapseLayoutOptions T_01 = ImGuiCollapseLayoutOptions.native_new();
 
-    static public final ImGuiCollapseLayoutOptions T_02 = ImGuiCollapseLayoutOptions.createInstance();
+    static public final ImGuiCollapseLayoutOptions T_02 = ImGuiCollapseLayoutOptions.native_new();
 
-    static public final ImGuiCollapseLayoutOptions T_03 = ImGuiCollapseLayoutOptions.createInstance();
+    static public final ImGuiCollapseLayoutOptions T_03 = ImGuiCollapseLayoutOptions.native_new();
 
     public ImGuiCollapseLayoutOptions() {
         super((byte) 1, (char) 1);
@@ -39,7 +39,7 @@ return imgui.getPointer(jsObj);
     /**
      * @return An empty instance without a native address
      */
-    public static ImGuiCollapseLayoutOptions createInstance() {
+    public static ImGuiCollapseLayoutOptions native_new() {
         return new ImGuiCollapseLayoutOptions((byte) 0, (char) 0);
     }
 

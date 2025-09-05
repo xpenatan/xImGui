@@ -24,7 +24,7 @@ public class LoadSaveSettingsListener extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static LoadSaveSettingsListener createInstance() {
+    public static LoadSaveSettingsListener native_new() {
         return new LoadSaveSettingsListener((byte) 0, (char) 0);
     }
 
@@ -66,7 +66,7 @@ imgui.destroy(jsObj);
 
     private void internal_onLoad(int data_addr) {
         if (IDLString_TEMP_STATIC_GEN_0 == null)
-            IDLString_TEMP_STATIC_GEN_0 = IDLString.createInstance();
+            IDLString_TEMP_STATIC_GEN_0 = IDLString.native_new();
         IDLString_TEMP_STATIC_GEN_0.internal_reset(data_addr, false);
         onLoad(IDLString_TEMP_STATIC_GEN_0);
     }
@@ -77,7 +77,7 @@ imgui.destroy(jsObj);
 
     private boolean internal_onSave(int data_addr, int reason_addr) {
         if (IDLString_TEMP_STATIC_GEN_1 == null)
-            IDLString_TEMP_STATIC_GEN_1 = IDLString.createInstance();
+            IDLString_TEMP_STATIC_GEN_1 = IDLString.native_new();
         IDLString_TEMP_STATIC_GEN_1.internal_reset(data_addr, false);
         return onSave(IDLString_TEMP_STATIC_GEN_1, SaveReasonFlags.MAP.get(reason_addr));
     }

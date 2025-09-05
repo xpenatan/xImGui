@@ -161,7 +161,7 @@ public class ImGui extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static ImGui createInstance() {
+    public static ImGui native_new() {
         return new ImGui((byte) 0, (char) 0);
     }
 
@@ -170,7 +170,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImGuiContext_TEMP_STATIC_GEN_0 == null)
-            ImGuiContext_TEMP_STATIC_GEN_0 = ImGuiContext.createInstance();
+            ImGuiContext_TEMP_STATIC_GEN_0 = ImGuiContext.native_new();
         ImGuiContext_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImGuiContext_TEMP_STATIC_GEN_0;
     }
@@ -189,7 +189,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImGuiContext_TEMP_STATIC_GEN_1 == null)
-            ImGuiContext_TEMP_STATIC_GEN_1 = ImGuiContext.createInstance();
+            ImGuiContext_TEMP_STATIC_GEN_1 = ImGuiContext.native_new();
         ImGuiContext_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
         return ImGuiContext_TEMP_STATIC_GEN_1;
     }
@@ -230,7 +230,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImGuiContext_TEMP_STATIC_GEN_2 == null)
-            ImGuiContext_TEMP_STATIC_GEN_2 = ImGuiContext.createInstance();
+            ImGuiContext_TEMP_STATIC_GEN_2 = ImGuiContext.native_new();
         ImGuiContext_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
         return ImGuiContext_TEMP_STATIC_GEN_2;
     }
@@ -260,7 +260,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImGuiIO_TEMP_STATIC_GEN_0 == null)
-            ImGuiIO_TEMP_STATIC_GEN_0 = ImGuiIO.createInstance();
+            ImGuiIO_TEMP_STATIC_GEN_0 = ImGuiIO.native_new();
         ImGuiIO_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImGuiIO_TEMP_STATIC_GEN_0;
     }
@@ -279,7 +279,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImGuiStyle_TEMP_STATIC_GEN_0 == null)
-            ImGuiStyle_TEMP_STATIC_GEN_0 = ImGuiStyle.createInstance();
+            ImGuiStyle_TEMP_STATIC_GEN_0 = ImGuiStyle.native_new();
         ImGuiStyle_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImGuiStyle_TEMP_STATIC_GEN_0;
     }
@@ -331,7 +331,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImDrawData_TEMP_STATIC_GEN_0 == null)
-            ImDrawData_TEMP_STATIC_GEN_0 = ImDrawData.createInstance();
+            ImDrawData_TEMP_STATIC_GEN_0 = ImDrawData.native_new();
         ImDrawData_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImDrawData_TEMP_STATIC_GEN_0;
     }
@@ -807,7 +807,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImDrawList_TEMP_STATIC_GEN_0 == null)
-            ImDrawList_TEMP_STATIC_GEN_0 = ImDrawList.createInstance();
+            ImDrawList_TEMP_STATIC_GEN_0 = ImDrawList.native_new();
         ImDrawList_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImDrawList_TEMP_STATIC_GEN_0;
     }
@@ -838,7 +838,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_0 == null)
-            ImVec2_TEMP_STATIC_GEN_0 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_0;
     }
@@ -857,7 +857,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_1 == null)
-            ImVec2_TEMP_STATIC_GEN_1 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_1;
     }
@@ -900,7 +900,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImGuiViewport_TEMP_STATIC_GEN_0 == null)
-            ImGuiViewport_TEMP_STATIC_GEN_0 = ImGuiViewport.createInstance();
+            ImGuiViewport_TEMP_STATIC_GEN_0 = ImGuiViewport.native_new();
         ImGuiViewport_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImGuiViewport_TEMP_STATIC_GEN_0;
     }
@@ -1573,7 +1573,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImFont_TEMP_STATIC_GEN_0 == null)
-            ImFont_TEMP_STATIC_GEN_0 = ImFont.createInstance();
+            ImFont_TEMP_STATIC_GEN_0 = ImFont.native_new();
         ImFont_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImFont_TEMP_STATIC_GEN_0;
     }
@@ -1604,7 +1604,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_2 == null)
-            ImVec2_TEMP_STATIC_GEN_2 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_2 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_2;
     }
@@ -1671,7 +1671,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec4_TEMP_STATIC_GEN_0 == null)
-            ImVec4_TEMP_STATIC_GEN_0 = ImVec4.createInstance();
+            ImVec4_TEMP_STATIC_GEN_0 = ImVec4.native_new();
         ImVec4_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImVec4_TEMP_STATIC_GEN_0;
     }
@@ -1690,7 +1690,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_3 == null)
-            ImVec2_TEMP_STATIC_GEN_3 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_3 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_3;
     }
@@ -1720,7 +1720,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_4 == null)
-            ImVec2_TEMP_STATIC_GEN_4 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_4 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_4.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_4;
     }
@@ -1739,7 +1739,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_5 == null)
-            ImVec2_TEMP_STATIC_GEN_5 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_5 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_5.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_5;
     }
@@ -1815,7 +1815,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_6 == null)
-            ImVec2_TEMP_STATIC_GEN_6 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_6 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_6.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_6;
     }
@@ -4621,7 +4621,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImGuiMultiSelectIO_TEMP_STATIC_GEN_0 == null)
-            ImGuiMultiSelectIO_TEMP_STATIC_GEN_0 = ImGuiMultiSelectIO.createInstance();
+            ImGuiMultiSelectIO_TEMP_STATIC_GEN_0 = ImGuiMultiSelectIO.native_new();
         ImGuiMultiSelectIO_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImGuiMultiSelectIO_TEMP_STATIC_GEN_0;
     }
@@ -4640,7 +4640,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImGuiMultiSelectIO_TEMP_STATIC_GEN_1 == null)
-            ImGuiMultiSelectIO_TEMP_STATIC_GEN_1 = ImGuiMultiSelectIO.createInstance();
+            ImGuiMultiSelectIO_TEMP_STATIC_GEN_1 = ImGuiMultiSelectIO.native_new();
         ImGuiMultiSelectIO_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
         return ImGuiMultiSelectIO_TEMP_STATIC_GEN_1;
     }
@@ -4659,7 +4659,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImGuiMultiSelectIO_TEMP_STATIC_GEN_2 == null)
-            ImGuiMultiSelectIO_TEMP_STATIC_GEN_2 = ImGuiMultiSelectIO.createInstance();
+            ImGuiMultiSelectIO_TEMP_STATIC_GEN_2 = ImGuiMultiSelectIO.native_new();
         ImGuiMultiSelectIO_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
         return ImGuiMultiSelectIO_TEMP_STATIC_GEN_2;
     }
@@ -4678,7 +4678,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImGuiMultiSelectIO_TEMP_STATIC_GEN_3 == null)
-            ImGuiMultiSelectIO_TEMP_STATIC_GEN_3 = ImGuiMultiSelectIO.createInstance();
+            ImGuiMultiSelectIO_TEMP_STATIC_GEN_3 = ImGuiMultiSelectIO.native_new();
         ImGuiMultiSelectIO_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
         return ImGuiMultiSelectIO_TEMP_STATIC_GEN_3;
     }
@@ -5658,7 +5658,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImGuiTableSortSpecs_TEMP_STATIC_GEN_0 == null)
-            ImGuiTableSortSpecs_TEMP_STATIC_GEN_0 = ImGuiTableSortSpecs.createInstance();
+            ImGuiTableSortSpecs_TEMP_STATIC_GEN_0 = ImGuiTableSortSpecs.native_new();
         ImGuiTableSortSpecs_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImGuiTableSortSpecs_TEMP_STATIC_GEN_0;
     }
@@ -6111,7 +6111,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImGuiPayload_TEMP_STATIC_GEN_0 == null)
-            ImGuiPayload_TEMP_STATIC_GEN_0 = ImGuiPayload.createInstance();
+            ImGuiPayload_TEMP_STATIC_GEN_0 = ImGuiPayload.native_new();
         ImGuiPayload_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImGuiPayload_TEMP_STATIC_GEN_0;
     }
@@ -6130,7 +6130,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImGuiPayload_TEMP_STATIC_GEN_1 == null)
-            ImGuiPayload_TEMP_STATIC_GEN_1 = ImGuiPayload.createInstance();
+            ImGuiPayload_TEMP_STATIC_GEN_1 = ImGuiPayload.native_new();
         ImGuiPayload_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
         return ImGuiPayload_TEMP_STATIC_GEN_1;
     }
@@ -6160,7 +6160,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImGuiPayload_TEMP_STATIC_GEN_2 == null)
-            ImGuiPayload_TEMP_STATIC_GEN_2 = ImGuiPayload.createInstance();
+            ImGuiPayload_TEMP_STATIC_GEN_2 = ImGuiPayload.native_new();
         ImGuiPayload_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
         return ImGuiPayload_TEMP_STATIC_GEN_2;
     }
@@ -6470,7 +6470,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_7 == null)
-            ImVec2_TEMP_STATIC_GEN_7 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_7 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_7.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_7;
     }
@@ -6489,7 +6489,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_8 == null)
-            ImVec2_TEMP_STATIC_GEN_8 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_8 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_8.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_8;
     }
@@ -6508,7 +6508,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_9 == null)
-            ImVec2_TEMP_STATIC_GEN_9 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_9 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_9.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_9;
     }
@@ -6527,7 +6527,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImGuiViewport_TEMP_STATIC_GEN_1 == null)
-            ImGuiViewport_TEMP_STATIC_GEN_1 = ImGuiViewport.createInstance();
+            ImGuiViewport_TEMP_STATIC_GEN_1 = ImGuiViewport.native_new();
         ImGuiViewport_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
         return ImGuiViewport_TEMP_STATIC_GEN_1;
     }
@@ -6546,7 +6546,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImDrawList_TEMP_STATIC_GEN_1 == null)
-            ImDrawList_TEMP_STATIC_GEN_1 = ImDrawList.createInstance();
+            ImDrawList_TEMP_STATIC_GEN_1 = ImDrawList.native_new();
         ImDrawList_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
         return ImDrawList_TEMP_STATIC_GEN_1;
     }
@@ -6565,7 +6565,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImDrawList_TEMP_STATIC_GEN_2 == null)
-            ImDrawList_TEMP_STATIC_GEN_2 = ImDrawList.createInstance();
+            ImDrawList_TEMP_STATIC_GEN_2 = ImDrawList.native_new();
         ImDrawList_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
         return ImDrawList_TEMP_STATIC_GEN_2;
     }
@@ -6584,7 +6584,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImDrawList_TEMP_STATIC_GEN_3 == null)
-            ImDrawList_TEMP_STATIC_GEN_3 = ImDrawList.createInstance();
+            ImDrawList_TEMP_STATIC_GEN_3 = ImDrawList.native_new();
         ImDrawList_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
         return ImDrawList_TEMP_STATIC_GEN_3;
     }
@@ -6603,7 +6603,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImDrawList_TEMP_STATIC_GEN_4 == null)
-            ImDrawList_TEMP_STATIC_GEN_4 = ImDrawList.createInstance();
+            ImDrawList_TEMP_STATIC_GEN_4 = ImDrawList.native_new();
         ImDrawList_TEMP_STATIC_GEN_4.internal_reset(pointer, false);
         return ImDrawList_TEMP_STATIC_GEN_4;
     }
@@ -6670,7 +6670,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImDrawListSharedData_TEMP_STATIC_GEN_0 == null)
-            ImDrawListSharedData_TEMP_STATIC_GEN_0 = ImDrawListSharedData.createInstance();
+            ImDrawListSharedData_TEMP_STATIC_GEN_0 = ImDrawListSharedData.native_new();
         ImDrawListSharedData_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImDrawListSharedData_TEMP_STATIC_GEN_0;
     }
@@ -6700,7 +6700,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImGuiStorage_TEMP_STATIC_GEN_0 == null)
-            ImGuiStorage_TEMP_STATIC_GEN_0 = ImGuiStorage.createInstance();
+            ImGuiStorage_TEMP_STATIC_GEN_0 = ImGuiStorage.native_new();
         ImGuiStorage_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImGuiStorage_TEMP_STATIC_GEN_0;
     }
@@ -6719,7 +6719,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_10 == null)
-            ImVec2_TEMP_STATIC_GEN_10 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_10 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_10.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_10;
     }
@@ -6738,7 +6738,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_11 == null)
-            ImVec2_TEMP_STATIC_GEN_11 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_11 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_11.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_11;
     }
@@ -6757,7 +6757,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_12 == null)
-            ImVec2_TEMP_STATIC_GEN_12 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_12 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_12.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_12;
     }
@@ -6776,7 +6776,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_13 == null)
-            ImVec2_TEMP_STATIC_GEN_13 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_13 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_13.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_13;
     }
@@ -6795,7 +6795,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec4_TEMP_STATIC_GEN_1 == null)
-            ImVec4_TEMP_STATIC_GEN_1 = ImVec4.createInstance();
+            ImVec4_TEMP_STATIC_GEN_1 = ImVec4.native_new();
         ImVec4_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
         return ImVec4_TEMP_STATIC_GEN_1;
     }
@@ -7120,7 +7120,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_14 == null)
-            ImVec2_TEMP_STATIC_GEN_14 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_14 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_14.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_14;
     }
@@ -7139,7 +7139,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_15 == null)
-            ImVec2_TEMP_STATIC_GEN_15 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_15 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_15.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_15;
     }
@@ -7182,7 +7182,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_16 == null)
-            ImVec2_TEMP_STATIC_GEN_16 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_16 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_16.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_16;
     }
@@ -7201,7 +7201,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_17 == null)
-            ImVec2_TEMP_STATIC_GEN_17 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_17 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_17.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_17;
     }
@@ -7220,7 +7220,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_18 == null)
-            ImVec2_TEMP_STATIC_GEN_18 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_18 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_18.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_18;
     }
@@ -7350,7 +7350,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (IDLString_TEMP_STATIC_GEN_0 == null)
-            IDLString_TEMP_STATIC_GEN_0 = IDLString.createInstance();
+            IDLString_TEMP_STATIC_GEN_0 = IDLString.native_new();
         IDLString_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return IDLString_TEMP_STATIC_GEN_0;
     }
@@ -7392,7 +7392,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImGuiPlatformIO_TEMP_STATIC_GEN_0 == null)
-            ImGuiPlatformIO_TEMP_STATIC_GEN_0 = ImGuiPlatformIO.createInstance();
+            ImGuiPlatformIO_TEMP_STATIC_GEN_0 = ImGuiPlatformIO.native_new();
         ImGuiPlatformIO_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImGuiPlatformIO_TEMP_STATIC_GEN_0;
     }
@@ -7466,7 +7466,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImGuiViewport_TEMP_STATIC_GEN_2 == null)
-            ImGuiViewport_TEMP_STATIC_GEN_2 = ImGuiViewport.createInstance();
+            ImGuiViewport_TEMP_STATIC_GEN_2 = ImGuiViewport.native_new();
         ImGuiViewport_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
         return ImGuiViewport_TEMP_STATIC_GEN_2;
     }
@@ -7485,7 +7485,7 @@ public class ImGui extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImGuiViewport_TEMP_STATIC_GEN_3 == null)
-            ImGuiViewport_TEMP_STATIC_GEN_3 = ImGuiViewport.createInstance();
+            ImGuiViewport_TEMP_STATIC_GEN_3 = ImGuiViewport.native_new();
         ImGuiViewport_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
         return ImGuiViewport_TEMP_STATIC_GEN_3;
     }

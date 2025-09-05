@@ -4,7 +4,7 @@ import idl.IDLBase;
 
 public class ImVec4 extends IDLBase {
 
-    public final static ImVec4 NULL = createInstance();
+    public final static ImVec4 NULL = native_new();
     public static ImVec4 TMP_1 = new ImVec4();
     public static ImVec4 TMP_2 = new ImVec4();
     public static ImVec4 TMP_3 = new ImVec4();
@@ -13,7 +13,7 @@ public class ImVec4 extends IDLBase {
     public static ImVec4 TMP_INTERNAL_1 = new ImVec4();
     public static ImVec4 TMP_INTERNAL_2 = new ImVec4();
 
-    public static ImVec4 createInstance() {
+    public static ImVec4 native_new() {
         return new ImVec4((byte) 0, (char) 0);
     }
 

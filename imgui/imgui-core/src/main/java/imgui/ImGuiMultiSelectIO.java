@@ -9,13 +9,13 @@ import imgui.idl.IDLBase;
 
 public class ImGuiMultiSelectIO extends IDLBase {
 
-    static public final ImGuiMultiSelectIO NULL = ImGuiMultiSelectIO.createInstance();
+    static public final ImGuiMultiSelectIO NULL = ImGuiMultiSelectIO.native_new();
 
-    static public final ImGuiMultiSelectIO T_01 = ImGuiMultiSelectIO.createInstance();
+    static public final ImGuiMultiSelectIO T_01 = ImGuiMultiSelectIO.native_new();
 
-    static public final ImGuiMultiSelectIO T_02 = ImGuiMultiSelectIO.createInstance();
+    static public final ImGuiMultiSelectIO T_02 = ImGuiMultiSelectIO.native_new();
 
-    static public final ImGuiMultiSelectIO T_03 = ImGuiMultiSelectIO.createInstance();
+    static public final ImGuiMultiSelectIO T_03 = ImGuiMultiSelectIO.native_new();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -27,7 +27,7 @@ public class ImGuiMultiSelectIO extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static ImGuiMultiSelectIO createInstance() {
+    public static ImGuiMultiSelectIO native_new() {
         return new ImGuiMultiSelectIO((byte) 0, (char) 0);
     }
 

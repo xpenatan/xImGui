@@ -11,7 +11,7 @@ import imgui.idl.IDLBase;
 
 public class IDLStringView extends IDLBase {
 
-    public static final IDLStringView NULL = createInstance();
+    public static final IDLStringView NULL = native_new();
 
     public static IDLStringView TMP_1 = new IDLStringView();
 
@@ -25,7 +25,7 @@ public class IDLStringView extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static IDLStringView createInstance() {
+    public static IDLStringView native_new() {
         return new IDLStringView((byte) 1, (char) 1);
     }
 

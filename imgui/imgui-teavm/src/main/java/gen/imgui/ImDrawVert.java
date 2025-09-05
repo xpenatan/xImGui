@@ -13,13 +13,13 @@ public class ImDrawVert extends IDLBase {
 
     private ImVec2 ImVec2_TEMP_GEN_1;
 
-    static public final ImDrawVert NULL = ImDrawVert.createInstance();
+    static public final ImDrawVert NULL = ImDrawVert.native_new();
 
-    static public final ImDrawVert T_01 = ImDrawVert.createInstance();
+    static public final ImDrawVert T_01 = ImDrawVert.native_new();
 
-    static public final ImDrawVert T_02 = ImDrawVert.createInstance();
+    static public final ImDrawVert T_02 = ImDrawVert.native_new();
 
-    static public final ImDrawVert T_03 = ImDrawVert.createInstance();
+    static public final ImDrawVert T_03 = ImDrawVert.native_new();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -31,7 +31,7 @@ public class ImDrawVert extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static ImDrawVert createInstance() {
+    public static ImDrawVert native_new() {
         return new ImDrawVert((byte) 0, (char) 0);
     }
 
@@ -51,7 +51,7 @@ imgui.destroy(jsObj);
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_0 == null)
-            ImVec2_TEMP_GEN_0 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_0;
     }
@@ -81,7 +81,7 @@ jsObj.set_pos(pos_addr);
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_1 == null)
-            ImVec2_TEMP_GEN_1 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_1;
     }

@@ -9,7 +9,7 @@ package gen.imgui.idl.helper;
 
 public class IDLDouble extends IDLDoubleArray {
 
-    public static final IDLDouble NULL = createInstance();
+    public static final IDLDouble NULL = native_new();
 
     public static IDLDouble TMP_1 = new IDLDouble();
 
@@ -23,7 +23,7 @@ public class IDLDouble extends IDLDoubleArray {
     /**
      * @return An empty instance without a native address
      */
-    public static IDLDouble createInstance() {
+    public static IDLDouble native_new() {
         return new IDLDouble((byte) 1, (char) 1);
     }
 

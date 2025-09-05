@@ -36,7 +36,7 @@ public class ImFontConfig extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static ImFontConfig createInstance() {
+    public static ImFontConfig native_new() {
         return new ImFontConfig((byte) 0, (char) 0);
     }
 
@@ -210,7 +210,7 @@ public class ImFontConfig extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_0 == null)
-            ImVec2_TEMP_GEN_0 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_0;
     }
@@ -238,7 +238,7 @@ public class ImFontConfig extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_1 == null)
-            ImVec2_TEMP_GEN_1 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_1;
     }

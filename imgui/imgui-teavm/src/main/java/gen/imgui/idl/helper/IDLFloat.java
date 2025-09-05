@@ -9,7 +9,7 @@ package gen.imgui.idl.helper;
 
 public class IDLFloat extends IDLFloatArray {
 
-    public static final IDLFloat NULL = createInstance();
+    public static final IDLFloat NULL = native_new();
 
     public static IDLFloat TMP_1 = new IDLFloat();
 
@@ -29,7 +29,7 @@ public class IDLFloat extends IDLFloatArray {
     /**
      * @return An empty instance without a native address
      */
-    public static IDLFloat createInstance() {
+    public static IDLFloat native_new() {
         return new IDLFloat((byte) 1, (char) 1);
     }
 

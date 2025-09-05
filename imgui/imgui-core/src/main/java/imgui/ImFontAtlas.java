@@ -49,7 +49,7 @@ public class ImFontAtlas extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static ImFontAtlas createInstance() {
+    public static ImFontAtlas native_new() {
         return new ImFontAtlas((byte) 0, (char) 0);
     }
 
@@ -69,7 +69,7 @@ public class ImFontAtlas extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImFont_TEMP_GEN_0 == null)
-            ImFont_TEMP_GEN_0 = ImFont.createInstance();
+            ImFont_TEMP_GEN_0 = ImFont.native_new();
         ImFont_TEMP_GEN_0.internal_reset(pointer, false);
         return ImFont_TEMP_GEN_0;
     }
@@ -87,7 +87,7 @@ public class ImFontAtlas extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImFont_TEMP_GEN_1 == null)
-            ImFont_TEMP_GEN_1 = ImFont.createInstance();
+            ImFont_TEMP_GEN_1 = ImFont.native_new();
         ImFont_TEMP_GEN_1.internal_reset(pointer, false);
         return ImFont_TEMP_GEN_1;
     }

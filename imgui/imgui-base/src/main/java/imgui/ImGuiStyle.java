@@ -5,7 +5,7 @@ import idl.IDLEnum;
 
 public class ImGuiStyle extends IDLBase {
 
-    private static ImVec4 tmp = ImVec4.createInstance();
+    private static ImVec4 tmp = ImVec4.native_new();
 
     /*[-IDL_SKIP]*/
     public native void Colors(ImVec4[] Colors);

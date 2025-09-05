@@ -22,13 +22,13 @@ public class ImGuiLayout extends IDLBase {
 
     private ImVec2 ImVec2_TEMP_GEN_5;
 
-    static public final ImGuiLayout NULL = ImGuiLayout.createInstance();
+    static public final ImGuiLayout NULL = ImGuiLayout.native_new();
 
-    static public final ImGuiLayout T_01 = ImGuiLayout.createInstance();
+    static public final ImGuiLayout T_01 = ImGuiLayout.native_new();
 
-    static public final ImGuiLayout T_02 = ImGuiLayout.createInstance();
+    static public final ImGuiLayout T_02 = ImGuiLayout.native_new();
 
-    static public final ImGuiLayout T_03 = ImGuiLayout.createInstance();
+    static public final ImGuiLayout T_03 = ImGuiLayout.native_new();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -40,7 +40,7 @@ public class ImGuiLayout extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static ImGuiLayout createInstance() {
+    public static ImGuiLayout native_new() {
         return new ImGuiLayout((byte) 0, (char) 0);
     }
 
@@ -59,7 +59,7 @@ delete nativeObject;
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_0 == null)
-            ImVec2_TEMP_GEN_0 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_0;
     }
@@ -76,7 +76,7 @@ return (jlong)&copy_addr;*/
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_1 == null)
-            ImVec2_TEMP_GEN_1 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_1;
     }
@@ -93,7 +93,7 @@ return (jlong)&copy_addr;*/
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_2 == null)
-            ImVec2_TEMP_GEN_2 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_2 = ImVec2.native_new();
         ImVec2_TEMP_GEN_2.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_2;
     }
@@ -110,7 +110,7 @@ return (jlong)&copy_addr;*/
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_3 == null)
-            ImVec2_TEMP_GEN_3 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_3 = ImVec2.native_new();
         ImVec2_TEMP_GEN_3.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_3;
     }
@@ -127,7 +127,7 @@ return (jlong)&copy_addr;*/
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_4 == null)
-            ImVec2_TEMP_GEN_4 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_4 = ImVec2.native_new();
         ImVec2_TEMP_GEN_4.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_4;
     }
@@ -153,7 +153,7 @@ nativeObject->position = *((ImVec2*)position_addr);
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_5 == null)
-            ImVec2_TEMP_GEN_5 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_5 = ImVec2.native_new();
         ImVec2_TEMP_GEN_5.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_5;
     }

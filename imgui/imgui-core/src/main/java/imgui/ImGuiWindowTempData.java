@@ -11,13 +11,13 @@ public class ImGuiWindowTempData extends IDLBase {
 
     private ImVec2 ImVec2_TEMP_GEN_0;
 
-    static public final ImGuiWindowTempData NULL = ImGuiWindowTempData.createInstance();
+    static public final ImGuiWindowTempData NULL = ImGuiWindowTempData.native_new();
 
-    static public final ImGuiWindowTempData T_01 = ImGuiWindowTempData.createInstance();
+    static public final ImGuiWindowTempData T_01 = ImGuiWindowTempData.native_new();
 
-    static public final ImGuiWindowTempData T_02 = ImGuiWindowTempData.createInstance();
+    static public final ImGuiWindowTempData T_02 = ImGuiWindowTempData.native_new();
 
-    static public final ImGuiWindowTempData T_03 = ImGuiWindowTempData.createInstance();
+    static public final ImGuiWindowTempData T_03 = ImGuiWindowTempData.native_new();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -29,7 +29,7 @@ public class ImGuiWindowTempData extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static ImGuiWindowTempData createInstance() {
+    public static ImGuiWindowTempData native_new() {
         return new ImGuiWindowTempData((byte) 0, (char) 0);
     }
 
@@ -38,7 +38,7 @@ public class ImGuiWindowTempData extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_0 == null)
-            ImVec2_TEMP_GEN_0 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_0;
     }

@@ -9,13 +9,13 @@ import gen.imgui.idl.IDLBase;
 
 public class ImGuiInputTextCallbackData extends IDLBase {
 
-    static public final ImGuiInputTextCallbackData NULL = ImGuiInputTextCallbackData.createInstance();
+    static public final ImGuiInputTextCallbackData NULL = ImGuiInputTextCallbackData.native_new();
 
-    static public final ImGuiInputTextCallbackData T_01 = ImGuiInputTextCallbackData.createInstance();
+    static public final ImGuiInputTextCallbackData T_01 = ImGuiInputTextCallbackData.native_new();
 
-    static public final ImGuiInputTextCallbackData T_02 = ImGuiInputTextCallbackData.createInstance();
+    static public final ImGuiInputTextCallbackData T_02 = ImGuiInputTextCallbackData.native_new();
 
-    static public final ImGuiInputTextCallbackData T_03 = ImGuiInputTextCallbackData.createInstance();
+    static public final ImGuiInputTextCallbackData T_03 = ImGuiInputTextCallbackData.native_new();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -27,7 +27,7 @@ public class ImGuiInputTextCallbackData extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static ImGuiInputTextCallbackData createInstance() {
+    public static ImGuiInputTextCallbackData native_new() {
         return new ImGuiInputTextCallbackData((byte) 0, (char) 0);
     }
 

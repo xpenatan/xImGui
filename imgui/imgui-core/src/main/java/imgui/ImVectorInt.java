@@ -33,7 +33,7 @@ public class ImVectorInt extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static ImVectorInt createInstance() {
+    public static ImVectorInt native_new() {
         return new ImVectorInt((byte) 0, (char) 0);
     }
 

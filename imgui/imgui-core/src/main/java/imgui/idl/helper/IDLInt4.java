@@ -9,7 +9,7 @@ package imgui.idl.helper;
 
 public class IDLInt4 extends IDLIntArray {
 
-    public static final IDLInt4 NULL = createInstance();
+    public static final IDLInt4 NULL = native_new();
 
     public static IDLInt4 TMP_1 = new IDLInt4();
 
@@ -23,7 +23,7 @@ public class IDLInt4 extends IDLIntArray {
     /**
      * @return An empty instance without a native address
      */
-    public static IDLInt4 createInstance() {
+    public static IDLInt4 native_new() {
         return new IDLInt4((byte) 1, (char) 1);
     }
 

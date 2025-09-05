@@ -9,13 +9,13 @@ import imgui.idl.IDLBase;
 
 public class ImGuiTabBar extends IDLBase {
 
-    static public final ImGuiTabBar NULL = ImGuiTabBar.createInstance();
+    static public final ImGuiTabBar NULL = ImGuiTabBar.native_new();
 
-    static public final ImGuiTabBar T_01 = ImGuiTabBar.createInstance();
+    static public final ImGuiTabBar T_01 = ImGuiTabBar.native_new();
 
-    static public final ImGuiTabBar T_02 = ImGuiTabBar.createInstance();
+    static public final ImGuiTabBar T_02 = ImGuiTabBar.native_new();
 
-    static public final ImGuiTabBar T_03 = ImGuiTabBar.createInstance();
+    static public final ImGuiTabBar T_03 = ImGuiTabBar.native_new();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -27,7 +27,7 @@ public class ImGuiTabBar extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static ImGuiTabBar createInstance() {
+    public static ImGuiTabBar native_new() {
         return new ImGuiTabBar((byte) 0, (char) 0);
     }
 

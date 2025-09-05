@@ -23,7 +23,7 @@ public class VecCmdBuffer extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static VecCmdBuffer createInstance() {
+    public static VecCmdBuffer native_new() {
         return new VecCmdBuffer((byte) 0, (char) 0);
     }
 
@@ -44,7 +44,7 @@ public class VecCmdBuffer extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImDrawCmd_TEMP_GEN_0 == null)
-            ImDrawCmd_TEMP_GEN_0 = ImDrawCmd.createInstance();
+            ImDrawCmd_TEMP_GEN_0 = ImDrawCmd.native_new();
         ImDrawCmd_TEMP_GEN_0.internal_reset(pointer, false);
         return ImDrawCmd_TEMP_GEN_0;
     }

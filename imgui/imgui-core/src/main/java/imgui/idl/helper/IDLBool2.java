@@ -9,7 +9,7 @@ package imgui.idl.helper;
 
 public class IDLBool2 extends IDLBoolArray {
 
-    public static final IDLBool2 NULL = createInstance();
+    public static final IDLBool2 NULL = native_new();
 
     public static IDLBool2 TMP_1 = new IDLBool2();
 
@@ -23,7 +23,7 @@ public class IDLBool2 extends IDLBoolArray {
     /**
      * @return An empty instance without a native address
      */
-    public static IDLBool2 createInstance() {
+    public static IDLBool2 native_new() {
         return new IDLBool2((byte) 1, (char) 1);
     }
 

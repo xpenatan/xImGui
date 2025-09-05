@@ -51,9 +51,9 @@ public class ImDrawList extends IDLBase {
 
     public ByteBuffer idxByteBuffer;
 
-    private ImDrawCmd imDrawCmd = ImDrawCmd.createInstance();
+    private ImDrawCmd imDrawCmd = ImDrawCmd.native_new();
 
-    public static ImDrawList createInstance() {
+    public static ImDrawList native_new() {
         return new ImDrawList((byte) 0, (char) 0);
     }
 
@@ -278,7 +278,7 @@ public class ImDrawList extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_0 == null)
-            ImVec2_TEMP_GEN_0 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_0;
     }
@@ -298,7 +298,7 @@ public class ImDrawList extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_1 == null)
-            ImVec2_TEMP_GEN_1 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_1;
     }
@@ -1074,7 +1074,7 @@ public class ImDrawList extends IDLBase {
         if (pointer == 0)
             return null;
         if (VecCmdBuffer_TEMP_GEN_0 == null)
-            VecCmdBuffer_TEMP_GEN_0 = VecCmdBuffer.createInstance();
+            VecCmdBuffer_TEMP_GEN_0 = VecCmdBuffer.native_new();
         VecCmdBuffer_TEMP_GEN_0.internal_reset(pointer, false);
         return VecCmdBuffer_TEMP_GEN_0;
     }
@@ -1106,7 +1106,7 @@ public class ImDrawList extends IDLBase {
         if (pointer == 0)
             return null;
         if (VecIdxBuffer_TEMP_GEN_0 == null)
-            VecIdxBuffer_TEMP_GEN_0 = VecIdxBuffer.createInstance();
+            VecIdxBuffer_TEMP_GEN_0 = VecIdxBuffer.native_new();
         VecIdxBuffer_TEMP_GEN_0.internal_reset(pointer, false);
         return VecIdxBuffer_TEMP_GEN_0;
     }
@@ -1138,7 +1138,7 @@ public class ImDrawList extends IDLBase {
         if (pointer == 0)
             return null;
         if (VecVtxBuffer_TEMP_GEN_0 == null)
-            VecVtxBuffer_TEMP_GEN_0 = VecVtxBuffer.createInstance();
+            VecVtxBuffer_TEMP_GEN_0 = VecVtxBuffer.native_new();
         VecVtxBuffer_TEMP_GEN_0.internal_reset(pointer, false);
         return VecVtxBuffer_TEMP_GEN_0;
     }

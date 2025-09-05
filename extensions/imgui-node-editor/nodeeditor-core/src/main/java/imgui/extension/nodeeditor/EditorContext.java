@@ -9,13 +9,13 @@ import imgui.idl.IDLBase;
 
 public class EditorContext extends IDLBase {
 
-    static public final EditorContext NULL = EditorContext.createInstance();
+    static public final EditorContext NULL = EditorContext.native_new();
 
-    static public final EditorContext T_01 = EditorContext.createInstance();
+    static public final EditorContext T_01 = EditorContext.native_new();
 
-    static public final EditorContext T_02 = EditorContext.createInstance();
+    static public final EditorContext T_02 = EditorContext.native_new();
 
-    static public final EditorContext T_03 = EditorContext.createInstance();
+    static public final EditorContext T_03 = EditorContext.native_new();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -27,7 +27,7 @@ public class EditorContext extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static EditorContext createInstance() {
+    public static EditorContext native_new() {
         return new EditorContext((byte) 0, (char) 0);
     }
 

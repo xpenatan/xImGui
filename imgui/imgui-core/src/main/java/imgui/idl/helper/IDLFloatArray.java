@@ -9,12 +9,12 @@ package imgui.idl.helper;
 
 public class IDLFloatArray extends IDLArrayBase {
 
-    public static final IDLFloatArray NULL = createInstance();
+    public static final IDLFloatArray NULL = native_new();
 
     /**
      * @return An empty instance without a native address
      */
-    public static IDLFloatArray createInstance() {
+    public static IDLFloatArray native_new() {
         return new IDLFloatArray((byte) 1, (char) 1);
     }
 

@@ -19,11 +19,11 @@ public class ImGuiIO extends IDLBase {
 
     private ImFontAtlas ImFontAtlas_TEMP_GEN_0;
 
-    public final static ImGuiIO NULL = createInstance();
+    public final static ImGuiIO NULL = native_new();
 
     public static ImGuiIO TMP_EMPTY = new ImGuiIO(false);
 
-    public static ImGuiIO createInstance() {
+    public static ImGuiIO native_new() {
         return new ImGuiIO((byte) 0, (char) 0);
     }
 
@@ -277,7 +277,7 @@ public class ImGuiIO extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_0 == null)
-            ImVec2_TEMP_GEN_0 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_0;
     }
@@ -309,7 +309,7 @@ public class ImGuiIO extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_1 == null)
-            ImVec2_TEMP_GEN_1 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_1;
     }
@@ -365,7 +365,7 @@ public class ImGuiIO extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImFontAtlas_TEMP_GEN_0 == null)
-            ImFontAtlas_TEMP_GEN_0 = ImFontAtlas.createInstance();
+            ImFontAtlas_TEMP_GEN_0 = ImFontAtlas.native_new();
         ImFontAtlas_TEMP_GEN_0.internal_reset(pointer, false);
         return ImFontAtlas_TEMP_GEN_0;
     }

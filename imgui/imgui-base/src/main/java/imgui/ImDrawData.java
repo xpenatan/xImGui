@@ -5,9 +5,9 @@ import idl.IDLBase;
 /*[-IDL_SKIP]*/
 public final class ImDrawData extends IDLBase {
 
-    private ImDrawList imDrawList = ImDrawList.createInstance();
+    private ImDrawList imDrawList = ImDrawList.native_new();
 
-    public static ImDrawData createInstance() {
+    public static ImDrawData native_new() {
         return new ImDrawData((byte) 0, (char) 0);
     }
 

@@ -9,13 +9,13 @@ import imgui.idl.IDLBase;
 
 public class ImDrawListSharedData extends IDLBase {
 
-    static public final ImDrawListSharedData NULL = ImDrawListSharedData.createInstance();
+    static public final ImDrawListSharedData NULL = ImDrawListSharedData.native_new();
 
-    static public final ImDrawListSharedData T_01 = ImDrawListSharedData.createInstance();
+    static public final ImDrawListSharedData T_01 = ImDrawListSharedData.native_new();
 
-    static public final ImDrawListSharedData T_02 = ImDrawListSharedData.createInstance();
+    static public final ImDrawListSharedData T_02 = ImDrawListSharedData.native_new();
 
-    static public final ImDrawListSharedData T_03 = ImDrawListSharedData.createInstance();
+    static public final ImDrawListSharedData T_03 = ImDrawListSharedData.native_new();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -27,7 +27,7 @@ public class ImDrawListSharedData extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static ImDrawListSharedData createInstance() {
+    public static ImDrawListSharedData native_new() {
         return new ImDrawListSharedData((byte) 0, (char) 0);
     }
 

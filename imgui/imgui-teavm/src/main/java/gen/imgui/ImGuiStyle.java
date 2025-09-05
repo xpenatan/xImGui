@@ -42,7 +42,7 @@ public class ImGuiStyle extends IDLBase {
 
     private ImVec4 ImVec4_TEMP_GEN_0;
 
-    private static ImVec4 tmp = ImVec4.createInstance();
+    private static ImVec4 tmp = ImVec4.native_new();
 
     /*
       [-IDL_SKIP]
@@ -97,7 +97,7 @@ public class ImGuiStyle extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static ImGuiStyle createInstance() {
+    public static ImGuiStyle native_new() {
         return new ImGuiStyle((byte) 0, (char) 0);
     }
 
@@ -178,7 +178,7 @@ public class ImGuiStyle extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_0 == null)
-            ImVec2_TEMP_GEN_0 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_0;
     }
@@ -258,7 +258,7 @@ public class ImGuiStyle extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_1 == null)
-            ImVec2_TEMP_GEN_1 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_1;
     }
@@ -290,7 +290,7 @@ public class ImGuiStyle extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_2 == null)
-            ImVec2_TEMP_GEN_2 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_2 = ImVec2.native_new();
         ImVec2_TEMP_GEN_2.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_2;
     }
@@ -443,7 +443,7 @@ public class ImGuiStyle extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_3 == null)
-            ImVec2_TEMP_GEN_3 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_3 = ImVec2.native_new();
         ImVec2_TEMP_GEN_3.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_3;
     }
@@ -523,7 +523,7 @@ public class ImGuiStyle extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_4 == null)
-            ImVec2_TEMP_GEN_4 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_4 = ImVec2.native_new();
         ImVec2_TEMP_GEN_4.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_4;
     }
@@ -555,7 +555,7 @@ public class ImGuiStyle extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_5 == null)
-            ImVec2_TEMP_GEN_5 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_5 = ImVec2.native_new();
         ImVec2_TEMP_GEN_5.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_5;
     }
@@ -587,7 +587,7 @@ public class ImGuiStyle extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_6 == null)
-            ImVec2_TEMP_GEN_6 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_6 = ImVec2.native_new();
         ImVec2_TEMP_GEN_6.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_6;
     }
@@ -619,7 +619,7 @@ public class ImGuiStyle extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_7 == null)
-            ImVec2_TEMP_GEN_7 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_7 = ImVec2.native_new();
         ImVec2_TEMP_GEN_7.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_7;
     }
@@ -940,7 +940,7 @@ public class ImGuiStyle extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_8 == null)
-            ImVec2_TEMP_GEN_8 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_8 = ImVec2.native_new();
         ImVec2_TEMP_GEN_8.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_8;
     }
@@ -972,7 +972,7 @@ public class ImGuiStyle extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_9 == null)
-            ImVec2_TEMP_GEN_9 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_9 = ImVec2.native_new();
         ImVec2_TEMP_GEN_9.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_9;
     }
@@ -1028,7 +1028,7 @@ public class ImGuiStyle extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_10 == null)
-            ImVec2_TEMP_GEN_10 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_10 = ImVec2.native_new();
         ImVec2_TEMP_GEN_10.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_10;
     }
@@ -1060,7 +1060,7 @@ public class ImGuiStyle extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_11 == null)
-            ImVec2_TEMP_GEN_11 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_11 = ImVec2.native_new();
         ImVec2_TEMP_GEN_11.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_11;
     }
@@ -1092,7 +1092,7 @@ public class ImGuiStyle extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_12 == null)
-            ImVec2_TEMP_GEN_12 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_12 = ImVec2.native_new();
         ImVec2_TEMP_GEN_12.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_12;
     }
@@ -1124,7 +1124,7 @@ public class ImGuiStyle extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_GEN_13 == null)
-            ImVec2_TEMP_GEN_13 = ImVec2.createInstance();
+            ImVec2_TEMP_GEN_13 = ImVec2.native_new();
         ImVec2_TEMP_GEN_13.internal_reset(pointer, false);
         return ImVec2_TEMP_GEN_13;
     }
@@ -1446,7 +1446,7 @@ public class ImGuiStyle extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImVec4_TEMP_GEN_0 == null)
-            ImVec4_TEMP_GEN_0 = ImVec4.createInstance();
+            ImVec4_TEMP_GEN_0 = ImVec4.native_new();
         ImVec4_TEMP_GEN_0.internal_reset(pointer, false);
         return ImVec4_TEMP_GEN_0;
     }

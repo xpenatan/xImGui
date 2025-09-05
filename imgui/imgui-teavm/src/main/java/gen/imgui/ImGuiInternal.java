@@ -34,13 +34,13 @@ public class ImGuiInternal extends IDLBase {
 
     static private ImVec2 ImVec2_TEMP_STATIC_GEN_2;
 
-    static public final ImGuiInternal NULL = ImGuiInternal.createInstance();
+    static public final ImGuiInternal NULL = ImGuiInternal.native_new();
 
-    static public final ImGuiInternal T_01 = ImGuiInternal.createInstance();
+    static public final ImGuiInternal T_01 = ImGuiInternal.native_new();
 
-    static public final ImGuiInternal T_02 = ImGuiInternal.createInstance();
+    static public final ImGuiInternal T_02 = ImGuiInternal.native_new();
 
-    static public final ImGuiInternal T_03 = ImGuiInternal.createInstance();
+    static public final ImGuiInternal T_03 = ImGuiInternal.native_new();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -52,7 +52,7 @@ public class ImGuiInternal extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static ImGuiInternal createInstance() {
+    public static ImGuiInternal native_new() {
         return new ImGuiInternal((byte) 0, (char) 0);
     }
 
@@ -116,7 +116,7 @@ return returnedJSObj;
         if (pointer == 0)
             return null;
         if (ImGuiWindow_TEMP_STATIC_GEN_0 == null)
-            ImGuiWindow_TEMP_STATIC_GEN_0 = ImGuiWindow.createInstance();
+            ImGuiWindow_TEMP_STATIC_GEN_0 = ImGuiWindow.native_new();
         ImGuiWindow_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImGuiWindow_TEMP_STATIC_GEN_0;
     }
@@ -134,7 +134,7 @@ return imgui.getPointer(returnedJSObj);
         if (pointer == 0)
             return null;
         if (ImGuiWindow_TEMP_STATIC_GEN_1 == null)
-            ImGuiWindow_TEMP_STATIC_GEN_1 = ImGuiWindow.createInstance();
+            ImGuiWindow_TEMP_STATIC_GEN_1 = ImGuiWindow.native_new();
         ImGuiWindow_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
         return ImGuiWindow_TEMP_STATIC_GEN_1;
     }
@@ -152,7 +152,7 @@ return imgui.getPointer(returnedJSObj);
         if (pointer == 0)
             return null;
         if (ImGuiWindow_TEMP_STATIC_GEN_2 == null)
-            ImGuiWindow_TEMP_STATIC_GEN_2 = ImGuiWindow.createInstance();
+            ImGuiWindow_TEMP_STATIC_GEN_2 = ImGuiWindow.native_new();
         ImGuiWindow_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
         return ImGuiWindow_TEMP_STATIC_GEN_2;
     }
@@ -317,7 +317,7 @@ imgui.ImGuiInternal.prototype.SetLastItemData(item_id, ImGuiItemFlags, ImGuiItem
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_0 == null)
-            ImVec2_TEMP_STATIC_GEN_0 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_0;
     }
@@ -387,7 +387,7 @@ imgui.ImGuiInternal.prototype.DockBuilderDockWindow(window_name, node_id);
         if (pointer == 0)
             return null;
         if (ImGuiDockNode_TEMP_STATIC_GEN_0 == null)
-            ImGuiDockNode_TEMP_STATIC_GEN_0 = ImGuiDockNode.createInstance();
+            ImGuiDockNode_TEMP_STATIC_GEN_0 = ImGuiDockNode.native_new();
         ImGuiDockNode_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImGuiDockNode_TEMP_STATIC_GEN_0;
     }
@@ -405,7 +405,7 @@ return imgui.getPointer(returnedJSObj);
         if (pointer == 0)
             return null;
         if (ImGuiDockNode_TEMP_STATIC_GEN_1 == null)
-            ImGuiDockNode_TEMP_STATIC_GEN_1 = ImGuiDockNode.createInstance();
+            ImGuiDockNode_TEMP_STATIC_GEN_1 = ImGuiDockNode.native_new();
         ImGuiDockNode_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
         return ImGuiDockNode_TEMP_STATIC_GEN_1;
     }
@@ -591,7 +591,7 @@ return returnedJSObj;
         if (pointer == 0)
             return null;
         if (ImGuiTabBar_TEMP_STATIC_GEN_0 == null)
-            ImGuiTabBar_TEMP_STATIC_GEN_0 = ImGuiTabBar.createInstance();
+            ImGuiTabBar_TEMP_STATIC_GEN_0 = ImGuiTabBar.native_new();
         ImGuiTabBar_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImGuiTabBar_TEMP_STATIC_GEN_0;
     }
@@ -609,7 +609,7 @@ return imgui.getPointer(returnedJSObj);
         if (pointer == 0)
             return null;
         if (ImGuiTabItem_TEMP_STATIC_GEN_0 == null)
-            ImGuiTabItem_TEMP_STATIC_GEN_0 = ImGuiTabItem.createInstance();
+            ImGuiTabItem_TEMP_STATIC_GEN_0 = ImGuiTabItem.native_new();
         ImGuiTabItem_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImGuiTabItem_TEMP_STATIC_GEN_0;
     }
@@ -627,7 +627,7 @@ return imgui.getPointer(returnedJSObj);
         if (pointer == 0)
             return null;
         if (ImGuiTabItem_TEMP_STATIC_GEN_1 == null)
-            ImGuiTabItem_TEMP_STATIC_GEN_1 = ImGuiTabItem.createInstance();
+            ImGuiTabItem_TEMP_STATIC_GEN_1 = ImGuiTabItem.native_new();
         ImGuiTabItem_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
         return ImGuiTabItem_TEMP_STATIC_GEN_1;
     }
@@ -1178,7 +1178,7 @@ imgui.ImGuiInternal.prototype.ScrollToRect(window_addr, rect_addr);
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_1 == null)
-            ImVec2_TEMP_STATIC_GEN_1 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_1;
     }
@@ -1196,7 +1196,7 @@ return imgui.getPointer(returnedJSObj);
         if (pointer == 0)
             return null;
         if (ImVec2_TEMP_STATIC_GEN_2 == null)
-            ImVec2_TEMP_STATIC_GEN_2 = ImVec2.createInstance();
+            ImVec2_TEMP_STATIC_GEN_2 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
         return ImVec2_TEMP_STATIC_GEN_2;
     }

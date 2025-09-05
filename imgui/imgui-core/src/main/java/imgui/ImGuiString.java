@@ -11,13 +11,13 @@ import imgui.idl.helper.IDLByteArray;
 
 public class ImGuiString extends IDLByteArray {
 
-    public final static ImGuiString NULL = createInstance();
+    public final static ImGuiString NULL = native_new();
 
     public static ImGuiString TMP_1 = new ImGuiString();
 
     private static byte[] tempBytes = new byte[1000];
 
-    public static ImGuiString createInstance() {
+    public static ImGuiString native_new() {
         return new ImGuiString((byte) 0, (char) 0);
     }
 

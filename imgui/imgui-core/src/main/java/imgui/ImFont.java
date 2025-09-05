@@ -34,7 +34,7 @@ public class ImFont extends IDLBase {
     /**
      * @return An empty instance without a native address
      */
-    public static ImFont createInstance() {
+    public static ImFont native_new() {
         return new ImFont((byte) 0, (char) 0);
     }
 
@@ -54,7 +54,7 @@ public class ImFont extends IDLBase {
         if (pointer == 0)
             return null;
         if (ImFontConfig_TEMP_GEN_0 == null)
-            ImFontConfig_TEMP_GEN_0 = ImFontConfig.createInstance();
+            ImFontConfig_TEMP_GEN_0 = ImFontConfig.native_new();
         ImFontConfig_TEMP_GEN_0.internal_reset(pointer, false);
         return ImFontConfig_TEMP_GEN_0;
     }

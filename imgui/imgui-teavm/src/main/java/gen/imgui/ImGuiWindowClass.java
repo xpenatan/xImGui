@@ -9,13 +9,13 @@ import gen.imgui.idl.IDLBase;
 
 public class ImGuiWindowClass extends IDLBase {
 
-    static public final ImGuiWindowClass NULL = ImGuiWindowClass.createInstance();
+    static public final ImGuiWindowClass NULL = ImGuiWindowClass.native_new();
 
-    static public final ImGuiWindowClass T_01 = ImGuiWindowClass.createInstance();
+    static public final ImGuiWindowClass T_01 = ImGuiWindowClass.native_new();
 
-    static public final ImGuiWindowClass T_02 = ImGuiWindowClass.createInstance();
+    static public final ImGuiWindowClass T_02 = ImGuiWindowClass.native_new();
 
-    static public final ImGuiWindowClass T_03 = ImGuiWindowClass.createInstance();
+    static public final ImGuiWindowClass T_03 = ImGuiWindowClass.native_new();
 
     public ImGuiWindowClass() {
         int addr = internal_native_create();
@@ -39,7 +39,7 @@ return imgui.getPointer(jsObj);
     /**
      * @return An empty instance without a native address
      */
-    public static ImGuiWindowClass createInstance() {
+    public static ImGuiWindowClass native_new() {
         return new ImGuiWindowClass((byte) 0, (char) 0);
     }
 
