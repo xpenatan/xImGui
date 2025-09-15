@@ -260,7 +260,7 @@ public class ImGuiIO extends IDLBase {
     public ImVec2 get_DisplaySize() {
         long pointer = internal_native_get_DisplaySize(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
@@ -288,7 +288,7 @@ public class ImGuiIO extends IDLBase {
     public ImVec2 get_DisplayFramebufferScale() {
         long pointer = internal_native_get_DisplayFramebufferScale(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_1 == null)
             ImVec2_TEMP_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
@@ -338,7 +338,7 @@ public class ImGuiIO extends IDLBase {
     public ImFontAtlas get_Fonts() {
         long pointer = internal_native_get_Fonts(native_address);
         if (pointer == 0)
-            return null;
+            return ImFontAtlas.NULL;
         if (ImFontAtlas_TEMP_GEN_0 == null)
             ImFontAtlas_TEMP_GEN_0 = ImFontAtlas.native_new();
         ImFontAtlas_TEMP_GEN_0.internal_reset(pointer, false);

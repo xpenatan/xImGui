@@ -84,7 +84,7 @@ public class ImRect extends IDLBase {
     public ImVec2 GetCenter() {
         long pointer = internal_native_GetCenter(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
@@ -103,7 +103,7 @@ public class ImRect extends IDLBase {
     public ImVec2 GetSize() {
         long pointer = internal_native_GetSize(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_1 == null)
             ImVec2_TEMP_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
@@ -155,7 +155,7 @@ public class ImRect extends IDLBase {
     public ImVec2 get_Min() {
         long pointer = internal_native_get_Min(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_2 == null)
             ImVec2_TEMP_GEN_2 = ImVec2.native_new();
         ImVec2_TEMP_GEN_2.internal_reset(pointer, false);
@@ -183,7 +183,7 @@ public class ImRect extends IDLBase {
     public ImVec2 get_Max() {
         long pointer = internal_native_get_Max(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_3 == null)
             ImVec2_TEMP_GEN_3 = ImVec2.native_new();
         ImVec2_TEMP_GEN_3.internal_reset(pointer, false);

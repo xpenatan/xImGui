@@ -60,6 +60,8 @@ public class ImDrawList extends IDLBase {
 
     private int type = TYPE_DEFAULT;
 
+    public final static ImDrawList NULL = native_new();
+
     IDLByteArray vtxBuffer;
 
     IDLByteArray idxBuffer;
@@ -275,7 +277,7 @@ public class ImDrawList extends IDLBase {
     public ImVec2 GetClipRectMin() {
         long pointer = internal_native_GetClipRectMin(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
@@ -294,7 +296,7 @@ public class ImDrawList extends IDLBase {
     public ImVec2 GetClipRectMax() {
         long pointer = internal_native_GetClipRectMax(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_1 == null)
             ImVec2_TEMP_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
@@ -1006,7 +1008,7 @@ public class ImDrawList extends IDLBase {
     public VecCmdBuffer get_CmdBuffer() {
         long pointer = internal_native_get_CmdBuffer(native_address);
         if (pointer == 0)
-            return null;
+            return VecCmdBuffer.NULL;
         if (VecCmdBuffer_TEMP_GEN_0 == null)
             VecCmdBuffer_TEMP_GEN_0 = VecCmdBuffer.native_new();
         VecCmdBuffer_TEMP_GEN_0.internal_reset(pointer, false);
@@ -1034,7 +1036,7 @@ public class ImDrawList extends IDLBase {
     public VecIdxBuffer get_IdxBuffer() {
         long pointer = internal_native_get_IdxBuffer(native_address);
         if (pointer == 0)
-            return null;
+            return VecIdxBuffer.NULL;
         if (VecIdxBuffer_TEMP_GEN_0 == null)
             VecIdxBuffer_TEMP_GEN_0 = VecIdxBuffer.native_new();
         VecIdxBuffer_TEMP_GEN_0.internal_reset(pointer, false);
@@ -1062,7 +1064,7 @@ public class ImDrawList extends IDLBase {
     public VecVtxBuffer get_VtxBuffer() {
         long pointer = internal_native_get_VtxBuffer(native_address);
         if (pointer == 0)
-            return null;
+            return VecVtxBuffer.NULL;
         if (VecVtxBuffer_TEMP_GEN_0 == null)
             VecVtxBuffer_TEMP_GEN_0 = VecVtxBuffer.native_new();
         VecVtxBuffer_TEMP_GEN_0.internal_reset(pointer, false);

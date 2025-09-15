@@ -238,7 +238,7 @@ public class TextEditor extends IDLBase {
     public IDLString GetLanguageDefinitionName() {
         int pointer = internal_native_GetLanguageDefinitionName(native_address);
         if (pointer == 0)
-            return null;
+            return IDLString.NULL;
         if (IDLString_TEMP_GEN_0 == null)
             IDLString_TEMP_GEN_0 = IDLString.native_new();
         IDLString_TEMP_GEN_0.internal_reset(pointer, false);
@@ -663,7 +663,7 @@ public class TextEditor extends IDLBase {
     public IDLString GetText() {
         int pointer = internal_native_GetText(native_address);
         if (pointer == 0)
-            return null;
+            return IDLString.NULL;
         if (IDLString_TEMP_GEN_1 == null)
             IDLString_TEMP_GEN_1 = IDLString.native_new();
         IDLString_TEMP_GEN_1.internal_reset(pointer, false);

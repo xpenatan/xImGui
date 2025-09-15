@@ -78,9 +78,9 @@ public:
     static void PushStyleColor(StyleColor colorIndex, const ImVec4& color) { n::PushStyleColor(colorIndex, color); }
     static void PopStyleColor(int count = 1) { n::PopStyleColor(count); }
 
-    static void PushStyleVar_1(StyleVar varIndex, float value) { n::PushStyleVar(varIndex, value); }
-    static void PushStyleVar_2(StyleVar varIndex, const ImVec2& value) { n::PushStyleVar(varIndex, value); }
-    static void PushStyleVar_3(StyleVar varIndex, const ImVec4& value) { n::PushStyleVar(varIndex, value); }
+    static void PushStyleVar(StyleVar varIndex, float value) { n::PushStyleVar(varIndex, value); }
+    static void PushStyleVar(StyleVar varIndex, const ImVec2& value) { n::PushStyleVar(varIndex, value); }
+    static void PushStyleVar(StyleVar varIndex, const ImVec4& value) { n::PushStyleVar(varIndex, value); }
     static void PopStyleVar(int count = 1) { n::PopStyleVar(count); }
 
     static void Begin(const char* id, const ImVec2& size = ImVec2(0, 0)) { n::Begin(id, size); }

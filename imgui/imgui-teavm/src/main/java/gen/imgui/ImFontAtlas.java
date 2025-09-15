@@ -17,6 +17,15 @@ public class ImFontAtlas extends IDLBase {
 
     private ImFont ImFont_TEMP_GEN_1;
 
+    public final static ImFontAtlas NULL = native_new();
+
+    public static ImFontAtlas native_new() {
+        return new ImFontAtlas((byte) 0, (char) 0);
+    }
+
+    private ImFontAtlas(byte v, char c) {
+    }
+
     public ImFont AddFontFromMemoryTTF(byte[] fontData, int font_size) {
         IDLByteArray byteArray = new IDLByteArray(fontData.length);
         byteArray.copy(fontData);
@@ -40,20 +49,6 @@ public class ImFontAtlas extends IDLBase {
     @org.teavm.jso.JSBody(params = {"addr", "pixelBufferAddr", "widthAddr", "heightAddr"}, script = "var fontAtlas = imgui.wrapPointer(addr, imgui.ImFontAtlas); var pixelBufferArray = imgui.wrapPointer(pixelBufferAddr, imgui.IDLByteArray); var widthIntArray = imgui.wrapPointer(widthAddr, imgui.IDLIntArray); var heightIntArray = imgui.wrapPointer(heightAddr, imgui.IDLIntArray); var widthArr = widthIntArray.getPointer(); var heightArr = heightIntArray.getPointer(); imgui.ImHelper.prototype.memcpyFont(fontAtlas, pixelBufferArray, widthArr, heightArr);")
     private static native void GetTexDataAsRGBA32NATIVE(int addr, int pixelBufferAddr, int widthAddr, int heightAddr);
 
-    /**
-     * Dummy constructor, used internally to creates objects without C++ pointer
-     */
-    @Deprecated()
-    protected ImFontAtlas(byte b, char c) {
-    }
-
-    /**
-     * @return An empty instance without a native address
-     */
-    public static ImFontAtlas native_new() {
-        return new ImFontAtlas((byte) 0, (char) 0);
-    }
-
     protected void deleteNative() {
         internal_native_deleteNative(native_address);
     }
@@ -69,7 +64,7 @@ public class ImFontAtlas extends IDLBase {
     public ImFont AddFont(ImFontConfig font_cfg) {
         int pointer = internal_native_AddFont(native_address, font_cfg.native_address);
         if (pointer == 0)
-            return null;
+            return ImFont.NULL;
         if (ImFont_TEMP_GEN_0 == null)
             ImFont_TEMP_GEN_0 = ImFont.native_new();
         ImFont_TEMP_GEN_0.internal_reset(pointer, false);
@@ -89,7 +84,7 @@ public class ImFontAtlas extends IDLBase {
     public ImFont AddFontFromMemoryTTF(IDLBase font_data, int font_data_size, int size_pixels) {
         int pointer = internal_native_AddFontFromMemoryTTF(native_address, font_data.native_void_address, font_data_size, size_pixels);
         if (pointer == 0)
-            return null;
+            return ImFont.NULL;
         if (ImFont_TEMP_GEN_1 == null)
             ImFont_TEMP_GEN_1 = ImFont.native_new();
         ImFont_TEMP_GEN_1.internal_reset(pointer, false);

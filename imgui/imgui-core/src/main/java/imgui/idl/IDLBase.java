@@ -70,6 +70,10 @@ public class IDLBase {
         return this;
     }
 
+    public final boolean native_isNULL() {
+        return native_address == 0;
+    }
+
     /**
      * Reset this instance to default state. Use only in instance created by you.
      * Caution: Resetting an owned native instance will cause a memory leak if not disposed.

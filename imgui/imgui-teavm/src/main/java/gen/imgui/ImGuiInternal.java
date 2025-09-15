@@ -57,64 +57,64 @@ public class ImGuiInternal extends IDLBase {
     }
 
     public static int ImHashData(String data, int data_size, int seed) {
-        return internal_native_ImHashData_1(data, data_size, seed);
+        return internal_native_ImHashData__0(data, data_size, seed);
     }
 
     /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImGuiInternal.prototype.ImHashData_1(data, data_size, seed);
+var returnedJSObj = imgui.ImGuiInternal.prototype.ImHashData__0(data, data_size, seed);
 return returnedJSObj;
 */
-    @org.teavm.jso.JSBody(params = {"data", "data_size", "seed"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.ImHashData_1(data, data_size, seed);return returnedJSObj;")
-    public static native int internal_native_ImHashData_1(String data, int data_size, int seed);
+    @org.teavm.jso.JSBody(params = {"data", "data_size", "seed"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.ImHashData__0(data, data_size, seed);return returnedJSObj;")
+    public static native int internal_native_ImHashData__0(String data, int data_size, int seed);
 
     public static int ImHashData(String data, int data_size) {
-        return internal_native_ImHashData_1(data, data_size);
+        return internal_native_ImHashData__0(data, data_size);
     }
 
     /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImGuiInternal.prototype.ImHashData_1(data, data_size);
+var returnedJSObj = imgui.ImGuiInternal.prototype.ImHashData__0(data, data_size);
 return returnedJSObj;
 */
-    @org.teavm.jso.JSBody(params = {"data", "data_size"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.ImHashData_1(data, data_size);return returnedJSObj;")
-    public static native int internal_native_ImHashData_1(String data, int data_size);
+    @org.teavm.jso.JSBody(params = {"data", "data_size"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.ImHashData__0(data, data_size);return returnedJSObj;")
+    public static native int internal_native_ImHashData__0(String data, int data_size);
 
     public static int ImHashStr(String data, int data_size, int seed) {
-        return internal_native_ImHashStr_1(data, data_size, seed);
+        return internal_native_ImHashStr__0(data, data_size, seed);
     }
 
     /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImGuiInternal.prototype.ImHashStr_1(data, data_size, seed);
+var returnedJSObj = imgui.ImGuiInternal.prototype.ImHashStr__0(data, data_size, seed);
 return returnedJSObj;
 */
-    @org.teavm.jso.JSBody(params = {"data", "data_size", "seed"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.ImHashStr_1(data, data_size, seed);return returnedJSObj;")
-    public static native int internal_native_ImHashStr_1(String data, int data_size, int seed);
+    @org.teavm.jso.JSBody(params = {"data", "data_size", "seed"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.ImHashStr__0(data, data_size, seed);return returnedJSObj;")
+    public static native int internal_native_ImHashStr__0(String data, int data_size, int seed);
 
     public static int ImHashStr(String data, int data_size) {
-        return internal_native_ImHashStr_1(data, data_size);
+        return internal_native_ImHashStr__0(data, data_size);
     }
 
     /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImGuiInternal.prototype.ImHashStr_1(data, data_size);
+var returnedJSObj = imgui.ImGuiInternal.prototype.ImHashStr__0(data, data_size);
 return returnedJSObj;
 */
-    @org.teavm.jso.JSBody(params = {"data", "data_size"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.ImHashStr_1(data, data_size);return returnedJSObj;")
-    public static native int internal_native_ImHashStr_1(String data, int data_size);
+    @org.teavm.jso.JSBody(params = {"data", "data_size"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.ImHashStr__0(data, data_size);return returnedJSObj;")
+    public static native int internal_native_ImHashStr__0(String data, int data_size);
 
     public static int ImHashStr(String data) {
-        return internal_native_ImHashStr_1(data);
+        return internal_native_ImHashStr__0(data);
     }
 
     /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImGuiInternal.prototype.ImHashStr_1(data);
+var returnedJSObj = imgui.ImGuiInternal.prototype.ImHashStr__0(data);
 return returnedJSObj;
 */
-    @org.teavm.jso.JSBody(params = {"data"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.ImHashStr_1(data);return returnedJSObj;")
-    public static native int internal_native_ImHashStr_1(String data);
+    @org.teavm.jso.JSBody(params = {"data"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.ImHashStr__0(data);return returnedJSObj;")
+    public static native int internal_native_ImHashStr__0(String data);
 
     public static ImGuiWindow GetCurrentWindow() {
         int pointer = internal_native_GetCurrentWindow();
         if (pointer == 0)
-            return null;
+            return ImGuiWindow.NULL;
         if (ImGuiWindow_TEMP_STATIC_GEN_0 == null)
             ImGuiWindow_TEMP_STATIC_GEN_0 = ImGuiWindow.native_new();
         ImGuiWindow_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
@@ -132,7 +132,7 @@ return imgui.getPointer(returnedJSObj);
     public static ImGuiWindow FindWindowByID(int id) {
         int pointer = internal_native_FindWindowByID(id);
         if (pointer == 0)
-            return null;
+            return ImGuiWindow.NULL;
         if (ImGuiWindow_TEMP_STATIC_GEN_1 == null)
             ImGuiWindow_TEMP_STATIC_GEN_1 = ImGuiWindow.native_new();
         ImGuiWindow_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
@@ -150,7 +150,7 @@ return imgui.getPointer(returnedJSObj);
     public static ImGuiWindow FindWindowByName(String name) {
         int pointer = internal_native_FindWindowByName(name);
         if (pointer == 0)
-            return null;
+            return ImGuiWindow.NULL;
         if (ImGuiWindow_TEMP_STATIC_GEN_2 == null)
             ImGuiWindow_TEMP_STATIC_GEN_2 = ImGuiWindow.native_new();
         ImGuiWindow_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
@@ -186,44 +186,44 @@ imgui.ImGuiInternal.prototype.FocusWindow(window_addr);
     public static native void internal_native_FocusWindow(int window_addr);
 
     public static void ItemSize(ImVec2 size, float text_baseline_y) {
-        internal_native_ItemSize(size.native_address, text_baseline_y);
+        internal_native_ItemSize__0(size.native_address, text_baseline_y);
     }
 
     /*[-TEAVM;-NATIVE]
-imgui.ImGuiInternal.prototype.ItemSize(size_addr, text_baseline_y);
+imgui.ImGuiInternal.prototype.ItemSize__0(size_addr, text_baseline_y);
 */
-    @org.teavm.jso.JSBody(params = {"size_addr", "text_baseline_y"}, script = "imgui.ImGuiInternal.prototype.ItemSize(size_addr, text_baseline_y);")
-    public static native void internal_native_ItemSize(int size_addr, float text_baseline_y);
+    @org.teavm.jso.JSBody(params = {"size_addr", "text_baseline_y"}, script = "imgui.ImGuiInternal.prototype.ItemSize__0(size_addr, text_baseline_y);")
+    public static native void internal_native_ItemSize__0(int size_addr, float text_baseline_y);
 
     public static void ItemSize(ImVec2 size) {
-        internal_native_ItemSize(size.native_address);
+        internal_native_ItemSize__0(size.native_address);
     }
 
     /*[-TEAVM;-NATIVE]
-imgui.ImGuiInternal.prototype.ItemSize(size_addr);
+imgui.ImGuiInternal.prototype.ItemSize__0(size_addr);
 */
-    @org.teavm.jso.JSBody(params = {"size_addr"}, script = "imgui.ImGuiInternal.prototype.ItemSize(size_addr);")
-    public static native void internal_native_ItemSize(int size_addr);
+    @org.teavm.jso.JSBody(params = {"size_addr"}, script = "imgui.ImGuiInternal.prototype.ItemSize__0(size_addr);")
+    public static native void internal_native_ItemSize__0(int size_addr);
 
     public static void ItemSize(ImRect bb, float text_baseline_y) {
-        internal_native_ItemSize_2(bb.native_address, text_baseline_y);
+        internal_native_ItemSize__1(bb.native_address, text_baseline_y);
     }
 
     /*[-TEAVM;-NATIVE]
-imgui.ImGuiInternal.prototype.ItemSize_2(bb_addr, text_baseline_y);
+imgui.ImGuiInternal.prototype.ItemSize__1(bb_addr, text_baseline_y);
 */
-    @org.teavm.jso.JSBody(params = {"bb_addr", "text_baseline_y"}, script = "imgui.ImGuiInternal.prototype.ItemSize_2(bb_addr, text_baseline_y);")
-    public static native void internal_native_ItemSize_2(int bb_addr, float text_baseline_y);
+    @org.teavm.jso.JSBody(params = {"bb_addr", "text_baseline_y"}, script = "imgui.ImGuiInternal.prototype.ItemSize__1(bb_addr, text_baseline_y);")
+    public static native void internal_native_ItemSize__1(int bb_addr, float text_baseline_y);
 
     public static void ItemSize(ImRect bb) {
-        internal_native_ItemSize_2(bb.native_address);
+        internal_native_ItemSize__1(bb.native_address);
     }
 
     /*[-TEAVM;-NATIVE]
-imgui.ImGuiInternal.prototype.ItemSize_2(bb_addr);
+imgui.ImGuiInternal.prototype.ItemSize__1(bb_addr);
 */
-    @org.teavm.jso.JSBody(params = {"bb_addr"}, script = "imgui.ImGuiInternal.prototype.ItemSize_2(bb_addr);")
-    public static native void internal_native_ItemSize_2(int bb_addr);
+    @org.teavm.jso.JSBody(params = {"bb_addr"}, script = "imgui.ImGuiInternal.prototype.ItemSize__1(bb_addr);")
+    public static native void internal_native_ItemSize__1(int bb_addr);
 
     public static boolean ItemAdd(ImRect bb, int id, ImRect nav_bb, ImGuiItemFlags ImGuiItemFlags) {
         return internal_native_ItemAdd(bb.native_address, id, nav_bb.native_address, (int) ImGuiItemFlags.getValue());
@@ -315,7 +315,7 @@ imgui.ImGuiInternal.prototype.SetLastItemData(item_id, ImGuiItemFlags, ImGuiItem
     public static ImVec2 CalcItemSize(ImVec2 size, float default_w, float default_h) {
         int pointer = internal_native_CalcItemSize(size.native_address, default_w, default_h);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_STATIC_GEN_0 == null)
             ImVec2_TEMP_STATIC_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
@@ -385,7 +385,7 @@ imgui.ImGuiInternal.prototype.DockBuilderDockWindow(window_name, node_id);
     public static ImGuiDockNode DockBuilderGetNode(int node_id) {
         int pointer = internal_native_DockBuilderGetNode(node_id);
         if (pointer == 0)
-            return null;
+            return ImGuiDockNode.NULL;
         if (ImGuiDockNode_TEMP_STATIC_GEN_0 == null)
             ImGuiDockNode_TEMP_STATIC_GEN_0 = ImGuiDockNode.native_new();
         ImGuiDockNode_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
@@ -403,7 +403,7 @@ return imgui.getPointer(returnedJSObj);
     public static ImGuiDockNode DockBuilderGetCentralNode(int node_id) {
         int pointer = internal_native_DockBuilderGetCentralNode(node_id);
         if (pointer == 0)
-            return null;
+            return ImGuiDockNode.NULL;
         if (ImGuiDockNode_TEMP_STATIC_GEN_1 == null)
             ImGuiDockNode_TEMP_STATIC_GEN_1 = ImGuiDockNode.native_new();
         ImGuiDockNode_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
@@ -589,7 +589,7 @@ return returnedJSObj;
     public static ImGuiTabBar GetCurrentTabBar() {
         int pointer = internal_native_GetCurrentTabBar();
         if (pointer == 0)
-            return null;
+            return ImGuiTabBar.NULL;
         if (ImGuiTabBar_TEMP_STATIC_GEN_0 == null)
             ImGuiTabBar_TEMP_STATIC_GEN_0 = ImGuiTabBar.native_new();
         ImGuiTabBar_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
@@ -607,7 +607,7 @@ return imgui.getPointer(returnedJSObj);
     public static ImGuiTabItem TabBarFindTabByID(ImGuiTabBar tab_bar, int tab_id) {
         int pointer = internal_native_TabBarFindTabByID(tab_bar.native_address, tab_id);
         if (pointer == 0)
-            return null;
+            return ImGuiTabItem.NULL;
         if (ImGuiTabItem_TEMP_STATIC_GEN_0 == null)
             ImGuiTabItem_TEMP_STATIC_GEN_0 = ImGuiTabItem.native_new();
         ImGuiTabItem_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
@@ -625,7 +625,7 @@ return imgui.getPointer(returnedJSObj);
     public static ImGuiTabItem TabBarFindTabByOrder(ImGuiTabBar tab_bar, int order) {
         int pointer = internal_native_TabBarFindTabByOrder(tab_bar.native_address, order);
         if (pointer == 0)
-            return null;
+            return ImGuiTabItem.NULL;
         if (ImGuiTabItem_TEMP_STATIC_GEN_1 == null)
             ImGuiTabItem_TEMP_STATIC_GEN_1 = ImGuiTabItem.native_new();
         ImGuiTabItem_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
@@ -1176,7 +1176,7 @@ imgui.ImGuiInternal.prototype.ScrollToRect(window_addr, rect_addr);
     public static ImVec2 ScrollToRectEx(ImGuiWindow window, ImRect rect, ImGuiScrollFlags flags) {
         int pointer = internal_native_ScrollToRectEx(window.native_address, rect.native_address, (int) flags.getValue());
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_STATIC_GEN_1 == null)
             ImVec2_TEMP_STATIC_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
@@ -1194,7 +1194,7 @@ return imgui.getPointer(returnedJSObj);
     public static ImVec2 ScrollToRectEx(ImGuiWindow window, ImRect rect) {
         int pointer = internal_native_ScrollToRectEx(window.native_address, rect.native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_STATIC_GEN_2 == null)
             ImVec2_TEMP_STATIC_GEN_2 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_2.internal_reset(pointer, false);

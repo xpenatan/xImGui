@@ -15,6 +15,15 @@ public class ImFontConfig extends IDLBase {
 
     private ImVec2 ImVec2_TEMP_GEN_1;
 
+    public final static ImFontConfig NULL = native_new();
+
+    public static ImFontConfig native_new() {
+        return new ImFontConfig((byte) 0, (char) 0);
+    }
+
+    private ImFontConfig(byte v, char c) {
+    }
+
     public ImFontConfig() {
         int addr = internal_native_create();
         internal_reset(addr, true);
@@ -27,20 +36,6 @@ public class ImFontConfig extends IDLBase {
     */
     @org.teavm.jso.JSBody(script = "var jsObj = new imgui.ImFontConfig();return imgui.getPointer(jsObj);")
     public static native int internal_native_create();
-
-    /**
-     * Dummy constructor, used internally to creates objects without C++ pointer
-     */
-    @Deprecated()
-    protected ImFontConfig(byte b, char c) {
-    }
-
-    /**
-     * @return An empty instance without a native address
-     */
-    public static ImFontConfig native_new() {
-        return new ImFontConfig((byte) 0, (char) 0);
-    }
 
     protected void deleteNative() {
         internal_native_deleteNative(native_address);
@@ -225,7 +220,7 @@ public class ImFontConfig extends IDLBase {
     public ImVec2 get_GlyphExtraSpacing() {
         int pointer = internal_native_get_GlyphExtraSpacing(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
@@ -257,7 +252,7 @@ public class ImFontConfig extends IDLBase {
     public ImVec2 get_GlyphOffset() {
         int pointer = internal_native_get_GlyphOffset(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_1 == null)
             ImVec2_TEMP_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_GEN_1.internal_reset(pointer, false);

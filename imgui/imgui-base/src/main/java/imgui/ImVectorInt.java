@@ -4,6 +4,15 @@ import idl.IDLBase;
 
 public class ImVectorInt extends IDLBase {
 
+    public final static ImVectorInt NULL = native_new();
+
+    public static ImVectorInt native_new() {
+        return new ImVectorInt((byte) 0, (char) 0);
+    }
+
+    private ImVectorInt(byte v, char c) {
+    }
+
     public int getData(int index) {
         return getDataNATIVE(native_address, index);
     }

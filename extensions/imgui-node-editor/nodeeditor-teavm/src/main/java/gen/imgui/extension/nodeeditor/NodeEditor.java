@@ -90,7 +90,7 @@ public class NodeEditor extends IDLBase {
     public static EditorContext GetCurrentEditor() {
         int pointer = internal_native_GetCurrentEditor();
         if (pointer == 0)
-            return null;
+            return EditorContext.NULL;
         if (EditorContext_TEMP_STATIC_GEN_0 == null)
             EditorContext_TEMP_STATIC_GEN_0 = EditorContext.native_new();
         EditorContext_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
@@ -109,7 +109,7 @@ public class NodeEditor extends IDLBase {
     public static EditorContext CreateEditor(LoadSaveSettingsListener listener) {
         int pointer = internal_native_CreateEditor(listener.native_address);
         if (pointer == 0)
-            return null;
+            return EditorContext.NULL;
         if (EditorContext_TEMP_STATIC_GEN_1 == null)
             EditorContext_TEMP_STATIC_GEN_1 = EditorContext.native_new();
         EditorContext_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
@@ -128,7 +128,7 @@ public class NodeEditor extends IDLBase {
     public static EditorContext CreateEditor() {
         int pointer = internal_native_CreateEditor();
         if (pointer == 0)
-            return null;
+            return EditorContext.NULL;
         if (EditorContext_TEMP_STATIC_GEN_2 == null)
             EditorContext_TEMP_STATIC_GEN_2 = EditorContext.native_new();
         EditorContext_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
@@ -158,7 +158,7 @@ public class NodeEditor extends IDLBase {
     public static Config GetConfig(EditorContext ctx) {
         int pointer = internal_native_GetConfig(ctx.native_address);
         if (pointer == 0)
-            return null;
+            return Config.NULL;
         if (Config_TEMP_STATIC_GEN_0 == null)
             Config_TEMP_STATIC_GEN_0 = Config.native_new();
         Config_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
@@ -177,7 +177,7 @@ public class NodeEditor extends IDLBase {
     public static Config GetConfig() {
         int pointer = internal_native_GetConfig();
         if (pointer == 0)
-            return null;
+            return Config.NULL;
         if (Config_TEMP_STATIC_GEN_1 == null)
             Config_TEMP_STATIC_GEN_1 = Config.native_new();
         Config_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
@@ -196,7 +196,7 @@ public class NodeEditor extends IDLBase {
     public static Style GetStyle() {
         int pointer = internal_native_GetStyle();
         if (pointer == 0)
-            return null;
+            return Style.NULL;
         if (Style_TEMP_STATIC_GEN_0 == null)
             Style_TEMP_STATIC_GEN_0 = Style.native_new();
         Style_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
@@ -215,7 +215,7 @@ public class NodeEditor extends IDLBase {
     public static IDLString GetStyleColorName(StyleColor colorIndex) {
         int pointer = internal_native_GetStyleColorName((int) colorIndex.getValue());
         if (pointer == 0)
-            return null;
+            return IDLString.NULL;
         if (IDLString_TEMP_STATIC_GEN_0 == null)
             IDLString_TEMP_STATIC_GEN_0 = IDLString.native_new();
         IDLString_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
@@ -265,37 +265,37 @@ public class NodeEditor extends IDLBase {
     public static native void internal_native_PopStyleColor();
 
     public static void PushStyleVar(StyleVar varIndex, float value) {
-        internal_native_PushStyleVar_1((int) varIndex.getValue(), value);
+        internal_native_PushStyleVar__0((int) varIndex.getValue(), value);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.NodeEditor.prototype.PushStyleVar_1(varIndex, value);
+      imgui.NodeEditor.prototype.PushStyleVar__0(varIndex, value);
     */
-    @org.teavm.jso.JSBody(params = {"varIndex", "value"}, script = "imgui.NodeEditor.prototype.PushStyleVar_1(varIndex, value);")
-    public static native void internal_native_PushStyleVar_1(int varIndex, float value);
+    @org.teavm.jso.JSBody(params = {"varIndex", "value"}, script = "imgui.NodeEditor.prototype.PushStyleVar__0(varIndex, value);")
+    public static native void internal_native_PushStyleVar__0(int varIndex, float value);
 
     public static void PushStyleVar(StyleVar varIndex, ImVec2 value) {
-        internal_native_PushStyleVar_2((int) varIndex.getValue(), value.native_address);
+        internal_native_PushStyleVar__1((int) varIndex.getValue(), value.native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.NodeEditor.prototype.PushStyleVar_2(varIndex, value_addr);
+      imgui.NodeEditor.prototype.PushStyleVar__1(varIndex, value_addr);
     */
-    @org.teavm.jso.JSBody(params = {"varIndex", "value_addr"}, script = "imgui.NodeEditor.prototype.PushStyleVar_2(varIndex, value_addr);")
-    public static native void internal_native_PushStyleVar_2(int varIndex, int value_addr);
+    @org.teavm.jso.JSBody(params = {"varIndex", "value_addr"}, script = "imgui.NodeEditor.prototype.PushStyleVar__1(varIndex, value_addr);")
+    public static native void internal_native_PushStyleVar__1(int varIndex, int value_addr);
 
     public static void PushStyleVar(StyleVar varIndex, ImVec4 value) {
-        internal_native_PushStyleVar_3((int) varIndex.getValue(), value.native_address);
+        internal_native_PushStyleVar__2((int) varIndex.getValue(), value.native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.NodeEditor.prototype.PushStyleVar_3(varIndex, value_addr);
+      imgui.NodeEditor.prototype.PushStyleVar__2(varIndex, value_addr);
     */
-    @org.teavm.jso.JSBody(params = {"varIndex", "value_addr"}, script = "imgui.NodeEditor.prototype.PushStyleVar_3(varIndex, value_addr);")
-    public static native void internal_native_PushStyleVar_3(int varIndex, int value_addr);
+    @org.teavm.jso.JSBody(params = {"varIndex", "value_addr"}, script = "imgui.NodeEditor.prototype.PushStyleVar__2(varIndex, value_addr);")
+    public static native void internal_native_PushStyleVar__2(int varIndex, int value_addr);
 
     public static void PopStyleVar(int count) {
         internal_native_PopStyleVar(count);
@@ -477,7 +477,7 @@ public class NodeEditor extends IDLBase {
     public static ImVec2 GetGroupMin() {
         int pointer = internal_native_GetGroupMin();
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_STATIC_GEN_0 == null)
             ImVec2_TEMP_STATIC_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
@@ -496,7 +496,7 @@ public class NodeEditor extends IDLBase {
     public static ImVec2 GetGroupMax() {
         int pointer = internal_native_GetGroupMax();
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_STATIC_GEN_1 == null)
             ImVec2_TEMP_STATIC_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
@@ -515,7 +515,7 @@ public class NodeEditor extends IDLBase {
     public static ImDrawList GetHintForegroundDrawList() {
         int pointer = internal_native_GetHintForegroundDrawList();
         if (pointer == 0)
-            return null;
+            return ImDrawList.NULL;
         if (ImDrawList_TEMP_STATIC_GEN_0 == null)
             ImDrawList_TEMP_STATIC_GEN_0 = ImDrawList.native_new();
         ImDrawList_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
@@ -534,7 +534,7 @@ public class NodeEditor extends IDLBase {
     public static ImDrawList GetHintBackgroundDrawList() {
         int pointer = internal_native_GetHintBackgroundDrawList();
         if (pointer == 0)
-            return null;
+            return ImDrawList.NULL;
         if (ImDrawList_TEMP_STATIC_GEN_1 == null)
             ImDrawList_TEMP_STATIC_GEN_1 = ImDrawList.native_new();
         ImDrawList_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
@@ -564,7 +564,7 @@ public class NodeEditor extends IDLBase {
     public static ImDrawList GetNodeBackgroundDrawList(int nodeId) {
         int pointer = internal_native_GetNodeBackgroundDrawList(nodeId);
         if (pointer == 0)
-            return null;
+            return ImDrawList.NULL;
         if (ImDrawList_TEMP_STATIC_GEN_2 == null)
             ImDrawList_TEMP_STATIC_GEN_2 = ImDrawList.native_new();
         ImDrawList_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
@@ -957,7 +957,7 @@ public class NodeEditor extends IDLBase {
     public static ImVec2 GetNodePosition(int nodeId) {
         int pointer = internal_native_GetNodePosition(nodeId);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_STATIC_GEN_2 == null)
             ImVec2_TEMP_STATIC_GEN_2 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
@@ -976,7 +976,7 @@ public class NodeEditor extends IDLBase {
     public static ImVec2 GetNodeSize(int nodeId) {
         int pointer = internal_native_GetNodeSize(nodeId);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_STATIC_GEN_3 == null)
             ImVec2_TEMP_STATIC_GEN_3 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
@@ -1708,7 +1708,7 @@ public class NodeEditor extends IDLBase {
     public static ImVec2 GetScreenSize() {
         int pointer = internal_native_GetScreenSize();
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_STATIC_GEN_4 == null)
             ImVec2_TEMP_STATIC_GEN_4 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_4.internal_reset(pointer, false);
@@ -1727,7 +1727,7 @@ public class NodeEditor extends IDLBase {
     public static ImVec2 ScreenToCanvas(ImVec2 pos) {
         int pointer = internal_native_ScreenToCanvas(pos.native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_STATIC_GEN_5 == null)
             ImVec2_TEMP_STATIC_GEN_5 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_5.internal_reset(pointer, false);
@@ -1746,7 +1746,7 @@ public class NodeEditor extends IDLBase {
     public static ImVec2 CanvasToScreen(ImVec2 pos) {
         int pointer = internal_native_CanvasToScreen(pos.native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_STATIC_GEN_6 == null)
             ImVec2_TEMP_STATIC_GEN_6 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_6.internal_reset(pointer, false);

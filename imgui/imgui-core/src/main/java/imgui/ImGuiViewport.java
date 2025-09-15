@@ -95,7 +95,7 @@ nativeObject->Flags = (::ImGuiViewportFlags)Flags;
     public ImVec2 get_Pos() {
         long pointer = internal_native_get_Pos(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
@@ -121,7 +121,7 @@ nativeObject->Pos = *((ImVec2*)Pos_addr);
     public ImVec2 get_Size() {
         long pointer = internal_native_get_Size(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_1 == null)
             ImVec2_TEMP_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
@@ -147,7 +147,7 @@ nativeObject->Size = *((ImVec2*)Size_addr);
     public ImVec2 get_WorkPos() {
         long pointer = internal_native_get_WorkPos(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_2 == null)
             ImVec2_TEMP_GEN_2 = ImVec2.native_new();
         ImVec2_TEMP_GEN_2.internal_reset(pointer, false);
@@ -173,7 +173,7 @@ nativeObject->WorkPos = *((ImVec2*)WorkPos_addr);
     public ImVec2 get_WorkSize() {
         long pointer = internal_native_get_WorkSize(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_3 == null)
             ImVec2_TEMP_GEN_3 = ImVec2.native_new();
         ImVec2_TEMP_GEN_3.internal_reset(pointer, false);
@@ -239,7 +239,7 @@ nativeObject->ParentViewportId = ParentViewportId;
     public ImDrawData get_DrawData() {
         long pointer = internal_native_get_DrawData(native_address);
         if (pointer == 0)
-            return null;
+            return ImDrawData.NULL;
         if (ImDrawData_TEMP_GEN_0 == null)
             ImDrawData_TEMP_GEN_0 = ImDrawData.native_new();
         ImDrawData_TEMP_GEN_0.internal_reset(pointer, false);

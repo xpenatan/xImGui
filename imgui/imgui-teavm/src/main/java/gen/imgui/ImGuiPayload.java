@@ -11,6 +11,15 @@ import gen.imgui.idl.IDLBase;
 
 public class ImGuiPayload extends IDLBase {
 
+    public final static ImGuiPayload NULL = native_new();
+
+    public static ImGuiPayload native_new() {
+        return new ImGuiPayload((byte) 0, (char) 0);
+    }
+
+    private ImGuiPayload(byte v, char c) {
+    }
+
     public int get_Data() {
         return getDataNATIVE((int) native_address);
     }
@@ -22,20 +31,6 @@ public class ImGuiPayload extends IDLBase {
     */
     @org.teavm.jso.JSBody(params = {"addr"}, script = "var nativeObject = imgui.wrapPointer(addr, imgui.ImGuiPayload); return imgui.ImHelper.prototype.getImGuiPayloadData(nativeObject);")
     private static native int getDataNATIVE(int addr);
-
-    /**
-     * Dummy constructor, used internally to creates objects without C++ pointer
-     */
-    @Deprecated()
-    protected ImGuiPayload(byte b, char c) {
-    }
-
-    /**
-     * @return An empty instance without a native address
-     */
-    public static ImGuiPayload native_new() {
-        return new ImGuiPayload((byte) 0, (char) 0);
-    }
 
     protected void deleteNative() {
         internal_native_deleteNative(native_address);

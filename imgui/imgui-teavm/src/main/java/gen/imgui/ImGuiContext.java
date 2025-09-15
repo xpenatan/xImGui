@@ -78,7 +78,7 @@ return jsObj.get_NavId();
     public ImGuiStorage get_WindowsById() {
         int pointer = internal_native_get_WindowsById(native_address);
         if (pointer == 0)
-            return null;
+            return ImGuiStorage.NULL;
         if (ImGuiStorage_TEMP_GEN_0 == null)
             ImGuiStorage_TEMP_GEN_0 = ImGuiStorage.native_new();
         ImGuiStorage_TEMP_GEN_0.internal_reset(pointer, false);
@@ -108,7 +108,7 @@ return jsObj.get_WindowsActiveCount();
     public ImVec2 get_WindowsHoverPadding() {
         int pointer = internal_native_get_WindowsHoverPadding(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
@@ -138,7 +138,7 @@ return jsObj.get_DebugBreakInWindow();
     public ImGuiWindow get_CurrentWindow() {
         int pointer = internal_native_get_CurrentWindow(native_address);
         if (pointer == 0)
-            return null;
+            return ImGuiWindow.NULL;
         if (ImGuiWindow_TEMP_GEN_0 == null)
             ImGuiWindow_TEMP_GEN_0 = ImGuiWindow.native_new();
         ImGuiWindow_TEMP_GEN_0.internal_reset(pointer, false);
@@ -157,7 +157,7 @@ return imgui.getPointer(returnedJSObj);
     public ImGuiWindow get_HoveredWindow() {
         int pointer = internal_native_get_HoveredWindow(native_address);
         if (pointer == 0)
-            return null;
+            return ImGuiWindow.NULL;
         if (ImGuiWindow_TEMP_GEN_1 == null)
             ImGuiWindow_TEMP_GEN_1 = ImGuiWindow.native_new();
         ImGuiWindow_TEMP_GEN_1.internal_reset(pointer, false);
@@ -176,7 +176,7 @@ return imgui.getPointer(returnedJSObj);
     public ImGuiWindow get_HoveredWindowUnderMovingWindow() {
         int pointer = internal_native_get_HoveredWindowUnderMovingWindow(native_address);
         if (pointer == 0)
-            return null;
+            return ImGuiWindow.NULL;
         if (ImGuiWindow_TEMP_GEN_2 == null)
             ImGuiWindow_TEMP_GEN_2 = ImGuiWindow.native_new();
         ImGuiWindow_TEMP_GEN_2.internal_reset(pointer, false);
@@ -195,7 +195,7 @@ return imgui.getPointer(returnedJSObj);
     public ImGuiWindow get_MovingWindow() {
         int pointer = internal_native_get_MovingWindow(native_address);
         if (pointer == 0)
-            return null;
+            return ImGuiWindow.NULL;
         if (ImGuiWindow_TEMP_GEN_3 == null)
             ImGuiWindow_TEMP_GEN_3 = ImGuiWindow.native_new();
         ImGuiWindow_TEMP_GEN_3.internal_reset(pointer, false);
@@ -214,7 +214,7 @@ return imgui.getPointer(returnedJSObj);
     public ImGuiWindow get_WheelingWindow() {
         int pointer = internal_native_get_WheelingWindow(native_address);
         if (pointer == 0)
-            return null;
+            return ImGuiWindow.NULL;
         if (ImGuiWindow_TEMP_GEN_4 == null)
             ImGuiWindow_TEMP_GEN_4 = ImGuiWindow.native_new();
         ImGuiWindow_TEMP_GEN_4.internal_reset(pointer, false);
@@ -420,7 +420,7 @@ return jsObj.get_ActiveIdMouseButton();
     public ImVec2 get_ActiveIdClickOffset() {
         int pointer = internal_native_get_ActiveIdClickOffset(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_1 == null)
             ImVec2_TEMP_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
@@ -439,7 +439,7 @@ return imgui.getPointer(returnedJSObj);
     public ImGuiWindow get_ActiveIdWindow() {
         int pointer = internal_native_get_ActiveIdWindow(native_address);
         if (pointer == 0)
-            return null;
+            return ImGuiWindow.NULL;
         if (ImGuiWindow_TEMP_GEN_5 == null)
             ImGuiWindow_TEMP_GEN_5 = ImGuiWindow.native_new();
         ImGuiWindow_TEMP_GEN_5.internal_reset(pointer, false);
@@ -491,7 +491,7 @@ return jsObj.get_ActiveIdPreviousFrameHasBeenEditedBefore();
     public ImGuiWindow get_ActiveIdPreviousFrameWindow() {
         int pointer = internal_native_get_ActiveIdPreviousFrameWindow(native_address);
         if (pointer == 0)
-            return null;
+            return ImGuiWindow.NULL;
         if (ImGuiWindow_TEMP_GEN_6 == null)
             ImGuiWindow_TEMP_GEN_6 = ImGuiWindow.native_new();
         ImGuiWindow_TEMP_GEN_6.internal_reset(pointer, false);
@@ -532,7 +532,7 @@ return jsObj.get_LastActiveIdTimer();
     public ImGuiLastItemData get_LastItemData() {
         int pointer = internal_native_get_LastItemData(native_address);
         if (pointer == 0)
-            return null;
+            return ImGuiLastItemData.NULL;
         if (ImGuiLastItemData_TEMP_GEN_0 == null)
             ImGuiLastItemData_TEMP_GEN_0 = ImGuiLastItemData.native_new();
         ImGuiLastItemData_TEMP_GEN_0.internal_reset(pointer, false);

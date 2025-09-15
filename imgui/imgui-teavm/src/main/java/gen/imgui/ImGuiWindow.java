@@ -106,7 +106,7 @@ return returnedJSObj;
     public ImRect Rect() {
         int pointer = internal_native_Rect(native_address);
         if (pointer == 0)
-            return null;
+            return ImRect.NULL;
         if (ImRect_TEMP_GEN_0 == null)
             ImRect_TEMP_GEN_0 = ImRect.native_new();
         ImRect_TEMP_GEN_0.internal_reset(pointer, false);
@@ -137,7 +137,7 @@ return returnedJSObj;
     public ImRect TitleBarRect() {
         int pointer = internal_native_TitleBarRect(native_address);
         if (pointer == 0)
-            return null;
+            return ImRect.NULL;
         if (ImRect_TEMP_GEN_1 == null)
             ImRect_TEMP_GEN_1 = ImRect.native_new();
         ImRect_TEMP_GEN_1.internal_reset(pointer, false);
@@ -156,7 +156,7 @@ return imgui.getPointer(returnedJSObj);
     public ImRect MenuBarRect() {
         int pointer = internal_native_MenuBarRect(native_address);
         if (pointer == 0)
-            return null;
+            return ImRect.NULL;
         if (ImRect_TEMP_GEN_2 == null)
             ImRect_TEMP_GEN_2 = ImRect.native_new();
         ImRect_TEMP_GEN_2.internal_reset(pointer, false);
@@ -175,7 +175,7 @@ return imgui.getPointer(returnedJSObj);
     public ImVectorInt get_IDStack() {
         int pointer = internal_native_get_IDStack(native_address);
         if (pointer == 0)
-            return null;
+            return ImVectorInt.NULL;
         if (ImVectorInt_TEMP_GEN_0 == null)
             ImVectorInt_TEMP_GEN_0 = ImVectorInt.native_new();
         ImVectorInt_TEMP_GEN_0.internal_reset(pointer, false);
@@ -194,7 +194,7 @@ return imgui.getPointer(returnedJSObj);
     public ImGuiWindowTempData get_DC() {
         int pointer = internal_native_get_DC(native_address);
         if (pointer == 0)
-            return null;
+            return ImGuiWindowTempData.NULL;
         if (ImGuiWindowTempData_TEMP_GEN_0 == null)
             ImGuiWindowTempData_TEMP_GEN_0 = ImGuiWindowTempData.native_new();
         ImGuiWindowTempData_TEMP_GEN_0.internal_reset(pointer, false);
@@ -259,7 +259,7 @@ return jsObj.get_ViewportId();
     public ImVec2 get_ViewportPos() {
         int pointer = internal_native_get_ViewportPos(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
@@ -311,7 +311,7 @@ jsObj.set_ViewportAllowPlatformMonitorExtend(ViewportAllowPlatformMonitorExtend)
     public ImVec2 get_Pos() {
         int pointer = internal_native_get_Pos(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_1 == null)
             ImVec2_TEMP_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
@@ -341,7 +341,7 @@ jsObj.set_Pos(Pos_addr);
     public ImVec2 get_Size() {
         int pointer = internal_native_get_Size(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_2 == null)
             ImVec2_TEMP_GEN_2 = ImVec2.native_new();
         ImVec2_TEMP_GEN_2.internal_reset(pointer, false);
@@ -371,7 +371,7 @@ jsObj.set_Size(Size_addr);
     public ImVec2 get_SizeFull() {
         int pointer = internal_native_get_SizeFull(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_3 == null)
             ImVec2_TEMP_GEN_3 = ImVec2.native_new();
         ImVec2_TEMP_GEN_3.internal_reset(pointer, false);
@@ -401,7 +401,7 @@ jsObj.set_SizeFull(SizeFull_addr);
     public ImVec2 get_ContentSize() {
         int pointer = internal_native_get_ContentSize(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_4 == null)
             ImVec2_TEMP_GEN_4 = ImVec2.native_new();
         ImVec2_TEMP_GEN_4.internal_reset(pointer, false);
@@ -431,7 +431,7 @@ jsObj.set_ContentSize(ContentSize_addr);
     public ImVec2 get_ContentSizeIdeal() {
         int pointer = internal_native_get_ContentSizeIdeal(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_5 == null)
             ImVec2_TEMP_GEN_5 = ImVec2.native_new();
         ImVec2_TEMP_GEN_5.internal_reset(pointer, false);
@@ -461,7 +461,7 @@ jsObj.set_ContentSizeIdeal(ContentSizeIdeal_addr);
     public ImVec2 get_ContentSizeExplicit() {
         int pointer = internal_native_get_ContentSizeExplicit(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_6 == null)
             ImVec2_TEMP_GEN_6 = ImVec2.native_new();
         ImVec2_TEMP_GEN_6.internal_reset(pointer, false);
@@ -491,7 +491,7 @@ jsObj.set_ContentSizeExplicit(ContentSizeExplicit_addr);
     public ImVec2 get_WindowPadding() {
         int pointer = internal_native_get_WindowPadding(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_7 == null)
             ImVec2_TEMP_GEN_7 = ImVec2.native_new();
         ImVec2_TEMP_GEN_7.internal_reset(pointer, false);
@@ -752,7 +752,7 @@ return jsObj.get_ChildId();
     public ImVec2 get_Scroll() {
         int pointer = internal_native_get_Scroll(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_8 == null)
             ImVec2_TEMP_GEN_8 = ImVec2.native_new();
         ImVec2_TEMP_GEN_8.internal_reset(pointer, false);
@@ -782,7 +782,7 @@ jsObj.set_Scroll(Scroll_addr);
     public ImVec2 get_ScrollMax() {
         int pointer = internal_native_get_ScrollMax(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_9 == null)
             ImVec2_TEMP_GEN_9 = ImVec2.native_new();
         ImVec2_TEMP_GEN_9.internal_reset(pointer, false);
@@ -812,7 +812,7 @@ jsObj.set_ScrollMax(ScrollMax_addr);
     public ImVec2 get_ScrollTarget() {
         int pointer = internal_native_get_ScrollTarget(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_10 == null)
             ImVec2_TEMP_GEN_10 = ImVec2.native_new();
         ImVec2_TEMP_GEN_10.internal_reset(pointer, false);
@@ -842,7 +842,7 @@ jsObj.set_ScrollTarget(ScrollTarget_addr);
     public ImVec2 get_ScrollTargetCenterRatio() {
         int pointer = internal_native_get_ScrollTargetCenterRatio(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_11 == null)
             ImVec2_TEMP_GEN_11 = ImVec2.native_new();
         ImVec2_TEMP_GEN_11.internal_reset(pointer, false);
@@ -872,7 +872,7 @@ jsObj.set_ScrollTargetCenterRatio(ScrollTargetCenterRatio_addr);
     public ImVec2 get_ScrollTargetEdgeSnapDist() {
         int pointer = internal_native_get_ScrollTargetEdgeSnapDist(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_12 == null)
             ImVec2_TEMP_GEN_12 = ImVec2.native_new();
         ImVec2_TEMP_GEN_12.internal_reset(pointer, false);
@@ -902,7 +902,7 @@ jsObj.set_ScrollTargetEdgeSnapDist(ScrollTargetEdgeSnapDist_addr);
     public ImVec2 get_ScrollbarSizes() {
         int pointer = internal_native_get_ScrollbarSizes(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_13 == null)
             ImVec2_TEMP_GEN_13 = ImVec2.native_new();
         ImVec2_TEMP_GEN_13.internal_reset(pointer, false);
@@ -1240,7 +1240,7 @@ jsObj.set_HasCloseButton(HasCloseButton);
     public ImGuiStorage get_StateStorage() {
         int pointer = internal_native_get_StateStorage(native_address);
         if (pointer == 0)
-            return null;
+            return ImGuiStorage.NULL;
         if (ImGuiStorage_TEMP_GEN_0 == null)
             ImGuiStorage_TEMP_GEN_0 = ImGuiStorage.native_new();
         ImGuiStorage_TEMP_GEN_0.internal_reset(pointer, false);
@@ -1270,7 +1270,7 @@ jsObj.set_StateStorage(StateStorage_addr);
     public ImDrawList get_DrawList() {
         int pointer = internal_native_get_DrawList(native_address);
         if (pointer == 0)
-            return null;
+            return ImDrawList.NULL;
         if (ImDrawList_TEMP_GEN_0 == null)
             ImDrawList_TEMP_GEN_0 = ImDrawList.native_new();
         ImDrawList_TEMP_GEN_0.internal_reset(pointer, false);
@@ -1388,7 +1388,7 @@ jsObj.set_DockTabWantClose(DockTabWantClose);
     public ImGuiDockNode get_DockNode() {
         int pointer = internal_native_get_DockNode(native_address);
         if (pointer == 0)
-            return null;
+            return ImGuiDockNode.NULL;
         if (ImGuiDockNode_TEMP_GEN_0 == null)
             ImGuiDockNode_TEMP_GEN_0 = ImGuiDockNode.native_new();
         ImGuiDockNode_TEMP_GEN_0.internal_reset(pointer, false);
@@ -1418,7 +1418,7 @@ jsObj.set_DockNode(DockNode_addr);
     public ImGuiDockNode get_DockNodeAsHost() {
         int pointer = internal_native_get_DockNodeAsHost(native_address);
         if (pointer == 0)
-            return null;
+            return ImGuiDockNode.NULL;
         if (ImGuiDockNode_TEMP_GEN_1 == null)
             ImGuiDockNode_TEMP_GEN_1 = ImGuiDockNode.native_new();
         ImGuiDockNode_TEMP_GEN_1.internal_reset(pointer, false);
@@ -1492,7 +1492,7 @@ jsObj.set_DockTabItemStatusFlags(DockTabItemStatusFlags);
     public ImRect get_DockTabItemRect() {
         int pointer = internal_native_get_DockTabItemRect(native_address);
         if (pointer == 0)
-            return null;
+            return ImRect.NULL;
         if (ImRect_TEMP_GEN_3 == null)
             ImRect_TEMP_GEN_3 = ImRect.native_new();
         ImRect_TEMP_GEN_3.internal_reset(pointer, false);

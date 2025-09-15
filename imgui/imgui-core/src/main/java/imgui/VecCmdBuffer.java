@@ -13,18 +13,13 @@ public class VecCmdBuffer extends IDLBase {
 
     private ImDrawCmd ImDrawCmd_TEMP_GEN_0;
 
-    /**
-     * Dummy constructor, used internally to creates objects without C++ pointer
-     */
-    @Deprecated()
-    protected VecCmdBuffer(byte b, char c) {
-    }
+    public final static VecCmdBuffer NULL = native_new();
 
-    /**
-     * @return An empty instance without a native address
-     */
     public static VecCmdBuffer native_new() {
         return new VecCmdBuffer((byte) 0, (char) 0);
+    }
+
+    private VecCmdBuffer(byte v, char c) {
     }
 
     protected void deleteNative() {
@@ -41,7 +36,7 @@ public class VecCmdBuffer extends IDLBase {
     public ImDrawCmd getData(int index) {
         long pointer = internal_native_getData(native_address, index);
         if (pointer == 0)
-            return null;
+            return ImDrawCmd.NULL;
         if (ImDrawCmd_TEMP_GEN_0 == null)
             ImDrawCmd_TEMP_GEN_0 = ImDrawCmd.native_new();
         ImDrawCmd_TEMP_GEN_0.internal_reset(pointer, false);

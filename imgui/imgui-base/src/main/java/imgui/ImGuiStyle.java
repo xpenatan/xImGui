@@ -5,6 +5,16 @@ import idl.IDLEnum;
 
 public class ImGuiStyle extends IDLBase {
 
+    public final static ImGuiStyle NULL = native_new();
+
+    public static ImGuiStyle native_new() {
+        return new ImGuiStyle((byte) 0, (char) 0);
+    }
+
+    private ImGuiStyle(byte v, char c) {
+    }
+
+
     private static ImVec4 tmp = ImVec4.native_new();
 
     /*[-IDL_SKIP]*/

@@ -21,6 +21,8 @@ public class ImDrawCmd extends IDLBase {
               #include <stdint.h>     // intptr_t
               #endif
     */
+    public final static ImDrawCmd NULL = native_new();
+
     public static ImDrawCmd native_new() {
         return new ImDrawCmd((byte) 0, (char) 0);
     }
@@ -87,7 +89,7 @@ public class ImDrawCmd extends IDLBase {
     public ImVec4 get_ClipRect() {
         long pointer = internal_native_get_ClipRect(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec4.NULL;
         if (ImVec4_TEMP_GEN_0 == null)
             ImVec4_TEMP_GEN_0 = ImVec4.native_new();
         ImVec4_TEMP_GEN_0.internal_reset(pointer, false);

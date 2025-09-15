@@ -42,6 +42,15 @@ public class ImGuiStyle extends IDLBase {
 
     private ImVec4 ImVec4_TEMP_GEN_0;
 
+    public final static ImGuiStyle NULL = native_new();
+
+    public static ImGuiStyle native_new() {
+        return new ImGuiStyle((byte) 0, (char) 0);
+    }
+
+    private ImGuiStyle(byte v, char c) {
+    }
+
     private static ImVec4 tmp = ImVec4.native_new();
 
     /*
@@ -84,20 +93,6 @@ public class ImGuiStyle extends IDLBase {
               return (jlong)vec4;
     */
     private static native long get_ColorsNATIVE(long addr, long index);
-
-    /**
-     * Dummy constructor, used internally to creates objects without C++ pointer
-     */
-    @Deprecated()
-    protected ImGuiStyle(byte b, char c) {
-    }
-
-    /**
-     * @return An empty instance without a native address
-     */
-    public static ImGuiStyle native_new() {
-        return new ImGuiStyle((byte) 0, (char) 0);
-    }
 
     protected void deleteNative() {
         internal_native_deleteNative(native_address);
@@ -168,7 +163,7 @@ public class ImGuiStyle extends IDLBase {
     public ImVec2 get_WindowPadding() {
         long pointer = internal_native_get_WindowPadding(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
@@ -240,7 +235,7 @@ public class ImGuiStyle extends IDLBase {
     public ImVec2 get_WindowMinSize() {
         long pointer = internal_native_get_WindowMinSize(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_1 == null)
             ImVec2_TEMP_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
@@ -268,7 +263,7 @@ public class ImGuiStyle extends IDLBase {
     public ImVec2 get_WindowTitleAlign() {
         long pointer = internal_native_get_WindowTitleAlign(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_2 == null)
             ImVec2_TEMP_GEN_2 = ImVec2.native_new();
         ImVec2_TEMP_GEN_2.internal_reset(pointer, false);
@@ -407,7 +402,7 @@ public class ImGuiStyle extends IDLBase {
     public ImVec2 get_FramePadding() {
         long pointer = internal_native_get_FramePadding(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_3 == null)
             ImVec2_TEMP_GEN_3 = ImVec2.native_new();
         ImVec2_TEMP_GEN_3.internal_reset(pointer, false);
@@ -479,7 +474,7 @@ public class ImGuiStyle extends IDLBase {
     public ImVec2 get_ItemSpacing() {
         long pointer = internal_native_get_ItemSpacing(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_4 == null)
             ImVec2_TEMP_GEN_4 = ImVec2.native_new();
         ImVec2_TEMP_GEN_4.internal_reset(pointer, false);
@@ -507,7 +502,7 @@ public class ImGuiStyle extends IDLBase {
     public ImVec2 get_ItemInnerSpacing() {
         long pointer = internal_native_get_ItemInnerSpacing(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_5 == null)
             ImVec2_TEMP_GEN_5 = ImVec2.native_new();
         ImVec2_TEMP_GEN_5.internal_reset(pointer, false);
@@ -535,7 +530,7 @@ public class ImGuiStyle extends IDLBase {
     public ImVec2 get_CellPadding() {
         long pointer = internal_native_get_CellPadding(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_6 == null)
             ImVec2_TEMP_GEN_6 = ImVec2.native_new();
         ImVec2_TEMP_GEN_6.internal_reset(pointer, false);
@@ -563,7 +558,7 @@ public class ImGuiStyle extends IDLBase {
     public ImVec2 get_TouchExtraPadding() {
         long pointer = internal_native_get_TouchExtraPadding(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_7 == null)
             ImVec2_TEMP_GEN_7 = ImVec2.native_new();
         ImVec2_TEMP_GEN_7.internal_reset(pointer, false);
@@ -856,7 +851,7 @@ public class ImGuiStyle extends IDLBase {
     public ImVec2 get_ButtonTextAlign() {
         long pointer = internal_native_get_ButtonTextAlign(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_8 == null)
             ImVec2_TEMP_GEN_8 = ImVec2.native_new();
         ImVec2_TEMP_GEN_8.internal_reset(pointer, false);
@@ -884,7 +879,7 @@ public class ImGuiStyle extends IDLBase {
     public ImVec2 get_SelectableTextAlign() {
         long pointer = internal_native_get_SelectableTextAlign(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_9 == null)
             ImVec2_TEMP_GEN_9 = ImVec2.native_new();
         ImVec2_TEMP_GEN_9.internal_reset(pointer, false);
@@ -934,7 +929,7 @@ public class ImGuiStyle extends IDLBase {
     public ImVec2 get_SeparatorTextAlign() {
         long pointer = internal_native_get_SeparatorTextAlign(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_10 == null)
             ImVec2_TEMP_GEN_10 = ImVec2.native_new();
         ImVec2_TEMP_GEN_10.internal_reset(pointer, false);
@@ -962,7 +957,7 @@ public class ImGuiStyle extends IDLBase {
     public ImVec2 get_SeparatorTextPadding() {
         long pointer = internal_native_get_SeparatorTextPadding(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_11 == null)
             ImVec2_TEMP_GEN_11 = ImVec2.native_new();
         ImVec2_TEMP_GEN_11.internal_reset(pointer, false);
@@ -990,7 +985,7 @@ public class ImGuiStyle extends IDLBase {
     public ImVec2 get_DisplayWindowPadding() {
         long pointer = internal_native_get_DisplayWindowPadding(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_12 == null)
             ImVec2_TEMP_GEN_12 = ImVec2.native_new();
         ImVec2_TEMP_GEN_12.internal_reset(pointer, false);
@@ -1018,7 +1013,7 @@ public class ImGuiStyle extends IDLBase {
     public ImVec2 get_DisplaySafeAreaPadding() {
         long pointer = internal_native_get_DisplaySafeAreaPadding(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_13 == null)
             ImVec2_TEMP_GEN_13 = ImVec2.native_new();
         ImVec2_TEMP_GEN_13.internal_reset(pointer, false);
@@ -1312,7 +1307,7 @@ public class ImGuiStyle extends IDLBase {
     public ImVec4 get_Colors(int index) {
         long pointer = internal_native_get_Colors(native_address, index);
         if (pointer == 0)
-            return null;
+            return ImVec4.NULL;
         if (ImVec4_TEMP_GEN_0 == null)
             ImVec4_TEMP_GEN_0 = ImVec4.native_new();
         ImVec4_TEMP_GEN_0.internal_reset(pointer, false);

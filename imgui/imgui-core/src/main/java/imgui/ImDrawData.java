@@ -14,6 +14,8 @@ import imgui.idl.IDLBase;
 */
 public final class ImDrawData extends IDLBase {
 
+    public final static ImDrawData NULL = native_new();
+
     private ImDrawList imDrawList = ImDrawList.native_new();
 
     public static ImDrawData native_new() {

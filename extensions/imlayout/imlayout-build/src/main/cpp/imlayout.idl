@@ -5,38 +5,38 @@ interface ImLayout {
     static readonly attribute long MATCH_WRAP_PARENT;
 
     // Debug
-    static void DrawBoundingBox_1(float x1, float y1, float x2, float y2, long r, long g, long b, optional long a, optional boolean clipping);
-    static void DrawBoundingBox_2([Const, Ref] ImVec2 min, [Const, Ref] ImVec2 max, long r, long g, long b, optional long a, optional boolean clipping);
-    static void DrawBoundingBox_3([Const, Ref] ImRect rect, long r, long g, long b, optional long a, optional boolean clipping);
+    [BindTo="DrawBoundingBox_1"] static void DrawBoundingBox__1(float x1, float y1, float x2, float y2, long r, long g, long b, optional long a, optional boolean clipping);
+    [BindTo="DrawBoundingBox_2"] static void DrawBoundingBox__2([Const, Ref] ImVec2 min, [Const, Ref] ImVec2 max, long r, long g, long b, optional long a, optional boolean clipping);
+    [BindTo="DrawBoundingBox_3"] static void DrawBoundingBox__3([Const, Ref] ImRect rect, long r, long g, long b, optional long a, optional boolean clipping);
     static void ShowLayoutDebug();
     static void ShowLayoutDebugClipping();
 
     // Layout
-    static void BeginLayout_1(long id, float sizeX, float sizeY, [Const, Ref] optional ImGuiLayoutOptions options);
-    static void BeginLayout_2([Const]DOMString id, float sizeX, float sizeY, [Const, Ref] optional ImGuiLayoutOptions options);
+    [BindTo="BeginLayout_1"] static void BeginLayout__1(long id, float sizeX, float sizeY, [Const, Ref] optional ImGuiLayoutOptions options);
+    [BindTo="BeginLayout_2"] static void BeginLayout__2([Const]DOMString id, float sizeX, float sizeY, [Const, Ref] optional ImGuiLayoutOptions options);
     static ImGuiLayout GetCurrentLayout();
     static void SetOrientation(ImOrientation ImOrientation);
     static void EndLayout();
 
     // Align view
-    static void BeginAlign_1(long id, float sizeX, float sizeY, optional float alignX, optional float alignY, optional float offsetX, optional float offsetY, [Const, Ref] optional ImGuiLayoutOptions options);
-    static void BeginAlign_2([Const]DOMString id, float sizeX, float sizeY, optional float alignX, optional float alignY, optional float offsetX, optional float offsetY, [Const, Ref] optional ImGuiLayoutOptions options);
+    [BindTo="BeginAlign_1"] static void BeginAlign__1(long id, float sizeX, float sizeY, optional float alignX, optional float alignY, optional float offsetX, optional float offsetY, [Const, Ref] optional ImGuiLayoutOptions options);
+    [BindTo="BeginAlign_2"] static void BeginAlign__2([Const]DOMString id, float sizeX, float sizeY, optional float alignX, optional float alignY, optional float offsetX, optional float offsetY, [Const, Ref] optional ImGuiLayoutOptions options);
     static void AlignLayout(float alignX, float alignY, optional float offsetX, optional float offsetY);
     static void EndAlign();
 
     // Custom Collapse Layout
     static boolean BeginCollapseLayout([Const]DOMString id, [Const]DOMString title, float sizeX, float sizeY);
     static boolean BeginCollapseLayout([Const]DOMString id, [Const]DOMString title, float sizeX, float sizeY, [Ref] ImGuiCollapseLayoutOptions option);
-    static void BeginCollapseLayout_2([Const]DOMString id, boolean[] isOpen, [Const]DOMString title, float sizeX, float sizeY);
-    static void BeginCollapseLayout_2([Const]DOMString id, boolean[] isOpen, [Const]DOMString title, float sizeX, float sizeY, [Ref] ImGuiCollapseLayoutOptions option);
+    [BindTo="BeginCollapseLayout_2"] static void BeginCollapseLayout__2([Const]DOMString id, boolean[] isOpen, [Const]DOMString title, float sizeX, float sizeY);
+    [BindTo="BeginCollapseLayout_2"] static void BeginCollapseLayout__2([Const]DOMString id, boolean[] isOpen, [Const]DOMString title, float sizeX, float sizeY, [Ref] ImGuiCollapseLayoutOptions option);
     static void EndCollapseFrameLayout();
     static void EndCollapseLayout();
     static boolean BeginCollapseLayoutEx([Const]DOMString id, [Const]DOMString title, float sizeX, float sizeY);
     static boolean BeginCollapseLayoutEx([Const]DOMString id, [Const]DOMString title, float sizeX, float sizeY, [Ref] ImGuiCollapseLayoutOptions option);
-    static boolean BeginCollapseLayoutEx_2(long id, [Const]DOMString title, float sizeX, float sizeY);
-    static boolean BeginCollapseLayoutEx_2(long id, [Const]DOMString title, float sizeX, float sizeY, [Ref] ImGuiCollapseLayoutOptions option);
-    static void BeginCollapseLayoutEx_3([Const]DOMString id, boolean[] isOpen, [Const]DOMString title, float sizeX, float sizeY);
-    static void BeginCollapseLayoutEx_3([Const]DOMString id, boolean[] isOpen, [Const]DOMString title, float sizeX, float sizeY, [Ref] ImGuiCollapseLayoutOptions option);
+    [BindTo="BeginCollapseLayoutEx_2"] static boolean BeginCollapseLayoutEx__2(long id, [Const]DOMString title, float sizeX, float sizeY);
+    [BindTo="BeginCollapseLayoutEx_2"] static boolean BeginCollapseLayoutEx__2(long id, [Const]DOMString title, float sizeX, float sizeY, [Ref] ImGuiCollapseLayoutOptions option);
+    [BindTo="BeginCollapseLayoutEx_3"] static void BeginCollapseLayoutEx__3([Const]DOMString id, boolean[] isOpen, [Const]DOMString title, float sizeX, float sizeY);
+    [BindTo="BeginCollapseLayoutEx_3"] static void BeginCollapseLayoutEx__3([Const]DOMString id, boolean[] isOpen, [Const]DOMString title, float sizeX, float sizeY, [Ref] ImGuiCollapseLayoutOptions option);
 
     // Calculate content size
     static void BeginBoundingBox();
@@ -47,8 +47,8 @@ interface ImLayout {
     // Tree
     static void BeginGlobalTree();
     static void EndGlobalTree();
-    static void BeginTree_1([Const]DOMString treeIdStr);
-    static void BeginTree_2(long id);
+    [BindTo="BeginTree_1"] static void BeginTree__1([Const]DOMString treeIdStr);
+    [BindTo="BeginTree_2"] static void BeginTree__2(long id);
     static void EndTree();
     static void BeginTreeLayout(float height, boolean isLeaf, boolean isSelected);
     static void BeginTreeLayout(float height, boolean isLeaf, boolean isSelected, boolean isOpen);

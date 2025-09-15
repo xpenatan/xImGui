@@ -86,7 +86,7 @@ nativeObject->SelectedTabId = SelectedTabId;
     public ImGuiTabBar get_TabBar() {
         long pointer = internal_native_get_TabBar(native_address);
         if (pointer == 0)
-            return null;
+            return ImGuiTabBar.NULL;
         if (ImGuiTabBar_TEMP_GEN_0 == null)
             ImGuiTabBar_TEMP_GEN_0 = ImGuiTabBar.native_new();
         ImGuiTabBar_TEMP_GEN_0.internal_reset(pointer, false);

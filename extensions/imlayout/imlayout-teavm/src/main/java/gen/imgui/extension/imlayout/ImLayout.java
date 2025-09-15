@@ -52,103 +52,103 @@ public class ImLayout extends IDLBase {
     public static native void internal_native_deleteNative(int this_addr);
 
     public static void DrawBoundingBox(float x1, float y1, float x2, float y2, int r, int g, int b, int a, boolean clipping) {
-        internal_native_DrawBoundingBox_1(x1, y1, x2, y2, r, g, b, a, clipping);
+        internal_native_DrawBoundingBox__1(x1, y1, x2, y2, r, g, b, a, clipping);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.DrawBoundingBox_1(x1, y1, x2, y2, r, g, b, a, clipping);
+      imgui.ImLayout.prototype.DrawBoundingBox__1(x1, y1, x2, y2, r, g, b, a, clipping);
     */
-    @org.teavm.jso.JSBody(params = {"x1", "y1", "x2", "y2", "r", "g", "b", "a", "clipping"}, script = "imgui.ImLayout.prototype.DrawBoundingBox_1(x1, y1, x2, y2, r, g, b, a, clipping);")
-    public static native void internal_native_DrawBoundingBox_1(float x1, float y1, float x2, float y2, int r, int g, int b, int a, boolean clipping);
+    @org.teavm.jso.JSBody(params = {"x1", "y1", "x2", "y2", "r", "g", "b", "a", "clipping"}, script = "imgui.ImLayout.prototype.DrawBoundingBox__1(x1, y1, x2, y2, r, g, b, a, clipping);")
+    public static native void internal_native_DrawBoundingBox__1(float x1, float y1, float x2, float y2, int r, int g, int b, int a, boolean clipping);
 
     public static void DrawBoundingBox(float x1, float y1, float x2, float y2, int r, int g, int b, int a) {
-        internal_native_DrawBoundingBox_1(x1, y1, x2, y2, r, g, b, a);
+        internal_native_DrawBoundingBox__1(x1, y1, x2, y2, r, g, b, a);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.DrawBoundingBox_1(x1, y1, x2, y2, r, g, b, a);
+      imgui.ImLayout.prototype.DrawBoundingBox__1(x1, y1, x2, y2, r, g, b, a);
     */
-    @org.teavm.jso.JSBody(params = {"x1", "y1", "x2", "y2", "r", "g", "b", "a"}, script = "imgui.ImLayout.prototype.DrawBoundingBox_1(x1, y1, x2, y2, r, g, b, a);")
-    public static native void internal_native_DrawBoundingBox_1(float x1, float y1, float x2, float y2, int r, int g, int b, int a);
+    @org.teavm.jso.JSBody(params = {"x1", "y1", "x2", "y2", "r", "g", "b", "a"}, script = "imgui.ImLayout.prototype.DrawBoundingBox__1(x1, y1, x2, y2, r, g, b, a);")
+    public static native void internal_native_DrawBoundingBox__1(float x1, float y1, float x2, float y2, int r, int g, int b, int a);
 
     public static void DrawBoundingBox(float x1, float y1, float x2, float y2, int r, int g, int b) {
-        internal_native_DrawBoundingBox_1(x1, y1, x2, y2, r, g, b);
+        internal_native_DrawBoundingBox__1(x1, y1, x2, y2, r, g, b);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.DrawBoundingBox_1(x1, y1, x2, y2, r, g, b);
+      imgui.ImLayout.prototype.DrawBoundingBox__1(x1, y1, x2, y2, r, g, b);
     */
-    @org.teavm.jso.JSBody(params = {"x1", "y1", "x2", "y2", "r", "g", "b"}, script = "imgui.ImLayout.prototype.DrawBoundingBox_1(x1, y1, x2, y2, r, g, b);")
-    public static native void internal_native_DrawBoundingBox_1(float x1, float y1, float x2, float y2, int r, int g, int b);
+    @org.teavm.jso.JSBody(params = {"x1", "y1", "x2", "y2", "r", "g", "b"}, script = "imgui.ImLayout.prototype.DrawBoundingBox__1(x1, y1, x2, y2, r, g, b);")
+    public static native void internal_native_DrawBoundingBox__1(float x1, float y1, float x2, float y2, int r, int g, int b);
 
     public static void DrawBoundingBox(ImVec2 min, ImVec2 max, int r, int g, int b, int a, boolean clipping) {
-        internal_native_DrawBoundingBox_2(min.native_address, max.native_address, r, g, b, a, clipping);
+        internal_native_DrawBoundingBox__2(min.native_address, max.native_address, r, g, b, a, clipping);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.DrawBoundingBox_2(min_addr, max_addr, r, g, b, a, clipping);
+      imgui.ImLayout.prototype.DrawBoundingBox__2(min_addr, max_addr, r, g, b, a, clipping);
     */
-    @org.teavm.jso.JSBody(params = {"min_addr", "max_addr", "r", "g", "b", "a", "clipping"}, script = "imgui.ImLayout.prototype.DrawBoundingBox_2(min_addr, max_addr, r, g, b, a, clipping);")
-    public static native void internal_native_DrawBoundingBox_2(int min_addr, int max_addr, int r, int g, int b, int a, boolean clipping);
+    @org.teavm.jso.JSBody(params = {"min_addr", "max_addr", "r", "g", "b", "a", "clipping"}, script = "imgui.ImLayout.prototype.DrawBoundingBox__2(min_addr, max_addr, r, g, b, a, clipping);")
+    public static native void internal_native_DrawBoundingBox__2(int min_addr, int max_addr, int r, int g, int b, int a, boolean clipping);
 
     public static void DrawBoundingBox(ImVec2 min, ImVec2 max, int r, int g, int b, int a) {
-        internal_native_DrawBoundingBox_2(min.native_address, max.native_address, r, g, b, a);
+        internal_native_DrawBoundingBox__2(min.native_address, max.native_address, r, g, b, a);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.DrawBoundingBox_2(min_addr, max_addr, r, g, b, a);
+      imgui.ImLayout.prototype.DrawBoundingBox__2(min_addr, max_addr, r, g, b, a);
     */
-    @org.teavm.jso.JSBody(params = {"min_addr", "max_addr", "r", "g", "b", "a"}, script = "imgui.ImLayout.prototype.DrawBoundingBox_2(min_addr, max_addr, r, g, b, a);")
-    public static native void internal_native_DrawBoundingBox_2(int min_addr, int max_addr, int r, int g, int b, int a);
+    @org.teavm.jso.JSBody(params = {"min_addr", "max_addr", "r", "g", "b", "a"}, script = "imgui.ImLayout.prototype.DrawBoundingBox__2(min_addr, max_addr, r, g, b, a);")
+    public static native void internal_native_DrawBoundingBox__2(int min_addr, int max_addr, int r, int g, int b, int a);
 
     public static void DrawBoundingBox(ImVec2 min, ImVec2 max, int r, int g, int b) {
-        internal_native_DrawBoundingBox_2(min.native_address, max.native_address, r, g, b);
+        internal_native_DrawBoundingBox__2(min.native_address, max.native_address, r, g, b);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.DrawBoundingBox_2(min_addr, max_addr, r, g, b);
+      imgui.ImLayout.prototype.DrawBoundingBox__2(min_addr, max_addr, r, g, b);
     */
-    @org.teavm.jso.JSBody(params = {"min_addr", "max_addr", "r", "g", "b"}, script = "imgui.ImLayout.prototype.DrawBoundingBox_2(min_addr, max_addr, r, g, b);")
-    public static native void internal_native_DrawBoundingBox_2(int min_addr, int max_addr, int r, int g, int b);
+    @org.teavm.jso.JSBody(params = {"min_addr", "max_addr", "r", "g", "b"}, script = "imgui.ImLayout.prototype.DrawBoundingBox__2(min_addr, max_addr, r, g, b);")
+    public static native void internal_native_DrawBoundingBox__2(int min_addr, int max_addr, int r, int g, int b);
 
     public static void DrawBoundingBox(ImRect rect, int r, int g, int b, int a, boolean clipping) {
-        internal_native_DrawBoundingBox_3(rect.native_address, r, g, b, a, clipping);
+        internal_native_DrawBoundingBox__3(rect.native_address, r, g, b, a, clipping);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.DrawBoundingBox_3(rect_addr, r, g, b, a, clipping);
+      imgui.ImLayout.prototype.DrawBoundingBox__3(rect_addr, r, g, b, a, clipping);
     */
-    @org.teavm.jso.JSBody(params = {"rect_addr", "r", "g", "b", "a", "clipping"}, script = "imgui.ImLayout.prototype.DrawBoundingBox_3(rect_addr, r, g, b, a, clipping);")
-    public static native void internal_native_DrawBoundingBox_3(int rect_addr, int r, int g, int b, int a, boolean clipping);
+    @org.teavm.jso.JSBody(params = {"rect_addr", "r", "g", "b", "a", "clipping"}, script = "imgui.ImLayout.prototype.DrawBoundingBox__3(rect_addr, r, g, b, a, clipping);")
+    public static native void internal_native_DrawBoundingBox__3(int rect_addr, int r, int g, int b, int a, boolean clipping);
 
     public static void DrawBoundingBox(ImRect rect, int r, int g, int b, int a) {
-        internal_native_DrawBoundingBox_3(rect.native_address, r, g, b, a);
+        internal_native_DrawBoundingBox__3(rect.native_address, r, g, b, a);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.DrawBoundingBox_3(rect_addr, r, g, b, a);
+      imgui.ImLayout.prototype.DrawBoundingBox__3(rect_addr, r, g, b, a);
     */
-    @org.teavm.jso.JSBody(params = {"rect_addr", "r", "g", "b", "a"}, script = "imgui.ImLayout.prototype.DrawBoundingBox_3(rect_addr, r, g, b, a);")
-    public static native void internal_native_DrawBoundingBox_3(int rect_addr, int r, int g, int b, int a);
+    @org.teavm.jso.JSBody(params = {"rect_addr", "r", "g", "b", "a"}, script = "imgui.ImLayout.prototype.DrawBoundingBox__3(rect_addr, r, g, b, a);")
+    public static native void internal_native_DrawBoundingBox__3(int rect_addr, int r, int g, int b, int a);
 
     public static void DrawBoundingBox(ImRect rect, int r, int g, int b) {
-        internal_native_DrawBoundingBox_3(rect.native_address, r, g, b);
+        internal_native_DrawBoundingBox__3(rect.native_address, r, g, b);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.DrawBoundingBox_3(rect_addr, r, g, b);
+      imgui.ImLayout.prototype.DrawBoundingBox__3(rect_addr, r, g, b);
     */
-    @org.teavm.jso.JSBody(params = {"rect_addr", "r", "g", "b"}, script = "imgui.ImLayout.prototype.DrawBoundingBox_3(rect_addr, r, g, b);")
-    public static native void internal_native_DrawBoundingBox_3(int rect_addr, int r, int g, int b);
+    @org.teavm.jso.JSBody(params = {"rect_addr", "r", "g", "b"}, script = "imgui.ImLayout.prototype.DrawBoundingBox__3(rect_addr, r, g, b);")
+    public static native void internal_native_DrawBoundingBox__3(int rect_addr, int r, int g, int b);
 
     public static void ShowLayoutDebug() {
         internal_native_ShowLayoutDebug();
@@ -173,53 +173,53 @@ public class ImLayout extends IDLBase {
     public static native void internal_native_ShowLayoutDebugClipping();
 
     public static void BeginLayout(int id, float sizeX, float sizeY, ImGuiLayoutOptions options) {
-        internal_native_BeginLayout_1(id, sizeX, sizeY, options.native_address);
+        internal_native_BeginLayout__1(id, sizeX, sizeY, options.native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.BeginLayout_1(id, sizeX, sizeY, options_addr);
+      imgui.ImLayout.prototype.BeginLayout__1(id, sizeX, sizeY, options_addr);
     */
-    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "options_addr"}, script = "imgui.ImLayout.prototype.BeginLayout_1(id, sizeX, sizeY, options_addr);")
-    public static native void internal_native_BeginLayout_1(int id, float sizeX, float sizeY, int options_addr);
+    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "options_addr"}, script = "imgui.ImLayout.prototype.BeginLayout__1(id, sizeX, sizeY, options_addr);")
+    public static native void internal_native_BeginLayout__1(int id, float sizeX, float sizeY, int options_addr);
 
     public static void BeginLayout(int id, float sizeX, float sizeY) {
-        internal_native_BeginLayout_1(id, sizeX, sizeY);
+        internal_native_BeginLayout__1(id, sizeX, sizeY);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.BeginLayout_1(id, sizeX, sizeY);
+      imgui.ImLayout.prototype.BeginLayout__1(id, sizeX, sizeY);
     */
-    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY"}, script = "imgui.ImLayout.prototype.BeginLayout_1(id, sizeX, sizeY);")
-    public static native void internal_native_BeginLayout_1(int id, float sizeX, float sizeY);
+    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY"}, script = "imgui.ImLayout.prototype.BeginLayout__1(id, sizeX, sizeY);")
+    public static native void internal_native_BeginLayout__1(int id, float sizeX, float sizeY);
 
     public static void BeginLayout(String id, float sizeX, float sizeY, ImGuiLayoutOptions options) {
-        internal_native_BeginLayout_2(id, sizeX, sizeY, options.native_address);
+        internal_native_BeginLayout__2(id, sizeX, sizeY, options.native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.BeginLayout_2(id, sizeX, sizeY, options_addr);
+      imgui.ImLayout.prototype.BeginLayout__2(id, sizeX, sizeY, options_addr);
     */
-    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "options_addr"}, script = "imgui.ImLayout.prototype.BeginLayout_2(id, sizeX, sizeY, options_addr);")
-    public static native void internal_native_BeginLayout_2(String id, float sizeX, float sizeY, int options_addr);
+    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "options_addr"}, script = "imgui.ImLayout.prototype.BeginLayout__2(id, sizeX, sizeY, options_addr);")
+    public static native void internal_native_BeginLayout__2(String id, float sizeX, float sizeY, int options_addr);
 
     public static void BeginLayout(String id, float sizeX, float sizeY) {
-        internal_native_BeginLayout_2(id, sizeX, sizeY);
+        internal_native_BeginLayout__2(id, sizeX, sizeY);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.BeginLayout_2(id, sizeX, sizeY);
+      imgui.ImLayout.prototype.BeginLayout__2(id, sizeX, sizeY);
     */
-    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY"}, script = "imgui.ImLayout.prototype.BeginLayout_2(id, sizeX, sizeY);")
-    public static native void internal_native_BeginLayout_2(String id, float sizeX, float sizeY);
+    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY"}, script = "imgui.ImLayout.prototype.BeginLayout__2(id, sizeX, sizeY);")
+    public static native void internal_native_BeginLayout__2(String id, float sizeX, float sizeY);
 
     public static ImGuiLayout GetCurrentLayout() {
         int pointer = internal_native_GetCurrentLayout();
         if (pointer == 0)
-            return null;
+            return ImGuiLayout.NULL;
         if (ImGuiLayout_TEMP_STATIC_GEN_0 == null)
             ImGuiLayout_TEMP_STATIC_GEN_0 = ImGuiLayout.native_new();
         ImGuiLayout_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
@@ -258,136 +258,136 @@ public class ImLayout extends IDLBase {
     public static native void internal_native_EndLayout();
 
     public static void BeginAlign(int id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY, ImGuiLayoutOptions options) {
-        internal_native_BeginAlign_1(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY, options.native_address);
+        internal_native_BeginAlign__1(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY, options.native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.BeginAlign_1(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY, options_addr);
+      imgui.ImLayout.prototype.BeginAlign__1(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY, options_addr);
     */
-    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX", "alignY", "offsetX", "offsetY", "options_addr"}, script = "imgui.ImLayout.prototype.BeginAlign_1(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY, options_addr);")
-    public static native void internal_native_BeginAlign_1(int id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY, int options_addr);
+    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX", "alignY", "offsetX", "offsetY", "options_addr"}, script = "imgui.ImLayout.prototype.BeginAlign__1(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY, options_addr);")
+    public static native void internal_native_BeginAlign__1(int id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY, int options_addr);
 
     public static void BeginAlign(int id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY) {
-        internal_native_BeginAlign_1(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY);
+        internal_native_BeginAlign__1(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.BeginAlign_1(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY);
+      imgui.ImLayout.prototype.BeginAlign__1(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY);
     */
-    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX", "alignY", "offsetX", "offsetY"}, script = "imgui.ImLayout.prototype.BeginAlign_1(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY);")
-    public static native void internal_native_BeginAlign_1(int id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY);
+    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX", "alignY", "offsetX", "offsetY"}, script = "imgui.ImLayout.prototype.BeginAlign__1(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY);")
+    public static native void internal_native_BeginAlign__1(int id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY);
 
     public static void BeginAlign(int id, float sizeX, float sizeY, float alignX, float alignY, float offsetX) {
-        internal_native_BeginAlign_1(id, sizeX, sizeY, alignX, alignY, offsetX);
+        internal_native_BeginAlign__1(id, sizeX, sizeY, alignX, alignY, offsetX);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.BeginAlign_1(id, sizeX, sizeY, alignX, alignY, offsetX);
+      imgui.ImLayout.prototype.BeginAlign__1(id, sizeX, sizeY, alignX, alignY, offsetX);
     */
-    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX", "alignY", "offsetX"}, script = "imgui.ImLayout.prototype.BeginAlign_1(id, sizeX, sizeY, alignX, alignY, offsetX);")
-    public static native void internal_native_BeginAlign_1(int id, float sizeX, float sizeY, float alignX, float alignY, float offsetX);
+    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX", "alignY", "offsetX"}, script = "imgui.ImLayout.prototype.BeginAlign__1(id, sizeX, sizeY, alignX, alignY, offsetX);")
+    public static native void internal_native_BeginAlign__1(int id, float sizeX, float sizeY, float alignX, float alignY, float offsetX);
 
     public static void BeginAlign(int id, float sizeX, float sizeY, float alignX, float alignY) {
-        internal_native_BeginAlign_1(id, sizeX, sizeY, alignX, alignY);
+        internal_native_BeginAlign__1(id, sizeX, sizeY, alignX, alignY);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.BeginAlign_1(id, sizeX, sizeY, alignX, alignY);
+      imgui.ImLayout.prototype.BeginAlign__1(id, sizeX, sizeY, alignX, alignY);
     */
-    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX", "alignY"}, script = "imgui.ImLayout.prototype.BeginAlign_1(id, sizeX, sizeY, alignX, alignY);")
-    public static native void internal_native_BeginAlign_1(int id, float sizeX, float sizeY, float alignX, float alignY);
+    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX", "alignY"}, script = "imgui.ImLayout.prototype.BeginAlign__1(id, sizeX, sizeY, alignX, alignY);")
+    public static native void internal_native_BeginAlign__1(int id, float sizeX, float sizeY, float alignX, float alignY);
 
     public static void BeginAlign(int id, float sizeX, float sizeY, float alignX) {
-        internal_native_BeginAlign_1(id, sizeX, sizeY, alignX);
+        internal_native_BeginAlign__1(id, sizeX, sizeY, alignX);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.BeginAlign_1(id, sizeX, sizeY, alignX);
+      imgui.ImLayout.prototype.BeginAlign__1(id, sizeX, sizeY, alignX);
     */
-    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX"}, script = "imgui.ImLayout.prototype.BeginAlign_1(id, sizeX, sizeY, alignX);")
-    public static native void internal_native_BeginAlign_1(int id, float sizeX, float sizeY, float alignX);
+    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX"}, script = "imgui.ImLayout.prototype.BeginAlign__1(id, sizeX, sizeY, alignX);")
+    public static native void internal_native_BeginAlign__1(int id, float sizeX, float sizeY, float alignX);
 
     public static void BeginAlign(int id, float sizeX, float sizeY) {
-        internal_native_BeginAlign_1(id, sizeX, sizeY);
+        internal_native_BeginAlign__1(id, sizeX, sizeY);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.BeginAlign_1(id, sizeX, sizeY);
+      imgui.ImLayout.prototype.BeginAlign__1(id, sizeX, sizeY);
     */
-    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY"}, script = "imgui.ImLayout.prototype.BeginAlign_1(id, sizeX, sizeY);")
-    public static native void internal_native_BeginAlign_1(int id, float sizeX, float sizeY);
+    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY"}, script = "imgui.ImLayout.prototype.BeginAlign__1(id, sizeX, sizeY);")
+    public static native void internal_native_BeginAlign__1(int id, float sizeX, float sizeY);
 
     public static void BeginAlign(String id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY, ImGuiLayoutOptions options) {
-        internal_native_BeginAlign_2(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY, options.native_address);
+        internal_native_BeginAlign__2(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY, options.native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.BeginAlign_2(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY, options_addr);
+      imgui.ImLayout.prototype.BeginAlign__2(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY, options_addr);
     */
-    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX", "alignY", "offsetX", "offsetY", "options_addr"}, script = "imgui.ImLayout.prototype.BeginAlign_2(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY, options_addr);")
-    public static native void internal_native_BeginAlign_2(String id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY, int options_addr);
+    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX", "alignY", "offsetX", "offsetY", "options_addr"}, script = "imgui.ImLayout.prototype.BeginAlign__2(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY, options_addr);")
+    public static native void internal_native_BeginAlign__2(String id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY, int options_addr);
 
     public static void BeginAlign(String id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY) {
-        internal_native_BeginAlign_2(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY);
+        internal_native_BeginAlign__2(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.BeginAlign_2(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY);
+      imgui.ImLayout.prototype.BeginAlign__2(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY);
     */
-    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX", "alignY", "offsetX", "offsetY"}, script = "imgui.ImLayout.prototype.BeginAlign_2(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY);")
-    public static native void internal_native_BeginAlign_2(String id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY);
+    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX", "alignY", "offsetX", "offsetY"}, script = "imgui.ImLayout.prototype.BeginAlign__2(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY);")
+    public static native void internal_native_BeginAlign__2(String id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY);
 
     public static void BeginAlign(String id, float sizeX, float sizeY, float alignX, float alignY, float offsetX) {
-        internal_native_BeginAlign_2(id, sizeX, sizeY, alignX, alignY, offsetX);
+        internal_native_BeginAlign__2(id, sizeX, sizeY, alignX, alignY, offsetX);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.BeginAlign_2(id, sizeX, sizeY, alignX, alignY, offsetX);
+      imgui.ImLayout.prototype.BeginAlign__2(id, sizeX, sizeY, alignX, alignY, offsetX);
     */
-    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX", "alignY", "offsetX"}, script = "imgui.ImLayout.prototype.BeginAlign_2(id, sizeX, sizeY, alignX, alignY, offsetX);")
-    public static native void internal_native_BeginAlign_2(String id, float sizeX, float sizeY, float alignX, float alignY, float offsetX);
+    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX", "alignY", "offsetX"}, script = "imgui.ImLayout.prototype.BeginAlign__2(id, sizeX, sizeY, alignX, alignY, offsetX);")
+    public static native void internal_native_BeginAlign__2(String id, float sizeX, float sizeY, float alignX, float alignY, float offsetX);
 
     public static void BeginAlign(String id, float sizeX, float sizeY, float alignX, float alignY) {
-        internal_native_BeginAlign_2(id, sizeX, sizeY, alignX, alignY);
+        internal_native_BeginAlign__2(id, sizeX, sizeY, alignX, alignY);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.BeginAlign_2(id, sizeX, sizeY, alignX, alignY);
+      imgui.ImLayout.prototype.BeginAlign__2(id, sizeX, sizeY, alignX, alignY);
     */
-    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX", "alignY"}, script = "imgui.ImLayout.prototype.BeginAlign_2(id, sizeX, sizeY, alignX, alignY);")
-    public static native void internal_native_BeginAlign_2(String id, float sizeX, float sizeY, float alignX, float alignY);
+    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX", "alignY"}, script = "imgui.ImLayout.prototype.BeginAlign__2(id, sizeX, sizeY, alignX, alignY);")
+    public static native void internal_native_BeginAlign__2(String id, float sizeX, float sizeY, float alignX, float alignY);
 
     public static void BeginAlign(String id, float sizeX, float sizeY, float alignX) {
-        internal_native_BeginAlign_2(id, sizeX, sizeY, alignX);
+        internal_native_BeginAlign__2(id, sizeX, sizeY, alignX);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.BeginAlign_2(id, sizeX, sizeY, alignX);
+      imgui.ImLayout.prototype.BeginAlign__2(id, sizeX, sizeY, alignX);
     */
-    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX"}, script = "imgui.ImLayout.prototype.BeginAlign_2(id, sizeX, sizeY, alignX);")
-    public static native void internal_native_BeginAlign_2(String id, float sizeX, float sizeY, float alignX);
+    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX"}, script = "imgui.ImLayout.prototype.BeginAlign__2(id, sizeX, sizeY, alignX);")
+    public static native void internal_native_BeginAlign__2(String id, float sizeX, float sizeY, float alignX);
 
     public static void BeginAlign(String id, float sizeX, float sizeY) {
-        internal_native_BeginAlign_2(id, sizeX, sizeY);
+        internal_native_BeginAlign__2(id, sizeX, sizeY);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.BeginAlign_2(id, sizeX, sizeY);
+      imgui.ImLayout.prototype.BeginAlign__2(id, sizeX, sizeY);
     */
-    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY"}, script = "imgui.ImLayout.prototype.BeginAlign_2(id, sizeX, sizeY);")
-    public static native void internal_native_BeginAlign_2(String id, float sizeX, float sizeY);
+    @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY"}, script = "imgui.ImLayout.prototype.BeginAlign__2(id, sizeX, sizeY);")
+    public static native void internal_native_BeginAlign__2(String id, float sizeX, float sizeY);
 
     public static void AlignLayout(float alignX, float alignY, float offsetX, float offsetY) {
         internal_native_AlignLayout(alignX, alignY, offsetX, offsetY);
@@ -458,26 +458,26 @@ public class ImLayout extends IDLBase {
     public static native boolean internal_native_BeginCollapseLayout(String id, String title, float sizeX, float sizeY, int option_addr);
 
     public static void BeginCollapseLayout(String id, IDLBoolArray isOpen, String title, float sizeX, float sizeY) {
-        internal_native_BeginCollapseLayout_2(id, isOpen.native_void_address, title, sizeX, sizeY);
+        internal_native_BeginCollapseLayout__2(id, isOpen.native_void_address, title, sizeX, sizeY);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.BeginCollapseLayout_2(id, isOpen_addr, title, sizeX, sizeY);
+      imgui.ImLayout.prototype.BeginCollapseLayout__2(id, isOpen_addr, title, sizeX, sizeY);
     */
-    @org.teavm.jso.JSBody(params = {"id", "isOpen_addr", "title", "sizeX", "sizeY"}, script = "imgui.ImLayout.prototype.BeginCollapseLayout_2(id, isOpen_addr, title, sizeX, sizeY);")
-    public static native void internal_native_BeginCollapseLayout_2(String id, int isOpen_addr, String title, float sizeX, float sizeY);
+    @org.teavm.jso.JSBody(params = {"id", "isOpen_addr", "title", "sizeX", "sizeY"}, script = "imgui.ImLayout.prototype.BeginCollapseLayout__2(id, isOpen_addr, title, sizeX, sizeY);")
+    public static native void internal_native_BeginCollapseLayout__2(String id, int isOpen_addr, String title, float sizeX, float sizeY);
 
     public static void BeginCollapseLayout(String id, IDLBoolArray isOpen, String title, float sizeX, float sizeY, ImGuiCollapseLayoutOptions option) {
-        internal_native_BeginCollapseLayout_2(id, isOpen.native_void_address, title, sizeX, sizeY, option.native_address);
+        internal_native_BeginCollapseLayout__2(id, isOpen.native_void_address, title, sizeX, sizeY, option.native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.BeginCollapseLayout_2(id, isOpen_addr, title, sizeX, sizeY, option_addr);
+      imgui.ImLayout.prototype.BeginCollapseLayout__2(id, isOpen_addr, title, sizeX, sizeY, option_addr);
     */
-    @org.teavm.jso.JSBody(params = {"id", "isOpen_addr", "title", "sizeX", "sizeY", "option_addr"}, script = "imgui.ImLayout.prototype.BeginCollapseLayout_2(id, isOpen_addr, title, sizeX, sizeY, option_addr);")
-    public static native void internal_native_BeginCollapseLayout_2(String id, int isOpen_addr, String title, float sizeX, float sizeY, int option_addr);
+    @org.teavm.jso.JSBody(params = {"id", "isOpen_addr", "title", "sizeX", "sizeY", "option_addr"}, script = "imgui.ImLayout.prototype.BeginCollapseLayout__2(id, isOpen_addr, title, sizeX, sizeY, option_addr);")
+    public static native void internal_native_BeginCollapseLayout__2(String id, int isOpen_addr, String title, float sizeX, float sizeY, int option_addr);
 
     public static void EndCollapseFrameLayout() {
         internal_native_EndCollapseFrameLayout();
@@ -526,50 +526,50 @@ public class ImLayout extends IDLBase {
     public static native boolean internal_native_BeginCollapseLayoutEx(String id, String title, float sizeX, float sizeY, int option_addr);
 
     public static boolean BeginCollapseLayoutEx(int id, String title, float sizeX, float sizeY) {
-        return internal_native_BeginCollapseLayoutEx_2(id, title, sizeX, sizeY);
+        return internal_native_BeginCollapseLayoutEx__2(id, title, sizeX, sizeY);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImLayout.prototype.BeginCollapseLayoutEx_2(id, title, sizeX, sizeY);
+      var returnedJSObj = imgui.ImLayout.prototype.BeginCollapseLayoutEx__2(id, title, sizeX, sizeY);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"id", "title", "sizeX", "sizeY"}, script = "var returnedJSObj = imgui.ImLayout.prototype.BeginCollapseLayoutEx_2(id, title, sizeX, sizeY);return returnedJSObj;")
-    public static native boolean internal_native_BeginCollapseLayoutEx_2(int id, String title, float sizeX, float sizeY);
+    @org.teavm.jso.JSBody(params = {"id", "title", "sizeX", "sizeY"}, script = "var returnedJSObj = imgui.ImLayout.prototype.BeginCollapseLayoutEx__2(id, title, sizeX, sizeY);return returnedJSObj;")
+    public static native boolean internal_native_BeginCollapseLayoutEx__2(int id, String title, float sizeX, float sizeY);
 
     public static boolean BeginCollapseLayoutEx(int id, String title, float sizeX, float sizeY, ImGuiCollapseLayoutOptions option) {
-        return internal_native_BeginCollapseLayoutEx_2(id, title, sizeX, sizeY, option.native_address);
+        return internal_native_BeginCollapseLayoutEx__2(id, title, sizeX, sizeY, option.native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImLayout.prototype.BeginCollapseLayoutEx_2(id, title, sizeX, sizeY, option_addr);
+      var returnedJSObj = imgui.ImLayout.prototype.BeginCollapseLayoutEx__2(id, title, sizeX, sizeY, option_addr);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"id", "title", "sizeX", "sizeY", "option_addr"}, script = "var returnedJSObj = imgui.ImLayout.prototype.BeginCollapseLayoutEx_2(id, title, sizeX, sizeY, option_addr);return returnedJSObj;")
-    public static native boolean internal_native_BeginCollapseLayoutEx_2(int id, String title, float sizeX, float sizeY, int option_addr);
+    @org.teavm.jso.JSBody(params = {"id", "title", "sizeX", "sizeY", "option_addr"}, script = "var returnedJSObj = imgui.ImLayout.prototype.BeginCollapseLayoutEx__2(id, title, sizeX, sizeY, option_addr);return returnedJSObj;")
+    public static native boolean internal_native_BeginCollapseLayoutEx__2(int id, String title, float sizeX, float sizeY, int option_addr);
 
     public static void BeginCollapseLayoutEx(String id, IDLBoolArray isOpen, String title, float sizeX, float sizeY) {
-        internal_native_BeginCollapseLayoutEx_3(id, isOpen.native_void_address, title, sizeX, sizeY);
+        internal_native_BeginCollapseLayoutEx__3(id, isOpen.native_void_address, title, sizeX, sizeY);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.BeginCollapseLayoutEx_3(id, isOpen_addr, title, sizeX, sizeY);
+      imgui.ImLayout.prototype.BeginCollapseLayoutEx__3(id, isOpen_addr, title, sizeX, sizeY);
     */
-    @org.teavm.jso.JSBody(params = {"id", "isOpen_addr", "title", "sizeX", "sizeY"}, script = "imgui.ImLayout.prototype.BeginCollapseLayoutEx_3(id, isOpen_addr, title, sizeX, sizeY);")
-    public static native void internal_native_BeginCollapseLayoutEx_3(String id, int isOpen_addr, String title, float sizeX, float sizeY);
+    @org.teavm.jso.JSBody(params = {"id", "isOpen_addr", "title", "sizeX", "sizeY"}, script = "imgui.ImLayout.prototype.BeginCollapseLayoutEx__3(id, isOpen_addr, title, sizeX, sizeY);")
+    public static native void internal_native_BeginCollapseLayoutEx__3(String id, int isOpen_addr, String title, float sizeX, float sizeY);
 
     public static void BeginCollapseLayoutEx(String id, IDLBoolArray isOpen, String title, float sizeX, float sizeY, ImGuiCollapseLayoutOptions option) {
-        internal_native_BeginCollapseLayoutEx_3(id, isOpen.native_void_address, title, sizeX, sizeY, option.native_address);
+        internal_native_BeginCollapseLayoutEx__3(id, isOpen.native_void_address, title, sizeX, sizeY, option.native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.BeginCollapseLayoutEx_3(id, isOpen_addr, title, sizeX, sizeY, option_addr);
+      imgui.ImLayout.prototype.BeginCollapseLayoutEx__3(id, isOpen_addr, title, sizeX, sizeY, option_addr);
     */
-    @org.teavm.jso.JSBody(params = {"id", "isOpen_addr", "title", "sizeX", "sizeY", "option_addr"}, script = "imgui.ImLayout.prototype.BeginCollapseLayoutEx_3(id, isOpen_addr, title, sizeX, sizeY, option_addr);")
-    public static native void internal_native_BeginCollapseLayoutEx_3(String id, int isOpen_addr, String title, float sizeX, float sizeY, int option_addr);
+    @org.teavm.jso.JSBody(params = {"id", "isOpen_addr", "title", "sizeX", "sizeY", "option_addr"}, script = "imgui.ImLayout.prototype.BeginCollapseLayoutEx__3(id, isOpen_addr, title, sizeX, sizeY, option_addr);")
+    public static native void internal_native_BeginCollapseLayoutEx__3(String id, int isOpen_addr, String title, float sizeX, float sizeY, int option_addr);
 
     public static void BeginBoundingBox() {
         internal_native_BeginBoundingBox();
@@ -585,7 +585,7 @@ public class ImLayout extends IDLBase {
     public static ImRect EndBoundingBox() {
         int pointer = internal_native_EndBoundingBox();
         if (pointer == 0)
-            return null;
+            return ImRect.NULL;
         if (ImRect_TEMP_STATIC_GEN_0 == null)
             ImRect_TEMP_STATIC_GEN_0 = ImRect.native_new();
         ImRect_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
@@ -636,26 +636,26 @@ public class ImLayout extends IDLBase {
     public static native void internal_native_EndGlobalTree();
 
     public static void BeginTree(String treeIdStr) {
-        internal_native_BeginTree_1(treeIdStr);
+        internal_native_BeginTree__1(treeIdStr);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.BeginTree_1(treeIdStr);
+      imgui.ImLayout.prototype.BeginTree__1(treeIdStr);
     */
-    @org.teavm.jso.JSBody(params = {"treeIdStr"}, script = "imgui.ImLayout.prototype.BeginTree_1(treeIdStr);")
-    public static native void internal_native_BeginTree_1(String treeIdStr);
+    @org.teavm.jso.JSBody(params = {"treeIdStr"}, script = "imgui.ImLayout.prototype.BeginTree__1(treeIdStr);")
+    public static native void internal_native_BeginTree__1(String treeIdStr);
 
     public static void BeginTree(int id) {
-        internal_native_BeginTree_2(id);
+        internal_native_BeginTree__2(id);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImLayout.prototype.BeginTree_2(id);
+      imgui.ImLayout.prototype.BeginTree__2(id);
     */
-    @org.teavm.jso.JSBody(params = {"id"}, script = "imgui.ImLayout.prototype.BeginTree_2(id);")
-    public static native void internal_native_BeginTree_2(int id);
+    @org.teavm.jso.JSBody(params = {"id"}, script = "imgui.ImLayout.prototype.BeginTree__2(id);")
+    public static native void internal_native_BeginTree__2(int id);
 
     public static void EndTree() {
         internal_native_EndTree();

@@ -11,6 +11,15 @@ import imgui.idl.IDLBase;
 
 public class ImVectorInt extends IDLBase {
 
+    public final static ImVectorInt NULL = native_new();
+
+    public static ImVectorInt native_new() {
+        return new ImVectorInt((byte) 0, (char) 0);
+    }
+
+    private ImVectorInt(byte v, char c) {
+    }
+
     public int getData(int index) {
         return getDataNATIVE(native_address, index);
     }
@@ -22,20 +31,6 @@ public class ImVectorInt extends IDLBase {
               return (jint)value;
     */
     private static native int getDataNATIVE(long this_addr, int index);
-
-    /**
-     * Dummy constructor, used internally to creates objects without C++ pointer
-     */
-    @Deprecated()
-    protected ImVectorInt(byte b, char c) {
-    }
-
-    /**
-     * @return An empty instance without a native address
-     */
-    public static ImVectorInt native_new() {
-        return new ImVectorInt((byte) 0, (char) 0);
-    }
 
     protected void deleteNative() {
         internal_native_deleteNative(native_address);

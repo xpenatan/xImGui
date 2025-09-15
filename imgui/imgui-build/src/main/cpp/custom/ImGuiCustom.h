@@ -25,8 +25,8 @@ namespace ImGuiWrapper {
 class ImGuiInternal {
     // Emscripten webidl don't support binding methods without a class so we need to create a wrapper
     public:
-        static ImGuiID                  ImHashData_1(const void* data, size_t data_size, ImGuiID seed = 0) { return ImHashData(data, data_size, seed); }
-        static ImGuiID                  ImHashStr_1(const char* data, size_t data_size = 0, ImGuiID seed = 0) { return ImHashStr(data, data_size, seed); }
+        static ImGuiID                  ImHashData(const void* data, size_t data_size, ImGuiID seed = 0) { return ImHashData(data, data_size, seed); }
+        static ImGuiID                  ImHashStr(const char* data, size_t data_size = 0, ImGuiID seed = 0) { return ImHashStr(data, data_size, seed); }
 
         static ImGuiWindow*             GetCurrentWindow() { return im::GetCurrentWindow(); }
         static ImGuiWindow*             FindWindowByID(ImGuiID id) { return im::FindWindowByID(id); }
@@ -37,7 +37,7 @@ class ImGuiInternal {
 
         // Basic Helpers for widget code
         static void                     ItemSize(const ImVec2& size, float text_baseline_y = -1.0f) { im::ItemSize(size, text_baseline_y); }
-        static void                     ItemSize_2(const ImRect& bb, float text_baseline_y = -1.0f) { im::ItemSize(bb, text_baseline_y); }
+        static void                     ItemSize(const ImRect& bb, float text_baseline_y = -1.0f) { im::ItemSize(bb, text_baseline_y); }
         static bool                     ItemAdd(const ImRect& bb, ImGuiID id, const ImRect* nav_bb = NULL, ImGuiItemFlags extra_flags = 0) { return im::ItemAdd(bb, id, nav_bb, extra_flags); }
         static bool                     ItemHoverable(const ImRect& bb, ImGuiID id, ImGuiItemFlags item_flags) { return im::ItemHoverable(bb, id, item_flags); }
         static bool                     IsWindowContentHoverable(ImGuiWindow* window, ImGuiHoveredFlags flags = 0) { return im::IsWindowContentHoverable(window, flags); }
@@ -176,7 +176,7 @@ class ImGui {
 
         // Child Windows
         static bool                     BeginChild(const char* str_id, const ImVec2& size = ImVec2(0, 0), ImGuiChildFlags child_flags = 0, ImGuiWindowFlags window_flags = 0) { return im::BeginChild(str_id, size, child_flags, window_flags); }
-        static bool                     BeginChild_2(ImGuiID id, const ImVec2& size = ImVec2(0, 0), ImGuiChildFlags child_flags = 0, ImGuiWindowFlags window_flags = 0) { return im::BeginChild(id, size, child_flags, window_flags); }
+        static bool                     BeginChild(ImGuiID id, const ImVec2& size = ImVec2(0, 0), ImGuiChildFlags child_flags = 0, ImGuiWindowFlags window_flags = 0) { return im::BeginChild(id, size, child_flags, window_flags); }
         static void                     EndChild() { im::EndChild(); }
 
         // Windows Utilities
@@ -203,14 +203,14 @@ class ImGui {
         static void                     SetNextWindowBgAlpha(float alpha) { im::SetNextWindowBgAlpha(alpha); }
         static void                     SetNextWindowViewport(ImGuiID viewport_id) { im::SetNextWindowViewport(viewport_id); }
         static void                     SetWindowPos(const ImVec2& pos, ImGuiCond cond = 0) { im::SetWindowPos(pos, cond); }
+        static void                     SetWindowPos(const char* name, const ImVec2& pos, ImGuiCond cond = 0) { im::SetWindowPos(name, pos, cond); }
         static void                     SetWindowSize(const ImVec2& size, ImGuiCond cond = 0) { im::SetWindowSize(size, cond); }
+        static void                     SetWindowSize(const char* name, const ImVec2& size, ImGuiCond cond = 0) { im::SetWindowSize(name, size, cond); }
         static void                     SetWindowCollapsed(bool collapsed, ImGuiCond cond = 0) { im::SetWindowCollapsed(collapsed, cond); }
+        static void                     SetWindowCollapsed_1(const char* name, bool collapsed, ImGuiCond cond = 0) { im::SetWindowCollapsed(name, collapsed, cond); }
         static void                     SetWindowFocus() { im::SetWindowFocus(); }
-        static void                     SetWindowFontScale(float scale) { im::SetWindowFontScale(scale); }
-        static void                     SetWindowPos_2(const char* name, const ImVec2& pos, ImGuiCond cond = 0) { im::SetWindowPos(name, pos, cond); }
-        static void                     SetWindowSize_2(const char* name, const ImVec2& size, ImGuiCond cond = 0) { im::SetWindowSize(name, size, cond); }
-        static void                     SetWindowCollapsed_2(const char* name, bool collapsed, ImGuiCond cond = 0) { im::SetWindowCollapsed(name, collapsed, cond); }
         static void                     SetWindowFocus(const char* name) { im::SetWindowFocus(name); }
+        static void                     SetWindowFontScale(float scale) { im::SetWindowFontScale(scale); }
 
         // Windows Scrolling
         static float                    GetScrollX() { return im::GetScrollX(); }
@@ -228,10 +228,10 @@ class ImGui {
         static void                     PushFont(ImFont* font) { im::PushFont(font); }
         static void                     PopFont() { im::PopFont(); }
         static void                     PushStyleColor(ImGuiCol idx, ImU32 col) { im::PushStyleColor(idx, col); }
-        static void                     PushStyleColor_2(ImGuiCol idx, const ImVec4& col) { im::PushStyleColor(idx, col); }
+        static void                     PushStyleColor(ImGuiCol idx, const ImVec4& col) { im::PushStyleColor(idx, col); }
         static void                     PopStyleColor(int count = 1) { im::PopStyleColor(count); }
         static void                     PushStyleVar(ImGuiStyleVar idx, float val) { im::PushStyleVar(idx, val); }
-        static void                     PushStyleVar_2(ImGuiStyleVar idx, const ImVec2& val) { im::PushStyleVar(idx, val); }
+        static void                     PushStyleVar(ImGuiStyleVar idx, const ImVec2& val) { im::PushStyleVar(idx, val); }
         static void                     PopStyleVar(int count = 1) { im::PopStyleVar(count); }
         static void                     PushItemFlag(ImGuiItemFlags option, bool enabled) { im::PushItemFlag(option, enabled); }
         static void                     PopItemFlag() { im::PopItemFlag(); }
@@ -249,8 +249,8 @@ class ImGui {
         static float                    GetFontSize() { return im::GetFontSize(); }
         static ImVec2                   GetFontTexUvWhitePixel() { return im::GetFontTexUvWhitePixel(); }
         static ImU32                    GetColorU32Style(ImGuiCol idx, float alpha_mul = 1.0f) { return im::GetColorU32(idx, alpha_mul); }
-        static ImU32                    GetColorU32_2(const ImVec4& col) { return im::GetColorU32(col); }
-        static ImU32                    GetColorU32_3(ImU32 col) { return im::GetColorU32(col); }
+        static ImU32                    GetColorU32(const ImVec4& col) { return im::GetColorU32(col); }
+        static ImU32                    GetColorU32(ImU32 col) { return im::GetColorU32(col); }
         static const                    ImVec4& GetStyleColorVec4(ImGuiCol idx) { return im::GetStyleColorVec4(idx); }
 
         // Layout cursor positioning
@@ -284,12 +284,12 @@ class ImGui {
         // ID stack/scopes
         static void                     PushID(const char* str_id) { im::PushID(str_id); }
         static void                     PushID(const char* str_id_begin, const char* str_id_end) { im::PushID(str_id_begin, str_id_end); }
-        static void                     PushID_2(int int_id) { im::PushID(int_id); }
-        static void                     PushID_3(const void* ptr_id) { im::PushID(ptr_id); }
+        static void                     PushID(int int_id) { im::PushID(int_id); }
+        static void                     PushID(const void* ptr_id) { im::PushID(ptr_id); }
         static void                     PopID() { im::PopID(); }
         static ImGuiID                  GetID(const char* str_id) { return im::GetID(str_id); }
-        static ImGuiID                  GetID_2(const char* str_id_begin, const char* str_id_end) { return im::GetID(str_id_begin, str_id_end); }
-        static ImGuiID                  GetID_3(const void* ptr_id) { return im::GetID(ptr_id); }
+        static ImGuiID                  GetID(const char* str_id_begin, const char* str_id_end) { return im::GetID(str_id_begin, str_id_end); }
+        static ImGuiID                  GetID(const void* ptr_id) { return im::GetID(ptr_id); }
 
         // Widgets: Text
         static void                     TextUnformatted(const char* text, const char* text_end = NULL) { im::TextUnformatted(text, text_end); }
@@ -314,9 +314,9 @@ class ImGui {
         static bool                     ArrowButton(const char* str_id, ImGuiDir dir) { return im::ArrowButton(str_id, dir); }
         static bool                     Checkbox(const char* label, bool* v) { return im::Checkbox(label, v); }
         static bool                     CheckboxFlags(const char* label, int* flags, int flags_value) { return im::CheckboxFlags(label, flags, flags_value); }
-        static bool                     CheckboxFlags_2(const char* label, unsigned int* flags, unsigned int flags_value) { return im::CheckboxFlags(label, flags, flags_value); }
+        static bool                     CheckboxFlags(const char* label, unsigned int* flags, unsigned int flags_value) { return im::CheckboxFlags(label, flags, flags_value); }
         static bool                     RadioButton(const char* label, bool active) { return im::RadioButton(label, active); }
-        static bool                     RadioButton_2(const char* label, int* v, int v_button) { return im::RadioButton(label, v, v_button); }
+        static bool                     RadioButton(const char* label, int* v, int v_button) { return im::RadioButton(label, v, v_button); }
         static void                     ProgressBar(float fraction, const ImVec2& size_arg = ImVec2(-FLT_MIN, 0), const char* overlay = NULL) { im::ProgressBar(fraction, size_arg, overlay); }
         static void                     Bullet() { im::Bullet(); }
         static bool                     TextLink(const char* label) { return im::TextLink(label); }
@@ -380,26 +380,26 @@ class ImGui {
 
         // Widgets: Trees
         static bool                     TreeNode(const char* label) { return im::TreeNode(label); }
-        static bool                     TreeNode_2(const char* str_id, const char* fmt) { return im::TreeNode(str_id, fmt); }
-        static bool                     TreeNode_3(const void* ptr_id, const char* fmt) { return im::TreeNode(ptr_id, fmt); }
+        static bool                     TreeNode(const char* str_id, const char* fmt) { return im::TreeNode(str_id, fmt); }
+        static bool                     TreeNode(const void* ptr_id, const char* fmt) { return im::TreeNode(ptr_id, fmt); }
         static bool                     TreeNodeV(const char* str_id, const char* fmt, va_list args) { return im::TreeNodeV(str_id, fmt, args); }
-        static bool                     TreeNodeV_2(const void* ptr_id, const char* fmt, va_list args) { return im::TreeNodeV(ptr_id, fmt, args); }
+        static bool                     TreeNodeV(const void* ptr_id, const char* fmt, va_list args) { return im::TreeNodeV(ptr_id, fmt, args); }
         static bool                     TreeNodeEx(const char* label, ImGuiTreeNodeFlags flags = 0) { return im::TreeNodeEx(label, flags); }
-        static bool                     TreeNodeEx_2(const char* str_id, ImGuiTreeNodeFlags flags, const char* fmt) { return im::TreeNodeEx(str_id, flags, fmt); }
-        static bool                     TreeNodeEx_3(const void* ptr_id, ImGuiTreeNodeFlags flags, const char* fmt) { return im::TreeNodeEx(ptr_id, flags, fmt); }
+        static bool                     TreeNodeEx(const char* str_id, ImGuiTreeNodeFlags flags, const char* fmt) { return im::TreeNodeEx(str_id, flags, fmt); }
+        static bool                     TreeNodeEx(const void* ptr_id, ImGuiTreeNodeFlags flags, const char* fmt) { return im::TreeNodeEx(ptr_id, flags, fmt); }
         static bool                     TreeNodeExV(const char* str_id, ImGuiTreeNodeFlags flags, const char* fmt, va_list args) { return im::TreeNodeExV(str_id, flags, fmt, args); }
-        static bool                     TreeNodeExV_2(const void* ptr_id, ImGuiTreeNodeFlags flags, const char* fmt, va_list args) { return im::TreeNodeExV(ptr_id, flags, fmt, args); }
+        static bool                     TreeNodeExV(const void* ptr_id, ImGuiTreeNodeFlags flags, const char* fmt, va_list args) { return im::TreeNodeExV(ptr_id, flags, fmt, args); }
         static void                     TreePush(const char* str_id) { im::TreePush(str_id); }
         static void                     TreePop() { im::TreePop(); }
         static float                    GetTreeNodeToLabelSpacing() { return im::GetTreeNodeToLabelSpacing(); }
         static bool                     CollapsingHeader(const char* label, ImGuiTreeNodeFlags flags = 0) { return im::CollapsingHeader(label, flags); }
-        static bool                     CollapsingHeader_2(const char* label, bool* p_visible, ImGuiTreeNodeFlags flags = 0) { return im::CollapsingHeader(label, p_visible, flags); }
+        static bool                     CollapsingHeader(const char* label, bool* p_visible, ImGuiTreeNodeFlags flags = 0) { return im::CollapsingHeader(label, p_visible, flags); }
         static void                     SetNextItemOpen(bool is_open, ImGuiCond cond = 0) { im::SetNextItemOpen(is_open, cond); }
         static void                     SetNextItemStorageID(ImGuiID storage_id) { im::SetNextItemStorageID(storage_id); }
 
         // Widgets: Selectables
         static bool                     Selectable(const char* label, bool selected = false, ImGuiSelectableFlags flags = 0, const ImVec2& size = ImVec2(0, 0)) { return im::Selectable(label, selected, flags, size); }
-        static bool                     Selectable_2(const char* label, bool* p_selected, ImGuiSelectableFlags flags = 0, const ImVec2& size = ImVec2(0, 0)) { return im::Selectable(label, p_selected, flags, size); }
+        static bool                     Selectable(const char* label, bool* p_selected, ImGuiSelectableFlags flags = 0, const ImVec2& size = ImVec2(0, 0)) { return im::Selectable(label, p_selected, flags, size); }
 
          // Multi-selection system for Selectable(), Checkbox(), TreeNode() functions
         static ImGuiMultiSelectIO*      BeginMultiSelect(ImGuiMultiSelectFlags flags, int selection_size = -1, int items_count = -1) { return im::BeginMultiSelect(flags, selection_size, items_count); }
@@ -418,9 +418,9 @@ class ImGui {
 
         // Widgets: Value() Helpers.
         static void                     Value(const char* prefix, bool b) { im::Value(prefix, b); }
-        static void                     Value_2(const char* prefix, int v) { im::Value(prefix, v); }
-        static void                     Value_3(const char* prefix, unsigned int v) { im::Value(prefix, v); }
-        static void                     Value_4(const char* prefix, float v, const char* float_format = NULL) { im::Value(prefix, v, float_format); }
+        static void                     Value(const char* prefix, int v) { im::Value(prefix, v); }
+        static void                     Value(const char* prefix, unsigned int v) { im::Value(prefix, v); }
+        static void                     Value(const char* prefix, float v, const char* float_format = NULL) { im::Value(prefix, v, float_format); }
 
         // Widgets: Menus
         static bool                     BeginMenuBar() { return im::BeginMenuBar(); }
@@ -430,7 +430,7 @@ class ImGui {
         static bool                     BeginMenu(const char* label, bool enabled = true) { return im::BeginMenu(label, enabled); }
         static void                     EndMenu() { im::EndMenu(); }
         static bool                     MenuItem(const char* label, const char* shortcut = NULL, bool selected = false, bool enabled = true) { return im::MenuItem(label, shortcut, selected, enabled); }
-        static bool                     MenuItem_2(const char* label, const char* shortcut, bool* p_selected, bool enabled = true) { return im::MenuItem(label, shortcut, enabled); }
+        static bool                     MenuItem(const char* label, const char* shortcut, bool* p_selected, bool enabled = true) { return im::MenuItem(label, shortcut, enabled); }
 
         // Tooltips
         static bool                     BeginTooltip() { return im::BeginTooltip(); }
@@ -449,7 +449,7 @@ class ImGui {
         // Popups: open/close functions
         static void                     EndPopup() { im::EndPopup(); }
         static void                     OpenPopup(const char* str_id, ImGuiPopupFlags popup_flags = 0) { im::OpenPopup(str_id, popup_flags); }
-        static void                     OpenPopup_2(ImGuiID id, ImGuiPopupFlags popup_flags = 0) { im::OpenPopup(id, popup_flags); }
+        static void                     OpenPopup(ImGuiID id, ImGuiPopupFlags popup_flags = 0) { im::OpenPopup(id, popup_flags); }
         static void                     OpenPopupOnItemClick(const char* str_id = NULL, ImGuiPopupFlags popup_flags = 1) { im::OpenPopupOnItemClick(str_id, popup_flags); }
         static void                     CloseCurrentPopup() { im::CloseCurrentPopup(); }
 
@@ -559,13 +559,13 @@ class ImGui {
 
         // Background/Foreground Draw Lists
         static ImDrawList*              GetBackgroundDrawList() { return im::GetBackgroundDrawList(); }
+        static ImDrawList*              GetBackgroundDrawList(ImGuiViewport* viewport) { return im::GetBackgroundDrawList(viewport); }
         static ImDrawList*              GetForegroundDrawList() { return im::GetForegroundDrawList(); }
-        static ImDrawList*              GetBackgroundDrawList_2(ImGuiViewport* viewport) { return im::GetBackgroundDrawList(viewport); }
-        static ImDrawList*              GetForegroundDrawList_2(ImGuiViewport* viewport) { return im::GetForegroundDrawList(viewport); }
+        static ImDrawList*              GetForegroundDrawList(ImGuiViewport* viewport) { return im::GetForegroundDrawList(viewport); }
 
         // Miscellaneous Utilities
         static bool                     IsRectVisible(const ImVec2& size) { return im::IsRectVisible(size); }
-        static bool                     IsRectVisible_2(const ImVec2& rect_min, const ImVec2& rect_max) { return im::IsRectVisible(rect_min, rect_max); }
+        static bool                     IsRectVisible(const ImVec2& rect_min, const ImVec2& rect_max) { return im::IsRectVisible(rect_min, rect_max); }
         static double                   GetTime() { return im::GetTime(); }
         static int                      GetFrameCount() { return im::GetFrameCount(); }
         static ImDrawListSharedData*    GetDrawListSharedData() { return im::GetDrawListSharedData(); }

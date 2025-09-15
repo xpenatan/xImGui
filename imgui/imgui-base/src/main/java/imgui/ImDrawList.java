@@ -35,6 +35,8 @@ public class ImDrawList extends IDLBase {
 
     private int type = TYPE_DEFAULT;
 
+    public final static ImDrawList NULL = native_new();
+
     IDLByteArray vtxBuffer;
     IDLByteArray idxBuffer;
 

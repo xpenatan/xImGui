@@ -46,7 +46,7 @@ delete nativeObject;
     public ImRect get_Rect() {
         long pointer = internal_native_get_Rect(native_address);
         if (pointer == 0)
-            return null;
+            return ImRect.NULL;
         if (ImRect_TEMP_GEN_0 == null)
             ImRect_TEMP_GEN_0 = ImRect.native_new();
         ImRect_TEMP_GEN_0.internal_reset(pointer, false);

@@ -12,6 +12,9 @@ public class ImDrawCmd extends IDLBase {
         #endif
     */
 
+
+    public final static ImDrawCmd NULL = native_new();
+
     public static ImDrawCmd native_new() {
         return new ImDrawCmd((byte) 0, (char) 0);
     }

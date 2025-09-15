@@ -6,6 +6,15 @@ import idl.helper.IDLIntArray;
 
 public class ImFontAtlas extends IDLBase {
 
+    public final static ImFontAtlas NULL = native_new();
+
+    public static ImFontAtlas native_new() {
+        return new ImFontAtlas((byte) 0, (char) 0);
+    }
+
+    private ImFontAtlas(byte v, char c) {
+    }
+
     public ImFont AddFontFromMemoryTTF(byte[] fontData, int font_size) {
         IDLByteArray byteArray = new IDLByteArray(fontData.length);
         byteArray.copy(fontData);

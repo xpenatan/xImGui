@@ -4,6 +4,15 @@ import idl.IDLBase;
 
 public class ImGuiPayload extends IDLBase {
 
+    public final static ImGuiPayload NULL = native_new();
+
+    public static ImGuiPayload native_new() {
+        return new ImGuiPayload((byte) 0, (char) 0);
+    }
+
+    private ImGuiPayload(byte v, char c) {
+    }
+
     public int get_Data() {
         return getDataNATIVE(native_address);
     }

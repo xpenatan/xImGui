@@ -12,9 +12,9 @@ interface NodeEditor {
     static void PushStyleColor(StyleColor colorIndex, [Const, Ref] ImVec4 color);
     static void PopStyleColor(optional long count);
 
-    static void PushStyleVar_1(StyleVar varIndex, float value);
-    static void PushStyleVar_2(StyleVar varIndex, [Const, Ref] ImVec2 value);
-    static void PushStyleVar_3(StyleVar varIndex, [Const, Ref] ImVec4 value);
+    [BindTo="PushStyleVar"] static void PushStyleVar__0(StyleVar varIndex, float value);
+    [BindTo="PushStyleVar"] static void PushStyleVar__1(StyleVar varIndex, [Const, Ref] ImVec2 value);
+    [BindTo="PushStyleVar"] static void PushStyleVar__2(StyleVar varIndex, [Const, Ref] ImVec4 value);
     static void PopStyleVar(optional long count);
 
     static void Begin([Const] DOMString id, [Const, Ref] optional ImVec2 size);

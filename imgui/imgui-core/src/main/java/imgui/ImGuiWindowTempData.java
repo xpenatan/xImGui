@@ -36,7 +36,7 @@ public class ImGuiWindowTempData extends IDLBase {
     public ImVec2 get_CursorPos() {
         long pointer = internal_native_get_CursorPos(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_GEN_0.internal_reset(pointer, false);

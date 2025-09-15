@@ -4,6 +4,15 @@ import idl.IDLBase;
 
 public class ImFont extends IDLBase {
 
+    public final static ImFont NULL = native_new();
+
+    public static ImFont native_new() {
+        return new ImFont((byte) 0, (char) 0);
+    }
+
+    private ImFont(byte v, char c) {
+    }
+
     public native ImFontConfig get_ConfigData();
 
     public void setName(String name) {

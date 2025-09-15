@@ -17,7 +17,7 @@ object LibExt {
     const val teaVMVersion = "0.12.3"
     const val gdxTeaVMVersion = "1.3.0"
     const val gdxWebGPUVersion = "-SNAPSHOT"
-    const val jParserVersion = "1.0.0-b19"
+    const val jParserVersion = "-SNAPSHOT"
     const val jUnitVersion = "4.12"
 
     const val useRepoLibs = true

@@ -14,6 +14,14 @@ public class LoadSaveSettingsListener extends IDLBase {
 
     static private IDLString IDLString_TEMP_STATIC_GEN_1;
 
+    static public final LoadSaveSettingsListener NULL = LoadSaveSettingsListener.native_new();
+
+    static public final LoadSaveSettingsListener T_01 = LoadSaveSettingsListener.native_new();
+
+    static public final LoadSaveSettingsListener T_02 = LoadSaveSettingsListener.native_new();
+
+    static public final LoadSaveSettingsListener T_03 = LoadSaveSettingsListener.native_new();
+
     /*[-JNI;-NATIVE]
 class LoadSaveSettingsListenerImpl : public LoadSaveSettingsListener {
 private:

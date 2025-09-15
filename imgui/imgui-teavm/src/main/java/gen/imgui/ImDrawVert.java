@@ -49,7 +49,7 @@ imgui.destroy(jsObj);
     public ImVec2 get_pos() {
         int pointer = internal_native_get_pos(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
@@ -79,7 +79,7 @@ jsObj.set_pos(pos_addr);
     public ImVec2 get_uv() {
         int pointer = internal_native_get_uv(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_1 == null)
             ImVec2_TEMP_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_GEN_1.internal_reset(pointer, false);

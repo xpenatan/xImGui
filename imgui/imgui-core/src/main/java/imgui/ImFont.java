@@ -13,6 +13,15 @@ public class ImFont extends IDLBase {
 
     private ImFontConfig ImFontConfig_TEMP_GEN_0;
 
+    public final static ImFont NULL = native_new();
+
+    public static ImFont native_new() {
+        return new ImFont((byte) 0, (char) 0);
+    }
+
+    private ImFont(byte v, char c) {
+    }
+
     public void setName(String name) {
         updateNameNATIVE(native_address, name, get_ConfigData().get_SizePixels());
     }
@@ -23,20 +32,6 @@ public class ImFont extends IDLBase {
               ImHelper::updateFontName(font, name, size);
     */
     private static native void updateNameNATIVE(long addr, String name, float size);
-
-    /**
-     * Dummy constructor, used internally to creates objects without C++ pointer
-     */
-    @Deprecated()
-    protected ImFont(byte b, char c) {
-    }
-
-    /**
-     * @return An empty instance without a native address
-     */
-    public static ImFont native_new() {
-        return new ImFont((byte) 0, (char) 0);
-    }
 
     protected void deleteNative() {
         internal_native_deleteNative(native_address);
@@ -52,7 +47,7 @@ public class ImFont extends IDLBase {
     public ImFontConfig get_ConfigData() {
         long pointer = internal_native_get_ConfigData(native_address);
         if (pointer == 0)
-            return null;
+            return ImFontConfig.NULL;
         if (ImFontConfig_TEMP_GEN_0 == null)
             ImFontConfig_TEMP_GEN_0 = ImFontConfig.native_new();
         ImFontConfig_TEMP_GEN_0.internal_reset(pointer, false);

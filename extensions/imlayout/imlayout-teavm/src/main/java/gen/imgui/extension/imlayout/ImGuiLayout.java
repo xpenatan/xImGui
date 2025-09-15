@@ -58,7 +58,7 @@ imgui.destroy(jsObj);
     public ImVec2 getAbsoluteSize() {
         int pointer = internal_native_getAbsoluteSize(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
@@ -77,7 +77,7 @@ return imgui.getPointer(returnedJSObj);
     public ImVec2 getAbsoluteSizePadding() {
         int pointer = internal_native_getAbsoluteSizePadding(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_1 == null)
             ImVec2_TEMP_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
@@ -96,7 +96,7 @@ return imgui.getPointer(returnedJSObj);
     public ImVec2 getContentSize() {
         int pointer = internal_native_getContentSize(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_2 == null)
             ImVec2_TEMP_GEN_2 = ImVec2.native_new();
         ImVec2_TEMP_GEN_2.internal_reset(pointer, false);
@@ -115,7 +115,7 @@ return imgui.getPointer(returnedJSObj);
     public ImVec2 getPositionPadding() {
         int pointer = internal_native_getPositionPadding(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_3 == null)
             ImVec2_TEMP_GEN_3 = ImVec2.native_new();
         ImVec2_TEMP_GEN_3.internal_reset(pointer, false);
@@ -134,7 +134,7 @@ return imgui.getPointer(returnedJSObj);
     public ImVec2 get_position() {
         int pointer = internal_native_get_position(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_4 == null)
             ImVec2_TEMP_GEN_4 = ImVec2.native_new();
         ImVec2_TEMP_GEN_4.internal_reset(pointer, false);
@@ -164,7 +164,7 @@ jsObj.set_position(position_addr);
     public ImVec2 get_size() {
         int pointer = internal_native_get_size(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_5 == null)
             ImVec2_TEMP_GEN_5 = ImVec2.native_new();
         ImVec2_TEMP_GEN_5.internal_reset(pointer, false);

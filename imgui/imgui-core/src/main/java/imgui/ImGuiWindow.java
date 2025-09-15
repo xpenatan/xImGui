@@ -102,7 +102,7 @@ return nativeObject->GetIDFromRectangle(*((ImRect* )r_abs_addr));
     public ImRect Rect() {
         long pointer = internal_native_Rect(native_address);
         if (pointer == 0)
-            return null;
+            return ImRect.NULL;
         if (ImRect_TEMP_GEN_0 == null)
             ImRect_TEMP_GEN_0 = ImRect.native_new();
         ImRect_TEMP_GEN_0.internal_reset(pointer, false);
@@ -129,7 +129,7 @@ return nativeObject->CalcFontSize();
     public ImRect TitleBarRect() {
         long pointer = internal_native_TitleBarRect(native_address);
         if (pointer == 0)
-            return null;
+            return ImRect.NULL;
         if (ImRect_TEMP_GEN_1 == null)
             ImRect_TEMP_GEN_1 = ImRect.native_new();
         ImRect_TEMP_GEN_1.internal_reset(pointer, false);
@@ -146,7 +146,7 @@ return (jlong)&copy_addr;*/
     public ImRect MenuBarRect() {
         long pointer = internal_native_MenuBarRect(native_address);
         if (pointer == 0)
-            return null;
+            return ImRect.NULL;
         if (ImRect_TEMP_GEN_2 == null)
             ImRect_TEMP_GEN_2 = ImRect.native_new();
         ImRect_TEMP_GEN_2.internal_reset(pointer, false);
@@ -163,7 +163,7 @@ return (jlong)&copy_addr;*/
     public ImVectorInt get_IDStack() {
         long pointer = internal_native_get_IDStack(native_address);
         if (pointer == 0)
-            return null;
+            return ImVectorInt.NULL;
         if (ImVectorInt_TEMP_GEN_0 == null)
             ImVectorInt_TEMP_GEN_0 = ImVectorInt.native_new();
         ImVectorInt_TEMP_GEN_0.internal_reset(pointer, false);
@@ -179,7 +179,7 @@ return (jlong)&nativeObject->IDStack;
     public ImGuiWindowTempData get_DC() {
         long pointer = internal_native_get_DC(native_address);
         if (pointer == 0)
-            return null;
+            return ImGuiWindowTempData.NULL;
         if (ImGuiWindowTempData_TEMP_GEN_0 == null)
             ImGuiWindowTempData_TEMP_GEN_0 = ImGuiWindowTempData.native_new();
         ImGuiWindowTempData_TEMP_GEN_0.internal_reset(pointer, false);
@@ -237,7 +237,7 @@ return nativeObject->ViewportId;
     public ImVec2 get_ViewportPos() {
         long pointer = internal_native_get_ViewportPos(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
@@ -283,7 +283,7 @@ nativeObject->ViewportAllowPlatformMonitorExtend = ViewportAllowPlatformMonitorE
     public ImVec2 get_Pos() {
         long pointer = internal_native_get_Pos(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_1 == null)
             ImVec2_TEMP_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
@@ -309,7 +309,7 @@ nativeObject->Pos = *((ImVec2*)Pos_addr);
     public ImVec2 get_Size() {
         long pointer = internal_native_get_Size(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_2 == null)
             ImVec2_TEMP_GEN_2 = ImVec2.native_new();
         ImVec2_TEMP_GEN_2.internal_reset(pointer, false);
@@ -335,7 +335,7 @@ nativeObject->Size = *((ImVec2*)Size_addr);
     public ImVec2 get_SizeFull() {
         long pointer = internal_native_get_SizeFull(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_3 == null)
             ImVec2_TEMP_GEN_3 = ImVec2.native_new();
         ImVec2_TEMP_GEN_3.internal_reset(pointer, false);
@@ -361,7 +361,7 @@ nativeObject->SizeFull = *((ImVec2*)SizeFull_addr);
     public ImVec2 get_ContentSize() {
         long pointer = internal_native_get_ContentSize(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_4 == null)
             ImVec2_TEMP_GEN_4 = ImVec2.native_new();
         ImVec2_TEMP_GEN_4.internal_reset(pointer, false);
@@ -387,7 +387,7 @@ nativeObject->ContentSize = *((ImVec2*)ContentSize_addr);
     public ImVec2 get_ContentSizeIdeal() {
         long pointer = internal_native_get_ContentSizeIdeal(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_5 == null)
             ImVec2_TEMP_GEN_5 = ImVec2.native_new();
         ImVec2_TEMP_GEN_5.internal_reset(pointer, false);
@@ -413,7 +413,7 @@ nativeObject->ContentSizeIdeal = *((ImVec2*)ContentSizeIdeal_addr);
     public ImVec2 get_ContentSizeExplicit() {
         long pointer = internal_native_get_ContentSizeExplicit(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_6 == null)
             ImVec2_TEMP_GEN_6 = ImVec2.native_new();
         ImVec2_TEMP_GEN_6.internal_reset(pointer, false);
@@ -439,7 +439,7 @@ nativeObject->ContentSizeExplicit = *((ImVec2*)ContentSizeExplicit_addr);
     public ImVec2 get_WindowPadding() {
         long pointer = internal_native_get_WindowPadding(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_7 == null)
             ImVec2_TEMP_GEN_7 = ImVec2.native_new();
         ImVec2_TEMP_GEN_7.internal_reset(pointer, false);
@@ -675,7 +675,7 @@ return nativeObject->ChildId;
     public ImVec2 get_Scroll() {
         long pointer = internal_native_get_Scroll(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_8 == null)
             ImVec2_TEMP_GEN_8 = ImVec2.native_new();
         ImVec2_TEMP_GEN_8.internal_reset(pointer, false);
@@ -701,7 +701,7 @@ nativeObject->Scroll = *((ImVec2*)Scroll_addr);
     public ImVec2 get_ScrollMax() {
         long pointer = internal_native_get_ScrollMax(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_9 == null)
             ImVec2_TEMP_GEN_9 = ImVec2.native_new();
         ImVec2_TEMP_GEN_9.internal_reset(pointer, false);
@@ -727,7 +727,7 @@ nativeObject->ScrollMax = *((ImVec2*)ScrollMax_addr);
     public ImVec2 get_ScrollTarget() {
         long pointer = internal_native_get_ScrollTarget(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_10 == null)
             ImVec2_TEMP_GEN_10 = ImVec2.native_new();
         ImVec2_TEMP_GEN_10.internal_reset(pointer, false);
@@ -753,7 +753,7 @@ nativeObject->ScrollTarget = *((ImVec2*)ScrollTarget_addr);
     public ImVec2 get_ScrollTargetCenterRatio() {
         long pointer = internal_native_get_ScrollTargetCenterRatio(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_11 == null)
             ImVec2_TEMP_GEN_11 = ImVec2.native_new();
         ImVec2_TEMP_GEN_11.internal_reset(pointer, false);
@@ -779,7 +779,7 @@ nativeObject->ScrollTargetCenterRatio = *((ImVec2*)ScrollTargetCenterRatio_addr)
     public ImVec2 get_ScrollTargetEdgeSnapDist() {
         long pointer = internal_native_get_ScrollTargetEdgeSnapDist(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_12 == null)
             ImVec2_TEMP_GEN_12 = ImVec2.native_new();
         ImVec2_TEMP_GEN_12.internal_reset(pointer, false);
@@ -805,7 +805,7 @@ nativeObject->ScrollTargetEdgeSnapDist = *((ImVec2*)ScrollTargetEdgeSnapDist_add
     public ImVec2 get_ScrollbarSizes() {
         long pointer = internal_native_get_ScrollbarSizes(native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_13 == null)
             ImVec2_TEMP_GEN_13 = ImVec2.native_new();
         ImVec2_TEMP_GEN_13.internal_reset(pointer, false);
@@ -1111,7 +1111,7 @@ nativeObject->HasCloseButton = HasCloseButton;
     public ImGuiStorage get_StateStorage() {
         long pointer = internal_native_get_StateStorage(native_address);
         if (pointer == 0)
-            return null;
+            return ImGuiStorage.NULL;
         if (ImGuiStorage_TEMP_GEN_0 == null)
             ImGuiStorage_TEMP_GEN_0 = ImGuiStorage.native_new();
         ImGuiStorage_TEMP_GEN_0.internal_reset(pointer, false);
@@ -1137,7 +1137,7 @@ nativeObject->StateStorage = *((ImGuiStorage*)StateStorage_addr);
     public ImDrawList get_DrawList() {
         long pointer = internal_native_get_DrawList(native_address);
         if (pointer == 0)
-            return null;
+            return ImDrawList.NULL;
         if (ImDrawList_TEMP_GEN_0 == null)
             ImDrawList_TEMP_GEN_0 = ImDrawList.native_new();
         ImDrawList_TEMP_GEN_0.internal_reset(pointer, false);
@@ -1244,7 +1244,7 @@ nativeObject->DockTabWantClose = DockTabWantClose;
     public ImGuiDockNode get_DockNode() {
         long pointer = internal_native_get_DockNode(native_address);
         if (pointer == 0)
-            return null;
+            return ImGuiDockNode.NULL;
         if (ImGuiDockNode_TEMP_GEN_0 == null)
             ImGuiDockNode_TEMP_GEN_0 = ImGuiDockNode.native_new();
         ImGuiDockNode_TEMP_GEN_0.internal_reset(pointer, false);
@@ -1271,7 +1271,7 @@ nativeObject->DockNode = (ImGuiDockNode*)DockNode_addr;
     public ImGuiDockNode get_DockNodeAsHost() {
         long pointer = internal_native_get_DockNodeAsHost(native_address);
         if (pointer == 0)
-            return null;
+            return ImGuiDockNode.NULL;
         if (ImGuiDockNode_TEMP_GEN_1 == null)
             ImGuiDockNode_TEMP_GEN_1 = ImGuiDockNode.native_new();
         ImGuiDockNode_TEMP_GEN_1.internal_reset(pointer, false);
@@ -1338,7 +1338,7 @@ nativeObject->DockTabItemStatusFlags = DockTabItemStatusFlags;
     public ImRect get_DockTabItemRect() {
         long pointer = internal_native_get_DockTabItemRect(native_address);
         if (pointer == 0)
-            return null;
+            return ImRect.NULL;
         if (ImRect_TEMP_GEN_3 == null)
             ImRect_TEMP_GEN_3 = ImRect.native_new();
         ImRect_TEMP_GEN_3.internal_reset(pointer, false);

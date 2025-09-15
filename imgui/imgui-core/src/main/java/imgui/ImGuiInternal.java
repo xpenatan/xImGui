@@ -57,54 +57,54 @@ public class ImGuiInternal extends IDLBase {
     }
 
     public static int ImHashData(String data, int data_size, int seed) {
-        return internal_native_ImHashData_1(data, data_size, seed);
+        return internal_native_ImHashData__0(data, data_size, seed);
     }
 
     /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::ImHashData_1(data, (int)data_size, (int)seed);
+return ImGuiWrapper::ImGuiInternal::ImHashData(data, (int)data_size, (int)seed);
 */
-    public static native int internal_native_ImHashData_1(String data, int data_size, int seed);
+    public static native int internal_native_ImHashData__0(String data, int data_size, int seed);
 
     public static int ImHashData(String data, int data_size) {
-        return internal_native_ImHashData_1(data, data_size);
+        return internal_native_ImHashData__0(data, data_size);
     }
 
     /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::ImHashData_1(data, (int)data_size);
+return ImGuiWrapper::ImGuiInternal::ImHashData(data, (int)data_size);
 */
-    public static native int internal_native_ImHashData_1(String data, int data_size);
+    public static native int internal_native_ImHashData__0(String data, int data_size);
 
     public static int ImHashStr(String data, int data_size, int seed) {
-        return internal_native_ImHashStr_1(data, data_size, seed);
+        return internal_native_ImHashStr__0(data, data_size, seed);
     }
 
     /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::ImHashStr_1(data, (int)data_size, (int)seed);
+return ImGuiWrapper::ImGuiInternal::ImHashStr(data, (int)data_size, (int)seed);
 */
-    public static native int internal_native_ImHashStr_1(String data, int data_size, int seed);
+    public static native int internal_native_ImHashStr__0(String data, int data_size, int seed);
 
     public static int ImHashStr(String data, int data_size) {
-        return internal_native_ImHashStr_1(data, data_size);
+        return internal_native_ImHashStr__0(data, data_size);
     }
 
     /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::ImHashStr_1(data, (int)data_size);
+return ImGuiWrapper::ImGuiInternal::ImHashStr(data, (int)data_size);
 */
-    public static native int internal_native_ImHashStr_1(String data, int data_size);
+    public static native int internal_native_ImHashStr__0(String data, int data_size);
 
     public static int ImHashStr(String data) {
-        return internal_native_ImHashStr_1(data);
+        return internal_native_ImHashStr__0(data);
     }
 
     /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::ImHashStr_1(data);
+return ImGuiWrapper::ImGuiInternal::ImHashStr(data);
 */
-    public static native int internal_native_ImHashStr_1(String data);
+    public static native int internal_native_ImHashStr__0(String data);
 
     public static ImGuiWindow GetCurrentWindow() {
         long pointer = internal_native_GetCurrentWindow();
         if (pointer == 0)
-            return null;
+            return ImGuiWindow.NULL;
         if (ImGuiWindow_TEMP_STATIC_GEN_0 == null)
             ImGuiWindow_TEMP_STATIC_GEN_0 = ImGuiWindow.native_new();
         ImGuiWindow_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
@@ -119,7 +119,7 @@ return (jlong)ImGuiWrapper::ImGuiInternal::GetCurrentWindow();
     public static ImGuiWindow FindWindowByID(int id) {
         long pointer = internal_native_FindWindowByID(id);
         if (pointer == 0)
-            return null;
+            return ImGuiWindow.NULL;
         if (ImGuiWindow_TEMP_STATIC_GEN_1 == null)
             ImGuiWindow_TEMP_STATIC_GEN_1 = ImGuiWindow.native_new();
         ImGuiWindow_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
@@ -134,7 +134,7 @@ return (jlong)ImGuiWrapper::ImGuiInternal::FindWindowByID((int)id);
     public static ImGuiWindow FindWindowByName(String name) {
         long pointer = internal_native_FindWindowByName(name);
         if (pointer == 0)
-            return null;
+            return ImGuiWindow.NULL;
         if (ImGuiWindow_TEMP_STATIC_GEN_2 == null)
             ImGuiWindow_TEMP_STATIC_GEN_2 = ImGuiWindow.native_new();
         ImGuiWindow_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
@@ -165,40 +165,40 @@ ImGuiWrapper::ImGuiInternal::FocusWindow((ImGuiWindow* )window_addr);
     public static native void internal_native_FocusWindow(long window_addr);
 
     public static void ItemSize(ImVec2 size, float text_baseline_y) {
-        internal_native_ItemSize(size.native_address, text_baseline_y);
+        internal_native_ItemSize__0(size.native_address, text_baseline_y);
     }
 
     /*[-JNI;-NATIVE]
 ImGuiWrapper::ImGuiInternal::ItemSize(*((ImVec2* )size_addr), (float)text_baseline_y);
 */
-    public static native void internal_native_ItemSize(long size_addr, float text_baseline_y);
+    public static native void internal_native_ItemSize__0(long size_addr, float text_baseline_y);
 
     public static void ItemSize(ImVec2 size) {
-        internal_native_ItemSize(size.native_address);
+        internal_native_ItemSize__0(size.native_address);
     }
 
     /*[-JNI;-NATIVE]
 ImGuiWrapper::ImGuiInternal::ItemSize(*((ImVec2* )size_addr));
 */
-    public static native void internal_native_ItemSize(long size_addr);
+    public static native void internal_native_ItemSize__0(long size_addr);
 
     public static void ItemSize(ImRect bb, float text_baseline_y) {
-        internal_native_ItemSize_2(bb.native_address, text_baseline_y);
+        internal_native_ItemSize__1(bb.native_address, text_baseline_y);
     }
 
     /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::ItemSize_2(*((ImRect* )bb_addr), (float)text_baseline_y);
+ImGuiWrapper::ImGuiInternal::ItemSize(*((ImRect* )bb_addr), (float)text_baseline_y);
 */
-    public static native void internal_native_ItemSize_2(long bb_addr, float text_baseline_y);
+    public static native void internal_native_ItemSize__1(long bb_addr, float text_baseline_y);
 
     public static void ItemSize(ImRect bb) {
-        internal_native_ItemSize_2(bb.native_address);
+        internal_native_ItemSize__1(bb.native_address);
     }
 
     /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::ItemSize_2(*((ImRect* )bb_addr));
+ImGuiWrapper::ImGuiInternal::ItemSize(*((ImRect* )bb_addr));
 */
-    public static native void internal_native_ItemSize_2(long bb_addr);
+    public static native void internal_native_ItemSize__1(long bb_addr);
 
     public static boolean ItemAdd(ImRect bb, int id, ImRect nav_bb, ImGuiItemFlags ImGuiItemFlags) {
         return internal_native_ItemAdd(bb.native_address, id, nav_bb.native_address, ImGuiItemFlags.getValue());
@@ -275,7 +275,7 @@ ImGuiWrapper::ImGuiInternal::SetLastItemData((int)item_id, (::ImGuiItemFlags)ImG
     public static ImVec2 CalcItemSize(ImVec2 size, float default_w, float default_h) {
         long pointer = internal_native_CalcItemSize(size.native_address, default_w, default_h);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_STATIC_GEN_0 == null)
             ImVec2_TEMP_STATIC_GEN_0 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
@@ -336,7 +336,7 @@ ImGuiWrapper::ImGuiInternal::DockBuilderDockWindow(window_name, (int)node_id);
     public static ImGuiDockNode DockBuilderGetNode(int node_id) {
         long pointer = internal_native_DockBuilderGetNode(node_id);
         if (pointer == 0)
-            return null;
+            return ImGuiDockNode.NULL;
         if (ImGuiDockNode_TEMP_STATIC_GEN_0 == null)
             ImGuiDockNode_TEMP_STATIC_GEN_0 = ImGuiDockNode.native_new();
         ImGuiDockNode_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
@@ -351,7 +351,7 @@ return (jlong)ImGuiWrapper::ImGuiInternal::DockBuilderGetNode((int)node_id);
     public static ImGuiDockNode DockBuilderGetCentralNode(int node_id) {
         long pointer = internal_native_DockBuilderGetCentralNode(node_id);
         if (pointer == 0)
-            return null;
+            return ImGuiDockNode.NULL;
         if (ImGuiDockNode_TEMP_STATIC_GEN_1 == null)
             ImGuiDockNode_TEMP_STATIC_GEN_1 = ImGuiDockNode.native_new();
         ImGuiDockNode_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
@@ -510,7 +510,7 @@ return ImGuiWrapper::ImGuiInternal::BeginTableEx(str_id, (int)id, (int)column);
     public static ImGuiTabBar GetCurrentTabBar() {
         long pointer = internal_native_GetCurrentTabBar();
         if (pointer == 0)
-            return null;
+            return ImGuiTabBar.NULL;
         if (ImGuiTabBar_TEMP_STATIC_GEN_0 == null)
             ImGuiTabBar_TEMP_STATIC_GEN_0 = ImGuiTabBar.native_new();
         ImGuiTabBar_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
@@ -525,7 +525,7 @@ return (jlong)ImGuiWrapper::ImGuiInternal::GetCurrentTabBar();
     public static ImGuiTabItem TabBarFindTabByID(ImGuiTabBar tab_bar, int tab_id) {
         long pointer = internal_native_TabBarFindTabByID(tab_bar.native_address, tab_id);
         if (pointer == 0)
-            return null;
+            return ImGuiTabItem.NULL;
         if (ImGuiTabItem_TEMP_STATIC_GEN_0 == null)
             ImGuiTabItem_TEMP_STATIC_GEN_0 = ImGuiTabItem.native_new();
         ImGuiTabItem_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
@@ -540,7 +540,7 @@ return (jlong)ImGuiWrapper::ImGuiInternal::TabBarFindTabByID((ImGuiTabBar* )tab_
     public static ImGuiTabItem TabBarFindTabByOrder(ImGuiTabBar tab_bar, int order) {
         long pointer = internal_native_TabBarFindTabByOrder(tab_bar.native_address, order);
         if (pointer == 0)
-            return null;
+            return ImGuiTabItem.NULL;
         if (ImGuiTabItem_TEMP_STATIC_GEN_1 == null)
             ImGuiTabItem_TEMP_STATIC_GEN_1 = ImGuiTabItem.native_new();
         ImGuiTabItem_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
@@ -1015,7 +1015,7 @@ ImGuiWrapper::ImGuiInternal::ScrollToRect((ImGuiWindow* )window_addr, *((ImRect*
     public static ImVec2 ScrollToRectEx(ImGuiWindow window, ImRect rect, ImGuiScrollFlags flags) {
         long pointer = internal_native_ScrollToRectEx(window.native_address, rect.native_address, flags.getValue());
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_STATIC_GEN_1 == null)
             ImVec2_TEMP_STATIC_GEN_1 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
@@ -1031,7 +1031,7 @@ return (jlong)&copy_addr;*/
     public static ImVec2 ScrollToRectEx(ImGuiWindow window, ImRect rect) {
         long pointer = internal_native_ScrollToRectEx(window.native_address, rect.native_address);
         if (pointer == 0)
-            return null;
+            return ImVec2.NULL;
         if (ImVec2_TEMP_STATIC_GEN_2 == null)
             ImVec2_TEMP_STATIC_GEN_2 = ImVec2.native_new();
         ImVec2_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
