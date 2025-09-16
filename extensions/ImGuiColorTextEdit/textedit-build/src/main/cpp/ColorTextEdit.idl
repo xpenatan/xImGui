@@ -1,5 +1,5 @@
 
-[NoDelete, Prefix="TextEditorWrapper::"]
+[Prefix="TextEditorWrapper::"]
 interface TextEditor {
     void TextEditor();
 
