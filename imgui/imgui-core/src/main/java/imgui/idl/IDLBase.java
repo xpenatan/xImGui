@@ -47,7 +47,6 @@ public class IDLBase {
     @Deprecated
     public final void internal_reset(long address, boolean cMemoryOwn) {
         // This metho cannot be called from outside
-        dispose();
         native_cMemOwn = cMemoryOwn;
         this.native_address = address;
         native_void_address = address;
@@ -137,8 +136,12 @@ public class IDLBase {
                 }
             } else {
                 if (IDLBase.ENABLE_LOGGING) {
-                    error("IDL", "Disposing error - " + this + " is already disposed");
+                    error("IDL", "Disposing warning - " + this + " is already disposed");
                 }
+            }
+        } else {
+            if (IDLBase.ENABLE_LOGGING) {
+                error("IDL", "Disposing warning - " + this + " is not memory owned");
             }
         }
     }

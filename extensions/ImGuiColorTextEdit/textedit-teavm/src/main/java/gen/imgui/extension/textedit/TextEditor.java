@@ -20,7 +20,7 @@ public class TextEditor extends IDLBase {
 
     public TextEditor() {
         int addr = internal_native_create();
-        internal_reset(addr, false);
+        internal_reset(addr, true);
     }
 
     /*
@@ -44,6 +44,18 @@ public class TextEditor extends IDLBase {
     public static TextEditor native_new() {
         return new TextEditor((byte) 0, (char) 0);
     }
+
+    protected void deleteNative() {
+        internal_native_deleteNative(native_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var jsObj = imgui.wrapPointer(this_addr, imgui.TextEditor);
+      imgui.destroy(jsObj);
+    */
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.TextEditor);imgui.destroy(jsObj);")
+    public static native void internal_native_deleteNative(int this_addr);
 
     public void SetReadOnlyEnabled(boolean aValue) {
         internal_native_SetReadOnlyEnabled(native_address, aValue);
