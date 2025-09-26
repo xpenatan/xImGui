@@ -21,9 +21,16 @@ public class BuildImLayout {
         String basePackage = "imgui.extension.imlayout";
         String modulePrefix = "imlayout";
         String sourceDir =  "/src/main/cpp/source";
-        BuildToolOptions op = new BuildToolOptions(libName, basePackage, modulePrefix, sourceDir, args);
-        op.idlName = "imlayout";
-        op.moduleName = "imgui";
+
+        BuildToolOptions.BuildToolParams data = new BuildToolOptions.BuildToolParams();
+        data.libName = libName;
+        data.idlName = libName;
+        data.webModuleName = "imgui";
+        data.packageName = basePackage;
+        data.cppSourcePath = sourceDir;
+        data.modulePrefix = modulePrefix;
+        BuildToolOptions op = new BuildToolOptions(data, args);
+
         JParser.CREATE_IDL_HELPER = false;
         String imguiPath = new File("./../../../imgui/").getCanonicalPath().replace("\\", "/");
         op.addAdditionalIDLRefPath(imguiPath + "/imgui-build/src/main/cpp/imgui.idl");

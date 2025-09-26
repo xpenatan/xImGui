@@ -20,9 +20,16 @@ public class BuildNodeEditor {
         String modulePrefix = "nodeeditor";
         String basePackage = "imgui.extension.nodeeditor";
         String sourceDir =  "/build/imgui-node-editor";
-        BuildToolOptions op = new BuildToolOptions(libName, basePackage, modulePrefix, sourceDir, args);
-        op.moduleName = "imgui";
-        op.idlName = "nodeeditor";
+
+        BuildToolOptions.BuildToolParams data = new BuildToolOptions.BuildToolParams();
+        data.libName = libName;
+        data.idlName = libName;
+        data.webModuleName = "imgui";
+        data.packageName = basePackage;
+        data.cppSourcePath = sourceDir;
+        data.modulePrefix = modulePrefix;
+        BuildToolOptions op = new BuildToolOptions(data, args);
+
         JParser.CREATE_IDL_HELPER = false;
         String imguiPath = new File("./../../../imgui/").getCanonicalPath().replace("\\", "/");
         op.addAdditionalIDLRefPath(imguiPath + "/imgui-build/src/main/cpp/imgui.idl");

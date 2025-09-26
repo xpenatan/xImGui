@@ -19,7 +19,16 @@ public class BuildImGui {
         String modulePrefix = "imgui";
         String basePackage = "imgui";
         String sourceDir =  "/build/imgui";
-        BuildToolOptions op = new BuildToolOptions(libName, basePackage, modulePrefix, sourceDir, args);
+
+        BuildToolOptions.BuildToolParams data = new BuildToolOptions.BuildToolParams();
+        data.libName = libName;
+        data.idlName = libName;
+        data.webModuleName = libName;
+        data.packageName = basePackage;
+        data.cppSourcePath = sourceDir;
+        data.modulePrefix = modulePrefix;
+
+        BuildToolOptions op = new BuildToolOptions(data, args);
         BuilderTool.build(op, new BuildToolListener() {
             @Override
             public void onAddTarget(BuildToolOptions op, IDLReader idlReader, ArrayList<BuildMultiTarget> targets) {

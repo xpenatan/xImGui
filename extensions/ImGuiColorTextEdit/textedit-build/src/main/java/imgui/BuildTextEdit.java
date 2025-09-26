@@ -22,9 +22,16 @@ public class BuildTextEdit {
         String basePackage = "imgui.extension.textedit";
         String modulePrefix = "textedit";
         String sourceDir =  "/build/ImGuiColorTextEdit";
-        BuildToolOptions op = new BuildToolOptions(libName, basePackage, modulePrefix, sourceDir, args);
-        op.moduleName = "imgui";
-        op.idlName = "ColorTextEdit";
+
+        BuildToolOptions.BuildToolParams data = new BuildToolOptions.BuildToolParams();
+        data.libName = libName;
+        data.idlName = "ColorTextEdit";
+        data.webModuleName = "imgui";
+        data.packageName = basePackage;
+        data.cppSourcePath = sourceDir;
+        data.modulePrefix = modulePrefix;
+        BuildToolOptions op = new BuildToolOptions(data, args);
+
         JParser.CREATE_IDL_HELPER = false;
         String imguiPath = new File("./../../../imgui/").getCanonicalPath().replace("\\", "/");
         op.addAdditionalIDLRefPath(imguiPath + "/imgui-build/src/main/cpp/imgui.idl");
