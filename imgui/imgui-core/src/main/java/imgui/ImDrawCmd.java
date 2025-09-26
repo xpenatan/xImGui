@@ -30,17 +30,17 @@ public class ImDrawCmd extends IDLBase {
     private ImDrawCmd(byte v, char c) {
     }
 
-    public int getTextureId() {
+    public long getTextureId() {
         return getTextureIdNATIVE(native_address);
     }
 
     /*
       [-JNI;-NATIVE]
               ImDrawCmd* nativeObject = (ImDrawCmd*)addr;
-              int textureId = ImHelper::getTextureId(nativeObject);
+              jlong textureId = ImHelper::getTextureId(nativeObject);
               return textureId;
     */
-    private static native int getTextureIdNATIVE(long addr);
+    private static native long getTextureIdNATIVE(long addr);
 
     public int getIdxOffset() {
         return getIdxOffsetNATIVE(native_address);

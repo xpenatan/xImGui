@@ -219,13 +219,13 @@ public class ImGuiGdxImpl implements ImGuiImpl {
 
                     Gdx.gl.glScissor((int)clip_minX, (int)(fb_height - clip_maxY), (int)(clip_maxX - clip_minX), (int)(clip_maxY - clip_minY));
 
-                    int textureID = cmdBuffer.getTextureId();
+                    long textureID = cmdBuffer.getTextureId();
                     int idxOffset = cmdBuffer.getIdxOffset();
                     int vtxOffset = cmdBuffer.getVtxOffset();
                     int elemCount = cmdBuffer.getElemCount();
                     int indices = idxOffset * 2;
 
-                    Gdx.gl.glBindTexture(GL20.GL_TEXTURE_2D, textureID);
+                    Gdx.gl.glBindTexture(GL20.GL_TEXTURE_2D, (int)textureID);
                     Gdx.gl.glDrawElements(GL20.GL_TRIANGLES, elemCount, GL20.GL_UNSIGNED_SHORT, indices);
                 }
             }

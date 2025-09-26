@@ -706,9 +706,8 @@ class ImHelper {
             ImFormatString(fontConfig->Name, IM_ARRAYSIZE(fontConfig->Name), "%s, %.0fpx", name, size_pixels);
         }
 
-        static int getTextureId(ImDrawCmd* nativeObject) {
-            int textureId = (int)(intptr_t)nativeObject->TextureId;
-            return textureId;
+        static intptr_t getTextureId(ImDrawCmd* nativeObject) {
+            return (intptr_t)nativeObject->TextureId;
         }
 
         static void setIniFilename(ImGuiIO * io, char* fileName) {

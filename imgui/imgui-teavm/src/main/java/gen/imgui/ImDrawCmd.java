@@ -22,7 +22,7 @@ public class ImDrawCmd extends IDLBase {
     private ImDrawCmd(byte v, char c) {
     }
 
-    public int getTextureId() {
+    public long getTextureId() {
         return getTextureIdNATIVE((int) native_address);
     }
 

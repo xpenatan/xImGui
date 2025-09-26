@@ -624,7 +624,7 @@ interface ImHelper {
     void memcpyVtx(any destination, ImDrawList drawList, long num);
     void memcpyFont(ImFontAtlas fontAtlas, IDLByteArray pixelBuffer, long[] widthData, long[] heightData);
     void updateFontName(ImFont font, [Const] DOMString name, float size_pixels);
-    long getTextureId(ImDrawCmd imDrawCmd);
+    long long getTextureId(ImDrawCmd imDrawCmd);
     void setIniFilename(ImGuiIO io, byte[] fileName);
     void removeIniFilename(ImGuiIO io);
     long getImGuiPayloadData(ImGuiPayload payload);
