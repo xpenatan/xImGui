@@ -11,15 +11,6 @@ public class IDLInt4 extends IDLIntArray {
 
     public static final IDLInt4 NULL = native_new();
 
-    public static IDLInt4 TMP_1 = new IDLInt4();
-
-    public static IDLInt4 TMP_2 = new IDLInt4();
-
-    public static void disposeTEMP() {
-        TMP_1.dispose();
-        TMP_2.dispose();
-    }
-
     /**
      * @return An empty instance without a native address
      */

@@ -33,12 +33,6 @@ public class ImGuiContext extends IDLBase {
 
     static public final ImGuiContext NULL = ImGuiContext.native_new();
 
-    static public final ImGuiContext T_01 = ImGuiContext.native_new();
-
-    static public final ImGuiContext T_02 = ImGuiContext.native_new();
-
-    static public final ImGuiContext T_03 = ImGuiContext.native_new();
-
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
      */

@@ -63,4 +63,15 @@ public class ImGuiPayload extends IDLBase {
       return nativeObject->IsDelivery();
     */
     public static native boolean internal_native_IsDelivery(long this_addr);
+
+    public void set_Data(IDLBase Data) {
+        internal_native_set_Data(native_address, Data.native_void_address);
+    }
+
+    /*
+      [-JNI;-NATIVE]
+      ImGuiPayload* nativeObject = (ImGuiPayload*)this_addr;
+      nativeObject->Data = (void**)Data_addr;
+    */
+    public static native void internal_native_set_Data(long this_addr, long Data_addr);
 }

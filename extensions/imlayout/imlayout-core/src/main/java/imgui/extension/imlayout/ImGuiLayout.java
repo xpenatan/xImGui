@@ -24,12 +24,6 @@ public class ImGuiLayout extends IDLBase {
 
     static public final ImGuiLayout NULL = ImGuiLayout.native_new();
 
-    static public final ImGuiLayout T_01 = ImGuiLayout.native_new();
-
-    static public final ImGuiLayout T_02 = ImGuiLayout.native_new();
-
-    static public final ImGuiLayout T_03 = ImGuiLayout.native_new();
-
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
      */

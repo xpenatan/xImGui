@@ -674,10 +674,12 @@ interface VecCmdBuffer {
 
 interface VecIdxBuffer {
     long size();
+    readonly attribute any Data;
 };
 
 interface VecVtxBuffer {
     long size();
+    readonly attribute any Data;
 };
 
 interface ImVectorInt {

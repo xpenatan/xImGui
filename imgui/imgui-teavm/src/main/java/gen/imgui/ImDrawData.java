@@ -9,121 +9,234 @@ package gen.imgui;
 
 import gen.imgui.idl.IDLBase;
 
-/*
-  [-IDL_SKIP]
-*/
 public final class ImDrawData extends IDLBase {
 
-    public final static ImDrawData NULL = native_new();
+    private ImDrawList ImDrawList_TEMP_GEN_0;
 
-    private ImDrawList imDrawList = ImDrawList.native_new();
+    private ImVec2 ImVec2_TEMP_GEN_0;
+
+    private ImVec2 ImVec2_TEMP_GEN_1;
+
+    private ImVec2 ImVec2_TEMP_GEN_2;
+
+    public final static ImDrawData NULL = native_new();
 
     public static ImDrawData native_new() {
         return new ImDrawData((byte) 0, (char) 0);
     }
 
-    public ImDrawData(boolean cMemoryOwn) {
-    }
-
     private ImDrawData(byte b, char c) {
     }
 
-    public int getCmdListsCount() {
-        return getCmdListsCountNATIVE((int) native_address);
+    protected void deleteNative() {
+        internal_native_deleteNative(native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-              var nativeObject = [MODULE].wrapPointer(addr, [MODULE].ImDrawData);
-              return nativeObject.get_CmdListsCount();
+      var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);
+      imgui.destroy(jsObj);
     */
-    @org.teavm.jso.JSBody(params = {"addr"}, script = "var nativeObject = imgui.wrapPointer(addr, imgui.ImDrawData); return nativeObject.get_CmdListsCount();")
-    private static native int getCmdListsCountNATIVE(int addr);
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);imgui.destroy(jsObj);")
+    public static native void internal_native_deleteNative(int this_addr);
 
-    public ImDrawList getCmdLists(int index) {
-        int pointer = getCmdListsNATIVE((int) native_address, index);
-        imDrawList.internal_reset(pointer, false);
-        return imDrawList;
+    public int get_CmdListsCount() {
+        return internal_native_get_CmdListsCount(native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-              var nativeObject = [MODULE].wrapPointer(addr, [MODULE].ImDrawData);
-              var cmdList = nativeObject.get_CmdLists(index);
-              return [MODULE].getPointer(cmdList);
+      var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);
+      return jsObj.get_CmdListsCount();
     */
-    @org.teavm.jso.JSBody(params = {"addr", "index"}, script = "var nativeObject = imgui.wrapPointer(addr, imgui.ImDrawData); var cmdList = nativeObject.get_CmdLists(index); return imgui.getPointer(cmdList);")
-    private static native int getCmdListsNATIVE(int addr, int index);
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);return jsObj.get_CmdListsCount();")
+    public static native int internal_native_get_CmdListsCount(int this_addr);
 
-    public float getDisplayPosX() {
-        return getDisplayPosXNATIVE((int) native_address);
+    public void set_CmdListsCount(int CmdListsCount) {
+        internal_native_set_CmdListsCount(native_address, CmdListsCount);
     }
 
     /*
       [-TEAVM;-NATIVE]
-              var nativeObject = [MODULE].wrapPointer(addr, [MODULE].ImDrawData);
-              return nativeObject.DisplayPos.get_x();
+      var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);
+      jsObj.set_CmdListsCount(CmdListsCount);
     */
-    @org.teavm.jso.JSBody(params = {"addr"}, script = "var nativeObject = imgui.wrapPointer(addr, imgui.ImDrawData); return nativeObject.DisplayPos.get_x();")
-    private static native int getDisplayPosXNATIVE(int addr);
+    @org.teavm.jso.JSBody(params = {"this_addr", "CmdListsCount"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);jsObj.set_CmdListsCount(CmdListsCount);")
+    public static native void internal_native_set_CmdListsCount(int this_addr, int CmdListsCount);
 
-    public float getDisplayPosY() {
-        return getDisplayPosYNATIVE((int) native_address);
+    public int get_TotalIdxCount() {
+        return internal_native_get_TotalIdxCount(native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-              var nativeObject = [MODULE].wrapPointer(addr, [MODULE].ImDrawData);
-              return nativeObject.DisplayPos.get_y();
+      var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);
+      return jsObj.get_TotalIdxCount();
     */
-    @org.teavm.jso.JSBody(params = {"addr"}, script = "var nativeObject = imgui.wrapPointer(addr, imgui.ImDrawData); return nativeObject.DisplayPos.get_y();")
-    private static native int getDisplayPosYNATIVE(int addr);
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);return jsObj.get_TotalIdxCount();")
+    public static native int internal_native_get_TotalIdxCount(int this_addr);
 
-    public float getDisplaySizeX() {
-        return getDisplaySizeXNATIVE((int) native_address);
+    public void set_TotalIdxCount(int TotalIdxCount) {
+        internal_native_set_TotalIdxCount(native_address, TotalIdxCount);
     }
 
     /*
       [-TEAVM;-NATIVE]
-              var nativeObject = [MODULE].wrapPointer(addr, [MODULE].ImDrawData);
-              return nativeObject.DisplaySize.get_x();
+      var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);
+      jsObj.set_TotalIdxCount(TotalIdxCount);
     */
-    @org.teavm.jso.JSBody(params = {"addr"}, script = "var nativeObject = imgui.wrapPointer(addr, imgui.ImDrawData); return nativeObject.DisplaySize.get_x();")
-    private static native int getDisplaySizeXNATIVE(int addr);
+    @org.teavm.jso.JSBody(params = {"this_addr", "TotalIdxCount"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);jsObj.set_TotalIdxCount(TotalIdxCount);")
+    public static native void internal_native_set_TotalIdxCount(int this_addr, int TotalIdxCount);
 
-    public float getDisplaySizeY() {
-        return getDisplaySizeYNATIVE((int) native_address);
+    public int get_TotalVtxCount() {
+        return internal_native_get_TotalVtxCount(native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-              var nativeObject = [MODULE].wrapPointer(addr, [MODULE].ImDrawData);
-              return nativeObject.DisplaySize.get_y();
+      var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);
+      return jsObj.get_TotalVtxCount();
     */
-    @org.teavm.jso.JSBody(params = {"addr"}, script = "var nativeObject = imgui.wrapPointer(addr, imgui.ImDrawData); return nativeObject.DisplaySize.get_y();")
-    private static native int getDisplaySizeYNATIVE(int addr);
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);return jsObj.get_TotalVtxCount();")
+    public static native int internal_native_get_TotalVtxCount(int this_addr);
 
-    public float getFramebufferScaleX() {
-        return getFramebufferScaleXNATIVE((int) native_address);
+    public void set_TotalVtxCount(int TotalVtxCount) {
+        internal_native_set_TotalVtxCount(native_address, TotalVtxCount);
     }
 
     /*
       [-TEAVM;-NATIVE]
-              var nativeObject = [MODULE].wrapPointer(addr, [MODULE].ImDrawData);
-              return nativeObject.FramebufferScale.get_x();
+      var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);
+      jsObj.set_TotalVtxCount(TotalVtxCount);
     */
-    @org.teavm.jso.JSBody(params = {"addr"}, script = "var nativeObject = imgui.wrapPointer(addr, imgui.ImDrawData); return nativeObject.FramebufferScale.get_x();")
-    private static native int getFramebufferScaleXNATIVE(int addr);
+    @org.teavm.jso.JSBody(params = {"this_addr", "TotalVtxCount"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);jsObj.set_TotalVtxCount(TotalVtxCount);")
+    public static native void internal_native_set_TotalVtxCount(int this_addr, int TotalVtxCount);
 
-    public float getFramebufferScaleY() {
-        return getFramebufferScaleYNATIVE((int) native_address);
+    public ImDrawList get_CmdLists(int index) {
+        int pointer = internal_native_get_CmdLists(native_address, index);
+        if (pointer == 0)
+            return ImDrawList.NULL;
+        if (ImDrawList_TEMP_GEN_0 == null)
+            ImDrawList_TEMP_GEN_0 = ImDrawList.native_new();
+        ImDrawList_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImDrawList_TEMP_GEN_0;
     }
 
     /*
       [-TEAVM;-NATIVE]
-              var nativeObject = [MODULE].wrapPointer(addr, [MODULE].ImDrawData);
-              return nativeObject.FramebufferScale.get_y();
+      var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);
+      var returnedJSObj = jsObj.get_CmdLists(index);
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
     */
-    @org.teavm.jso.JSBody(params = {"addr"}, script = "var nativeObject = imgui.wrapPointer(addr, imgui.ImDrawData); return nativeObject.FramebufferScale.get_y();")
-    private static native int getFramebufferScaleYNATIVE(int addr);
+    @org.teavm.jso.JSBody(params = {"this_addr", "index"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);var returnedJSObj = jsObj.get_CmdLists(index);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_get_CmdLists(int this_addr, int index);
+
+    public void set_CmdLists(int index, ImDrawList CmdLists) {
+        internal_native_set_CmdLists(native_address, index, CmdLists.native_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);
+      jsObj.set_CmdLists(index, CmdLists_addr);
+    */
+    @org.teavm.jso.JSBody(params = {"this_addr", "index", "CmdLists_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);jsObj.set_CmdLists(index, CmdLists_addr);")
+    public static native void internal_native_set_CmdLists(int this_addr, int index, int CmdLists_addr);
+
+    public ImVec2 get_DisplayPos() {
+        int pointer = internal_native_get_DisplayPos(native_address);
+        if (pointer == 0)
+            return ImVec2.NULL;
+        if (ImVec2_TEMP_GEN_0 == null)
+            ImVec2_TEMP_GEN_0 = ImVec2.native_new();
+        ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImVec2_TEMP_GEN_0;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);
+      var returnedJSObj = jsObj.get_DisplayPos();
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
+    */
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);var returnedJSObj = jsObj.get_DisplayPos();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_get_DisplayPos(int this_addr);
+
+    public void set_DisplayPos(ImVec2 DisplayPos) {
+        internal_native_set_DisplayPos(native_address, DisplayPos.native_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);
+      jsObj.set_DisplayPos(DisplayPos_addr);
+    */
+    @org.teavm.jso.JSBody(params = {"this_addr", "DisplayPos_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);jsObj.set_DisplayPos(DisplayPos_addr);")
+    public static native void internal_native_set_DisplayPos(int this_addr, int DisplayPos_addr);
+
+    public ImVec2 get_DisplaySize() {
+        int pointer = internal_native_get_DisplaySize(native_address);
+        if (pointer == 0)
+            return ImVec2.NULL;
+        if (ImVec2_TEMP_GEN_1 == null)
+            ImVec2_TEMP_GEN_1 = ImVec2.native_new();
+        ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
+        return ImVec2_TEMP_GEN_1;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);
+      var returnedJSObj = jsObj.get_DisplaySize();
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
+    */
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);var returnedJSObj = jsObj.get_DisplaySize();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_get_DisplaySize(int this_addr);
+
+    public void set_DisplaySize(ImVec2 DisplaySize) {
+        internal_native_set_DisplaySize(native_address, DisplaySize.native_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);
+      jsObj.set_DisplaySize(DisplaySize_addr);
+    */
+    @org.teavm.jso.JSBody(params = {"this_addr", "DisplaySize_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);jsObj.set_DisplaySize(DisplaySize_addr);")
+    public static native void internal_native_set_DisplaySize(int this_addr, int DisplaySize_addr);
+
+    public ImVec2 get_FramebufferScale() {
+        int pointer = internal_native_get_FramebufferScale(native_address);
+        if (pointer == 0)
+            return ImVec2.NULL;
+        if (ImVec2_TEMP_GEN_2 == null)
+            ImVec2_TEMP_GEN_2 = ImVec2.native_new();
+        ImVec2_TEMP_GEN_2.internal_reset(pointer, false);
+        return ImVec2_TEMP_GEN_2;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);
+      var returnedJSObj = jsObj.get_FramebufferScale();
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
+    */
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);var returnedJSObj = jsObj.get_FramebufferScale();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_get_FramebufferScale(int this_addr);
+
+    public void set_FramebufferScale(ImVec2 FramebufferScale) {
+        internal_native_set_FramebufferScale(native_address, FramebufferScale.native_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);
+      jsObj.set_FramebufferScale(FramebufferScale_addr);
+    */
+    @org.teavm.jso.JSBody(params = {"this_addr", "FramebufferScale_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawData);jsObj.set_FramebufferScale(FramebufferScale_addr);")
+    public static native void internal_native_set_FramebufferScale(int this_addr, int FramebufferScale_addr);
 }

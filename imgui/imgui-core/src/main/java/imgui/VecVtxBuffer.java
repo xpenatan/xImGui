@@ -9,13 +9,9 @@ import imgui.idl.IDLBase;
 
 public class VecVtxBuffer extends IDLBase {
 
+    private IDLBase IDLBase_TEMP_GEN_0;
+
     static public final VecVtxBuffer NULL = VecVtxBuffer.native_new();
-
-    static public final VecVtxBuffer T_01 = VecVtxBuffer.native_new();
-
-    static public final VecVtxBuffer T_02 = VecVtxBuffer.native_new();
-
-    static public final VecVtxBuffer T_03 = VecVtxBuffer.native_new();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -50,4 +46,20 @@ VecVtxBuffer* nativeObject = (VecVtxBuffer*)this_addr;
 return nativeObject->size();
 */
     public static native int internal_native_size(long this_addr);
+
+    public IDLBase get_Data() {
+        long pointer = internal_native_get_Data(native_address);
+        if (pointer == 0)
+            return IDLBase.NULL;
+        if (IDLBase_TEMP_GEN_0 == null)
+            IDLBase_TEMP_GEN_0 = IDLBase.native_new();
+        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
+        return IDLBase_TEMP_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+VecVtxBuffer* nativeObject = (VecVtxBuffer*)this_addr;
+return (jlong)nativeObject->Data;
+*/
+    public static native long internal_native_get_Data(long this_addr);
 }

@@ -16,12 +16,6 @@ public class LoadSaveSettingsListener extends IDLBase {
 
     static public final LoadSaveSettingsListener NULL = LoadSaveSettingsListener.native_new();
 
-    static public final LoadSaveSettingsListener T_01 = LoadSaveSettingsListener.native_new();
-
-    static public final LoadSaveSettingsListener T_02 = LoadSaveSettingsListener.native_new();
-
-    static public final LoadSaveSettingsListener T_03 = LoadSaveSettingsListener.native_new();
-
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
      */

@@ -9,112 +9,212 @@ package imgui;
 
 import imgui.idl.IDLBase;
 
-/*
-  [-IDL_SKIP]
-*/
 public final class ImDrawData extends IDLBase {
 
-    public final static ImDrawData NULL = native_new();
+    private ImDrawList ImDrawList_TEMP_GEN_0;
 
-    private ImDrawList imDrawList = ImDrawList.native_new();
+    private ImVec2 ImVec2_TEMP_GEN_0;
+
+    private ImVec2 ImVec2_TEMP_GEN_1;
+
+    private ImVec2 ImVec2_TEMP_GEN_2;
+
+    public final static ImDrawData NULL = native_new();
 
     public static ImDrawData native_new() {
         return new ImDrawData((byte) 0, (char) 0);
     }
 
-    public ImDrawData(boolean cMemoryOwn) {
-    }
-
     private ImDrawData(byte b, char c) {
     }
 
-    public int getCmdListsCount() {
-        return getCmdListsCountNATIVE(native_address);
+    protected void deleteNative() {
+        internal_native_deleteNative(native_address);
     }
 
     /*
       [-JNI;-NATIVE]
-              ImDrawData* nativeObject = (ImDrawData*)addr;
-              return nativeObject->CmdListsCount;
+      ImDrawData* nativeObject = (ImDrawData*)this_addr;
+      delete nativeObject;
     */
-    private static native int getCmdListsCountNATIVE(long addr);
+    public static native void internal_native_deleteNative(long this_addr);
 
-    public ImDrawList getCmdLists(int index) {
-        long pointer = getCmdListsNATIVE(native_address, index);
-        imDrawList.internal_reset(pointer, false);
-        return imDrawList;
+    public int get_CmdListsCount() {
+        return internal_native_get_CmdListsCount(native_address);
     }
 
     /*
       [-JNI;-NATIVE]
-              ImDrawData* nativeObject = (ImDrawData*)addr;
-              return (jlong)nativeObject->CmdLists[index];
+      ImDrawData* nativeObject = (ImDrawData*)this_addr;
+      return nativeObject->CmdListsCount;
     */
-    private static native long getCmdListsNATIVE(long addr, int index);
+    public static native int internal_native_get_CmdListsCount(long this_addr);
 
-    public float getDisplayPosX() {
-        return getDisplayPosXNATIVE(native_address);
+    public void set_CmdListsCount(int CmdListsCount) {
+        internal_native_set_CmdListsCount(native_address, CmdListsCount);
     }
 
     /*
       [-JNI;-NATIVE]
-              ImDrawData* nativeObject = (ImDrawData*)addr;
-              return nativeObject->DisplayPos.x;
+      ImDrawData* nativeObject = (ImDrawData*)this_addr;
+      nativeObject->CmdListsCount = CmdListsCount;
     */
-    private static native int getDisplayPosXNATIVE(long addr);
+    public static native void internal_native_set_CmdListsCount(long this_addr, int CmdListsCount);
 
-    public float getDisplayPosY() {
-        return getDisplayPosYNATIVE(native_address);
+    public int get_TotalIdxCount() {
+        return internal_native_get_TotalIdxCount(native_address);
     }
 
     /*
       [-JNI;-NATIVE]
-              ImDrawData* nativeObject = (ImDrawData*)addr;
-              return nativeObject->DisplayPos.y;
+      ImDrawData* nativeObject = (ImDrawData*)this_addr;
+      return nativeObject->TotalIdxCount;
     */
-    private static native int getDisplayPosYNATIVE(long addr);
+    public static native int internal_native_get_TotalIdxCount(long this_addr);
 
-    public float getDisplaySizeX() {
-        return getDisplaySizeXNATIVE(native_address);
+    public void set_TotalIdxCount(int TotalIdxCount) {
+        internal_native_set_TotalIdxCount(native_address, TotalIdxCount);
     }
 
     /*
       [-JNI;-NATIVE]
-              ImDrawData* nativeObject = (ImDrawData*)addr;
-              return nativeObject->DisplaySize.x;
+      ImDrawData* nativeObject = (ImDrawData*)this_addr;
+      nativeObject->TotalIdxCount = TotalIdxCount;
     */
-    private static native int getDisplaySizeXNATIVE(long addr);
+    public static native void internal_native_set_TotalIdxCount(long this_addr, int TotalIdxCount);
 
-    public float getDisplaySizeY() {
-        return getDisplaySizeYNATIVE(native_address);
+    public int get_TotalVtxCount() {
+        return internal_native_get_TotalVtxCount(native_address);
     }
 
     /*
       [-JNI;-NATIVE]
-              ImDrawData* nativeObject = (ImDrawData*)addr;
-              return nativeObject->DisplaySize.y;
+      ImDrawData* nativeObject = (ImDrawData*)this_addr;
+      return nativeObject->TotalVtxCount;
     */
-    private static native int getDisplaySizeYNATIVE(long addr);
+    public static native int internal_native_get_TotalVtxCount(long this_addr);
 
-    public float getFramebufferScaleX() {
-        return getFramebufferScaleXNATIVE(native_address);
+    public void set_TotalVtxCount(int TotalVtxCount) {
+        internal_native_set_TotalVtxCount(native_address, TotalVtxCount);
     }
 
     /*
       [-JNI;-NATIVE]
-              ImDrawData* nativeObject = (ImDrawData*)addr;
-              return nativeObject->FramebufferScale.x;
+      ImDrawData* nativeObject = (ImDrawData*)this_addr;
+      nativeObject->TotalVtxCount = TotalVtxCount;
     */
-    private static native int getFramebufferScaleXNATIVE(long addr);
+    public static native void internal_native_set_TotalVtxCount(long this_addr, int TotalVtxCount);
 
-    public float getFramebufferScaleY() {
-        return getFramebufferScaleYNATIVE(native_address);
+    public ImDrawList get_CmdLists(int index) {
+        long pointer = internal_native_get_CmdLists(native_address, index);
+        if (pointer == 0)
+            return ImDrawList.NULL;
+        if (ImDrawList_TEMP_GEN_0 == null)
+            ImDrawList_TEMP_GEN_0 = ImDrawList.native_new();
+        ImDrawList_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImDrawList_TEMP_GEN_0;
     }
 
     /*
       [-JNI;-NATIVE]
-              ImDrawData* nativeObject = (ImDrawData*)addr;
-              return nativeObject->FramebufferScale.y;
+      ImDrawData* nativeObject = (ImDrawData*)this_addr;
+      ImDrawList* attr = (nativeObject->CmdLists[index]);
+      return (jlong)attr;
     */
-    private static native int getFramebufferScaleYNATIVE(long addr);
+    public static native long internal_native_get_CmdLists(long this_addr, int index);
+
+    public void set_CmdLists(int index, ImDrawList CmdLists) {
+        internal_native_set_CmdLists(native_address, index, CmdLists.native_address);
+    }
+
+    /*
+      [-JNI;-NATIVE]
+      ImDrawData* nativeObject = (ImDrawData*)this_addr;
+      nativeObject->CmdLists[index] = (ImDrawList*)CmdLists_addr;
+    */
+    public static native void internal_native_set_CmdLists(long this_addr, int index, long CmdLists_addr);
+
+    public ImVec2 get_DisplayPos() {
+        long pointer = internal_native_get_DisplayPos(native_address);
+        if (pointer == 0)
+            return ImVec2.NULL;
+        if (ImVec2_TEMP_GEN_0 == null)
+            ImVec2_TEMP_GEN_0 = ImVec2.native_new();
+        ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImVec2_TEMP_GEN_0;
+    }
+
+    /*
+      [-JNI;-NATIVE]
+      ImDrawData* nativeObject = (ImDrawData*)this_addr;
+      return (jlong)&nativeObject->DisplayPos;
+    */
+    public static native long internal_native_get_DisplayPos(long this_addr);
+
+    public void set_DisplayPos(ImVec2 DisplayPos) {
+        internal_native_set_DisplayPos(native_address, DisplayPos.native_address);
+    }
+
+    /*
+      [-JNI;-NATIVE]
+      ImDrawData* nativeObject = (ImDrawData*)this_addr;
+      nativeObject->DisplayPos = *((ImVec2*)DisplayPos_addr);
+    */
+    public static native void internal_native_set_DisplayPos(long this_addr, long DisplayPos_addr);
+
+    public ImVec2 get_DisplaySize() {
+        long pointer = internal_native_get_DisplaySize(native_address);
+        if (pointer == 0)
+            return ImVec2.NULL;
+        if (ImVec2_TEMP_GEN_1 == null)
+            ImVec2_TEMP_GEN_1 = ImVec2.native_new();
+        ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
+        return ImVec2_TEMP_GEN_1;
+    }
+
+    /*
+      [-JNI;-NATIVE]
+      ImDrawData* nativeObject = (ImDrawData*)this_addr;
+      return (jlong)&nativeObject->DisplaySize;
+    */
+    public static native long internal_native_get_DisplaySize(long this_addr);
+
+    public void set_DisplaySize(ImVec2 DisplaySize) {
+        internal_native_set_DisplaySize(native_address, DisplaySize.native_address);
+    }
+
+    /*
+      [-JNI;-NATIVE]
+      ImDrawData* nativeObject = (ImDrawData*)this_addr;
+      nativeObject->DisplaySize = *((ImVec2*)DisplaySize_addr);
+    */
+    public static native void internal_native_set_DisplaySize(long this_addr, long DisplaySize_addr);
+
+    public ImVec2 get_FramebufferScale() {
+        long pointer = internal_native_get_FramebufferScale(native_address);
+        if (pointer == 0)
+            return ImVec2.NULL;
+        if (ImVec2_TEMP_GEN_2 == null)
+            ImVec2_TEMP_GEN_2 = ImVec2.native_new();
+        ImVec2_TEMP_GEN_2.internal_reset(pointer, false);
+        return ImVec2_TEMP_GEN_2;
+    }
+
+    /*
+      [-JNI;-NATIVE]
+      ImDrawData* nativeObject = (ImDrawData*)this_addr;
+      return (jlong)&nativeObject->FramebufferScale;
+    */
+    public static native long internal_native_get_FramebufferScale(long this_addr);
+
+    public void set_FramebufferScale(ImVec2 FramebufferScale) {
+        internal_native_set_FramebufferScale(native_address, FramebufferScale.native_address);
+    }
+
+    /*
+      [-JNI;-NATIVE]
+      ImDrawData* nativeObject = (ImDrawData*)this_addr;
+      nativeObject->FramebufferScale = *((ImVec2*)FramebufferScale_addr);
+    */
+    public static native void internal_native_set_FramebufferScale(long this_addr, long FramebufferScale_addr);
 }

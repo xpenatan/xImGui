@@ -11,15 +11,6 @@ public class IDLBool3 extends IDLBoolArray {
 
     public static final IDLBool3 NULL = native_new();
 
-    public static IDLBool3 TMP_1 = new IDLBool3();
-
-    public static IDLBool3 TMP_2 = new IDLBool3();
-
-    public static void disposeTEMP() {
-        TMP_1.dispose();
-        TMP_2.dispose();
-    }
-
     /**
      * @return An empty instance without a native address
      */

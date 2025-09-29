@@ -13,12 +13,6 @@ public class ImGuiLastItemData extends IDLBase {
 
     static public final ImGuiLastItemData NULL = ImGuiLastItemData.native_new();
 
-    static public final ImGuiLastItemData T_01 = ImGuiLastItemData.native_new();
-
-    static public final ImGuiLastItemData T_02 = ImGuiLastItemData.native_new();
-
-    static public final ImGuiLastItemData T_03 = ImGuiLastItemData.native_new();
-
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
      */

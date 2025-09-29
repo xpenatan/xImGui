@@ -13,12 +13,6 @@ public class ImGuiDockNode extends IDLBase {
 
     static public final ImGuiDockNode NULL = ImGuiDockNode.native_new();
 
-    static public final ImGuiDockNode T_01 = ImGuiDockNode.native_new();
-
-    static public final ImGuiDockNode T_02 = ImGuiDockNode.native_new();
-
-    static public final ImGuiDockNode T_03 = ImGuiDockNode.native_new();
-
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
      */

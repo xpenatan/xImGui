@@ -11,12 +11,6 @@ public class ImGuiTableSortSpecs extends IDLBase {
 
     static public final ImGuiTableSortSpecs NULL = ImGuiTableSortSpecs.native_new();
 
-    static public final ImGuiTableSortSpecs T_01 = ImGuiTableSortSpecs.native_new();
-
-    static public final ImGuiTableSortSpecs T_02 = ImGuiTableSortSpecs.native_new();
-
-    static public final ImGuiTableSortSpecs T_03 = ImGuiTableSortSpecs.native_new();
-
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
      */

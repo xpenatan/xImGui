@@ -11,12 +11,6 @@ public class ImGuiPlatformIO extends IDLBase {
 
     static public final ImGuiPlatformIO NULL = ImGuiPlatformIO.native_new();
 
-    static public final ImGuiPlatformIO T_01 = ImGuiPlatformIO.native_new();
-
-    static public final ImGuiPlatformIO T_02 = ImGuiPlatformIO.native_new();
-
-    static public final ImGuiPlatformIO T_03 = ImGuiPlatformIO.native_new();
-
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
      */

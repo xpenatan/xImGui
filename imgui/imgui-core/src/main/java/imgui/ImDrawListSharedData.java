@@ -11,12 +11,6 @@ public class ImDrawListSharedData extends IDLBase {
 
     static public final ImDrawListSharedData NULL = ImDrawListSharedData.native_new();
 
-    static public final ImDrawListSharedData T_01 = ImDrawListSharedData.native_new();
-
-    static public final ImDrawListSharedData T_02 = ImDrawListSharedData.native_new();
-
-    static public final ImDrawListSharedData T_03 = ImDrawListSharedData.native_new();
-
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
      */

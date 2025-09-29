@@ -11,12 +11,6 @@ public class ImGuiStorage extends IDLBase {
 
     static public final ImGuiStorage NULL = ImGuiStorage.native_new();
 
-    static public final ImGuiStorage T_01 = ImGuiStorage.native_new();
-
-    static public final ImGuiStorage T_02 = ImGuiStorage.native_new();
-
-    static public final ImGuiStorage T_03 = ImGuiStorage.native_new();
-
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
      */

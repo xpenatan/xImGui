@@ -11,6 +11,8 @@ import imgui.idl.IDLBase;
 
 public class ImFontConfig extends IDLBase {
 
+    private IDLBase IDLBase_TEMP_GEN_0;
+
     private ImVec2 ImVec2_TEMP_GEN_0;
 
     private ImVec2 ImVec2_TEMP_GEN_1;
@@ -45,6 +47,34 @@ public class ImFontConfig extends IDLBase {
       delete nativeObject;
     */
     public static native void internal_native_deleteNative(long this_addr);
+
+    public IDLBase get_FontData() {
+        long pointer = internal_native_get_FontData(native_address);
+        if (pointer == 0)
+            return IDLBase.NULL;
+        if (IDLBase_TEMP_GEN_0 == null)
+            IDLBase_TEMP_GEN_0 = IDLBase.native_new();
+        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
+        return IDLBase_TEMP_GEN_0;
+    }
+
+    /*
+      [-JNI;-NATIVE]
+      ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
+      return (jlong)nativeObject->FontData;
+    */
+    public static native long internal_native_get_FontData(long this_addr);
+
+    public void set_FontData(IDLBase FontData) {
+        internal_native_set_FontData(native_address, FontData.native_void_address);
+    }
+
+    /*
+      [-JNI;-NATIVE]
+      ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
+      nativeObject->FontData = (void**)FontData_addr;
+    */
+    public static native void internal_native_set_FontData(long this_addr, long FontData_addr);
 
     public int get_FontDataSize() {
         return internal_native_get_FontDataSize(native_address);

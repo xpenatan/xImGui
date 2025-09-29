@@ -11,12 +11,6 @@ public class Config extends IDLBase {
 
     static public final Config NULL = Config.native_new();
 
-    static public final Config T_01 = Config.native_new();
-
-    static public final Config T_02 = Config.native_new();
-
-    static public final Config T_03 = Config.native_new();
-
     public Config() {
         long addr = internal_native_create();
         internal_reset(addr, true);

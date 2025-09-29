@@ -13,15 +13,6 @@ public class IDLStringView extends IDLBase {
 
     public static final IDLStringView NULL = native_new();
 
-    public static IDLStringView TMP_1 = new IDLStringView();
-
-    public static IDLStringView TMP_2 = new IDLStringView();
-
-    public static void disposeTEMP() {
-        TMP_1.dispose();
-        TMP_2.dispose();
-    }
-
     /**
      * @return An empty instance without a native address
      */

@@ -13,6 +13,8 @@ public class ImDrawCmd extends IDLBase {
 
     private ImVec4 ImVec4_TEMP_GEN_0;
 
+    private IDLBase IDLBase_TEMP_GEN_0;
+
     /*
       [-JNI;-NATIVE]
               #if defined(_MSC_VER) && _MSC_VER <= 1500 // MSVC 2008 or earlier
@@ -179,4 +181,32 @@ public class ImDrawCmd extends IDLBase {
       nativeObject->ElemCount = ElemCount;
     */
     public static native void internal_native_set_ElemCount(long this_addr, int ElemCount);
+
+    public IDLBase get_TextureId() {
+        long pointer = internal_native_get_TextureId(native_address);
+        if (pointer == 0)
+            return IDLBase.NULL;
+        if (IDLBase_TEMP_GEN_0 == null)
+            IDLBase_TEMP_GEN_0 = IDLBase.native_new();
+        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
+        return IDLBase_TEMP_GEN_0;
+    }
+
+    /*
+      [-JNI;-NATIVE]
+      ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
+      return (jlong)nativeObject->TextureId;
+    */
+    public static native long internal_native_get_TextureId(long this_addr);
+
+    public void set_TextureId(IDLBase TextureId) {
+        internal_native_set_TextureId(native_address, TextureId.native_void_address);
+    }
+
+    /*
+      [-JNI;-NATIVE]
+      ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
+      nativeObject->TextureId = (void**)TextureId_addr;
+    */
+    public static native void internal_native_set_TextureId(long this_addr, long TextureId_addr);
 }

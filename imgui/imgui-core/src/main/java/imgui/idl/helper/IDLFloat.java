@@ -11,21 +11,6 @@ public class IDLFloat extends IDLFloatArray {
 
     public static final IDLFloat NULL = native_new();
 
-    public static IDLFloat TMP_1 = new IDLFloat();
-
-    public static IDLFloat TMP_2 = new IDLFloat();
-
-    public static IDLFloat TMP_3 = new IDLFloat();
-
-    public static IDLFloat TMP_4 = new IDLFloat();
-
-    public static void disposeTEMP() {
-        TMP_1.dispose();
-        TMP_2.dispose();
-        TMP_3.dispose();
-        TMP_4.dispose();
-    }
-
     /**
      * @return An empty instance without a native address
      */

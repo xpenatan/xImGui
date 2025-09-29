@@ -11,12 +11,6 @@ public class ImGuiShrinkWidthItem extends IDLBase {
 
     static public final ImGuiShrinkWidthItem NULL = ImGuiShrinkWidthItem.native_new();
 
-    static public final ImGuiShrinkWidthItem T_01 = ImGuiShrinkWidthItem.native_new();
-
-    static public final ImGuiShrinkWidthItem T_02 = ImGuiShrinkWidthItem.native_new();
-
-    static public final ImGuiShrinkWidthItem T_03 = ImGuiShrinkWidthItem.native_new();
-
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
      */

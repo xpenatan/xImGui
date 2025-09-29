@@ -15,12 +15,6 @@ public class ImDrawVert extends IDLBase {
 
     static public final ImDrawVert NULL = ImDrawVert.native_new();
 
-    static public final ImDrawVert T_01 = ImDrawVert.native_new();
-
-    static public final ImDrawVert T_02 = ImDrawVert.native_new();
-
-    static public final ImDrawVert T_03 = ImDrawVert.native_new();
-
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
      */

@@ -11,12 +11,6 @@ public class ImGuiTabItem extends IDLBase {
 
     static public final ImGuiTabItem NULL = ImGuiTabItem.native_new();
 
-    static public final ImGuiTabItem T_01 = ImGuiTabItem.native_new();
-
-    static public final ImGuiTabItem T_02 = ImGuiTabItem.native_new();
-
-    static public final ImGuiTabItem T_03 = ImGuiTabItem.native_new();
-
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
      */

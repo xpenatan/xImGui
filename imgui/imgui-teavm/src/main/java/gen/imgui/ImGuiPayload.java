@@ -69,4 +69,16 @@ public class ImGuiPayload extends IDLBase {
     */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPayload);var returnedJSObj = jsObj.IsDelivery();return returnedJSObj;")
     public static native boolean internal_native_IsDelivery(int this_addr);
+
+    public void set_Data(IDLBase Data) {
+        internal_native_set_Data(native_address, Data.native_void_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPayload);
+      jsObj.set_Data(Data_addr);
+    */
+    @org.teavm.jso.JSBody(params = {"this_addr", "Data_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPayload);jsObj.set_Data(Data_addr);")
+    public static native void internal_native_set_Data(int this_addr, int Data_addr);
 }

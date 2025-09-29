@@ -11,15 +11,6 @@ public class IDLDouble2 extends IDLDoubleArray {
 
     public static final IDLDouble2 NULL = native_new();
 
-    public static IDLDouble2 TMP_1 = new IDLDouble2();
-
-    public static IDLDouble2 TMP_2 = new IDLDouble2();
-
-    public static void disposeTEMP() {
-        TMP_1.dispose();
-        TMP_2.dispose();
-    }
-
     /**
      * @return An empty instance without a native address
      */

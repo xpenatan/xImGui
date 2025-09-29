@@ -59,12 +59,6 @@ public class ImGuiWindow extends IDLBase {
 
     static public final ImGuiWindow NULL = ImGuiWindow.native_new();
 
-    static public final ImGuiWindow T_01 = ImGuiWindow.native_new();
-
-    static public final ImGuiWindow T_02 = ImGuiWindow.native_new();
-
-    static public final ImGuiWindow T_03 = ImGuiWindow.native_new();
-
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
      */

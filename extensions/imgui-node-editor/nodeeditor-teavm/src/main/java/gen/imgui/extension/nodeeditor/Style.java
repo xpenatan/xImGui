@@ -11,12 +11,6 @@ public class Style extends IDLBase {
 
     static public final Style NULL = Style.native_new();
 
-    static public final Style T_01 = Style.native_new();
-
-    static public final Style T_02 = Style.native_new();
-
-    static public final Style T_03 = Style.native_new();
-
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
      */

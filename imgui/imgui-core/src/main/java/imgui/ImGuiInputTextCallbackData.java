@@ -11,12 +11,6 @@ public class ImGuiInputTextCallbackData extends IDLBase {
 
     static public final ImGuiInputTextCallbackData NULL = ImGuiInputTextCallbackData.native_new();
 
-    static public final ImGuiInputTextCallbackData T_01 = ImGuiInputTextCallbackData.native_new();
-
-    static public final ImGuiInputTextCallbackData T_02 = ImGuiInputTextCallbackData.native_new();
-
-    static public final ImGuiInputTextCallbackData T_03 = ImGuiInputTextCallbackData.native_new();
-
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
      */

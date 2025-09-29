@@ -9,13 +9,9 @@ import gen.imgui.idl.IDLBase;
 
 public class VecVtxBuffer extends IDLBase {
 
+    private IDLBase IDLBase_TEMP_GEN_0;
+
     static public final VecVtxBuffer NULL = VecVtxBuffer.native_new();
-
-    static public final VecVtxBuffer T_01 = VecVtxBuffer.native_new();
-
-    static public final VecVtxBuffer T_02 = VecVtxBuffer.native_new();
-
-    static public final VecVtxBuffer T_03 = VecVtxBuffer.native_new();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -53,4 +49,21 @@ return returnedJSObj;
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.VecVtxBuffer);var returnedJSObj = jsObj.size();return returnedJSObj;")
     public static native int internal_native_size(int this_addr);
+
+    public IDLBase get_Data() {
+        int pointer = internal_native_get_Data(native_address);
+        if (pointer == 0)
+            return IDLBase.NULL;
+        if (IDLBase_TEMP_GEN_0 == null)
+            IDLBase_TEMP_GEN_0 = IDLBase.native_new();
+        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
+        return IDLBase_TEMP_GEN_0;
+    }
+
+    /*[-TEAVM;-NATIVE]
+var jsObj = imgui.wrapPointer(this_addr, imgui.VecVtxBuffer);
+return jsObj.get_Data();
+*/
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.VecVtxBuffer);return jsObj.get_Data();")
+    public static native int internal_native_get_Data(int this_addr);
 }

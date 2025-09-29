@@ -36,12 +36,6 @@ public class ImGuiInternal extends IDLBase {
 
     static public final ImGuiInternal NULL = ImGuiInternal.native_new();
 
-    static public final ImGuiInternal T_01 = ImGuiInternal.native_new();
-
-    static public final ImGuiInternal T_02 = ImGuiInternal.native_new();
-
-    static public final ImGuiInternal T_03 = ImGuiInternal.native_new();
-
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
      */

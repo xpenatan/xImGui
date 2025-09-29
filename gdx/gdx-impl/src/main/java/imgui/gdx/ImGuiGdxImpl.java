@@ -18,6 +18,7 @@ import imgui.ImFontAtlas;
 import imgui.ImGui;
 import imgui.ImGuiIO;
 import imgui.ImGuiImpl;
+import imgui.ImVec2;
 import imgui.ImVec4;
 import imgui.idl.helper.IDLByteArray;
 import imgui.idl.helper.IDLIntArray;
@@ -174,26 +175,36 @@ public class ImGuiGdxImpl implements ImGuiImpl {
     }
 
     public void renderDrawData(ImDrawData drawData, int id) {
-        int cmdListsCount = drawData.getCmdListsCount();
+        int cmdListsCount = drawData.get_CmdListsCount();
         if(cmdListsCount > 0) {
+
+            int totalVtxCount = drawData.get_TotalVtxCount();
+            int totalIdxCount = drawData.get_TotalIdxCount();
+
             boolean last_enable_blend = Gdx.gl.glIsEnabled(GL20.GL_BLEND);
             boolean last_enable_cull_face = Gdx.gl.glIsEnabled(GL20.GL_CULL_FACE);
             boolean last_enable_depth_test = Gdx.gl.glIsEnabled(GL20.GL_DEPTH_TEST);
             boolean last_enable_stencil_test = Gdx.gl.glIsEnabled(GL20.GL_STENCIL_TEST);
             boolean last_enable_scissor_test = Gdx.gl.glIsEnabled(GL20.GL_SCISSOR_TEST);
 
-            int fb_width = (int)(drawData.getDisplaySizeX() * drawData.getFramebufferScaleX());
-            int fb_height = (int)(drawData.getDisplaySizeY() * drawData.getFramebufferScaleY());
+            ImVec2 displaySize = drawData.get_DisplaySize();
+            ImVec2 framebufferScale = drawData.get_FramebufferScale();
+            float frameBufferScaleX = framebufferScale.get_x();
+            float frameBufferScaleY = framebufferScale.get_y();
+            ImVec2 displayPos = drawData.get_DisplayPos();
+
+            int fb_width = (int)(displaySize.get_x() * frameBufferScaleX);
+            int fb_height = (int)(displaySize.get_y() * frameBufferScaleY);
 
             bind(drawData, fb_width, fb_height);
 
-            float clip_offX = drawData.getDisplayPosX(); // (0,0) unless using multi-viewports
-            float clip_offY = drawData.getDisplayPosY();
-            float clip_scaleX = drawData.getFramebufferScaleX(); // (1,1) unless using retina display which are often (2,2)
-            float clip_scaleY = drawData.getFramebufferScaleY();
-            for(int i = 0; i < cmdListsCount; i++) {
+            float clip_offX = displayPos.get_x(); // (0,0) unless using multi-viewports
+            float clip_offY = displayPos.get_y();
+            float clip_scaleX = frameBufferScaleX; // (1,1) unless using retina display which are often (2,2)
+            float clip_scaleY = frameBufferScaleY;
 
-                ImDrawList imDrawList = drawData.getCmdLists(i);
+            for(int i = 0; i < cmdListsCount; i++) {
+                ImDrawList imDrawList = drawData.get_CmdLists(i);
 
                 ByteBuffer vtxBufferData = imDrawList.getVtxBufferData();
                 ByteBuffer idxBufferData = imDrawList.getIdxBufferData();
@@ -274,10 +285,16 @@ public class ImGuiGdxImpl implements ImGuiImpl {
         Gdx.gl.glDisable(GL20.GL_STENCIL_TEST);
         Gdx.gl.glEnable(GL20.GL_SCISSOR_TEST);
 
-        float L = drawData.getDisplayPosX();
-        float R = drawData.getDisplayPosX() + drawData.getDisplaySizeX();
-        float T = drawData.getDisplayPosY();
-        float B = drawData.getDisplayPosY() + drawData.getDisplaySizeY();
+        ImVec2 displayPos = drawData.get_DisplayPos();
+        ImVec2 displaySize = drawData.get_DisplaySize();
+
+        float displayX = displayPos.get_x();
+        float displayY = displayPos.get_y();
+
+        float L = displayX;
+        float R = displayX + displaySize.get_x();
+        float T = displayY;
+        float B = displayY + displaySize.get_y();
 
         matrix.val[0] = 2.0f / (R - L);
         matrix.val[1] = 0.0f;

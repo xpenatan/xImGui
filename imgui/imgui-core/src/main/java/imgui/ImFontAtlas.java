@@ -17,6 +17,8 @@ public class ImFontAtlas extends IDLBase {
 
     private ImFont ImFont_TEMP_GEN_1;
 
+    private IDLBase IDLBase_TEMP_GEN_0;
+
     public final static ImFontAtlas NULL = native_new();
 
     public static ImFontAtlas native_new() {
@@ -94,4 +96,32 @@ public class ImFontAtlas extends IDLBase {
       return (jlong)obj;
     */
     public static native long internal_native_AddFontFromMemoryTTF(long this_addr, long font_data_addr, int font_data_size, int size_pixels);
+
+    public IDLBase get_TexID() {
+        long pointer = internal_native_get_TexID(native_address);
+        if (pointer == 0)
+            return IDLBase.NULL;
+        if (IDLBase_TEMP_GEN_0 == null)
+            IDLBase_TEMP_GEN_0 = IDLBase.native_new();
+        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
+        return IDLBase_TEMP_GEN_0;
+    }
+
+    /*
+      [-JNI;-NATIVE]
+      ImFontAtlas* nativeObject = (ImFontAtlas*)this_addr;
+      return (jlong)nativeObject->TexID;
+    */
+    public static native long internal_native_get_TexID(long this_addr);
+
+    public void set_TexID(IDLBase TexID) {
+        internal_native_set_TexID(native_address, TexID.native_void_address);
+    }
+
+    /*
+      [-JNI;-NATIVE]
+      ImFontAtlas* nativeObject = (ImFontAtlas*)this_addr;
+      nativeObject->TexID = (void**)TexID_addr;
+    */
+    public static native void internal_native_set_TexID(long this_addr, long TexID_addr);
 }

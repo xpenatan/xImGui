@@ -21,12 +21,6 @@ public class ImGuiViewport extends IDLBase {
 
     static public final ImGuiViewport NULL = ImGuiViewport.native_new();
 
-    static public final ImGuiViewport T_01 = ImGuiViewport.native_new();
-
-    static public final ImGuiViewport T_02 = ImGuiViewport.native_new();
-
-    static public final ImGuiViewport T_03 = ImGuiViewport.native_new();
-
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
      */

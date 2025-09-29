@@ -13,12 +13,6 @@ public class ImGuiWindowTempData extends IDLBase {
 
     static public final ImGuiWindowTempData NULL = ImGuiWindowTempData.native_new();
 
-    static public final ImGuiWindowTempData T_01 = ImGuiWindowTempData.native_new();
-
-    static public final ImGuiWindowTempData T_02 = ImGuiWindowTempData.native_new();
-
-    static public final ImGuiWindowTempData T_03 = ImGuiWindowTempData.native_new();
-
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
      */

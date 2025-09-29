@@ -17,6 +17,8 @@ public class ImFontAtlas extends IDLBase {
 
     private ImFont ImFont_TEMP_GEN_1;
 
+    private IDLBase IDLBase_TEMP_GEN_0;
+
     public final static ImFontAtlas NULL = native_new();
 
     public static ImFontAtlas native_new() {
@@ -100,4 +102,34 @@ public class ImFontAtlas extends IDLBase {
     */
     @org.teavm.jso.JSBody(params = {"this_addr", "font_data_addr", "font_data_size", "size_pixels"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontAtlas);var returnedJSObj = jsObj.AddFontFromMemoryTTF(font_data_addr, font_data_size, size_pixels);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_AddFontFromMemoryTTF(int this_addr, int font_data_addr, int font_data_size, int size_pixels);
+
+    public IDLBase get_TexID() {
+        int pointer = internal_native_get_TexID(native_address);
+        if (pointer == 0)
+            return IDLBase.NULL;
+        if (IDLBase_TEMP_GEN_0 == null)
+            IDLBase_TEMP_GEN_0 = IDLBase.native_new();
+        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
+        return IDLBase_TEMP_GEN_0;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontAtlas);
+      return jsObj.get_TexID();
+    */
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontAtlas);return jsObj.get_TexID();")
+    public static native int internal_native_get_TexID(int this_addr);
+
+    public void set_TexID(IDLBase TexID) {
+        internal_native_set_TexID(native_address, TexID.native_void_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontAtlas);
+      jsObj.set_TexID(TexID_addr);
+    */
+    @org.teavm.jso.JSBody(params = {"this_addr", "TexID_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontAtlas);jsObj.set_TexID(TexID_addr);")
+    public static native void internal_native_set_TexID(int this_addr, int TexID_addr);
 }

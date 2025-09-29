@@ -11,15 +11,6 @@ public class IDLLong3 extends IDLLongArray {
 
     public static final IDLLong3 NULL = native_new();
 
-    public static IDLLong3 TMP_1 = new IDLLong3();
-
-    public static IDLLong3 TMP_2 = new IDLLong3();
-
-    public static void disposeTEMP() {
-        TMP_1.dispose();
-        TMP_2.dispose();
-    }
-
     /**
      * @return An empty instance without a native address
      */

@@ -11,6 +11,8 @@ import gen.imgui.idl.IDLBase;
 
 public class ImFontConfig extends IDLBase {
 
+    private IDLBase IDLBase_TEMP_GEN_0;
+
     private ImVec2 ImVec2_TEMP_GEN_0;
 
     private ImVec2 ImVec2_TEMP_GEN_1;
@@ -48,6 +50,36 @@ public class ImFontConfig extends IDLBase {
     */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);imgui.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
+
+    public IDLBase get_FontData() {
+        int pointer = internal_native_get_FontData(native_address);
+        if (pointer == 0)
+            return IDLBase.NULL;
+        if (IDLBase_TEMP_GEN_0 == null)
+            IDLBase_TEMP_GEN_0 = IDLBase.native_new();
+        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
+        return IDLBase_TEMP_GEN_0;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
+      return jsObj.get_FontData();
+    */
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);return jsObj.get_FontData();")
+    public static native int internal_native_get_FontData(int this_addr);
+
+    public void set_FontData(IDLBase FontData) {
+        internal_native_set_FontData(native_address, FontData.native_void_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
+      jsObj.set_FontData(FontData_addr);
+    */
+    @org.teavm.jso.JSBody(params = {"this_addr", "FontData_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);jsObj.set_FontData(FontData_addr);")
+    public static native void internal_native_set_FontData(int this_addr, int FontData_addr);
 
     public int get_FontDataSize() {
         return internal_native_get_FontDataSize(native_address);

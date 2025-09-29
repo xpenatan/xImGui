@@ -140,16 +140,6 @@ public class ImGui extends IDLBase {
     private static native void UpdateDisplayAndInputAndFrameNative(float deltaTime, int width, int height, int display_w, int display_h);
 
     /**
-     * Dispose temp objects.
-     */
-    public static void disposeStatic() {
-        IDLFloat.disposeTEMP();
-        IDLDouble.disposeTEMP();
-        IDLInt.disposeTEMP();
-        IDLBool.disposeTEMP();
-    }
-
-    /**
      * Dummy constructor, used internally to creates objects without C++ pointer
      */
     @Deprecated()

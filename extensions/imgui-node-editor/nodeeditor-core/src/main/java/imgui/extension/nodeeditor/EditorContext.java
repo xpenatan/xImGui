@@ -11,12 +11,6 @@ public class EditorContext extends IDLBase {
 
     static public final EditorContext NULL = EditorContext.native_new();
 
-    static public final EditorContext T_01 = EditorContext.native_new();
-
-    static public final EditorContext T_02 = EditorContext.native_new();
-
-    static public final EditorContext T_03 = EditorContext.native_new();
-
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
      */

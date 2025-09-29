@@ -65,7 +65,6 @@ public abstract class ImGuiRenderer extends ScreenAdapter {
     @Override
     public void hide() {
         impl.dispose();
-        ImGui.disposeStatic();
         ImGui.DestroyContext();
     }
 }

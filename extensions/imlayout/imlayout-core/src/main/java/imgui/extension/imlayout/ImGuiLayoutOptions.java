@@ -11,12 +11,6 @@ public class ImGuiLayoutOptions extends IDLBase {
 
     static public final ImGuiLayoutOptions NULL = ImGuiLayoutOptions.native_new();
 
-    static public final ImGuiLayoutOptions T_01 = ImGuiLayoutOptions.native_new();
-
-    static public final ImGuiLayoutOptions T_02 = ImGuiLayoutOptions.native_new();
-
-    static public final ImGuiLayoutOptions T_03 = ImGuiLayoutOptions.native_new();
-
     public ImGuiLayoutOptions() {
         long addr = internal_native_create();
         internal_reset(addr, true);

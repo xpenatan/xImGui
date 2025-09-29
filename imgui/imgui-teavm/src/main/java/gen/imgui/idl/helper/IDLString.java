@@ -13,15 +13,6 @@ public class IDLString extends IDLBase {
 
     public static final IDLString NULL = native_new();
 
-    public static IDLString TMP_1 = new IDLString();
-
-    public static IDLString TMP_2 = new IDLString();
-
-    public static void disposeTEMP() {
-        TMP_1.dispose();
-        TMP_2.dispose();
-    }
-
     /**
      * @return An empty instance without a native address
      */

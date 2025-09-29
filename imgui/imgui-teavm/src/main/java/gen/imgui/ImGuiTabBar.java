@@ -11,12 +11,6 @@ public class ImGuiTabBar extends IDLBase {
 
     static public final ImGuiTabBar NULL = ImGuiTabBar.native_new();
 
-    static public final ImGuiTabBar T_01 = ImGuiTabBar.native_new();
-
-    static public final ImGuiTabBar T_02 = ImGuiTabBar.native_new();
-
-    static public final ImGuiTabBar T_03 = ImGuiTabBar.native_new();
-
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
      */
