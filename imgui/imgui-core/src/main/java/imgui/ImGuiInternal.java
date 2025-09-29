@@ -5,7 +5,7 @@
  *-------------------------------------------------------*/
 package imgui;
 
-import imgui.idl.IDLBase;
+import com.github.xpenatan.jParser.idl.IDLBase;
 import imgui.idl.helper.IDLIntArray;
 import imgui.idl.helper.IDLBoolArray;
 import imgui.idl.helper.IDLFloatArray;

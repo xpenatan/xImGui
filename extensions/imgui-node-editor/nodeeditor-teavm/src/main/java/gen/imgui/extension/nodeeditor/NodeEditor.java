@@ -7,10 +7,10 @@
 */
 package gen.imgui.extension.nodeeditor;
 
+import gen.com.github.xpenatan.jParser.idl.IDLBase;
 import gen.imgui.ImVec2;
 import gen.imgui.ImDrawList;
 import gen.imgui.ImVec4;
-import gen.imgui.idl.IDLBase;
 import gen.imgui.idl.helper.IDLString;
 import gen.imgui.idl.helper.IDLLongArray;
 

@@ -7,11 +7,11 @@
 */
 package gen.imgui;
 
+import gen.com.github.xpenatan.jParser.idl.IDLBase;
 import gen.imgui.idl.helper.IDLBool;
 import gen.imgui.idl.helper.IDLDouble;
 import gen.imgui.idl.helper.IDLFloat;
 import gen.imgui.idl.helper.IDLInt;
-import gen.imgui.idl.IDLBase;
 import gen.imgui.idl.helper.IDLBoolArray;
 import gen.imgui.idl.helper.IDLIntArray;
 import gen.imgui.idl.helper.IDLFloatArray;

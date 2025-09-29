@@ -5,8 +5,8 @@
  *-------------------------------------------------------*/
 package gen.imgui.extension.imlayout;
 
+import gen.com.github.xpenatan.jParser.idl.IDLBase;
 import gen.imgui.ImVec2;
-import gen.imgui.idl.IDLBase;
 
 public class ImGuiLayout extends IDLBase {
 

@@ -5,7 +5,7 @@
  *-------------------------------------------------------*/
 package imgui.extension.imlayout;
 
-import imgui.idl.IDLBase;
+import com.github.xpenatan.jParser.idl.IDLBase;
 
 public class ImGuiLayoutOptions extends IDLBase {
 

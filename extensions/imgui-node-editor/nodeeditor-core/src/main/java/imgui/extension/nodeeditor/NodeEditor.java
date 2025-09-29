@@ -7,10 +7,10 @@
 */
 package imgui.extension.nodeeditor;
 
+import com.github.xpenatan.jParser.idl.IDLBase;
 import imgui.ImVec2;
 import imgui.ImDrawList;
 import imgui.ImVec4;
-import imgui.idl.IDLBase;
 import imgui.idl.helper.IDLString;
 import imgui.idl.helper.IDLLongArray;
 

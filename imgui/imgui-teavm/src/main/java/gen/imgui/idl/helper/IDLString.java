@@ -7,7 +7,7 @@
 */
 package gen.imgui.idl.helper;
 
-import gen.imgui.idl.IDLBase;
+import gen.com.github.xpenatan.jParser.idl.IDLBase;
 
 public class IDLString extends IDLBase {
 

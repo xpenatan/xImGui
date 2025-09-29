@@ -7,7 +7,7 @@ package gen.imgui.extension.imlayout;
 
 import java.util.Map;
 import java.util.HashMap;
-import gen.imgui.idl.IDLEnum;
+import com.github.xpenatan.jParser.idl.IDLEnum;
 
 public enum ImOrientation implements IDLEnum<ImOrientation> {
 

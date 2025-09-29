@@ -9,7 +9,7 @@ package imgui;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
-import imgui.idl.IDLBase;
+import com.github.xpenatan.jParser.idl.IDLBase;
 import imgui.idl.helper.IDLByteArray;
 
 public class ImDrawList extends IDLBase {

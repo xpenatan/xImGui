@@ -5,7 +5,6 @@ import imgui.ImVec2;
 import imgui.extension.nodeeditor.EditorContext;
 import imgui.extension.nodeeditor.NodeEditor;
 import imgui.extension.nodeeditor.PinKind;
-import imgui.idl.IDLBase;
 
 public class SimpleExample {
 

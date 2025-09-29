@@ -5,12 +5,11 @@
    Do not make changes to this file
   -------------------------------------------------------
 */
-package imgui;
+package imgui.idl.helper;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+public class IDLUtils {
 
-/*
-  [-IDL_SKIP]
-*/
-public class ImHelper extends IDLBase {
+    public static String getJSString(long addr) {
+        return null;
+    }
 }

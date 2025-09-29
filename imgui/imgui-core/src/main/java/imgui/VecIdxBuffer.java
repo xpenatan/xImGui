@@ -5,7 +5,7 @@
  *-------------------------------------------------------*/
 package imgui;
 
-import imgui.idl.IDLBase;
+import com.github.xpenatan.jParser.idl.IDLBase;
 
 public class VecIdxBuffer extends IDLBase {
 

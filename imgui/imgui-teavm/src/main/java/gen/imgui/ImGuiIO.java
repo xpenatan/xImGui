@@ -7,9 +7,9 @@
 */
 package gen.imgui;
 
+import gen.com.github.xpenatan.jParser.idl.IDLBase;
 import gen.imgui.idl.helper.IDLByteArray;
 import gen.imgui.idl.helper.IDLIntArray;
-import gen.imgui.idl.IDLBase;
 
 public class ImGuiIO extends IDLBase {
 

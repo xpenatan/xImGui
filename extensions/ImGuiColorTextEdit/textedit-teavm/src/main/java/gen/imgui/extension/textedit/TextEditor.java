@@ -7,8 +7,8 @@
 */
 package gen.imgui.extension.textedit;
 
+import gen.com.github.xpenatan.jParser.idl.IDLBase;
 import gen.imgui.ImVec2;
-import gen.imgui.idl.IDLBase;
 import gen.imgui.idl.helper.IDLString;
 import gen.imgui.idl.helper.IDLIntArray;
 

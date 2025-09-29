@@ -5,12 +5,10 @@
    Do not make changes to this file
   -------------------------------------------------------
 */
-package imgui;
+package gen.imgui.idl.helper;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+public class IDLUtils {
 
-/*
-  [-IDL_SKIP]
-*/
-public class ImHelper extends IDLBase {
+    @org.teavm.jso.JSBody(params = { "addr" }, script = "return imgui.UTF8ToString(addr);")
+    public static native String getJSString(int addr);
 }

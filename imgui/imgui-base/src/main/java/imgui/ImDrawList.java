@@ -1,6 +1,6 @@
 package imgui;
 
-import idl.IDLBase;
+import com.github.xpenatan.jParser.idl.IDLBase;
 import idl.helper.IDLByteArray;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

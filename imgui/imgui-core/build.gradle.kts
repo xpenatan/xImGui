@@ -6,6 +6,7 @@ val moduleName = "imgui-core"
 
 dependencies {
     api("com.github.xpenatan.jParser:loader-core:${LibExt.jParserVersion}")
+    api("com.github.xpenatan.jParser:idl-core:${LibExt.jParserVersion}")
 
     testImplementation(project(":imgui:imgui-desktop"))
     testImplementation("junit:junit:${LibExt.jUnitVersion}")

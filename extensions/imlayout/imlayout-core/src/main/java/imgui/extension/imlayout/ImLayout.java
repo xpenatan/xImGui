@@ -7,10 +7,10 @@
 */
 package imgui.extension.imlayout;
 
+import com.github.xpenatan.jParser.idl.IDLBase;
 import imgui.ImRect;
 import imgui.ImVec2;
 import imgui.ImGuiButtonFlags;
-import imgui.idl.IDLBase;
 import imgui.idl.helper.IDLBoolArray;
 
 public class ImLayout extends IDLBase {

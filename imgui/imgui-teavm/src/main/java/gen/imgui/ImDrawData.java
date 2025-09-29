@@ -7,7 +7,7 @@
 */
 package gen.imgui;
 
-import gen.imgui.idl.IDLBase;
+import gen.com.github.xpenatan.jParser.idl.IDLBase;
 
 public final class ImDrawData extends IDLBase {
 

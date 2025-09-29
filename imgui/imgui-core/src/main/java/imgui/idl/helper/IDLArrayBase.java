@@ -7,7 +7,7 @@
 */
 package imgui.idl.helper;
 
-import imgui.idl.IDLBase;
+import com.github.xpenatan.jParser.idl.IDLBase;
 
 public class IDLArrayBase extends IDLBase {
 

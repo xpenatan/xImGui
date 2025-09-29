@@ -7,8 +7,8 @@
 */
 package imgui;
 
-import imgui.idl.IDLBase;
-import imgui.idl.IDLEnum;
+import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.idl.IDLBase;
 
 public class ImGuiStyle extends IDLBase {
 

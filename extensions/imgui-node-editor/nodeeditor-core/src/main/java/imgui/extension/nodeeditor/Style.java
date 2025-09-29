@@ -5,7 +5,7 @@
  *-------------------------------------------------------*/
 package imgui.extension.nodeeditor;
 
-import imgui.idl.IDLBase;
+import com.github.xpenatan.jParser.idl.IDLBase;
 
 public class Style extends IDLBase {
 

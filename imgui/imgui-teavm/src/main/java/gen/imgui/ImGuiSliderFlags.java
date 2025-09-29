@@ -7,7 +7,7 @@ package gen.imgui;
 
 import java.util.Map;
 import java.util.HashMap;
-import gen.imgui.idl.IDLEnum;
+import com.github.xpenatan.jParser.idl.IDLEnum;
 
 public enum ImGuiSliderFlags implements IDLEnum<ImGuiSliderFlags> {
 
