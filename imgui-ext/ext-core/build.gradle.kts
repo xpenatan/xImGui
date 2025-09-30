@@ -55,6 +55,8 @@ publishing {
     publications {
         create<MavenPublication>("maven") {
             artifactId = moduleName
+            group = LibExt.groupId
+            version = LibExt.libVersion
             artifact(tasks["fatJar"])
             artifact(tasks["sourcesJar"]) {
                 classifier = "sources"

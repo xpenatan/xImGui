@@ -1,6 +1,7 @@
 package imgui.gdx;
 
 import com.badlogic.gdx.Gdx;
+import com.github.xpenatan.jParser.idl.IDLBase;
 import com.github.xpenatan.webgpu.WGPUAddressMode;
 import com.github.xpenatan.webgpu.WGPUBindGroup;
 import com.github.xpenatan.webgpu.WGPUBindGroupDescriptor;
@@ -17,6 +18,7 @@ import com.github.xpenatan.webgpu.WGPUBufferBindingType;
 import com.github.xpenatan.webgpu.WGPUBufferDescriptor;
 import com.github.xpenatan.webgpu.WGPUBufferUsage;
 import com.github.xpenatan.webgpu.WGPUChainedStruct;
+import com.github.xpenatan.webgpu.WGPUColor;
 import com.github.xpenatan.webgpu.WGPUColorTargetState;
 import com.github.xpenatan.webgpu.WGPUColorWriteMask;
 import com.github.xpenatan.webgpu.WGPUCommandEncoder;
@@ -73,7 +75,6 @@ import com.github.xpenatan.webgpu.WGPUVertexBufferLayout;
 import com.github.xpenatan.webgpu.WGPUVertexFormat;
 import com.github.xpenatan.webgpu.WGPUVertexState;
 import com.github.xpenatan.webgpu.WGPUVertexStepMode;
-import com.github.xpenatan.webgpu.idl.IDLBase;
 import com.monstrous.gdx.webgpu.application.WebGPUContext;
 import com.monstrous.gdx.webgpu.application.WgGraphics;
 import imgui.ImDrawCmd;
@@ -157,39 +158,42 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
 
     private void createDeviceObjects() {
         String wgslCode = "" +
-                "struct VertexIn {\n" +
-                "    @location(0) pos: vec2<f32>,\n" +
+                "struct VertexInput {\n" +
+                "    @location(0) position: vec2<f32>,\n" +
                 "    @location(1) uv: vec2<f32>,\n" +
-                "    @location(2) col: vec4<f32>,\n" +
+                "    @location(2) color: vec4<f32>,\n" +
                 "};\n" +
                 "\n" +
-                "struct VertexOut {\n" +
-                "    @builtin(position) pos: vec4<f32>,\n" +
+                "struct VertexOutput {\n" +
+                "    @builtin(position) position: vec4<f32>,\n" +
                 "    @location(0) color: vec4<f32>,\n" +
                 "    @location(1) uv: vec2<f32>,\n" +
                 "};\n" +
                 "\n" +
                 "struct Uniforms {\n" +
-                "    ProjMtx: mat4x4<f32>,\n" +
+                "    mvp: mat4x4<f32>,\n" +
+                "    gamma: f32\n" +
                 "};\n" +
                 "\n" +
                 "@group(0) @binding(0) var<uniform> uniforms: Uniforms;\n" +
                 "\n" +
                 "@vertex\n" +
-                "fn vs_main(in: VertexIn) -> VertexOut {\n" +
-                "    var out: VertexOut;\n" +
-                "    out.pos = uniforms.ProjMtx * vec4<f32>(in.pos, 0.0, 1.0);\n" +
-                "    out.color = in.col;\n" +
+                "fn vs_main(in: VertexInput) -> VertexOutput {\n" +
+                "    var out: VertexOutput;\n" +
+                "    out.position = uniforms.mvp * vec4<f32>(in.position, 0.0, 1.0);\n" +
+                "    out.color = in.color;\n" +
                 "    out.uv = in.uv;\n" +
                 "    return out;\n" +
                 "}\n" +
                 "\n" +
-                "@group(1) @binding(0) var tex: texture_2d<f32>;\n" +
-                "@group(1) @binding(1) var samp: sampler;\n" +
+                "@group(1) @binding(0) var s: sampler;\n" +
+                "@group(1) @binding(1) var t: texture_2d<f32>;\n" +
                 "\n" +
                 "@fragment\n" +
-                "fn fs_main(in: VertexOut) -> @location(0) vec4<f32> {\n" +
-                "    return in.color * textureSample(tex, samp, in.uv);\n" +
+                "fn fs_main(in: VertexOutput) -> @location(0) vec4<f32> {\n" +
+                "    let color = in.color * textureSample(t, s, in.uv);\n" +
+                "    let corrected_color = pow(color.rgb, vec3<f32>(uniforms.gamma));\n" +
+                "    return vec4<f32>(corrected_color, color.a);\n" +
                 "}\n";
 
         WGPUShaderModuleDescriptor shaderDesc = WGPUShaderModuleDescriptor.obtain();
@@ -204,11 +208,7 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
         shaderModule.setLabel("Shader Module");
 
         // Bind group layouts
-        uniformBindGroupLayout = createBindGroupLayout(true); // For uniforms
-        uniformBindGroupLayout.setLabel("Uniform Bind Group Layout");
-
-        textureBindGroupLayout = createBindGroupLayout(false); // For texture/sampler
-        textureBindGroupLayout.setLabel("Texture Bind Group Layout");
+        createBindGroupLayout();
 
         // Pipeline layout
         WGPUPipelineLayoutDescriptor layoutDesc = WGPUPipelineLayoutDescriptor.obtain();
@@ -293,22 +293,30 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
         device.createSampler(samplerDesc, sampler);
         sampler.setLabel("Sampler");
 
+        int gammaSize = 1;
+        int orthoProjSize = 16;
+        int uniformSize = orthoProjSize * Float.BYTES + gammaSize * Float.BYTES;
+        int uniformAlign= (int)memAlign(uniformSize, 16);
+
         // Uniform buffer
         WGPUBufferDescriptor uniformDesc = WGPUBufferDescriptor.obtain();
-        uniformDesc.setSize(64);
+        uniformDesc.setSize(uniformAlign);
         uniformDesc.setUsage(WGPUBufferUsage.Uniform.or(WGPUBufferUsage.CopyDst));
         uniformBuffer = device.createBuffer(uniformDesc);
         uniformBuffer.setLabel("Uniform Buffer");
 
         // Uniform bind group
-        WGPUBindGroupEntry uniformEntry = WGPUBindGroupEntry.obtain();
-        uniformEntry.setBinding(0);
-        uniformEntry.setBuffer(uniformBuffer);
-        uniformEntry.setSize(16 * Float.BYTES);
         WGPUBindGroupDescriptor uniformBgDesc = WGPUBindGroupDescriptor.obtain();
         uniformBgDesc.setLayout(uniformBindGroupLayout);
         WGPUVectorBindGroupEntry entries = WGPUVectorBindGroupEntry.obtain();
+
+        WGPUBindGroupEntry uniformEntry = WGPUBindGroupEntry.obtain();
+
+        uniformEntry.setBinding(0);
+        uniformEntry.setBuffer(uniformBuffer);
+        uniformEntry.setSize(uniformAlign);
         entries.push_back(uniformEntry);
+
         uniformBgDesc.setEntries(entries);
         uniformBindGroup = new WGPUBindGroup();
         device.createBindGroup(uniformBgDesc, uniformBindGroup);
@@ -317,34 +325,47 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
         renderPass = new WGPURenderPassEncoder();
     }
 
-    private WGPUBindGroupLayout createBindGroupLayout(boolean isUniform) {
-        WGPUVectorBindGroupLayoutEntry entries = WGPUVectorBindGroupLayoutEntry.obtain();
+    private void createBindGroupLayout() {
 
-        WGPUBindGroupLayoutEntry entry = WGPUBindGroupLayoutEntry.obtain();
-        entry.setBinding(0);
-        if (isUniform) {
-            entry.setVisibility(WGPUShaderStage.Vertex);
+        {
+            //Uniform
+            WGPUVectorBindGroupLayoutEntry entries = WGPUVectorBindGroupLayoutEntry.obtain();
+            WGPUBindGroupLayoutEntry entry = WGPUBindGroupLayoutEntry.obtain();
+            entry.setBinding(0);
+            entry.setVisibility(WGPUShaderStage.Vertex.or(WGPUShaderStage.Fragment));
             entry.getBuffer().setType(WGPUBufferBindingType.Uniform);
             entries.push_back(entry);
-        } else {
-            entry.setVisibility(WGPUShaderStage.Fragment);
-            entry.getTexture().setSampleType(WGPUTextureSampleType.Float);
-            entry.getTexture().setViewDimension(WGPUTextureViewDimension._2D);
-            entries.push_back(entry);
+
+            WGPUBindGroupLayoutDescriptor desc = WGPUBindGroupLayoutDescriptor.obtain();
+            desc.setEntries(entries);
+            uniformBindGroupLayout = new WGPUBindGroupLayout();; // For uniforms
+            device.createBindGroupLayout(desc, uniformBindGroupLayout);
+            uniformBindGroupLayout.setLabel("Uniform Bind Group Layout");
         }
-        if (!isUniform) {
+
+        {
+            // texture/sampler
+            WGPUVectorBindGroupLayoutEntry entries = WGPUVectorBindGroupLayoutEntry.obtain();
+
             WGPUBindGroupLayoutEntry samplerEntry = WGPUBindGroupLayoutEntry.obtain();
-            samplerEntry.setBinding(1);
+            samplerEntry.setBinding(0);
             samplerEntry.setVisibility(WGPUShaderStage.Fragment);
             samplerEntry.getSampler().setType(WGPUSamplerBindingType.Filtering);
             entries.push_back(samplerEntry);
-        }
 
-        WGPUBindGroupLayoutDescriptor desc = WGPUBindGroupLayoutDescriptor.obtain();
-        desc.setEntries(entries);
-        WGPUBindGroupLayout groupLayout = new WGPUBindGroupLayout();
-        device.createBindGroupLayout(desc, groupLayout);
-        return groupLayout;
+            WGPUBindGroupLayoutEntry textureEntry = WGPUBindGroupLayoutEntry.obtain();
+            textureEntry.setBinding(1);
+            textureEntry.setVisibility(WGPUShaderStage.Fragment);
+            textureEntry.getTexture().setSampleType(WGPUTextureSampleType.Float);
+            textureEntry.getTexture().setViewDimension(WGPUTextureViewDimension._2D);
+            entries.push_back(textureEntry);
+
+            WGPUBindGroupLayoutDescriptor desc = WGPUBindGroupLayoutDescriptor.obtain();
+            desc.setEntries(entries);
+            textureBindGroupLayout = new WGPUBindGroupLayout();; // For texture/sampler
+            device.createBindGroupLayout(desc, textureBindGroupLayout);
+            textureBindGroupLayout.setLabel("Texture Bind Group Layout");
+        }
     }
 
     private WGPUBlendState createBlendState() {
@@ -416,14 +437,18 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
         fontTextureView.setLabel("Font Texture View");
 
         WGPUVectorBindGroupEntry entries = WGPUVectorBindGroupEntry.obtain();
-        WGPUBindGroupEntry texEntry = WGPUBindGroupEntry.obtain();
-        texEntry.setBinding(0);
-        texEntry.setTextureView(fontTextureView);
-        entries.push_back(texEntry);
-        WGPUBindGroupEntry sampEntry = WGPUBindGroupEntry.obtain();
-        sampEntry.setBinding(1);
-        sampEntry.setSampler(sampler);
-        entries.push_back(sampEntry);
+        {
+            WGPUBindGroupEntry sampEntry = WGPUBindGroupEntry.obtain();
+            sampEntry.setBinding(0);
+            sampEntry.setSampler(sampler);
+            entries.push_back(sampEntry);
+        }
+        {
+            WGPUBindGroupEntry texEntry = WGPUBindGroupEntry.obtain();
+            texEntry.setBinding(1);
+            texEntry.setTextureView(fontTextureView);
+            entries.push_back(texEntry);
+        }
         WGPUBindGroupDescriptor bgDesc = WGPUBindGroupDescriptor.obtain();
         bgDesc.setLayout(textureBindGroupLayout);
         bgDesc.setEntries(entries);
@@ -442,14 +467,19 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
         WGPUTextureView view = WGPUTextureView.native_new();
         view.internal_reset(texViewPtr, false);
         WGPUVectorBindGroupEntry entries = WGPUVectorBindGroupEntry.obtain();
-        WGPUBindGroupEntry texEntry = WGPUBindGroupEntry.obtain();
-        texEntry.setBinding(0);
-        texEntry.setTextureView(view);
-        entries.push_back(texEntry);
-        WGPUBindGroupEntry sampEntry = WGPUBindGroupEntry.obtain();
-        sampEntry.setBinding(1);
-        sampEntry.setSampler(sampler);
-        entries.push_back(sampEntry);
+
+        {
+            WGPUBindGroupEntry samplerEntry = WGPUBindGroupEntry.obtain();
+            samplerEntry.setBinding(0);
+            samplerEntry.setSampler(sampler);
+            entries.push_back(samplerEntry);
+        }
+        {
+            WGPUBindGroupEntry textureEntry = WGPUBindGroupEntry.obtain();
+            textureEntry.setBinding(1);
+            textureEntry.setTextureView(view);
+            entries.push_back(textureEntry);
+        }
         WGPUBindGroupDescriptor bgDesc = WGPUBindGroupDescriptor.obtain();
         bgDesc.setLayout(textureBindGroupLayout);
         bgDesc.setEntries(entries);
@@ -511,63 +541,17 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
         ImVec2 displayPos = drawData.get_DisplayPos();
         ImVec2 displaySize = drawData.get_DisplaySize();
         ImVec2 framebufferScale = drawData.get_FramebufferScale();
-        float getDisplaySizeX = displaySize.get_x();
-        float getDisplaySizeY = displaySize.get_y();
+        float displaySizeX = displaySize.get_x();
+        float displaySizeY = displaySize.get_y();
         float displayX = displayPos.get_x();
         float displayY = displayPos.get_y();
         float frameScaleX = framebufferScale.get_x();
         float frameScaleY = framebufferScale.get_y();
 
-        float L = displayX;
-        float R = displayX + getDisplaySizeX;
-        float T = displayY;
-        float B = displayY + getDisplaySizeY;
-
-        float[] orthoProj = {
-            2.0f / (R - L), 0.0f, 0.0f, 0.0f,
-            0.0f, 2.0f / (T - B), 0.0f, 0.0f,
-            0.0f, 0.0f, 0.5f, 0.0f,
-            (R + L) / (L - R), (T + B) / (B - T), 0.5f, 1.0f
-        };
-        ByteBuffer projBuffer = ByteBuffer.allocateDirect(64).order(ByteOrder.LITTLE_ENDIAN);
-        FloatBuffer floatView = projBuffer.asFloatBuffer();
-        floatView.put(orthoProj);
-        device.getQueue().writeBuffer(uniformBuffer, 0, projBuffer, 64);
-
         // Calculate total buffer sizes
         int totalVtxCount = drawData.get_TotalVtxCount();
         int totalIdxCount = drawData.get_TotalIdxCount();
         setupBuffers(totalVtxCount, totalIdxCount);
-
-        // Upload all vertex and index data
-        int vtxOffset = 0;
-        int idxOffset = 0;
-        for (int n = 0; n < cmdListsCount; n++) {
-//            ImDrawList cmdList = drawData.get_CmdLists(n);
-//            ByteBuffer vtxData = cmdList.getVtxBufferData();
-//            VecVtxBuffer vtxBuffer = cmdList.get_VtxBuffer();
-//            VecIdxBuffer idxBuffer = cmdList.get_IdxBuffer();
-//            int vtxSize = vtxBuffer.size();
-//            int idxSize = idxBuffer.size();
-//
-//            int vertSize = 20;
-//            int totalVertSize = (vtxSize * vertSize);
-//            int indexSize = 2;
-//            int totalIdxSize = (idxSize * indexSize);
-//
-//            empty_01.native_setVoid(vtxBuffer.get_Data().native_address);
-//            int vb_write_size = (int)memAlign(totalVertSize, 4);
-//            int ib_write_size = (int)memAlign(totalIdxSize, 4);
-//
-//            device.getQueue().writeBuffer(vertexBuffer, vtxOffset, empty_01, vb_write_size);
-//            ByteBuffer idxData = cmdList.getIdxBufferData();
-//
-//            empty_01.native_setVoid(idxBuffer.get_Data().native_address);
-//            device.getQueue().writeBuffer(indexBuffer, idxOffset, empty_01, ib_write_size);
-//            int nPlus = n+1;
-//            vtxOffset += totalVertSize * nPlus;
-//            idxOffset += totalIdxSize * nPlus;
-        }
 
         WGPURenderPassColorAttachment colorAttach = WGPURenderPassColorAttachment.obtain();
         colorAttach.setDepthSlice(-1);
@@ -583,14 +567,37 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
 
         encoder.beginRenderPass(passDesc, renderPass);
 
-        renderPass.setPipeline(pipeline);
-        renderPass.setBindGroup(0, uniformBindGroup, WGPUVectorInt.NULL);
-        renderPass.setVertexBuffer(0, vertexBuffer, 0, totalVtxCount);
-        renderPass.setIndexBuffer(indexBuffer, WGPUIndexFormat.Uint16, 0, totalIdxCount);
+        // Upload all vertex and index data
+        int vtxOffset = 0;
+        int idxOffset = 0;
+        for (int n = 0; n < cmdListsCount; n++) {
+            ImDrawList cmdList = drawData.get_CmdLists(n);
+            ByteBuffer vtxData = cmdList.getVtxBufferData();
+            VecVtxBuffer vtxBuffer = cmdList.get_VtxBuffer();
+            VecIdxBuffer idxBuffer = cmdList.get_IdxBuffer();
+            int vtxSize = vtxBuffer.size();
+            int idxSize = idxBuffer.size();
 
-        float fbWidth = getDisplaySizeX * frameScaleX;
-        float fbHeight = getDisplaySizeY * frameScaleY;
-        renderPass.setViewport(0, 0, fbWidth, fbHeight, 0, 1);
+            int vertSize = 20;
+            int totalVertSize = (vtxSize * vertSize);
+            int indexSize = 2;
+            int totalIdxSize = (idxSize * indexSize);
+
+            empty_01.native_setVoid(vtxBuffer.get_Data().native_address);
+            int vb_write_size = (int)memAlign(totalVertSize, 4);
+            int ib_write_size = (int)memAlign(totalIdxSize, 4);
+
+            device.getQueue().writeBuffer(vertexBuffer, vtxOffset, empty_01, vb_write_size);
+            ByteBuffer idxData = cmdList.getIdxBufferData();
+
+            empty_01.native_setVoid(idxBuffer.get_Data().native_address);
+            device.getQueue().writeBuffer(indexBuffer, idxOffset, empty_01, ib_write_size);
+            int nPlus = n+1;
+            vtxOffset += totalVertSize * nPlus;
+            idxOffset += totalIdxSize * nPlus;
+        }
+
+        setupRenderState(displayX, displayY, displaySizeX, displaySizeY, frameScaleX, frameScaleY);
 
         int currentVtxOffset = 0;
         int currentIdxOffset = 0;
@@ -648,6 +655,49 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
         renderPass.release();
     }
 
+    private void setupRenderState(float displayX, float displayY, float displaySizeX, float displaySizeY, float frameScaleX, float frameScaleY) {
+        {
+            float L = displayX;
+            float R = displayX + displaySizeX;
+            float T = displayY;
+            float B = displayY + displaySizeY;
+
+            float[] orthoProj = {
+                    2.0f / (R - L), 0.0f, 0.0f, 0.0f,
+                    0.0f, 2.0f / (T - B), 0.0f, 0.0f,
+                    0.0f, 0.0f, 0.5f, 0.0f,
+                    (R + L) / (L - R), (T + B) / (B - T), 0.5f, 1.0f
+            };
+
+            int prjSize = 64;
+            float gamma = 2.2f;
+            int gamaSize = 1 * Float.BYTES;
+
+            ByteBuffer projBuffer = ByteBuffer.allocateDirect(prjSize + gamaSize).order(ByteOrder.LITTLE_ENDIAN);
+            FloatBuffer floatView = projBuffer.asFloatBuffer();
+            floatView.put(orthoProj);
+            floatView.put(gamma);
+            device.getQueue().writeBuffer(uniformBuffer, 0, projBuffer, prjSize);
+            device.getQueue().writeBuffer(uniformBuffer, prjSize, projBuffer, gamaSize);
+        }
+
+        // Setup viewport
+        float fbWidth = displaySizeX * frameScaleX;
+        float fbHeight = displaySizeY * frameScaleY;
+        renderPass.setViewport(0, 0, fbWidth, fbHeight, 0, 1);
+
+        // Bind shader and vertex buffers
+        renderPass.setVertexBuffer(0, vertexBuffer, 0, vertexBufferSize * 20);
+        renderPass.setIndexBuffer(indexBuffer, WGPUIndexFormat.Uint16, 0, indexBufferSize * 2);
+        renderPass.setPipeline(pipeline);
+        renderPass.setBindGroup(0, uniformBindGroup);
+
+        // Setup blend factor
+        WGPUColor color = WGPUColor.obtain();
+        color.setColor(0.f, 0.f, 0.f, 0.f);
+        renderPass.setBlendConstant(color);
+    }
+
     private void setupBuffers(int totalVtxCount, int totalIdxCount) {
         if (totalVtxCount > vertexBufferSize) {
             if (vertexBuffer != null) {
@@ -656,7 +706,9 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
             }
             vertexBufferSize = totalVtxCount + 5000;
 
-            int vertAligned = (int)memAlign(vertexBufferSize * 20, 4);
+            int imDrawVertSize = 5 * Float.BYTES;
+            int vertSize = vertexBufferSize * imDrawVertSize;
+            int vertAligned = (int)memAlign(vertSize, 4);
 
             WGPUBufferDescriptor desc = WGPUBufferDescriptor.obtain();
             desc.setSize(vertAligned);
@@ -671,7 +723,9 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
             }
             indexBufferSize = totalIdxCount + 10000;
 
-            int vertAligned = (int)memAlign(indexBufferSize * 2, 4);
+            int imDrawIdxSize = 1 * Short.BYTES;
+            int idxSize = indexBufferSize * imDrawIdxSize;
+            int vertAligned = (int)memAlign(idxSize, 4);
 
             WGPUBufferDescriptor desc = WGPUBufferDescriptor.obtain();
             desc.setSize(vertAligned);
