@@ -21,9 +21,6 @@ configure(libProjects) {
     apply(plugin = "signing")
     apply(plugin = "maven-publish")
 
-    group = LibExt.groupId
-    version = LibExt.libVersion
-
     if(LibExt.libVersion.isEmpty()) {
         throw RuntimeException("Version cannot be empty")
     }
