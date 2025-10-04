@@ -31,18 +31,18 @@ dependencies {
     implementation("com.github.xpenatan.gdx-teavm:backend-teavm:${LibExt.gdxTeaVMVersion}")
 }
 
-tasks.register<JavaExec>("textedit-build") {
+tasks.register<JavaExec>("textedit_run_build") {
     group = "example-teavm"
     description = "Build teavm example"
     mainClass.set(mainClassName)
     classpath = sourceSets["main"].runtimeClasspath
 }
 
-tasks.register("textedit-run-teavm") {
+tasks.register("textedit_run_teavm") {
     group = "example-teavm"
     description = "Run teavm app"
-    val list = listOf("textedit-build", "jettyRun")
+    val list = listOf("textedit_run_build", "jettyRun")
     dependsOn(list)
 
-    tasks.findByName("jettyRun")?.mustRunAfter("textedit-build")
+    tasks.findByName("jettyRun")?.mustRunAfter("textedit_run_build")
 }

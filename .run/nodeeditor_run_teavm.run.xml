@@ -1,8 +1,8 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="ImGui_basic_teavm_run" type="GradleRunConfiguration" factoryName="Gradle" folderName="ImGui">
+  <configuration default="false" name="nodeeditor_run_teavm" type="GradleRunConfiguration" factoryName="Gradle" folderName="ImGui-Demos">
     <ExternalSystemSettings>
       <option name="executionName" />
-      <option name="externalProjectPath" value="$PROJECT_DIR$/examples/basic/teavm" />
+      <option name="externalProjectPath" value="$PROJECT_DIR$/examples/imgui-node-editor/teavm" />
       <option name="externalSystemIdString" value="GRADLE" />
       <option name="scriptParameters" value="" />
       <option name="taskDescriptions">
@@ -10,7 +10,7 @@
       </option>
       <option name="taskNames">
         <list>
-          <option value="basic-run-teavm" />
+          <option value="nodeeditor_run_teavm" />
         </list>
       </option>
       <option name="vmOptions" />

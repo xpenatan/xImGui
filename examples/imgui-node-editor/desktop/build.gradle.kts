@@ -28,7 +28,7 @@ dependencies {
 val mainClassName = "imgui.example.nodeeditor.Main"
 val assetsDir = File("../assets");
 
-tasks.register<JavaExec>("nodeeditor-run-desktop") {
+tasks.register<JavaExec>("nodeeditor_run_desktop") {
     group = "example-desktop"
     description = "Run desktop app"
     mainClass.set(mainClassName)

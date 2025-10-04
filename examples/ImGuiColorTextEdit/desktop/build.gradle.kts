@@ -28,7 +28,7 @@ dependencies {
 val mainClassName = "imgui.example.textedit.Main"
 val assetsDir = File("../assets");
 
-tasks.register<JavaExec>("textedit-run-desktop") {
+tasks.register<JavaExec>("textedit_run_desktop") {
     group = "example-desktop"
     description = "Run desktop app"
     mainClass.set(mainClassName)

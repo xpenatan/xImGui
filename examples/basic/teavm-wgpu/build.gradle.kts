@@ -32,18 +32,18 @@ java {
 
 val mainClassName = "imgui.example.basic.Build"
 
-tasks.register<JavaExec>("basic-build-wgpu") {
+tasks.register<JavaExec>("imgui_basic_build_teavm_wgpu") {
     group = "example-teavm"
     description = "Build basic example"
     mainClass.set(mainClassName)
     classpath = sourceSets["main"].runtimeClasspath
 }
 
-tasks.register("basic-run-teavm-wgpu") {
+tasks.register("imgui_basic_run_teavm_wgpu") {
     group = "example-teavm"
     description = "Run teavm app"
-    val list = listOf("basic-build-wgpu", "jettyRun")
+    val list = listOf("imgui_basic_build_teavm_wgpu", "jettyRun")
     dependsOn(list)
 
-    tasks.findByName("jettyRun")?.mustRunAfter("basic-build-wgpu")
+    tasks.findByName("jettyRun")?.mustRunAfter("imgui_basic_build_teavm_wgpu")
 }

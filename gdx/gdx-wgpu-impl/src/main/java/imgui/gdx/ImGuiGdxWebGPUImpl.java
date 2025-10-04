@@ -86,6 +86,7 @@ import imgui.ImGuiIO;
 import imgui.ImGuiImpl;
 import imgui.ImVec2;
 import imgui.ImVec4;
+import imgui.VecCmdBuffer;
 import imgui.VecIdxBuffer;
 import imgui.VecVtxBuffer;
 import imgui.idl.helper.IDLByteArray;
@@ -115,7 +116,6 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
     private WGPUBuffer indexBuffer;
     private int vertexBufferSize = 0;
     private int indexBufferSize = 0;
-    private final HashMap<Long, WGPUBindGroup> textureBindGroups = new HashMap<>();
 
     private boolean init = true;
 
@@ -455,39 +455,8 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
         fontBindGroup = new WGPUBindGroup();
         device.createBindGroup(bgDesc, fontBindGroup);
         fontBindGroup.setLabel("fontBindGroup");
-        textureBindGroups.put(fontTextureView.native_address, fontBindGroup);
 
         io.SetFontTexID(fontTextureView.native_address);
-    }
-
-    private WGPUBindGroup getOrCreateBindGroup(long texViewPtr) {
-        if (textureBindGroups.containsKey(texViewPtr)) {
-            return textureBindGroups.get(texViewPtr);
-        }
-        WGPUTextureView view = WGPUTextureView.native_new();
-        view.internal_reset(texViewPtr, false);
-        WGPUVectorBindGroupEntry entries = WGPUVectorBindGroupEntry.obtain();
-
-        {
-            WGPUBindGroupEntry samplerEntry = WGPUBindGroupEntry.obtain();
-            samplerEntry.setBinding(0);
-            samplerEntry.setSampler(sampler);
-            entries.push_back(samplerEntry);
-        }
-        {
-            WGPUBindGroupEntry textureEntry = WGPUBindGroupEntry.obtain();
-            textureEntry.setBinding(1);
-            textureEntry.setTextureView(view);
-            entries.push_back(textureEntry);
-        }
-        WGPUBindGroupDescriptor bgDesc = WGPUBindGroupDescriptor.obtain();
-        bgDesc.setLayout(textureBindGroupLayout);
-        bgDesc.setEntries(entries);
-        WGPUBindGroup bg = new WGPUBindGroup();
-        device.createBindGroup(bgDesc, bg);
-        bg.setLabel("Texture Bind Group");
-        textureBindGroups.put(texViewPtr, bg);
-        return bg;
     }
 
     @Override
@@ -517,11 +486,6 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
         fontTextureView.dispose();
         fontBindGroup.release();
         fontBindGroup.dispose();
-        textureBindGroups.values().forEach(bg -> {
-            bg.release();
-            bg.dispose();
-        });
-        textureBindGroups.clear();
         if (vertexBuffer != null) {
             vertexBuffer.release();
             vertexBuffer.dispose();
@@ -572,7 +536,6 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
         int idxOffset = 0;
         for (int n = 0; n < cmdListsCount; n++) {
             ImDrawList cmdList = drawData.get_CmdLists(n);
-            ByteBuffer vtxData = cmdList.getVtxBufferData();
             VecVtxBuffer vtxBuffer = cmdList.get_VtxBuffer();
             VecIdxBuffer idxBuffer = cmdList.get_IdxBuffer();
             int vtxSize = vtxBuffer.size();
@@ -583,14 +546,12 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
             int indexSize = 2;
             int totalIdxSize = (idxSize * indexSize);
 
-            empty_01.native_setVoid(vtxBuffer.get_Data().native_address);
+            empty_01.native_copy(vtxBuffer.get_Data());
             int vb_write_size = (int)memAlign(totalVertSize, 4);
-            int ib_write_size = (int)memAlign(totalIdxSize, 4);
-
             device.getQueue().writeBuffer(vertexBuffer, vtxOffset, empty_01, vb_write_size);
-            ByteBuffer idxData = cmdList.getIdxBufferData();
 
-            empty_01.native_setVoid(idxBuffer.get_Data().native_address);
+            empty_01.native_copy(idxBuffer.get_Data());
+            int ib_write_size = (int)memAlign(totalIdxSize, 4);
             device.getQueue().writeBuffer(indexBuffer, idxOffset, empty_01, ib_write_size);
             int nPlus = n+1;
             vtxOffset += totalVertSize * nPlus;
@@ -599,8 +560,8 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
 
         setupRenderState(displayX, displayY, displaySizeX, displaySizeY, frameScaleX, frameScaleY);
 
-        int currentVtxOffset = 0;
-        int currentIdxOffset = 0;
+        int global_vtx_offset = 0;
+        int global_idx_offset = 0;
 
         float clip_offX = displayX;
         float clip_offY = displayY;
@@ -609,14 +570,17 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
 
         for (int n = 0; n < cmdListsCount; n++) {
             ImDrawList cmdList = drawData.get_CmdLists(n);
-            ByteBuffer vtxBufferData = cmdList.getVtxBufferData();
-            int listVtxBytes = vtxBufferData.limit();
-            int listIdxBytes = cmdList.getIdxBufferData().limit();
-            int listVtxOffsetElems = currentVtxOffset / 20; // in vertices
-            int listIdxOffsetElems = currentIdxOffset / 2; // in indices
+            VecCmdBuffer cmdBuffer = cmdList.get_CmdBuffer();
 
-            for (int cmd_i = 0; cmd_i < cmdList.getCmdBufferSize(); cmd_i++) {
-                ImDrawCmd pcmd = cmdList.getCmdBuffer(cmd_i);
+            VecVtxBuffer vtxBuffer = cmdList.get_VtxBuffer();
+            VecIdxBuffer idxBuffer = cmdList.get_IdxBuffer();
+
+            int vtxSize = vtxBuffer.size();
+            int idxSize = idxBuffer.size();
+
+            int cmdBufferSize = cmdBuffer.size();
+            for (int cmd_i = 0; cmd_i < cmdBufferSize; cmd_i++) {
+                ImDrawCmd pcmd = cmdBuffer.getData(cmd_i);
                 ImVec4 clipRect = pcmd.get_ClipRect();
                 float clipRectX = clipRect.get_x();
                 float clipRectY = clipRect.get_y();
@@ -635,21 +599,20 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
                 if (clip_maxX > fbW) clip_maxX = fbW;
                 if (clip_maxY > fbH) clip_maxY = fbH;
 
-                if (clip_maxX <= clip_minX || clip_maxY <= clip_minY) {
-                    continue;
-                }
+//                if (clip_maxX <= clip_minX || clip_maxY <= clip_minY) {
+//                    continue;
+//                }
 
-                long textureId = pcmd.getTextureId();
-                WGPUBindGroup bg = getOrCreateBindGroup(textureId);
-                renderPass.setBindGroup(1, bg, WGPUVectorInt.NULL);
+                WGPUBindGroup bg = fontBindGroup;
+                renderPass.setBindGroup(1, bg);
 
-                renderPass.setScissorRect((int) clip_minX, (int) clip_minY, (int) (clip_maxX - clip_minX), (int) (clip_maxY - clip_minY));
+//                renderPass.setScissorRect((int) clip_minX, (int) clip_minY, (int) (clip_maxX - clip_minX), (int) (clip_maxY - clip_minY));
 
-                renderPass.drawIndexed((int) pcmd.getElemCount(), 1, (int) pcmd.getIdxOffset() + listIdxOffsetElems, (int) pcmd.getVtxOffset() + listVtxOffsetElems, 0);
+                renderPass.drawIndexed(pcmd.get_ElemCount(), 1, pcmd.get_IdxOffset() + global_idx_offset, pcmd.get_VtxOffset() + global_vtx_offset, 0);
             }
 
-            currentVtxOffset += listVtxBytes;
-            currentIdxOffset += listIdxBytes;
+            global_idx_offset += idxSize;
+            global_vtx_offset += vtxSize;
         }
         renderPass.end();
         renderPass.release();

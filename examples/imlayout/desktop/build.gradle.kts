@@ -28,7 +28,7 @@ dependencies {
 val mainClassName = "imgui.example.imlayout.Main"
 val assetsDir = File("../assets");
 
-tasks.register<JavaExec>("imlayout-run-desktop") {
+tasks.register<JavaExec>("imlayout_run_desktop") {
     group = "example-desktop"
     description = "Run desktop app"
     mainClass.set(mainClassName)

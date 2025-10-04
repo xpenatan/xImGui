@@ -31,18 +31,18 @@ dependencies {
 
 val mainClassName = "imgui.example.basic.Build"
 
-tasks.register<JavaExec>("basic-build") {
+tasks.register<JavaExec>("imgui_basic_build_teavm") {
     group = "example-teavm"
     description = "Build basic example"
     mainClass.set(mainClassName)
     classpath = sourceSets["main"].runtimeClasspath
 }
 
-tasks.register("basic-run-teavm") {
+tasks.register("imgui_basic_run_teavm") {
     group = "example-teavm"
     description = "Run teavm app"
-    val list = listOf("basic-build", "jettyRun")
+    val list = listOf("imgui_basic_build_teavm", "jettyRun")
     dependsOn(list)
 
-    tasks.findByName("jettyRun")?.mustRunAfter("basic-build")
+    tasks.findByName("jettyRun")?.mustRunAfter("imgui_basic_build_teavm")
 }

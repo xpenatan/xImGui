@@ -31,18 +31,18 @@ dependencies {
     implementation("com.github.xpenatan.gdx-teavm:backend-teavm:${LibExt.gdxTeaVMVersion}")
 }
 
-tasks.register<JavaExec>("imlayout-build") {
+tasks.register<JavaExec>("imlayout_build_teavm") {
     group = "example-teavm"
     description = "Build basic example"
     mainClass.set(mainClassName)
     classpath = sourceSets["main"].runtimeClasspath
 }
 
-tasks.register("imlayout-run-teavm") {
+tasks.register("imlayout_run_teavm") {
     group = "example-teavm"
     description = "Run teavm app"
-    val list = listOf("imlayout-build", "jettyRun")
+    val list = listOf("imlayout_build_teavm", "jettyRun")
     dependsOn(list)
 
-    tasks.findByName("jettyRun")?.mustRunAfter("imlayout-build")
+    tasks.findByName("jettyRun")?.mustRunAfter("imlayout_build_teavm")
 }
