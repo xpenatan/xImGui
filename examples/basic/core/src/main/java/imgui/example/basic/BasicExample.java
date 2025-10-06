@@ -73,15 +73,15 @@ public class BasicExample extends ImGuiRenderer {
             renderDock();
         }
         else {
-//            ImGui.ShowDemoWindow();
-//
-//            if(init == false) {
-//                init = true;
-//                ImGui.SetNextWindowSize(new ImVec2(400, 400), ImGuiCond.ImGuiCond_Once);
-//            }
+            ImGui.ShowDemoWindow();
+
+            if(init == false) {
+                init = true;
+                ImGui.SetNextWindowSize(new ImVec2(400, 400), ImGuiCond.ImGuiCond_Once);
+            }
 
             ImGui.Begin("Hello");
-//            renderItems();
+            renderItems();
             ImGui.End();
         }
     }
