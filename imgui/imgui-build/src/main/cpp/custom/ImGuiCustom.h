@@ -13,10 +13,10 @@
 #include <cstdint>
 #include <iostream>
 
-typedef ImVector<ImDrawCmd> VecCmdBuffer;
-typedef ImVector<ImDrawIdx> VecIdxBuffer;
-typedef ImVector<ImDrawVert> VecVtxBuffer;
-typedef ImVector<unsigned int> ImVectorInt;
+using VecCmdBuffer = ImVector<ImDrawCmd>;
+using VecIdxBuffer = ImVector<ImDrawIdx>;
+using VecVtxBuffer = ImVector<ImDrawVert>;
+using ImVectorInt = ImVector<unsigned int>;
 
 namespace im = ImGui;
 
