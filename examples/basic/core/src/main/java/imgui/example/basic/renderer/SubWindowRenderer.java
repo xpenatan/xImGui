@@ -6,6 +6,7 @@ import imgui.ImGuiStyleVar;
 import imgui.ImGuiViewport;
 import imgui.ImGuiWindowClass;
 import imgui.ImGuiWindowFlags;
+import imgui.ImTemp;
 import imgui.ImVec2;
 
 public class SubWindowRenderer implements UIRenderer {
@@ -47,11 +48,11 @@ public class SubWindowRenderer implements UIRenderer {
         flags = ImGuiWindowFlags.NoDocking.or(ImGuiWindowFlags.NoCollapse).or(ImGuiWindowFlags.NoResize).or(ImGuiWindowFlags.NoMove);
         flags = flags.or(ImGuiWindowFlags.NoBringToFrontOnFocus).or(ImGuiWindowFlags.NoNavFocus);
 
-        ImGui.PushStyleVar(ImGuiStyleVar.WindowPadding, ImVec2.TMP_1.set(0.0f, 0.0f));
+        ImGui.PushStyleVar(ImGuiStyleVar.WindowPadding, ImTemp.ImVec2_1(0.0f, 0.0f));
         ImGui.Begin("No document###DocumentRoot", null, flags);
         ImGui.PopStyleVar();
         int root_dockspace_id = 99999;
-        ImGui.DockSpace(root_dockspace_id, ImVec2.TMP_1.set(0, 0), null, TopLevelEditorWindowClass);
+        ImGui.DockSpace(root_dockspace_id, ImTemp.ImVec2_1(0, 0), null, TopLevelEditorWindowClass);
         ImGui.End();
 
         ImGui.Begin("Dock 01");

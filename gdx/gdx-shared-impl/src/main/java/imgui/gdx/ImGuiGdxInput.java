@@ -35,7 +35,7 @@ public class ImGuiGdxInput extends InputAdapter {
         if(button == Buttons.MIDDLE)
             mouseDown2 = true;
         ImGuiIO getIO = ImGui.GetIO();
-        wantCaptureMouse = getIO.getWantCaptureMouse();
+        wantCaptureMouse = getIO.get_WantCaptureMouse();
 
         io.AddMouseButtonEvent(button, true);
 
@@ -78,7 +78,7 @@ public class ImGuiGdxInput extends InputAdapter {
         ImGuiIO io = ImGui.GetIO();
         int charr = character;
         if((charr != DELETE && charr != ENTER)) // Ignore if char is delete key
-            io.UpdateKeyTyped(character);
+            io.AddInputCharacter(character);
         if(ImGui.IsWindowFocused(ImGuiFocusedFlags.AnyWindow))
             return true;
         return false;
@@ -174,7 +174,7 @@ public class ImGuiGdxInput extends InputAdapter {
     public boolean scrolled(float amountX, float amountY) {
         ImGuiIO io = ImGui.GetIO();
         io.AddMouseWheelEvent(amountX, -amountY);
-        if(io.getWantCaptureMouse())
+        if(io.get_WantCaptureMouse())
             return true;
         return false;
     }

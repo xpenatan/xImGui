@@ -644,7 +644,7 @@ class ImGui {
         static ImGuiViewport*           FindViewportByID(ImGuiID id) { return im::FindViewportByID(id); }
         static ImGuiViewport*           FindViewportByPlatformHandle(void* platform_handle) { return im::FindViewportByPlatformHandle(platform_handle); }
 };
-}
+} // END ImGuiWrapper
 
 class ClipboardTextFunction
 {
@@ -673,6 +673,256 @@ static void ImGui_Impl_SetClipboardText(void* user_data, const char* text) {
     str = text;
     clipboardFunction->onSetClipboardText(&str);
 }
+
+static ImVec2 vec2_temp1;
+static ImVec2 vec2_temp2;
+static ImVec2 vec2_temp3;
+static ImVec2 vec2_temp4;
+
+static ImVec4 vec4_temp1;
+static ImVec4 vec4_temp2;
+static ImVec4 vec4_temp3;
+static ImVec4 vec4_temp4;
+
+static ImRect rect_temp1;
+static ImRect rect_temp2;
+static ImRect rect_temp3;
+static ImRect rect_temp4;
+
+class ImTemp {
+    public:
+
+        static ImVec2* ImVec2_1() {
+            vec2_temp1.x = 0;
+            vec2_temp1.y = 0;
+            return &vec2_temp1;
+        }
+        static ImVec2* ImVec2_1(float x, float y) {
+            vec2_temp1.x = x;
+            vec2_temp1.y = y;
+            return &vec2_temp1;
+        }
+        static ImVec2* ImVec2_1(ImVec2& other) {
+            vec2_temp2.x = other.x;
+            vec2_temp2.y = other.y;
+            return &vec2_temp2;
+        }
+        static ImVec2* ImVec2_2() {
+            vec2_temp2.x = 0;
+            vec2_temp2.y = 0;
+            return &vec2_temp2;
+        }
+        static ImVec2* ImVec2_2(float x, float y) {
+            vec2_temp2.x = x;
+            vec2_temp2.y = y;
+            return &vec2_temp2;
+        }
+        static ImVec2* ImVec2_2(ImVec2& other) {
+            vec2_temp2.x = other.x;
+            vec2_temp2.y = other.y;
+            return &vec2_temp2;
+        }
+        static ImVec2* ImVec2_3() {
+            vec2_temp3.x = 0;
+            vec2_temp3.y = 0;
+            return &vec2_temp3;
+        }
+        static ImVec2* ImVec2_3(float x, float y) {
+            vec2_temp3.x = x;
+            vec2_temp3.y = y;
+            return &vec2_temp3;
+        }
+        static ImVec2* ImVec2_3(ImVec2& other) {
+            vec2_temp3.x = other.x;
+            vec2_temp3.y = other.y;
+            return &vec2_temp3;
+        }
+        static ImVec2* ImVec2_4() {
+            vec2_temp4.x = 0;
+            vec2_temp4.y = 0;
+            return &vec2_temp4;
+        }
+        static ImVec2* ImVec2_4(float x, float y) {
+            vec2_temp4.x = x;
+            vec2_temp4.y = y;
+            return &vec2_temp4;
+        }
+        static ImVec2* ImVec2_4(ImVec2& other) {
+            vec2_temp4.x = other.x;
+            vec2_temp4.y = other.y;
+            return &vec2_temp4;
+        }
+
+        static ImVec4* ImVec4_1() {
+            vec4_temp1.x = 0;
+            vec4_temp1.y = 0;
+            vec4_temp1.z = 0;
+            vec4_temp1.w = 0;
+            return &vec4_temp1;
+        }
+        static ImVec4* ImVec4_1(float x, float y, float z, float w) {
+            vec4_temp1.x = x;
+            vec4_temp1.y = y;
+            vec4_temp1.z = z;
+            vec4_temp1.w = w;
+            return &vec4_temp1;
+        }
+        static ImVec4* ImVec4_1(ImVec4& other) {
+            vec4_temp1.x = other.x;
+            vec4_temp1.y = other.y;
+            vec4_temp1.z = other.z;
+            vec4_temp1.w = other.w;
+            return &vec4_temp1;
+        }
+        static ImVec4* ImVec4_2() {
+            vec4_temp2.x = 0;
+            vec4_temp2.y = 0;
+            vec4_temp2.z = 0;
+            vec4_temp2.w = 0;
+            return &vec4_temp2;
+        }
+        static ImVec4* ImVec4_2(float x, float y, float z, float w) {
+            vec4_temp2.x = x;
+            vec4_temp2.y = y;
+            vec4_temp2.z = z;
+            vec4_temp2.w = w;
+            return &vec4_temp2;
+        }
+        static ImVec4* ImVec4_2(ImVec4& other) {
+            vec4_temp2.x = other.x;
+            vec4_temp2.y = other.y;
+            vec4_temp2.z = other.z;
+            vec4_temp2.w = other.w;
+            return &vec4_temp2;
+        }
+        static ImVec4* ImVec4_3() {
+            vec4_temp3.x = 0;
+            vec4_temp3.y = 0;
+            vec4_temp3.z = 0;
+            vec4_temp3.w = 0;
+            return &vec4_temp3;
+        }
+        static ImVec4* ImVec4_3(float x, float y, float z, float w) {
+            vec4_temp3.x = x;
+            vec4_temp3.y = y;
+            vec4_temp3.z = z;
+            vec4_temp3.w = w;
+            return &vec4_temp3;
+        }
+        static ImVec4* ImVec4_3(ImVec4& other) {
+            vec4_temp3.x = other.x;
+            vec4_temp3.y = other.y;
+            vec4_temp3.z = other.z;
+            vec4_temp3.w = other.w;
+            return &vec4_temp3;
+        }
+        static ImVec4* ImVec4_4() {
+            vec4_temp4.x = 0;
+            vec4_temp4.y = 0;
+            vec4_temp4.z = 0;
+            vec4_temp4.w = 0;
+            return &vec4_temp4;
+        }
+        static ImVec4* ImVec4_4(float x, float y, float z, float w) {
+            vec4_temp4.x = x;
+            vec4_temp4.y = y;
+            vec4_temp4.z = z;
+            vec4_temp4.w = w;
+            return &vec4_temp4;
+        }
+        static ImVec4* ImVec4_4(ImVec4& other) {
+            vec4_temp4.x = other.x;
+            vec4_temp4.y = other.y;
+            vec4_temp4.z = other.z;
+            vec4_temp4.w = other.w;
+            return &vec4_temp4;
+        }
+
+        static ImRect* ImRect_1() {
+            rect_temp1.Min.x = 0;
+            rect_temp1.Min.y = 0;
+            rect_temp1.Max.x = 0;
+            rect_temp1.Max.y = 0;
+            return &rect_temp1;
+        }
+        static ImRect* ImRect_1(float minX, float minY, float maxX, float maxY) {
+            rect_temp1.Min.x = minX;
+            rect_temp1.Min.y = minY;
+            rect_temp1.Max.x = maxX;
+            rect_temp1.Max.y = maxY;
+            return &rect_temp1;
+        }
+        static ImRect* ImRect_1(ImVec2& min, ImVec2& max) {
+            rect_temp1.Min.x = min.x;
+            rect_temp1.Min.y = min.y;
+            rect_temp1.Max.x = max.x;
+            rect_temp1.Max.y = max.y;
+            return &rect_temp1;
+        }
+        static ImRect* ImRect_2() {
+            rect_temp2.Min.x = 0;
+            rect_temp2.Min.y = 0;
+            rect_temp2.Max.x = 0;
+            rect_temp2.Max.y = 0;
+            return &rect_temp2;
+        }
+        static ImRect* ImRect_2(float minX, float minY, float maxX, float maxY) {
+            rect_temp2.Min.x = minX;
+            rect_temp2.Min.y = minY;
+            rect_temp2.Max.x = maxX;
+            rect_temp2.Max.y = maxY;
+            return &rect_temp2;
+        }
+        static ImRect* ImRect_2(ImVec2& min, ImVec2& max) {
+            rect_temp2.Min.x = min.x;
+            rect_temp2.Min.y = min.y;
+            rect_temp2.Max.x = max.x;
+            rect_temp2.Max.y = max.y;
+            return &rect_temp2;
+        }
+        static ImRect* ImRect_3() {
+            rect_temp3.Min.x = 0;
+            rect_temp3.Min.y = 0;
+            rect_temp3.Max.x = 0;
+            rect_temp3.Max.y = 0;
+            return &rect_temp3;
+        }
+        static ImRect* ImRect_3(float minX, float minY, float maxX, float maxY) {
+            rect_temp3.Min.x = minX;
+            rect_temp3.Min.y = minY;
+            rect_temp3.Max.x = maxX;
+            rect_temp3.Max.y = maxY;
+            return &rect_temp3;
+        }
+        static ImRect* ImRect_3(ImVec2& min, ImVec2& max) {
+            rect_temp3.Min.x = min.x;
+            rect_temp3.Min.y = min.y;
+            rect_temp3.Max.x = max.x;
+            rect_temp3.Max.y = max.y;
+            return &rect_temp3;
+        }
+        static ImRect* ImRect_4() {
+            rect_temp4.Min.x = 0;
+            rect_temp4.Min.y = 0;
+            rect_temp4.Max.x = 0;
+            rect_temp4.Max.y = 0;
+            return &rect_temp4;
+        }
+        static ImRect* ImRect_4(float minX, float minY, float maxX, float maxY) {
+            rect_temp4.Min.x = minX;
+            rect_temp4.Min.y = minY;
+            rect_temp4.Max.x = maxX;
+            rect_temp4.Max.y = maxY;
+            return &rect_temp4;
+        }
+        static ImRect* ImRect_4(ImVec2& min, ImVec2& max) {
+            rect_temp4.Min.x = min.x;
+            rect_temp4.Min.y = min.y;
+            rect_temp4.Max.x = max.x;
+            rect_temp4.Max.y = max.y;
+            return &rect_temp4;
+        }
+};
 
 class ImHelper {
     public:

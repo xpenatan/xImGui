@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 import imgui.ImGui;
+import imgui.ImTemp;
 import imgui.ImVec2;
 import imgui.example.nodeeditor.blueprint.BlueprintNodeBuilder;
 import imgui.example.nodeeditor.blueprint.Drawing;
@@ -50,7 +51,7 @@ public class BlueprintExample {
                     builder.Header(node.color);
 
                     ImGui.TextUnformatted(node.name);
-                    ImGui.Dummy(ImVec2.TMP_1.set(0, 28));
+                    ImGui.Dummy(ImTemp.ImVec2_1(0, 28));
 
                     if(hasOutputDelegates) {
 //                        ImGui::BeginVertical ("delegates", ImVec2(0, 28));
@@ -221,7 +222,7 @@ public class BlueprintExample {
 
             if(node != null) {
                 BuildNodes();
-                NodeEditor.SetNodePosition(node.id, ImVec2.TMP_1.set(mouseX, mouseY));
+                NodeEditor.SetNodePosition(node.id, ImTemp.ImVec2_1(mouseX, mouseY));
             }
 
             ImGui.EndPopup();

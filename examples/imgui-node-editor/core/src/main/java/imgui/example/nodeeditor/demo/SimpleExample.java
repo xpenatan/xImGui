@@ -1,6 +1,7 @@
 package imgui.example.nodeeditor.demo;
 
 import imgui.ImGui;
+import imgui.ImTemp;
 import imgui.ImVec2;
 import imgui.extension.nodeeditor.EditorContext;
 import imgui.extension.nodeeditor.NodeEditor;
@@ -11,7 +12,7 @@ public class SimpleExample {
     public static void render(EditorContext editorContext) {
         NodeEditor.SetCurrentEditor(editorContext);
 
-        NodeEditor.Begin("My Editor", ImVec2.TMP_1.set(0, 0));
+        NodeEditor.Begin("My Editor", ImTemp.ImVec2_1(0, 0));
 
         int uniqueId = 1;
         {

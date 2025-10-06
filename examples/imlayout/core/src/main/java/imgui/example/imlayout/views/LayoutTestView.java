@@ -8,6 +8,7 @@ import imgui.ImGuiButtonFlagsPrivate_;
 import imgui.ImGuiTableColumnFlags;
 import imgui.ImGuiTableFlags;
 import imgui.ImRect;
+import imgui.ImTemp;
 import imgui.ImVec2;
 import imgui.extension.imlayout.ImGuiLayout;
 import imgui.extension.imlayout.ImLayout;
@@ -68,7 +69,7 @@ public class LayoutTestView {
         ImGui.Text("Meeeeee!!!");
         ImLayout.EndLayout();
 
-        ImRect rect = ImRect.TMP_1.set(ImGui.GetItemRectMin(), ImGui.GetItemRectMax());
+        ImRect rect = ImTemp.ImRect_1(ImGui.GetItemRectMin(), ImGui.GetItemRectMax());
         int selectedColor = Color.toIntBits(255, 255, 255, 60);
         int houveredColor = Color.toIntBits(255, 255, 255, 60);
         int houveredStrokeColor = Color.toIntBits(255, 255, 255, 100);

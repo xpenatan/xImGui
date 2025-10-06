@@ -2,7 +2,7 @@ package imgui.example.basic.renderer;
 
 import com.badlogic.gdx.Gdx;
 import imgui.ImGui;
-import imgui.ImVec2;
+import imgui.ImTemp;
 import imgui.idl.helper.IDLFloatArray;
 
 public class PlotRenderer implements UIRenderer {
@@ -34,7 +34,7 @@ public class PlotRenderer implements UIRenderer {
         }
 
         String overlay = "FPS " + framesPerSecond;
-        ImGui.PlotLines("##Lines", floatArray, size, values_offset, overlay, 0.0f, maxScale, ImVec2.TMP_1.set(-1, 80.0f));
+        ImGui.PlotLines("##Lines", floatArray, size, values_offset, overlay, 0.0f, maxScale, ImTemp.ImVec2_1(-1, 80.0f));
     }
 
     @Override

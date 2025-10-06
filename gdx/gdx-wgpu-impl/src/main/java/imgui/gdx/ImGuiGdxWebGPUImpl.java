@@ -66,7 +66,6 @@ import com.github.xpenatan.webgpu.WGPUVectorBindGroupEntry;
 import com.github.xpenatan.webgpu.WGPUVectorBindGroupLayout;
 import com.github.xpenatan.webgpu.WGPUVectorBindGroupLayoutEntry;
 import com.github.xpenatan.webgpu.WGPUVectorColorTargetState;
-import com.github.xpenatan.webgpu.WGPUVectorInt;
 import com.github.xpenatan.webgpu.WGPUVectorRenderPassColorAttachment;
 import com.github.xpenatan.webgpu.WGPUVectorVertexAttribute;
 import com.github.xpenatan.webgpu.WGPUVectorVertexBufferLayout;
@@ -94,7 +93,6 @@ import imgui.idl.helper.IDLIntArray;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
-import java.util.HashMap;
 
 public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
 
@@ -104,11 +102,11 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
     private WGPURenderPipeline pipeline;
     private WGPUShaderModule shaderModule;
     private WGPUPipelineLayout pipelineLayout;
-    private WGPUBindGroupLayout uniformBindGroupLayout;
-    private WGPUBindGroupLayout textureBindGroupLayout;
+    private WGPUBindGroupLayout commonBindGroupLayout;
+    private WGPUBindGroupLayout imageBindGroupLayout;
     private WGPUSampler sampler;
     private WGPUBuffer uniformBuffer;
-    private WGPUBindGroup uniformBindGroup;
+    private WGPUBindGroup commonBindGroup;
     private WGPUTexture fontTexture;
     private WGPUTextureView fontTextureView;
     private WGPUBindGroup fontBindGroup;
@@ -176,6 +174,8 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
                 "};\n" +
                 "\n" +
                 "@group(0) @binding(0) var<uniform> uniforms: Uniforms;\n" +
+                "@group(0) @binding(1) var s: sampler;\n" +
+                "@group(1) @binding(0) var t: texture_2d<f32>;\n" +
                 "\n" +
                 "@vertex\n" +
                 "fn vs_main(in: VertexInput) -> VertexOutput {\n" +
@@ -185,9 +185,6 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
                 "    out.uv = in.uv;\n" +
                 "    return out;\n" +
                 "}\n" +
-                "\n" +
-                "@group(1) @binding(0) var s: sampler;\n" +
-                "@group(1) @binding(1) var t: texture_2d<f32>;\n" +
                 "\n" +
                 "@fragment\n" +
                 "fn fs_main(in: VertexOutput) -> @location(0) vec4<f32> {\n" +
@@ -214,8 +211,8 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
         WGPUPipelineLayoutDescriptor layoutDesc = WGPUPipelineLayoutDescriptor.obtain();
 
         WGPUVectorBindGroupLayout array = WGPUVectorBindGroupLayout.obtain();
-        array.push_back(uniformBindGroupLayout);
-        array.push_back(textureBindGroupLayout);
+        array.push_back(commonBindGroupLayout);
+        array.push_back(imageBindGroupLayout);
         layoutDesc.setBindGroupLayouts(array);
         pipelineLayout = new WGPUPipelineLayout();
         device.createPipelineLayout(layoutDesc, pipelineLayout);
@@ -296,7 +293,7 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
         int gammaSize = 1;
         int orthoProjSize = 16;
         int uniformSize = orthoProjSize * Float.BYTES + gammaSize * Float.BYTES;
-        int uniformAlign= (int)memAlign(uniformSize, 16);
+        int uniformAlign = (int)memAlign(uniformSize, 16);
 
         // Uniform buffer
         WGPUBufferDescriptor uniformDesc = WGPUBufferDescriptor.obtain();
@@ -306,21 +303,31 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
         uniformBuffer.setLabel("Uniform Buffer");
 
         // Uniform bind group
-        WGPUBindGroupDescriptor uniformBgDesc = WGPUBindGroupDescriptor.obtain();
-        uniformBgDesc.setLayout(uniformBindGroupLayout);
-        WGPUVectorBindGroupEntry entries = WGPUVectorBindGroupEntry.obtain();
+        WGPUVectorBindGroupEntry common_bg_entries = WGPUVectorBindGroupEntry.obtain();
 
         WGPUBindGroupEntry uniformEntry = WGPUBindGroupEntry.obtain();
-
         uniformEntry.setBinding(0);
         uniformEntry.setBuffer(uniformBuffer);
         uniformEntry.setSize(uniformAlign);
-        entries.push_back(uniformEntry);
+        uniformEntry.setSampler(WGPUSampler.NULL);
+        uniformEntry.setTextureView(WGPUTextureView.NULL);
+        common_bg_entries.push_back(uniformEntry);
 
-        uniformBgDesc.setEntries(entries);
-        uniformBindGroup = new WGPUBindGroup();
-        device.createBindGroup(uniformBgDesc, uniformBindGroup);
-        uniformBindGroup.setLabel("Uniform Bind Group");
+        WGPUBindGroupEntry sampleEntry = WGPUBindGroupEntry.obtain();
+        sampleEntry.setBinding(1);
+        uniformEntry.setSize(0);
+        sampleEntry.setSampler(sampler);
+        sampleEntry.setBuffer(WGPUBuffer.NULL);
+        sampleEntry.setTextureView(WGPUTextureView.NULL);
+        common_bg_entries.push_back(sampleEntry);
+
+        WGPUBindGroupDescriptor common_bg_descriptor = WGPUBindGroupDescriptor.obtain();
+        common_bg_descriptor.setLabel("common_bg_descriptor");
+        common_bg_descriptor.setLayout(commonBindGroupLayout);
+        common_bg_descriptor.setEntries(common_bg_entries);
+        commonBindGroup = new WGPUBindGroup();
+        device.createBindGroup(common_bg_descriptor, commonBindGroup);
+        commonBindGroup.setLabel("Uniform Bind Group");
 
         renderPass = new WGPURenderPassEncoder();
     }
@@ -336,35 +343,35 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
             entry.getBuffer().setType(WGPUBufferBindingType.Uniform);
             entries.push_back(entry);
 
-            WGPUBindGroupLayoutDescriptor desc = WGPUBindGroupLayoutDescriptor.obtain();
-            desc.setEntries(entries);
-            uniformBindGroupLayout = new WGPUBindGroupLayout();; // For uniforms
-            device.createBindGroupLayout(desc, uniformBindGroupLayout);
-            uniformBindGroupLayout.setLabel("Uniform Bind Group Layout");
+            WGPUBindGroupLayoutEntry samplerEntry = WGPUBindGroupLayoutEntry.obtain();
+            samplerEntry.setBinding(1);
+            samplerEntry.setVisibility(WGPUShaderStage.Fragment);
+            samplerEntry.getSampler().setType(WGPUSamplerBindingType.Filtering);
+            entries.push_back(samplerEntry);
+
+            WGPUBindGroupLayoutDescriptor common_bg_layout_desc = WGPUBindGroupLayoutDescriptor.obtain();
+            common_bg_layout_desc.setEntries(entries);
+            commonBindGroupLayout = new WGPUBindGroupLayout();
+            device.createBindGroupLayout(common_bg_layout_desc, commonBindGroupLayout);
+            commonBindGroupLayout.setLabel("Uniform Bind Group Layout");
         }
 
         {
             // texture/sampler
             WGPUVectorBindGroupLayoutEntry entries = WGPUVectorBindGroupLayoutEntry.obtain();
 
-            WGPUBindGroupLayoutEntry samplerEntry = WGPUBindGroupLayoutEntry.obtain();
-            samplerEntry.setBinding(0);
-            samplerEntry.setVisibility(WGPUShaderStage.Fragment);
-            samplerEntry.getSampler().setType(WGPUSamplerBindingType.Filtering);
-            entries.push_back(samplerEntry);
-
             WGPUBindGroupLayoutEntry textureEntry = WGPUBindGroupLayoutEntry.obtain();
-            textureEntry.setBinding(1);
+            textureEntry.setBinding(0);
             textureEntry.setVisibility(WGPUShaderStage.Fragment);
             textureEntry.getTexture().setSampleType(WGPUTextureSampleType.Float);
             textureEntry.getTexture().setViewDimension(WGPUTextureViewDimension._2D);
             entries.push_back(textureEntry);
 
-            WGPUBindGroupLayoutDescriptor desc = WGPUBindGroupLayoutDescriptor.obtain();
-            desc.setEntries(entries);
-            textureBindGroupLayout = new WGPUBindGroupLayout();; // For texture/sampler
-            device.createBindGroupLayout(desc, textureBindGroupLayout);
-            textureBindGroupLayout.setLabel("Texture Bind Group Layout");
+            WGPUBindGroupLayoutDescriptor image_bg_layout_desc = WGPUBindGroupLayoutDescriptor.obtain();
+            image_bg_layout_desc.setEntries(entries);
+            imageBindGroupLayout = new WGPUBindGroupLayout();
+            device.createBindGroupLayout(image_bg_layout_desc, imageBindGroupLayout);
+            imageBindGroupLayout.setLabel("Texture Bind Group Layout");
         }
     }
 
@@ -393,8 +400,8 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
         int heightValue = height.getValue(0);
 
         int size = bytesArray.getSize();
-        ByteBuffer buffer = ByteBuffer.allocateDirect(size);
-        buffer.order(ByteOrder.nativeOrder());
+        ByteBuffer buffer = ByteBuffer.allocateDirect(size)
+                .order(ByteOrder.LITTLE_ENDIAN);
         for (int i = 0; i < size; i++) {
             buffer.put(i, bytesArray.getValue(i));
         }
@@ -436,27 +443,30 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
         fontTexture.createView(viewDesc, fontTextureView);
         fontTextureView.setLabel("Font Texture View");
 
+        fontBindGroup = createImageBindGroup(imageBindGroupLayout, fontTextureView);
+
+        IDLBase textureId = new IDLBase();
+        textureId.native_copy(fontTextureView);
+        io.get_Fonts().set_TexID(textureId);
+    }
+
+    private WGPUBindGroup createImageBindGroup(WGPUBindGroupLayout layout, WGPUTextureView texture) {
         WGPUVectorBindGroupEntry entries = WGPUVectorBindGroupEntry.obtain();
         {
-            WGPUBindGroupEntry sampEntry = WGPUBindGroupEntry.obtain();
-            sampEntry.setBinding(0);
-            sampEntry.setSampler(sampler);
-            entries.push_back(sampEntry);
-        }
-        {
             WGPUBindGroupEntry texEntry = WGPUBindGroupEntry.obtain();
-            texEntry.setBinding(1);
-            texEntry.setTextureView(fontTextureView);
+            texEntry.setBinding(0);
+            texEntry.setTextureView(texture);
             entries.push_back(texEntry);
         }
         WGPUBindGroupDescriptor bgDesc = WGPUBindGroupDescriptor.obtain();
-        bgDesc.setLayout(textureBindGroupLayout);
+        bgDesc.setLabel("font WGPUBindGroupDescriptor");
+        bgDesc.setLayout(layout);
         bgDesc.setEntries(entries);
-        fontBindGroup = new WGPUBindGroup();
-        device.createBindGroup(bgDesc, fontBindGroup);
-        fontBindGroup.setLabel("fontBindGroup");
 
-        io.SetFontTexID(fontTextureView.native_address);
+        WGPUBindGroup bindGroup = new WGPUBindGroup();
+        device.createBindGroup(bgDesc, bindGroup);
+        bindGroup.setLabel("fontBindGroup");
+        return bindGroup;
     }
 
     @Override
@@ -470,16 +480,16 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
         shaderModule.dispose();
         pipelineLayout.release();
         pipelineLayout.dispose();
-        uniformBindGroupLayout.release();
-        uniformBindGroupLayout.dispose();
-        textureBindGroupLayout.release();
-        textureBindGroupLayout.dispose();
+        commonBindGroupLayout.release();
+        commonBindGroupLayout.dispose();
+        imageBindGroupLayout.release();
+        imageBindGroupLayout.dispose();
         sampler.release();
         sampler.dispose();
         uniformBuffer.release();
         uniformBuffer.dispose();
-        uniformBindGroup.release();
-        uniformBindGroup.dispose();
+        commonBindGroup.release();
+        commonBindGroup.dispose();
         fontTexture.release();
         fontTexture.dispose();
         fontTextureView.release();
@@ -636,7 +646,8 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
             float gamma = 2.2f;
             int gamaSize = 1 * Float.BYTES;
 
-            ByteBuffer projBuffer = ByteBuffer.allocateDirect(prjSize + gamaSize).order(ByteOrder.LITTLE_ENDIAN);
+            ByteBuffer projBuffer = ByteBuffer.allocateDirect(prjSize + gamaSize)
+                    .order(ByteOrder.LITTLE_ENDIAN);
             FloatBuffer floatView = projBuffer.asFloatBuffer();
             floatView.put(orthoProj);
             floatView.put(gamma);
@@ -653,7 +664,7 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
         renderPass.setVertexBuffer(0, vertexBuffer, 0, vertexBufferSize * 20);
         renderPass.setIndexBuffer(indexBuffer, WGPUIndexFormat.Uint16, 0, indexBufferSize * 2);
         renderPass.setPipeline(pipeline);
-        renderPass.setBindGroup(0, uniformBindGroup);
+        renderPass.setBindGroup(0, commonBindGroup);
 
         // Setup blend factor
         WGPUColor color = WGPUColor.obtain();
@@ -664,6 +675,7 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
     private void setupBuffers(int totalVtxCount, int totalIdxCount) {
         if (totalVtxCount > vertexBufferSize) {
             if (vertexBuffer != null) {
+                vertexBuffer.destroy();
                 vertexBuffer.release();
                 vertexBuffer.dispose();
             }
@@ -681,6 +693,7 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
         }
         if (totalIdxCount > indexBufferSize) {
             if (indexBuffer != null) {
+                indexBuffer.destroy();
                 indexBuffer.release();
                 indexBuffer.dispose();
             }

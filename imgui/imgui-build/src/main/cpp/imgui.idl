@@ -1,3 +1,44 @@
+[NoDelete]
+interface ImTemp {
+    [BindTo="ImVec2_1"] static ImVec2 ImVec2_1__0();
+    [BindTo="ImVec2_1"] static ImVec2 ImVec2_1__1(float x, float y);
+    [BindTo="ImVec2_1"] static ImVec2 ImVec2_1__2([Ref] ImVec2 other);
+    [BindTo="ImVec2_2"] static ImVec2 ImVec2_2__0();
+    [BindTo="ImVec2_2"] static ImVec2 ImVec2_2__1(float x, float y);
+    [BindTo="ImVec2_2"] static ImVec2 ImVec2_2__2([Ref] ImVec2 other);
+    [BindTo="ImVec2_3"] static ImVec2 ImVec2_3__0();
+    [BindTo="ImVec2_3"] static ImVec2 ImVec2_3__1(float x, float y);
+    [BindTo="ImVec2_3"] static ImVec2 ImVec2_3__2([Ref] ImVec2 other);
+    [BindTo="ImVec2_4"] static ImVec2 ImVec2_4__0();
+    [BindTo="ImVec2_4"] static ImVec2 ImVec2_4__1(float x, float y);
+    [BindTo="ImVec2_4"] static ImVec2 ImVec2_4__2([Ref] ImVec2 other);
+
+    [BindTo="ImVec4_1"] static ImVec4 ImVec4_1__0();
+    [BindTo="ImVec4_1"] static ImVec4 ImVec4_1__1(float x, float y, float z, float w);
+    [BindTo="ImVec4_1"] static ImVec4 ImVec4_1__2([Ref] ImVec4 other);
+    [BindTo="ImVec4_2"] static ImVec4 ImVec4_2__0();
+    [BindTo="ImVec4_2"] static ImVec4 ImVec4_2__1(float x, float y, float z, float w);
+    [BindTo="ImVec4_2"] static ImVec4 ImVec4_2__2([Ref] ImVec4 other);
+    [BindTo="ImVec4_3"] static ImVec4 ImVec4_3__0();
+    [BindTo="ImVec4_3"] static ImVec4 ImVec4_3__1(float x, float y, float z, float w);
+    [BindTo="ImVec4_3"] static ImVec4 ImVec4_3__2([Ref] ImVec4 other);
+    [BindTo="ImVec4_4"] static ImVec4 ImVec4_4__0();
+    [BindTo="ImVec4_4"] static ImVec4 ImVec4_4__1(float x, float y, float z, float w);
+    [BindTo="ImVec4_4"] static ImVec4 ImVec4_4__2([Ref] ImVec4 other);
+
+    [BindTo="ImRect_1"] static ImRect ImRect_1__0();
+    [BindTo="ImRect_1"] static ImRect ImRect_1__1(float minX, float minY, float maxX, float maxY);
+    [BindTo="ImRect_1"] static ImRect ImRect_1__2([Ref] ImVec2 min, [Ref] ImVec2 max);
+    [BindTo="ImRect_2"] static ImRect ImRect_2__0();
+    [BindTo="ImRect_2"] static ImRect ImRect_2__1(float minX, float minY, float maxX, float maxY);
+    [BindTo="ImRect_2"] static ImRect ImRect_2__2([Ref] ImVec2 min, [Ref] ImVec2 max);
+    [BindTo="ImRect_3"] static ImRect ImRect_3__0();
+    [BindTo="ImRect_3"] static ImRect ImRect_3__1(float minX, float minY, float maxX, float maxY);
+    [BindTo="ImRect_3"] static ImRect ImRect_3__2([Ref] ImVec2 min, [Ref] ImVec2 max);
+    [BindTo="ImRect_4"] static ImRect ImRect_4__0();
+    [BindTo="ImRect_4"] static ImRect ImRect_4__1(float minX, float minY, float maxX, float maxY);
+    [BindTo="ImRect_4"] static ImRect ImRect_4__2([Ref] ImVec2 min, [Ref] ImVec2 max);
+};
 
 [NoDelete, Prefix="ImGuiWrapper::"]
 interface ImGuiInternal {

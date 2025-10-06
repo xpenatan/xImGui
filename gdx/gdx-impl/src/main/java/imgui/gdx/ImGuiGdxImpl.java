@@ -148,7 +148,9 @@ public class ImGuiGdxImpl implements ImGuiImpl {
                 GL20.GL_UNSIGNED_BYTE, buffer);
 
         BufferUtils.disposeUnsafeByteBuffer(buffer);
-        io.SetFontTexID(g_FontTexture);
+        IDLBase textureId = new IDLBase();
+        textureId.native_setVoid(g_FontTexture);
+        io.get_Fonts().set_TexID(textureId);
     }
 
     private void createBufferObject() {

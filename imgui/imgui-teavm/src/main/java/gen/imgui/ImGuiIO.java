@@ -8,8 +8,6 @@
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
-import gen.imgui.idl.helper.IDLByteArray;
-import gen.imgui.idl.helper.IDLIntArray;
 
 public class ImGuiIO extends IDLBase {
 
@@ -32,172 +30,6 @@ public class ImGuiIO extends IDLBase {
 
     public ImGuiIO(boolean cMemoryOwn) {
     }
-
-    // public boolean ContainsConfigFlags(ImGuiConfigFlags flags) {
-    // return ContainsConfigFlagsNATIVE(getCPointer(), flags.getValue());
-    // }
-    // 
-    // /*[-TEAVM;-NATIVE]
-    // var io = [MODULE].wrapPointer(addr, [MODULE].ImGuiIO);
-    // var newFlag = io.get_ConfigFlags() & flag;
-    // return newFlag == flag;
-    // */
-    // /*[-JNI;-NATIVE]
-    // ImGuiIO* io = (ImGuiIO*)addr;
-    // int newFlag = io->ConfigFlags & flag;
-    // return newFlag == flag;
-    // */
-    // private static native boolean ContainsConfigFlagsNATIVE(long addr, int flag);
-    public void SetDockingFlags(boolean ConfigDockingNoSplit, boolean ConfigDockingWithShift, boolean ConfigDockingAlwaysTabBar, boolean ConfigDockingTransparentPayload) {
-        SetDockingFlagsNATIVE((int) native_address, ConfigDockingNoSplit, ConfigDockingWithShift, ConfigDockingAlwaysTabBar, ConfigDockingTransparentPayload);
-    }
-
-    /*
-      [-TEAVM;-NATIVE]
-              var io = [MODULE].wrapPointer(addr, [MODULE].ImGuiIO);
-              io.set_ConfigDockingNoSplit(ConfigDockingNoSplit);
-              io.set_ConfigDockingWithShift(ConfigDockingWithShift);
-              io.set_ConfigDockingAlwaysTabBar(ConfigDockingAlwaysTabBar);
-              io.set_ConfigDockingTransparentPayload(ConfigDockingTransparentPayload);
-    */
-    @org.teavm.jso.JSBody(params = {"addr", "ConfigDockingNoSplit", "ConfigDockingWithShift", "ConfigDockingAlwaysTabBar", "ConfigDockingTransparentPayload"}, script = "var io = imgui.wrapPointer(addr, imgui.ImGuiIO); io.set_ConfigDockingNoSplit(ConfigDockingNoSplit); io.set_ConfigDockingWithShift(ConfigDockingWithShift); io.set_ConfigDockingAlwaysTabBar(ConfigDockingAlwaysTabBar); io.set_ConfigDockingTransparentPayload(ConfigDockingTransparentPayload);")
-    private static native void SetDockingFlagsNATIVE(int addr, boolean ConfigDockingNoSplit, boolean ConfigDockingWithShift, boolean ConfigDockingAlwaysTabBar, boolean ConfigDockingTransparentPayload);
-
-    public void SetFontGlobalScale(float scale) {
-        SetFontGlobalScaleNATIVE((int) native_address, scale);
-    }
-
-    /*
-      [-TEAVM;-NATIVE]
-              var io = [MODULE].wrapPointer(addr, [MODULE].ImGuiIO);
-              io.set_FontGlobalScale(scale);
-    */
-    @org.teavm.jso.JSBody(params = {"addr", "scale"}, script = "var io = imgui.wrapPointer(addr, imgui.ImGuiIO); io.set_FontGlobalScale(scale);")
-    private static native void SetFontGlobalScaleNATIVE(int addr, float scale);
-
-    public boolean getWantCaptureMouse() {
-        return getWantCaptureMouseNATIVE((int) native_address);
-    }
-
-    /*
-      [-TEAVM;-NATIVE]
-              var io = [MODULE].wrapPointer(addr, [MODULE].ImGuiIO);
-              return io.get_WantCaptureMouse();
-    */
-    @org.teavm.jso.JSBody(params = {"addr"}, script = "var io = imgui.wrapPointer(addr, imgui.ImGuiIO); return io.get_WantCaptureMouse();")
-    private static native boolean getWantCaptureMouseNATIVE(int addr);
-
-    // TODO fix replace. generator not yet cast int on multiple methods.
-    // /*[-TEAVM;-REPLACE]
-    // public void setIniFilename(String fileName) {
-    // long cPointer1 = getCPointer();
-    // if(fileName == null) {
-    // removeIniFilenameNATIVE((int)cPointer1);
-    // }else {
-    // setIniFilenameNATIVE((int)cPointer1, fileName.getBytes());
-    // }
-    // }
-    // */
-    // public void setIniFilename(String fileName) {
-    // long cPointer1 = getCPointer();
-    // if(fileName == null) {
-    // removeIniFilenameNATIVE(cPointer1);
-    // }else {
-    // setIniFilenameNATIVE(cPointer1, fileName.getBytes());
-    // }
-    // }
-    // 
-    // /*[-TEAVM;-NATIVE]
-    // var io = [MODULE].wrapPointer(addr, [MODULE].ImGuiIO);
-    // [MODULE].ImHelper.prototype.setIniFilename(io, fileName);
-    // */
-    // /*[-JNI;-NATIVE]
-    // ImGuiIO* io = (ImGuiIO*)addr;
-    // io->IniFilename = fileName.data;
-    // */
-    // private static native void setIniFilenameNATIVE(long addr, byte[] fileName);
-    // 
-    // /*[-TEAVM;-NATIVE]
-    // var io = [MODULE].wrapPointer(addr, [MODULE].ImGuiIO);
-    // [MODULE].ImHelper.prototype.removeIniFilename(io);
-    // */
-    // /*[-JNI;-NATIVE]
-    // ImGuiIO* io = (ImGuiIO*)addr;
-    // io->IniFilename = NULL;
-    // */
-    // private static native void removeIniFilenameNATIVE(long addr);
-    public boolean containsIniFilename() {
-        return containsIniFilenameNATIVE((int) native_address);
-    }
-
-    /*
-      [-TEAVM;-NATIVE]
-              var io = [MODULE].wrapPointer(addr, [MODULE].ImGuiIO);
-              return [MODULE].ImHelper.prototype.containsIniFilename();
-    */
-    @org.teavm.jso.JSBody(params = {"addr"}, script = "var io = imgui.wrapPointer(addr, imgui.ImGuiIO); return imgui.ImHelper.prototype.containsIniFilename();")
-    private static native boolean containsIniFilenameNATIVE(int addr);
-
-    public void SetFontTexID(long id) {
-        SetFontTexIDNATIVE((int) native_address, (int) id);
-    }
-
-    /*
-      [-TEAVM;-NATIVE]
-              var io = [MODULE].wrapPointer(addr, [MODULE].ImGuiIO);
-              io.get_Fonts().set_TexID(id);
-    */
-    @org.teavm.jso.JSBody(params = {"addr", "id"}, script = "var io = imgui.wrapPointer(addr, imgui.ImGuiIO); io.get_Fonts().set_TexID(id);")
-    private static native void SetFontTexIDNATIVE(int addr, int id);
-
-    public void UpdateKeyTyped(int c) {
-        updateKeyTyped((int) native_address, c);
-    }
-
-    /*
-      [-TEAVM;-NATIVE]
-              var io = [MODULE].wrapPointer(addr, [MODULE].ImGuiIO);
-              if (c > 0 && c < 0x10000)
-                  io.AddInputCharacter(c);
-    */
-    @org.teavm.jso.JSBody(params = {"addr", "c"}, script = "var io = imgui.wrapPointer(addr, imgui.ImGuiIO); if (c > 0 && c < 0x10000) io.AddInputCharacter(c);")
-    private static native void updateKeyTyped(int addr, int c);
-
-    public void AddMousePosEvent(float x, float y) {
-        AddMousePosEventNATIVE((int) native_address, x, y);
-    }
-
-    /*
-      [-TEAVM;-NATIVE]
-              var io = [MODULE].wrapPointer(addr, [MODULE].ImGuiIO);
-              io.AddMousePosEvent(x, y);
-    */
-    @org.teavm.jso.JSBody(params = {"addr", "x", "y"}, script = "var io = imgui.wrapPointer(addr, imgui.ImGuiIO); io.AddMousePosEvent(x, y);")
-    private static native void AddMousePosEventNATIVE(int addr, float x, float y);
-
-    public void AddMouseButtonEvent(int button, boolean down) {
-        AddMouseButtonEventNATIVE((int) native_address, button, down);
-    }
-
-    /*
-      [-TEAVM;-NATIVE]
-              var io = [MODULE].wrapPointer(addr, [MODULE].ImGuiIO);
-              io.AddMouseButtonEvent(button, down);
-    */
-    @org.teavm.jso.JSBody(params = {"addr", "button", "down"}, script = "var io = imgui.wrapPointer(addr, imgui.ImGuiIO); io.AddMouseButtonEvent(button, down);")
-    private static native void AddMouseButtonEventNATIVE(int addr, int button, boolean down);
-
-    public void AddMouseWheelEvent(float xOffset, float yOffset) {
-        AddMouseWheelEventNATIVE((int) native_address, xOffset, yOffset);
-    }
-
-    /*
-      [-TEAVM;-NATIVE]
-              var io = [MODULE].wrapPointer(addr, [MODULE].ImGuiIO);
-              io.AddMouseWheelEvent(xOffset, yOffset);
-    */
-    @org.teavm.jso.JSBody(params = {"addr", "xOffset", "yOffset"}, script = "var io = imgui.wrapPointer(addr, imgui.ImGuiIO); io.AddMouseWheelEvent(xOffset, yOffset);")
-    private static native void AddMouseWheelEventNATIVE(int addr, float xOffset, float yOffset);
 
     public void SetClipboardTextFunction(ClipboardTextFunction function) {
         setClipboardTextFunctionNATIVE((int) native_address, function.native_address);
@@ -223,6 +55,42 @@ public class ImGuiIO extends IDLBase {
     */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiIO);imgui.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
+
+    public void AddMouseWheelEvent(float wheel_x, float wheel_y) {
+        internal_native_AddMouseWheelEvent(native_address, wheel_x, wheel_y);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiIO);
+      jsObj.AddMouseWheelEvent(wheel_x, wheel_y);
+    */
+    @org.teavm.jso.JSBody(params = {"this_addr", "wheel_x", "wheel_y"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiIO);jsObj.AddMouseWheelEvent(wheel_x, wheel_y);")
+    public static native void internal_native_AddMouseWheelEvent(int this_addr, float wheel_x, float wheel_y);
+
+    public void AddMouseButtonEvent(int button, boolean down) {
+        internal_native_AddMouseButtonEvent(native_address, button, down);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiIO);
+      jsObj.AddMouseButtonEvent(button, down);
+    */
+    @org.teavm.jso.JSBody(params = {"this_addr", "button", "down"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiIO);jsObj.AddMouseButtonEvent(button, down);")
+    public static native void internal_native_AddMouseButtonEvent(int this_addr, int button, boolean down);
+
+    public void AddMousePosEvent(float x, float y) {
+        internal_native_AddMousePosEvent(native_address, x, y);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiIO);
+      jsObj.AddMousePosEvent(x, y);
+    */
+    @org.teavm.jso.JSBody(params = {"this_addr", "x", "y"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiIO);jsObj.AddMousePosEvent(x, y);")
+    public static native void internal_native_AddMousePosEvent(int this_addr, float x, float y);
 
     public void AddKeyEvent(ImGuiKey ImGuiKey, boolean down) {
         internal_native_AddKeyEvent(native_address, (int) ImGuiKey.getValue(), down);

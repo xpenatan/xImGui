@@ -15,6 +15,7 @@ import imgui.ImGuiStyleVar;
 import imgui.ImGuiTabBarFlags;
 import imgui.ImGuiViewport;
 import imgui.ImGuiWindowFlags;
+import imgui.ImTemp;
 import imgui.ImVec2;
 import imgui.ImVec4;
 import imgui.example.basic.renderer.ColorRenderer;
@@ -72,15 +73,15 @@ public class BasicExample extends ImGuiRenderer {
             renderDock();
         }
         else {
-            ImGui.ShowDemoWindow();
+//            ImGui.ShowDemoWindow();
+//
+//            if(init == false) {
+//                init = true;
+//                ImGui.SetNextWindowSize(new ImVec2(400, 400), ImGuiCond.ImGuiCond_Once);
+//            }
 
-            if(init == false) {
-                init = true;
-                ImGui.SetNextWindowSize(new ImVec2(400, 400), ImGuiCond.ImGuiCond_Once);
-            }
-
-            ImGui.Begin("Hello World");
-            renderItems();
+            ImGui.Begin("Hello");
+//            renderItems();
             ImGui.End();
         }
     }
@@ -124,12 +125,12 @@ public class BasicExample extends ImGuiRenderer {
         ImGui.SetNextWindowSize(imGuiViewport.get_Size());
 
         // Create docking space
-        ImGui.PushStyleVar(ImGuiStyleVar.WindowPadding, ImVec2.TMP_1.set(0.0f, 0.0f));
+        ImGui.PushStyleVar(ImGuiStyleVar.WindowPadding, ImTemp.ImVec2_1(0.0f, 0.0f));
         ImGui.Begin("DockSpace111", null, window_flags);
         ImGui.PopStyleVar();
 
         dockspace_id = ImGui.GetID("MyDockSpace");
-        ImGui.DockSpace(dockspace_id, ImVec2.TMP_1.set(0f, 0f), dockspace_flags);
+        ImGui.DockSpace(dockspace_id, ImTemp.ImVec2_1(0f, 0f), dockspace_flags);
 
         ImGui.End();
         // End of docking space
