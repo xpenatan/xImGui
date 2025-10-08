@@ -14,7 +14,7 @@ public class VecIdxBuffer extends IDLBase {
 
     private IDLBase IDLBase_TEMP_GEN_0;
 
-    @org.teavm.jso.JSBody(params = { "this_addr", "size", "outOffset", "bytes_addr" }, script = "" + "var jsObj = imgui.wrapPointer(this_addr, imgui.VecIdxBuffer);" + "var data = jsObj.get_Data() + outOffset;" + "var dataOut = imgui.HEAPU8.subarray(data, data + size);" + "bytes_addr.set(dataOut);")
+    @org.teavm.jso.JSBody(params = { "this_addr", "size", "outOffset", "bytes_addr" }, script = "" + "var jsObj = imgui.wrapPointer(this_addr, imgui.VecIdxBuffer);" + "var data = jsObj.get_Data();" + "var dataOut = imgui.HEAPU8.subarray(data, data + size);" + "bytes_addr.set(dataOut, outOffset);")
     private static native void internal_native_get_ByteBuffer(int this_addr, int size, int outOffset, org.teavm.jso.JSObject bytes_addr);
 
     public final static VecIdxBuffer NULL = native_new();
@@ -42,9 +42,9 @@ public class VecIdxBuffer extends IDLBase {
       [-TEAVM;-REPLACE]
               @org.teavm.jso.JSBody(params = {"this_addr", "size",  "outOffset", "bytes_addr"}, script = "" +
                   "var jsObj = [MODULE].wrapPointer(this_addr, [MODULE].VecIdxBuffer);" +
-                  "var data = jsObj.get_Data() + outOffset;" +
+                  "var data = jsObj.get_Data();" +
                   "var dataOut = [MODULE].HEAPU8.subarray(data, data + size);" +
-                  "bytes_addr.set(dataOut);"
+                  "bytes_addr.set(dataOut, outOffset);"
               )
               private static native void internal_native_get_ByteBuffer(int this_addr, long size, long outOffset, org.teavm.jso.JSObject bytes_addr);
     */

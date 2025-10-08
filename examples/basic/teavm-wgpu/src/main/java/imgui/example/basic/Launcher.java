@@ -13,6 +13,7 @@ public class Launcher {
         TeaApplicationConfiguration config = new TeaApplicationConfiguration();
         config.width = 0;
         config.height = 0;
+        config.usePhysicalPixels = true;
         new WgTeaApplication(new ImGuiGame(), config);
     }
 }

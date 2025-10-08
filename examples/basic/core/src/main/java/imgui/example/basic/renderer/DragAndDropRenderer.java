@@ -24,7 +24,7 @@ public class DragAndDropRenderer implements UIRenderer {
         ImGui.Text("Drag here");
         if(ImGui.BeginDragDropTarget()) {
             ImGuiPayload dragDropPayload = ImGui.AcceptDragDropPayload("DRAG_ENTITY_ID");
-            if(dragDropPayload != null) {
+            if(!dragDropPayload.native_isNULL()) {
                 System.out.println("dragDropPayload");
                 int data1 = dragDropPayload.get_Data();
                 System.out.println("Value: " + data1);

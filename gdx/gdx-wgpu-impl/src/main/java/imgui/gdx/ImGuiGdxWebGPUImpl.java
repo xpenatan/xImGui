@@ -541,30 +541,32 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
         int vtxOffset = 0;
         int idxOffset = 0;
 
-
         boolean fullBuffer = true;
 
         if(fullBuffer) {
+            int vb_write_align_size = (int)memAlign(totalVtxCountBytes, 4);
+            int ib_write_align_size = (int)memAlign(totalIdxCountBytes, 4);
+
             int vtxBufferSize = 0;
             if(vertexByteBuffer != null) {
                 vtxBufferSize = vertexByteBuffer.capacity();
             }
-            if(totalVtxCountBytes > vtxBufferSize) {
+            if(vb_write_align_size > vtxBufferSize) {
                 if(vertexByteBuffer != null) {
                     BufferUtils.disposeUnsafeByteBuffer(vertexByteBuffer);
                 }
-                vertexByteBuffer = BufferUtils.newUnsafeByteBuffer(totalVtxCountBytes);
+                vertexByteBuffer = BufferUtils.newUnsafeByteBuffer(vb_write_align_size);
             }
 
             int idxBufferSize = 0;
             if(indexByteBuffer != null) {
                 idxBufferSize = indexByteBuffer.capacity();
             }
-            if(totalIdxCountBytes > idxBufferSize) {
+            if(ib_write_align_size > idxBufferSize) {
                 if(indexByteBuffer != null) {
                     BufferUtils.disposeUnsafeByteBuffer(indexByteBuffer);
                 }
-                indexByteBuffer = BufferUtils.newUnsafeByteBuffer(totalIdxCountBytes);
+                indexByteBuffer = BufferUtils.newUnsafeByteBuffer(ib_write_align_size);
             }
 
             for (int n = 0; n < cmdListsCount; n++) {
@@ -581,8 +583,6 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
                 vtxOffset += vtxByteSize;
                 idxOffset += idxByteSize;
             }
-            int vb_write_align_size = (int)memAlign(vtxOffset, 4);
-            int ib_write_align_size = (int)memAlign(idxOffset, 4);
 
             device.getQueue().writeBuffer(vertexBuffer, 0, vertexByteBuffer, vb_write_align_size);
             device.getQueue().writeBuffer(indexBuffer, 0, indexByteBuffer, ib_write_align_size);
@@ -682,12 +682,12 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
                 if(clip_minY < 0) clip_minY = 0;
                 if(clip_maxX > fb_width) { clip_maxX = fb_width; }
                 if(clip_maxY > fb_height) { clip_maxY = fb_height; }
-//                if(clip_maxX <= clip_minX || clip_maxY <= clip_minY) {
-//                    continue;
-//                }
+                if(clip_maxX <= clip_minX || clip_maxY <= clip_minY) {
+                    continue;
+                }
                 WGPUBindGroup bg = fontBindGroup;
                 renderPass.setBindGroup(1, bg);
-//                renderPass.setScissorRect((int) clip_minX, (int) clip_minY, (int) (clip_maxX - clip_minX), (int) (clip_maxY - clip_minY));
+                renderPass.setScissorRect((int) clip_minX, (int) clip_minY, (int) (clip_maxX - clip_minX), (int) (clip_maxY - clip_minY));
                 renderPass.drawIndexed(pcmd.get_ElemCount(), 1, pcmd.get_IdxOffset() + global_idx_offset, pcmd.get_VtxOffset() + global_vtx_offset, 0);
             }
 
