@@ -941,10 +941,20 @@ class ImHelper {
             memcpy(destination, drawList->VtxBuffer.Data, num);
         }
 
-        static void memcpyFont(ImFontAtlas* fontAtlas, IDLByteArray* byteArray, int* width, int* height) {
+        static void memcpyFont32(ImFontAtlas* fontAtlas, IDLByteArray* byteArray, int* width, int* height) {
             unsigned char* pixels;
             fontAtlas->GetTexDataAsRGBA32(&pixels, width, height);
             int size = (*width) * (*height) * 4;
+            byteArray->resize(size);
+            for(int i = 0; i < size; i++) {
+                byteArray->setValue(i, pixels[i]);
+            }
+        }
+
+        static void memcpyFont8(ImFontAtlas* fontAtlas, IDLByteArray* byteArray, int* width, int* height) {
+            unsigned char* pixels;
+            fontAtlas->GetTexDataAsAlpha8(&pixels, width, height);
+            int size = (*width) * (*height);
             byteArray->resize(size);
             for(int i = 0; i < size; i++) {
                 byteArray->setValue(i, pixels[i]);

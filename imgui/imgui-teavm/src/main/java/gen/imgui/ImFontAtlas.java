@@ -38,6 +38,10 @@ public class ImFontAtlas extends IDLBase {
         GetTexDataAsRGBA32NATIVE((int) native_address, (int) pixelBuffer.native_address, (int) outWidth.native_address, (int) outHeight.native_address);
     }
 
+    public void GetTexDataAsAlpha8(IDLByteArray pixelBuffer, IDLIntArray outWidth, IDLIntArray outHeight) {
+        GetTexDataAsAlpha8((int) native_address, (int) pixelBuffer.native_address, (int) outWidth.native_address, (int) outHeight.native_address);
+    }
+
     /*
       [-TEAVM;-NATIVE]
               var fontAtlas = [MODULE].wrapPointer(addr, [MODULE].ImFontAtlas);
@@ -46,10 +50,23 @@ public class ImFontAtlas extends IDLBase {
               var heightIntArray = [MODULE].wrapPointer(heightAddr, [MODULE].IDLIntArray);
               var widthArr = widthIntArray.getPointer();
               var heightArr = heightIntArray.getPointer();
-              [MODULE].ImHelper.prototype.memcpyFont(fontAtlas, pixelBufferArray, widthArr, heightArr);
+              [MODULE].ImHelper.prototype.memcpyFont32(fontAtlas, pixelBufferArray, widthArr, heightArr);
     */
-    @org.teavm.jso.JSBody(params = {"addr", "pixelBufferAddr", "widthAddr", "heightAddr"}, script = "var fontAtlas = imgui.wrapPointer(addr, imgui.ImFontAtlas); var pixelBufferArray = imgui.wrapPointer(pixelBufferAddr, imgui.IDLByteArray); var widthIntArray = imgui.wrapPointer(widthAddr, imgui.IDLIntArray); var heightIntArray = imgui.wrapPointer(heightAddr, imgui.IDLIntArray); var widthArr = widthIntArray.getPointer(); var heightArr = heightIntArray.getPointer(); imgui.ImHelper.prototype.memcpyFont(fontAtlas, pixelBufferArray, widthArr, heightArr);")
+    @org.teavm.jso.JSBody(params = {"addr", "pixelBufferAddr", "widthAddr", "heightAddr"}, script = "var fontAtlas = imgui.wrapPointer(addr, imgui.ImFontAtlas); var pixelBufferArray = imgui.wrapPointer(pixelBufferAddr, imgui.IDLByteArray); var widthIntArray = imgui.wrapPointer(widthAddr, imgui.IDLIntArray); var heightIntArray = imgui.wrapPointer(heightAddr, imgui.IDLIntArray); var widthArr = widthIntArray.getPointer(); var heightArr = heightIntArray.getPointer(); imgui.ImHelper.prototype.memcpyFont32(fontAtlas, pixelBufferArray, widthArr, heightArr);")
     private static native void GetTexDataAsRGBA32NATIVE(int addr, int pixelBufferAddr, int widthAddr, int heightAddr);
+
+    /*
+      [-TEAVM;-NATIVE]
+              var fontAtlas = [MODULE].wrapPointer(addr, [MODULE].ImFontAtlas);
+              var pixelBufferArray = [MODULE].wrapPointer(pixelBufferAddr, [MODULE].IDLByteArray);
+              var widthIntArray = [MODULE].wrapPointer(widthAddr, [MODULE].IDLIntArray);
+              var heightIntArray = [MODULE].wrapPointer(heightAddr, [MODULE].IDLIntArray);
+              var widthArr = widthIntArray.getPointer();
+              var heightArr = heightIntArray.getPointer();
+              [MODULE].ImHelper.prototype.memcpyFont8(fontAtlas, pixelBufferArray, widthArr, heightArr);
+    */
+    @org.teavm.jso.JSBody(params = {"addr", "pixelBufferAddr", "widthAddr", "heightAddr"}, script = "var fontAtlas = imgui.wrapPointer(addr, imgui.ImFontAtlas); var pixelBufferArray = imgui.wrapPointer(pixelBufferAddr, imgui.IDLByteArray); var widthIntArray = imgui.wrapPointer(widthAddr, imgui.IDLIntArray); var heightIntArray = imgui.wrapPointer(heightAddr, imgui.IDLIntArray); var widthArr = widthIntArray.getPointer(); var heightArr = heightIntArray.getPointer(); imgui.ImHelper.prototype.memcpyFont8(fontAtlas, pixelBufferArray, widthArr, heightArr);")
+    private static native void GetTexDataAsAlpha8(int addr, int pixelBufferAddr, int widthAddr, int heightAddr);
 
     protected void deleteNative() {
         internal_native_deleteNative(native_address);

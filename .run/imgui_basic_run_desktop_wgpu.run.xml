@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="imgui_basic_run_desktop_wgpu" type="GradleRunConfiguration" factoryName="Gradle" folderName="ImGui-Demos">
+  <configuration default="false" name="imgui_basic_run_desktop_wgpu" type="GradleRunConfiguration" factoryName="Gradle" folderName="ImGui-Demos" singleton="false">
     <ExternalSystemSettings>
       <option name="executionName" />
       <option name="externalProjectPath" value="$PROJECT_DIR$/examples/basic/desktop-wgpu" />

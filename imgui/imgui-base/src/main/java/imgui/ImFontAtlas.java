@@ -25,6 +25,10 @@ public class ImFontAtlas extends IDLBase {
         GetTexDataAsRGBA32NATIVE(native_address, pixelBuffer.native_address, outWidth.native_address, outHeight.native_address);
     }
 
+    public void GetTexDataAsAlpha8(IDLByteArray pixelBuffer, IDLIntArray outWidth, IDLIntArray outHeight) {
+        GetTexDataAsAlpha8(native_address, pixelBuffer.native_address, outWidth.native_address, outHeight.native_address);
+    }
+
     /*[-TEAVM;-NATIVE]
         var fontAtlas = [MODULE].wrapPointer(addr, [MODULE].ImFontAtlas);
         var pixelBufferArray = [MODULE].wrapPointer(pixelBufferAddr, [MODULE].IDLByteArray);
@@ -32,7 +36,7 @@ public class ImFontAtlas extends IDLBase {
         var heightIntArray = [MODULE].wrapPointer(heightAddr, [MODULE].IDLIntArray);
         var widthArr = widthIntArray.getPointer();
         var heightArr = heightIntArray.getPointer();
-        [MODULE].ImHelper.prototype.memcpyFont(fontAtlas, pixelBufferArray, widthArr, heightArr);
+        [MODULE].ImHelper.prototype.memcpyFont32(fontAtlas, pixelBufferArray, widthArr, heightArr);
     */
     /*[-JNI;-NATIVE]
         ImFontAtlas* fontAtlas = (ImFontAtlas*)addr;
@@ -41,9 +45,29 @@ public class ImFontAtlas extends IDLBase {
         IDLIntArray* heightIntArray = (IDLIntArray*)heightAddr;
         int* widthPtr = (int*)widthIntArray->getData();
         int* heightPtr = (int*)heightIntArray->getData();
-        ImHelper::memcpyFont(fontAtlas, pixelBuffer, widthPtr, heightPtr);
+        ImHelper::memcpyFont32(fontAtlas, pixelBuffer, widthPtr, heightPtr);
     */
     private static native void GetTexDataAsRGBA32NATIVE(long addr, long pixelBufferAddr, long widthAddr, long heightAddr);
+
+    /*[-TEAVM;-NATIVE]
+        var fontAtlas = [MODULE].wrapPointer(addr, [MODULE].ImFontAtlas);
+        var pixelBufferArray = [MODULE].wrapPointer(pixelBufferAddr, [MODULE].IDLByteArray);
+        var widthIntArray = [MODULE].wrapPointer(widthAddr, [MODULE].IDLIntArray);
+        var heightIntArray = [MODULE].wrapPointer(heightAddr, [MODULE].IDLIntArray);
+        var widthArr = widthIntArray.getPointer();
+        var heightArr = heightIntArray.getPointer();
+        [MODULE].ImHelper.prototype.memcpyFont8(fontAtlas, pixelBufferArray, widthArr, heightArr);
+    */
+    /*[-JNI;-NATIVE]
+        ImFontAtlas* fontAtlas = (ImFontAtlas*)addr;
+        IDLByteArray* pixelBuffer = (IDLByteArray*)pixelBufferAddr;
+        IDLIntArray* widthIntArray = (IDLIntArray*)widthAddr;
+        IDLIntArray* heightIntArray = (IDLIntArray*)heightAddr;
+        int* widthPtr = (int*)widthIntArray->getData();
+        int* heightPtr = (int*)heightIntArray->getData();
+        ImHelper::memcpyFont8(fontAtlas, pixelBuffer, widthPtr, heightPtr);
+    */
+    private static native void GetTexDataAsAlpha8(long addr, long pixelBufferAddr, long widthAddr, long heightAddr);
 
     public native ImFont AddFontFromMemoryTTF(IDLBase font_data, int font_data_size, int size_pixels);
 }

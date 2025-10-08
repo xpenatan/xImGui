@@ -38,6 +38,10 @@ public class ImFontAtlas extends IDLBase {
         GetTexDataAsRGBA32NATIVE(native_address, pixelBuffer.native_address, outWidth.native_address, outHeight.native_address);
     }
 
+    public void GetTexDataAsAlpha8(IDLByteArray pixelBuffer, IDLIntArray outWidth, IDLIntArray outHeight) {
+        GetTexDataAsAlpha8(native_address, pixelBuffer.native_address, outWidth.native_address, outHeight.native_address);
+    }
+
     /*
       [-JNI;-NATIVE]
               ImFontAtlas* fontAtlas = (ImFontAtlas*)addr;
@@ -46,9 +50,21 @@ public class ImFontAtlas extends IDLBase {
               IDLIntArray* heightIntArray = (IDLIntArray*)heightAddr;
               int* widthPtr = (int*)widthIntArray->getData();
               int* heightPtr = (int*)heightIntArray->getData();
-              ImHelper::memcpyFont(fontAtlas, pixelBuffer, widthPtr, heightPtr);
+              ImHelper::memcpyFont32(fontAtlas, pixelBuffer, widthPtr, heightPtr);
     */
     private static native void GetTexDataAsRGBA32NATIVE(long addr, long pixelBufferAddr, long widthAddr, long heightAddr);
+
+    /*
+      [-JNI;-NATIVE]
+              ImFontAtlas* fontAtlas = (ImFontAtlas*)addr;
+              IDLByteArray* pixelBuffer = (IDLByteArray*)pixelBufferAddr;
+              IDLIntArray* widthIntArray = (IDLIntArray*)widthAddr;
+              IDLIntArray* heightIntArray = (IDLIntArray*)heightAddr;
+              int* widthPtr = (int*)widthIntArray->getData();
+              int* heightPtr = (int*)heightIntArray->getData();
+              ImHelper::memcpyFont8(fontAtlas, pixelBuffer, widthPtr, heightPtr);
+    */
+    private static native void GetTexDataAsAlpha8(long addr, long pixelBufferAddr, long widthAddr, long heightAddr);
 
     protected void deleteNative() {
         internal_native_deleteNative(native_address);

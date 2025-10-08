@@ -14,8 +14,8 @@ public class VecVtxBuffer extends IDLBase {
 
     private IDLBase IDLBase_TEMP_GEN_0;
 
-    @org.teavm.jso.JSBody(params = { "this_addr", "size", "bytes_addr" }, script = "" + "var jsObj = imgui.wrapPointer(this_addr, imgui.VecVtxBuffer);" + "var data = jsObj.get_Data();" + "var dataOut = imgui.HEAPU8.subarray(data, data + size);" + "bytes_addr.set(dataOut);")
-    private static native void internal_native_get_ByteBuffer(int this_addr, int size, org.teavm.jso.JSObject bytes_addr);
+    @org.teavm.jso.JSBody(params = { "this_addr", "size", "outOffset", "bytes_addr" }, script = "" + "var jsObj = imgui.wrapPointer(this_addr, imgui.VecVtxBuffer);" + "var data = jsObj.get_Data() + outOffset;" + "var dataOut = imgui.HEAPU8.subarray(data, data + size);" + "bytes_addr.set(dataOut);")
+    private static native void internal_native_get_ByteBuffer(int this_addr, int size, int outOffset, org.teavm.jso.JSObject bytes_addr);
 
     public final static VecVtxBuffer NULL = native_new();
 
@@ -30,23 +30,23 @@ public class VecVtxBuffer extends IDLBase {
       [-TEAVM;-REPLACE_BLOCK]
               {
                   org.teavm.jso.typedarrays.Int8Array array = org.teavm.jso.typedarrays.Int8Array.fromJavaBuffer(out);
-                  internal_native_get_ByteBuffer((int)native_address, size, array);
+                  internal_native_get_ByteBuffer((int)native_address, size, outOffset, array);
               }
     */
-    public void getByteBuffer(int size, ByteBuffer out) {
+    public void getByteBuffer(long size, long outOffset, ByteBuffer out) {
         org.teavm.jso.typedarrays.Int8Array array = org.teavm.jso.typedarrays.Int8Array.fromJavaBuffer(out);
-        internal_native_get_ByteBuffer((int) native_address, size, array);
+        internal_native_get_ByteBuffer((int) native_address, (int) size, (int) outOffset, array);
     }
 
     /*
       [-TEAVM;-REPLACE]
-              @org.teavm.jso.JSBody(params = {"this_addr", "size", "bytes_addr"}, script = "" +
+              @org.teavm.jso.JSBody(params = {"this_addr", "size", "outOffset", "bytes_addr"}, script = "" +
                   "var jsObj = [MODULE].wrapPointer(this_addr, [MODULE].VecVtxBuffer);" +
-                  "var data = jsObj.get_Data();" +
+                  "var data = jsObj.get_Data() + outOffset;" +
                   "var dataOut = [MODULE].HEAPU8.subarray(data, data + size);" +
                   "bytes_addr.set(dataOut);"
               )
-              private static native void internal_native_get_ByteBuffer(int this_addr, int size, org.teavm.jso.JSObject bytes_addr);
+              private static native void internal_native_get_ByteBuffer(int this_addr, long size,  long outOffset, org.teavm.jso.JSObject bytes_addr);
     */
     protected void deleteNative() {
         internal_native_deleteNative(native_address);

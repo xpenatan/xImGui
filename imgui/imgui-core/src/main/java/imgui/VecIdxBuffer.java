@@ -23,17 +23,17 @@ public class VecIdxBuffer extends IDLBase {
     private VecIdxBuffer(byte v, char c) {
     }
 
-    public void getByteBuffer(int size, ByteBuffer out) {
-        internal_native_get_ByteBuffer(native_address, size, out);
+    public void getByteBuffer(long size, long outOffset, ByteBuffer out) {
+        internal_native_get_ByteBuffer(native_address, size, outOffset, out);
     }
 
     /*
       [-JNI;-NATIVE]
               VecIdxBuffer* nativeObject = (VecIdxBuffer*)this_addr;
-              void* bufferAddress = env->GetDirectBufferAddress(out);
-              memcpy(bufferAddress, nativeObject->Data, size);
+              char* bufferAddress = (char*)env->GetDirectBufferAddress(out);
+              memcpy(bufferAddress + outOffset, nativeObject->Data, size);
     */
-    public static native void internal_native_get_ByteBuffer(long this_addr, int size, ByteBuffer out);
+    public static native void internal_native_get_ByteBuffer(long this_addr, long size, long outOffset, ByteBuffer out);
 
     protected void deleteNative() {
         internal_native_deleteNative(native_address);

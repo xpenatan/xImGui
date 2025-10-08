@@ -35,8 +35,8 @@ import java.nio.IntBuffer;
  */
 public class ImGuiGdxImpl implements ImGuiImpl {
 
-    public final static int VTX_BUFFER_SIZE = 8 + 8 + 4;// = ImVec2 + ImVec2 + ImU32;
-    public final static int IDX_BUFFER_SIZE = 2; // short
+    private final static int VTX_BUFFER_SIZE = 8 + 8 + 4;// = ImVec2 + ImVec2 + ImU32;
+    private final static int IDX_BUFFER_SIZE = 2; // short
 
     private VertexAttributes vertexAttributes;
 
@@ -247,8 +247,8 @@ public class ImGuiGdxImpl implements ImGuiImpl {
                     indexByteBuffer = BufferUtils.newUnsafeByteBuffer(idxByteSize + 5000);
                 }
 
-                vtxBuffer.getByteBuffer(vtxByteSize, vertexByteBuffer);
-                idxBuffer.getByteBuffer(idxByteSize, indexByteBuffer);
+                vtxBuffer.getByteBuffer(vtxByteSize, 0, vertexByteBuffer);
+                idxBuffer.getByteBuffer(idxByteSize, 0, indexByteBuffer);
 
                 Gdx.gl.glBufferData(GL20.GL_ARRAY_BUFFER, vtxByteSize, vertexByteBuffer, GL20.GL_STREAM_DRAW);
                 Gdx.gl.glBufferData(GL20.GL_ELEMENT_ARRAY_BUFFER, idxByteSize, indexByteBuffer, GL20.GL_STREAM_DRAW);
@@ -404,6 +404,13 @@ public class ImGuiGdxImpl implements ImGuiImpl {
 
     public void dispose() {
         deleteTexture();
+
+        if(vertexByteBuffer != null) {
+            BufferUtils.disposeUnsafeByteBuffer(vertexByteBuffer);
+        }
+        if(indexByteBuffer != null) {
+            BufferUtils.disposeUnsafeByteBuffer(indexByteBuffer);
+        }
 
         // TODO fix exception
 //		ImGui.DestroyPlatformWindows();
