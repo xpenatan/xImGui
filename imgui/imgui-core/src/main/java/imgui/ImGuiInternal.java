@@ -55,7 +55,7 @@ public class ImGuiInternal extends IDLBase {
     }
 
     /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::ImHashData(data, (int)data_size, (int)seed);
+return ImGuiWrapper::ImGuiInternal::ImHashData_1(data, (int)data_size, (int)seed);
 */
     public static native int internal_native_ImHashData__0(String data, int data_size, int seed);
 
@@ -64,7 +64,7 @@ return ImGuiWrapper::ImGuiInternal::ImHashData(data, (int)data_size, (int)seed);
     }
 
     /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::ImHashData(data, (int)data_size);
+return ImGuiWrapper::ImGuiInternal::ImHashData_1(data, (int)data_size);
 */
     public static native int internal_native_ImHashData__0(String data, int data_size);
 
@@ -73,7 +73,7 @@ return ImGuiWrapper::ImGuiInternal::ImHashData(data, (int)data_size);
     }
 
     /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::ImHashStr(data, (int)data_size, (int)seed);
+return ImGuiWrapper::ImGuiInternal::ImHashStr_1(data, (int)data_size, (int)seed);
 */
     public static native int internal_native_ImHashStr__0(String data, int data_size, int seed);
 
@@ -82,7 +82,7 @@ return ImGuiWrapper::ImGuiInternal::ImHashStr(data, (int)data_size, (int)seed);
     }
 
     /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::ImHashStr(data, (int)data_size);
+return ImGuiWrapper::ImGuiInternal::ImHashStr_1(data, (int)data_size);
 */
     public static native int internal_native_ImHashStr__0(String data, int data_size);
 
@@ -91,7 +91,7 @@ return ImGuiWrapper::ImGuiInternal::ImHashStr(data, (int)data_size);
     }
 
     /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::ImHashStr(data);
+return ImGuiWrapper::ImGuiInternal::ImHashStr_1(data);
 */
     public static native int internal_native_ImHashStr__0(String data);
 

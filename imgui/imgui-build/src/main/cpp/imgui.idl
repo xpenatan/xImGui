@@ -44,8 +44,8 @@ interface ImTemp {
 interface ImGuiInternal {
     // Note: method overloading don't work with emscripten so we use __0, __1 and so on
 
-    [BindTo="ImHashData"] static long ImHashData__0([Const] DOMString data, long data_size, optional long seed);
-    [BindTo="ImHashStr"] static long ImHashStr__0([Const] DOMString data, optional long data_size, optional long seed);
+    [BindTo="ImHashData_1"] static long ImHashData__0([Const] DOMString data, long data_size, optional long seed);
+    [BindTo="ImHashStr_1"] static long ImHashStr__0([Const] DOMString data, optional long data_size, optional long seed);
 
     static ImGuiWindow             GetCurrentWindow();
     static ImGuiWindow             FindWindowByID(long id);
