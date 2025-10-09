@@ -60,9 +60,9 @@ public class BasicExample extends ImGuiRenderer {
 
         ImVec4 colors = style.Colors(ImGuiCol.Header);
 
-        System.out.println("Color before: R: " + colors.get_x() + " G: " + colors.get_y() + " B: " + colors.get_z() + " A: " + colors.get_w());
-        style.Colors(ImGuiCol.Header, 255, 0, 0, 255);
-        System.out.println("Color adter: R: " + colors.get_x() + " G: " + colors.get_y() + " B: " + colors.get_z() + " A: " + colors.get_w());
+//        System.out.println("Color before: R: " + colors.get_x() + " G: " + colors.get_y() + " B: " + colors.get_z() + " A: " + colors.get_w());
+//        style.Colors(ImGuiCol.Header, 255, 0, 0, 255);
+//        System.out.println("Color adter: R: " + colors.get_x() + " G: " + colors.get_y() + " B: " + colors.get_z() + " A: " + colors.get_w());
     }
 
     @Override

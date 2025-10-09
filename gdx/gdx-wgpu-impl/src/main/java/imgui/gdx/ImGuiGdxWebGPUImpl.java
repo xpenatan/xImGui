@@ -1,6 +1,7 @@
 package imgui.gdx;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.utils.BufferUtils;
 import com.github.xpenatan.jParser.idl.IDLBase;
 import com.github.xpenatan.webgpu.WGPUAddressMode;
@@ -93,6 +94,7 @@ import imgui.VecIdxBuffer;
 import imgui.VecVtxBuffer;
 import imgui.idl.helper.IDLByteArray;
 import imgui.idl.helper.IDLIntArray;
+import imgui.idl.helper.IDLString;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
@@ -130,16 +132,36 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
     private ByteBuffer vertexByteBuffer;
     private ByteBuffer indexByteBuffer;
 
+    private FileHandle imgui;
+
     public ImGuiGdxWebGPUImpl() {
         WgGraphics gfx = (WgGraphics) Gdx.graphics;
         WebGPUContext webgpu = gfx.getContext();
-        this.device = webgpu.device;
-        this.renderFormat = webgpu.surfaceFormat;
+        setup(Gdx.files.local("imgui.ini"), webgpu.device, webgpu.surfaceFormat);
     }
 
     public ImGuiGdxWebGPUImpl(WGPUDevice device, WGPUTextureFormat renderFormat) {
+        setup(Gdx.files.local("imgui.ini"), device, renderFormat);
+    }
+
+    public ImGuiGdxWebGPUImpl(FileHandle imgui, WGPUDevice device, WGPUTextureFormat renderFormat) {
+        setup(imgui, device, renderFormat);
+    }
+
+    private void setup(FileHandle imgui, WGPUDevice device, WGPUTextureFormat renderFormat) {
+        this.imgui = imgui;
         this.device = device;
         this.renderFormat = renderFormat;
+
+        if(imgui != null) {
+            boolean exists = imgui.exists();
+            if(exists) {
+                String iniData = imgui.readString();
+                if(!iniData.isEmpty()) {
+                    ImGui.LoadIniSettingsFromMemory(iniData);
+                }
+            }
+        }
     }
 
     @Override
@@ -156,6 +178,14 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
         int backBufferWidth = Gdx.graphics.getBackBufferWidth();
         int backBufferHeight = Gdx.graphics.getBackBufferHeight();
         ImGui.UpdateDisplayAndInputAndFrame(deltaTime, width, height, backBufferWidth, backBufferHeight);
+
+        if(imgui != null) {
+            ImGuiIO imGuiIO = ImGui.GetIO();
+            if(imGuiIO.get_WantSaveIniSettings()) {
+                imGuiIO.set_WantSaveIniSettings(false);
+                saveImGuiData(imgui);
+            }
+        }
     }
 
     @Override
@@ -497,6 +527,14 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
         if (indexBuffer != null) {
             indexBuffer.release();
             indexBuffer.dispose();
+        }
+    }
+
+    public void saveImGuiData(FileHandle path) {
+        if(path != null) {
+            IDLString idlString = ImGui.SaveIniSettingsToMemory();
+            String s = idlString.c_str();
+            path.writeString(s, false);
         }
     }
 

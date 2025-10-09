@@ -174,7 +174,7 @@ public class ImGuiGdxImpl implements ImGuiImpl {
             ImGuiIO imGuiIO = ImGui.GetIO();
             if(imGuiIO.get_WantSaveIniSettings()) {
                 imGuiIO.set_WantSaveIniSettings(false);
-                saveImGuiData();
+                saveImGuiData(imgui);
             }
         }
     }
@@ -419,11 +419,11 @@ public class ImGuiGdxImpl implements ImGuiImpl {
         ElementsHandle = 0;
     }
 
-    private void saveImGuiData() {
-        if(imgui != null) {
+    public void saveImGuiData(FileHandle path) {
+        if(path != null) {
             IDLString idlString = ImGui.SaveIniSettingsToMemory();
             String s = idlString.c_str();
-            imgui.writeString(s, false);
+            path.writeString(s, false);
         }
     }
 
