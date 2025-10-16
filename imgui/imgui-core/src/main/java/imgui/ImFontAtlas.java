@@ -108,7 +108,7 @@ public class ImFontAtlas extends IDLBase {
     /*
       [-JNI;-NATIVE]
       ImFontAtlas* nativeObject = (ImFontAtlas*)this_addr;
-      ImFont* obj = nativeObject->AddFontFromMemoryTTF((void** )font_data_addr, (int)font_data_size, (int)size_pixels);
+      ImFont* obj = nativeObject->AddFontFromMemoryTTF((void*)font_data_addr, (int)font_data_size, (int)size_pixels);
       return (jlong)obj;
     */
     public static native long internal_native_AddFontFromMemoryTTF(long this_addr, long font_data_addr, int font_data_size, int size_pixels);

@@ -1875,7 +1875,7 @@ public class ImGui extends IDLBase {
 
     /*
       [-JNI;-NATIVE]
-      return ImGuiWrapper::ImGui::GetID((void** )ptr_id_addr);
+      return ImGuiWrapper::ImGui::GetID((void*)ptr_id_addr);
     */
     public static native int internal_native_GetID__2(long ptr_id_addr);
 
@@ -3775,7 +3775,7 @@ public class ImGui extends IDLBase {
 
     /*
       [-JNI;-NATIVE]
-      return ImGuiWrapper::ImGui::TreeNode((void** )ptr_id_addr, fmt);
+      return ImGuiWrapper::ImGui::TreeNode((void*)ptr_id_addr, fmt);
     */
     public static native boolean internal_native_TreeNode__2(long ptr_id_addr, String fmt);
 
@@ -3815,7 +3815,7 @@ public class ImGui extends IDLBase {
 
     /*
       [-JNI;-NATIVE]
-      return ImGuiWrapper::ImGui::TreeNodeEx((void** )ptr_id_addr, (::ImGuiTreeNodeFlags)ImGuiTreeNodeFlags, fmt);
+      return ImGuiWrapper::ImGui::TreeNodeEx((void*)ptr_id_addr, (::ImGuiTreeNodeFlags)ImGuiTreeNodeFlags, fmt);
     */
     public static native boolean internal_native_TreeNodeEx__2(long ptr_id_addr, long ImGuiTreeNodeFlags, String fmt);
 
@@ -6433,7 +6433,7 @@ public class ImGui extends IDLBase {
 
     /*
       [-JNI;-NATIVE]
-      ImGuiWrapper::ImGui::RenderPlatformWindowsDefault((void** )platform_render_arg_addr, (void** )renderer_render_arg_addr);
+      ImGuiWrapper::ImGui::RenderPlatformWindowsDefault((void*)platform_render_arg_addr, (void*)renderer_render_arg_addr);
     */
     public static native void internal_native_RenderPlatformWindowsDefault(long platform_render_arg_addr, long renderer_render_arg_addr);
 
@@ -6443,7 +6443,7 @@ public class ImGui extends IDLBase {
 
     /*
       [-JNI;-NATIVE]
-      ImGuiWrapper::ImGui::RenderPlatformWindowsDefault((void** )platform_render_arg_addr);
+      ImGuiWrapper::ImGui::RenderPlatformWindowsDefault((void*)platform_render_arg_addr);
     */
     public static native void internal_native_RenderPlatformWindowsDefault(long platform_render_arg_addr);
 
@@ -6495,7 +6495,7 @@ public class ImGui extends IDLBase {
 
     /*
       [-JNI;-NATIVE]
-      return (jlong)ImGuiWrapper::ImGui::FindViewportByPlatformHandle((void** )platform_handle_addr);
+      return (jlong)ImGuiWrapper::ImGui::FindViewportByPlatformHandle((void*)platform_handle_addr);
     */
     public static native long internal_native_FindViewportByPlatformHandle(long platform_handle_addr);
 }

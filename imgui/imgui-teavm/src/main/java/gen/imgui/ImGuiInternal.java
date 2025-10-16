@@ -936,7 +936,7 @@ return returnedJSObj;
     @org.teavm.jso.JSBody(params = {"bb_addr", "id", "out_hovered_addr", "out_held_addr"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.ButtonBehavior(bb_addr, id, out_hovered_addr, out_held_addr);return returnedJSObj;")
     public static native boolean internal_native_ButtonBehavior(int bb_addr, int id, int out_hovered_addr, int out_held_addr);
 
-    public static boolean DragBehavior(int id, ImGuiDataType ImGuiDataType, IDLFloatArray p_v, float v_speed, IDLBase p_min, IDLBase p_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
+    public static boolean DragBehavior(int id, ImGuiDataType ImGuiDataType, IDLBase p_v, float v_speed, IDLBase p_min, IDLBase p_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
         return internal_native_DragBehavior(id, (int) ImGuiDataType.getValue(), p_v.native_void_address, v_speed, p_min.native_void_address, p_max.native_void_address, format, (int) ImGuiSliderFlags.getValue());
     }
 

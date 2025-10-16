@@ -131,7 +131,7 @@ interface ImGuiInternal {
 
     // Widgets low-level behaviors
     static boolean                 ButtonBehavior([Const, Ref] ImRect bb, long id, boolean[] out_hovered, boolean[] out_held, optional ImGuiButtonFlags ImGuiButtonFlags);
-    static boolean                 DragBehavior(long id, ImGuiDataType ImGuiDataType, float[] p_v, float v_speed, [Const] any p_min, [Const] any p_max, [Const] DOMString format, ImGuiSliderFlags ImGuiSliderFlags);
+    static boolean                 DragBehavior(long id, ImGuiDataType ImGuiDataType, any p_v, float v_speed, [Const] any p_min, [Const] any p_max, [Const] DOMString format, ImGuiSliderFlags ImGuiSliderFlags);
     static boolean                 SliderBehavior([Const, Ref] ImRect bb, long id, ImGuiDataType ImGuiDataType, any p_v, [Const] any p_min, [Const] any p_max, [Const] DOMString format, ImGuiSliderFlags ImGuiSliderFlags, ImRect out_grab_bb);
     static boolean                 SplitterBehavior([Const, Ref] ImRect bb, long id, ImGuiAxis axis, float[] size1, float[] size2, float min_size1, float min_size2, optional float hover_extend, optional float hover_visibility_delay, optional long bg_col);
     static boolean                 TreeNodeBehavior(long id, ImGuiTreeNodeFlags ImGuiTreeNodeFlags, [Const] DOMString label, [Const] optional DOMString label_end);

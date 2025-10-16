@@ -808,12 +808,12 @@ return ImGuiWrapper::ImGuiInternal::ButtonBehavior(*((ImRect* )bb_addr), (int)id
 */
     public static native boolean internal_native_ButtonBehavior(long bb_addr, int id, long out_hovered_addr, long out_held_addr);
 
-    public static boolean DragBehavior(int id, ImGuiDataType ImGuiDataType, IDLFloatArray p_v, float v_speed, IDLBase p_min, IDLBase p_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
+    public static boolean DragBehavior(int id, ImGuiDataType ImGuiDataType, IDLBase p_v, float v_speed, IDLBase p_min, IDLBase p_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
         return internal_native_DragBehavior(id, ImGuiDataType.getValue(), p_v.native_void_address, v_speed, p_min.native_void_address, p_max.native_void_address, format, ImGuiSliderFlags.getValue());
     }
 
     /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::DragBehavior((int)id, (::ImGuiDataType)ImGuiDataType, (float*)p_v_addr, (float)v_speed, (void** )p_min_addr, (void** )p_max_addr, format, (::ImGuiSliderFlags)ImGuiSliderFlags);
+return ImGuiWrapper::ImGuiInternal::DragBehavior((int)id, (::ImGuiDataType)ImGuiDataType, (void*)p_v_addr, (float)v_speed, (void*)p_min_addr, (void*)p_max_addr, format, (::ImGuiSliderFlags)ImGuiSliderFlags);
 */
     public static native boolean internal_native_DragBehavior(int id, long ImGuiDataType, long p_v_addr, float v_speed, long p_min_addr, long p_max_addr, String format, long ImGuiSliderFlags);
 
@@ -822,7 +822,7 @@ return ImGuiWrapper::ImGuiInternal::DragBehavior((int)id, (::ImGuiDataType)ImGui
     }
 
     /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::SliderBehavior(*((ImRect* )bb_addr), (int)id, (::ImGuiDataType)ImGuiDataType, (void** )p_v_addr, (void** )p_min_addr, (void** )p_max_addr, format, (::ImGuiSliderFlags)ImGuiSliderFlags, (ImRect* )out_grab_bb_addr);
+return ImGuiWrapper::ImGuiInternal::SliderBehavior(*((ImRect* )bb_addr), (int)id, (::ImGuiDataType)ImGuiDataType, (void*)p_v_addr, (void*)p_min_addr, (void*)p_max_addr, format, (::ImGuiSliderFlags)ImGuiSliderFlags, (ImRect* )out_grab_bb_addr);
 */
     public static native boolean internal_native_SliderBehavior(long bb_addr, int id, long ImGuiDataType, long p_v_addr, long p_min_addr, long p_max_addr, String format, long ImGuiSliderFlags, long out_grab_bb_addr);
 
