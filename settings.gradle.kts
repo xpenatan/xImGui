@@ -13,7 +13,7 @@ include(":imgui-ext:ext-teavm")
 
 // Implementation
 include(":gdx:gdx-shared-impl")
-include(":gdx:gdx-impl")
+include(":gdx:gdx-gl-impl")
 include(":gdx:gdx-wgpu-impl")
 //include(":gdx:lwjgl3-impl")
 

@@ -4,7 +4,7 @@ import java.net.URLEncoder
 
 var libProjects = mutableSetOf(
     project(":gdx:gdx-shared-impl"),
-    project(":gdx:gdx-impl"),
+    project(":gdx:gdx-gl-impl"),
     project(":gdx:gdx-wgpu-impl"),
     project(":imgui:imgui-core"),
     project(":imgui:imgui-desktop"),

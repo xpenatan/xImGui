@@ -12,11 +12,11 @@ dependencies {
 
     if(LibExt.useRepoLibs) {
         implementation("com.github.xpenatan.xImGui:imgui-ext-core:-SNAPSHOT")
-        implementation("com.github.xpenatan.xImGui:gdx-impl:-SNAPSHOT")
+        implementation("com.github.xpenatan.xImGui:gdx-gl-impl:-SNAPSHOT")
     }
     else {
         implementation(project(":imgui-ext:ext-core"))
-        implementation(project(":gdx:gdx-impl"))
+        implementation(project(":gdx:gdx-gl-impl"))
     }
 
     implementation("com.badlogicgames.gdx:gdx:${LibExt.gdxVersion}")

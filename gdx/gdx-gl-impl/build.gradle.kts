@@ -2,7 +2,7 @@ plugins {
     id("java-library")
 }
 
-val moduleName = "gdx-impl"
+val moduleName = "gdx-gl-impl"
 
 dependencies {
     implementation("com.badlogicgames.gdx:gdx:${LibExt.gdxVersion}")

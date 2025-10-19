@@ -62,7 +62,8 @@ repositories {
 ### Core module
 ```groovy
 dependencies {
-    implementation("com.github.xpenatan.xImGui:gdx-impl:$project.xImGuiVersion")
+    implementation("com.github.xpenatan.xImGui:gdx-gl-impl:$project.xImGuiVersion")   // OpenGL
+    implementation("com.github.xpenatan.xImGui:gdx-wgpu-impl:$project.xImGuiVersion") // WebGPU
     implementation("com.github.xpenatan.xImGui:imgui-core:$project.xImGuiVersion")
 
     // Or the extension build
