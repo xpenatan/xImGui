@@ -277,7 +277,10 @@ public class ImGuiGdxImpl implements ImGuiImpl {
                     int vtxOffset = drawCmd.get_VtxOffset();
                     int elemCount = drawCmd.get_ElemCount();
                     int indices = idxOffset * 2;
-                    Gdx.gl.glBindTexture(GL20.GL_TEXTURE_2D, g_FontTexture);
+
+                    IDLBase textureId = drawCmd.get_TextureId();
+                    int texId = textureId.getIntNativeAddress();
+                    Gdx.gl.glBindTexture(GL20.GL_TEXTURE_2D, texId);
                     Gdx.gl.glDrawElements(GL20.GL_TRIANGLES, elemCount, GL20.GL_UNSIGNED_SHORT, indices);
                 }
             }

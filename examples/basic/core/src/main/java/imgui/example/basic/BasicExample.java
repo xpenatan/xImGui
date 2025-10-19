@@ -21,6 +21,7 @@ import imgui.ImVec4;
 import imgui.example.basic.renderer.ColorRenderer;
 import imgui.example.basic.renderer.DragAndDropRenderer;
 import imgui.example.basic.renderer.EditTextRenderer;
+import imgui.example.basic.renderer.ImageRenderer;
 import imgui.example.basic.renderer.ModalRenderer;
 import imgui.example.basic.renderer.PlotRenderer;
 import imgui.example.basic.renderer.SelectListRenderer;
@@ -46,6 +47,7 @@ public class BasicExample extends ImGuiRenderer {
         super.show();
 
         renderers.add(new PlotRenderer());
+        renderers.add(new ImageRenderer());
         renderers.add(new TableRenderer());
         renderers.add(new EditTextRenderer());
         renderers.add(new SelectListRenderer());

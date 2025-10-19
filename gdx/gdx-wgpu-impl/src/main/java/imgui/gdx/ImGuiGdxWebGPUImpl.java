@@ -95,7 +95,6 @@ import imgui.VecIdxBuffer;
 import imgui.VecVtxBuffer;
 import imgui.idl.helper.IDLByteArray;
 import imgui.idl.helper.IDLInt;
-import imgui.idl.helper.IDLIntArray;
 import imgui.idl.helper.IDLString;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

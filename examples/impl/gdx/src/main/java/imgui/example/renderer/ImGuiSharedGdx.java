@@ -2,7 +2,9 @@ package imgui.example.renderer;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
+import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.Texture;
 import imgui.ImGuiImpl;
 import imgui.gdx.ImGuiGdxImpl;
 import imgui.gdx.ImGuiGdxInputMultiplexer;
@@ -22,5 +24,10 @@ public class ImGuiSharedGdx implements ImGuiShared.ImGuiSharedInstance {
     @Override
     public InputMultiplexer createInput() {
         return new ImGuiGdxInputMultiplexer();
+    }
+
+    @Override
+    public Texture createTexture(FileHandle fileHandler) {
+        return new Texture(fileHandler);
     }
 }
