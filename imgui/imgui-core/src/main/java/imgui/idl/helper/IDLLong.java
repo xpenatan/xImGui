@@ -56,14 +56,14 @@ public class IDLLong extends IDLLongArray {
     */
     public static native long internal_native_getValue(long this_addr);
 
-    public void setValue(long value) {
-        internal_native_setValue(native_address, value);
+    public void set(long value) {
+        internal_native_set(native_address, value);
     }
 
     /*
       [-JNI;-NATIVE]
       IDLLong* nativeObject = (IDLLong*)this_addr;
-      nativeObject->setValue(value);
+      nativeObject->set(value);
     */
-    public static native void internal_native_setValue(long this_addr, long value);
+    public static native void internal_native_set(long this_addr, long value);
 }

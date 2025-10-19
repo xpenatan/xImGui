@@ -56,14 +56,14 @@ public class IDLDouble extends IDLDoubleArray {
     */
     public static native double internal_native_getValue(long this_addr);
 
-    public void setValue(double value) {
-        internal_native_setValue(native_address, value);
+    public void set(double value) {
+        internal_native_set(native_address, value);
     }
 
     /*
       [-JNI;-NATIVE]
       IDLDouble* nativeObject = (IDLDouble*)this_addr;
-      nativeObject->setValue((double)value);
+      nativeObject->set((double)value);
     */
-    public static native void internal_native_setValue(long this_addr, double value);
+    public static native void internal_native_set(long this_addr, double value);
 }

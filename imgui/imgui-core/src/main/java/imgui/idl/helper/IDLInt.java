@@ -56,14 +56,14 @@ public class IDLInt extends IDLIntArray {
     */
     public static native int internal_native_getValue(long this_addr);
 
-    public void setValue(int value) {
-        internal_native_setValue(native_address, value);
+    public void set(int value) {
+        internal_native_set(native_address, value);
     }
 
     /*
       [-JNI;-NATIVE]
       IDLInt* nativeObject = (IDLInt*)this_addr;
-      nativeObject->setValue((int)value);
+      nativeObject->set((int)value);
     */
-    public static native void internal_native_setValue(long this_addr, int value);
+    public static native void internal_native_set(long this_addr, int value);
 }

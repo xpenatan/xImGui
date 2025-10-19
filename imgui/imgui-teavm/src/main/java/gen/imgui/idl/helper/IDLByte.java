@@ -61,15 +61,15 @@ public class IDLByte extends IDLByteArray {
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.IDLByte);var returnedJSObj = jsObj.getValue();return returnedJSObj;")
     public static native byte internal_native_getValue(int this_addr);
 
-    public void setValue(byte value) {
-        internal_native_setValue(native_address, value);
+    public void set(byte value) {
+        internal_native_set(native_address, value);
     }
 
     /*
       [-TEAVM;-NATIVE]
       var jsObj = imgui.wrapPointer(this_addr, imgui.IDLByte);
-      jsObj.setValue(value);
+      jsObj.set(value);
     */
-    @org.teavm.jso.JSBody(params = {"this_addr", "value"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.IDLByte);jsObj.setValue(value);")
-    public static native void internal_native_setValue(int this_addr, byte value);
+    @org.teavm.jso.JSBody(params = {"this_addr", "value"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.IDLByte);jsObj.set(value);")
+    public static native void internal_native_set(int this_addr, byte value);
 }

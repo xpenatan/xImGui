@@ -56,14 +56,14 @@ public class IDLFloat extends IDLFloatArray {
     */
     public static native float internal_native_getValue(long this_addr);
 
-    public void setValue(float value) {
-        internal_native_setValue(native_address, value);
+    public void set(float value) {
+        internal_native_set(native_address, value);
     }
 
     /*
       [-JNI;-NATIVE]
       IDLFloat* nativeObject = (IDLFloat*)this_addr;
-      nativeObject->setValue((float)value);
+      nativeObject->set((float)value);
     */
-    public static native void internal_native_setValue(long this_addr, float value);
+    public static native void internal_native_set(long this_addr, float value);
 }

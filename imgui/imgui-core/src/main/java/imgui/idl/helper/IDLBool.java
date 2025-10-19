@@ -56,14 +56,14 @@ public class IDLBool extends IDLBoolArray {
     */
     public static native boolean internal_native_getValue(long this_addr);
 
-    public void setValue(boolean value) {
-        internal_native_setValue(native_address, value);
+    public void set(boolean value) {
+        internal_native_set(native_address, value);
     }
 
     /*
       [-JNI;-NATIVE]
       IDLBool* nativeObject = (IDLBool*)this_addr;
-      nativeObject->setValue(value);
+      nativeObject->set(value);
     */
-    public static native void internal_native_setValue(long this_addr, boolean value);
+    public static native void internal_native_set(long this_addr, boolean value);
 }

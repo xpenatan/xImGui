@@ -56,14 +56,14 @@ public class IDLByte extends IDLByteArray {
     */
     public static native byte internal_native_getValue(long this_addr);
 
-    public void setValue(byte value) {
-        internal_native_setValue(native_address, value);
+    public void set(byte value) {
+        internal_native_set(native_address, value);
     }
 
     /*
       [-JNI;-NATIVE]
       IDLByte* nativeObject = (IDLByte*)this_addr;
-      nativeObject->setValue(value);
+      nativeObject->set(value);
     */
-    public static native void internal_native_setValue(long this_addr, byte value);
+    public static native void internal_native_set(long this_addr, byte value);
 }
