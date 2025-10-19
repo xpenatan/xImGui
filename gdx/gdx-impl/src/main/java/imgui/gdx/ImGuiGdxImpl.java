@@ -12,6 +12,7 @@ import com.badlogic.gdx.math.Matrix4;
 import com.badlogic.gdx.utils.BufferUtils;
 import com.github.xpenatan.jParser.idl.IDLBase;
 import imgui.ClipboardTextFunction;
+import imgui.IDLTemp;
 import imgui.ImDrawCmd;
 import imgui.ImDrawData;
 import imgui.ImDrawList;
@@ -25,7 +26,7 @@ import imgui.VecCmdBuffer;
 import imgui.VecIdxBuffer;
 import imgui.VecVtxBuffer;
 import imgui.idl.helper.IDLByteArray;
-import imgui.idl.helper.IDLIntArray;
+import imgui.idl.helper.IDLInt;
 import imgui.idl.helper.IDLString;
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
@@ -119,15 +120,15 @@ public class ImGuiGdxImpl implements ImGuiImpl {
     }
 
     private void prepareFont() {
-        IDLIntArray width = new IDLIntArray(1);
-        IDLIntArray height = new IDLIntArray(1);
+        IDLInt width = IDLTemp.Int_1(1);
+        IDLInt height = IDLTemp.Int_2(1);
         IDLByteArray bytesArray = new IDLByteArray(1);
 
         ImGuiIO io = ImGui.GetIO();
         ImFontAtlas fonts = io.get_Fonts();
         fonts.GetTexDataAsRGBA32(bytesArray, width, height);
-        int widthValue = width.getValue(0);
-        int heightValue = height.getValue(0);
+        int widthValue = width.getValue();
+        int heightValue = height.getValue();
 
         int size = bytesArray.getSize();
         ByteBuffer buffer = BufferUtils.newUnsafeByteBuffer(size);
@@ -136,6 +137,8 @@ public class ImGuiGdxImpl implements ImGuiImpl {
         }
         buffer.position(0);
         buffer.limit(size);
+
+        bytesArray.dispose();
 
         g_FontTexture = Gdx.gl.glGenTexture();
 

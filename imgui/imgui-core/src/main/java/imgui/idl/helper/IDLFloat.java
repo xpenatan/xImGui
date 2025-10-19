@@ -18,30 +18,52 @@ public class IDLFloat extends IDLFloatArray {
         return new IDLFloat((byte) 1, (char) 1);
     }
 
-    private IDLFloat(byte b, char c) {
-        super(b, c);
+    protected IDLFloat(byte b, char c) {
+        super((byte) 1, (char) 1);
     }
 
     public IDLFloat() {
-        super(1);
+        super((byte) 1, (char) 1);
+        long addr = internal_native_create();
+        internal_reset(addr, true);
     }
 
-    public IDLFloat(float value) {
-        this();
-        set(value);
+    /*
+      [-JNI;-NATIVE]
+      return (jlong)new IDLFloat();
+    */
+    public static native long internal_native_create();
+
+    protected void deleteNative() {
+        internal_native_deleteNative(native_address);
     }
 
-    public IDLFloat set(float value) {
-        setValue(0, value);
-        return this;
-    }
+    /*
+      [-JNI;-NATIVE]
+      IDLFloat* nativeObject = (IDLFloat*)this_addr;
+      delete nativeObject;
+    */
+    public static native void internal_native_deleteNative(long this_addr);
 
     public float getValue() {
-        return getValue(0);
+        return internal_native_getValue(native_address);
     }
 
-    @Override
-    public String toString() {
-        return String.valueOf(getValue());
+    /*
+      [-JNI;-NATIVE]
+      IDLFloat* nativeObject = (IDLFloat*)this_addr;
+      return nativeObject->getValue();
+    */
+    public static native float internal_native_getValue(long this_addr);
+
+    public void setValue(float value) {
+        internal_native_setValue(native_address, value);
     }
+
+    /*
+      [-JNI;-NATIVE]
+      IDLFloat* nativeObject = (IDLFloat*)this_addr;
+      nativeObject->setValue((float)value);
+    */
+    public static native void internal_native_setValue(long this_addr, float value);
 }

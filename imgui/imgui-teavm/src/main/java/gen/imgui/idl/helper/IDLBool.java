@@ -18,30 +18,58 @@ public class IDLBool extends IDLBoolArray {
         return new IDLBool((byte) 1, (char) 1);
     }
 
-    private IDLBool(byte b, char c) {
-        super(b, c);
+    protected IDLBool(byte b, char c) {
+        super((byte) 1, (char) 1);
     }
 
     public IDLBool() {
-        super(1);
+        super((byte) 1, (char) 1);
+        int addr = internal_native_create();
+        internal_reset(addr, true);
     }
 
-    public IDLBool(boolean value) {
-        this();
-        set(value);
+    /*
+      [-TEAVM;-NATIVE]
+      var jsObj = new imgui.IDLBool();
+      return imgui.getPointer(jsObj);
+    */
+    @org.teavm.jso.JSBody(script = "var jsObj = new imgui.IDLBool();return imgui.getPointer(jsObj);")
+    public static native int internal_native_create();
+
+    protected void deleteNative() {
+        internal_native_deleteNative(native_address);
     }
 
-    public IDLBool set(boolean value) {
-        setValue(0, value);
-        return this;
-    }
+    /*
+      [-TEAVM;-NATIVE]
+      var jsObj = imgui.wrapPointer(this_addr, imgui.IDLBool);
+      imgui.destroy(jsObj);
+    */
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.IDLBool);imgui.destroy(jsObj);")
+    public static native void internal_native_deleteNative(int this_addr);
 
     public boolean getValue() {
-        return getValue(0);
+        return internal_native_getValue(native_address);
     }
 
-    @Override
-    public String toString() {
-        return String.valueOf(getValue());
+    /*
+      [-TEAVM;-NATIVE]
+      var jsObj = imgui.wrapPointer(this_addr, imgui.IDLBool);
+      var returnedJSObj = jsObj.getValue();
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.IDLBool);var returnedJSObj = jsObj.getValue();return returnedJSObj;")
+    public static native boolean internal_native_getValue(int this_addr);
+
+    public void setValue(boolean value) {
+        internal_native_setValue(native_address, value);
     }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var jsObj = imgui.wrapPointer(this_addr, imgui.IDLBool);
+      jsObj.setValue(value);
+    */
+    @org.teavm.jso.JSBody(params = {"this_addr", "value"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.IDLBool);jsObj.setValue(value);")
+    public static native void internal_native_setValue(int this_addr, boolean value);
 }

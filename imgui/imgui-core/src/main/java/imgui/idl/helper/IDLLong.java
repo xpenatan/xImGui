@@ -18,30 +18,52 @@ public class IDLLong extends IDLLongArray {
         return new IDLLong((byte) 1, (char) 1);
     }
 
-    private IDLLong(byte b, char c) {
-        super(b, c);
+    protected IDLLong(byte b, char c) {
+        super((byte) 1, (char) 1);
     }
 
     public IDLLong() {
-        super(1);
+        super((byte) 1, (char) 1);
+        long addr = internal_native_create();
+        internal_reset(addr, true);
     }
 
-    public IDLLong(int value) {
-        this();
-        set(value);
+    /*
+      [-JNI;-NATIVE]
+      return (jlong)new IDLLong();
+    */
+    public static native long internal_native_create();
+
+    protected void deleteNative() {
+        internal_native_deleteNative(native_address);
     }
 
-    public IDLLong set(long value) {
-        setValue(0, value);
-        return this;
-    }
+    /*
+      [-JNI;-NATIVE]
+      IDLLong* nativeObject = (IDLLong*)this_addr;
+      delete nativeObject;
+    */
+    public static native void internal_native_deleteNative(long this_addr);
 
     public long getValue() {
-        return getValue(0);
+        return internal_native_getValue(native_address);
     }
 
-    @Override
-    public String toString() {
-        return String.valueOf(getValue());
+    /*
+      [-JNI;-NATIVE]
+      IDLLong* nativeObject = (IDLLong*)this_addr;
+      return nativeObject->getValue();
+    */
+    public static native long internal_native_getValue(long this_addr);
+
+    public void setValue(long value) {
+        internal_native_setValue(native_address, value);
     }
+
+    /*
+      [-JNI;-NATIVE]
+      IDLLong* nativeObject = (IDLLong*)this_addr;
+      nativeObject->setValue(value);
+    */
+    public static native void internal_native_setValue(long this_addr, long value);
 }

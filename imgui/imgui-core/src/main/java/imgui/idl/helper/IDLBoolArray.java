@@ -7,7 +7,7 @@
 */
 package imgui.idl.helper;
 
-public class IDLBoolArray extends IDLArrayBase {
+public class IDLBoolArray extends IDLArray {
 
     public static final IDLBoolArray NULL = native_new();
 
@@ -19,6 +19,10 @@ public class IDLBoolArray extends IDLArrayBase {
     }
 
     protected IDLBoolArray(byte b, char c) {
+        super((byte) 1, (char) 1);
+    }
+
+    protected IDLBoolArray() {
         super((byte) 1, (char) 1);
     }
 

@@ -7,7 +7,7 @@
 */
 package gen.imgui.idl.helper;
 
-public class IDLDoubleArray extends IDLArrayBase {
+public class IDLDoubleArray extends IDLArray {
 
     public static final IDLDoubleArray NULL = native_new();
 
@@ -19,6 +19,10 @@ public class IDLDoubleArray extends IDLArrayBase {
     }
 
     protected IDLDoubleArray(byte b, char c) {
+        super((byte) 1, (char) 1);
+    }
+
+    protected IDLDoubleArray() {
         super((byte) 1, (char) 1);
     }
 

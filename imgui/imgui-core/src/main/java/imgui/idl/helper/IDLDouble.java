@@ -18,30 +18,52 @@ public class IDLDouble extends IDLDoubleArray {
         return new IDLDouble((byte) 1, (char) 1);
     }
 
-    private IDLDouble(byte b, char c) {
-        super(b, c);
+    protected IDLDouble(byte b, char c) {
+        super((byte) 1, (char) 1);
     }
 
     public IDLDouble() {
-        super(1);
+        super((byte) 1, (char) 1);
+        long addr = internal_native_create();
+        internal_reset(addr, true);
     }
 
-    public IDLDouble(double value) {
-        this();
-        set(value);
+    /*
+      [-JNI;-NATIVE]
+      return (jlong)new IDLDouble();
+    */
+    public static native long internal_native_create();
+
+    protected void deleteNative() {
+        internal_native_deleteNative(native_address);
     }
 
-    public IDLDouble set(double value) {
-        setValue(0, value);
-        return this;
-    }
+    /*
+      [-JNI;-NATIVE]
+      IDLDouble* nativeObject = (IDLDouble*)this_addr;
+      delete nativeObject;
+    */
+    public static native void internal_native_deleteNative(long this_addr);
 
     public double getValue() {
-        return getValue(0);
+        return internal_native_getValue(native_address);
     }
 
-    @Override
-    public String toString() {
-        return String.valueOf(getValue());
+    /*
+      [-JNI;-NATIVE]
+      IDLDouble* nativeObject = (IDLDouble*)this_addr;
+      return nativeObject->getValue();
+    */
+    public static native double internal_native_getValue(long this_addr);
+
+    public void setValue(double value) {
+        internal_native_setValue(native_address, value);
     }
+
+    /*
+      [-JNI;-NATIVE]
+      IDLDouble* nativeObject = (IDLDouble*)this_addr;
+      nativeObject->setValue((double)value);
+    */
+    public static native void internal_native_setValue(long this_addr, double value);
 }

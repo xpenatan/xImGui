@@ -6,35 +6,101 @@
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
-import imgui.idl.helper.IDLIntArray;
-import imgui.idl.helper.IDLFloatArray;
-import imgui.idl.helper.IDLBoolArray;
+import imgui.idl.helper.IDLBool;
+import imgui.idl.helper.IDLInt;
+import imgui.idl.helper.IDLLong;
+import imgui.idl.helper.IDLFloat;
+import imgui.idl.helper.IDLDouble;
 
 public class IDLTemp extends IDLBase {
 
-    static private IDLIntArray IDLIntArray_TEMP_STATIC_GEN_0;
+    static private IDLBool IDLBool_TEMP_STATIC_GEN_0;
 
-    static private IDLIntArray IDLIntArray_TEMP_STATIC_GEN_1;
+    static private IDLBool IDLBool_TEMP_STATIC_GEN_1;
 
-    static private IDLIntArray IDLIntArray_TEMP_STATIC_GEN_2;
+    static private IDLBool IDLBool_TEMP_STATIC_GEN_2;
 
-    static private IDLIntArray IDLIntArray_TEMP_STATIC_GEN_3;
+    static private IDLBool IDLBool_TEMP_STATIC_GEN_3;
 
-    static private IDLFloatArray IDLFloatArray_TEMP_STATIC_GEN_0;
+    static private IDLInt IDLInt_TEMP_STATIC_GEN_0;
 
-    static private IDLFloatArray IDLFloatArray_TEMP_STATIC_GEN_1;
+    static private IDLInt IDLInt_TEMP_STATIC_GEN_1;
 
-    static private IDLFloatArray IDLFloatArray_TEMP_STATIC_GEN_2;
+    static private IDLInt IDLInt_TEMP_STATIC_GEN_2;
 
-    static private IDLFloatArray IDLFloatArray_TEMP_STATIC_GEN_3;
+    static private IDLInt IDLInt_TEMP_STATIC_GEN_3;
 
-    static private IDLBoolArray IDLBoolArray_TEMP_STATIC_GEN_0;
+    static private IDLLong IDLLong_TEMP_STATIC_GEN_0;
 
-    static private IDLBoolArray IDLBoolArray_TEMP_STATIC_GEN_1;
+    static private IDLLong IDLLong_TEMP_STATIC_GEN_1;
 
-    static private IDLBoolArray IDLBoolArray_TEMP_STATIC_GEN_2;
+    static private IDLLong IDLLong_TEMP_STATIC_GEN_2;
 
-    static private IDLBoolArray IDLBoolArray_TEMP_STATIC_GEN_3;
+    static private IDLLong IDLLong_TEMP_STATIC_GEN_3;
+
+    static private IDLFloat IDLFloat_TEMP_STATIC_GEN_0;
+
+    static private IDLFloat IDLFloat_TEMP_STATIC_GEN_1;
+
+    static private IDLFloat IDLFloat_TEMP_STATIC_GEN_2;
+
+    static private IDLFloat IDLFloat_TEMP_STATIC_GEN_3;
+
+    static private IDLDouble IDLDouble_TEMP_STATIC_GEN_0;
+
+    static private IDLDouble IDLDouble_TEMP_STATIC_GEN_1;
+
+    static private IDLDouble IDLDouble_TEMP_STATIC_GEN_2;
+
+    static private IDLDouble IDLDouble_TEMP_STATIC_GEN_3;
+
+    static private IDLInt2 IDLInt2_TEMP_STATIC_GEN_0;
+
+    static private IDLInt2 IDLInt2_TEMP_STATIC_GEN_1;
+
+    static private IDLInt3 IDLInt3_TEMP_STATIC_GEN_0;
+
+    static private IDLInt3 IDLInt3_TEMP_STATIC_GEN_1;
+
+    static private IDLInt4 IDLInt4_TEMP_STATIC_GEN_0;
+
+    static private IDLInt4 IDLInt4_TEMP_STATIC_GEN_1;
+
+    static private IDLLong2 IDLLong2_TEMP_STATIC_GEN_0;
+
+    static private IDLLong2 IDLLong2_TEMP_STATIC_GEN_1;
+
+    static private IDLLong3 IDLLong3_TEMP_STATIC_GEN_0;
+
+    static private IDLLong3 IDLLong3_TEMP_STATIC_GEN_1;
+
+    static private IDLLong4 IDLLong4_TEMP_STATIC_GEN_0;
+
+    static private IDLLong4 IDLLong4_TEMP_STATIC_GEN_1;
+
+    static private IDLFloat2 IDLFloat2_TEMP_STATIC_GEN_0;
+
+    static private IDLFloat2 IDLFloat2_TEMP_STATIC_GEN_1;
+
+    static private IDLFloat3 IDLFloat3_TEMP_STATIC_GEN_0;
+
+    static private IDLFloat3 IDLFloat3_TEMP_STATIC_GEN_1;
+
+    static private IDLFloat4 IDLFloat4_TEMP_STATIC_GEN_0;
+
+    static private IDLFloat4 IDLFloat4_TEMP_STATIC_GEN_1;
+
+    static private IDLDouble2 IDLDouble2_TEMP_STATIC_GEN_0;
+
+    static private IDLDouble2 IDLDouble2_TEMP_STATIC_GEN_1;
+
+    static private IDLDouble3 IDLDouble3_TEMP_STATIC_GEN_0;
+
+    static private IDLDouble3 IDLDouble3_TEMP_STATIC_GEN_1;
+
+    static private IDLDouble4 IDLDouble4_TEMP_STATIC_GEN_0;
+
+    static private IDLDouble4 IDLDouble4_TEMP_STATIC_GEN_1;
 
     static public final IDLTemp NULL = IDLTemp.native_new();
 
@@ -62,134 +128,14 @@ delete nativeObject;
 */
     public static native void internal_native_deleteNative(long this_addr);
 
-    public static IDLIntArray Int_1(int value) {
-        long pointer = internal_native_Int_1__0(value);
-        if (pointer == 0)
-            return IDLIntArray.NULL;
-        if (IDLIntArray_TEMP_STATIC_GEN_0 == null)
-            IDLIntArray_TEMP_STATIC_GEN_0 = IDLIntArray.native_new();
-        IDLIntArray_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
-        return IDLIntArray_TEMP_STATIC_GEN_0;
-    }
-
-    /*[-JNI;-NATIVE]
-return (jlong)IDLTemp::Int_1((int)value);
-*/
-    public static native long internal_native_Int_1__0(int value);
-
-    public static IDLIntArray Int_2(int value) {
-        long pointer = internal_native_Int_2__0(value);
-        if (pointer == 0)
-            return IDLIntArray.NULL;
-        if (IDLIntArray_TEMP_STATIC_GEN_1 == null)
-            IDLIntArray_TEMP_STATIC_GEN_1 = IDLIntArray.native_new();
-        IDLIntArray_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
-        return IDLIntArray_TEMP_STATIC_GEN_1;
-    }
-
-    /*[-JNI;-NATIVE]
-return (jlong)IDLTemp::Int_2((int)value);
-*/
-    public static native long internal_native_Int_2__0(int value);
-
-    public static IDLIntArray Int_3(int value) {
-        long pointer = internal_native_Int_3__0(value);
-        if (pointer == 0)
-            return IDLIntArray.NULL;
-        if (IDLIntArray_TEMP_STATIC_GEN_2 == null)
-            IDLIntArray_TEMP_STATIC_GEN_2 = IDLIntArray.native_new();
-        IDLIntArray_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
-        return IDLIntArray_TEMP_STATIC_GEN_2;
-    }
-
-    /*[-JNI;-NATIVE]
-return (jlong)IDLTemp::Int_3((int)value);
-*/
-    public static native long internal_native_Int_3__0(int value);
-
-    public static IDLIntArray Int_4(int value) {
-        long pointer = internal_native_Int_4__0(value);
-        if (pointer == 0)
-            return IDLIntArray.NULL;
-        if (IDLIntArray_TEMP_STATIC_GEN_3 == null)
-            IDLIntArray_TEMP_STATIC_GEN_3 = IDLIntArray.native_new();
-        IDLIntArray_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
-        return IDLIntArray_TEMP_STATIC_GEN_3;
-    }
-
-    /*[-JNI;-NATIVE]
-return (jlong)IDLTemp::Int_4((int)value);
-*/
-    public static native long internal_native_Int_4__0(int value);
-
-    public static IDLFloatArray Float_1(float value) {
-        long pointer = internal_native_Float_1__0(value);
-        if (pointer == 0)
-            return IDLFloatArray.NULL;
-        if (IDLFloatArray_TEMP_STATIC_GEN_0 == null)
-            IDLFloatArray_TEMP_STATIC_GEN_0 = IDLFloatArray.native_new();
-        IDLFloatArray_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
-        return IDLFloatArray_TEMP_STATIC_GEN_0;
-    }
-
-    /*[-JNI;-NATIVE]
-return (jlong)IDLTemp::Float_1((float)value);
-*/
-    public static native long internal_native_Float_1__0(float value);
-
-    public static IDLFloatArray Float_2(float value) {
-        long pointer = internal_native_Float_2__0(value);
-        if (pointer == 0)
-            return IDLFloatArray.NULL;
-        if (IDLFloatArray_TEMP_STATIC_GEN_1 == null)
-            IDLFloatArray_TEMP_STATIC_GEN_1 = IDLFloatArray.native_new();
-        IDLFloatArray_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
-        return IDLFloatArray_TEMP_STATIC_GEN_1;
-    }
-
-    /*[-JNI;-NATIVE]
-return (jlong)IDLTemp::Float_2((float)value);
-*/
-    public static native long internal_native_Float_2__0(float value);
-
-    public static IDLFloatArray Float_3(float value) {
-        long pointer = internal_native_Float_3__0(value);
-        if (pointer == 0)
-            return IDLFloatArray.NULL;
-        if (IDLFloatArray_TEMP_STATIC_GEN_2 == null)
-            IDLFloatArray_TEMP_STATIC_GEN_2 = IDLFloatArray.native_new();
-        IDLFloatArray_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
-        return IDLFloatArray_TEMP_STATIC_GEN_2;
-    }
-
-    /*[-JNI;-NATIVE]
-return (jlong)IDLTemp::Float_3((float)value);
-*/
-    public static native long internal_native_Float_3__0(float value);
-
-    public static IDLFloatArray Float_4(float value) {
-        long pointer = internal_native_Float_4__0(value);
-        if (pointer == 0)
-            return IDLFloatArray.NULL;
-        if (IDLFloatArray_TEMP_STATIC_GEN_3 == null)
-            IDLFloatArray_TEMP_STATIC_GEN_3 = IDLFloatArray.native_new();
-        IDLFloatArray_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
-        return IDLFloatArray_TEMP_STATIC_GEN_3;
-    }
-
-    /*[-JNI;-NATIVE]
-return (jlong)IDLTemp::Float_4((float)value);
-*/
-    public static native long internal_native_Float_4__0(float value);
-
-    public static IDLBoolArray Bool_1(boolean value) {
+    public static IDLBool Bool_1(boolean value) {
         long pointer = internal_native_Bool_1__0(value);
         if (pointer == 0)
-            return IDLBoolArray.NULL;
-        if (IDLBoolArray_TEMP_STATIC_GEN_0 == null)
-            IDLBoolArray_TEMP_STATIC_GEN_0 = IDLBoolArray.native_new();
-        IDLBoolArray_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
-        return IDLBoolArray_TEMP_STATIC_GEN_0;
+            return IDLBool.NULL;
+        if (IDLBool_TEMP_STATIC_GEN_0 == null)
+            IDLBool_TEMP_STATIC_GEN_0 = IDLBool.native_new();
+        IDLBool_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLBool_TEMP_STATIC_GEN_0;
     }
 
     /*[-JNI;-NATIVE]
@@ -197,14 +143,14 @@ return (jlong)IDLTemp::Bool_1(value);
 */
     public static native long internal_native_Bool_1__0(boolean value);
 
-    public static IDLBoolArray Bool_2(boolean value) {
+    public static IDLBool Bool_2(boolean value) {
         long pointer = internal_native_Bool_2__0(value);
         if (pointer == 0)
-            return IDLBoolArray.NULL;
-        if (IDLBoolArray_TEMP_STATIC_GEN_1 == null)
-            IDLBoolArray_TEMP_STATIC_GEN_1 = IDLBoolArray.native_new();
-        IDLBoolArray_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
-        return IDLBoolArray_TEMP_STATIC_GEN_1;
+            return IDLBool.NULL;
+        if (IDLBool_TEMP_STATIC_GEN_1 == null)
+            IDLBool_TEMP_STATIC_GEN_1 = IDLBool.native_new();
+        IDLBool_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return IDLBool_TEMP_STATIC_GEN_1;
     }
 
     /*[-JNI;-NATIVE]
@@ -212,14 +158,14 @@ return (jlong)IDLTemp::Bool_2(value);
 */
     public static native long internal_native_Bool_2__0(boolean value);
 
-    public static IDLBoolArray Bool_3(boolean value) {
+    public static IDLBool Bool_3(boolean value) {
         long pointer = internal_native_Bool_3__0(value);
         if (pointer == 0)
-            return IDLBoolArray.NULL;
-        if (IDLBoolArray_TEMP_STATIC_GEN_2 == null)
-            IDLBoolArray_TEMP_STATIC_GEN_2 = IDLBoolArray.native_new();
-        IDLBoolArray_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
-        return IDLBoolArray_TEMP_STATIC_GEN_2;
+            return IDLBool.NULL;
+        if (IDLBool_TEMP_STATIC_GEN_2 == null)
+            IDLBool_TEMP_STATIC_GEN_2 = IDLBool.native_new();
+        IDLBool_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
+        return IDLBool_TEMP_STATIC_GEN_2;
     }
 
     /*[-JNI;-NATIVE]
@@ -227,18 +173,618 @@ return (jlong)IDLTemp::Bool_3(value);
 */
     public static native long internal_native_Bool_3__0(boolean value);
 
-    public static IDLBoolArray Bool_4(boolean value) {
+    public static IDLBool Bool_4(boolean value) {
         long pointer = internal_native_Bool_4__0(value);
         if (pointer == 0)
-            return IDLBoolArray.NULL;
-        if (IDLBoolArray_TEMP_STATIC_GEN_3 == null)
-            IDLBoolArray_TEMP_STATIC_GEN_3 = IDLBoolArray.native_new();
-        IDLBoolArray_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
-        return IDLBoolArray_TEMP_STATIC_GEN_3;
+            return IDLBool.NULL;
+        if (IDLBool_TEMP_STATIC_GEN_3 == null)
+            IDLBool_TEMP_STATIC_GEN_3 = IDLBool.native_new();
+        IDLBool_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
+        return IDLBool_TEMP_STATIC_GEN_3;
     }
 
     /*[-JNI;-NATIVE]
 return (jlong)IDLTemp::Bool_4(value);
 */
     public static native long internal_native_Bool_4__0(boolean value);
+
+    public static IDLInt Int_1(int value) {
+        long pointer = internal_native_Int_1__0(value);
+        if (pointer == 0)
+            return IDLInt.NULL;
+        if (IDLInt_TEMP_STATIC_GEN_0 == null)
+            IDLInt_TEMP_STATIC_GEN_0 = IDLInt.native_new();
+        IDLInt_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLInt_TEMP_STATIC_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Int_1((int)value);
+*/
+    public static native long internal_native_Int_1__0(int value);
+
+    public static IDLInt Int_2(int value) {
+        long pointer = internal_native_Int_2__0(value);
+        if (pointer == 0)
+            return IDLInt.NULL;
+        if (IDLInt_TEMP_STATIC_GEN_1 == null)
+            IDLInt_TEMP_STATIC_GEN_1 = IDLInt.native_new();
+        IDLInt_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return IDLInt_TEMP_STATIC_GEN_1;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Int_2((int)value);
+*/
+    public static native long internal_native_Int_2__0(int value);
+
+    public static IDLInt Int_3(int value) {
+        long pointer = internal_native_Int_3__0(value);
+        if (pointer == 0)
+            return IDLInt.NULL;
+        if (IDLInt_TEMP_STATIC_GEN_2 == null)
+            IDLInt_TEMP_STATIC_GEN_2 = IDLInt.native_new();
+        IDLInt_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
+        return IDLInt_TEMP_STATIC_GEN_2;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Int_3((int)value);
+*/
+    public static native long internal_native_Int_3__0(int value);
+
+    public static IDLInt Int_4(int value) {
+        long pointer = internal_native_Int_4__0(value);
+        if (pointer == 0)
+            return IDLInt.NULL;
+        if (IDLInt_TEMP_STATIC_GEN_3 == null)
+            IDLInt_TEMP_STATIC_GEN_3 = IDLInt.native_new();
+        IDLInt_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
+        return IDLInt_TEMP_STATIC_GEN_3;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Int_4((int)value);
+*/
+    public static native long internal_native_Int_4__0(int value);
+
+    public static IDLLong Long_1(int value) {
+        long pointer = internal_native_Long_1__0(value);
+        if (pointer == 0)
+            return IDLLong.NULL;
+        if (IDLLong_TEMP_STATIC_GEN_0 == null)
+            IDLLong_TEMP_STATIC_GEN_0 = IDLLong.native_new();
+        IDLLong_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLLong_TEMP_STATIC_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Long_1((int)value);
+*/
+    public static native long internal_native_Long_1__0(int value);
+
+    public static IDLLong Long_2(int value) {
+        long pointer = internal_native_Long_2__0(value);
+        if (pointer == 0)
+            return IDLLong.NULL;
+        if (IDLLong_TEMP_STATIC_GEN_1 == null)
+            IDLLong_TEMP_STATIC_GEN_1 = IDLLong.native_new();
+        IDLLong_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return IDLLong_TEMP_STATIC_GEN_1;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Long_2((int)value);
+*/
+    public static native long internal_native_Long_2__0(int value);
+
+    public static IDLLong Long_3(int value) {
+        long pointer = internal_native_Long_3__0(value);
+        if (pointer == 0)
+            return IDLLong.NULL;
+        if (IDLLong_TEMP_STATIC_GEN_2 == null)
+            IDLLong_TEMP_STATIC_GEN_2 = IDLLong.native_new();
+        IDLLong_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
+        return IDLLong_TEMP_STATIC_GEN_2;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Long_3((int)value);
+*/
+    public static native long internal_native_Long_3__0(int value);
+
+    public static IDLLong Long_4(int value) {
+        long pointer = internal_native_Long_4__0(value);
+        if (pointer == 0)
+            return IDLLong.NULL;
+        if (IDLLong_TEMP_STATIC_GEN_3 == null)
+            IDLLong_TEMP_STATIC_GEN_3 = IDLLong.native_new();
+        IDLLong_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
+        return IDLLong_TEMP_STATIC_GEN_3;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Long_4((int)value);
+*/
+    public static native long internal_native_Long_4__0(int value);
+
+    public static IDLFloat Float_1(float value) {
+        long pointer = internal_native_Float_1__0(value);
+        if (pointer == 0)
+            return IDLFloat.NULL;
+        if (IDLFloat_TEMP_STATIC_GEN_0 == null)
+            IDLFloat_TEMP_STATIC_GEN_0 = IDLFloat.native_new();
+        IDLFloat_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLFloat_TEMP_STATIC_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Float_1((float)value);
+*/
+    public static native long internal_native_Float_1__0(float value);
+
+    public static IDLFloat Float_2(float value) {
+        long pointer = internal_native_Float_2__0(value);
+        if (pointer == 0)
+            return IDLFloat.NULL;
+        if (IDLFloat_TEMP_STATIC_GEN_1 == null)
+            IDLFloat_TEMP_STATIC_GEN_1 = IDLFloat.native_new();
+        IDLFloat_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return IDLFloat_TEMP_STATIC_GEN_1;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Float_2((float)value);
+*/
+    public static native long internal_native_Float_2__0(float value);
+
+    public static IDLFloat Float_3(float value) {
+        long pointer = internal_native_Float_3__0(value);
+        if (pointer == 0)
+            return IDLFloat.NULL;
+        if (IDLFloat_TEMP_STATIC_GEN_2 == null)
+            IDLFloat_TEMP_STATIC_GEN_2 = IDLFloat.native_new();
+        IDLFloat_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
+        return IDLFloat_TEMP_STATIC_GEN_2;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Float_3((float)value);
+*/
+    public static native long internal_native_Float_3__0(float value);
+
+    public static IDLFloat Float_4(float value) {
+        long pointer = internal_native_Float_4__0(value);
+        if (pointer == 0)
+            return IDLFloat.NULL;
+        if (IDLFloat_TEMP_STATIC_GEN_3 == null)
+            IDLFloat_TEMP_STATIC_GEN_3 = IDLFloat.native_new();
+        IDLFloat_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
+        return IDLFloat_TEMP_STATIC_GEN_3;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Float_4((float)value);
+*/
+    public static native long internal_native_Float_4__0(float value);
+
+    public static IDLDouble Double_1(double value) {
+        long pointer = internal_native_Double_1__0(value);
+        if (pointer == 0)
+            return IDLDouble.NULL;
+        if (IDLDouble_TEMP_STATIC_GEN_0 == null)
+            IDLDouble_TEMP_STATIC_GEN_0 = IDLDouble.native_new();
+        IDLDouble_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLDouble_TEMP_STATIC_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Double_1((double)value);
+*/
+    public static native long internal_native_Double_1__0(double value);
+
+    public static IDLDouble Double_2(double value) {
+        long pointer = internal_native_Double_2__0(value);
+        if (pointer == 0)
+            return IDLDouble.NULL;
+        if (IDLDouble_TEMP_STATIC_GEN_1 == null)
+            IDLDouble_TEMP_STATIC_GEN_1 = IDLDouble.native_new();
+        IDLDouble_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return IDLDouble_TEMP_STATIC_GEN_1;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Double_2((double)value);
+*/
+    public static native long internal_native_Double_2__0(double value);
+
+    public static IDLDouble Double_3(double value) {
+        long pointer = internal_native_Double_3__0(value);
+        if (pointer == 0)
+            return IDLDouble.NULL;
+        if (IDLDouble_TEMP_STATIC_GEN_2 == null)
+            IDLDouble_TEMP_STATIC_GEN_2 = IDLDouble.native_new();
+        IDLDouble_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
+        return IDLDouble_TEMP_STATIC_GEN_2;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Double_3((double)value);
+*/
+    public static native long internal_native_Double_3__0(double value);
+
+    public static IDLDouble Double_4(double value) {
+        long pointer = internal_native_Double_4__0(value);
+        if (pointer == 0)
+            return IDLDouble.NULL;
+        if (IDLDouble_TEMP_STATIC_GEN_3 == null)
+            IDLDouble_TEMP_STATIC_GEN_3 = IDLDouble.native_new();
+        IDLDouble_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
+        return IDLDouble_TEMP_STATIC_GEN_3;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Double_4((double)value);
+*/
+    public static native long internal_native_Double_4__0(double value);
+
+    public static IDLInt2 Int2_1(int x, int y) {
+        long pointer = internal_native_Int2_1__0(x, y);
+        if (pointer == 0)
+            return IDLInt2.NULL;
+        if (IDLInt2_TEMP_STATIC_GEN_0 == null)
+            IDLInt2_TEMP_STATIC_GEN_0 = IDLInt2.native_new();
+        IDLInt2_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLInt2_TEMP_STATIC_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Int2_1((int)x, (int)y);
+*/
+    public static native long internal_native_Int2_1__0(int x, int y);
+
+    public static IDLInt2 Int2_2(int x, int y) {
+        long pointer = internal_native_Int2_2__0(x, y);
+        if (pointer == 0)
+            return IDLInt2.NULL;
+        if (IDLInt2_TEMP_STATIC_GEN_1 == null)
+            IDLInt2_TEMP_STATIC_GEN_1 = IDLInt2.native_new();
+        IDLInt2_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return IDLInt2_TEMP_STATIC_GEN_1;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Int2_2((int)x, (int)y);
+*/
+    public static native long internal_native_Int2_2__0(int x, int y);
+
+    public static IDLInt3 Int3_1(int x, int y, int z) {
+        long pointer = internal_native_Int3_1__0(x, y, z);
+        if (pointer == 0)
+            return IDLInt3.NULL;
+        if (IDLInt3_TEMP_STATIC_GEN_0 == null)
+            IDLInt3_TEMP_STATIC_GEN_0 = IDLInt3.native_new();
+        IDLInt3_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLInt3_TEMP_STATIC_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Int3_1((int)x, (int)y, (int)z);
+*/
+    public static native long internal_native_Int3_1__0(int x, int y, int z);
+
+    public static IDLInt3 Int3_2(int x, int y, int z) {
+        long pointer = internal_native_Int3_2__0(x, y, z);
+        if (pointer == 0)
+            return IDLInt3.NULL;
+        if (IDLInt3_TEMP_STATIC_GEN_1 == null)
+            IDLInt3_TEMP_STATIC_GEN_1 = IDLInt3.native_new();
+        IDLInt3_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return IDLInt3_TEMP_STATIC_GEN_1;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Int3_2((int)x, (int)y, (int)z);
+*/
+    public static native long internal_native_Int3_2__0(int x, int y, int z);
+
+    public static IDLInt4 Int4_1(int x, int y, int z, int w) {
+        long pointer = internal_native_Int4_1__0(x, y, z, w);
+        if (pointer == 0)
+            return IDLInt4.NULL;
+        if (IDLInt4_TEMP_STATIC_GEN_0 == null)
+            IDLInt4_TEMP_STATIC_GEN_0 = IDLInt4.native_new();
+        IDLInt4_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLInt4_TEMP_STATIC_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Int4_1((int)x, (int)y, (int)z, (int)w);
+*/
+    public static native long internal_native_Int4_1__0(int x, int y, int z, int w);
+
+    public static IDLInt4 Int4_2(int x, int y, int z, int w) {
+        long pointer = internal_native_Int4_2__0(x, y, z, w);
+        if (pointer == 0)
+            return IDLInt4.NULL;
+        if (IDLInt4_TEMP_STATIC_GEN_1 == null)
+            IDLInt4_TEMP_STATIC_GEN_1 = IDLInt4.native_new();
+        IDLInt4_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return IDLInt4_TEMP_STATIC_GEN_1;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Int4_2((int)x, (int)y, (int)z, (int)w);
+*/
+    public static native long internal_native_Int4_2__0(int x, int y, int z, int w);
+
+    public static IDLLong2 Long2_1(long x, long y) {
+        long pointer = internal_native_Long2_1__0(x, y);
+        if (pointer == 0)
+            return IDLLong2.NULL;
+        if (IDLLong2_TEMP_STATIC_GEN_0 == null)
+            IDLLong2_TEMP_STATIC_GEN_0 = IDLLong2.native_new();
+        IDLLong2_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLLong2_TEMP_STATIC_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Long2_1(x, y);
+*/
+    public static native long internal_native_Long2_1__0(long x, long y);
+
+    public static IDLLong2 Long2_2(long x, long y) {
+        long pointer = internal_native_Long2_2__0(x, y);
+        if (pointer == 0)
+            return IDLLong2.NULL;
+        if (IDLLong2_TEMP_STATIC_GEN_1 == null)
+            IDLLong2_TEMP_STATIC_GEN_1 = IDLLong2.native_new();
+        IDLLong2_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return IDLLong2_TEMP_STATIC_GEN_1;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Long2_2(x, y);
+*/
+    public static native long internal_native_Long2_2__0(long x, long y);
+
+    public static IDLLong3 Long3_1(long x, long y, long z) {
+        long pointer = internal_native_Long3_1__0(x, y, z);
+        if (pointer == 0)
+            return IDLLong3.NULL;
+        if (IDLLong3_TEMP_STATIC_GEN_0 == null)
+            IDLLong3_TEMP_STATIC_GEN_0 = IDLLong3.native_new();
+        IDLLong3_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLLong3_TEMP_STATIC_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Long3_1(x, y, z);
+*/
+    public static native long internal_native_Long3_1__0(long x, long y, long z);
+
+    public static IDLLong3 Long3_2(long x, long y, long z) {
+        long pointer = internal_native_Long3_2__0(x, y, z);
+        if (pointer == 0)
+            return IDLLong3.NULL;
+        if (IDLLong3_TEMP_STATIC_GEN_1 == null)
+            IDLLong3_TEMP_STATIC_GEN_1 = IDLLong3.native_new();
+        IDLLong3_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return IDLLong3_TEMP_STATIC_GEN_1;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Long3_2(x, y, z);
+*/
+    public static native long internal_native_Long3_2__0(long x, long y, long z);
+
+    public static IDLLong4 Long4_1(long x, long y, long z, long w) {
+        long pointer = internal_native_Long4_1__0(x, y, z, w);
+        if (pointer == 0)
+            return IDLLong4.NULL;
+        if (IDLLong4_TEMP_STATIC_GEN_0 == null)
+            IDLLong4_TEMP_STATIC_GEN_0 = IDLLong4.native_new();
+        IDLLong4_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLLong4_TEMP_STATIC_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Long4_1(x, y, z, w);
+*/
+    public static native long internal_native_Long4_1__0(long x, long y, long z, long w);
+
+    public static IDLLong4 Long4_2(long x, long y, long z, long w) {
+        long pointer = internal_native_Long4_2__0(x, y, z, w);
+        if (pointer == 0)
+            return IDLLong4.NULL;
+        if (IDLLong4_TEMP_STATIC_GEN_1 == null)
+            IDLLong4_TEMP_STATIC_GEN_1 = IDLLong4.native_new();
+        IDLLong4_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return IDLLong4_TEMP_STATIC_GEN_1;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Long4_2(x, y, z, w);
+*/
+    public static native long internal_native_Long4_2__0(long x, long y, long z, long w);
+
+    public static IDLFloat2 Float2_1(float x, float y) {
+        long pointer = internal_native_Float2_1__0(x, y);
+        if (pointer == 0)
+            return IDLFloat2.NULL;
+        if (IDLFloat2_TEMP_STATIC_GEN_0 == null)
+            IDLFloat2_TEMP_STATIC_GEN_0 = IDLFloat2.native_new();
+        IDLFloat2_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLFloat2_TEMP_STATIC_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Float2_1((float)x, (float)y);
+*/
+    public static native long internal_native_Float2_1__0(float x, float y);
+
+    public static IDLFloat2 Float2_2(float x, float y) {
+        long pointer = internal_native_Float2_2__0(x, y);
+        if (pointer == 0)
+            return IDLFloat2.NULL;
+        if (IDLFloat2_TEMP_STATIC_GEN_1 == null)
+            IDLFloat2_TEMP_STATIC_GEN_1 = IDLFloat2.native_new();
+        IDLFloat2_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return IDLFloat2_TEMP_STATIC_GEN_1;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Float2_2((float)x, (float)y);
+*/
+    public static native long internal_native_Float2_2__0(float x, float y);
+
+    public static IDLFloat3 Float3_1(float x, float y, float z) {
+        long pointer = internal_native_Float3_1__0(x, y, z);
+        if (pointer == 0)
+            return IDLFloat3.NULL;
+        if (IDLFloat3_TEMP_STATIC_GEN_0 == null)
+            IDLFloat3_TEMP_STATIC_GEN_0 = IDLFloat3.native_new();
+        IDLFloat3_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLFloat3_TEMP_STATIC_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Float3_1((float)x, (float)y, (float)z);
+*/
+    public static native long internal_native_Float3_1__0(float x, float y, float z);
+
+    public static IDLFloat3 Float3_2(float x, float y, float z) {
+        long pointer = internal_native_Float3_2__0(x, y, z);
+        if (pointer == 0)
+            return IDLFloat3.NULL;
+        if (IDLFloat3_TEMP_STATIC_GEN_1 == null)
+            IDLFloat3_TEMP_STATIC_GEN_1 = IDLFloat3.native_new();
+        IDLFloat3_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return IDLFloat3_TEMP_STATIC_GEN_1;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Float3_2((float)x, (float)y, (float)z);
+*/
+    public static native long internal_native_Float3_2__0(float x, float y, float z);
+
+    public static IDLFloat4 Float4_1(float x, float y, float z, float w) {
+        long pointer = internal_native_Float4_1__0(x, y, z, w);
+        if (pointer == 0)
+            return IDLFloat4.NULL;
+        if (IDLFloat4_TEMP_STATIC_GEN_0 == null)
+            IDLFloat4_TEMP_STATIC_GEN_0 = IDLFloat4.native_new();
+        IDLFloat4_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLFloat4_TEMP_STATIC_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Float4_1((float)x, (float)y, (float)z, (float)w);
+*/
+    public static native long internal_native_Float4_1__0(float x, float y, float z, float w);
+
+    public static IDLFloat4 Float4_2(float x, float y, float z, float w) {
+        long pointer = internal_native_Float4_2__0(x, y, z, w);
+        if (pointer == 0)
+            return IDLFloat4.NULL;
+        if (IDLFloat4_TEMP_STATIC_GEN_1 == null)
+            IDLFloat4_TEMP_STATIC_GEN_1 = IDLFloat4.native_new();
+        IDLFloat4_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return IDLFloat4_TEMP_STATIC_GEN_1;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Float4_2((float)x, (float)y, (float)z, (float)w);
+*/
+    public static native long internal_native_Float4_2__0(float x, float y, float z, float w);
+
+    public static IDLDouble2 Double2_1(double x, double y) {
+        long pointer = internal_native_Double2_1__0(x, y);
+        if (pointer == 0)
+            return IDLDouble2.NULL;
+        if (IDLDouble2_TEMP_STATIC_GEN_0 == null)
+            IDLDouble2_TEMP_STATIC_GEN_0 = IDLDouble2.native_new();
+        IDLDouble2_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLDouble2_TEMP_STATIC_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Double2_1((double)x, (double)y);
+*/
+    public static native long internal_native_Double2_1__0(double x, double y);
+
+    public static IDLDouble2 Double2_2(double x, double y) {
+        long pointer = internal_native_Double2_2__0(x, y);
+        if (pointer == 0)
+            return IDLDouble2.NULL;
+        if (IDLDouble2_TEMP_STATIC_GEN_1 == null)
+            IDLDouble2_TEMP_STATIC_GEN_1 = IDLDouble2.native_new();
+        IDLDouble2_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return IDLDouble2_TEMP_STATIC_GEN_1;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Double2_2((double)x, (double)y);
+*/
+    public static native long internal_native_Double2_2__0(double x, double y);
+
+    public static IDLDouble3 Double3_1(double x, double y, double z) {
+        long pointer = internal_native_Double3_1__0(x, y, z);
+        if (pointer == 0)
+            return IDLDouble3.NULL;
+        if (IDLDouble3_TEMP_STATIC_GEN_0 == null)
+            IDLDouble3_TEMP_STATIC_GEN_0 = IDLDouble3.native_new();
+        IDLDouble3_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLDouble3_TEMP_STATIC_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Double3_1((double)x, (double)y, (double)z);
+*/
+    public static native long internal_native_Double3_1__0(double x, double y, double z);
+
+    public static IDLDouble3 Double3_2(double x, double y, double z) {
+        long pointer = internal_native_Double3_2__0(x, y, z);
+        if (pointer == 0)
+            return IDLDouble3.NULL;
+        if (IDLDouble3_TEMP_STATIC_GEN_1 == null)
+            IDLDouble3_TEMP_STATIC_GEN_1 = IDLDouble3.native_new();
+        IDLDouble3_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return IDLDouble3_TEMP_STATIC_GEN_1;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Double3_2((double)x, (double)y, (double)z);
+*/
+    public static native long internal_native_Double3_2__0(double x, double y, double z);
+
+    public static IDLDouble4 Double4_1(double x, double y, double z, double w) {
+        long pointer = internal_native_Double4_1__0(x, y, z, w);
+        if (pointer == 0)
+            return IDLDouble4.NULL;
+        if (IDLDouble4_TEMP_STATIC_GEN_0 == null)
+            IDLDouble4_TEMP_STATIC_GEN_0 = IDLDouble4.native_new();
+        IDLDouble4_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLDouble4_TEMP_STATIC_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Double4_1((double)x, (double)y, (double)z, (double)w);
+*/
+    public static native long internal_native_Double4_1__0(double x, double y, double z, double w);
+
+    public static IDLDouble4 Double4_2(double x, double y, double z, double w) {
+        long pointer = internal_native_Double4_2__0(x, y, z, w);
+        if (pointer == 0)
+            return IDLDouble4.NULL;
+        if (IDLDouble4_TEMP_STATIC_GEN_1 == null)
+            IDLDouble4_TEMP_STATIC_GEN_1 = IDLDouble4.native_new();
+        IDLDouble4_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return IDLDouble4_TEMP_STATIC_GEN_1;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)IDLTemp::Double4_2((double)x, (double)y, (double)z, (double)w);
+*/
+    public static native long internal_native_Double4_2__0(double x, double y, double z, double w);
 }

@@ -8,10 +8,6 @@
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
-import imgui.idl.helper.IDLBool;
-import imgui.idl.helper.IDLDouble;
-import imgui.idl.helper.IDLFloat;
-import imgui.idl.helper.IDLInt;
 import imgui.idl.helper.IDLBoolArray;
 import imgui.idl.helper.IDLIntArray;
 import imgui.idl.helper.IDLFloatArray;

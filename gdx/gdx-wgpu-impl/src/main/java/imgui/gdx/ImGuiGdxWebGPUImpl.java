@@ -80,6 +80,7 @@ import com.github.xpenatan.webgpu.WGPUVertexState;
 import com.github.xpenatan.webgpu.WGPUVertexStepMode;
 import com.monstrous.gdx.webgpu.application.WebGPUContext;
 import com.monstrous.gdx.webgpu.application.WgGraphics;
+import imgui.IDLTemp;
 import imgui.ImDrawCmd;
 import imgui.ImDrawData;
 import imgui.ImDrawList;
@@ -93,6 +94,7 @@ import imgui.VecCmdBuffer;
 import imgui.VecIdxBuffer;
 import imgui.VecVtxBuffer;
 import imgui.idl.helper.IDLByteArray;
+import imgui.idl.helper.IDLInt;
 import imgui.idl.helper.IDLIntArray;
 import imgui.idl.helper.IDLString;
 import java.nio.ByteBuffer;
@@ -405,8 +407,8 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
     }
 
     private void createFontsTexture() {
-        IDLIntArray width = new IDLIntArray(1);
-        IDLIntArray height = new IDLIntArray(1);
+        IDLInt width = IDLTemp.Int_1(1);
+        IDLInt height = IDLTemp.Int_2(1);
         IDLByteArray bytesArray = new IDLByteArray(1);
 
         ImGuiIO io = ImGui.GetIO();
@@ -422,6 +424,7 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
             buffer.put(i, bytesArray.getValue(i));
         }
         buffer.position(0);
+        bytesArray.dispose();
 
         WGPUTextureDescriptor texDesc = WGPUTextureDescriptor.obtain();
         texDesc.getSize().setWidth(widthValue);

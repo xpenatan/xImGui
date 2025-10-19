@@ -7,7 +7,7 @@
 */
 package imgui.idl.helper;
 
-public class IDLIntArray extends IDLArrayBase {
+public class IDLIntArray extends IDLArray {
 
     public static final IDLIntArray NULL = native_new();
 
@@ -16,6 +16,10 @@ public class IDLIntArray extends IDLArrayBase {
      */
     public static IDLIntArray native_new() {
         return new IDLIntArray((byte) 1, (char) 1);
+    }
+
+    protected IDLIntArray() {
+        super((byte) 1, (char) 1);
     }
 
     protected IDLIntArray(byte b, char c) {

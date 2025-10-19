@@ -7,22 +7,22 @@
 */
 package imgui.idl.helper;
 
-public class IDLBool extends IDLBoolArray {
+public class IDLByte extends IDLByteArray {
 
-    public static final IDLBool NULL = native_new();
+    public static final IDLByte NULL = native_new();
 
     /**
      * @return An empty instance without a native address
      */
-    public static IDLBool native_new() {
-        return new IDLBool((byte) 1, (char) 1);
+    public static IDLByte native_new() {
+        return new IDLByte((byte) 1, (char) 1);
     }
 
-    protected IDLBool(byte b, char c) {
+    protected IDLByte(byte b, char c) {
         super((byte) 1, (char) 1);
     }
 
-    public IDLBool() {
+    public IDLByte() {
         super((byte) 1, (char) 1);
         long addr = internal_native_create();
         internal_reset(addr, true);
@@ -30,7 +30,7 @@ public class IDLBool extends IDLBoolArray {
 
     /*
       [-JNI;-NATIVE]
-      return (jlong)new IDLBool();
+      return (jlong)new IDLByte();
     */
     public static native long internal_native_create();
 
@@ -40,30 +40,30 @@ public class IDLBool extends IDLBoolArray {
 
     /*
       [-JNI;-NATIVE]
-      IDLBool* nativeObject = (IDLBool*)this_addr;
+      IDLByte* nativeObject = (IDLByte*)this_addr;
       delete nativeObject;
     */
     public static native void internal_native_deleteNative(long this_addr);
 
-    public boolean getValue() {
+    public byte getValue() {
         return internal_native_getValue(native_address);
     }
 
     /*
       [-JNI;-NATIVE]
-      IDLBool* nativeObject = (IDLBool*)this_addr;
+      IDLByte* nativeObject = (IDLByte*)this_addr;
       return nativeObject->getValue();
     */
-    public static native boolean internal_native_getValue(long this_addr);
+    public static native byte internal_native_getValue(long this_addr);
 
-    public void setValue(boolean value) {
+    public void setValue(byte value) {
         internal_native_setValue(native_address, value);
     }
 
     /*
       [-JNI;-NATIVE]
-      IDLBool* nativeObject = (IDLBool*)this_addr;
+      IDLByte* nativeObject = (IDLByte*)this_addr;
       nativeObject->setValue(value);
     */
-    public static native void internal_native_setValue(long this_addr, boolean value);
+    public static native void internal_native_setValue(long this_addr, byte value);
 }

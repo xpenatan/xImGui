@@ -2,7 +2,7 @@ package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
 import idl.helper.IDLByteArray;
-import idl.helper.IDLIntArray;
+import idl.helper.IDLInt;
 
 public class ImFontAtlas extends IDLBase {
 
@@ -21,30 +21,24 @@ public class ImFontAtlas extends IDLBase {
         return AddFontFromMemoryTTF(byteArray, byteArray.getSize(), font_size);
     }
 
-    public void GetTexDataAsRGBA32(IDLByteArray pixelBuffer, IDLIntArray outWidth, IDLIntArray outHeight) {
-        GetTexDataAsRGBA32NATIVE(native_address, pixelBuffer.native_address, outWidth.native_address, outHeight.native_address);
+    public void GetTexDataAsRGBA32(IDLByteArray pixelBuffer, IDLInt outWidth, IDLInt outHeight) {
+        GetTexDataAsRGBA32NATIVE(native_address, pixelBuffer.native_address, outWidth.native_void_address, outHeight.native_void_address);
     }
 
-    public void GetTexDataAsAlpha8(IDLByteArray pixelBuffer, IDLIntArray outWidth, IDLIntArray outHeight) {
-        GetTexDataAsAlpha8(native_address, pixelBuffer.native_address, outWidth.native_address, outHeight.native_address);
+    public void GetTexDataAsAlpha8(IDLByteArray pixelBuffer, IDLInt outWidth, IDLInt outHeight) {
+        GetTexDataAsAlpha8(native_address, pixelBuffer.native_address, outWidth.native_void_address, outHeight.native_void_address);
     }
 
     /*[-TEAVM;-NATIVE]
         var fontAtlas = [MODULE].wrapPointer(addr, [MODULE].ImFontAtlas);
         var pixelBufferArray = [MODULE].wrapPointer(pixelBufferAddr, [MODULE].IDLByteArray);
-        var widthIntArray = [MODULE].wrapPointer(widthAddr, [MODULE].IDLIntArray);
-        var heightIntArray = [MODULE].wrapPointer(heightAddr, [MODULE].IDLIntArray);
-        var widthArr = widthIntArray.getPointer();
-        var heightArr = heightIntArray.getPointer();
-        [MODULE].ImHelper.prototype.memcpyFont32(fontAtlas, pixelBufferArray, widthArr, heightArr);
+        [MODULE].ImHelper.prototype.memcpyFont32(fontAtlas, pixelBufferArray, widthAddr, heightAddr);
     */
     /*[-JNI;-NATIVE]
         ImFontAtlas* fontAtlas = (ImFontAtlas*)addr;
         IDLByteArray* pixelBuffer = (IDLByteArray*)pixelBufferAddr;
-        IDLIntArray* widthIntArray = (IDLIntArray*)widthAddr;
-        IDLIntArray* heightIntArray = (IDLIntArray*)heightAddr;
-        int* widthPtr = (int*)widthIntArray->getData();
-        int* heightPtr = (int*)heightIntArray->getData();
+        int* widthPtr = (int*)widthAddr;
+        int* heightPtr = (int*)heightAddr;
         ImHelper::memcpyFont32(fontAtlas, pixelBuffer, widthPtr, heightPtr);
     */
     private static native void GetTexDataAsRGBA32NATIVE(long addr, long pixelBufferAddr, long widthAddr, long heightAddr);
@@ -52,19 +46,13 @@ public class ImFontAtlas extends IDLBase {
     /*[-TEAVM;-NATIVE]
         var fontAtlas = [MODULE].wrapPointer(addr, [MODULE].ImFontAtlas);
         var pixelBufferArray = [MODULE].wrapPointer(pixelBufferAddr, [MODULE].IDLByteArray);
-        var widthIntArray = [MODULE].wrapPointer(widthAddr, [MODULE].IDLIntArray);
-        var heightIntArray = [MODULE].wrapPointer(heightAddr, [MODULE].IDLIntArray);
-        var widthArr = widthIntArray.getPointer();
-        var heightArr = heightIntArray.getPointer();
-        [MODULE].ImHelper.prototype.memcpyFont8(fontAtlas, pixelBufferArray, widthArr, heightArr);
+        [MODULE].ImHelper.prototype.memcpyFont8(fontAtlas, pixelBufferArray, widthAddr, heightAddr);
     */
     /*[-JNI;-NATIVE]
         ImFontAtlas* fontAtlas = (ImFontAtlas*)addr;
         IDLByteArray* pixelBuffer = (IDLByteArray*)pixelBufferAddr;
-        IDLIntArray* widthIntArray = (IDLIntArray*)widthAddr;
-        IDLIntArray* heightIntArray = (IDLIntArray*)heightAddr;
-        int* widthPtr = (int*)widthIntArray->getData();
-        int* heightPtr = (int*)heightIntArray->getData();
+        int* widthPtr = (int*)widthAddr;
+        int* heightPtr = (int*)heightAddr;
         ImHelper::memcpyFont8(fontAtlas, pixelBuffer, widthPtr, heightPtr);
     */
     private static native void GetTexDataAsAlpha8(long addr, long pixelBufferAddr, long widthAddr, long heightAddr);

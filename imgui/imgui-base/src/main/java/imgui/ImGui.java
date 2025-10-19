@@ -1,9 +1,5 @@
 package imgui;
 
-import idl.helper.IDLBool;
-import idl.helper.IDLDouble;
-import idl.helper.IDLFloat;
-import idl.helper.IDLInt;
 
 /**
  * @author xpenatan
