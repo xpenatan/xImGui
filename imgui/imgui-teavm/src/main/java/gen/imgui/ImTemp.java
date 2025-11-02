@@ -9,6 +9,14 @@ import gen.com.github.xpenatan.jParser.idl.IDLBase;
 
 public class ImTemp extends IDLBase {
 
+    static private ImTextureIDRef ImTextureIDRef_TEMP_STATIC_GEN_0;
+
+    static private ImTextureRef ImTextureRef_TEMP_STATIC_GEN_0;
+
+    static private ImTextureRef ImTextureRef_TEMP_STATIC_GEN_1;
+
+    static private ImTextureRef ImTextureRef_TEMP_STATIC_GEN_2;
+
     static private ImVec2 ImVec2_TEMP_STATIC_GEN_0;
 
     static private ImVec2 ImVec2_TEMP_STATIC_GEN_1;
@@ -96,6 +104,78 @@ public class ImTemp extends IDLBase {
     public static ImTemp native_new() {
         return new ImTemp((byte) 0, (char) 0);
     }
+
+    public static ImTextureIDRef ImTextureIDRef_1(long textureId) {
+        int pointer = internal_native_ImTextureIDRef_1__0((int) textureId);
+        if (pointer == 0)
+            return ImTextureIDRef.NULL;
+        if (ImTextureIDRef_TEMP_STATIC_GEN_0 == null)
+            ImTextureIDRef_TEMP_STATIC_GEN_0 = ImTextureIDRef.native_new();
+        ImTextureIDRef_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return ImTextureIDRef_TEMP_STATIC_GEN_0;
+    }
+
+    /*[-TEAVM;-NATIVE]
+var returnedJSObj = imgui.ImTemp.prototype.ImTextureIDRef_1__0(textureId);
+if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
+return imgui.getPointer(returnedJSObj);
+*/
+    @org.teavm.jso.JSBody(params = {"textureId"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImTextureIDRef_1__0(textureId);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_ImTextureIDRef_1__0(int textureId);
+
+    public static ImTextureRef ImTextureRef_1(long textureId) {
+        int pointer = internal_native_ImTextureRef_1__0((int) textureId);
+        if (pointer == 0)
+            return ImTextureRef.NULL;
+        if (ImTextureRef_TEMP_STATIC_GEN_0 == null)
+            ImTextureRef_TEMP_STATIC_GEN_0 = ImTextureRef.native_new();
+        ImTextureRef_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return ImTextureRef_TEMP_STATIC_GEN_0;
+    }
+
+    /*[-TEAVM;-NATIVE]
+var returnedJSObj = imgui.ImTemp.prototype.ImTextureRef_1__0(textureId);
+if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
+return imgui.getPointer(returnedJSObj);
+*/
+    @org.teavm.jso.JSBody(params = {"textureId"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImTextureRef_1__0(textureId);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_ImTextureRef_1__0(int textureId);
+
+    public static ImTextureRef ImTextureRef_2(long textureId) {
+        int pointer = internal_native_ImTextureRef_2__0((int) textureId);
+        if (pointer == 0)
+            return ImTextureRef.NULL;
+        if (ImTextureRef_TEMP_STATIC_GEN_1 == null)
+            ImTextureRef_TEMP_STATIC_GEN_1 = ImTextureRef.native_new();
+        ImTextureRef_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return ImTextureRef_TEMP_STATIC_GEN_1;
+    }
+
+    /*[-TEAVM;-NATIVE]
+var returnedJSObj = imgui.ImTemp.prototype.ImTextureRef_2__0(textureId);
+if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
+return imgui.getPointer(returnedJSObj);
+*/
+    @org.teavm.jso.JSBody(params = {"textureId"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImTextureRef_2__0(textureId);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_ImTextureRef_2__0(int textureId);
+
+    public static ImTextureRef ImTextureRef_3(long textureId) {
+        int pointer = internal_native_ImTextureRef_3__0((int) textureId);
+        if (pointer == 0)
+            return ImTextureRef.NULL;
+        if (ImTextureRef_TEMP_STATIC_GEN_2 == null)
+            ImTextureRef_TEMP_STATIC_GEN_2 = ImTextureRef.native_new();
+        ImTextureRef_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
+        return ImTextureRef_TEMP_STATIC_GEN_2;
+    }
+
+    /*[-TEAVM;-NATIVE]
+var returnedJSObj = imgui.ImTemp.prototype.ImTextureRef_3__0(textureId);
+if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
+return imgui.getPointer(returnedJSObj);
+*/
+    @org.teavm.jso.JSBody(params = {"textureId"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImTextureRef_3__0(textureId);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_ImTextureRef_3__0(int textureId);
 
     public static ImVec2 ImVec2_1() {
         int pointer = internal_native_ImVec2_1__0();

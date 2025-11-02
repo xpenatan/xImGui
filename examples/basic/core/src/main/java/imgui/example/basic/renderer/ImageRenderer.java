@@ -16,7 +16,7 @@ public class ImageRenderer implements UIRenderer {
 
     @Override
     public void render() {
-        ImGui.Image(texture.getTextureObjectHandle(), ImTemp.ImVec2_1(64, 64));
+        ImGui.Image(ImTemp.ImTextureRef_1(texture.getTextureObjectHandle()), ImTemp.ImVec2_1(64, 64));
     }
 
     @Override

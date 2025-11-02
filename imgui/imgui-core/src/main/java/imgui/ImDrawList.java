@@ -6,6 +6,7 @@
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
+import imgui.enums.ImDrawFlags;
 
 public class ImDrawList extends IDLBase {
 
@@ -13,11 +14,11 @@ public class ImDrawList extends IDLBase {
 
     private ImVec2 ImVec2_TEMP_GEN_1;
 
-    private VecCmdBuffer VecCmdBuffer_TEMP_GEN_0;
+    private ImVectorImDrawCmd ImVectorImDrawCmd_TEMP_GEN_0;
 
-    private VecIdxBuffer VecIdxBuffer_TEMP_GEN_0;
+    private ImVectorImDrawIdx ImVectorImDrawIdx_TEMP_GEN_0;
 
-    private VecVtxBuffer VecVtxBuffer_TEMP_GEN_0;
+    private ImVectorImDrawVert ImVectorImDrawVert_TEMP_GEN_0;
 
     static public final ImDrawList NULL = ImDrawList.native_new();
 
@@ -159,25 +160,25 @@ nativeObject->AddLine(*((ImVec2* )p1_addr), *((ImVec2* )p2_addr), (int)col);
 */
     public static native void internal_native_AddLine(long this_addr, long p1_addr, long p2_addr, int col);
 
-    public void AddRect(ImVec2 p_min, ImVec2 p_max, int col, float rounding, ImDrawFlags ImDrawFlags, float thickness) {
-        internal_native_AddRect(native_address, p_min.native_address, p_max.native_address, col, rounding, ImDrawFlags.getValue(), thickness);
+    public void AddRect(ImVec2 p_min, ImVec2 p_max, int col, float rounding, ImDrawFlags flags, float thickness) {
+        internal_native_AddRect(native_address, p_min.native_address, p_max.native_address, col, rounding, flags.getValue(), thickness);
     }
 
     /*[-JNI;-NATIVE]
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddRect(*((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), (int)col, (float)rounding, (::ImDrawFlags)ImDrawFlags, (float)thickness);
+nativeObject->AddRect(*((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), (int)col, (float)rounding, (::ImDrawFlags)flags, (float)thickness);
 */
-    public static native void internal_native_AddRect(long this_addr, long p_min_addr, long p_max_addr, int col, float rounding, long ImDrawFlags, float thickness);
+    public static native void internal_native_AddRect(long this_addr, long p_min_addr, long p_max_addr, int col, float rounding, int flags, float thickness);
 
-    public void AddRect(ImVec2 p_min, ImVec2 p_max, int col, float rounding, ImDrawFlags ImDrawFlags) {
-        internal_native_AddRect(native_address, p_min.native_address, p_max.native_address, col, rounding, ImDrawFlags.getValue());
+    public void AddRect(ImVec2 p_min, ImVec2 p_max, int col, float rounding, ImDrawFlags flags) {
+        internal_native_AddRect(native_address, p_min.native_address, p_max.native_address, col, rounding, flags.getValue());
     }
 
     /*[-JNI;-NATIVE]
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddRect(*((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), (int)col, (float)rounding, (::ImDrawFlags)ImDrawFlags);
+nativeObject->AddRect(*((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), (int)col, (float)rounding, (::ImDrawFlags)flags);
 */
-    public static native void internal_native_AddRect(long this_addr, long p_min_addr, long p_max_addr, int col, float rounding, long ImDrawFlags);
+    public static native void internal_native_AddRect(long this_addr, long p_min_addr, long p_max_addr, int col, float rounding, int flags);
 
     public void AddRect(ImVec2 p_min, ImVec2 p_max, int col, float rounding) {
         internal_native_AddRect(native_address, p_min.native_address, p_max.native_address, col, rounding);
@@ -199,15 +200,15 @@ nativeObject->AddRect(*((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), (int)col
 */
     public static native void internal_native_AddRect(long this_addr, long p_min_addr, long p_max_addr, int col);
 
-    public void AddRectFilled(ImVec2 p_min, ImVec2 p_max, int col, float rounding, ImDrawFlags ImDrawFlags) {
-        internal_native_AddRectFilled(native_address, p_min.native_address, p_max.native_address, col, rounding, ImDrawFlags.getValue());
+    public void AddRectFilled(ImVec2 p_min, ImVec2 p_max, int col, float rounding, ImDrawFlags flags) {
+        internal_native_AddRectFilled(native_address, p_min.native_address, p_max.native_address, col, rounding, flags.getValue());
     }
 
     /*[-JNI;-NATIVE]
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddRectFilled(*((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), (int)col, (float)rounding, (::ImDrawFlags)ImDrawFlags);
+nativeObject->AddRectFilled(*((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), (int)col, (float)rounding, (::ImDrawFlags)flags);
 */
-    public static native void internal_native_AddRectFilled(long this_addr, long p_min_addr, long p_max_addr, int col, float rounding, long ImDrawFlags);
+    public static native void internal_native_AddRectFilled(long this_addr, long p_min_addr, long p_max_addr, int col, float rounding, int flags);
 
     public void AddRectFilled(ImVec2 p_min, ImVec2 p_max, int col, float rounding) {
         internal_native_AddRectFilled(native_address, p_min.native_address, p_max.native_address, col, rounding);
@@ -469,46 +470,6 @@ nativeObject->AddText(*((ImVec2* )pos_addr), (int)col, text_begin);
 */
     public static native void internal_native_AddText(long this_addr, long pos_addr, int col, String text_begin);
 
-    public void AddText(ImFont font, float font_size, ImVec2 pos, int col, String text_begin, String text_end, float wrap_width, ImVec4 cpu_fine_clip_rect) {
-        internal_native_AddText(native_address, font.native_address, font_size, pos.native_address, col, text_begin, text_end, wrap_width, cpu_fine_clip_rect.native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddText((ImFont* )font_addr, (float)font_size, *((ImVec2* )pos_addr), (int)col, text_begin, text_end, (float)wrap_width, (ImVec4* )cpu_fine_clip_rect_addr);
-*/
-    public static native void internal_native_AddText(long this_addr, long font_addr, float font_size, long pos_addr, int col, String text_begin, String text_end, float wrap_width, long cpu_fine_clip_rect_addr);
-
-    public void AddText(ImFont font, float font_size, ImVec2 pos, int col, String text_begin, String text_end, float wrap_width) {
-        internal_native_AddText(native_address, font.native_address, font_size, pos.native_address, col, text_begin, text_end, wrap_width);
-    }
-
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddText((ImFont* )font_addr, (float)font_size, *((ImVec2* )pos_addr), (int)col, text_begin, text_end, (float)wrap_width);
-*/
-    public static native void internal_native_AddText(long this_addr, long font_addr, float font_size, long pos_addr, int col, String text_begin, String text_end, float wrap_width);
-
-    public void AddText(ImFont font, float font_size, ImVec2 pos, int col, String text_begin, String text_end) {
-        internal_native_AddText(native_address, font.native_address, font_size, pos.native_address, col, text_begin, text_end);
-    }
-
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddText((ImFont* )font_addr, (float)font_size, *((ImVec2* )pos_addr), (int)col, text_begin, text_end);
-*/
-    public static native void internal_native_AddText(long this_addr, long font_addr, float font_size, long pos_addr, int col, String text_begin, String text_end);
-
-    public void AddText(ImFont font, float font_size, ImVec2 pos, int col, String text_begin) {
-        internal_native_AddText(native_address, font.native_address, font_size, pos.native_address, col, text_begin);
-    }
-
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddText((ImFont* )font_addr, (float)font_size, *((ImVec2* )pos_addr), (int)col, text_begin);
-*/
-    public static native void internal_native_AddText(long this_addr, long font_addr, float font_size, long pos_addr, int col, String text_begin);
-
     public void AddBezierCubic(ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, int col, float thickness, int num_segments) {
         internal_native_AddBezierCubic(native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, col, thickness, num_segments);
     }
@@ -649,15 +610,15 @@ nativeObject->AddImageQuad((void*)user_texture_id_addr, *((ImVec2* )p1_addr), *(
 */
     public static native void internal_native_AddImageQuad(long this_addr, long user_texture_id_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr);
 
-    public void AddImageRounded(IDLBase user_texture_id, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max, int col, float rounding, ImDrawFlags ImDrawFlags) {
-        internal_native_AddImageRounded(native_address, user_texture_id.native_void_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address, col, rounding, ImDrawFlags.getValue());
+    public void AddImageRounded(IDLBase user_texture_id, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max, int col, float rounding, ImDrawFlags flags) {
+        internal_native_AddImageRounded(native_address, user_texture_id.native_void_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address, col, rounding, flags.getValue());
     }
 
     /*[-JNI;-NATIVE]
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImageRounded((void*)user_texture_id_addr, *((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), *((ImVec2* )uv_min_addr), *((ImVec2* )uv_max_addr), (int)col, (float)rounding, (::ImDrawFlags)ImDrawFlags);
+nativeObject->AddImageRounded((void*)user_texture_id_addr, *((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), *((ImVec2* )uv_min_addr), *((ImVec2* )uv_max_addr), (int)col, (float)rounding, (::ImDrawFlags)flags);
 */
-    public static native void internal_native_AddImageRounded(long this_addr, long user_texture_id_addr, long p_min_addr, long p_max_addr, long uv_min_addr, long uv_max_addr, int col, float rounding, long ImDrawFlags);
+    public static native void internal_native_AddImageRounded(long this_addr, long user_texture_id_addr, long p_min_addr, long p_max_addr, long uv_min_addr, long uv_max_addr, int col, float rounding, int flags);
 
     public void AddImageRounded(IDLBase user_texture_id, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max, int col, float rounding) {
         internal_native_AddImageRounded(native_address, user_texture_id.native_void_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address, col, rounding);
@@ -709,25 +670,25 @@ nativeObject->PathFillConvex((int)col);
 */
     public static native void internal_native_PathFillConvex(long this_addr, int col);
 
-    public void PathStroke(int col, ImDrawFlags ImDrawFlags, float thickness) {
-        internal_native_PathStroke(native_address, col, ImDrawFlags.getValue(), thickness);
+    public void PathStroke(int col, ImDrawFlags flags, float thickness) {
+        internal_native_PathStroke(native_address, col, flags.getValue(), thickness);
     }
 
     /*[-JNI;-NATIVE]
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->PathStroke((int)col, (::ImDrawFlags)ImDrawFlags, (float)thickness);
+nativeObject->PathStroke((int)col, (::ImDrawFlags)flags, (float)thickness);
 */
-    public static native void internal_native_PathStroke(long this_addr, int col, long ImDrawFlags, float thickness);
+    public static native void internal_native_PathStroke(long this_addr, int col, int flags, float thickness);
 
-    public void PathStroke(int col, ImDrawFlags ImDrawFlags) {
-        internal_native_PathStroke(native_address, col, ImDrawFlags.getValue());
+    public void PathStroke(int col, ImDrawFlags flags) {
+        internal_native_PathStroke(native_address, col, flags.getValue());
     }
 
     /*[-JNI;-NATIVE]
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->PathStroke((int)col, (::ImDrawFlags)ImDrawFlags);
+nativeObject->PathStroke((int)col, (::ImDrawFlags)flags);
 */
-    public static native void internal_native_PathStroke(long this_addr, int col, long ImDrawFlags);
+    public static native void internal_native_PathStroke(long this_addr, int col, int flags);
 
     public void PathStroke(int col) {
         internal_native_PathStroke(native_address, col);
@@ -769,14 +730,14 @@ nativeObject->ChannelsSetCurrent((int)n);
 */
     public static native void internal_native_ChannelsSetCurrent(long this_addr, int n);
 
-    public VecCmdBuffer get_CmdBuffer() {
+    public ImVectorImDrawCmd get_CmdBuffer() {
         long pointer = internal_native_get_CmdBuffer(native_address);
         if (pointer == 0)
-            return VecCmdBuffer.NULL;
-        if (VecCmdBuffer_TEMP_GEN_0 == null)
-            VecCmdBuffer_TEMP_GEN_0 = VecCmdBuffer.native_new();
-        VecCmdBuffer_TEMP_GEN_0.internal_reset(pointer, false);
-        return VecCmdBuffer_TEMP_GEN_0;
+            return ImVectorImDrawCmd.NULL;
+        if (ImVectorImDrawCmd_TEMP_GEN_0 == null)
+            ImVectorImDrawCmd_TEMP_GEN_0 = ImVectorImDrawCmd.native_new();
+        ImVectorImDrawCmd_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImVectorImDrawCmd_TEMP_GEN_0;
     }
 
     /*[-JNI;-NATIVE]
@@ -785,24 +746,24 @@ return (jlong)&nativeObject->CmdBuffer;
 */
     public static native long internal_native_get_CmdBuffer(long this_addr);
 
-    public void set_CmdBuffer(VecCmdBuffer CmdBuffer) {
+    public void set_CmdBuffer(ImVectorImDrawCmd CmdBuffer) {
         internal_native_set_CmdBuffer(native_address, CmdBuffer.native_address);
     }
 
     /*[-JNI;-NATIVE]
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->CmdBuffer = *((VecCmdBuffer*)CmdBuffer_addr);
+nativeObject->CmdBuffer = *((ImVectorImDrawCmd*)CmdBuffer_addr);
 */
     public static native void internal_native_set_CmdBuffer(long this_addr, long CmdBuffer_addr);
 
-    public VecIdxBuffer get_IdxBuffer() {
+    public ImVectorImDrawIdx get_IdxBuffer() {
         long pointer = internal_native_get_IdxBuffer(native_address);
         if (pointer == 0)
-            return VecIdxBuffer.NULL;
-        if (VecIdxBuffer_TEMP_GEN_0 == null)
-            VecIdxBuffer_TEMP_GEN_0 = VecIdxBuffer.native_new();
-        VecIdxBuffer_TEMP_GEN_0.internal_reset(pointer, false);
-        return VecIdxBuffer_TEMP_GEN_0;
+            return ImVectorImDrawIdx.NULL;
+        if (ImVectorImDrawIdx_TEMP_GEN_0 == null)
+            ImVectorImDrawIdx_TEMP_GEN_0 = ImVectorImDrawIdx.native_new();
+        ImVectorImDrawIdx_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImVectorImDrawIdx_TEMP_GEN_0;
     }
 
     /*[-JNI;-NATIVE]
@@ -811,24 +772,24 @@ return (jlong)&nativeObject->IdxBuffer;
 */
     public static native long internal_native_get_IdxBuffer(long this_addr);
 
-    public void set_IdxBuffer(VecIdxBuffer IdxBuffer) {
+    public void set_IdxBuffer(ImVectorImDrawIdx IdxBuffer) {
         internal_native_set_IdxBuffer(native_address, IdxBuffer.native_address);
     }
 
     /*[-JNI;-NATIVE]
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->IdxBuffer = *((VecIdxBuffer*)IdxBuffer_addr);
+nativeObject->IdxBuffer = *((ImVectorImDrawIdx*)IdxBuffer_addr);
 */
     public static native void internal_native_set_IdxBuffer(long this_addr, long IdxBuffer_addr);
 
-    public VecVtxBuffer get_VtxBuffer() {
+    public ImVectorImDrawVert get_VtxBuffer() {
         long pointer = internal_native_get_VtxBuffer(native_address);
         if (pointer == 0)
-            return VecVtxBuffer.NULL;
-        if (VecVtxBuffer_TEMP_GEN_0 == null)
-            VecVtxBuffer_TEMP_GEN_0 = VecVtxBuffer.native_new();
-        VecVtxBuffer_TEMP_GEN_0.internal_reset(pointer, false);
-        return VecVtxBuffer_TEMP_GEN_0;
+            return ImVectorImDrawVert.NULL;
+        if (ImVectorImDrawVert_TEMP_GEN_0 == null)
+            ImVectorImDrawVert_TEMP_GEN_0 = ImVectorImDrawVert.native_new();
+        ImVectorImDrawVert_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImVectorImDrawVert_TEMP_GEN_0;
     }
 
     /*[-JNI;-NATIVE]
@@ -837,13 +798,13 @@ return (jlong)&nativeObject->VtxBuffer;
 */
     public static native long internal_native_get_VtxBuffer(long this_addr);
 
-    public void set_VtxBuffer(VecVtxBuffer VtxBuffer) {
+    public void set_VtxBuffer(ImVectorImDrawVert VtxBuffer) {
         internal_native_set_VtxBuffer(native_address, VtxBuffer.native_address);
     }
 
     /*[-JNI;-NATIVE]
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->VtxBuffer = *((VecVtxBuffer*)VtxBuffer_addr);
+nativeObject->VtxBuffer = *((ImVectorImDrawVert*)VtxBuffer_addr);
 */
     public static native void internal_native_set_VtxBuffer(long this_addr, long VtxBuffer_addr);
 }

@@ -10,9 +10,9 @@ var libProjects = mutableSetOf(
     project(":imgui:imgui-desktop"),
     project(":imgui:imgui-teavm"),
     project(":imgui:imgui-android"),
-    project(":imgui-ext:ext-core"),
-    project(":imgui-ext:ext-desktop"),
-    project(":imgui-ext:ext-teavm")
+//    project(":imgui-ext:ext-core"),
+//    project(":imgui-ext:ext-desktop"),
+//    project(":imgui-ext:ext-teavm")
 )
 
 LibExt.isRelease = gradle.startParameter.taskNames.any { it == "publishRelease" }

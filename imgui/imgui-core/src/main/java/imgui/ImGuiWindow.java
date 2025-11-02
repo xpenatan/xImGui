@@ -6,6 +6,7 @@
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
+import imgui.enums.ImGuiWindowFlags;
 
 public class ImGuiWindow extends IDLBase {
 
@@ -15,7 +16,7 @@ public class ImGuiWindow extends IDLBase {
 
     private ImRect ImRect_TEMP_GEN_2;
 
-    private ImVectorInt ImVectorInt_TEMP_GEN_0;
+    private ImVectorUnsignedInt ImVectorUnsignedInt_TEMP_GEN_0;
 
     private ImGuiWindowTempData ImGuiWindowTempData_TEMP_GEN_0;
 
@@ -54,8 +55,6 @@ public class ImGuiWindow extends IDLBase {
     private ImGuiDockNode ImGuiDockNode_TEMP_GEN_0;
 
     private ImGuiDockNode ImGuiDockNode_TEMP_GEN_1;
-
-    private ImRect ImRect_TEMP_GEN_3;
 
     static public final ImGuiWindow NULL = ImGuiWindow.native_new();
 
@@ -110,16 +109,6 @@ copy_addr = nativeObject->Rect();
 return (jlong)&copy_addr;*/
     public static native long internal_native_Rect(long this_addr);
 
-    public float CalcFontSize() {
-        return internal_native_CalcFontSize(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->CalcFontSize();
-*/
-    public static native float internal_native_CalcFontSize(long this_addr);
-
     public ImRect TitleBarRect() {
         long pointer = internal_native_TitleBarRect(native_address);
         if (pointer == 0)
@@ -154,14 +143,14 @@ copy_addr = nativeObject->MenuBarRect();
 return (jlong)&copy_addr;*/
     public static native long internal_native_MenuBarRect(long this_addr);
 
-    public ImVectorInt get_IDStack() {
+    public ImVectorUnsignedInt get_IDStack() {
         long pointer = internal_native_get_IDStack(native_address);
         if (pointer == 0)
-            return ImVectorInt.NULL;
-        if (ImVectorInt_TEMP_GEN_0 == null)
-            ImVectorInt_TEMP_GEN_0 = ImVectorInt.native_new();
-        ImVectorInt_TEMP_GEN_0.internal_reset(pointer, false);
-        return ImVectorInt_TEMP_GEN_0;
+            return ImVectorUnsignedInt.NULL;
+        if (ImVectorUnsignedInt_TEMP_GEN_0 == null)
+            ImVectorUnsignedInt_TEMP_GEN_0 = ImVectorUnsignedInt.native_new();
+        ImVectorUnsignedInt_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImVectorUnsignedInt_TEMP_GEN_0;
     }
 
     /*[-JNI;-NATIVE]
@@ -198,7 +187,13 @@ return nativeObject->ID;
 
     public ImGuiWindowFlags get_Flags() {
         int value = internal_native_get_Flags(native_address);
-        return ImGuiWindowFlags.MAP.get(value);
+        ImGuiWindowFlags[] values = ImGuiWindowFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiWindowFlags enumVal = values[i];
+            if (enumVal != ImGuiWindowFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiWindowFlags.CUSTOM.setValue(value);
     }
 
     /*[-JNI;-NATIVE]
@@ -209,7 +204,13 @@ return (jint)nativeObject->Flags;
 
     public ImGuiWindowFlags get_FlagsPreviousFrame() {
         int value = internal_native_get_FlagsPreviousFrame(native_address);
-        return ImGuiWindowFlags.MAP.get(value);
+        ImGuiWindowFlags[] values = ImGuiWindowFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiWindowFlags enumVal = values[i];
+            if (enumVal != ImGuiWindowFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiWindowFlags.CUSTOM.setValue(value);
     }
 
     /*[-JNI;-NATIVE]
@@ -1308,52 +1309,6 @@ ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
 nativeObject->DockId = DockId;
 */
     public static native void internal_native_set_DockId(long this_addr, int DockId);
-
-    public int get_DockTabItemStatusFlags() {
-        return internal_native_get_DockTabItemStatusFlags(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->DockTabItemStatusFlags;
-*/
-    public static native int internal_native_get_DockTabItemStatusFlags(long this_addr);
-
-    public void set_DockTabItemStatusFlags(int DockTabItemStatusFlags) {
-        internal_native_set_DockTabItemStatusFlags(native_address, DockTabItemStatusFlags);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->DockTabItemStatusFlags = DockTabItemStatusFlags;
-*/
-    public static native void internal_native_set_DockTabItemStatusFlags(long this_addr, int DockTabItemStatusFlags);
-
-    public ImRect get_DockTabItemRect() {
-        long pointer = internal_native_get_DockTabItemRect(native_address);
-        if (pointer == 0)
-            return ImRect.NULL;
-        if (ImRect_TEMP_GEN_3 == null)
-            ImRect_TEMP_GEN_3 = ImRect.native_new();
-        ImRect_TEMP_GEN_3.internal_reset(pointer, false);
-        return ImRect_TEMP_GEN_3;
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return (jlong)&nativeObject->DockTabItemRect;
-*/
-    public static native long internal_native_get_DockTabItemRect(long this_addr);
-
-    public void set_DockTabItemRect(ImRect DockTabItemRect) {
-        internal_native_set_DockTabItemRect(native_address, DockTabItemRect.native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->DockTabItemRect = *((ImRect*)DockTabItemRect_addr);
-*/
-    public static native void internal_native_set_DockTabItemRect(long this_addr, long DockTabItemRect_addr);
 
     public float get_TitleBarHeight() {
         return internal_native_get_TitleBarHeight(native_address);

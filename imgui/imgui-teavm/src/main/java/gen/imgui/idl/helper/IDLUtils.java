@@ -7,8 +7,34 @@
 */
 package gen.imgui.idl.helper;
 
-public class IDLUtils {
+import gen.com.github.xpenatan.jParser.idl.IDLBase;
+import java.nio.ByteBuffer;
+
+public class /*
+  [-TEAVM;-REPLACE]
+          @org.teavm.jso.JSBody(params = {"data_addr", "destination_addr", "offset", "sizeInBytes" }, script = "" +
+              "var dataOut = [MODULE].HEAPU8.subarray(data_addr, data_addr + sizeInBytes);" +
+              "destination_addr.set(dataOut, offset);"
+          )
+          private static native void internal_native_copyToByteBuffer(int data_addr, org.teavm.jso.JSObject destination_addr, long offset, long sizeInBytes);
+*/
+IDLUtils {
 
     @org.teavm.jso.JSBody(params = { "addr" }, script = "return imgui.UTF8ToString(addr);")
     public static native String getJSString(int addr);
+
+    @org.teavm.jso.JSBody(params = { "data_addr", "destination_addr", "offset", "sizeInBytes" }, script = "" + "var dataOut = imgui.HEAPU8.subarray(data_addr, data_addr + sizeInBytes);" + "destination_addr.set(dataOut, offset);")
+    private static native void internal_native_copyToByteBuffer(int data_addr, org.teavm.jso.JSObject destination_addr, int offset, int sizeInBytes);
+
+    /*
+      [-TEAVM;-REPLACE_BLOCK]
+              {
+                  org.teavm.jso.typedarrays.Int8Array destinationArray = org.teavm.jso.typedarrays.Int8Array.fromJavaBuffer(destination);
+                  internal_native_copyToByteBuffer((int)source.native_void_address, destinationArray, offset, sizeInBytes);
+              }
+    */
+    public static void copyToByteBuffer(IDLBase source, ByteBuffer destination, long offset, long sizeInBytes) {
+        org.teavm.jso.typedarrays.Int8Array destinationArray = org.teavm.jso.typedarrays.Int8Array.fromJavaBuffer(destination);
+        internal_native_copyToByteBuffer((int) source.native_void_address, destinationArray, (int) offset, (int) sizeInBytes);
+    }
 }

@@ -6,6 +6,7 @@ import com.github.xpenatan.gdx.backends.teavm.config.TeaBuilder;
 import com.github.xpenatan.gdx.backends.teavm.config.TeaTargetType;
 import java.io.File;
 import java.io.IOException;
+import org.teavm.tooling.TeaVMSourceFilePolicy;
 import org.teavm.tooling.TeaVMTool;
 import org.teavm.vm.TeaVMOptimizationLevel;
 
@@ -22,6 +23,11 @@ public class Build {
         tool.setMainClass(Launcher.class.getName());
         tool.setOptimizationLevel(TeaVMOptimizationLevel.SIMPLE);
         tool.setObfuscated(false);
+
+        tool.setDebugInformationGenerated(true);
+        tool.setSourceMapsFileGenerated(true);
+        tool.setSourceFilePolicy(TeaVMSourceFilePolicy.COPY);
+
         TeaBuilder.build(tool);
     }
 }

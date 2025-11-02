@@ -17,8 +17,6 @@ public class ImFontAtlas extends IDLBase {
 
     private ImFont ImFont_TEMP_GEN_1;
 
-    private IDLBase IDLBase_TEMP_GEN_0;
-
     public final static ImFontAtlas NULL = native_new();
 
     public static ImFontAtlas native_new() {
@@ -28,40 +26,49 @@ public class ImFontAtlas extends IDLBase {
     private ImFontAtlas(byte v, char c) {
     }
 
-    public ImFont AddFontFromMemoryTTF(byte[] fontData, int font_size) {
-        IDLByteArray byteArray = new IDLByteArray(fontData.length);
-        byteArray.copy(fontData);
-        return AddFontFromMemoryTTF(byteArray, byteArray.getSize(), font_size);
-    }
-
-    public void GetTexDataAsRGBA32(IDLByteArray pixelBuffer, IDLInt outWidth, IDLInt outHeight) {
-        GetTexDataAsRGBA32NATIVE(native_address, pixelBuffer.native_address, outWidth.native_void_address, outHeight.native_void_address);
-    }
-
-    public void GetTexDataAsAlpha8(IDLByteArray pixelBuffer, IDLInt outWidth, IDLInt outHeight) {
-        GetTexDataAsAlpha8(native_address, pixelBuffer.native_address, outWidth.native_void_address, outHeight.native_void_address);
-    }
-
-    /*
-      [-JNI;-NATIVE]
-              ImFontAtlas* fontAtlas = (ImFontAtlas*)addr;
-              IDLByteArray* pixelBuffer = (IDLByteArray*)pixelBufferAddr;
-              int* widthPtr = (int*)widthAddr;
-              int* heightPtr = (int*)heightAddr;
-              ImHelper::memcpyFont32(fontAtlas, pixelBuffer, widthPtr, heightPtr);
-    */
-    private static native void GetTexDataAsRGBA32NATIVE(long addr, long pixelBufferAddr, long widthAddr, long heightAddr);
-
-    /*
-      [-JNI;-NATIVE]
-              ImFontAtlas* fontAtlas = (ImFontAtlas*)addr;
-              IDLByteArray* pixelBuffer = (IDLByteArray*)pixelBufferAddr;
-              int* widthPtr = (int*)widthAddr;
-              int* heightPtr = (int*)heightAddr;
-              ImHelper::memcpyFont8(fontAtlas, pixelBuffer, widthPtr, heightPtr);
-    */
-    private static native void GetTexDataAsAlpha8(long addr, long pixelBufferAddr, long widthAddr, long heightAddr);
-
+    // public ImFont AddFontFromMemoryTTF(byte[] fontData, int font_size) {
+    // IDLByteArray byteArray = new IDLByteArray(fontData.length);
+    // byteArray.copy(fontData);
+    // return AddFontFromMemoryTTF(byteArray, byteArray.getSize(), font_size);
+    // }
+    // 
+    // public void GetTexDataAsRGBA32(IDLByteArray pixelBuffer, IDLInt outWidth, IDLInt outHeight) {
+    // GetTexDataAsRGBA32NATIVE(native_address, pixelBuffer.native_address, outWidth.native_void_address, outHeight.native_void_address);
+    // }
+    // 
+    // public void GetTexDataAsAlpha8(IDLByteArray pixelBuffer, IDLInt outWidth, IDLInt outHeight) {
+    // GetTexDataAsAlpha8(native_address, pixelBuffer.native_address, outWidth.native_void_address, outHeight.native_void_address);
+    // }
+    // 
+    // /*[-TEAVM;-NATIVE]
+    // var fontAtlas = [MODULE].wrapPointer(addr, [MODULE].ImFontAtlas);
+    // var pixelBufferArray = [MODULE].wrapPointer(pixelBufferAddr, [MODULE].IDLByteArray);
+    // [MODULE].ImHelper.prototype.memcpyFont32(fontAtlas, pixelBufferArray, widthAddr, heightAddr);
+    // */
+    // /*[-JNI;-NATIVE]
+    // ImFontAtlas* fontAtlas = (ImFontAtlas*)addr;
+    // IDLByteArray* pixelBuffer = (IDLByteArray*)pixelBufferAddr;
+    // int* widthPtr = (int*)widthAddr;
+    // int* heightPtr = (int*)heightAddr;
+    // ImHelper::memcpyFont32(fontAtlas, pixelBuffer, widthPtr, heightPtr);
+    // */
+    // private static native void GetTexDataAsRGBA32NATIVE(long addr, long pixelBufferAddr, long widthAddr, long heightAddr);
+    // 
+    // /*[-TEAVM;-NATIVE]
+    // var fontAtlas = [MODULE].wrapPointer(addr, [MODULE].ImFontAtlas);
+    // var pixelBufferArray = [MODULE].wrapPointer(pixelBufferAddr, [MODULE].IDLByteArray);
+    // [MODULE].ImHelper.prototype.memcpyFont8(fontAtlas, pixelBufferArray, widthAddr, heightAddr);
+    // */
+    // /*[-JNI;-NATIVE]
+    // ImFontAtlas* fontAtlas = (ImFontAtlas*)addr;
+    // IDLByteArray* pixelBuffer = (IDLByteArray*)pixelBufferAddr;
+    // int* widthPtr = (int*)widthAddr;
+    // int* heightPtr = (int*)heightAddr;
+    // ImHelper::memcpyFont8(fontAtlas, pixelBuffer, widthPtr, heightPtr);
+    // */
+    // private static native void GetTexDataAsAlpha8(long addr, long pixelBufferAddr, long widthAddr, long heightAddr);
+    // 
+    // public native ImFont AddFontFromMemoryTTF(IDLBase font_data, int font_data_size, int size_pixels);
     protected void deleteNative() {
         internal_native_deleteNative(native_address);
     }
@@ -108,32 +115,4 @@ public class ImFontAtlas extends IDLBase {
       return (jlong)obj;
     */
     public static native long internal_native_AddFontFromMemoryTTF(long this_addr, long font_data_addr, int font_data_size, int size_pixels);
-
-    public IDLBase get_TexID() {
-        long pointer = internal_native_get_TexID(native_address);
-        if (pointer == 0)
-            return IDLBase.NULL;
-        if (IDLBase_TEMP_GEN_0 == null)
-            IDLBase_TEMP_GEN_0 = IDLBase.native_new();
-        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
-        return IDLBase_TEMP_GEN_0;
-    }
-
-    /*
-      [-JNI;-NATIVE]
-      ImFontAtlas* nativeObject = (ImFontAtlas*)this_addr;
-      return (jlong)nativeObject->TexID;
-    */
-    public static native long internal_native_get_TexID(long this_addr);
-
-    public void set_TexID(IDLBase TexID) {
-        internal_native_set_TexID(native_address, TexID.native_void_address);
-    }
-
-    /*
-      [-JNI;-NATIVE]
-      ImFontAtlas* nativeObject = (ImFontAtlas*)this_addr;
-      nativeObject->TexID = (void**)TexID_addr;
-    */
-    public static native void internal_native_set_TexID(long this_addr, long TexID_addr);
 }

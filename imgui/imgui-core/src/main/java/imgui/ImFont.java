@@ -11,8 +11,6 @@ import com.github.xpenatan.jParser.idl.IDLBase;
 
 public class ImFont extends IDLBase {
 
-    private ImFontConfig ImFontConfig_TEMP_GEN_0;
-
     public final static ImFont NULL = native_new();
 
     public static ImFont native_new() {
@@ -22,17 +20,21 @@ public class ImFont extends IDLBase {
     private ImFont(byte v, char c) {
     }
 
-    public void setName(String name) {
-        updateNameNATIVE(native_address, name, get_ConfigData().get_SizePixels());
-    }
-
-    /*
-      [-JNI;-NATIVE]
-              ImFont* font = (ImFont*)addr;
-              ImHelper::updateFontName(font, name, size);
-    */
-    private static native void updateNameNATIVE(long addr, String name, float size);
-
+    // public native ImFontConfig get_ConfigData();
+    // 
+    // public void setName(String name) {
+    // updateNameNATIVE(native_address, name, get_ConfigData().get_SizePixels());
+    // }
+    // 
+    // /*[-TEAVM;-NATIVE]
+    // var font = [MODULE].wrapPointer(addr, [MODULE].ImFont);
+    // [MODULE].ImHelper.prototype.updateFontName(font, name, size);
+    // */
+    // /*[-JNI;-NATIVE]
+    // ImFont* font = (ImFont*)addr;
+    // ImHelper::updateFontName(font, name, size);
+    // */
+    // private static native void updateNameNATIVE(long addr, String name, float size);
     protected void deleteNative() {
         internal_native_deleteNative(native_address);
     }
@@ -43,22 +45,4 @@ public class ImFont extends IDLBase {
       delete nativeObject;
     */
     public static native void internal_native_deleteNative(long this_addr);
-
-    public ImFontConfig get_ConfigData() {
-        long pointer = internal_native_get_ConfigData(native_address);
-        if (pointer == 0)
-            return ImFontConfig.NULL;
-        if (ImFontConfig_TEMP_GEN_0 == null)
-            ImFontConfig_TEMP_GEN_0 = ImFontConfig.native_new();
-        ImFontConfig_TEMP_GEN_0.internal_reset(pointer, false);
-        return ImFontConfig_TEMP_GEN_0;
-    }
-
-    /*
-      [-JNI;-NATIVE]
-      ImFont* nativeObject = (ImFont*)this_addr;
-      const ImFontConfig* attr = nativeObject->ConfigData;
-      return (jlong)attr;
-    */
-    public static native long internal_native_get_ConfigData(long this_addr);
 }

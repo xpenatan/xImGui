@@ -9,6 +9,8 @@ package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLEnum;
 import com.github.xpenatan.jParser.idl.IDLBase;
+import imgui.enums.ImGuiDir;
+import imgui.enums.ImGuiHoveredFlags;
 
 public class ImGuiStyle extends IDLBase {
 
@@ -51,49 +53,57 @@ public class ImGuiStyle extends IDLBase {
     private ImGuiStyle(byte v, char c) {
     }
 
-    private static ImVec4 tmp = ImVec4.native_new();
-
-    /*
-      [-IDL_SKIP]
-    */
-    public native void Colors(ImVec4[] Colors);
-
-    public void Colors(IDLEnum index, float r, float g, float b, float a) {
-        Colors(index, ImVec4.TMP_INTERNAL_1.set(r, g, b, a));
-    }
-
-    public void Colors(IDLEnum index, int r, int g, int b, int a) {
-        Colors(index, ImVec4.TMP_INTERNAL_1.set(r / 255f, g / 255f, b / 255f, a / 255f));
-    }
-
-    public void Colors(IDLEnum index, ImVec4 color) {
-        set_ColorsNATIVE(native_address, index.getValue(), color.native_address);
-    }
-
-    /*
-      [-JNI;-NATIVE]
-              ImGuiStyle* nativeObject = (ImGuiStyle*)addr;
-              ImVec4* vec4 = (ImVec4*)vec4Addr;
-              nativeObject->Colors[index] = *vec4;
-    */
-    private static native void set_ColorsNATIVE(long addr, long index, long vec4Addr);
-
-    /**
-     * Return a temp ImVec4 object. Don't keep reference.
-     */
-    public ImVec4 Colors(IDLEnum index) {
-        tmp.internal_reset((get_ColorsNATIVE(native_address, index.getValue())), false);
-        return tmp;
-    }
-
-    /*
-      [-JNI;-NATIVE]
-              ImGuiStyle* nativeObject = (ImGuiStyle*)addr;
-              ImVec4* vec4 = &nativeObject->Colors[index];
-              return (jlong)vec4;
-    */
-    private static native long get_ColorsNATIVE(long addr, long index);
-
+    // private static ImVec4 tmp = ImVec4.native_new();
+    // 
+    // /*[-IDL_SKIP]*/
+    // public native void Colors(ImVec4[] Colors);
+    // 
+    // /*[-IDL_SKIP]*/
+    // public native ImVec4[] Colors();
+    // 
+    // public void Colors(IDLEnum index, float r, float g, float b, float a) {
+    // Colors(index, ImVec4.TMP_INTERNAL_1.set(r, g, b, a));
+    // }
+    // 
+    // public void Colors(IDLEnum index, int r, int g, int b, int a) {
+    // Colors(index, ImVec4.TMP_INTERNAL_1.set(r / 255f, g / 255f, b / 255f, a / 255f));
+    // }
+    // 
+    // public void Colors(IDLEnum index, ImVec4 color) {
+    // set_ColorsNATIVE(native_address, index.getValue(), color.native_address);
+    // }
+    // 
+    // /*[-TEAVM;-NATIVE]
+    // var nativeObject = [MODULE].wrapPointer(addr, [MODULE].ImGuiStyle);
+    // var vec4 = [MODULE].wrapPointer(vec4Addr, [MODULE].ImVec4);
+    // nativeObject.set_Colors(index, vec4);
+    // */
+    // /*[-JNI;-NATIVE]
+    // ImGuiStyle* nativeObject = (ImGuiStyle*)addr;
+    // ImVec4* vec4 = (ImVec4*)vec4Addr;
+    // nativeObject->Colors[index] = *vec4;
+    // */
+    // private static native void set_ColorsNATIVE(long addr, long index, long vec4Addr);
+    // 
+    // /**
+    // * Return a temp ImVec4 object. Don't keep reference.
+    // */
+    // public ImVec4 Colors(IDLEnum index) {
+    // tmp.internal_reset((get_ColorsNATIVE(native_address, index.getValue())), false);
+    // return tmp;
+    // }
+    // 
+    // /*[-TEAVM;-NATIVE]
+    // var nativeObject = [MODULE].wrapPointer(addr, [MODULE].ImGuiStyle);
+    // var vec4 = nativeObject.get_Colors(index);
+    // return [MODULE].getPointer(vec4);
+    // */
+    // /*[-JNI;-NATIVE]
+    // ImGuiStyle* nativeObject = (ImGuiStyle*)addr;
+    // ImVec4* vec4 = &nativeObject->Colors[index];
+    // return (jlong)vec4;
+    // */
+    // private static native long get_ColorsNATIVE(long addr, long index);
     protected void deleteNative() {
         internal_native_deleteNative(native_address);
     }
@@ -290,7 +300,13 @@ public class ImGuiStyle extends IDLBase {
 
     public ImGuiDir get_WindowMenuButtonPosition() {
         int value = internal_native_get_WindowMenuButtonPosition(native_address);
-        return ImGuiDir.MAP.get(value);
+        ImGuiDir[] values = ImGuiDir.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiDir enumVal = values[i];
+            if (enumVal != ImGuiDir.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiDir.CUSTOM.setValue(value);
     }
 
     /*
@@ -309,7 +325,7 @@ public class ImGuiStyle extends IDLBase {
       ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
       nativeObject->WindowMenuButtonPosition = (::ImGuiDir)WindowMenuButtonPosition;
     */
-    public static native void internal_native_set_WindowMenuButtonPosition(long this_addr, long WindowMenuButtonPosition);
+    public static native void internal_native_set_WindowMenuButtonPosition(long this_addr, int WindowMenuButtonPosition);
 
     public float get_ChildRounding() {
         return internal_native_get_ChildRounding(native_address);
@@ -781,28 +797,6 @@ public class ImGuiStyle extends IDLBase {
     */
     public static native void internal_native_set_TabBorderSize(long this_addr, float TabBorderSize);
 
-    public float get_TabMinWidthForCloseButton() {
-        return internal_native_get_TabMinWidthForCloseButton(native_address);
-    }
-
-    /*
-      [-JNI;-NATIVE]
-      ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
-      return nativeObject->TabMinWidthForCloseButton;
-    */
-    public static native float internal_native_get_TabMinWidthForCloseButton(long this_addr);
-
-    public void set_TabMinWidthForCloseButton(float TabMinWidthForCloseButton) {
-        internal_native_set_TabMinWidthForCloseButton(native_address, TabMinWidthForCloseButton);
-    }
-
-    /*
-      [-JNI;-NATIVE]
-      ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
-      nativeObject->TabMinWidthForCloseButton = TabMinWidthForCloseButton;
-    */
-    public static native void internal_native_set_TabMinWidthForCloseButton(long this_addr, float TabMinWidthForCloseButton);
-
     public float get_TabBarBorderSize() {
         return internal_native_get_TabBarBorderSize(native_address);
     }
@@ -827,7 +821,13 @@ public class ImGuiStyle extends IDLBase {
 
     public ImGuiDir get_ColorButtonPosition() {
         int value = internal_native_get_ColorButtonPosition(native_address);
-        return ImGuiDir.MAP.get(value);
+        ImGuiDir[] values = ImGuiDir.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiDir enumVal = values[i];
+            if (enumVal != ImGuiDir.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiDir.CUSTOM.setValue(value);
     }
 
     /*
@@ -846,7 +846,7 @@ public class ImGuiStyle extends IDLBase {
       ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
       nativeObject->ColorButtonPosition = (::ImGuiDir)ColorButtonPosition;
     */
-    public static native void internal_native_set_ColorButtonPosition(long this_addr, long ColorButtonPosition);
+    public static native void internal_native_set_ColorButtonPosition(long this_addr, int ColorButtonPosition);
 
     public ImVec2 get_ButtonTextAlign() {
         long pointer = internal_native_get_ButtonTextAlign(native_address);
@@ -1260,7 +1260,13 @@ public class ImGuiStyle extends IDLBase {
 
     public ImGuiHoveredFlags get_HoverFlagsForTooltipMouse() {
         int value = internal_native_get_HoverFlagsForTooltipMouse(native_address);
-        return ImGuiHoveredFlags.MAP.get(value);
+        ImGuiHoveredFlags[] values = ImGuiHoveredFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiHoveredFlags enumVal = values[i];
+            if (enumVal != ImGuiHoveredFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiHoveredFlags.CUSTOM.setValue(value);
     }
 
     /*
@@ -1279,11 +1285,17 @@ public class ImGuiStyle extends IDLBase {
       ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
       nativeObject->HoverFlagsForTooltipMouse = (::ImGuiHoveredFlags)HoverFlagsForTooltipMouse;
     */
-    public static native void internal_native_set_HoverFlagsForTooltipMouse(long this_addr, long HoverFlagsForTooltipMouse);
+    public static native void internal_native_set_HoverFlagsForTooltipMouse(long this_addr, int HoverFlagsForTooltipMouse);
 
     public ImGuiHoveredFlags get_HoverFlagsForTooltipNav() {
         int value = internal_native_get_HoverFlagsForTooltipNav(native_address);
-        return ImGuiHoveredFlags.MAP.get(value);
+        ImGuiHoveredFlags[] values = ImGuiHoveredFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiHoveredFlags enumVal = values[i];
+            if (enumVal != ImGuiHoveredFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiHoveredFlags.CUSTOM.setValue(value);
     }
 
     /*
@@ -1302,7 +1314,7 @@ public class ImGuiStyle extends IDLBase {
       ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
       nativeObject->HoverFlagsForTooltipNav = (::ImGuiHoveredFlags)HoverFlagsForTooltipNav;
     */
-    public static native void internal_native_set_HoverFlagsForTooltipNav(long this_addr, long HoverFlagsForTooltipNav);
+    public static native void internal_native_set_HoverFlagsForTooltipNav(long this_addr, int HoverFlagsForTooltipNav);
 
     public ImVec4 get_Colors(int index) {
         long pointer = internal_native_get_Colors(native_address, index);

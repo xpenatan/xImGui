@@ -28,13 +28,13 @@ public class IDLArray extends IDLBase {
     @Override
     protected void onNativeAddressChanged() {
         IDLBase voidData = getVoidData();
-        native_void_address = voidData.native_void_address;
+        native_void_address = voidData.native_address;
     }
 
     public void resize(int size) {
         internal_native_resize(native_address, size);
         IDLBase voidData = getVoidData();
-        native_void_address = voidData.native_void_address;
+        native_void_address = voidData.native_address;
     }
 
     /*

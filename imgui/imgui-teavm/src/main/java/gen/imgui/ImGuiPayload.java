@@ -11,6 +11,8 @@ import gen.com.github.xpenatan.jParser.idl.IDLBase;
 
 public class ImGuiPayload extends IDLBase {
 
+    private IDLBase IDLBase_TEMP_GEN_0;
+
     public final static ImGuiPayload NULL = native_new();
 
     public static ImGuiPayload native_new() {
@@ -20,18 +22,20 @@ public class ImGuiPayload extends IDLBase {
     private ImGuiPayload(byte v, char c) {
     }
 
-    public int get_Data() {
-        return getDataNATIVE((int) native_address);
-    }
-
-    /*
-      [-TEAVM;-NATIVE]
-              var nativeObject = [MODULE].wrapPointer(addr, [MODULE].ImGuiPayload);
-              return [MODULE].ImHelper.prototype.getImGuiPayloadData(nativeObject);
-    */
-    @org.teavm.jso.JSBody(params = {"addr"}, script = "var nativeObject = imgui.wrapPointer(addr, imgui.ImGuiPayload); return imgui.ImHelper.prototype.getImGuiPayloadData(nativeObject);")
-    private static native int getDataNATIVE(int addr);
-
+    // 
+    // public int get_Data() {
+    // return getDataNATIVE(native_address);
+    // }
+    // 
+    // /*[-TEAVM;-NATIVE]
+    // var nativeObject = [MODULE].wrapPointer(addr, [MODULE].ImGuiPayload);
+    // return [MODULE].ImHelper.prototype.getImGuiPayloadData(nativeObject);
+    // */
+    // /*[-JNI;-NATIVE]
+    // ImGuiPayload* nativeObject = (ImGuiPayload*)addr;
+    // return *(const int*)nativeObject->Data;
+    // */
+    // private static native int getDataNATIVE(long addr);
     protected void deleteNative() {
         internal_native_deleteNative(native_address);
     }
@@ -70,15 +74,33 @@ public class ImGuiPayload extends IDLBase {
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPayload);var returnedJSObj = jsObj.IsDelivery();return returnedJSObj;")
     public static native boolean internal_native_IsDelivery(int this_addr);
 
-    public void set_Data(IDLBase Data) {
-        internal_native_set_Data(native_address, Data.native_void_address);
+    public IDLBase get_Data() {
+        int pointer = internal_native_get_Data(native_address);
+        if (pointer == 0)
+            return IDLBase.NULL;
+        if (IDLBase_TEMP_GEN_0 == null)
+            IDLBase_TEMP_GEN_0 = IDLBase.native_new();
+        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
+        return IDLBase_TEMP_GEN_0;
     }
 
     /*
       [-TEAVM;-NATIVE]
       var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPayload);
-      jsObj.set_Data(Data_addr);
+      return jsObj.get_Data();
     */
-    @org.teavm.jso.JSBody(params = {"this_addr", "Data_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPayload);jsObj.set_Data(Data_addr);")
-    public static native void internal_native_set_Data(int this_addr, int Data_addr);
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPayload);return jsObj.get_Data();")
+    public static native int internal_native_get_Data(int this_addr);
+
+    public int get_DataSize() {
+        return internal_native_get_DataSize(native_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPayload);
+      return jsObj.get_DataSize();
+    */
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPayload);return jsObj.get_DataSize();")
+    public static native int internal_native_get_DataSize(int this_addr);
 }

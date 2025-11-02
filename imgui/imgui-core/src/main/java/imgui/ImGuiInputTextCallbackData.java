@@ -6,6 +6,7 @@
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
+import imgui.enums.ImGuiInputTextFlags;
 
 public class ImGuiInputTextCallbackData extends IDLBase {
 
@@ -97,7 +98,13 @@ nativeObject->BufTextLen = BufTextLen;
 
     public ImGuiInputTextFlags get_Flags() {
         int value = internal_native_get_Flags(native_address);
-        return ImGuiInputTextFlags.MAP.get(value);
+        ImGuiInputTextFlags[] values = ImGuiInputTextFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiInputTextFlags enumVal = values[i];
+            if (enumVal != ImGuiInputTextFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiInputTextFlags.CUSTOM.setValue(value);
     }
 
     /*[-JNI;-NATIVE]
@@ -114,5 +121,5 @@ return (jint)nativeObject->Flags;
 ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
 nativeObject->Flags = (::ImGuiInputTextFlags)Flags;
 */
-    public static native void internal_native_set_Flags(long this_addr, long Flags);
+    public static native void internal_native_set_Flags(long this_addr, int Flags);
 }

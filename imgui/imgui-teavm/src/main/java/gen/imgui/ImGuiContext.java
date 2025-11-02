@@ -9,9 +9,15 @@ import gen.com.github.xpenatan.jParser.idl.IDLBase;
 
 public class ImGuiContext extends IDLBase {
 
-    private ImGuiStorage ImGuiStorage_TEMP_GEN_0;
+    private ImVectorImGuiWindowPtr ImVectorImGuiWindowPtr_TEMP_GEN_0;
 
-    private ImVec2 ImVec2_TEMP_GEN_0;
+    private ImVectorImGuiWindowPtr ImVectorImGuiWindowPtr_TEMP_GEN_1;
+
+    private ImVectorImGuiWindowPtr ImVectorImGuiWindowPtr_TEMP_GEN_2;
+
+    private ImVectorImGuiWindowStackData ImVectorImGuiWindowStackData_TEMP_GEN_0;
+
+    private ImGuiStorage ImGuiStorage_TEMP_GEN_0;
 
     private ImGuiWindow ImGuiWindow_TEMP_GEN_0;
 
@@ -23,9 +29,15 @@ public class ImGuiContext extends IDLBase {
 
     private ImGuiWindow ImGuiWindow_TEMP_GEN_4;
 
+    private ImGuiWindow ImGuiWindow_TEMP_GEN_5;
+
+    private ImVec2 ImVec2_TEMP_GEN_0;
+
     private ImVec2 ImVec2_TEMP_GEN_1;
 
-    private ImGuiWindow ImGuiWindow_TEMP_GEN_5;
+    private ImVec2 ImVec2_TEMP_GEN_2;
+
+    private ImVec2 ImVec2_TEMP_GEN_3;
 
     private ImGuiWindow ImGuiWindow_TEMP_GEN_6;
 
@@ -69,6 +81,82 @@ return jsObj.get_NavId();
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);return jsObj.get_NavId();")
     public static native int internal_native_get_NavId(int this_addr);
 
+    public ImVectorImGuiWindowPtr get_Windows() {
+        int pointer = internal_native_get_Windows(native_address);
+        if (pointer == 0)
+            return ImVectorImGuiWindowPtr.NULL;
+        if (ImVectorImGuiWindowPtr_TEMP_GEN_0 == null)
+            ImVectorImGuiWindowPtr_TEMP_GEN_0 = ImVectorImGuiWindowPtr.native_new();
+        ImVectorImGuiWindowPtr_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImVectorImGuiWindowPtr_TEMP_GEN_0;
+    }
+
+    /*[-TEAVM;-NATIVE]
+var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);
+var returnedJSObj = jsObj.get_Windows();
+if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
+return imgui.getPointer(returnedJSObj);
+*/
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);var returnedJSObj = jsObj.get_Windows();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_get_Windows(int this_addr);
+
+    public ImVectorImGuiWindowPtr get_WindowsFocusOrder() {
+        int pointer = internal_native_get_WindowsFocusOrder(native_address);
+        if (pointer == 0)
+            return ImVectorImGuiWindowPtr.NULL;
+        if (ImVectorImGuiWindowPtr_TEMP_GEN_1 == null)
+            ImVectorImGuiWindowPtr_TEMP_GEN_1 = ImVectorImGuiWindowPtr.native_new();
+        ImVectorImGuiWindowPtr_TEMP_GEN_1.internal_reset(pointer, false);
+        return ImVectorImGuiWindowPtr_TEMP_GEN_1;
+    }
+
+    /*[-TEAVM;-NATIVE]
+var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);
+var returnedJSObj = jsObj.get_WindowsFocusOrder();
+if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
+return imgui.getPointer(returnedJSObj);
+*/
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);var returnedJSObj = jsObj.get_WindowsFocusOrder();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_get_WindowsFocusOrder(int this_addr);
+
+    public ImVectorImGuiWindowPtr get_WindowsTempSortBuffer() {
+        int pointer = internal_native_get_WindowsTempSortBuffer(native_address);
+        if (pointer == 0)
+            return ImVectorImGuiWindowPtr.NULL;
+        if (ImVectorImGuiWindowPtr_TEMP_GEN_2 == null)
+            ImVectorImGuiWindowPtr_TEMP_GEN_2 = ImVectorImGuiWindowPtr.native_new();
+        ImVectorImGuiWindowPtr_TEMP_GEN_2.internal_reset(pointer, false);
+        return ImVectorImGuiWindowPtr_TEMP_GEN_2;
+    }
+
+    /*[-TEAVM;-NATIVE]
+var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);
+var returnedJSObj = jsObj.get_WindowsTempSortBuffer();
+if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
+return imgui.getPointer(returnedJSObj);
+*/
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);var returnedJSObj = jsObj.get_WindowsTempSortBuffer();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_get_WindowsTempSortBuffer(int this_addr);
+
+    public ImVectorImGuiWindowStackData get_CurrentWindowStack() {
+        int pointer = internal_native_get_CurrentWindowStack(native_address);
+        if (pointer == 0)
+            return ImVectorImGuiWindowStackData.NULL;
+        if (ImVectorImGuiWindowStackData_TEMP_GEN_0 == null)
+            ImVectorImGuiWindowStackData_TEMP_GEN_0 = ImVectorImGuiWindowStackData.native_new();
+        ImVectorImGuiWindowStackData_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImVectorImGuiWindowStackData_TEMP_GEN_0;
+    }
+
+    /*[-TEAVM;-NATIVE]
+var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);
+var returnedJSObj = jsObj.get_CurrentWindowStack();
+if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
+return imgui.getPointer(returnedJSObj);
+*/
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);var returnedJSObj = jsObj.get_CurrentWindowStack();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_get_CurrentWindowStack(int this_addr);
+
     public ImGuiStorage get_WindowsById() {
         int pointer = internal_native_get_WindowsById(native_address);
         if (pointer == 0)
@@ -99,24 +187,16 @@ return jsObj.get_WindowsActiveCount();
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);return jsObj.get_WindowsActiveCount();")
     public static native int internal_native_get_WindowsActiveCount(int this_addr);
 
-    public ImVec2 get_WindowsHoverPadding() {
-        int pointer = internal_native_get_WindowsHoverPadding(native_address);
-        if (pointer == 0)
-            return ImVec2.NULL;
-        if (ImVec2_TEMP_GEN_0 == null)
-            ImVec2_TEMP_GEN_0 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
-        return ImVec2_TEMP_GEN_0;
+    public float get_WindowsBorderHoverPadding() {
+        return internal_native_get_WindowsBorderHoverPadding(native_address);
     }
 
     /*[-TEAVM;-NATIVE]
 var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);
-var returnedJSObj = jsObj.get_WindowsHoverPadding();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
+return jsObj.get_WindowsBorderHoverPadding();
 */
-    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);var returnedJSObj = jsObj.get_WindowsHoverPadding();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_get_WindowsHoverPadding(int this_addr);
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);return jsObj.get_WindowsBorderHoverPadding();")
+    public static native float internal_native_get_WindowsBorderHoverPadding(int this_addr);
 
     public int get_DebugBreakInWindow() {
         return internal_native_get_DebugBreakInWindow(native_address);
@@ -186,14 +266,33 @@ return imgui.getPointer(returnedJSObj);
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);var returnedJSObj = jsObj.get_HoveredWindowUnderMovingWindow();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_HoveredWindowUnderMovingWindow(int this_addr);
 
-    public ImGuiWindow get_MovingWindow() {
-        int pointer = internal_native_get_MovingWindow(native_address);
+    public ImGuiWindow get_HoveredWindowBeforeClear() {
+        int pointer = internal_native_get_HoveredWindowBeforeClear(native_address);
         if (pointer == 0)
             return ImGuiWindow.NULL;
         if (ImGuiWindow_TEMP_GEN_3 == null)
             ImGuiWindow_TEMP_GEN_3 = ImGuiWindow.native_new();
         ImGuiWindow_TEMP_GEN_3.internal_reset(pointer, false);
         return ImGuiWindow_TEMP_GEN_3;
+    }
+
+    /*[-TEAVM;-NATIVE]
+var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);
+var returnedJSObj = jsObj.get_HoveredWindowBeforeClear();
+if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
+return imgui.getPointer(returnedJSObj);
+*/
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);var returnedJSObj = jsObj.get_HoveredWindowBeforeClear();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_get_HoveredWindowBeforeClear(int this_addr);
+
+    public ImGuiWindow get_MovingWindow() {
+        int pointer = internal_native_get_MovingWindow(native_address);
+        if (pointer == 0)
+            return ImGuiWindow.NULL;
+        if (ImGuiWindow_TEMP_GEN_4 == null)
+            ImGuiWindow_TEMP_GEN_4 = ImGuiWindow.native_new();
+        ImGuiWindow_TEMP_GEN_4.internal_reset(pointer, false);
+        return ImGuiWindow_TEMP_GEN_4;
     }
 
     /*[-TEAVM;-NATIVE]
@@ -209,10 +308,10 @@ return imgui.getPointer(returnedJSObj);
         int pointer = internal_native_get_WheelingWindow(native_address);
         if (pointer == 0)
             return ImGuiWindow.NULL;
-        if (ImGuiWindow_TEMP_GEN_4 == null)
-            ImGuiWindow_TEMP_GEN_4 = ImGuiWindow.native_new();
-        ImGuiWindow_TEMP_GEN_4.internal_reset(pointer, false);
-        return ImGuiWindow_TEMP_GEN_4;
+        if (ImGuiWindow_TEMP_GEN_5 == null)
+            ImGuiWindow_TEMP_GEN_5 = ImGuiWindow.native_new();
+        ImGuiWindow_TEMP_GEN_5.internal_reset(pointer, false);
+        return ImGuiWindow_TEMP_GEN_5;
     }
 
     /*[-TEAVM;-NATIVE]
@@ -224,16 +323,117 @@ return imgui.getPointer(returnedJSObj);
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);var returnedJSObj = jsObj.get_WheelingWindow();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_WheelingWindow(int this_addr);
 
-    public int get_DebugHookIdInfo() {
-        return internal_native_get_DebugHookIdInfo(native_address);
+    public ImVec2 get_WheelingWindowRefMousePos() {
+        int pointer = internal_native_get_WheelingWindowRefMousePos(native_address);
+        if (pointer == 0)
+            return ImVec2.NULL;
+        if (ImVec2_TEMP_GEN_0 == null)
+            ImVec2_TEMP_GEN_0 = ImVec2.native_new();
+        ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImVec2_TEMP_GEN_0;
     }
 
     /*[-TEAVM;-NATIVE]
 var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);
-return jsObj.get_DebugHookIdInfo();
+var returnedJSObj = jsObj.get_WheelingWindowRefMousePos();
+if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
+return imgui.getPointer(returnedJSObj);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);return jsObj.get_DebugHookIdInfo();")
-    public static native int internal_native_get_DebugHookIdInfo(int this_addr);
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);var returnedJSObj = jsObj.get_WheelingWindowRefMousePos();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_get_WheelingWindowRefMousePos(int this_addr);
+
+    public int get_WheelingWindowStartFrame() {
+        return internal_native_get_WheelingWindowStartFrame(native_address);
+    }
+
+    /*[-TEAVM;-NATIVE]
+var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);
+return jsObj.get_WheelingWindowStartFrame();
+*/
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);return jsObj.get_WheelingWindowStartFrame();")
+    public static native int internal_native_get_WheelingWindowStartFrame(int this_addr);
+
+    public int get_WheelingWindowScrolledFrame() {
+        return internal_native_get_WheelingWindowScrolledFrame(native_address);
+    }
+
+    /*[-TEAVM;-NATIVE]
+var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);
+return jsObj.get_WheelingWindowScrolledFrame();
+*/
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);return jsObj.get_WheelingWindowScrolledFrame();")
+    public static native int internal_native_get_WheelingWindowScrolledFrame(int this_addr);
+
+    public float get_WheelingWindowReleaseTimer() {
+        return internal_native_get_WheelingWindowReleaseTimer(native_address);
+    }
+
+    /*[-TEAVM;-NATIVE]
+var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);
+return jsObj.get_WheelingWindowReleaseTimer();
+*/
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);return jsObj.get_WheelingWindowReleaseTimer();")
+    public static native float internal_native_get_WheelingWindowReleaseTimer(int this_addr);
+
+    public ImVec2 get_WheelingWindowWheelRemainder() {
+        int pointer = internal_native_get_WheelingWindowWheelRemainder(native_address);
+        if (pointer == 0)
+            return ImVec2.NULL;
+        if (ImVec2_TEMP_GEN_1 == null)
+            ImVec2_TEMP_GEN_1 = ImVec2.native_new();
+        ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
+        return ImVec2_TEMP_GEN_1;
+    }
+
+    /*[-TEAVM;-NATIVE]
+var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);
+var returnedJSObj = jsObj.get_WheelingWindowWheelRemainder();
+if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
+return imgui.getPointer(returnedJSObj);
+*/
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);var returnedJSObj = jsObj.get_WheelingWindowWheelRemainder();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_get_WheelingWindowWheelRemainder(int this_addr);
+
+    public ImVec2 get_WheelingAxisAvg() {
+        int pointer = internal_native_get_WheelingAxisAvg(native_address);
+        if (pointer == 0)
+            return ImVec2.NULL;
+        if (ImVec2_TEMP_GEN_2 == null)
+            ImVec2_TEMP_GEN_2 = ImVec2.native_new();
+        ImVec2_TEMP_GEN_2.internal_reset(pointer, false);
+        return ImVec2_TEMP_GEN_2;
+    }
+
+    /*[-TEAVM;-NATIVE]
+var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);
+var returnedJSObj = jsObj.get_WheelingAxisAvg();
+if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
+return imgui.getPointer(returnedJSObj);
+*/
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);var returnedJSObj = jsObj.get_WheelingAxisAvg();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_get_WheelingAxisAvg(int this_addr);
+
+    public int get_DebugDrawIdConflictsId() {
+        return internal_native_get_DebugDrawIdConflictsId(native_address);
+    }
+
+    /*[-TEAVM;-NATIVE]
+var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);
+return jsObj.get_DebugDrawIdConflictsId();
+*/
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);return jsObj.get_DebugDrawIdConflictsId();")
+    public static native int internal_native_get_DebugDrawIdConflictsId(int this_addr);
+
+    public int get_DebugHookIdInfoId() {
+        return internal_native_get_DebugHookIdInfoId(native_address);
+    }
+
+    /*[-TEAVM;-NATIVE]
+var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);
+return jsObj.get_DebugHookIdInfoId();
+*/
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);return jsObj.get_DebugHookIdInfoId();")
+    public static native int internal_native_get_DebugHookIdInfoId(int this_addr);
 
     public int get_HoveredId() {
         return internal_native_get_HoveredId(native_address);
@@ -257,16 +457,16 @@ return jsObj.get_HoveredIdPreviousFrame();
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);return jsObj.get_HoveredIdPreviousFrame();")
     public static native int internal_native_get_HoveredIdPreviousFrame(int this_addr);
 
-    public boolean get_HoveredIdAllowOverlap() {
-        return internal_native_get_HoveredIdAllowOverlap(native_address);
+    public int get_HoveredIdPreviousFrameItemCount() {
+        return internal_native_get_HoveredIdPreviousFrameItemCount(native_address);
     }
 
     /*[-TEAVM;-NATIVE]
 var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);
-return jsObj.get_HoveredIdAllowOverlap();
+return jsObj.get_HoveredIdPreviousFrameItemCount();
 */
-    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);return jsObj.get_HoveredIdAllowOverlap();")
-    public static native boolean internal_native_get_HoveredIdAllowOverlap(int this_addr);
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);return jsObj.get_HoveredIdPreviousFrameItemCount();")
+    public static native int internal_native_get_HoveredIdPreviousFrameItemCount(int this_addr);
 
     public float get_HoveredIdTimer() {
         return internal_native_get_HoveredIdTimer(native_address);
@@ -289,6 +489,39 @@ return jsObj.get_HoveredIdNotActiveTimer();
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);return jsObj.get_HoveredIdNotActiveTimer();")
     public static native float internal_native_get_HoveredIdNotActiveTimer(int this_addr);
+
+    public boolean get_HoveredIdAllowOverlap() {
+        return internal_native_get_HoveredIdAllowOverlap(native_address);
+    }
+
+    /*[-TEAVM;-NATIVE]
+var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);
+return jsObj.get_HoveredIdAllowOverlap();
+*/
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);return jsObj.get_HoveredIdAllowOverlap();")
+    public static native boolean internal_native_get_HoveredIdAllowOverlap(int this_addr);
+
+    public boolean get_HoveredIdIsDisabled() {
+        return internal_native_get_HoveredIdIsDisabled(native_address);
+    }
+
+    /*[-TEAVM;-NATIVE]
+var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);
+return jsObj.get_HoveredIdIsDisabled();
+*/
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);return jsObj.get_HoveredIdIsDisabled();")
+    public static native boolean internal_native_get_HoveredIdIsDisabled(int this_addr);
+
+    public boolean get_ItemUnclipByLog() {
+        return internal_native_get_ItemUnclipByLog(native_address);
+    }
+
+    /*[-TEAVM;-NATIVE]
+var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);
+return jsObj.get_ItemUnclipByLog();
+*/
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);return jsObj.get_ItemUnclipByLog();")
+    public static native boolean internal_native_get_ItemUnclipByLog(int this_addr);
 
     public int get_ActiveId() {
         return internal_native_get_ActiveId(native_address);
@@ -400,6 +633,17 @@ return jsObj.get_ActiveIdFromShortcut();
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);return jsObj.get_ActiveIdFromShortcut();")
     public static native boolean internal_native_get_ActiveIdFromShortcut(int this_addr);
 
+    public int get_ActiveIdDisabledId() {
+        return internal_native_get_ActiveIdDisabledId(native_address);
+    }
+
+    /*[-TEAVM;-NATIVE]
+var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);
+return jsObj.get_ActiveIdDisabledId();
+*/
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);return jsObj.get_ActiveIdDisabledId();")
+    public static native int internal_native_get_ActiveIdDisabledId(int this_addr);
+
     public int get_ActiveIdMouseButton() {
         return internal_native_get_ActiveIdMouseButton(native_address);
     }
@@ -415,10 +659,10 @@ return jsObj.get_ActiveIdMouseButton();
         int pointer = internal_native_get_ActiveIdClickOffset(native_address);
         if (pointer == 0)
             return ImVec2.NULL;
-        if (ImVec2_TEMP_GEN_1 == null)
-            ImVec2_TEMP_GEN_1 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
-        return ImVec2_TEMP_GEN_1;
+        if (ImVec2_TEMP_GEN_3 == null)
+            ImVec2_TEMP_GEN_3 = ImVec2.native_new();
+        ImVec2_TEMP_GEN_3.internal_reset(pointer, false);
+        return ImVec2_TEMP_GEN_3;
     }
 
     /*[-TEAVM;-NATIVE]
@@ -434,10 +678,10 @@ return imgui.getPointer(returnedJSObj);
         int pointer = internal_native_get_ActiveIdWindow(native_address);
         if (pointer == 0)
             return ImGuiWindow.NULL;
-        if (ImGuiWindow_TEMP_GEN_5 == null)
-            ImGuiWindow_TEMP_GEN_5 = ImGuiWindow.native_new();
-        ImGuiWindow_TEMP_GEN_5.internal_reset(pointer, false);
-        return ImGuiWindow_TEMP_GEN_5;
+        if (ImGuiWindow_TEMP_GEN_6 == null)
+            ImGuiWindow_TEMP_GEN_6 = ImGuiWindow.native_new();
+        ImGuiWindow_TEMP_GEN_6.internal_reset(pointer, false);
+        return ImGuiWindow_TEMP_GEN_6;
     }
 
     /*[-TEAVM;-NATIVE]
@@ -459,47 +703,6 @@ return jsObj.get_ActiveIdPreviousFrame();
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);return jsObj.get_ActiveIdPreviousFrame();")
     public static native int internal_native_get_ActiveIdPreviousFrame(int this_addr);
-
-    public boolean get_ActiveIdPreviousFrameIsAlive() {
-        return internal_native_get_ActiveIdPreviousFrameIsAlive(native_address);
-    }
-
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);
-return jsObj.get_ActiveIdPreviousFrameIsAlive();
-*/
-    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);return jsObj.get_ActiveIdPreviousFrameIsAlive();")
-    public static native boolean internal_native_get_ActiveIdPreviousFrameIsAlive(int this_addr);
-
-    public boolean get_ActiveIdPreviousFrameHasBeenEditedBefore() {
-        return internal_native_get_ActiveIdPreviousFrameHasBeenEditedBefore(native_address);
-    }
-
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);
-return jsObj.get_ActiveIdPreviousFrameHasBeenEditedBefore();
-*/
-    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);return jsObj.get_ActiveIdPreviousFrameHasBeenEditedBefore();")
-    public static native boolean internal_native_get_ActiveIdPreviousFrameHasBeenEditedBefore(int this_addr);
-
-    public ImGuiWindow get_ActiveIdPreviousFrameWindow() {
-        int pointer = internal_native_get_ActiveIdPreviousFrameWindow(native_address);
-        if (pointer == 0)
-            return ImGuiWindow.NULL;
-        if (ImGuiWindow_TEMP_GEN_6 == null)
-            ImGuiWindow_TEMP_GEN_6 = ImGuiWindow.native_new();
-        ImGuiWindow_TEMP_GEN_6.internal_reset(pointer, false);
-        return ImGuiWindow_TEMP_GEN_6;
-    }
-
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);
-var returnedJSObj = jsObj.get_ActiveIdPreviousFrameWindow();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
-    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiContext);var returnedJSObj = jsObj.get_ActiveIdPreviousFrameWindow();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_get_ActiveIdPreviousFrameWindow(int this_addr);
 
     public int get_LastActiveId() {
         return internal_native_get_LastActiveId(native_address);

@@ -6,10 +6,10 @@ include(":imgui:imgui-desktop")
 include(":imgui:imgui-teavm")
 include(":imgui:imgui-android")
 
-include(":imgui-ext:ext-build")
-include(":imgui-ext:ext-core")
-include(":imgui-ext:ext-desktop")
-include(":imgui-ext:ext-teavm")
+//include(":imgui-ext:ext-build")
+//include(":imgui-ext:ext-core")
+//include(":imgui-ext:ext-desktop")
+//include(":imgui-ext:ext-teavm")
 
 // Implementation
 include(":gdx:gdx-shared-impl")
@@ -18,24 +18,24 @@ include(":gdx:gdx-wgpu-impl")
 //include(":gdx:lwjgl3-impl")
 
 // Extension ImLayout
-include(":extensions:imlayout:imlayout-build")
-include(":extensions:imlayout:imlayout-base")
-include(":extensions:imlayout:imlayout-core")
-include(":extensions:imlayout:imlayout-teavm")
+//include(":extensions:imlayout:imlayout-build")
+//include(":extensions:imlayout:imlayout-base")
+//include(":extensions:imlayout:imlayout-core")
+//include(":extensions:imlayout:imlayout-teavm")
 
 // Extension ImGuiColorTextEdit
-include(":extensions:ImGuiColorTextEdit:textedit-build")
-include(":extensions:ImGuiColorTextEdit:textedit-base")
-include(":extensions:ImGuiColorTextEdit:textedit-core")
-include(":extensions:ImGuiColorTextEdit:textedit-desktop")
-include(":extensions:ImGuiColorTextEdit:textedit-teavm")
+//include(":extensions:ImGuiColorTextEdit:textedit-build")
+//include(":extensions:ImGuiColorTextEdit:textedit-base")
+//include(":extensions:ImGuiColorTextEdit:textedit-core")
+//include(":extensions:ImGuiColorTextEdit:textedit-desktop")
+//include(":extensions:ImGuiColorTextEdit:textedit-teavm")
 
 // Extension imgui-node-editor
-include(":extensions:imgui-node-editor:nodeeditor-build")
-include(":extensions:imgui-node-editor:nodeeditor-base")
-include(":extensions:imgui-node-editor:nodeeditor-cpp")
-include(":extensions:imgui-node-editor:nodeeditor-core")
-include(":extensions:imgui-node-editor:nodeeditor-teavm")
+//include(":extensions:imgui-node-editor:nodeeditor-build")
+//include(":extensions:imgui-node-editor:nodeeditor-base")
+//include(":extensions:imgui-node-editor:nodeeditor-cpp")
+//include(":extensions:imgui-node-editor:nodeeditor-core")
+//include(":extensions:imgui-node-editor:nodeeditor-teavm")
 
 // Examples
 include(":examples:impl:gdx")
@@ -49,17 +49,17 @@ include(":examples:basic:teavm")
 include(":examples:basic:teavm-wgpu")
 include(":examples:basic:android")
 
-include(":examples:imlayout:core")
-include(":examples:imlayout:desktop")
-include(":examples:imlayout:teavm")
-
-include(":examples:ImGuiColorTextEdit:core")
-include(":examples:ImGuiColorTextEdit:desktop")
-include(":examples:ImGuiColorTextEdit:teavm")
-
-include(":examples:imgui-node-editor:core")
-include(":examples:imgui-node-editor:desktop")
-include(":examples:imgui-node-editor:teavm")
+//include(":examples:imlayout:core")
+//include(":examples:imlayout:desktop")
+//include(":examples:imlayout:teavm")
+//
+//include(":examples:ImGuiColorTextEdit:core")
+//include(":examples:ImGuiColorTextEdit:desktop")
+//include(":examples:ImGuiColorTextEdit:teavm")
+//
+//include(":examples:imgui-node-editor:core")
+//include(":examples:imgui-node-editor:desktop")
+//include(":examples:imgui-node-editor:teavm")
 
 //
 //include(":examples:node-editor:core")
@@ -96,7 +96,7 @@ include(":examples:imgui-node-editor:teavm")
 //includeBuild("E:\\Dev\\Projects\\java\\gdx-webgpu") {
 //    dependencySubstitution {
 //        substitute(module("io.github.monstroussoftware.gdx-webgpu:gdx-webgpu")).using(project(":gdx-webgpu"))
-//        substitute(module("io.github.monstroussoftware.gdx-webgpu:gdx-desktop-webgpu")).using(project(":backends:gdx-desktop-webgpu"))
-//        substitute(module("io.github.monstroussoftware.gdx-webgpu:gdx-teavm-webgpu")).using(project(":backends:gdx-teavm-webgpu"))
+//        substitute(module("io.github.monstroussoftware.gdx-webgpu:backend-desktop")).using(project(":backends:backend-desktop"))
+//        substitute(module("io.github.monstroussoftware.gdx-webgpu:backend-teavm")).using(project(":backends:backend-teavm"))
 //    }
 //}

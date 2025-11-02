@@ -7,10 +7,8 @@
 */
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
-
 /*
   [-IDL_SKIP]
 */
-public class ImHelper extends IDLBase {
+public class ImHelper {
 }

@@ -12,24 +12,35 @@ import com.badlogic.gdx.math.Matrix4;
 import com.badlogic.gdx.utils.BufferUtils;
 import com.github.xpenatan.jParser.idl.IDLBase;
 import imgui.ClipboardTextFunction;
-import imgui.IDLTemp;
 import imgui.ImDrawCmd;
 import imgui.ImDrawData;
 import imgui.ImDrawList;
-import imgui.ImFontAtlas;
 import imgui.ImGui;
 import imgui.ImGuiIO;
 import imgui.ImGuiImpl;
+import imgui.ImGuiPlatformIO;
+import imgui.ImTemp;
+import imgui.ImTextureData;
+import imgui.ImTextureIDRef;
+import imgui.ImTextureRect;
 import imgui.ImVec2;
 import imgui.ImVec4;
-import imgui.VecCmdBuffer;
-import imgui.VecIdxBuffer;
-import imgui.VecVtxBuffer;
+import imgui.ImVectorImDrawCmd;
+import imgui.ImVectorImDrawIdx;
+import imgui.ImVectorImDrawListPtr;
+import imgui.ImVectorImDrawVert;
+import imgui.ImVectorImTextureDataPtr;
+import imgui.ImVectorImTextureRect;
+import imgui.enums.ImGuiBackendFlags;
+import imgui.enums.ImTextureStatus;
 import imgui.idl.helper.IDLByteArray;
 import imgui.idl.helper.IDLInt;
 import imgui.idl.helper.IDLString;
+import imgui.idl.helper.IDLUtils;
 import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
 import java.nio.IntBuffer;
+import static com.badlogic.gdx.net.HttpResponseHeader.Status;
 
 /**
  * @author xpenatan
@@ -47,8 +58,6 @@ public class ImGuiGdxImpl implements ImGuiImpl {
 
     private ShaderProgram shader;
 
-    private int g_FontTexture = 0;
-
     final static IntBuffer tmpHandle = BufferUtils.newIntBuffer(1);
     int vaoHandle = -1;
 
@@ -61,12 +70,20 @@ public class ImGuiGdxImpl implements ImGuiImpl {
     private ByteBuffer vertexByteBuffer;
     private ByteBuffer indexByteBuffer;
 
+    private ByteBuffer tempBuffer;
+    private IntBuffer tempTextureBuffer;
+
     public ImGuiGdxImpl() {
         this(Gdx.files.local("imgui.ini"));
     }
 
     public ImGuiGdxImpl(FileHandle imgui) {
         this.imgui = imgui;
+        tempBuffer = BufferUtils.newUnsafeByteBuffer(4);
+        tempTextureBuffer = tempBuffer.asIntBuffer();
+
+        ImGuiIO io = ImGui.GetIO();
+        io.set_BackendFlags(ImGuiBackendFlags.RendererHasTextures.or(ImGuiBackendFlags.HasMouseCursors));
 
         vertexAttributes = new VertexAttributes(
                 new VertexAttribute(Usage.Position, 2, GL20.GL_FLOAT, false, "Position"),
@@ -104,56 +121,96 @@ public class ImGuiGdxImpl implements ImGuiImpl {
             }
         }
 
-        ImGui.GetIO().SetClipboardTextFunction(new ClipboardTextFunction() {
-            @Override
-            public void onGetClipboardText(IDLString strOut) {
-                String contents = Gdx.app.getClipboard().getContents();
-                strOut.append(contents);
-            }
-
-            @Override
-            public void onSetClipboardText(IDLString text) {
-                String contents = text.c_str();
-                Gdx.app.getClipboard().setContents(contents);
-            }
-        });
+        //TODO IMPL
+//        ImGui.GetIO().SetClipboardTextFunction(new ClipboardTextFunction() {
+//            @Override
+//            public void onGetClipboardText(IDLString strOut) {
+//                String contents = Gdx.app.getClipboard().getContents();
+//                strOut.append(contents);
+//            }
+//
+//            @Override
+//            public void onSetClipboardText(IDLString text) {
+//                String contents = text.c_str();
+//                Gdx.app.getClipboard().setContents(contents);
+//            }
+//        });
     }
 
-    private void prepareFont() {
-        IDLInt width = IDLTemp.Int_1(1);
-        IDLInt height = IDLTemp.Int_2(1);
-        IDLByteArray bytesArray = new IDLByteArray(1);
+    private void updateTexture(ImTextureData tex) {
+        ImTextureStatus status = tex.get_Status();
 
-        ImGuiIO io = ImGui.GetIO();
-        ImFontAtlas fonts = io.get_Fonts();
-        fonts.GetTexDataAsRGBA32(bytesArray, width, height);
-        int widthValue = width.getValue();
-        int heightValue = height.getValue();
-
-        int size = bytesArray.getSize();
-        ByteBuffer buffer = BufferUtils.newUnsafeByteBuffer(size);
-        for(int i = 0; i < size; i++) {
-            buffer.put(i, bytesArray.getValue(i));
+        if(status == ImTextureStatus.WantCreate || status == ImTextureStatus.WantUpdates) {
+            Gdx.gl.glPixelStorei(GL20.GL_UNPACK_ALIGNMENT, 1);
         }
-        buffer.position(0);
-        buffer.limit(size);
 
-        bytesArray.dispose();
+        if (status == ImTextureStatus.WantCreate) {
+            int sizeBytes = tex.GetSizeInBytes();
+            ByteBuffer buffer = BufferUtils.newUnsafeByteBuffer(sizeBytes);
+            buffer.order(ByteOrder.LITTLE_ENDIAN);
+            IDLBase pixels = tex.GetPixels();
+            IDLUtils.copyToByteBuffer(pixels, buffer,0 , sizeBytes);
+            int width = tex.get_Width();
+            int height = tex.get_Height();
+            int g_Texture = Gdx.gl.glGenTexture();;
 
-        g_FontTexture = Gdx.gl.glGenTexture();
+            Gdx.gl.glGetIntegerv(GL20.GL_ACTIVE_TEXTURE, tempTextureBuffer);
+            int last_texture = tempTextureBuffer.get(0);
+            Gdx.gl.glBindTexture(GL20.GL_TEXTURE_2D, g_Texture);
+            Gdx.gl.glTexParameteri(GL20.GL_TEXTURE_2D, GL20.GL_TEXTURE_MIN_FILTER, GL20.GL_LINEAR);
+            Gdx.gl.glTexParameteri(GL20.GL_TEXTURE_2D, GL20.GL_TEXTURE_MAG_FILTER, GL20.GL_LINEAR);
+            Gdx.gl.glTexParameteri(GL20.GL_TEXTURE_2D, GL20.GL_TEXTURE_WRAP_S, GL20.GL_CLAMP_TO_EDGE);
+            Gdx.gl.glTexParameteri(GL20.GL_TEXTURE_2D, GL20.GL_TEXTURE_WRAP_T, GL20.GL_CLAMP_TO_EDGE);
+            Gdx.gl.glTexImage2D(GL20.GL_TEXTURE_2D, 0, GL20.GL_RGBA, width, height, 0, GL20.GL_RGBA, GL20.GL_UNSIGNED_BYTE, buffer);
+            BufferUtils.disposeUnsafeByteBuffer(buffer);
+            tex.SetTexID(ImTemp.ImTextureIDRef_1(g_Texture));
+            tex.SetStatus(ImTextureStatus.OK);
+            Gdx.gl.glBindTexture(GL20.GL_TEXTURE_2D, last_texture);
+        }
+        else if(status == ImTextureStatus.WantUpdates) {
+            Gdx.gl.glGetIntegerv(GL20.GL_ACTIVE_TEXTURE, tempTextureBuffer);
+            int last_texture = tempTextureBuffer.get(0);
+            ImTextureIDRef imTextureIDRef = tex.GetTexID();
+            long texId = imTextureIDRef.Get();
+            Gdx.gl.glBindTexture(GL20.GL_TEXTURE_2D, (int)texId);
 
-        Gdx.gl.glBindTexture(GL20.GL_TEXTURE_2D, g_FontTexture);
-        Gdx.gl.glTexParameteri(GL20.GL_TEXTURE_2D, GL20.GL_TEXTURE_MIN_FILTER, GL20.GL_LINEAR);
-        Gdx.gl.glTexParameteri(GL20.GL_TEXTURE_2D, GL20.GL_TEXTURE_MAG_FILTER, GL20.GL_LINEAR);
+            ImVectorImTextureRect updates = tex.get_Updates();
+            int bytesPerPixel = tex.get_BytesPerPixel();
+            int size = updates.size();
+            for(int i = 0; i < size; i++) {
+                ImTextureRect r = updates.getData(i);
+                short r_x = r.get_x();
+                short r_y = r.get_y();
+                short r_w = r.get_w();
+                short r_h = r.get_h();
+                int src_pitch = r_w * bytesPerPixel;
 
-        Gdx.gl.glPixelStorei(GL20.GL_UNPACK_ALIGNMENT, 1);
-        Gdx.gl.glTexImage2D(GL20.GL_TEXTURE_2D, 0, GL20.GL_RGBA, widthValue, heightValue, 0, GL20.GL_RGBA,
-                GL20.GL_UNSIGNED_BYTE, buffer);
+                int bufferSize = r_h * src_pitch;
+                ByteBuffer byteBuffer = BufferUtils.newUnsafeByteBuffer(bufferSize);
+                byteBuffer.order(ByteOrder.LITTLE_ENDIAN);
+                int offset = 0;
+                for (int y = 0; y < r_h; y++) {
+                    IDLBase pixel = tex.GetPixelsAt(r_x, r_y + y);
+                    IDLUtils.copyToByteBuffer(pixel, byteBuffer, offset, src_pitch);
+                    offset += src_pitch;
+                }
+                Gdx.gl.glTexSubImage2D(GL20.GL_TEXTURE, 0, r_x, r_y, r_w, r_h, GL20.GL_RGBA, GL20.GL_UNSIGNED_BYTE, byteBuffer);
+                BufferUtils.disposeUnsafeByteBuffer(byteBuffer);
+            }
+            tex.SetStatus(ImTextureStatus.OK);
+            Gdx.gl.glBindTexture(GL20.GL_TEXTURE_2D, last_texture);
+        }
+        else if (status == ImTextureStatus.WantDestroy && tex.get_UnusedFrames() > 0) {
+            destroyTexture(tex);
+        }
+    }
 
-        BufferUtils.disposeUnsafeByteBuffer(buffer);
-        IDLBase textureId = new IDLBase();
-        textureId.native_setVoid(g_FontTexture);
-        io.get_Fonts().set_TexID(textureId);
+    private void destroyTexture(ImTextureData tex) {
+        ImTextureIDRef imTextureIDRef = tex.GetTexID();
+        long texId = imTextureIDRef.Get();
+        Gdx.gl.glDeleteTexture((int)texId);
+        tex.SetTexID(ImTemp.ImTextureIDRef_1(0));
+        tex.SetStatus(ImTextureStatus.Destroyed);
     }
 
     private void createBufferObject() {
@@ -168,10 +225,17 @@ public class ImGuiGdxImpl implements ImGuiImpl {
         int backBufferWidth = Gdx.graphics.getBackBufferWidth();
         int backBufferHeight = Gdx.graphics.getBackBufferHeight();
 
-        if(g_FontTexture == 0) {
-            prepareFont();
+        ImGuiIO io = ImGui.GetIO();
+        ImVec2 displaySize = io.get_DisplaySize(); // TODO check if this updates the struct vec2
+        displaySize.set_x(width);
+        displaySize.set_y(height);
+        if (width > 0 && height > 0) {
+            ImVec2 displayFramebufferScale = io.get_DisplayFramebufferScale();
+            displayFramebufferScale.set_x((float)backBufferWidth / width);
+            displayFramebufferScale.set_y((float)backBufferHeight / height);
         }
-        updateFrame(deltaTime, width, height, backBufferWidth, backBufferHeight);
+        io.set_DeltaTime(deltaTime);
+        ImGui.NewFrame();
 
         if(imgui != null) {
             ImGuiIO imGuiIO = ImGui.GetIO();
@@ -182,141 +246,150 @@ public class ImGuiGdxImpl implements ImGuiImpl {
         }
     }
 
-    protected void updateFrame(float deltaTime, int width, int height, int backBufferWidth, int backBufferHeight) {
-        ImGui.UpdateDisplayAndInputAndFrame(deltaTime, width, height, backBufferWidth, backBufferHeight);
-    }
-
+    @Override
     public void render(ImDrawData drawData) {
-        renderDrawData(drawData, 0);
-    }
-
-    public void renderDrawData(ImDrawData drawData, int id) {
         int cmdListsCount = drawData.get_CmdListsCount();
-        if(cmdListsCount > 0) {
+        if(cmdListsCount <= 0) {
+            return;
+        }
 
-            int totalVtxCount = drawData.get_TotalVtxCount();
-            int totalIdxCount = drawData.get_TotalIdxCount();
+        ImVec2 displaySize = drawData.get_DisplaySize();
+        ImVec2 framebufferScale = drawData.get_FramebufferScale();
+        float displaySizeX = displaySize.get_x();
+        float displaySizeY = displaySize.get_y();
+        float frameScaleX = framebufferScale.get_x();
+        float frameScaleY = framebufferScale.get_y();
+        int fb_width = (int)(displaySizeX * frameScaleX);
+        int fb_height = (int)(displaySizeY * frameScaleY);
+        if (fb_width <= 0 || fb_height <= 0) {
+            return;
+        }
 
-            boolean last_enable_blend = Gdx.gl.glIsEnabled(GL20.GL_BLEND);
-            boolean last_enable_cull_face = Gdx.gl.glIsEnabled(GL20.GL_CULL_FACE);
-            boolean last_enable_depth_test = Gdx.gl.glIsEnabled(GL20.GL_DEPTH_TEST);
-            boolean last_enable_stencil_test = Gdx.gl.glIsEnabled(GL20.GL_STENCIL_TEST);
-            boolean last_enable_scissor_test = Gdx.gl.glIsEnabled(GL20.GL_SCISSOR_TEST);
+        ImVectorImTextureDataPtr textures = drawData.get_Textures();
+        if(textures != ImVectorImTextureDataPtr.NULL) {
+            int size = textures.size();
+            for(int i = 0; i < size; i++) {
+                ImTextureData tex = textures.getData(i);
+                if(tex.get_Status().isNotEqual(ImTextureStatus.OK)) {
+                    updateTexture(tex);
+                }
+            }
+        }
 
-            ImVec2 displaySize = drawData.get_DisplaySize();
-            ImVec2 framebufferScale = drawData.get_FramebufferScale();
-            float frameBufferScaleX = framebufferScale.get_x();
-            float frameBufferScaleY = framebufferScale.get_y();
-            ImVec2 displayPos = drawData.get_DisplayPos();
+        int totalVtxCount = drawData.get_TotalVtxCount();
+        int totalIdxCount = drawData.get_TotalIdxCount();
 
-            int fb_width = (int)(displaySize.get_x() * frameBufferScaleX);
-            int fb_height = (int)(displaySize.get_y() * frameBufferScaleY);
+        boolean last_enable_blend = Gdx.gl.glIsEnabled(GL20.GL_BLEND);
+        boolean last_enable_cull_face = Gdx.gl.glIsEnabled(GL20.GL_CULL_FACE);
+        boolean last_enable_depth_test = Gdx.gl.glIsEnabled(GL20.GL_DEPTH_TEST);
+        boolean last_enable_stencil_test = Gdx.gl.glIsEnabled(GL20.GL_STENCIL_TEST);
+        boolean last_enable_scissor_test = Gdx.gl.glIsEnabled(GL20.GL_SCISSOR_TEST);
 
-            bind(drawData, fb_width, fb_height);
+        ImVec2 displayPos = drawData.get_DisplayPos();
 
-            float clip_offX = displayPos.get_x(); // (0,0) unless using multi-viewports
-            float clip_offY = displayPos.get_y();
-            float clip_scaleX = frameBufferScaleX; // (1,1) unless using retina display which are often (2,2)
-            float clip_scaleY = frameBufferScaleY;
+        bind(drawData, fb_width, fb_height);
 
-            for(int i = 0; i < cmdListsCount; i++) {
-                ImDrawList imDrawList = drawData.get_CmdLists(i);
-                VecCmdBuffer cmdBuffer = imDrawList.get_CmdBuffer();
+        float clip_offX = displayPos.get_x(); // (0,0) unless using multi-viewports
+        float clip_offY = displayPos.get_y();
+        float clip_scaleX = frameScaleX; // (1,1) unless using retina display which are often (2,2)
+        float clip_scaleY = frameScaleY;
 
-                VecVtxBuffer vtxBuffer = imDrawList.get_VtxBuffer();
-                VecIdxBuffer idxBuffer = imDrawList.get_IdxBuffer();
+        ImVectorImDrawListPtr cmdLists = drawData.get_CmdLists();
+        for(int i = 0; i < cmdListsCount; i++) {
+            ImDrawList drawList = cmdLists.getData(i);
+            ImVectorImDrawCmd cmdBuffer = drawList.get_CmdBuffer();
+            ImVectorImDrawVert vtxBuffer = drawList.get_VtxBuffer();
+            ImVectorImDrawIdx idxBuffer = drawList.get_IdxBuffer();
 
-                int vtxByteSize = vtxBuffer.size() * VTX_BUFFER_SIZE;
-                int idxByteSize = idxBuffer.size() * IDX_BUFFER_SIZE;
+            int vtxByteSize = vtxBuffer.size() * VTX_BUFFER_SIZE;
+            int idxByteSize = idxBuffer.size() * IDX_BUFFER_SIZE;
 
-                int vtxBufferSize = 0;
+            int vtxBufferSize = 0;
+            if(vertexByteBuffer != null) {
+                vtxBufferSize = vertexByteBuffer.capacity();
+            }
+            if(vtxByteSize > vtxBufferSize) {
                 if(vertexByteBuffer != null) {
-                    vtxBufferSize = vertexByteBuffer.capacity();
+                    BufferUtils.disposeUnsafeByteBuffer(vertexByteBuffer);
                 }
-                if(vtxByteSize > vtxBufferSize) {
-                    if(vertexByteBuffer != null) {
-                        BufferUtils.disposeUnsafeByteBuffer(vertexByteBuffer);
-                    }
-                    vertexByteBuffer = BufferUtils.newUnsafeByteBuffer(vtxByteSize + 5000);
-                }
-                int idxBufferSize = 0;
+                vertexByteBuffer = BufferUtils.newUnsafeByteBuffer(vtxByteSize + 5000);
+            }
+            int idxBufferSize = 0;
+            if(indexByteBuffer != null) {
+                idxBufferSize = indexByteBuffer.capacity();
+            }
+            if(idxByteSize > idxBufferSize) {
                 if(indexByteBuffer != null) {
-                    idxBufferSize = indexByteBuffer.capacity();
+                    BufferUtils.disposeUnsafeByteBuffer(indexByteBuffer);
                 }
-                if(idxByteSize > idxBufferSize) {
-                    if(indexByteBuffer != null) {
-                        BufferUtils.disposeUnsafeByteBuffer(indexByteBuffer);
-                    }
-                    indexByteBuffer = BufferUtils.newUnsafeByteBuffer(idxByteSize + 5000);
-                }
-
-                vtxBuffer.getByteBuffer(vtxByteSize, 0, vertexByteBuffer);
-                idxBuffer.getByteBuffer(idxByteSize, 0, indexByteBuffer);
-
-                Gdx.gl.glBufferData(GL20.GL_ARRAY_BUFFER, vtxByteSize, vertexByteBuffer, GL20.GL_STREAM_DRAW);
-                Gdx.gl.glBufferData(GL20.GL_ELEMENT_ARRAY_BUFFER, idxByteSize, indexByteBuffer, GL20.GL_STREAM_DRAW);
-
-                int cmdBufferSize = cmdBuffer.size();
-                for(int j = 0; j < cmdBufferSize; j++) {
-                    ImDrawCmd drawCmd = cmdBuffer.getData(j);
-                    ImVec4 clipRect = drawCmd.get_ClipRect();
-                    float clipRectX = clipRect.get_x();
-                    float clipRectY = clipRect.get_y();
-                    float clipRectZ = clipRect.get_z();
-                    float clipRectW = clipRect.get_w();
-                    float clip_minX = (clipRectX - clip_offX) * clip_scaleX;
-                    float clip_minY = (clipRectY - clip_offY) * clip_scaleY;
-                    float clip_maxX = (clipRectZ - clip_offX) * clip_scaleX;
-                    float clip_maxY = (clipRectW - clip_offY) * clip_scaleY;
-                    if(clip_maxX < clip_minX || clip_maxY < clip_minY)
-                        continue;
-
-                    Gdx.gl.glScissor((int)clip_minX, (int)(fb_height - clip_maxY), (int)(clip_maxX - clip_minX), (int)(clip_maxY - clip_minY));
-
-                    int idxOffset = drawCmd.get_IdxOffset();
-                    int vtxOffset = drawCmd.get_VtxOffset();
-                    int elemCount = drawCmd.get_ElemCount();
-                    int indices = idxOffset * 2;
-
-                    IDLBase textureId = drawCmd.get_TextureId();
-                    int texId = textureId.getIntNativeAddress();
-                    Gdx.gl.glBindTexture(GL20.GL_TEXTURE_2D, texId);
-                    Gdx.gl.glDrawElements(GL20.GL_TRIANGLES, elemCount, GL20.GL_UNSIGNED_SHORT, indices);
-                }
+                indexByteBuffer = BufferUtils.newUnsafeByteBuffer(idxByteSize + 5000);
             }
 
-            unbind();
+            vtxBuffer.getByteBuffer(vtxByteSize, 0, vertexByteBuffer);
+            idxBuffer.getByteBuffer(idxByteSize, 0, indexByteBuffer);
 
-            if(last_enable_blend) {
-                Gdx.gl.glEnable(GL20.GL_BLEND);
+            Gdx.gl.glBufferData(GL20.GL_ARRAY_BUFFER, vtxByteSize, vertexByteBuffer, GL20.GL_STREAM_DRAW);
+            Gdx.gl.glBufferData(GL20.GL_ELEMENT_ARRAY_BUFFER, idxByteSize, indexByteBuffer, GL20.GL_STREAM_DRAW);
+
+            int cmdBufferSize = cmdBuffer.size();
+            for(int j = 0; j < cmdBufferSize; j++) {
+                ImDrawCmd drawCmd = cmdBuffer.getData(j);
+                ImVec4 clipRect = drawCmd.get_ClipRect();
+                float clipRectX = clipRect.get_x();
+                float clipRectY = clipRect.get_y();
+                float clipRectZ = clipRect.get_z();
+                float clipRectW = clipRect.get_w();
+                float clip_minX = (clipRectX - clip_offX) * clip_scaleX;
+                float clip_minY = (clipRectY - clip_offY) * clip_scaleY;
+                float clip_maxX = (clipRectZ - clip_offX) * clip_scaleX;
+                float clip_maxY = (clipRectW - clip_offY) * clip_scaleY;
+                if(clip_maxX < clip_minX || clip_maxY < clip_minY)
+                    continue;
+
+                Gdx.gl.glScissor((int)clip_minX, (int)(fb_height - clip_maxY), (int)(clip_maxX - clip_minX), (int)(clip_maxY - clip_minY));
+
+                int idxOffset = drawCmd.get_IdxOffset();
+                int vtxOffset = drawCmd.get_VtxOffset();
+                int elemCount = drawCmd.get_ElemCount();
+                int indices = idxOffset * 2;
+                ImTextureIDRef imTextureIDRef = drawCmd.GetTexID();
+                int texId = (int)imTextureIDRef.Get();
+                Gdx.gl.glBindTexture(GL20.GL_TEXTURE_2D, texId);
+                Gdx.gl.glDrawElements(GL20.GL_TRIANGLES, elemCount, GL20.GL_UNSIGNED_SHORT, indices);
             }
-            else {
-                Gdx.gl.glDisable(GL20.GL_BLEND);
-            }
-            if(last_enable_cull_face) {
-                Gdx.gl.glEnable(GL20.GL_CULL_FACE);
-            }
-            else {
-                Gdx.gl.glDisable(GL20.GL_CULL_FACE);
-            }
-            if(last_enable_depth_test) {
-                Gdx.gl.glEnable(GL20.GL_DEPTH_TEST);
-            }
-            else {
-                Gdx.gl.glDisable(GL20.GL_DEPTH_TEST);
-            }
-            if(last_enable_stencil_test) {
-                Gdx.gl.glEnable(GL20.GL_STENCIL_TEST);
-            }
-            else {
-                Gdx.gl.glDisable(GL20.GL_STENCIL_TEST);
-            }
-            if(last_enable_scissor_test) {
-                Gdx.gl.glEnable(GL20.GL_SCISSOR_TEST);
-            }
-            else {
-                Gdx.gl.glDisable(GL20.GL_SCISSOR_TEST);
-            }
+        }
+
+        unbind();
+
+        if(last_enable_blend) {
+            Gdx.gl.glEnable(GL20.GL_BLEND);
+        }
+        else {
+            Gdx.gl.glDisable(GL20.GL_BLEND);
+        }
+        if(last_enable_cull_face) {
+            Gdx.gl.glEnable(GL20.GL_CULL_FACE);
+        }
+        else {
+            Gdx.gl.glDisable(GL20.GL_CULL_FACE);
+        }
+        if(last_enable_depth_test) {
+            Gdx.gl.glEnable(GL20.GL_DEPTH_TEST);
+        }
+        else {
+            Gdx.gl.glDisable(GL20.GL_DEPTH_TEST);
+        }
+        if(last_enable_stencil_test) {
+            Gdx.gl.glEnable(GL20.GL_STENCIL_TEST);
+        }
+        else {
+            Gdx.gl.glDisable(GL20.GL_STENCIL_TEST);
+        }
+        if(last_enable_scissor_test) {
+            Gdx.gl.glEnable(GL20.GL_SCISSOR_TEST);
+        }
+        else {
+            Gdx.gl.glDisable(GL20.GL_SCISSOR_TEST);
         }
     }
 
@@ -377,7 +450,7 @@ public class ImGuiGdxImpl implements ImGuiImpl {
             if(location < 0) continue;
             shader.enableVertexAttribute(location);
             shader.setVertexAttribute(location, attribute.numComponents, attribute.type, attribute.normalized,
-                    vertexAttributes.vertexSize, attribute.offset);
+            vertexAttributes.vertexSize, attribute.offset);
         }
     }
 
@@ -402,14 +475,23 @@ public class ImGuiGdxImpl implements ImGuiImpl {
     }
 
     private void deleteTexture() {
-        if(g_FontTexture != 0) {
-            Gdx.gl.glDeleteTexture(g_FontTexture);
-            g_FontTexture = 0;
+        // Destroy all textures
+
+        ImGuiPlatformIO platformIO = ImGui.GetPlatformIO();
+        ImVectorImTextureDataPtr textures = platformIO.get_Textures();
+        int size = textures.size();
+        for(int i = 0; i < size; i++) {
+            ImTextureData data = textures.getData(i);
+            short refCount = data.get_RefCount();
+            if(refCount == 1) {
+                destroyTexture(data);
+            }
         }
     }
 
     public void dispose() {
         deleteTexture();
+        BufferUtils.disposeUnsafeByteBuffer(tempBuffer);
 
         if(vertexByteBuffer != null) {
             BufferUtils.disposeUnsafeByteBuffer(vertexByteBuffer);

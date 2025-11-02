@@ -11,6 +11,8 @@ import com.github.xpenatan.jParser.idl.IDLBase;
 
 public class ImGuiPayload extends IDLBase {
 
+    private IDLBase IDLBase_TEMP_GEN_0;
+
     public final static ImGuiPayload NULL = native_new();
 
     public static ImGuiPayload native_new() {
@@ -20,17 +22,20 @@ public class ImGuiPayload extends IDLBase {
     private ImGuiPayload(byte v, char c) {
     }
 
-    public int get_Data() {
-        return getDataNATIVE(native_address);
-    }
-
-    /*
-      [-JNI;-NATIVE]
-              ImGuiPayload* nativeObject = (ImGuiPayload*)addr;
-              return *(const int*)nativeObject->Data;
-    */
-    private static native int getDataNATIVE(long addr);
-
+    // 
+    // public int get_Data() {
+    // return getDataNATIVE(native_address);
+    // }
+    // 
+    // /*[-TEAVM;-NATIVE]
+    // var nativeObject = [MODULE].wrapPointer(addr, [MODULE].ImGuiPayload);
+    // return [MODULE].ImHelper.prototype.getImGuiPayloadData(nativeObject);
+    // */
+    // /*[-JNI;-NATIVE]
+    // ImGuiPayload* nativeObject = (ImGuiPayload*)addr;
+    // return *(const int*)nativeObject->Data;
+    // */
+    // private static native int getDataNATIVE(long addr);
     protected void deleteNative() {
         internal_native_deleteNative(native_address);
     }
@@ -64,14 +69,31 @@ public class ImGuiPayload extends IDLBase {
     */
     public static native boolean internal_native_IsDelivery(long this_addr);
 
-    public void set_Data(IDLBase Data) {
-        internal_native_set_Data(native_address, Data.native_void_address);
+    public IDLBase get_Data() {
+        long pointer = internal_native_get_Data(native_address);
+        if (pointer == 0)
+            return IDLBase.NULL;
+        if (IDLBase_TEMP_GEN_0 == null)
+            IDLBase_TEMP_GEN_0 = IDLBase.native_new();
+        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
+        return IDLBase_TEMP_GEN_0;
     }
 
     /*
       [-JNI;-NATIVE]
       ImGuiPayload* nativeObject = (ImGuiPayload*)this_addr;
-      nativeObject->Data = (void**)Data_addr;
+      return (jlong)nativeObject->Data;
     */
-    public static native void internal_native_set_Data(long this_addr, long Data_addr);
+    public static native long internal_native_get_Data(long this_addr);
+
+    public int get_DataSize() {
+        return internal_native_get_DataSize(native_address);
+    }
+
+    /*
+      [-JNI;-NATIVE]
+      ImGuiPayload* nativeObject = (ImGuiPayload*)this_addr;
+      return nativeObject->DataSize;
+    */
+    public static native int internal_native_get_DataSize(long this_addr);
 }

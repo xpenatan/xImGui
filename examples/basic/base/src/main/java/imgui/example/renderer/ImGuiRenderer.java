@@ -8,7 +8,7 @@ import imgui.ImFontAtlas;
 import imgui.ImGuiImpl;
 import imgui.ImDrawData;
 import imgui.ImGui;
-import imgui.ImGuiConfigFlags;
+import imgui.enums.ImGuiConfigFlags;
 import imgui.ImGuiIO;
 
 public abstract class ImGuiRenderer extends ScreenAdapter {
@@ -31,8 +31,9 @@ public abstract class ImGuiRenderer extends ScreenAdapter {
         FileHandle fontFile01 = Gdx.files.internal("fonts/Cousine-Regular.ttf");
         FileHandle fontFile02 = Gdx.files.internal("fonts/DroidSans.ttf");
 
-        fonts.AddFontFromMemoryTTF(fontFile01.readBytes(), 16).setName(fontFile01.name());
-        fonts.AddFontFromMemoryTTF(fontFile02.readBytes(), 20).setName(fontFile02.name());
+        // TODO impl custom font
+//        fonts.AddFontFromMemoryTTF(fontFile01.readBytes(), 16).setName(fontFile01.name());
+//        fonts.AddFontFromMemoryTTF(fontFile02.readBytes(), 20).setName(fontFile02.name());
     }
 
     @Override

@@ -9,11 +9,39 @@ package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
 import gen.imgui.idl.helper.IDLBoolArray;
-import gen.imgui.idl.helper.IDLIntArray;
-import gen.imgui.idl.helper.IDLFloatArray;
-import gen.imgui.idl.helper.IDLByteArray;
-import gen.imgui.idl.helper.IDLDoubleArray;
 import gen.imgui.idl.helper.IDLString;
+import gen.imgui.enums.ImGuiWindowFlags;
+import gen.imgui.enums.ImGuiChildFlags;
+import gen.imgui.enums.ImGuiFocusedFlags;
+import gen.imgui.enums.ImGuiHoveredFlags;
+import gen.imgui.enums.ImGuiCond;
+import gen.imgui.enums.ImGuiCol;
+import gen.imgui.enums.ImGuiStyleVar;
+import gen.imgui.enums.ImGuiItemFlags;
+import gen.imgui.enums.ImGuiButtonFlags;
+import gen.imgui.enums.ImGuiDir;
+import gen.imgui.idl.helper.IDLIntArray;
+import gen.imgui.enums.ImGuiComboFlags;
+import gen.imgui.idl.helper.IDLFloatArray;
+import gen.imgui.enums.ImGuiSliderFlags;
+import gen.imgui.enums.ImGuiDataType;
+import gen.imgui.idl.helper.IDLByteArray;
+import gen.imgui.enums.ImGuiInputTextFlags;
+import gen.imgui.idl.helper.IDLDoubleArray;
+import gen.imgui.enums.ImGuiColorEditFlags;
+import gen.imgui.enums.ImGuiTreeNodeFlags;
+import gen.imgui.enums.ImGuiSelectableFlags;
+import gen.imgui.enums.ImGuiMultiSelectFlags;
+import gen.imgui.enums.ImGuiPopupFlags;
+import gen.imgui.enums.ImGuiTableFlags;
+import gen.imgui.enums.ImGuiTableColumnFlags;
+import gen.imgui.enums.ImGuiTabBarFlags;
+import gen.imgui.enums.ImGuiTabItemFlags;
+import gen.imgui.enums.ImGuiDockNodeFlags;
+import gen.imgui.enums.ImGuiDragDropFlags;
+import gen.imgui.enums.ImGuiMouseButton;
+import gen.imgui.enums.ImGuiKey;
+import gen.imgui.enums.ImGuiInputFlags;
 
 /**
  * @author xpenatan
@@ -28,9 +56,13 @@ public class ImGui extends IDLBase {
 
     static private ImGuiIO ImGuiIO_TEMP_STATIC_GEN_0;
 
+    static private ImGuiPlatformIO ImGuiPlatformIO_TEMP_STATIC_GEN_0;
+
     static private ImGuiStyle ImGuiStyle_TEMP_STATIC_GEN_0;
 
     static private ImDrawData ImDrawData_TEMP_STATIC_GEN_0;
+
+    static private IDLString IDLString_TEMP_STATIC_GEN_0;
 
     static private ImDrawList ImDrawList_TEMP_STATIC_GEN_0;
 
@@ -41,6 +73,8 @@ public class ImGui extends IDLBase {
     static private ImGuiViewport ImGuiViewport_TEMP_STATIC_GEN_0;
 
     static private ImFont ImFont_TEMP_STATIC_GEN_0;
+
+    static private ImFontBaked ImFontBaked_TEMP_STATIC_GEN_0;
 
     static private ImVec2 ImVec2_TEMP_STATIC_GEN_2;
 
@@ -63,6 +97,10 @@ public class ImGui extends IDLBase {
     static private ImGuiMultiSelectIO ImGuiMultiSelectIO_TEMP_STATIC_GEN_3;
 
     static private ImGuiTableSortSpecs ImGuiTableSortSpecs_TEMP_STATIC_GEN_0;
+
+    static private IDLString IDLString_TEMP_STATIC_GEN_1;
+
+    static private IDLString IDLString_TEMP_STATIC_GEN_2;
 
     static private ImGuiPayload ImGuiPayload_TEMP_STATIC_GEN_0;
 
@@ -88,6 +126,8 @@ public class ImGui extends IDLBase {
 
     static private ImDrawListSharedData ImDrawListSharedData_TEMP_STATIC_GEN_0;
 
+    static private IDLString IDLString_TEMP_STATIC_GEN_3;
+
     static private ImGuiStorage ImGuiStorage_TEMP_STATIC_GEN_0;
 
     static private ImVec2 ImVec2_TEMP_STATIC_GEN_10;
@@ -100,6 +140,8 @@ public class ImGui extends IDLBase {
 
     static private ImVec4 ImVec4_TEMP_STATIC_GEN_1;
 
+    static private IDLString IDLString_TEMP_STATIC_GEN_4;
+
     static private ImVec2 ImVec2_TEMP_STATIC_GEN_14;
 
     static private ImVec2 ImVec2_TEMP_STATIC_GEN_15;
@@ -110,33 +152,42 @@ public class ImGui extends IDLBase {
 
     static private ImVec2 ImVec2_TEMP_STATIC_GEN_18;
 
-    static private IDLString IDLString_TEMP_STATIC_GEN_0;
+    static private IDLString IDLString_TEMP_STATIC_GEN_5;
 
-    static private ImGuiPlatformIO ImGuiPlatformIO_TEMP_STATIC_GEN_0;
+    static private IDLString IDLString_TEMP_STATIC_GEN_6;
+
+    static private IDLBase IDLBase_TEMP_STATIC_GEN_0;
 
     static private ImGuiViewport ImGuiViewport_TEMP_STATIC_GEN_2;
 
     static private ImGuiViewport ImGuiViewport_TEMP_STATIC_GEN_3;
 
-    public static void UpdateDisplayAndInputAndFrame(float deltaTime, int width, int height, int backBufferWidth, int backBufferHeight) {
-        UpdateDisplayAndInputAndFrameNative(deltaTime, width, height, backBufferWidth, backBufferHeight);
-    }
-
-    /*
-      [-TEAVM;-NATIVE]
-              var io = [MODULE].ImGui.prototype.GetIO();
-              io.get_DisplaySize().set_x(width);
-              io.get_DisplaySize().set_y(height);
-              if (width > 0 && height > 0) {
-                  io.get_DisplayFramebufferScale().set_x(display_w / width);
-                  io.get_DisplayFramebufferScale().set_y(display_h / height);
-              }
-              io.set_DeltaTime(deltaTime);
-              [MODULE].ImGui.prototype.NewFrame();
-    */
-    @org.teavm.jso.JSBody(params = {"deltaTime", "width", "height", "display_w", "display_h"}, script = "var io = imgui.ImGui.prototype.GetIO(); io.get_DisplaySize().set_x(width); io.get_DisplaySize().set_y(height); if (width > 0 && height > 0) { io.get_DisplayFramebufferScale().set_x(display_w / width); io.get_DisplayFramebufferScale().set_y(display_h / height); } io.set_DeltaTime(deltaTime); imgui.ImGui.prototype.NewFrame();")
-    private static native void UpdateDisplayAndInputAndFrameNative(float deltaTime, int width, int height, int display_w, int display_h);
-
+    // public static void UpdateDisplayAndInputAndFrame(float deltaTime, int width, int height, int backBufferWidth, int backBufferHeight) {
+    // UpdateDisplayAndInputAndFrameNative(deltaTime, width, height, backBufferWidth, backBufferHeight);
+    // }
+    // 
+    // /*[-TEAVM;-NATIVE]
+    // var io = [MODULE].ImGui.prototype.GetIO();
+    // io.get_DisplaySize().set_x(width);
+    // io.get_DisplaySize().set_y(height);
+    // if (width > 0 && height > 0) {
+    // io.get_DisplayFramebufferScale().set_x(display_w / width);
+    // io.get_DisplayFramebufferScale().set_y(display_h / height);
+    // }
+    // io.set_DeltaTime(deltaTime);
+    // [MODULE].ImGui.prototype.NewFrame();
+    // */
+    // /*[-JNI;-NATIVE]
+    // ImGuiIO * io = &ImGui::GetIO();
+    // 
+    // io->DisplaySize = ImVec2(width, height);
+    // if (width > 0 && height > 0)
+    // io->DisplayFramebufferScale = ImVec2((float)display_w / width, (float)display_h / height);
+    // io->DeltaTime = deltaTime;
+    // 
+    // ImGui::NewFrame();
+    // */
+    // private static native void UpdateDisplayAndInputAndFrameNative(float deltaTime, int width, int height, int display_w, int display_h);
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
      */
@@ -259,6 +310,25 @@ public class ImGui extends IDLBase {
     */
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.GetIO();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_GetIO();
+
+    public static ImGuiPlatformIO GetPlatformIO() {
+        int pointer = internal_native_GetPlatformIO();
+        if (pointer == 0)
+            return ImGuiPlatformIO.NULL;
+        if (ImGuiPlatformIO_TEMP_STATIC_GEN_0 == null)
+            ImGuiPlatformIO_TEMP_STATIC_GEN_0 = ImGuiPlatformIO.native_new();
+        ImGuiPlatformIO_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return ImGuiPlatformIO_TEMP_STATIC_GEN_0;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.GetPlatformIO();
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
+    */
+    @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.GetPlatformIO();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_GetPlatformIO();
 
     public static ImGuiStyle GetStyle() {
         int pointer = internal_native_GetStyle();
@@ -496,6 +566,25 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(script = "imgui.ImGui.prototype.ShowUserGuide();")
     public static native void internal_native_ShowUserGuide();
 
+    public static IDLString GetVersion() {
+        int pointer = internal_native_GetVersion();
+        if (pointer == 0)
+            return IDLString.NULL;
+        if (IDLString_TEMP_STATIC_GEN_0 == null)
+            IDLString_TEMP_STATIC_GEN_0 = IDLString.native_new();
+        IDLString_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLString_TEMP_STATIC_GEN_0;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.GetVersion();
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
+    */
+    @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.GetVersion();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_GetVersion();
+
     public static void StyleColorsDark(ImGuiStyle dst) {
         internal_native_StyleColorsDark(dst.native_address);
     }
@@ -562,17 +651,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(script = "imgui.ImGui.prototype.StyleColorsClassic();")
     public static native void internal_native_StyleColorsClassic();
 
-    public static boolean Begin(String name, IDLBoolArray p_open, ImGuiWindowFlags ImGuiWindowFlags) {
-        return internal_native_Begin(name, p_open.native_void_address, (int) ImGuiWindowFlags.getValue());
+    public static boolean Begin(String name, IDLBoolArray p_open, ImGuiWindowFlags flags) {
+        return internal_native_Begin(name, p_open.native_void_address, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.Begin(name, p_open_addr, ImGuiWindowFlags);
+      var returnedJSObj = imgui.ImGui.prototype.Begin(name, p_open_addr, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"name", "p_open_addr", "ImGuiWindowFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.Begin(name, p_open_addr, ImGuiWindowFlags);return returnedJSObj;")
-    public static native boolean internal_native_Begin(String name, int p_open_addr, int ImGuiWindowFlags);
+    @org.teavm.jso.JSBody(params = {"name", "p_open_addr", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.Begin(name, p_open_addr, flags);return returnedJSObj;")
+    public static native boolean internal_native_Begin(String name, int p_open_addr, int flags);
 
     public static boolean Begin(String name, IDLBoolArray p_open) {
         return internal_native_Begin(name, p_open.native_void_address);
@@ -609,29 +698,29 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(script = "imgui.ImGui.prototype.End();")
     public static native void internal_native_End();
 
-    public static boolean BeginChild(String str_id, ImVec2 size, ImGuiChildFlags ImGuiChildFlags, ImGuiWindowFlags ImGuiWindowFlags) {
-        return internal_native_BeginChild__0(str_id, size.native_address, (int) ImGuiChildFlags.getValue(), (int) ImGuiWindowFlags.getValue());
+    public static boolean BeginChild(String str_id, ImVec2 size, ImGuiChildFlags child_flags, ImGuiWindowFlags window_flags) {
+        return internal_native_BeginChild__0(str_id, size.native_address, child_flags.getValue(), window_flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.BeginChild__0(str_id, size_addr, ImGuiChildFlags, ImGuiWindowFlags);
+      var returnedJSObj = imgui.ImGui.prototype.BeginChild__0(str_id, size_addr, child_flags, window_flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"str_id", "size_addr", "ImGuiChildFlags", "ImGuiWindowFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginChild__0(str_id, size_addr, ImGuiChildFlags, ImGuiWindowFlags);return returnedJSObj;")
-    public static native boolean internal_native_BeginChild__0(String str_id, int size_addr, int ImGuiChildFlags, int ImGuiWindowFlags);
+    @org.teavm.jso.JSBody(params = {"str_id", "size_addr", "child_flags", "window_flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginChild__0(str_id, size_addr, child_flags, window_flags);return returnedJSObj;")
+    public static native boolean internal_native_BeginChild__0(String str_id, int size_addr, int child_flags, int window_flags);
 
-    public static boolean BeginChild(String str_id, ImVec2 size, ImGuiChildFlags ImGuiChildFlags) {
-        return internal_native_BeginChild__0(str_id, size.native_address, (int) ImGuiChildFlags.getValue());
+    public static boolean BeginChild(String str_id, ImVec2 size, ImGuiChildFlags child_flags) {
+        return internal_native_BeginChild__0(str_id, size.native_address, child_flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.BeginChild__0(str_id, size_addr, ImGuiChildFlags);
+      var returnedJSObj = imgui.ImGui.prototype.BeginChild__0(str_id, size_addr, child_flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"str_id", "size_addr", "ImGuiChildFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginChild__0(str_id, size_addr, ImGuiChildFlags);return returnedJSObj;")
-    public static native boolean internal_native_BeginChild__0(String str_id, int size_addr, int ImGuiChildFlags);
+    @org.teavm.jso.JSBody(params = {"str_id", "size_addr", "child_flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginChild__0(str_id, size_addr, child_flags);return returnedJSObj;")
+    public static native boolean internal_native_BeginChild__0(String str_id, int size_addr, int child_flags);
 
     public static boolean BeginChild(String str_id, ImVec2 size) {
         return internal_native_BeginChild__0(str_id, size.native_address);
@@ -657,29 +746,29 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"str_id"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginChild__0(str_id);return returnedJSObj;")
     public static native boolean internal_native_BeginChild__0(String str_id);
 
-    public static boolean BeginChild(int id, ImVec2 size, ImGuiChildFlags ImGuiChildFlags, ImGuiWindowFlags ImGuiWindowFlags) {
-        return internal_native_BeginChild__1(id, size.native_address, (int) ImGuiChildFlags.getValue(), (int) ImGuiWindowFlags.getValue());
+    public static boolean BeginChild(int id, ImVec2 size, ImGuiChildFlags child_flags, ImGuiWindowFlags window_flags) {
+        return internal_native_BeginChild__1(id, size.native_address, child_flags.getValue(), window_flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.BeginChild__1(id, size_addr, ImGuiChildFlags, ImGuiWindowFlags);
+      var returnedJSObj = imgui.ImGui.prototype.BeginChild__1(id, size_addr, child_flags, window_flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"id", "size_addr", "ImGuiChildFlags", "ImGuiWindowFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginChild__1(id, size_addr, ImGuiChildFlags, ImGuiWindowFlags);return returnedJSObj;")
-    public static native boolean internal_native_BeginChild__1(int id, int size_addr, int ImGuiChildFlags, int ImGuiWindowFlags);
+    @org.teavm.jso.JSBody(params = {"id", "size_addr", "child_flags", "window_flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginChild__1(id, size_addr, child_flags, window_flags);return returnedJSObj;")
+    public static native boolean internal_native_BeginChild__1(int id, int size_addr, int child_flags, int window_flags);
 
-    public static boolean BeginChild(int id, ImVec2 size, ImGuiChildFlags ImGuiChildFlags) {
-        return internal_native_BeginChild__1(id, size.native_address, (int) ImGuiChildFlags.getValue());
+    public static boolean BeginChild(int id, ImVec2 size, ImGuiChildFlags child_flags) {
+        return internal_native_BeginChild__1(id, size.native_address, child_flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.BeginChild__1(id, size_addr, ImGuiChildFlags);
+      var returnedJSObj = imgui.ImGui.prototype.BeginChild__1(id, size_addr, child_flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"id", "size_addr", "ImGuiChildFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginChild__1(id, size_addr, ImGuiChildFlags);return returnedJSObj;")
-    public static native boolean internal_native_BeginChild__1(int id, int size_addr, int ImGuiChildFlags);
+    @org.teavm.jso.JSBody(params = {"id", "size_addr", "child_flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginChild__1(id, size_addr, child_flags);return returnedJSObj;")
+    public static native boolean internal_native_BeginChild__1(int id, int size_addr, int child_flags);
 
     public static boolean BeginChild(int id, ImVec2 size) {
         return internal_native_BeginChild__1(id, size.native_address);
@@ -740,17 +829,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.IsWindowCollapsed();return returnedJSObj;")
     public static native boolean internal_native_IsWindowCollapsed();
 
-    public static boolean IsWindowFocused(ImGuiFocusedFlags ImGuiFocusedFlags) {
-        return internal_native_IsWindowFocused((int) ImGuiFocusedFlags.getValue());
+    public static boolean IsWindowFocused(ImGuiFocusedFlags flags) {
+        return internal_native_IsWindowFocused(flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.IsWindowFocused(ImGuiFocusedFlags);
+      var returnedJSObj = imgui.ImGui.prototype.IsWindowFocused(flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"ImGuiFocusedFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.IsWindowFocused(ImGuiFocusedFlags);return returnedJSObj;")
-    public static native boolean internal_native_IsWindowFocused(int ImGuiFocusedFlags);
+    @org.teavm.jso.JSBody(params = {"flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.IsWindowFocused(flags);return returnedJSObj;")
+    public static native boolean internal_native_IsWindowFocused(int flags);
 
     public static boolean IsWindowFocused() {
         return internal_native_IsWindowFocused();
@@ -764,17 +853,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.IsWindowFocused();return returnedJSObj;")
     public static native boolean internal_native_IsWindowFocused();
 
-    public static boolean IsWindowHovered(ImGuiHoveredFlags ImGuiFocusedFlags) {
-        return internal_native_IsWindowHovered((int) ImGuiFocusedFlags.getValue());
+    public static boolean IsWindowHovered(ImGuiHoveredFlags flags) {
+        return internal_native_IsWindowHovered(flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.IsWindowHovered(ImGuiFocusedFlags);
+      var returnedJSObj = imgui.ImGui.prototype.IsWindowHovered(flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"ImGuiFocusedFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.IsWindowHovered(ImGuiFocusedFlags);return returnedJSObj;")
-    public static native boolean internal_native_IsWindowHovered(int ImGuiFocusedFlags);
+    @org.teavm.jso.JSBody(params = {"flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.IsWindowHovered(flags);return returnedJSObj;")
+    public static native boolean internal_native_IsWindowHovered(int flags);
 
     public static boolean IsWindowHovered() {
         return internal_native_IsWindowHovered();
@@ -901,7 +990,7 @@ public class ImGui extends IDLBase {
     public static native int internal_native_GetWindowViewport();
 
     public static void SetNextWindowPos(ImVec2 pos, ImGuiCond ImGuiCond, ImVec2 pivot) {
-        internal_native_SetNextWindowPos(pos.native_address, (int) ImGuiCond.getValue(), pivot.native_address);
+        internal_native_SetNextWindowPos(pos.native_address, ImGuiCond.getValue(), pivot.native_address);
     }
 
     /*
@@ -912,7 +1001,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetNextWindowPos(int pos_addr, int ImGuiCond, int pivot_addr);
 
     public static void SetNextWindowPos(ImVec2 pos, ImGuiCond ImGuiCond) {
-        internal_native_SetNextWindowPos(pos.native_address, (int) ImGuiCond.getValue());
+        internal_native_SetNextWindowPos(pos.native_address, ImGuiCond.getValue());
     }
 
     /*
@@ -934,7 +1023,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetNextWindowPos(int pos_addr);
 
     public static void SetNextWindowSize(ImVec2 size, ImGuiCond ImGuiCond) {
-        internal_native_SetNextWindowSize(size.native_address, (int) ImGuiCond.getValue());
+        internal_native_SetNextWindowSize(size.native_address, ImGuiCond.getValue());
     }
 
     /*
@@ -978,7 +1067,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetNextWindowContentSize(int size_addr);
 
     public static void SetNextWindowCollapsed(boolean collapsed, ImGuiCond ImGuiCond) {
-        internal_native_SetNextWindowCollapsed(collapsed, (int) ImGuiCond.getValue());
+        internal_native_SetNextWindowCollapsed(collapsed, ImGuiCond.getValue());
     }
 
     /*
@@ -1044,7 +1133,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetNextWindowViewport(int viewport_id);
 
     public static void SetWindowPos(ImVec2 pos, ImGuiCond ImGuiCond) {
-        internal_native_SetWindowPos__0(pos.native_address, (int) ImGuiCond.getValue());
+        internal_native_SetWindowPos__0(pos.native_address, ImGuiCond.getValue());
     }
 
     /*
@@ -1066,7 +1155,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetWindowPos__0(int pos_addr);
 
     public static void SetWindowPos(String name, ImVec2 pos, ImGuiCond ImGuiCond) {
-        internal_native_SetWindowPos__1(name, pos.native_address, (int) ImGuiCond.getValue());
+        internal_native_SetWindowPos__1(name, pos.native_address, ImGuiCond.getValue());
     }
 
     /*
@@ -1088,7 +1177,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetWindowPos__1(String name, int pos_addr);
 
     public static void SetWindowSize(ImVec2 size, ImGuiCond ImGuiCond) {
-        internal_native_SetWindowSize__0(size.native_address, (int) ImGuiCond.getValue());
+        internal_native_SetWindowSize__0(size.native_address, ImGuiCond.getValue());
     }
 
     /*
@@ -1110,7 +1199,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetWindowSize__0(int size_addr);
 
     public static void SetWindowSize(String name, ImVec2 size, ImGuiCond ImGuiCond) {
-        internal_native_SetWindowSize__1(name, size.native_address, (int) ImGuiCond.getValue());
+        internal_native_SetWindowSize__1(name, size.native_address, ImGuiCond.getValue());
     }
 
     /*
@@ -1132,7 +1221,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetWindowSize__1(String name, int size_addr);
 
     public static void SetWindowCollapsed(boolean collapsed, ImGuiCond ImGuiCond) {
-        internal_native_SetWindowCollapsed__0(collapsed, (int) ImGuiCond.getValue());
+        internal_native_SetWindowCollapsed__0(collapsed, ImGuiCond.getValue());
     }
 
     /*
@@ -1154,7 +1243,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetWindowCollapsed__0(boolean collapsed);
 
     public static void SetWindowCollapsed(String name, boolean collapsed, ImGuiCond ImGuiCond) {
-        internal_native_SetWindowCollapsed__1(name, collapsed, (int) ImGuiCond.getValue());
+        internal_native_SetWindowCollapsed__1(name, collapsed, ImGuiCond.getValue());
     }
 
     /*
@@ -1185,17 +1274,6 @@ public class ImGui extends IDLBase {
     */
     @org.teavm.jso.JSBody(script = "imgui.ImGui.prototype.SetWindowFocus();")
     public static native void internal_native_SetWindowFocus();
-
-    public static void SetWindowFontScale(float scale) {
-        internal_native_SetWindowFontScale(scale);
-    }
-
-    /*
-      [-TEAVM;-NATIVE]
-      imgui.ImGui.prototype.SetWindowFontScale(scale);
-    */
-    @org.teavm.jso.JSBody(params = {"scale"}, script = "imgui.ImGui.prototype.SetWindowFontScale(scale);")
-    public static native void internal_native_SetWindowFontScale(float scale);
 
     public static void SetWindowFocus(String name) {
         internal_native_SetWindowFocus(name);
@@ -1366,16 +1444,16 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"local_y"}, script = "imgui.ImGui.prototype.SetScrollFromPosY(local_y);")
     public static native void internal_native_SetScrollFromPosY(float local_y);
 
-    public static void PushFont(ImFont font) {
-        internal_native_PushFont(font.native_address);
+    public static void PushFont(ImFont font, float font_size_base_unscaled) {
+        internal_native_PushFont(font.native_address, font_size_base_unscaled);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImGui.prototype.PushFont(font_addr);
+      imgui.ImGui.prototype.PushFont(font_addr, font_size_base_unscaled);
     */
-    @org.teavm.jso.JSBody(params = {"font_addr"}, script = "imgui.ImGui.prototype.PushFont(font_addr);")
-    public static native void internal_native_PushFont(int font_addr);
+    @org.teavm.jso.JSBody(params = {"font_addr", "font_size_base_unscaled"}, script = "imgui.ImGui.prototype.PushFont(font_addr, font_size_base_unscaled);")
+    public static native void internal_native_PushFont(int font_addr, float font_size_base_unscaled);
 
     public static void PopFont() {
         internal_native_PopFont();
@@ -1388,8 +1466,58 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(script = "imgui.ImGui.prototype.PopFont();")
     public static native void internal_native_PopFont();
 
+    public static ImFont GetFont() {
+        int pointer = internal_native_GetFont();
+        if (pointer == 0)
+            return ImFont.NULL;
+        if (ImFont_TEMP_STATIC_GEN_0 == null)
+            ImFont_TEMP_STATIC_GEN_0 = ImFont.native_new();
+        ImFont_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return ImFont_TEMP_STATIC_GEN_0;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.GetFont();
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
+    */
+    @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.GetFont();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_GetFont();
+
+    public static float GetFontSize() {
+        return internal_native_GetFontSize();
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.GetFontSize();
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.GetFontSize();return returnedJSObj;")
+    public static native float internal_native_GetFontSize();
+
+    public static ImFontBaked GetFontBaked() {
+        int pointer = internal_native_GetFontBaked();
+        if (pointer == 0)
+            return ImFontBaked.NULL;
+        if (ImFontBaked_TEMP_STATIC_GEN_0 == null)
+            ImFontBaked_TEMP_STATIC_GEN_0 = ImFontBaked.native_new();
+        ImFontBaked_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return ImFontBaked_TEMP_STATIC_GEN_0;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.GetFontBaked();
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
+    */
+    @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.GetFontBaked();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_GetFontBaked();
+
     public static void PushStyleColor(ImGuiCol idx, int col) {
-        internal_native_PushStyleColor__0((int) idx.getValue(), col);
+        internal_native_PushStyleColor__0(idx.getValue(), col);
     }
 
     /*
@@ -1400,7 +1528,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_PushStyleColor__0(int idx, int col);
 
     public static void PushStyleColor(ImGuiCol idx, ImVec4 col) {
-        internal_native_PushStyleColor__1((int) idx.getValue(), col.native_address);
+        internal_native_PushStyleColor__1(idx.getValue(), col.native_address);
     }
 
     /*
@@ -1433,7 +1561,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_PopStyleColor();
 
     public static void PushStyleVar(ImGuiStyleVar idx, float val) {
-        internal_native_PushStyleVar__0((int) idx.getValue(), val);
+        internal_native_PushStyleVar__0(idx.getValue(), val);
     }
 
     /*
@@ -1444,7 +1572,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_PushStyleVar__0(int idx, float val);
 
     public static void PushStyleVar(ImGuiStyleVar idx, ImVec2 val) {
-        internal_native_PushStyleVar__1((int) idx.getValue(), val.native_address);
+        internal_native_PushStyleVar__1(idx.getValue(), val.native_address);
     }
 
     /*
@@ -1453,6 +1581,28 @@ public class ImGui extends IDLBase {
     */
     @org.teavm.jso.JSBody(params = {"idx", "val_addr"}, script = "imgui.ImGui.prototype.PushStyleVar__1(idx, val_addr);")
     public static native void internal_native_PushStyleVar__1(int idx, int val_addr);
+
+    public static void PushStyleVarX(ImGuiStyleVar idx, float val_x) {
+        internal_native_PushStyleVarX(idx.getValue(), val_x);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      imgui.ImGui.prototype.PushStyleVarX(idx, val_x);
+    */
+    @org.teavm.jso.JSBody(params = {"idx", "val_x"}, script = "imgui.ImGui.prototype.PushStyleVarX(idx, val_x);")
+    public static native void internal_native_PushStyleVarX(int idx, float val_x);
+
+    public static void PushStyleVarY(ImGuiStyleVar idx, float val_y) {
+        internal_native_PushStyleVarY(idx.getValue(), val_y);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      imgui.ImGui.prototype.PushStyleVarY(idx, val_y);
+    */
+    @org.teavm.jso.JSBody(params = {"idx", "val_y"}, script = "imgui.ImGui.prototype.PushStyleVarY(idx, val_y);")
+    public static native void internal_native_PushStyleVarY(int idx, float val_y);
 
     public static void PopStyleVar(int count) {
         internal_native_PopStyleVar(count);
@@ -1475,6 +1625,28 @@ public class ImGui extends IDLBase {
     */
     @org.teavm.jso.JSBody(script = "imgui.ImGui.prototype.PopStyleVar();")
     public static native void internal_native_PopStyleVar();
+
+    public static void PushItemFlag(ImGuiItemFlags option, boolean enabled) {
+        internal_native_PushItemFlag(option.getValue(), enabled);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      imgui.ImGui.prototype.PushItemFlag(option, enabled);
+    */
+    @org.teavm.jso.JSBody(params = {"option", "enabled"}, script = "imgui.ImGui.prototype.PushItemFlag(option, enabled);")
+    public static native void internal_native_PushItemFlag(int option, boolean enabled);
+
+    public static void PopItemFlag() {
+        internal_native_PopItemFlag();
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      imgui.ImGui.prototype.PopItemFlag();
+    */
+    @org.teavm.jso.JSBody(script = "imgui.ImGui.prototype.PopItemFlag();")
+    public static native void internal_native_PopItemFlag();
 
     public static void PushItemWidth(float item_width) {
         internal_native_PushItemWidth(item_width);
@@ -1554,37 +1726,6 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(script = "imgui.ImGui.prototype.PopTextWrapPos();")
     public static native void internal_native_PopTextWrapPos();
 
-    public static ImFont GetFont() {
-        int pointer = internal_native_GetFont();
-        if (pointer == 0)
-            return ImFont.NULL;
-        if (ImFont_TEMP_STATIC_GEN_0 == null)
-            ImFont_TEMP_STATIC_GEN_0 = ImFont.native_new();
-        ImFont_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
-        return ImFont_TEMP_STATIC_GEN_0;
-    }
-
-    /*
-      [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.GetFont();
-      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
-      return imgui.getPointer(returnedJSObj);
-    */
-    @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.GetFont();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_GetFont();
-
-    public static float GetFontSize() {
-        return internal_native_GetFontSize();
-    }
-
-    /*
-      [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.GetFontSize();
-      return returnedJSObj;
-    */
-    @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.GetFontSize();return returnedJSObj;")
-    public static native float internal_native_GetFontSize();
-
     public static ImVec2 GetFontTexUvWhitePixel() {
         int pointer = internal_native_GetFontTexUvWhitePixel();
         if (pointer == 0)
@@ -1604,53 +1745,65 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.GetFontTexUvWhitePixel();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_GetFontTexUvWhitePixel();
 
-    public static int GetColorU32Style(int idx, float alpha_mul) {
-        return internal_native_GetColorU32Style(idx, alpha_mul);
+    public static int GetColorU32(ImGuiCol idx, float alpha_mul) {
+        return internal_native_GetColorU32__0(idx.getValue(), alpha_mul);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.GetColorU32Style(idx, alpha_mul);
+      var returnedJSObj = imgui.ImGui.prototype.GetColorU32__0(idx, alpha_mul);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"idx", "alpha_mul"}, script = "var returnedJSObj = imgui.ImGui.prototype.GetColorU32Style(idx, alpha_mul);return returnedJSObj;")
-    public static native int internal_native_GetColorU32Style(int idx, float alpha_mul);
+    @org.teavm.jso.JSBody(params = {"idx", "alpha_mul"}, script = "var returnedJSObj = imgui.ImGui.prototype.GetColorU32__0(idx, alpha_mul);return returnedJSObj;")
+    public static native int internal_native_GetColorU32__0(int idx, float alpha_mul);
 
-    public static int GetColorU32Style(int idx) {
-        return internal_native_GetColorU32Style(idx);
+    public static int GetColorU32(ImGuiCol idx) {
+        return internal_native_GetColorU32__0(idx.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.GetColorU32Style(idx);
+      var returnedJSObj = imgui.ImGui.prototype.GetColorU32__0(idx);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"idx"}, script = "var returnedJSObj = imgui.ImGui.prototype.GetColorU32Style(idx);return returnedJSObj;")
-    public static native int internal_native_GetColorU32Style(int idx);
+    @org.teavm.jso.JSBody(params = {"idx"}, script = "var returnedJSObj = imgui.ImGui.prototype.GetColorU32__0(idx);return returnedJSObj;")
+    public static native int internal_native_GetColorU32__0(int idx);
 
     public static int GetColorU32(ImVec4 col) {
-        return internal_native_GetColorU32__0(col.native_address);
+        return internal_native_GetColorU32__1(col.native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.GetColorU32__0(col_addr);
+      var returnedJSObj = imgui.ImGui.prototype.GetColorU32__1(col_addr);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"col_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.GetColorU32__0(col_addr);return returnedJSObj;")
-    public static native int internal_native_GetColorU32__0(int col_addr);
+    @org.teavm.jso.JSBody(params = {"col_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.GetColorU32__1(col_addr);return returnedJSObj;")
+    public static native int internal_native_GetColorU32__1(int col_addr);
+
+    public static int GetColorU32(int col, float alpha_mul) {
+        return internal_native_GetColorU32__2(col, alpha_mul);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.GetColorU32__2(col, alpha_mul);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"col", "alpha_mul"}, script = "var returnedJSObj = imgui.ImGui.prototype.GetColorU32__2(col, alpha_mul);return returnedJSObj;")
+    public static native int internal_native_GetColorU32__2(int col, float alpha_mul);
 
     public static int GetColorU32(int col) {
-        return internal_native_GetColorU32__1(col);
+        return internal_native_GetColorU32__2(col);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.GetColorU32__1(col);
+      var returnedJSObj = imgui.ImGui.prototype.GetColorU32__2(col);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"col"}, script = "var returnedJSObj = imgui.ImGui.prototype.GetColorU32__1(col);return returnedJSObj;")
-    public static native int internal_native_GetColorU32__1(int col);
+    @org.teavm.jso.JSBody(params = {"col"}, script = "var returnedJSObj = imgui.ImGui.prototype.GetColorU32__2(col);return returnedJSObj;")
+    public static native int internal_native_GetColorU32__2(int col);
 
     public static ImVec4 GetStyleColorVec4(int idx) {
         int pointer = internal_native_GetStyleColorVec4(idx);
@@ -2039,16 +2192,27 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"str_id_begin", "str_id_end"}, script = "imgui.ImGui.prototype.PushID__1(str_id_begin, str_id_end);")
     public static native void internal_native_PushID__1(String str_id_begin, String str_id_end);
 
-    public static void PushID(int int_id) {
-        internal_native_PushID__2(int_id);
+    public static void PushID(IDLBase int_id) {
+        internal_native_PushID__2(int_id.native_void_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImGui.prototype.PushID__2(int_id);
+      imgui.ImGui.prototype.PushID__2(int_id_addr);
     */
-    @org.teavm.jso.JSBody(params = {"int_id"}, script = "imgui.ImGui.prototype.PushID__2(int_id);")
-    public static native void internal_native_PushID__2(int int_id);
+    @org.teavm.jso.JSBody(params = {"int_id_addr"}, script = "imgui.ImGui.prototype.PushID__2(int_id_addr);")
+    public static native void internal_native_PushID__2(int int_id_addr);
+
+    public static void PushID(int int_id) {
+        internal_native_PushID__3(int_id);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      imgui.ImGui.prototype.PushID__3(int_id);
+    */
+    @org.teavm.jso.JSBody(params = {"int_id"}, script = "imgui.ImGui.prototype.PushID__3(int_id);")
+    public static native void internal_native_PushID__3(int int_id);
 
     public static void PopID() {
         internal_native_PopID();
@@ -2096,6 +2260,18 @@ public class ImGui extends IDLBase {
     */
     @org.teavm.jso.JSBody(params = {"ptr_id_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.GetID__2(ptr_id_addr);return returnedJSObj;")
     public static native int internal_native_GetID__2(int ptr_id_addr);
+
+    public static int GetID(int int_id) {
+        return internal_native_GetID__3(int_id);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.GetID__3(int_id);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"int_id"}, script = "var returnedJSObj = imgui.ImGui.prototype.GetID__3(int_id);return returnedJSObj;")
+    public static native int internal_native_GetID__3(int int_id);
 
     public static void TextUnformatted(String text, String text_end) {
         internal_native_TextUnformatted(text, text_end);
@@ -2232,17 +2408,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label"}, script = "var returnedJSObj = imgui.ImGui.prototype.SmallButton(label);return returnedJSObj;")
     public static native boolean internal_native_SmallButton(String label);
 
-    public static boolean InvisibleButton(String str_id, ImVec2 size, ImGuiButtonFlags ImGuiButtonFlags) {
-        return internal_native_InvisibleButton(str_id, size.native_address, (int) ImGuiButtonFlags.getValue());
+    public static boolean InvisibleButton(String str_id, ImVec2 size, ImGuiButtonFlags flags) {
+        return internal_native_InvisibleButton(str_id, size.native_address, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.InvisibleButton(str_id, size_addr, ImGuiButtonFlags);
+      var returnedJSObj = imgui.ImGui.prototype.InvisibleButton(str_id, size_addr, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"str_id", "size_addr", "ImGuiButtonFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InvisibleButton(str_id, size_addr, ImGuiButtonFlags);return returnedJSObj;")
-    public static native boolean internal_native_InvisibleButton(String str_id, int size_addr, int ImGuiButtonFlags);
+    @org.teavm.jso.JSBody(params = {"str_id", "size_addr", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InvisibleButton(str_id, size_addr, flags);return returnedJSObj;")
+    public static native boolean internal_native_InvisibleButton(String str_id, int size_addr, int flags);
 
     public static boolean InvisibleButton(String str_id, ImVec2 size) {
         return internal_native_InvisibleButton(str_id, size.native_address);
@@ -2257,7 +2433,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_InvisibleButton(String str_id, int size_addr);
 
     public static boolean ArrowButton(String str_id, ImGuiDir dir) {
-        return internal_native_ArrowButton(str_id, (int) dir.getValue());
+        return internal_native_ArrowButton(str_id, dir.getValue());
     }
 
     /*
@@ -2394,132 +2570,165 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label"}, script = "imgui.ImGui.prototype.TextLinkOpenURL(label);")
     public static native void internal_native_TextLinkOpenURL(String label);
 
-    public static void Image(int user_texture_id, ImVec2 size, ImVec2 uv0, ImVec2 uv1, ImVec4 tint_col, ImVec4 border_col) {
-        internal_native_Image(user_texture_id, size.native_address, uv0.native_address, uv1.native_address, tint_col.native_address, border_col.native_address);
+    public static void Image(ImTextureRef tex_ref, ImVec2 image_size, ImVec2 uv0, ImVec2 uv1) {
+        internal_native_Image(tex_ref.native_address, image_size.native_address, uv0.native_address, uv1.native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImGui.prototype.Image(user_texture_id, size_addr, uv0_addr, uv1_addr, tint_col_addr, border_col_addr);
+      imgui.ImGui.prototype.Image(tex_ref_addr, image_size_addr, uv0_addr, uv1_addr);
     */
-    @org.teavm.jso.JSBody(params = {"user_texture_id", "size_addr", "uv0_addr", "uv1_addr", "tint_col_addr", "border_col_addr"}, script = "imgui.ImGui.prototype.Image(user_texture_id, size_addr, uv0_addr, uv1_addr, tint_col_addr, border_col_addr);")
-    public static native void internal_native_Image(int user_texture_id, int size_addr, int uv0_addr, int uv1_addr, int tint_col_addr, int border_col_addr);
+    @org.teavm.jso.JSBody(params = {"tex_ref_addr", "image_size_addr", "uv0_addr", "uv1_addr"}, script = "imgui.ImGui.prototype.Image(tex_ref_addr, image_size_addr, uv0_addr, uv1_addr);")
+    public static native void internal_native_Image(int tex_ref_addr, int image_size_addr, int uv0_addr, int uv1_addr);
 
-    public static void Image(int user_texture_id, ImVec2 size, ImVec2 uv0, ImVec2 uv1, ImVec4 tint_col) {
-        internal_native_Image(user_texture_id, size.native_address, uv0.native_address, uv1.native_address, tint_col.native_address);
+    public static void Image(ImTextureRef tex_ref, ImVec2 image_size, ImVec2 uv0) {
+        internal_native_Image(tex_ref.native_address, image_size.native_address, uv0.native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImGui.prototype.Image(user_texture_id, size_addr, uv0_addr, uv1_addr, tint_col_addr);
+      imgui.ImGui.prototype.Image(tex_ref_addr, image_size_addr, uv0_addr);
     */
-    @org.teavm.jso.JSBody(params = {"user_texture_id", "size_addr", "uv0_addr", "uv1_addr", "tint_col_addr"}, script = "imgui.ImGui.prototype.Image(user_texture_id, size_addr, uv0_addr, uv1_addr, tint_col_addr);")
-    public static native void internal_native_Image(int user_texture_id, int size_addr, int uv0_addr, int uv1_addr, int tint_col_addr);
+    @org.teavm.jso.JSBody(params = {"tex_ref_addr", "image_size_addr", "uv0_addr"}, script = "imgui.ImGui.prototype.Image(tex_ref_addr, image_size_addr, uv0_addr);")
+    public static native void internal_native_Image(int tex_ref_addr, int image_size_addr, int uv0_addr);
 
-    public static void Image(int user_texture_id, ImVec2 size, ImVec2 uv0, ImVec2 uv1) {
-        internal_native_Image(user_texture_id, size.native_address, uv0.native_address, uv1.native_address);
+    public static void Image(ImTextureRef tex_ref, ImVec2 image_size) {
+        internal_native_Image(tex_ref.native_address, image_size.native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImGui.prototype.Image(user_texture_id, size_addr, uv0_addr, uv1_addr);
+      imgui.ImGui.prototype.Image(tex_ref_addr, image_size_addr);
     */
-    @org.teavm.jso.JSBody(params = {"user_texture_id", "size_addr", "uv0_addr", "uv1_addr"}, script = "imgui.ImGui.prototype.Image(user_texture_id, size_addr, uv0_addr, uv1_addr);")
-    public static native void internal_native_Image(int user_texture_id, int size_addr, int uv0_addr, int uv1_addr);
+    @org.teavm.jso.JSBody(params = {"tex_ref_addr", "image_size_addr"}, script = "imgui.ImGui.prototype.Image(tex_ref_addr, image_size_addr);")
+    public static native void internal_native_Image(int tex_ref_addr, int image_size_addr);
 
-    public static void Image(int user_texture_id, ImVec2 size, ImVec2 uv0) {
-        internal_native_Image(user_texture_id, size.native_address, uv0.native_address);
+    public static void ImageWithBg(ImTextureRef tex_ref, ImVec2 image_size, ImVec2 uv0, ImVec2 uv1, ImVec4 bg_col, ImVec4 tint_col) {
+        internal_native_ImageWithBg(tex_ref.native_address, image_size.native_address, uv0.native_address, uv1.native_address, bg_col.native_address, tint_col.native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImGui.prototype.Image(user_texture_id, size_addr, uv0_addr);
+      imgui.ImGui.prototype.ImageWithBg(tex_ref_addr, image_size_addr, uv0_addr, uv1_addr, bg_col_addr, tint_col_addr);
     */
-    @org.teavm.jso.JSBody(params = {"user_texture_id", "size_addr", "uv0_addr"}, script = "imgui.ImGui.prototype.Image(user_texture_id, size_addr, uv0_addr);")
-    public static native void internal_native_Image(int user_texture_id, int size_addr, int uv0_addr);
+    @org.teavm.jso.JSBody(params = {"tex_ref_addr", "image_size_addr", "uv0_addr", "uv1_addr", "bg_col_addr", "tint_col_addr"}, script = "imgui.ImGui.prototype.ImageWithBg(tex_ref_addr, image_size_addr, uv0_addr, uv1_addr, bg_col_addr, tint_col_addr);")
+    public static native void internal_native_ImageWithBg(int tex_ref_addr, int image_size_addr, int uv0_addr, int uv1_addr, int bg_col_addr, int tint_col_addr);
 
-    public static void Image(int user_texture_id, ImVec2 size) {
-        internal_native_Image(user_texture_id, size.native_address);
+    public static void ImageWithBg(ImTextureRef tex_ref, ImVec2 image_size, ImVec2 uv0, ImVec2 uv1, ImVec4 bg_col) {
+        internal_native_ImageWithBg(tex_ref.native_address, image_size.native_address, uv0.native_address, uv1.native_address, bg_col.native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImGui.prototype.Image(user_texture_id, size_addr);
+      imgui.ImGui.prototype.ImageWithBg(tex_ref_addr, image_size_addr, uv0_addr, uv1_addr, bg_col_addr);
     */
-    @org.teavm.jso.JSBody(params = {"user_texture_id", "size_addr"}, script = "imgui.ImGui.prototype.Image(user_texture_id, size_addr);")
-    public static native void internal_native_Image(int user_texture_id, int size_addr);
+    @org.teavm.jso.JSBody(params = {"tex_ref_addr", "image_size_addr", "uv0_addr", "uv1_addr", "bg_col_addr"}, script = "imgui.ImGui.prototype.ImageWithBg(tex_ref_addr, image_size_addr, uv0_addr, uv1_addr, bg_col_addr);")
+    public static native void internal_native_ImageWithBg(int tex_ref_addr, int image_size_addr, int uv0_addr, int uv1_addr, int bg_col_addr);
 
-    public static boolean ImageButton(String str_id, int user_texture_id, ImVec2 size, ImVec2 uv0, ImVec2 uv1, ImVec4 bg_col, ImVec4 tint_col) {
-        return internal_native_ImageButton(str_id, user_texture_id, size.native_address, uv0.native_address, uv1.native_address, bg_col.native_address, tint_col.native_address);
+    public static void ImageWithBg(ImTextureRef tex_ref, ImVec2 image_size, ImVec2 uv0, ImVec2 uv1) {
+        internal_native_ImageWithBg(tex_ref.native_address, image_size.native_address, uv0.native_address, uv1.native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.ImageButton(str_id, user_texture_id, size_addr, uv0_addr, uv1_addr, bg_col_addr, tint_col_addr);
+      imgui.ImGui.prototype.ImageWithBg(tex_ref_addr, image_size_addr, uv0_addr, uv1_addr);
+    */
+    @org.teavm.jso.JSBody(params = {"tex_ref_addr", "image_size_addr", "uv0_addr", "uv1_addr"}, script = "imgui.ImGui.prototype.ImageWithBg(tex_ref_addr, image_size_addr, uv0_addr, uv1_addr);")
+    public static native void internal_native_ImageWithBg(int tex_ref_addr, int image_size_addr, int uv0_addr, int uv1_addr);
+
+    public static void ImageWithBg(ImTextureRef tex_ref, ImVec2 image_size, ImVec2 uv0) {
+        internal_native_ImageWithBg(tex_ref.native_address, image_size.native_address, uv0.native_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      imgui.ImGui.prototype.ImageWithBg(tex_ref_addr, image_size_addr, uv0_addr);
+    */
+    @org.teavm.jso.JSBody(params = {"tex_ref_addr", "image_size_addr", "uv0_addr"}, script = "imgui.ImGui.prototype.ImageWithBg(tex_ref_addr, image_size_addr, uv0_addr);")
+    public static native void internal_native_ImageWithBg(int tex_ref_addr, int image_size_addr, int uv0_addr);
+
+    public static void ImageWithBg(ImTextureRef tex_ref, ImVec2 image_size) {
+        internal_native_ImageWithBg(tex_ref.native_address, image_size.native_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      imgui.ImGui.prototype.ImageWithBg(tex_ref_addr, image_size_addr);
+    */
+    @org.teavm.jso.JSBody(params = {"tex_ref_addr", "image_size_addr"}, script = "imgui.ImGui.prototype.ImageWithBg(tex_ref_addr, image_size_addr);")
+    public static native void internal_native_ImageWithBg(int tex_ref_addr, int image_size_addr);
+
+    public static boolean ImageButton(String str_id, ImTextureRef tex_ref, ImVec2 image_size, ImVec2 uv0, ImVec2 uv1, ImVec4 bg_col, ImVec4 tint_col) {
+        return internal_native_ImageButton(str_id, tex_ref.native_address, image_size.native_address, uv0.native_address, uv1.native_address, bg_col.native_address, tint_col.native_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.ImageButton(str_id, tex_ref_addr, image_size_addr, uv0_addr, uv1_addr, bg_col_addr, tint_col_addr);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"str_id", "user_texture_id", "size_addr", "uv0_addr", "uv1_addr", "bg_col_addr", "tint_col_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.ImageButton(str_id, user_texture_id, size_addr, uv0_addr, uv1_addr, bg_col_addr, tint_col_addr);return returnedJSObj;")
-    public static native boolean internal_native_ImageButton(String str_id, int user_texture_id, int size_addr, int uv0_addr, int uv1_addr, int bg_col_addr, int tint_col_addr);
+    @org.teavm.jso.JSBody(params = {"str_id", "tex_ref_addr", "image_size_addr", "uv0_addr", "uv1_addr", "bg_col_addr", "tint_col_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.ImageButton(str_id, tex_ref_addr, image_size_addr, uv0_addr, uv1_addr, bg_col_addr, tint_col_addr);return returnedJSObj;")
+    public static native boolean internal_native_ImageButton(String str_id, int tex_ref_addr, int image_size_addr, int uv0_addr, int uv1_addr, int bg_col_addr, int tint_col_addr);
 
-    public static boolean ImageButton(String str_id, int user_texture_id, ImVec2 size, ImVec2 uv0, ImVec2 uv1, ImVec4 bg_col) {
-        return internal_native_ImageButton(str_id, user_texture_id, size.native_address, uv0.native_address, uv1.native_address, bg_col.native_address);
+    public static boolean ImageButton(String str_id, ImTextureRef tex_ref, ImVec2 image_size, ImVec2 uv0, ImVec2 uv1, ImVec4 bg_col) {
+        return internal_native_ImageButton(str_id, tex_ref.native_address, image_size.native_address, uv0.native_address, uv1.native_address, bg_col.native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.ImageButton(str_id, user_texture_id, size_addr, uv0_addr, uv1_addr, bg_col_addr);
+      var returnedJSObj = imgui.ImGui.prototype.ImageButton(str_id, tex_ref_addr, image_size_addr, uv0_addr, uv1_addr, bg_col_addr);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"str_id", "user_texture_id", "size_addr", "uv0_addr", "uv1_addr", "bg_col_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.ImageButton(str_id, user_texture_id, size_addr, uv0_addr, uv1_addr, bg_col_addr);return returnedJSObj;")
-    public static native boolean internal_native_ImageButton(String str_id, int user_texture_id, int size_addr, int uv0_addr, int uv1_addr, int bg_col_addr);
+    @org.teavm.jso.JSBody(params = {"str_id", "tex_ref_addr", "image_size_addr", "uv0_addr", "uv1_addr", "bg_col_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.ImageButton(str_id, tex_ref_addr, image_size_addr, uv0_addr, uv1_addr, bg_col_addr);return returnedJSObj;")
+    public static native boolean internal_native_ImageButton(String str_id, int tex_ref_addr, int image_size_addr, int uv0_addr, int uv1_addr, int bg_col_addr);
 
-    public static boolean ImageButton(String str_id, int user_texture_id, ImVec2 size, ImVec2 uv0, ImVec2 uv1) {
-        return internal_native_ImageButton(str_id, user_texture_id, size.native_address, uv0.native_address, uv1.native_address);
+    public static boolean ImageButton(String str_id, ImTextureRef tex_ref, ImVec2 image_size, ImVec2 uv0, ImVec2 uv1) {
+        return internal_native_ImageButton(str_id, tex_ref.native_address, image_size.native_address, uv0.native_address, uv1.native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.ImageButton(str_id, user_texture_id, size_addr, uv0_addr, uv1_addr);
+      var returnedJSObj = imgui.ImGui.prototype.ImageButton(str_id, tex_ref_addr, image_size_addr, uv0_addr, uv1_addr);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"str_id", "user_texture_id", "size_addr", "uv0_addr", "uv1_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.ImageButton(str_id, user_texture_id, size_addr, uv0_addr, uv1_addr);return returnedJSObj;")
-    public static native boolean internal_native_ImageButton(String str_id, int user_texture_id, int size_addr, int uv0_addr, int uv1_addr);
+    @org.teavm.jso.JSBody(params = {"str_id", "tex_ref_addr", "image_size_addr", "uv0_addr", "uv1_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.ImageButton(str_id, tex_ref_addr, image_size_addr, uv0_addr, uv1_addr);return returnedJSObj;")
+    public static native boolean internal_native_ImageButton(String str_id, int tex_ref_addr, int image_size_addr, int uv0_addr, int uv1_addr);
 
-    public static boolean ImageButton(String str_id, int user_texture_id, ImVec2 size, ImVec2 uv0) {
-        return internal_native_ImageButton(str_id, user_texture_id, size.native_address, uv0.native_address);
+    public static boolean ImageButton(String str_id, ImTextureRef tex_ref, ImVec2 image_size, ImVec2 uv0) {
+        return internal_native_ImageButton(str_id, tex_ref.native_address, image_size.native_address, uv0.native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.ImageButton(str_id, user_texture_id, size_addr, uv0_addr);
+      var returnedJSObj = imgui.ImGui.prototype.ImageButton(str_id, tex_ref_addr, image_size_addr, uv0_addr);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"str_id", "user_texture_id", "size_addr", "uv0_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.ImageButton(str_id, user_texture_id, size_addr, uv0_addr);return returnedJSObj;")
-    public static native boolean internal_native_ImageButton(String str_id, int user_texture_id, int size_addr, int uv0_addr);
+    @org.teavm.jso.JSBody(params = {"str_id", "tex_ref_addr", "image_size_addr", "uv0_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.ImageButton(str_id, tex_ref_addr, image_size_addr, uv0_addr);return returnedJSObj;")
+    public static native boolean internal_native_ImageButton(String str_id, int tex_ref_addr, int image_size_addr, int uv0_addr);
 
-    public static boolean ImageButton(String str_id, int user_texture_id, ImVec2 size) {
-        return internal_native_ImageButton(str_id, user_texture_id, size.native_address);
+    public static boolean ImageButton(String str_id, ImTextureRef tex_ref, ImVec2 image_size) {
+        return internal_native_ImageButton(str_id, tex_ref.native_address, image_size.native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.ImageButton(str_id, user_texture_id, size_addr);
+      var returnedJSObj = imgui.ImGui.prototype.ImageButton(str_id, tex_ref_addr, image_size_addr);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"str_id", "user_texture_id", "size_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.ImageButton(str_id, user_texture_id, size_addr);return returnedJSObj;")
-    public static native boolean internal_native_ImageButton(String str_id, int user_texture_id, int size_addr);
+    @org.teavm.jso.JSBody(params = {"str_id", "tex_ref_addr", "image_size_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.ImageButton(str_id, tex_ref_addr, image_size_addr);return returnedJSObj;")
+    public static native boolean internal_native_ImageButton(String str_id, int tex_ref_addr, int image_size_addr);
 
-    public static boolean BeginCombo(String label, String preview_value, ImGuiComboFlags ImGuiComboFlags) {
-        return internal_native_BeginCombo(label, preview_value, (int) ImGuiComboFlags.getValue());
+    public static boolean BeginCombo(String label, String preview_value, ImGuiComboFlags flags) {
+        return internal_native_BeginCombo(label, preview_value, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.BeginCombo(label, preview_value, ImGuiComboFlags);
+      var returnedJSObj = imgui.ImGui.prototype.BeginCombo(label, preview_value, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "preview_value", "ImGuiComboFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginCombo(label, preview_value, ImGuiComboFlags);return returnedJSObj;")
-    public static native boolean internal_native_BeginCombo(String label, String preview_value, int ImGuiComboFlags);
+    @org.teavm.jso.JSBody(params = {"label", "preview_value", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginCombo(label, preview_value, flags);return returnedJSObj;")
+    public static native boolean internal_native_BeginCombo(String label, String preview_value, int flags);
 
     public static boolean BeginCombo(String label, String preview_value) {
         return internal_native_BeginCombo(label, preview_value);
@@ -2568,17 +2777,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "current_item_addr", "items_separated_by_zeros"}, script = "var returnedJSObj = imgui.ImGui.prototype.Combo(label, current_item_addr, items_separated_by_zeros);return returnedJSObj;")
     public static native boolean internal_native_Combo(String label, int current_item_addr, String items_separated_by_zeros);
 
-    public static boolean DragFloat(String label, IDLFloatArray v, float v_speed, float v_min, float v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_DragFloat(label, v.native_void_address, v_speed, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+    public static boolean DragFloat(String label, IDLFloatArray v, float v_speed, float v_min, float v_max, String format, ImGuiSliderFlags flags) {
+        return internal_native_DragFloat(label, v.native_void_address, v_speed, v_min, v_max, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.DragFloat(label, v_addr, v_speed, v_min, v_max, format, ImGuiSliderFlags);
+      var returnedJSObj = imgui.ImGui.prototype.DragFloat(label, v_addr, v_speed, v_min, v_max, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_speed", "v_min", "v_max", "format", "ImGuiSliderFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragFloat(label, v_addr, v_speed, v_min, v_max, format, ImGuiSliderFlags);return returnedJSObj;")
-    public static native boolean internal_native_DragFloat(String label, int v_addr, float v_speed, float v_min, float v_max, String format, int ImGuiSliderFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_speed", "v_min", "v_max", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragFloat(label, v_addr, v_speed, v_min, v_max, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_DragFloat(String label, int v_addr, float v_speed, float v_min, float v_max, String format, int flags);
 
     public static boolean DragFloat(String label, IDLFloatArray v, float v_speed, float v_min, float v_max, String format) {
         return internal_native_DragFloat(label, v.native_void_address, v_speed, v_min, v_max, format);
@@ -2640,17 +2849,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragFloat(label, v_addr);return returnedJSObj;")
     public static native boolean internal_native_DragFloat(String label, int v_addr);
 
-    public static boolean DragFloat2(String label, IDLFloatArray v, float v_speed, float v_min, float v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_DragFloat2(label, v.native_void_address, v_speed, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+    public static boolean DragFloat2(String label, IDLFloatArray v, float v_speed, float v_min, float v_max, String format, ImGuiSliderFlags flags) {
+        return internal_native_DragFloat2(label, v.native_void_address, v_speed, v_min, v_max, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.DragFloat2(label, v_addr, v_speed, v_min, v_max, format, ImGuiSliderFlags);
+      var returnedJSObj = imgui.ImGui.prototype.DragFloat2(label, v_addr, v_speed, v_min, v_max, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_speed", "v_min", "v_max", "format", "ImGuiSliderFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragFloat2(label, v_addr, v_speed, v_min, v_max, format, ImGuiSliderFlags);return returnedJSObj;")
-    public static native boolean internal_native_DragFloat2(String label, int v_addr, float v_speed, float v_min, float v_max, String format, int ImGuiSliderFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_speed", "v_min", "v_max", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragFloat2(label, v_addr, v_speed, v_min, v_max, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_DragFloat2(String label, int v_addr, float v_speed, float v_min, float v_max, String format, int flags);
 
     public static boolean DragFloat2(String label, IDLFloatArray v, float v_speed, float v_min, float v_max, String format) {
         return internal_native_DragFloat2(label, v.native_void_address, v_speed, v_min, v_max, format);
@@ -2712,17 +2921,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragFloat2(label, v_addr);return returnedJSObj;")
     public static native boolean internal_native_DragFloat2(String label, int v_addr);
 
-    public static boolean DragFloat3(String label, IDLFloatArray v, float v_speed, float v_min, float v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_DragFloat3(label, v.native_void_address, v_speed, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+    public static boolean DragFloat3(String label, IDLFloatArray v, float v_speed, float v_min, float v_max, String format, ImGuiSliderFlags flags) {
+        return internal_native_DragFloat3(label, v.native_void_address, v_speed, v_min, v_max, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.DragFloat3(label, v_addr, v_speed, v_min, v_max, format, ImGuiSliderFlags);
+      var returnedJSObj = imgui.ImGui.prototype.DragFloat3(label, v_addr, v_speed, v_min, v_max, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_speed", "v_min", "v_max", "format", "ImGuiSliderFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragFloat3(label, v_addr, v_speed, v_min, v_max, format, ImGuiSliderFlags);return returnedJSObj;")
-    public static native boolean internal_native_DragFloat3(String label, int v_addr, float v_speed, float v_min, float v_max, String format, int ImGuiSliderFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_speed", "v_min", "v_max", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragFloat3(label, v_addr, v_speed, v_min, v_max, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_DragFloat3(String label, int v_addr, float v_speed, float v_min, float v_max, String format, int flags);
 
     public static boolean DragFloat3(String label, IDLFloatArray v, float v_speed, float v_min, float v_max, String format) {
         return internal_native_DragFloat3(label, v.native_void_address, v_speed, v_min, v_max, format);
@@ -2784,17 +2993,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragFloat3(label, v_addr);return returnedJSObj;")
     public static native boolean internal_native_DragFloat3(String label, int v_addr);
 
-    public static boolean DragFloat4(String label, IDLFloatArray v, float v_speed, float v_min, float v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_DragFloat4(label, v.native_void_address, v_speed, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+    public static boolean DragFloat4(String label, IDLFloatArray v, float v_speed, float v_min, float v_max, String format, ImGuiSliderFlags flags) {
+        return internal_native_DragFloat4(label, v.native_void_address, v_speed, v_min, v_max, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.DragFloat4(label, v_addr, v_speed, v_min, v_max, format, ImGuiSliderFlags);
+      var returnedJSObj = imgui.ImGui.prototype.DragFloat4(label, v_addr, v_speed, v_min, v_max, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_speed", "v_min", "v_max", "format", "ImGuiSliderFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragFloat4(label, v_addr, v_speed, v_min, v_max, format, ImGuiSliderFlags);return returnedJSObj;")
-    public static native boolean internal_native_DragFloat4(String label, int v_addr, float v_speed, float v_min, float v_max, String format, int ImGuiSliderFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_speed", "v_min", "v_max", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragFloat4(label, v_addr, v_speed, v_min, v_max, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_DragFloat4(String label, int v_addr, float v_speed, float v_min, float v_max, String format, int flags);
 
     public static boolean DragFloat4(String label, IDLFloatArray v, float v_speed, float v_min, float v_max, String format) {
         return internal_native_DragFloat4(label, v.native_void_address, v_speed, v_min, v_max, format);
@@ -2856,17 +3065,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragFloat4(label, v_addr);return returnedJSObj;")
     public static native boolean internal_native_DragFloat4(String label, int v_addr);
 
-    public static boolean DragFloatRange2(String label, IDLFloatArray v_current_min, IDLFloatArray v_current_max, float v_speed, float v_min, float v_max, String format, String format_max, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_DragFloatRange2(label, v_current_min.native_void_address, v_current_max.native_void_address, v_speed, v_min, v_max, format, format_max, (int) ImGuiSliderFlags.getValue());
+    public static boolean DragFloatRange2(String label, IDLFloatArray v_current_min, IDLFloatArray v_current_max, float v_speed, float v_min, float v_max, String format, String format_max, ImGuiSliderFlags flags) {
+        return internal_native_DragFloatRange2(label, v_current_min.native_void_address, v_current_max.native_void_address, v_speed, v_min, v_max, format, format_max, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.DragFloatRange2(label, v_current_min_addr, v_current_max_addr, v_speed, v_min, v_max, format, format_max, ImGuiSliderFlags);
+      var returnedJSObj = imgui.ImGui.prototype.DragFloatRange2(label, v_current_min_addr, v_current_max_addr, v_speed, v_min, v_max, format, format_max, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_current_min_addr", "v_current_max_addr", "v_speed", "v_min", "v_max", "format", "format_max", "ImGuiSliderFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragFloatRange2(label, v_current_min_addr, v_current_max_addr, v_speed, v_min, v_max, format, format_max, ImGuiSliderFlags);return returnedJSObj;")
-    public static native boolean internal_native_DragFloatRange2(String label, int v_current_min_addr, int v_current_max_addr, float v_speed, float v_min, float v_max, String format, String format_max, int ImGuiSliderFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_current_min_addr", "v_current_max_addr", "v_speed", "v_min", "v_max", "format", "format_max", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragFloatRange2(label, v_current_min_addr, v_current_max_addr, v_speed, v_min, v_max, format, format_max, flags);return returnedJSObj;")
+    public static native boolean internal_native_DragFloatRange2(String label, int v_current_min_addr, int v_current_max_addr, float v_speed, float v_min, float v_max, String format, String format_max, int flags);
 
     public static boolean DragFloatRange2(String label, IDLFloatArray v_current_min, IDLFloatArray v_current_max, float v_speed, float v_min, float v_max, String format, String format_max) {
         return internal_native_DragFloatRange2(label, v_current_min.native_void_address, v_current_max.native_void_address, v_speed, v_min, v_max, format, format_max);
@@ -2940,17 +3149,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_current_min_addr", "v_current_max_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragFloatRange2(label, v_current_min_addr, v_current_max_addr);return returnedJSObj;")
     public static native boolean internal_native_DragFloatRange2(String label, int v_current_min_addr, int v_current_max_addr);
 
-    public static boolean DragInt(String label, IDLIntArray v, float v_speed, int v_min, int v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_DragInt(label, v.native_void_address, v_speed, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+    public static boolean DragInt(String label, IDLIntArray v, float v_speed, int v_min, int v_max, String format, ImGuiSliderFlags flags) {
+        return internal_native_DragInt(label, v.native_void_address, v_speed, v_min, v_max, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.DragInt(label, v_addr, v_speed, v_min, v_max, format, ImGuiSliderFlags);
+      var returnedJSObj = imgui.ImGui.prototype.DragInt(label, v_addr, v_speed, v_min, v_max, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_speed", "v_min", "v_max", "format", "ImGuiSliderFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragInt(label, v_addr, v_speed, v_min, v_max, format, ImGuiSliderFlags);return returnedJSObj;")
-    public static native boolean internal_native_DragInt(String label, int v_addr, float v_speed, int v_min, int v_max, String format, int ImGuiSliderFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_speed", "v_min", "v_max", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragInt(label, v_addr, v_speed, v_min, v_max, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_DragInt(String label, int v_addr, float v_speed, int v_min, int v_max, String format, int flags);
 
     public static boolean DragInt(String label, IDLIntArray v, float v_speed, int v_min, int v_max, String format) {
         return internal_native_DragInt(label, v.native_void_address, v_speed, v_min, v_max, format);
@@ -3012,17 +3221,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragInt(label, v_addr);return returnedJSObj;")
     public static native boolean internal_native_DragInt(String label, int v_addr);
 
-    public static boolean DragInt2(String label, IDLIntArray v, float v_speed, int v_min, int v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_DragInt2(label, v.native_void_address, v_speed, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+    public static boolean DragInt2(String label, IDLIntArray v, float v_speed, int v_min, int v_max, String format, ImGuiSliderFlags flags) {
+        return internal_native_DragInt2(label, v.native_void_address, v_speed, v_min, v_max, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.DragInt2(label, v_addr, v_speed, v_min, v_max, format, ImGuiSliderFlags);
+      var returnedJSObj = imgui.ImGui.prototype.DragInt2(label, v_addr, v_speed, v_min, v_max, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_speed", "v_min", "v_max", "format", "ImGuiSliderFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragInt2(label, v_addr, v_speed, v_min, v_max, format, ImGuiSliderFlags);return returnedJSObj;")
-    public static native boolean internal_native_DragInt2(String label, int v_addr, float v_speed, int v_min, int v_max, String format, int ImGuiSliderFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_speed", "v_min", "v_max", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragInt2(label, v_addr, v_speed, v_min, v_max, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_DragInt2(String label, int v_addr, float v_speed, int v_min, int v_max, String format, int flags);
 
     public static boolean DragInt2(String label, IDLIntArray v, float v_speed, int v_min, int v_max, String format) {
         return internal_native_DragInt2(label, v.native_void_address, v_speed, v_min, v_max, format);
@@ -3084,17 +3293,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragInt2(label, v_addr);return returnedJSObj;")
     public static native boolean internal_native_DragInt2(String label, int v_addr);
 
-    public static boolean DragInt3(String label, IDLIntArray v, float v_speed, int v_min, int v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_DragInt3(label, v.native_void_address, v_speed, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+    public static boolean DragInt3(String label, IDLIntArray v, float v_speed, int v_min, int v_max, String format, ImGuiSliderFlags flags) {
+        return internal_native_DragInt3(label, v.native_void_address, v_speed, v_min, v_max, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.DragInt3(label, v_addr, v_speed, v_min, v_max, format, ImGuiSliderFlags);
+      var returnedJSObj = imgui.ImGui.prototype.DragInt3(label, v_addr, v_speed, v_min, v_max, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_speed", "v_min", "v_max", "format", "ImGuiSliderFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragInt3(label, v_addr, v_speed, v_min, v_max, format, ImGuiSliderFlags);return returnedJSObj;")
-    public static native boolean internal_native_DragInt3(String label, int v_addr, float v_speed, int v_min, int v_max, String format, int ImGuiSliderFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_speed", "v_min", "v_max", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragInt3(label, v_addr, v_speed, v_min, v_max, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_DragInt3(String label, int v_addr, float v_speed, int v_min, int v_max, String format, int flags);
 
     public static boolean DragInt3(String label, IDLIntArray v, float v_speed, int v_min, int v_max, String format) {
         return internal_native_DragInt3(label, v.native_void_address, v_speed, v_min, v_max, format);
@@ -3156,17 +3365,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragInt3(label, v_addr);return returnedJSObj;")
     public static native boolean internal_native_DragInt3(String label, int v_addr);
 
-    public static boolean DragInt4(String label, IDLIntArray v, float v_speed, int v_min, int v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_DragInt4(label, v.native_void_address, v_speed, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+    public static boolean DragInt4(String label, IDLIntArray v, float v_speed, int v_min, int v_max, String format, ImGuiSliderFlags flags) {
+        return internal_native_DragInt4(label, v.native_void_address, v_speed, v_min, v_max, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.DragInt4(label, v_addr, v_speed, v_min, v_max, format, ImGuiSliderFlags);
+      var returnedJSObj = imgui.ImGui.prototype.DragInt4(label, v_addr, v_speed, v_min, v_max, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_speed", "v_min", "v_max", "format", "ImGuiSliderFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragInt4(label, v_addr, v_speed, v_min, v_max, format, ImGuiSliderFlags);return returnedJSObj;")
-    public static native boolean internal_native_DragInt4(String label, int v_addr, float v_speed, int v_min, int v_max, String format, int ImGuiSliderFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_speed", "v_min", "v_max", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragInt4(label, v_addr, v_speed, v_min, v_max, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_DragInt4(String label, int v_addr, float v_speed, int v_min, int v_max, String format, int flags);
 
     public static boolean DragInt4(String label, IDLIntArray v, float v_speed, int v_min, int v_max, String format) {
         return internal_native_DragInt4(label, v.native_void_address, v_speed, v_min, v_max, format);
@@ -3228,17 +3437,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragInt4(label, v_addr);return returnedJSObj;")
     public static native boolean internal_native_DragInt4(String label, int v_addr);
 
-    public static boolean DragIntRange2(String label, IDLIntArray v_current_min, IDLIntArray v_current_max, float v_speed, int v_min, int v_max, String format, String format_max, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_DragIntRange2(label, v_current_min.native_void_address, v_current_max.native_void_address, v_speed, v_min, v_max, format, format_max, (int) ImGuiSliderFlags.getValue());
+    public static boolean DragIntRange2(String label, IDLIntArray v_current_min, IDLIntArray v_current_max, float v_speed, int v_min, int v_max, String format, String format_max, ImGuiSliderFlags flags) {
+        return internal_native_DragIntRange2(label, v_current_min.native_void_address, v_current_max.native_void_address, v_speed, v_min, v_max, format, format_max, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.DragIntRange2(label, v_current_min_addr, v_current_max_addr, v_speed, v_min, v_max, format, format_max, ImGuiSliderFlags);
+      var returnedJSObj = imgui.ImGui.prototype.DragIntRange2(label, v_current_min_addr, v_current_max_addr, v_speed, v_min, v_max, format, format_max, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_current_min_addr", "v_current_max_addr", "v_speed", "v_min", "v_max", "format", "format_max", "ImGuiSliderFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragIntRange2(label, v_current_min_addr, v_current_max_addr, v_speed, v_min, v_max, format, format_max, ImGuiSliderFlags);return returnedJSObj;")
-    public static native boolean internal_native_DragIntRange2(String label, int v_current_min_addr, int v_current_max_addr, float v_speed, int v_min, int v_max, String format, String format_max, int ImGuiSliderFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_current_min_addr", "v_current_max_addr", "v_speed", "v_min", "v_max", "format", "format_max", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragIntRange2(label, v_current_min_addr, v_current_max_addr, v_speed, v_min, v_max, format, format_max, flags);return returnedJSObj;")
+    public static native boolean internal_native_DragIntRange2(String label, int v_current_min_addr, int v_current_max_addr, float v_speed, int v_min, int v_max, String format, String format_max, int flags);
 
     public static boolean DragIntRange2(String label, IDLIntArray v_current_min, IDLIntArray v_current_max, float v_speed, int v_min, int v_max, String format, String format_max) {
         return internal_native_DragIntRange2(label, v_current_min.native_void_address, v_current_max.native_void_address, v_speed, v_min, v_max, format, format_max);
@@ -3312,17 +3521,161 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_current_min_addr", "v_current_max_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragIntRange2(label, v_current_min_addr, v_current_max_addr);return returnedJSObj;")
     public static native boolean internal_native_DragIntRange2(String label, int v_current_min_addr, int v_current_max_addr);
 
-    public static boolean SliderFloat(String label, IDLFloatArray v, float v_min, float v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_SliderFloat(label, v.native_void_address, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+    public static boolean DragScalar(String label, ImGuiDataType data_type, IDLBase p_data, float v_speed, IDLBase p_min, IDLBase p_max, String format, ImGuiSliderFlags flags) {
+        return internal_native_DragScalar(label, data_type.getValue(), p_data.native_void_address, v_speed, p_min.native_void_address, p_max.native_void_address, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.SliderFloat(label, v_addr, v_min, v_max, format, ImGuiSliderFlags);
+      var returnedJSObj = imgui.ImGui.prototype.DragScalar(label, data_type, p_data_addr, v_speed, p_min_addr, p_max_addr, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_min", "v_max", "format", "ImGuiSliderFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderFloat(label, v_addr, v_min, v_max, format, ImGuiSliderFlags);return returnedJSObj;")
-    public static native boolean internal_native_SliderFloat(String label, int v_addr, float v_min, float v_max, String format, int ImGuiSliderFlags);
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "v_speed", "p_min_addr", "p_max_addr", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragScalar(label, data_type, p_data_addr, v_speed, p_min_addr, p_max_addr, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_DragScalar(String label, int data_type, int p_data_addr, float v_speed, int p_min_addr, int p_max_addr, String format, int flags);
+
+    public static boolean DragScalar(String label, ImGuiDataType data_type, IDLBase p_data, float v_speed, IDLBase p_min, IDLBase p_max, String format) {
+        return internal_native_DragScalar(label, data_type.getValue(), p_data.native_void_address, v_speed, p_min.native_void_address, p_max.native_void_address, format);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.DragScalar(label, data_type, p_data_addr, v_speed, p_min_addr, p_max_addr, format);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "v_speed", "p_min_addr", "p_max_addr", "format"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragScalar(label, data_type, p_data_addr, v_speed, p_min_addr, p_max_addr, format);return returnedJSObj;")
+    public static native boolean internal_native_DragScalar(String label, int data_type, int p_data_addr, float v_speed, int p_min_addr, int p_max_addr, String format);
+
+    public static boolean DragScalar(String label, ImGuiDataType data_type, IDLBase p_data, float v_speed, IDLBase p_min, IDLBase p_max) {
+        return internal_native_DragScalar(label, data_type.getValue(), p_data.native_void_address, v_speed, p_min.native_void_address, p_max.native_void_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.DragScalar(label, data_type, p_data_addr, v_speed, p_min_addr, p_max_addr);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "v_speed", "p_min_addr", "p_max_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragScalar(label, data_type, p_data_addr, v_speed, p_min_addr, p_max_addr);return returnedJSObj;")
+    public static native boolean internal_native_DragScalar(String label, int data_type, int p_data_addr, float v_speed, int p_min_addr, int p_max_addr);
+
+    public static boolean DragScalar(String label, ImGuiDataType data_type, IDLBase p_data, float v_speed, IDLBase p_min) {
+        return internal_native_DragScalar(label, data_type.getValue(), p_data.native_void_address, v_speed, p_min.native_void_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.DragScalar(label, data_type, p_data_addr, v_speed, p_min_addr);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "v_speed", "p_min_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragScalar(label, data_type, p_data_addr, v_speed, p_min_addr);return returnedJSObj;")
+    public static native boolean internal_native_DragScalar(String label, int data_type, int p_data_addr, float v_speed, int p_min_addr);
+
+    public static boolean DragScalar(String label, ImGuiDataType data_type, IDLBase p_data, float v_speed) {
+        return internal_native_DragScalar(label, data_type.getValue(), p_data.native_void_address, v_speed);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.DragScalar(label, data_type, p_data_addr, v_speed);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "v_speed"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragScalar(label, data_type, p_data_addr, v_speed);return returnedJSObj;")
+    public static native boolean internal_native_DragScalar(String label, int data_type, int p_data_addr, float v_speed);
+
+    public static boolean DragScalar(String label, ImGuiDataType data_type, IDLBase p_data) {
+        return internal_native_DragScalar(label, data_type.getValue(), p_data.native_void_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.DragScalar(label, data_type, p_data_addr);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragScalar(label, data_type, p_data_addr);return returnedJSObj;")
+    public static native boolean internal_native_DragScalar(String label, int data_type, int p_data_addr);
+
+    public static boolean DragScalarN(String label, ImGuiDataType data_type, IDLBase p_data, int components, float v_speed, IDLBase p_min, IDLBase p_max, String format, ImGuiSliderFlags flags) {
+        return internal_native_DragScalarN(label, data_type.getValue(), p_data.native_void_address, components, v_speed, p_min.native_void_address, p_max.native_void_address, format, flags.getValue());
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.DragScalarN(label, data_type, p_data_addr, components, v_speed, p_min_addr, p_max_addr, format, flags);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "components", "v_speed", "p_min_addr", "p_max_addr", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragScalarN(label, data_type, p_data_addr, components, v_speed, p_min_addr, p_max_addr, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_DragScalarN(String label, int data_type, int p_data_addr, int components, float v_speed, int p_min_addr, int p_max_addr, String format, int flags);
+
+    public static boolean DragScalarN(String label, ImGuiDataType data_type, IDLBase p_data, int components, float v_speed, IDLBase p_min, IDLBase p_max, String format) {
+        return internal_native_DragScalarN(label, data_type.getValue(), p_data.native_void_address, components, v_speed, p_min.native_void_address, p_max.native_void_address, format);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.DragScalarN(label, data_type, p_data_addr, components, v_speed, p_min_addr, p_max_addr, format);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "components", "v_speed", "p_min_addr", "p_max_addr", "format"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragScalarN(label, data_type, p_data_addr, components, v_speed, p_min_addr, p_max_addr, format);return returnedJSObj;")
+    public static native boolean internal_native_DragScalarN(String label, int data_type, int p_data_addr, int components, float v_speed, int p_min_addr, int p_max_addr, String format);
+
+    public static boolean DragScalarN(String label, ImGuiDataType data_type, IDLBase p_data, int components, float v_speed, IDLBase p_min, IDLBase p_max) {
+        return internal_native_DragScalarN(label, data_type.getValue(), p_data.native_void_address, components, v_speed, p_min.native_void_address, p_max.native_void_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.DragScalarN(label, data_type, p_data_addr, components, v_speed, p_min_addr, p_max_addr);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "components", "v_speed", "p_min_addr", "p_max_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragScalarN(label, data_type, p_data_addr, components, v_speed, p_min_addr, p_max_addr);return returnedJSObj;")
+    public static native boolean internal_native_DragScalarN(String label, int data_type, int p_data_addr, int components, float v_speed, int p_min_addr, int p_max_addr);
+
+    public static boolean DragScalarN(String label, ImGuiDataType data_type, IDLBase p_data, int components, float v_speed, IDLBase p_min) {
+        return internal_native_DragScalarN(label, data_type.getValue(), p_data.native_void_address, components, v_speed, p_min.native_void_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.DragScalarN(label, data_type, p_data_addr, components, v_speed, p_min_addr);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "components", "v_speed", "p_min_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragScalarN(label, data_type, p_data_addr, components, v_speed, p_min_addr);return returnedJSObj;")
+    public static native boolean internal_native_DragScalarN(String label, int data_type, int p_data_addr, int components, float v_speed, int p_min_addr);
+
+    public static boolean DragScalarN(String label, ImGuiDataType data_type, IDLBase p_data, int components, float v_speed) {
+        return internal_native_DragScalarN(label, data_type.getValue(), p_data.native_void_address, components, v_speed);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.DragScalarN(label, data_type, p_data_addr, components, v_speed);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "components", "v_speed"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragScalarN(label, data_type, p_data_addr, components, v_speed);return returnedJSObj;")
+    public static native boolean internal_native_DragScalarN(String label, int data_type, int p_data_addr, int components, float v_speed);
+
+    public static boolean DragScalarN(String label, ImGuiDataType data_type, IDLBase p_data, int components) {
+        return internal_native_DragScalarN(label, data_type.getValue(), p_data.native_void_address, components);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.DragScalarN(label, data_type, p_data_addr, components);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "components"}, script = "var returnedJSObj = imgui.ImGui.prototype.DragScalarN(label, data_type, p_data_addr, components);return returnedJSObj;")
+    public static native boolean internal_native_DragScalarN(String label, int data_type, int p_data_addr, int components);
+
+    public static boolean SliderFloat(String label, IDLFloatArray v, float v_min, float v_max, String format, ImGuiSliderFlags flags) {
+        return internal_native_SliderFloat(label, v.native_void_address, v_min, v_max, format, flags.getValue());
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.SliderFloat(label, v_addr, v_min, v_max, format, flags);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_min", "v_max", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderFloat(label, v_addr, v_min, v_max, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_SliderFloat(String label, int v_addr, float v_min, float v_max, String format, int flags);
 
     public static boolean SliderFloat(String label, IDLFloatArray v, float v_min, float v_max, String format) {
         return internal_native_SliderFloat(label, v.native_void_address, v_min, v_max, format);
@@ -3348,17 +3701,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_min", "v_max"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderFloat(label, v_addr, v_min, v_max);return returnedJSObj;")
     public static native boolean internal_native_SliderFloat(String label, int v_addr, float v_min, float v_max);
 
-    public static boolean SliderFloat2(String label, IDLFloatArray v, float v_min, float v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_SliderFloat2(label, v.native_void_address, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+    public static boolean SliderFloat2(String label, IDLFloatArray v, float v_min, float v_max, String format, ImGuiSliderFlags flags) {
+        return internal_native_SliderFloat2(label, v.native_void_address, v_min, v_max, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.SliderFloat2(label, v_addr, v_min, v_max, format, ImGuiSliderFlags);
+      var returnedJSObj = imgui.ImGui.prototype.SliderFloat2(label, v_addr, v_min, v_max, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_min", "v_max", "format", "ImGuiSliderFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderFloat2(label, v_addr, v_min, v_max, format, ImGuiSliderFlags);return returnedJSObj;")
-    public static native boolean internal_native_SliderFloat2(String label, int v_addr, float v_min, float v_max, String format, int ImGuiSliderFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_min", "v_max", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderFloat2(label, v_addr, v_min, v_max, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_SliderFloat2(String label, int v_addr, float v_min, float v_max, String format, int flags);
 
     public static boolean SliderFloat2(String label, IDLFloatArray v, float v_min, float v_max, String format) {
         return internal_native_SliderFloat2(label, v.native_void_address, v_min, v_max, format);
@@ -3384,17 +3737,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_min", "v_max"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderFloat2(label, v_addr, v_min, v_max);return returnedJSObj;")
     public static native boolean internal_native_SliderFloat2(String label, int v_addr, float v_min, float v_max);
 
-    public static boolean SliderFloat3(String label, IDLFloatArray v, float v_min, float v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_SliderFloat3(label, v.native_void_address, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+    public static boolean SliderFloat3(String label, IDLFloatArray v, float v_min, float v_max, String format, ImGuiSliderFlags flags) {
+        return internal_native_SliderFloat3(label, v.native_void_address, v_min, v_max, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.SliderFloat3(label, v_addr, v_min, v_max, format, ImGuiSliderFlags);
+      var returnedJSObj = imgui.ImGui.prototype.SliderFloat3(label, v_addr, v_min, v_max, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_min", "v_max", "format", "ImGuiSliderFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderFloat3(label, v_addr, v_min, v_max, format, ImGuiSliderFlags);return returnedJSObj;")
-    public static native boolean internal_native_SliderFloat3(String label, int v_addr, float v_min, float v_max, String format, int ImGuiSliderFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_min", "v_max", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderFloat3(label, v_addr, v_min, v_max, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_SliderFloat3(String label, int v_addr, float v_min, float v_max, String format, int flags);
 
     public static boolean SliderFloat3(String label, IDLFloatArray v, float v_min, float v_max, String format) {
         return internal_native_SliderFloat3(label, v.native_void_address, v_min, v_max, format);
@@ -3420,17 +3773,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_min", "v_max"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderFloat3(label, v_addr, v_min, v_max);return returnedJSObj;")
     public static native boolean internal_native_SliderFloat3(String label, int v_addr, float v_min, float v_max);
 
-    public static boolean SliderFloat4(String label, IDLFloatArray v, float v_min, float v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_SliderFloat4(label, v.native_void_address, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+    public static boolean SliderFloat4(String label, IDLFloatArray v, float v_min, float v_max, String format, ImGuiSliderFlags flags) {
+        return internal_native_SliderFloat4(label, v.native_void_address, v_min, v_max, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.SliderFloat4(label, v_addr, v_min, v_max, format, ImGuiSliderFlags);
+      var returnedJSObj = imgui.ImGui.prototype.SliderFloat4(label, v_addr, v_min, v_max, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_min", "v_max", "format", "ImGuiSliderFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderFloat4(label, v_addr, v_min, v_max, format, ImGuiSliderFlags);return returnedJSObj;")
-    public static native boolean internal_native_SliderFloat4(String label, int v_addr, float v_min, float v_max, String format, int ImGuiSliderFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_min", "v_max", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderFloat4(label, v_addr, v_min, v_max, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_SliderFloat4(String label, int v_addr, float v_min, float v_max, String format, int flags);
 
     public static boolean SliderFloat4(String label, IDLFloatArray v, float v_min, float v_max, String format) {
         return internal_native_SliderFloat4(label, v.native_void_address, v_min, v_max, format);
@@ -3456,17 +3809,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_min", "v_max"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderFloat4(label, v_addr, v_min, v_max);return returnedJSObj;")
     public static native boolean internal_native_SliderFloat4(String label, int v_addr, float v_min, float v_max);
 
-    public static boolean SliderAngle(String label, IDLFloatArray v_rad, float v_degrees_min, float v_degrees_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_SliderAngle(label, v_rad.native_void_address, v_degrees_min, v_degrees_max, format, (int) ImGuiSliderFlags.getValue());
+    public static boolean SliderAngle(String label, IDLFloatArray v_rad, float v_degrees_min, float v_degrees_max, String format, ImGuiSliderFlags flags) {
+        return internal_native_SliderAngle(label, v_rad.native_void_address, v_degrees_min, v_degrees_max, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.SliderAngle(label, v_rad_addr, v_degrees_min, v_degrees_max, format, ImGuiSliderFlags);
+      var returnedJSObj = imgui.ImGui.prototype.SliderAngle(label, v_rad_addr, v_degrees_min, v_degrees_max, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_rad_addr", "v_degrees_min", "v_degrees_max", "format", "ImGuiSliderFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderAngle(label, v_rad_addr, v_degrees_min, v_degrees_max, format, ImGuiSliderFlags);return returnedJSObj;")
-    public static native boolean internal_native_SliderAngle(String label, int v_rad_addr, float v_degrees_min, float v_degrees_max, String format, int ImGuiSliderFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_rad_addr", "v_degrees_min", "v_degrees_max", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderAngle(label, v_rad_addr, v_degrees_min, v_degrees_max, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_SliderAngle(String label, int v_rad_addr, float v_degrees_min, float v_degrees_max, String format, int flags);
 
     public static boolean SliderAngle(String label, IDLFloatArray v_rad, float v_degrees_min, float v_degrees_max, String format) {
         return internal_native_SliderAngle(label, v_rad.native_void_address, v_degrees_min, v_degrees_max, format);
@@ -3516,17 +3869,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_rad_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderAngle(label, v_rad_addr);return returnedJSObj;")
     public static native boolean internal_native_SliderAngle(String label, int v_rad_addr);
 
-    public static boolean SliderInt(String label, IDLIntArray v, int v_min, int v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_SliderInt(label, v.native_void_address, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+    public static boolean SliderInt(String label, IDLIntArray v, int v_min, int v_max, String format, ImGuiSliderFlags flags) {
+        return internal_native_SliderInt(label, v.native_void_address, v_min, v_max, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.SliderInt(label, v_addr, v_min, v_max, format, ImGuiSliderFlags);
+      var returnedJSObj = imgui.ImGui.prototype.SliderInt(label, v_addr, v_min, v_max, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_min", "v_max", "format", "ImGuiSliderFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderInt(label, v_addr, v_min, v_max, format, ImGuiSliderFlags);return returnedJSObj;")
-    public static native boolean internal_native_SliderInt(String label, int v_addr, int v_min, int v_max, String format, int ImGuiSliderFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_min", "v_max", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderInt(label, v_addr, v_min, v_max, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_SliderInt(String label, int v_addr, int v_min, int v_max, String format, int flags);
 
     public static boolean SliderInt(String label, IDLIntArray v, int v_min, int v_max, String format) {
         return internal_native_SliderInt(label, v.native_void_address, v_min, v_max, format);
@@ -3552,17 +3905,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_min", "v_max"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderInt(label, v_addr, v_min, v_max);return returnedJSObj;")
     public static native boolean internal_native_SliderInt(String label, int v_addr, int v_min, int v_max);
 
-    public static boolean SliderInt2(String label, IDLIntArray v, int v_min, int v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_SliderInt2(label, v.native_void_address, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+    public static boolean SliderInt2(String label, IDLIntArray v, int v_min, int v_max, String format, ImGuiSliderFlags flags) {
+        return internal_native_SliderInt2(label, v.native_void_address, v_min, v_max, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.SliderInt2(label, v_addr, v_min, v_max, format, ImGuiSliderFlags);
+      var returnedJSObj = imgui.ImGui.prototype.SliderInt2(label, v_addr, v_min, v_max, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_min", "v_max", "format", "ImGuiSliderFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderInt2(label, v_addr, v_min, v_max, format, ImGuiSliderFlags);return returnedJSObj;")
-    public static native boolean internal_native_SliderInt2(String label, int v_addr, int v_min, int v_max, String format, int ImGuiSliderFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_min", "v_max", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderInt2(label, v_addr, v_min, v_max, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_SliderInt2(String label, int v_addr, int v_min, int v_max, String format, int flags);
 
     public static boolean SliderInt2(String label, IDLIntArray v, int v_min, int v_max, String format) {
         return internal_native_SliderInt2(label, v.native_void_address, v_min, v_max, format);
@@ -3588,17 +3941,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_min", "v_max"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderInt2(label, v_addr, v_min, v_max);return returnedJSObj;")
     public static native boolean internal_native_SliderInt2(String label, int v_addr, int v_min, int v_max);
 
-    public static boolean SliderInt3(String label, IDLIntArray v, int v_min, int v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_SliderInt3(label, v.native_void_address, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+    public static boolean SliderInt3(String label, IDLIntArray v, int v_min, int v_max, String format, ImGuiSliderFlags flags) {
+        return internal_native_SliderInt3(label, v.native_void_address, v_min, v_max, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.SliderInt3(label, v_addr, v_min, v_max, format, ImGuiSliderFlags);
+      var returnedJSObj = imgui.ImGui.prototype.SliderInt3(label, v_addr, v_min, v_max, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_min", "v_max", "format", "ImGuiSliderFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderInt3(label, v_addr, v_min, v_max, format, ImGuiSliderFlags);return returnedJSObj;")
-    public static native boolean internal_native_SliderInt3(String label, int v_addr, int v_min, int v_max, String format, int ImGuiSliderFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_min", "v_max", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderInt3(label, v_addr, v_min, v_max, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_SliderInt3(String label, int v_addr, int v_min, int v_max, String format, int flags);
 
     public static boolean SliderInt3(String label, IDLIntArray v, int v_min, int v_max, String format) {
         return internal_native_SliderInt3(label, v.native_void_address, v_min, v_max, format);
@@ -3624,17 +3977,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_min", "v_max"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderInt3(label, v_addr, v_min, v_max);return returnedJSObj;")
     public static native boolean internal_native_SliderInt3(String label, int v_addr, int v_min, int v_max);
 
-    public static boolean SliderInt4(String label, IDLIntArray v, int v_min, int v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_SliderInt4(label, v.native_void_address, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+    public static boolean SliderInt4(String label, IDLIntArray v, int v_min, int v_max, String format, ImGuiSliderFlags flags) {
+        return internal_native_SliderInt4(label, v.native_void_address, v_min, v_max, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.SliderInt4(label, v_addr, v_min, v_max, format, ImGuiSliderFlags);
+      var returnedJSObj = imgui.ImGui.prototype.SliderInt4(label, v_addr, v_min, v_max, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_min", "v_max", "format", "ImGuiSliderFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderInt4(label, v_addr, v_min, v_max, format, ImGuiSliderFlags);return returnedJSObj;")
-    public static native boolean internal_native_SliderInt4(String label, int v_addr, int v_min, int v_max, String format, int ImGuiSliderFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_min", "v_max", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderInt4(label, v_addr, v_min, v_max, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_SliderInt4(String label, int v_addr, int v_min, int v_max, String format, int flags);
 
     public static boolean SliderInt4(String label, IDLIntArray v, int v_min, int v_max, String format) {
         return internal_native_SliderInt4(label, v.native_void_address, v_min, v_max, format);
@@ -3660,17 +4013,89 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr", "v_min", "v_max"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderInt4(label, v_addr, v_min, v_max);return returnedJSObj;")
     public static native boolean internal_native_SliderInt4(String label, int v_addr, int v_min, int v_max);
 
-    public static boolean VSliderFloat(String label, ImVec2 size, IDLFloatArray v, float v_min, float v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_VSliderFloat(label, size.native_address, v.native_void_address, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+    public static boolean SliderScalar(String label, ImGuiDataType data_type, IDLBase p_data, IDLBase p_min, IDLBase p_max, String format, ImGuiSliderFlags flags) {
+        return internal_native_SliderScalar(label, data_type.getValue(), p_data.native_void_address, p_min.native_void_address, p_max.native_void_address, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.VSliderFloat(label, size_addr, v_addr, v_min, v_max, format, ImGuiSliderFlags);
+      var returnedJSObj = imgui.ImGui.prototype.SliderScalar(label, data_type, p_data_addr, p_min_addr, p_max_addr, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "size_addr", "v_addr", "v_min", "v_max", "format", "ImGuiSliderFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.VSliderFloat(label, size_addr, v_addr, v_min, v_max, format, ImGuiSliderFlags);return returnedJSObj;")
-    public static native boolean internal_native_VSliderFloat(String label, int size_addr, int v_addr, float v_min, float v_max, String format, int ImGuiSliderFlags);
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "p_min_addr", "p_max_addr", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderScalar(label, data_type, p_data_addr, p_min_addr, p_max_addr, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_SliderScalar(String label, int data_type, int p_data_addr, int p_min_addr, int p_max_addr, String format, int flags);
+
+    public static boolean SliderScalar(String label, ImGuiDataType data_type, IDLBase p_data, IDLBase p_min, IDLBase p_max, String format) {
+        return internal_native_SliderScalar(label, data_type.getValue(), p_data.native_void_address, p_min.native_void_address, p_max.native_void_address, format);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.SliderScalar(label, data_type, p_data_addr, p_min_addr, p_max_addr, format);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "p_min_addr", "p_max_addr", "format"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderScalar(label, data_type, p_data_addr, p_min_addr, p_max_addr, format);return returnedJSObj;")
+    public static native boolean internal_native_SliderScalar(String label, int data_type, int p_data_addr, int p_min_addr, int p_max_addr, String format);
+
+    public static boolean SliderScalar(String label, ImGuiDataType data_type, IDLBase p_data, IDLBase p_min, IDLBase p_max) {
+        return internal_native_SliderScalar(label, data_type.getValue(), p_data.native_void_address, p_min.native_void_address, p_max.native_void_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.SliderScalar(label, data_type, p_data_addr, p_min_addr, p_max_addr);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "p_min_addr", "p_max_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderScalar(label, data_type, p_data_addr, p_min_addr, p_max_addr);return returnedJSObj;")
+    public static native boolean internal_native_SliderScalar(String label, int data_type, int p_data_addr, int p_min_addr, int p_max_addr);
+
+    public static boolean SliderScalarN(String label, ImGuiDataType data_type, IDLBase p_data, int components, IDLBase p_min, IDLBase p_max, String format, ImGuiSliderFlags flags) {
+        return internal_native_SliderScalarN(label, data_type.getValue(), p_data.native_void_address, components, p_min.native_void_address, p_max.native_void_address, format, flags.getValue());
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.SliderScalarN(label, data_type, p_data_addr, components, p_min_addr, p_max_addr, format, flags);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "components", "p_min_addr", "p_max_addr", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderScalarN(label, data_type, p_data_addr, components, p_min_addr, p_max_addr, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_SliderScalarN(String label, int data_type, int p_data_addr, int components, int p_min_addr, int p_max_addr, String format, int flags);
+
+    public static boolean SliderScalarN(String label, ImGuiDataType data_type, IDLBase p_data, int components, IDLBase p_min, IDLBase p_max, String format) {
+        return internal_native_SliderScalarN(label, data_type.getValue(), p_data.native_void_address, components, p_min.native_void_address, p_max.native_void_address, format);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.SliderScalarN(label, data_type, p_data_addr, components, p_min_addr, p_max_addr, format);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "components", "p_min_addr", "p_max_addr", "format"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderScalarN(label, data_type, p_data_addr, components, p_min_addr, p_max_addr, format);return returnedJSObj;")
+    public static native boolean internal_native_SliderScalarN(String label, int data_type, int p_data_addr, int components, int p_min_addr, int p_max_addr, String format);
+
+    public static boolean SliderScalarN(String label, ImGuiDataType data_type, IDLBase p_data, int components, IDLBase p_min, IDLBase p_max) {
+        return internal_native_SliderScalarN(label, data_type.getValue(), p_data.native_void_address, components, p_min.native_void_address, p_max.native_void_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.SliderScalarN(label, data_type, p_data_addr, components, p_min_addr, p_max_addr);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "components", "p_min_addr", "p_max_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.SliderScalarN(label, data_type, p_data_addr, components, p_min_addr, p_max_addr);return returnedJSObj;")
+    public static native boolean internal_native_SliderScalarN(String label, int data_type, int p_data_addr, int components, int p_min_addr, int p_max_addr);
+
+    public static boolean VSliderFloat(String label, ImVec2 size, IDLFloatArray v, float v_min, float v_max, String format, ImGuiSliderFlags flags) {
+        return internal_native_VSliderFloat(label, size.native_address, v.native_void_address, v_min, v_max, format, flags.getValue());
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.VSliderFloat(label, size_addr, v_addr, v_min, v_max, format, flags);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "size_addr", "v_addr", "v_min", "v_max", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.VSliderFloat(label, size_addr, v_addr, v_min, v_max, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_VSliderFloat(String label, int size_addr, int v_addr, float v_min, float v_max, String format, int flags);
 
     public static boolean VSliderFloat(String label, ImVec2 size, IDLFloatArray v, float v_min, float v_max, String format) {
         return internal_native_VSliderFloat(label, size.native_address, v.native_void_address, v_min, v_max, format);
@@ -3696,17 +4121,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "size_addr", "v_addr", "v_min", "v_max"}, script = "var returnedJSObj = imgui.ImGui.prototype.VSliderFloat(label, size_addr, v_addr, v_min, v_max);return returnedJSObj;")
     public static native boolean internal_native_VSliderFloat(String label, int size_addr, int v_addr, float v_min, float v_max);
 
-    public static boolean VSliderInt(String label, ImVec2 size, IDLIntArray v, int v_min, int v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_VSliderInt(label, size.native_address, v.native_void_address, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+    public static boolean VSliderInt(String label, ImVec2 size, IDLIntArray v, int v_min, int v_max, String format, ImGuiSliderFlags flags) {
+        return internal_native_VSliderInt(label, size.native_address, v.native_void_address, v_min, v_max, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.VSliderInt(label, size_addr, v_addr, v_min, v_max, format, ImGuiSliderFlags);
+      var returnedJSObj = imgui.ImGui.prototype.VSliderInt(label, size_addr, v_addr, v_min, v_max, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "size_addr", "v_addr", "v_min", "v_max", "format", "ImGuiSliderFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.VSliderInt(label, size_addr, v_addr, v_min, v_max, format, ImGuiSliderFlags);return returnedJSObj;")
-    public static native boolean internal_native_VSliderInt(String label, int size_addr, int v_addr, int v_min, int v_max, String format, int ImGuiSliderFlags);
+    @org.teavm.jso.JSBody(params = {"label", "size_addr", "v_addr", "v_min", "v_max", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.VSliderInt(label, size_addr, v_addr, v_min, v_max, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_VSliderInt(String label, int size_addr, int v_addr, int v_min, int v_max, String format, int flags);
 
     public static boolean VSliderInt(String label, ImVec2 size, IDLIntArray v, int v_min, int v_max, String format) {
         return internal_native_VSliderInt(label, size.native_address, v.native_void_address, v_min, v_max, format);
@@ -3732,17 +4157,53 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "size_addr", "v_addr", "v_min", "v_max"}, script = "var returnedJSObj = imgui.ImGui.prototype.VSliderInt(label, size_addr, v_addr, v_min, v_max);return returnedJSObj;")
     public static native boolean internal_native_VSliderInt(String label, int size_addr, int v_addr, int v_min, int v_max);
 
-    public static boolean InputText(String label, IDLByteArray buf, int buf_size, ImGuiInputTextFlags ImGuiInputTextFlags) {
-        return internal_native_InputText(label, buf.native_void_address, buf_size, (int) ImGuiInputTextFlags.getValue());
+    public static boolean VSliderScalar(String label, ImVec2 size, ImGuiDataType data_type, IDLBase p_data, IDLBase p_min, IDLBase p_max, String format, ImGuiSliderFlags flags) {
+        return internal_native_VSliderScalar(label, size.native_address, data_type.getValue(), p_data.native_void_address, p_min.native_void_address, p_max.native_void_address, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.InputText(label, buf_addr, buf_size, ImGuiInputTextFlags);
+      var returnedJSObj = imgui.ImGui.prototype.VSliderScalar(label, size_addr, data_type, p_data_addr, p_min_addr, p_max_addr, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "buf_addr", "buf_size", "ImGuiInputTextFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputText(label, buf_addr, buf_size, ImGuiInputTextFlags);return returnedJSObj;")
-    public static native boolean internal_native_InputText(String label, int buf_addr, int buf_size, int ImGuiInputTextFlags);
+    @org.teavm.jso.JSBody(params = {"label", "size_addr", "data_type", "p_data_addr", "p_min_addr", "p_max_addr", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.VSliderScalar(label, size_addr, data_type, p_data_addr, p_min_addr, p_max_addr, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_VSliderScalar(String label, int size_addr, int data_type, int p_data_addr, int p_min_addr, int p_max_addr, String format, int flags);
+
+    public static boolean VSliderScalar(String label, ImVec2 size, ImGuiDataType data_type, IDLBase p_data, IDLBase p_min, IDLBase p_max, String format) {
+        return internal_native_VSliderScalar(label, size.native_address, data_type.getValue(), p_data.native_void_address, p_min.native_void_address, p_max.native_void_address, format);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.VSliderScalar(label, size_addr, data_type, p_data_addr, p_min_addr, p_max_addr, format);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "size_addr", "data_type", "p_data_addr", "p_min_addr", "p_max_addr", "format"}, script = "var returnedJSObj = imgui.ImGui.prototype.VSliderScalar(label, size_addr, data_type, p_data_addr, p_min_addr, p_max_addr, format);return returnedJSObj;")
+    public static native boolean internal_native_VSliderScalar(String label, int size_addr, int data_type, int p_data_addr, int p_min_addr, int p_max_addr, String format);
+
+    public static boolean VSliderScalar(String label, ImVec2 size, ImGuiDataType data_type, IDLBase p_data, IDLBase p_min, IDLBase p_max) {
+        return internal_native_VSliderScalar(label, size.native_address, data_type.getValue(), p_data.native_void_address, p_min.native_void_address, p_max.native_void_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.VSliderScalar(label, size_addr, data_type, p_data_addr, p_min_addr, p_max_addr);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "size_addr", "data_type", "p_data_addr", "p_min_addr", "p_max_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.VSliderScalar(label, size_addr, data_type, p_data_addr, p_min_addr, p_max_addr);return returnedJSObj;")
+    public static native boolean internal_native_VSliderScalar(String label, int size_addr, int data_type, int p_data_addr, int p_min_addr, int p_max_addr);
+
+    public static boolean InputText(String label, IDLByteArray buf, int buf_size, ImGuiInputTextFlags flags) {
+        return internal_native_InputText(label, buf.native_void_address, buf_size, flags.getValue());
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.InputText(label, buf_addr, buf_size, flags);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "buf_addr", "buf_size", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputText(label, buf_addr, buf_size, flags);return returnedJSObj;")
+    public static native boolean internal_native_InputText(String label, int buf_addr, int buf_size, int flags);
 
     public static boolean InputText(String label, IDLByteArray buf, int buf_size) {
         return internal_native_InputText(label, buf.native_void_address, buf_size);
@@ -3756,17 +4217,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "buf_addr", "buf_size"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputText(label, buf_addr, buf_size);return returnedJSObj;")
     public static native boolean internal_native_InputText(String label, int buf_addr, int buf_size);
 
-    public static boolean InputTextMultiline(String label, IDLByteArray buf, int buf_size, ImVec2 size, ImGuiInputTextFlags ImGuiInputTextFlags) {
-        return internal_native_InputTextMultiline(label, buf.native_void_address, buf_size, size.native_address, (int) ImGuiInputTextFlags.getValue());
+    public static boolean InputTextMultiline(String label, IDLByteArray buf, int buf_size, ImVec2 size, ImGuiInputTextFlags flags) {
+        return internal_native_InputTextMultiline(label, buf.native_void_address, buf_size, size.native_address, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.InputTextMultiline(label, buf_addr, buf_size, size_addr, ImGuiInputTextFlags);
+      var returnedJSObj = imgui.ImGui.prototype.InputTextMultiline(label, buf_addr, buf_size, size_addr, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "buf_addr", "buf_size", "size_addr", "ImGuiInputTextFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputTextMultiline(label, buf_addr, buf_size, size_addr, ImGuiInputTextFlags);return returnedJSObj;")
-    public static native boolean internal_native_InputTextMultiline(String label, int buf_addr, int buf_size, int size_addr, int ImGuiInputTextFlags);
+    @org.teavm.jso.JSBody(params = {"label", "buf_addr", "buf_size", "size_addr", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputTextMultiline(label, buf_addr, buf_size, size_addr, flags);return returnedJSObj;")
+    public static native boolean internal_native_InputTextMultiline(String label, int buf_addr, int buf_size, int size_addr, int flags);
 
     public static boolean InputTextMultiline(String label, IDLByteArray buf, int buf_size, ImVec2 size) {
         return internal_native_InputTextMultiline(label, buf.native_void_address, buf_size, size.native_address);
@@ -3792,17 +4253,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "buf_addr", "buf_size"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputTextMultiline(label, buf_addr, buf_size);return returnedJSObj;")
     public static native boolean internal_native_InputTextMultiline(String label, int buf_addr, int buf_size);
 
-    public static boolean InputTextWithHint(String label, String hint, IDLByteArray buf, int buf_size, ImGuiInputTextFlags ImGuiInputTextFlags) {
-        return internal_native_InputTextWithHint(label, hint, buf.native_void_address, buf_size, (int) ImGuiInputTextFlags.getValue());
+    public static boolean InputTextWithHint(String label, String hint, IDLByteArray buf, int buf_size, ImGuiInputTextFlags flags) {
+        return internal_native_InputTextWithHint(label, hint, buf.native_void_address, buf_size, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.InputTextWithHint(label, hint, buf_addr, buf_size, ImGuiInputTextFlags);
+      var returnedJSObj = imgui.ImGui.prototype.InputTextWithHint(label, hint, buf_addr, buf_size, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "hint", "buf_addr", "buf_size", "ImGuiInputTextFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputTextWithHint(label, hint, buf_addr, buf_size, ImGuiInputTextFlags);return returnedJSObj;")
-    public static native boolean internal_native_InputTextWithHint(String label, String hint, int buf_addr, int buf_size, int ImGuiInputTextFlags);
+    @org.teavm.jso.JSBody(params = {"label", "hint", "buf_addr", "buf_size", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputTextWithHint(label, hint, buf_addr, buf_size, flags);return returnedJSObj;")
+    public static native boolean internal_native_InputTextWithHint(String label, String hint, int buf_addr, int buf_size, int flags);
 
     public static boolean InputTextWithHint(String label, String hint, IDLByteArray buf, int buf_size) {
         return internal_native_InputTextWithHint(label, hint, buf.native_void_address, buf_size);
@@ -3816,17 +4277,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "hint", "buf_addr", "buf_size"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputTextWithHint(label, hint, buf_addr, buf_size);return returnedJSObj;")
     public static native boolean internal_native_InputTextWithHint(String label, String hint, int buf_addr, int buf_size);
 
-    public static boolean InputFloat(String label, IDLFloatArray v, float step, float step_fast, String format, ImGuiInputTextFlags ImGuiInputTextFlags) {
-        return internal_native_InputFloat(label, v.native_void_address, step, step_fast, format, (int) ImGuiInputTextFlags.getValue());
+    public static boolean InputFloat(String label, IDLFloatArray v, float step, float step_fast, String format, ImGuiInputTextFlags flags) {
+        return internal_native_InputFloat(label, v.native_void_address, step, step_fast, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.InputFloat(label, v_addr, step, step_fast, format, ImGuiInputTextFlags);
+      var returnedJSObj = imgui.ImGui.prototype.InputFloat(label, v_addr, step, step_fast, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "step", "step_fast", "format", "ImGuiInputTextFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputFloat(label, v_addr, step, step_fast, format, ImGuiInputTextFlags);return returnedJSObj;")
-    public static native boolean internal_native_InputFloat(String label, int v_addr, float step, float step_fast, String format, int ImGuiInputTextFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "step", "step_fast", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputFloat(label, v_addr, step, step_fast, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_InputFloat(String label, int v_addr, float step, float step_fast, String format, int flags);
 
     public static boolean InputFloat(String label, IDLFloatArray v, float step, float step_fast, String format) {
         return internal_native_InputFloat(label, v.native_void_address, step, step_fast, format);
@@ -3876,17 +4337,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputFloat(label, v_addr);return returnedJSObj;")
     public static native boolean internal_native_InputFloat(String label, int v_addr);
 
-    public static boolean InputFloat2(String label, IDLFloatArray v, String format, ImGuiInputTextFlags ImGuiInputTextFlags) {
-        return internal_native_InputFloat2(label, v.native_void_address, format, (int) ImGuiInputTextFlags.getValue());
+    public static boolean InputFloat2(String label, IDLFloatArray v, String format, ImGuiInputTextFlags flags) {
+        return internal_native_InputFloat2(label, v.native_void_address, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.InputFloat2(label, v_addr, format, ImGuiInputTextFlags);
+      var returnedJSObj = imgui.ImGui.prototype.InputFloat2(label, v_addr, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "format", "ImGuiInputTextFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputFloat2(label, v_addr, format, ImGuiInputTextFlags);return returnedJSObj;")
-    public static native boolean internal_native_InputFloat2(String label, int v_addr, String format, int ImGuiInputTextFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputFloat2(label, v_addr, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_InputFloat2(String label, int v_addr, String format, int flags);
 
     public static boolean InputFloat2(String label, IDLFloatArray v, String format) {
         return internal_native_InputFloat2(label, v.native_void_address, format);
@@ -3912,17 +4373,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputFloat2(label, v_addr);return returnedJSObj;")
     public static native boolean internal_native_InputFloat2(String label, int v_addr);
 
-    public static boolean InputFloat3(String label, IDLFloatArray v, String format, ImGuiInputTextFlags ImGuiInputTextFlags) {
-        return internal_native_InputFloat3(label, v.native_void_address, format, (int) ImGuiInputTextFlags.getValue());
+    public static boolean InputFloat3(String label, IDLFloatArray v, String format, ImGuiInputTextFlags flags) {
+        return internal_native_InputFloat3(label, v.native_void_address, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.InputFloat3(label, v_addr, format, ImGuiInputTextFlags);
+      var returnedJSObj = imgui.ImGui.prototype.InputFloat3(label, v_addr, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "format", "ImGuiInputTextFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputFloat3(label, v_addr, format, ImGuiInputTextFlags);return returnedJSObj;")
-    public static native boolean internal_native_InputFloat3(String label, int v_addr, String format, int ImGuiInputTextFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputFloat3(label, v_addr, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_InputFloat3(String label, int v_addr, String format, int flags);
 
     public static boolean InputFloat3(String label, IDLFloatArray v, String format) {
         return internal_native_InputFloat3(label, v.native_void_address, format);
@@ -3948,17 +4409,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputFloat3(label, v_addr);return returnedJSObj;")
     public static native boolean internal_native_InputFloat3(String label, int v_addr);
 
-    public static boolean InputFloat4(String label, IDLFloatArray v, String format, ImGuiInputTextFlags ImGuiInputTextFlags) {
-        return internal_native_InputFloat4(label, v.native_void_address, format, (int) ImGuiInputTextFlags.getValue());
+    public static boolean InputFloat4(String label, IDLFloatArray v, String format, ImGuiInputTextFlags flags) {
+        return internal_native_InputFloat4(label, v.native_void_address, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.InputFloat4(label, v_addr, format, ImGuiInputTextFlags);
+      var returnedJSObj = imgui.ImGui.prototype.InputFloat4(label, v_addr, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "format", "ImGuiInputTextFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputFloat4(label, v_addr, format, ImGuiInputTextFlags);return returnedJSObj;")
-    public static native boolean internal_native_InputFloat4(String label, int v_addr, String format, int ImGuiInputTextFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputFloat4(label, v_addr, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_InputFloat4(String label, int v_addr, String format, int flags);
 
     public static boolean InputFloat4(String label, IDLFloatArray v, String format) {
         return internal_native_InputFloat4(label, v.native_void_address, format);
@@ -3984,17 +4445,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputFloat4(label, v_addr);return returnedJSObj;")
     public static native boolean internal_native_InputFloat4(String label, int v_addr);
 
-    public static boolean InputInt(String label, IDLIntArray v, int step, int step_fast, ImGuiInputTextFlags ImGuiInputTextFlags) {
-        return internal_native_InputInt(label, v.native_void_address, step, step_fast, (int) ImGuiInputTextFlags.getValue());
+    public static boolean InputInt(String label, IDLIntArray v, int step, int step_fast, ImGuiInputTextFlags flags) {
+        return internal_native_InputInt(label, v.native_void_address, step, step_fast, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.InputInt(label, v_addr, step, step_fast, ImGuiInputTextFlags);
+      var returnedJSObj = imgui.ImGui.prototype.InputInt(label, v_addr, step, step_fast, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "step", "step_fast", "ImGuiInputTextFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputInt(label, v_addr, step, step_fast, ImGuiInputTextFlags);return returnedJSObj;")
-    public static native boolean internal_native_InputInt(String label, int v_addr, int step, int step_fast, int ImGuiInputTextFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "step", "step_fast", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputInt(label, v_addr, step, step_fast, flags);return returnedJSObj;")
+    public static native boolean internal_native_InputInt(String label, int v_addr, int step, int step_fast, int flags);
 
     public static boolean InputInt(String label, IDLIntArray v, int step, int step_fast) {
         return internal_native_InputInt(label, v.native_void_address, step, step_fast);
@@ -4032,17 +4493,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputInt(label, v_addr);return returnedJSObj;")
     public static native boolean internal_native_InputInt(String label, int v_addr);
 
-    public static boolean InputInt2(String label, IDLIntArray v, ImGuiInputTextFlags ImGuiInputTextFlags) {
-        return internal_native_InputInt2(label, v.native_void_address, (int) ImGuiInputTextFlags.getValue());
+    public static boolean InputInt2(String label, IDLIntArray v, ImGuiInputTextFlags flags) {
+        return internal_native_InputInt2(label, v.native_void_address, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.InputInt2(label, v_addr, ImGuiInputTextFlags);
+      var returnedJSObj = imgui.ImGui.prototype.InputInt2(label, v_addr, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "ImGuiInputTextFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputInt2(label, v_addr, ImGuiInputTextFlags);return returnedJSObj;")
-    public static native boolean internal_native_InputInt2(String label, int v_addr, int ImGuiInputTextFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputInt2(label, v_addr, flags);return returnedJSObj;")
+    public static native boolean internal_native_InputInt2(String label, int v_addr, int flags);
 
     public static boolean InputInt2(String label, IDLIntArray v) {
         return internal_native_InputInt2(label, v.native_void_address);
@@ -4056,17 +4517,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputInt2(label, v_addr);return returnedJSObj;")
     public static native boolean internal_native_InputInt2(String label, int v_addr);
 
-    public static boolean InputInt3(String label, IDLIntArray v, ImGuiInputTextFlags ImGuiInputTextFlags) {
-        return internal_native_InputInt3(label, v.native_void_address, (int) ImGuiInputTextFlags.getValue());
+    public static boolean InputInt3(String label, IDLIntArray v, ImGuiInputTextFlags flags) {
+        return internal_native_InputInt3(label, v.native_void_address, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.InputInt3(label, v_addr, ImGuiInputTextFlags);
+      var returnedJSObj = imgui.ImGui.prototype.InputInt3(label, v_addr, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "ImGuiInputTextFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputInt3(label, v_addr, ImGuiInputTextFlags);return returnedJSObj;")
-    public static native boolean internal_native_InputInt3(String label, int v_addr, int ImGuiInputTextFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputInt3(label, v_addr, flags);return returnedJSObj;")
+    public static native boolean internal_native_InputInt3(String label, int v_addr, int flags);
 
     public static boolean InputInt3(String label, IDLIntArray v) {
         return internal_native_InputInt3(label, v.native_void_address);
@@ -4080,17 +4541,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputInt3(label, v_addr);return returnedJSObj;")
     public static native boolean internal_native_InputInt3(String label, int v_addr);
 
-    public static boolean InputInt4(String label, IDLIntArray v, ImGuiInputTextFlags ImGuiInputTextFlags) {
-        return internal_native_InputInt4(label, v.native_void_address, (int) ImGuiInputTextFlags.getValue());
+    public static boolean InputInt4(String label, IDLIntArray v, ImGuiInputTextFlags flags) {
+        return internal_native_InputInt4(label, v.native_void_address, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.InputInt4(label, v_addr, ImGuiInputTextFlags);
+      var returnedJSObj = imgui.ImGui.prototype.InputInt4(label, v_addr, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "ImGuiInputTextFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputInt4(label, v_addr, ImGuiInputTextFlags);return returnedJSObj;")
-    public static native boolean internal_native_InputInt4(String label, int v_addr, int ImGuiInputTextFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputInt4(label, v_addr, flags);return returnedJSObj;")
+    public static native boolean internal_native_InputInt4(String label, int v_addr, int flags);
 
     public static boolean InputInt4(String label, IDLIntArray v) {
         return internal_native_InputInt4(label, v.native_void_address);
@@ -4104,17 +4565,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputInt4(label, v_addr);return returnedJSObj;")
     public static native boolean internal_native_InputInt4(String label, int v_addr);
 
-    public static boolean InputDouble(String label, IDLDoubleArray v, double step, double step_fast, String format, ImGuiInputTextFlags ImGuiInputTextFlags) {
-        return internal_native_InputDouble(label, v.native_void_address, step, step_fast, format, (int) ImGuiInputTextFlags.getValue());
+    public static boolean InputDouble(String label, IDLDoubleArray v, double step, double step_fast, String format, ImGuiInputTextFlags flags) {
+        return internal_native_InputDouble(label, v.native_void_address, step, step_fast, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.InputDouble(label, v_addr, step, step_fast, format, ImGuiInputTextFlags);
+      var returnedJSObj = imgui.ImGui.prototype.InputDouble(label, v_addr, step, step_fast, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "v_addr", "step", "step_fast", "format", "ImGuiInputTextFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputDouble(label, v_addr, step, step_fast, format, ImGuiInputTextFlags);return returnedJSObj;")
-    public static native boolean internal_native_InputDouble(String label, int v_addr, double step, double step_fast, String format, int ImGuiInputTextFlags);
+    @org.teavm.jso.JSBody(params = {"label", "v_addr", "step", "step_fast", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputDouble(label, v_addr, step, step_fast, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_InputDouble(String label, int v_addr, double step, double step_fast, String format, int flags);
 
     public static boolean InputDouble(String label, IDLDoubleArray v, double step, double step_fast, String format) {
         return internal_native_InputDouble(label, v.native_void_address, step, step_fast, format);
@@ -4164,17 +4625,137 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "v_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputDouble(label, v_addr);return returnedJSObj;")
     public static native boolean internal_native_InputDouble(String label, int v_addr);
 
-    public static boolean ColorEdit3(String label, IDLFloatArray col, ImGuiColorEditFlags ImGuiColorEditFlags) {
-        return internal_native_ColorEdit3(label, col.native_void_address, (int) ImGuiColorEditFlags.getValue());
+    public static boolean InputScalar(String label, ImGuiDataType data_type, IDLBase p_data, IDLBase p_step, IDLBase p_step_fast, String format, ImGuiInputTextFlags flags) {
+        return internal_native_InputScalar(label, data_type.getValue(), p_data.native_void_address, p_step.native_void_address, p_step_fast.native_void_address, format, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.ColorEdit3(label, col_addr, ImGuiColorEditFlags);
+      var returnedJSObj = imgui.ImGui.prototype.InputScalar(label, data_type, p_data_addr, p_step_addr, p_step_fast_addr, format, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "col_addr", "ImGuiColorEditFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.ColorEdit3(label, col_addr, ImGuiColorEditFlags);return returnedJSObj;")
-    public static native boolean internal_native_ColorEdit3(String label, int col_addr, int ImGuiColorEditFlags);
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "p_step_addr", "p_step_fast_addr", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputScalar(label, data_type, p_data_addr, p_step_addr, p_step_fast_addr, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_InputScalar(String label, int data_type, int p_data_addr, int p_step_addr, int p_step_fast_addr, String format, int flags);
+
+    public static boolean InputScalar(String label, ImGuiDataType data_type, IDLBase p_data, IDLBase p_step, IDLBase p_step_fast, String format) {
+        return internal_native_InputScalar(label, data_type.getValue(), p_data.native_void_address, p_step.native_void_address, p_step_fast.native_void_address, format);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.InputScalar(label, data_type, p_data_addr, p_step_addr, p_step_fast_addr, format);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "p_step_addr", "p_step_fast_addr", "format"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputScalar(label, data_type, p_data_addr, p_step_addr, p_step_fast_addr, format);return returnedJSObj;")
+    public static native boolean internal_native_InputScalar(String label, int data_type, int p_data_addr, int p_step_addr, int p_step_fast_addr, String format);
+
+    public static boolean InputScalar(String label, ImGuiDataType data_type, IDLBase p_data, IDLBase p_step, IDLBase p_step_fast) {
+        return internal_native_InputScalar(label, data_type.getValue(), p_data.native_void_address, p_step.native_void_address, p_step_fast.native_void_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.InputScalar(label, data_type, p_data_addr, p_step_addr, p_step_fast_addr);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "p_step_addr", "p_step_fast_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputScalar(label, data_type, p_data_addr, p_step_addr, p_step_fast_addr);return returnedJSObj;")
+    public static native boolean internal_native_InputScalar(String label, int data_type, int p_data_addr, int p_step_addr, int p_step_fast_addr);
+
+    public static boolean InputScalar(String label, ImGuiDataType data_type, IDLBase p_data, IDLBase p_step) {
+        return internal_native_InputScalar(label, data_type.getValue(), p_data.native_void_address, p_step.native_void_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.InputScalar(label, data_type, p_data_addr, p_step_addr);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "p_step_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputScalar(label, data_type, p_data_addr, p_step_addr);return returnedJSObj;")
+    public static native boolean internal_native_InputScalar(String label, int data_type, int p_data_addr, int p_step_addr);
+
+    public static boolean InputScalar(String label, ImGuiDataType data_type, IDLBase p_data) {
+        return internal_native_InputScalar(label, data_type.getValue(), p_data.native_void_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.InputScalar(label, data_type, p_data_addr);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputScalar(label, data_type, p_data_addr);return returnedJSObj;")
+    public static native boolean internal_native_InputScalar(String label, int data_type, int p_data_addr);
+
+    public static boolean InputScalarN(String label, ImGuiDataType data_type, IDLBase p_data, int components, IDLBase p_step, IDLBase p_step_fast, String format, ImGuiInputTextFlags flags) {
+        return internal_native_InputScalarN(label, data_type.getValue(), p_data.native_void_address, components, p_step.native_void_address, p_step_fast.native_void_address, format, flags.getValue());
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.InputScalarN(label, data_type, p_data_addr, components, p_step_addr, p_step_fast_addr, format, flags);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "components", "p_step_addr", "p_step_fast_addr", "format", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputScalarN(label, data_type, p_data_addr, components, p_step_addr, p_step_fast_addr, format, flags);return returnedJSObj;")
+    public static native boolean internal_native_InputScalarN(String label, int data_type, int p_data_addr, int components, int p_step_addr, int p_step_fast_addr, String format, int flags);
+
+    public static boolean InputScalarN(String label, ImGuiDataType data_type, IDLBase p_data, int components, IDLBase p_step, IDLBase p_step_fast, String format) {
+        return internal_native_InputScalarN(label, data_type.getValue(), p_data.native_void_address, components, p_step.native_void_address, p_step_fast.native_void_address, format);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.InputScalarN(label, data_type, p_data_addr, components, p_step_addr, p_step_fast_addr, format);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "components", "p_step_addr", "p_step_fast_addr", "format"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputScalarN(label, data_type, p_data_addr, components, p_step_addr, p_step_fast_addr, format);return returnedJSObj;")
+    public static native boolean internal_native_InputScalarN(String label, int data_type, int p_data_addr, int components, int p_step_addr, int p_step_fast_addr, String format);
+
+    public static boolean InputScalarN(String label, ImGuiDataType data_type, IDLBase p_data, int components, IDLBase p_step, IDLBase p_step_fast) {
+        return internal_native_InputScalarN(label, data_type.getValue(), p_data.native_void_address, components, p_step.native_void_address, p_step_fast.native_void_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.InputScalarN(label, data_type, p_data_addr, components, p_step_addr, p_step_fast_addr);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "components", "p_step_addr", "p_step_fast_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputScalarN(label, data_type, p_data_addr, components, p_step_addr, p_step_fast_addr);return returnedJSObj;")
+    public static native boolean internal_native_InputScalarN(String label, int data_type, int p_data_addr, int components, int p_step_addr, int p_step_fast_addr);
+
+    public static boolean InputScalarN(String label, ImGuiDataType data_type, IDLBase p_data, int components, IDLBase p_step) {
+        return internal_native_InputScalarN(label, data_type.getValue(), p_data.native_void_address, components, p_step.native_void_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.InputScalarN(label, data_type, p_data_addr, components, p_step_addr);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "components", "p_step_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputScalarN(label, data_type, p_data_addr, components, p_step_addr);return returnedJSObj;")
+    public static native boolean internal_native_InputScalarN(String label, int data_type, int p_data_addr, int components, int p_step_addr);
+
+    public static boolean InputScalarN(String label, ImGuiDataType data_type, IDLBase p_data, int components) {
+        return internal_native_InputScalarN(label, data_type.getValue(), p_data.native_void_address, components);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.InputScalarN(label, data_type, p_data_addr, components);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "data_type", "p_data_addr", "components"}, script = "var returnedJSObj = imgui.ImGui.prototype.InputScalarN(label, data_type, p_data_addr, components);return returnedJSObj;")
+    public static native boolean internal_native_InputScalarN(String label, int data_type, int p_data_addr, int components);
+
+    public static boolean ColorEdit3(String label, IDLFloatArray col, ImGuiColorEditFlags flags) {
+        return internal_native_ColorEdit3(label, col.native_void_address, flags.getValue());
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.ColorEdit3(label, col_addr, flags);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"label", "col_addr", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.ColorEdit3(label, col_addr, flags);return returnedJSObj;")
+    public static native boolean internal_native_ColorEdit3(String label, int col_addr, int flags);
 
     public static boolean ColorEdit3(String label, IDLFloatArray col) {
         return internal_native_ColorEdit3(label, col.native_void_address);
@@ -4188,17 +4769,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "col_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.ColorEdit3(label, col_addr);return returnedJSObj;")
     public static native boolean internal_native_ColorEdit3(String label, int col_addr);
 
-    public static boolean ColorEdit4(String label, IDLFloatArray col, ImGuiColorEditFlags ImGuiColorEditFlags) {
-        return internal_native_ColorEdit4(label, col.native_void_address, (int) ImGuiColorEditFlags.getValue());
+    public static boolean ColorEdit4(String label, IDLFloatArray col, ImGuiColorEditFlags flags) {
+        return internal_native_ColorEdit4(label, col.native_void_address, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.ColorEdit4(label, col_addr, ImGuiColorEditFlags);
+      var returnedJSObj = imgui.ImGui.prototype.ColorEdit4(label, col_addr, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "col_addr", "ImGuiColorEditFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.ColorEdit4(label, col_addr, ImGuiColorEditFlags);return returnedJSObj;")
-    public static native boolean internal_native_ColorEdit4(String label, int col_addr, int ImGuiColorEditFlags);
+    @org.teavm.jso.JSBody(params = {"label", "col_addr", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.ColorEdit4(label, col_addr, flags);return returnedJSObj;")
+    public static native boolean internal_native_ColorEdit4(String label, int col_addr, int flags);
 
     public static boolean ColorEdit4(String label, IDLFloatArray col) {
         return internal_native_ColorEdit4(label, col.native_void_address);
@@ -4212,17 +4793,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "col_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.ColorEdit4(label, col_addr);return returnedJSObj;")
     public static native boolean internal_native_ColorEdit4(String label, int col_addr);
 
-    public static boolean ColorPicker3(String label, IDLFloatArray col, ImGuiColorEditFlags ImGuiColorEditFlags) {
-        return internal_native_ColorPicker3(label, col.native_void_address, (int) ImGuiColorEditFlags.getValue());
+    public static boolean ColorPicker3(String label, IDLFloatArray col, ImGuiColorEditFlags flags) {
+        return internal_native_ColorPicker3(label, col.native_void_address, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.ColorPicker3(label, col_addr, ImGuiColorEditFlags);
+      var returnedJSObj = imgui.ImGui.prototype.ColorPicker3(label, col_addr, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "col_addr", "ImGuiColorEditFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.ColorPicker3(label, col_addr, ImGuiColorEditFlags);return returnedJSObj;")
-    public static native boolean internal_native_ColorPicker3(String label, int col_addr, int ImGuiColorEditFlags);
+    @org.teavm.jso.JSBody(params = {"label", "col_addr", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.ColorPicker3(label, col_addr, flags);return returnedJSObj;")
+    public static native boolean internal_native_ColorPicker3(String label, int col_addr, int flags);
 
     public static boolean ColorPicker3(String label, IDLFloatArray col) {
         return internal_native_ColorPicker3(label, col.native_void_address);
@@ -4236,29 +4817,29 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "col_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.ColorPicker3(label, col_addr);return returnedJSObj;")
     public static native boolean internal_native_ColorPicker3(String label, int col_addr);
 
-    public static boolean ColorPicker4(String label, IDLFloatArray col, ImGuiColorEditFlags ImGuiColorEditFlags, IDLFloatArray ref_col) {
-        return internal_native_ColorPicker4(label, col.native_void_address, (int) ImGuiColorEditFlags.getValue(), ref_col.native_void_address);
+    public static boolean ColorPicker4(String label, IDLFloatArray col, ImGuiColorEditFlags flags, IDLFloatArray ref_col) {
+        return internal_native_ColorPicker4(label, col.native_void_address, flags.getValue(), ref_col.native_void_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.ColorPicker4(label, col_addr, ImGuiColorEditFlags, ref_col_addr);
+      var returnedJSObj = imgui.ImGui.prototype.ColorPicker4(label, col_addr, flags, ref_col_addr);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "col_addr", "ImGuiColorEditFlags", "ref_col_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.ColorPicker4(label, col_addr, ImGuiColorEditFlags, ref_col_addr);return returnedJSObj;")
-    public static native boolean internal_native_ColorPicker4(String label, int col_addr, int ImGuiColorEditFlags, int ref_col_addr);
+    @org.teavm.jso.JSBody(params = {"label", "col_addr", "flags", "ref_col_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.ColorPicker4(label, col_addr, flags, ref_col_addr);return returnedJSObj;")
+    public static native boolean internal_native_ColorPicker4(String label, int col_addr, int flags, int ref_col_addr);
 
-    public static boolean ColorPicker4(String label, IDLFloatArray col, ImGuiColorEditFlags ImGuiColorEditFlags) {
-        return internal_native_ColorPicker4(label, col.native_void_address, (int) ImGuiColorEditFlags.getValue());
+    public static boolean ColorPicker4(String label, IDLFloatArray col, ImGuiColorEditFlags flags) {
+        return internal_native_ColorPicker4(label, col.native_void_address, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.ColorPicker4(label, col_addr, ImGuiColorEditFlags);
+      var returnedJSObj = imgui.ImGui.prototype.ColorPicker4(label, col_addr, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "col_addr", "ImGuiColorEditFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.ColorPicker4(label, col_addr, ImGuiColorEditFlags);return returnedJSObj;")
-    public static native boolean internal_native_ColorPicker4(String label, int col_addr, int ImGuiColorEditFlags);
+    @org.teavm.jso.JSBody(params = {"label", "col_addr", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.ColorPicker4(label, col_addr, flags);return returnedJSObj;")
+    public static native boolean internal_native_ColorPicker4(String label, int col_addr, int flags);
 
     public static boolean ColorPicker4(String label, IDLFloatArray col) {
         return internal_native_ColorPicker4(label, col.native_void_address);
@@ -4272,29 +4853,29 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label", "col_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.ColorPicker4(label, col_addr);return returnedJSObj;")
     public static native boolean internal_native_ColorPicker4(String label, int col_addr);
 
-    public static boolean ColorButton(String desc_id, ImVec4 col, ImGuiColorEditFlags ImGuiColorEditFlags, ImVec2 size) {
-        return internal_native_ColorButton(desc_id, col.native_address, (int) ImGuiColorEditFlags.getValue(), size.native_address);
+    public static boolean ColorButton(String desc_id, ImVec4 col, ImGuiColorEditFlags flags, ImVec2 size) {
+        return internal_native_ColorButton(desc_id, col.native_address, flags.getValue(), size.native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.ColorButton(desc_id, col_addr, ImGuiColorEditFlags, size_addr);
+      var returnedJSObj = imgui.ImGui.prototype.ColorButton(desc_id, col_addr, flags, size_addr);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"desc_id", "col_addr", "ImGuiColorEditFlags", "size_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.ColorButton(desc_id, col_addr, ImGuiColorEditFlags, size_addr);return returnedJSObj;")
-    public static native boolean internal_native_ColorButton(String desc_id, int col_addr, int ImGuiColorEditFlags, int size_addr);
+    @org.teavm.jso.JSBody(params = {"desc_id", "col_addr", "flags", "size_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.ColorButton(desc_id, col_addr, flags, size_addr);return returnedJSObj;")
+    public static native boolean internal_native_ColorButton(String desc_id, int col_addr, int flags, int size_addr);
 
-    public static boolean ColorButton(String desc_id, ImVec4 col, ImGuiColorEditFlags ImGuiColorEditFlags) {
-        return internal_native_ColorButton(desc_id, col.native_address, (int) ImGuiColorEditFlags.getValue());
+    public static boolean ColorButton(String desc_id, ImVec4 col, ImGuiColorEditFlags flags) {
+        return internal_native_ColorButton(desc_id, col.native_address, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.ColorButton(desc_id, col_addr, ImGuiColorEditFlags);
+      var returnedJSObj = imgui.ImGui.prototype.ColorButton(desc_id, col_addr, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"desc_id", "col_addr", "ImGuiColorEditFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.ColorButton(desc_id, col_addr, ImGuiColorEditFlags);return returnedJSObj;")
-    public static native boolean internal_native_ColorButton(String desc_id, int col_addr, int ImGuiColorEditFlags);
+    @org.teavm.jso.JSBody(params = {"desc_id", "col_addr", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.ColorButton(desc_id, col_addr, flags);return returnedJSObj;")
+    public static native boolean internal_native_ColorButton(String desc_id, int col_addr, int flags);
 
     public static boolean ColorButton(String desc_id, ImVec4 col) {
         return internal_native_ColorButton(desc_id, col.native_address);
@@ -4309,7 +4890,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_ColorButton(String desc_id, int col_addr);
 
     public static void SetColorEditOptions(ImGuiColorEditFlags ImGuiColorEditFlags) {
-        internal_native_SetColorEditOptions((int) ImGuiColorEditFlags.getValue());
+        internal_native_SetColorEditOptions(ImGuiColorEditFlags.getValue());
     }
 
     /*
@@ -4355,17 +4936,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"ptr_id_addr", "fmt"}, script = "var returnedJSObj = imgui.ImGui.prototype.TreeNode__2(ptr_id_addr, fmt);return returnedJSObj;")
     public static native boolean internal_native_TreeNode__2(int ptr_id_addr, String fmt);
 
-    public static boolean TreeNodeEx(String label, ImGuiTreeNodeFlags flaImGuiTreeNodeFlagsgs) {
-        return internal_native_TreeNodeEx__0(label, (int) flaImGuiTreeNodeFlagsgs.getValue());
+    public static boolean TreeNodeEx(String label, ImGuiTreeNodeFlags flags) {
+        return internal_native_TreeNodeEx__0(label, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.TreeNodeEx__0(label, flaImGuiTreeNodeFlagsgs);
+      var returnedJSObj = imgui.ImGui.prototype.TreeNodeEx__0(label, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "flaImGuiTreeNodeFlagsgs"}, script = "var returnedJSObj = imgui.ImGui.prototype.TreeNodeEx__0(label, flaImGuiTreeNodeFlagsgs);return returnedJSObj;")
-    public static native boolean internal_native_TreeNodeEx__0(String label, int flaImGuiTreeNodeFlagsgs);
+    @org.teavm.jso.JSBody(params = {"label", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.TreeNodeEx__0(label, flags);return returnedJSObj;")
+    public static native boolean internal_native_TreeNodeEx__0(String label, int flags);
 
     public static boolean TreeNodeEx(String label) {
         return internal_native_TreeNodeEx__0(label);
@@ -4379,40 +4960,51 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label"}, script = "var returnedJSObj = imgui.ImGui.prototype.TreeNodeEx__0(label);return returnedJSObj;")
     public static native boolean internal_native_TreeNodeEx__0(String label);
 
-    public static boolean TreeNodeEx(String str_id, ImGuiTreeNodeFlags ImGuiTreeNodeFlags, String fmt) {
-        return internal_native_TreeNodeEx__1(str_id, (int) ImGuiTreeNodeFlags.getValue(), fmt);
+    public static boolean TreeNodeEx(String str_id, ImGuiTreeNodeFlags flags, String fmt) {
+        return internal_native_TreeNodeEx__1(str_id, flags.getValue(), fmt);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.TreeNodeEx__1(str_id, ImGuiTreeNodeFlags, fmt);
+      var returnedJSObj = imgui.ImGui.prototype.TreeNodeEx__1(str_id, flags, fmt);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"str_id", "ImGuiTreeNodeFlags", "fmt"}, script = "var returnedJSObj = imgui.ImGui.prototype.TreeNodeEx__1(str_id, ImGuiTreeNodeFlags, fmt);return returnedJSObj;")
-    public static native boolean internal_native_TreeNodeEx__1(String str_id, int ImGuiTreeNodeFlags, String fmt);
+    @org.teavm.jso.JSBody(params = {"str_id", "flags", "fmt"}, script = "var returnedJSObj = imgui.ImGui.prototype.TreeNodeEx__1(str_id, flags, fmt);return returnedJSObj;")
+    public static native boolean internal_native_TreeNodeEx__1(String str_id, int flags, String fmt);
 
-    public static boolean TreeNodeEx(IDLBase ptr_id, ImGuiTreeNodeFlags ImGuiTreeNodeFlags, String fmt) {
-        return internal_native_TreeNodeEx__2(ptr_id.native_void_address, (int) ImGuiTreeNodeFlags.getValue(), fmt);
+    public static boolean TreeNodeEx(IDLBase ptr_id, ImGuiTreeNodeFlags flags, String fmt) {
+        return internal_native_TreeNodeEx__2(ptr_id.native_void_address, flags.getValue(), fmt);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.TreeNodeEx__2(ptr_id_addr, ImGuiTreeNodeFlags, fmt);
+      var returnedJSObj = imgui.ImGui.prototype.TreeNodeEx__2(ptr_id_addr, flags, fmt);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"ptr_id_addr", "ImGuiTreeNodeFlags", "fmt"}, script = "var returnedJSObj = imgui.ImGui.prototype.TreeNodeEx__2(ptr_id_addr, ImGuiTreeNodeFlags, fmt);return returnedJSObj;")
-    public static native boolean internal_native_TreeNodeEx__2(int ptr_id_addr, int ImGuiTreeNodeFlags, String fmt);
+    @org.teavm.jso.JSBody(params = {"ptr_id_addr", "flags", "fmt"}, script = "var returnedJSObj = imgui.ImGui.prototype.TreeNodeEx__2(ptr_id_addr, flags, fmt);return returnedJSObj;")
+    public static native boolean internal_native_TreeNodeEx__2(int ptr_id_addr, int flags, String fmt);
 
     public static void TreePush(String str_id) {
-        internal_native_TreePush(str_id);
+        internal_native_TreePush__0(str_id);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImGui.prototype.TreePush(str_id);
+      imgui.ImGui.prototype.TreePush__0(str_id);
     */
-    @org.teavm.jso.JSBody(params = {"str_id"}, script = "imgui.ImGui.prototype.TreePush(str_id);")
-    public static native void internal_native_TreePush(String str_id);
+    @org.teavm.jso.JSBody(params = {"str_id"}, script = "imgui.ImGui.prototype.TreePush__0(str_id);")
+    public static native void internal_native_TreePush__0(String str_id);
+
+    public static void TreePush(IDLBase ptr_id) {
+        internal_native_TreePush__1(ptr_id.native_void_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      imgui.ImGui.prototype.TreePush__1(ptr_id_addr);
+    */
+    @org.teavm.jso.JSBody(params = {"ptr_id_addr"}, script = "imgui.ImGui.prototype.TreePush__1(ptr_id_addr);")
+    public static native void internal_native_TreePush__1(int ptr_id_addr);
 
     public static void TreePop() {
         internal_native_TreePop();
@@ -4437,17 +5029,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.GetTreeNodeToLabelSpacing();return returnedJSObj;")
     public static native float internal_native_GetTreeNodeToLabelSpacing();
 
-    public static boolean CollapsingHeader(String label, ImGuiTreeNodeFlags ImGuiTreeNodeFlags) {
-        return internal_native_CollapsingHeader__0(label, (int) ImGuiTreeNodeFlags.getValue());
+    public static boolean CollapsingHeader(String label, ImGuiTreeNodeFlags flags) {
+        return internal_native_CollapsingHeader__0(label, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.CollapsingHeader__0(label, ImGuiTreeNodeFlags);
+      var returnedJSObj = imgui.ImGui.prototype.CollapsingHeader__0(label, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "ImGuiTreeNodeFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.CollapsingHeader__0(label, ImGuiTreeNodeFlags);return returnedJSObj;")
-    public static native boolean internal_native_CollapsingHeader__0(String label, int ImGuiTreeNodeFlags);
+    @org.teavm.jso.JSBody(params = {"label", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.CollapsingHeader__0(label, flags);return returnedJSObj;")
+    public static native boolean internal_native_CollapsingHeader__0(String label, int flags);
 
     public static boolean CollapsingHeader(String label) {
         return internal_native_CollapsingHeader__0(label);
@@ -4461,17 +5053,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"label"}, script = "var returnedJSObj = imgui.ImGui.prototype.CollapsingHeader__0(label);return returnedJSObj;")
     public static native boolean internal_native_CollapsingHeader__0(String label);
 
-    public static boolean CollapsingHeader(String label, IDLBoolArray p_visible, ImGuiTreeNodeFlags ImGuiTreeNodeFlags) {
-        return internal_native_CollapsingHeader__1(label, p_visible.native_void_address, (int) ImGuiTreeNodeFlags.getValue());
+    public static boolean CollapsingHeader(String label, IDLBoolArray p_visible, ImGuiTreeNodeFlags flags) {
+        return internal_native_CollapsingHeader__1(label, p_visible.native_void_address, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.CollapsingHeader__1(label, p_visible_addr, ImGuiTreeNodeFlags);
+      var returnedJSObj = imgui.ImGui.prototype.CollapsingHeader__1(label, p_visible_addr, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "p_visible_addr", "ImGuiTreeNodeFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.CollapsingHeader__1(label, p_visible_addr, ImGuiTreeNodeFlags);return returnedJSObj;")
-    public static native boolean internal_native_CollapsingHeader__1(String label, int p_visible_addr, int ImGuiTreeNodeFlags);
+    @org.teavm.jso.JSBody(params = {"label", "p_visible_addr", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.CollapsingHeader__1(label, p_visible_addr, flags);return returnedJSObj;")
+    public static native boolean internal_native_CollapsingHeader__1(String label, int p_visible_addr, int flags);
 
     public static boolean CollapsingHeader(String label, IDLBoolArray p_visible) {
         return internal_native_CollapsingHeader__1(label, p_visible.native_void_address);
@@ -4486,7 +5078,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_CollapsingHeader__1(String label, int p_visible_addr);
 
     public static void SetNextItemOpen(boolean is_open, ImGuiCond ImGuiCond) {
-        internal_native_SetNextItemOpen(is_open, (int) ImGuiCond.getValue());
+        internal_native_SetNextItemOpen(is_open, ImGuiCond.getValue());
     }
 
     /*
@@ -4519,7 +5111,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetNextItemStorageID(int storage_id);
 
     public static boolean Selectable(String label, boolean selected, ImGuiSelectableFlags flags, ImVec2 size) {
-        return internal_native_Selectable__0(label, selected, (int) flags.getValue(), size.native_address);
+        return internal_native_Selectable__0(label, selected, flags.getValue(), size.native_address);
     }
 
     /*
@@ -4531,7 +5123,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_Selectable__0(String label, boolean selected, int flags, int size_addr);
 
     public static boolean Selectable(String label, boolean selected, ImGuiSelectableFlags flags) {
-        return internal_native_Selectable__0(label, selected, (int) flags.getValue());
+        return internal_native_Selectable__0(label, selected, flags.getValue());
     }
 
     /*
@@ -4567,7 +5159,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_Selectable__0(String label);
 
     public static boolean Selectable(String label, IDLBoolArray p_selected, ImGuiSelectableFlags flags, ImVec2 size) {
-        return internal_native_Selectable__1(label, p_selected.native_void_address, (int) flags.getValue(), size.native_address);
+        return internal_native_Selectable__1(label, p_selected.native_void_address, flags.getValue(), size.native_address);
     }
 
     /*
@@ -4579,7 +5171,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_Selectable__1(String label, int p_selected_addr, int flags, int size_addr);
 
     public static boolean Selectable(String label, IDLBoolArray p_selected, ImGuiSelectableFlags flags) {
-        return internal_native_Selectable__1(label, p_selected.native_void_address, (int) flags.getValue());
+        return internal_native_Selectable__1(label, p_selected.native_void_address, flags.getValue());
     }
 
     /*
@@ -4603,7 +5195,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_Selectable__1(String label, int p_selected_addr);
 
     public static ImGuiMultiSelectIO BeginMultiSelect(ImGuiMultiSelectFlags flags, int selection_size, int items_count) {
-        int pointer = internal_native_BeginMultiSelect((int) flags.getValue(), selection_size, items_count);
+        int pointer = internal_native_BeginMultiSelect(flags.getValue(), selection_size, items_count);
         if (pointer == 0)
             return ImGuiMultiSelectIO.NULL;
         if (ImGuiMultiSelectIO_TEMP_STATIC_GEN_0 == null)
@@ -4622,7 +5214,7 @@ public class ImGui extends IDLBase {
     public static native int internal_native_BeginMultiSelect(int flags, int selection_size, int items_count);
 
     public static ImGuiMultiSelectIO BeginMultiSelect(ImGuiMultiSelectFlags flags, int selection_size) {
-        int pointer = internal_native_BeginMultiSelect((int) flags.getValue(), selection_size);
+        int pointer = internal_native_BeginMultiSelect(flags.getValue(), selection_size);
         if (pointer == 0)
             return ImGuiMultiSelectIO.NULL;
         if (ImGuiMultiSelectIO_TEMP_STATIC_GEN_1 == null)
@@ -4641,7 +5233,7 @@ public class ImGui extends IDLBase {
     public static native int internal_native_BeginMultiSelect(int flags, int selection_size);
 
     public static ImGuiMultiSelectIO BeginMultiSelect(ImGuiMultiSelectFlags flags) {
-        int pointer = internal_native_BeginMultiSelect((int) flags.getValue());
+        int pointer = internal_native_BeginMultiSelect(flags.getValue());
         if (pointer == 0)
             return ImGuiMultiSelectIO.NULL;
         if (ImGuiMultiSelectIO_TEMP_STATIC_GEN_2 == null)
@@ -5144,17 +5736,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"fmt"}, script = "imgui.ImGui.prototype.SetItemTooltip(fmt);")
     public static native void internal_native_SetItemTooltip(String fmt);
 
-    public static boolean BeginPopup(String str_id, ImGuiWindowFlags ImGuiWindowFlags) {
-        return internal_native_BeginPopup(str_id, (int) ImGuiWindowFlags.getValue());
+    public static boolean BeginPopup(String str_id, ImGuiWindowFlags flags) {
+        return internal_native_BeginPopup(str_id, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.BeginPopup(str_id, ImGuiWindowFlags);
+      var returnedJSObj = imgui.ImGui.prototype.BeginPopup(str_id, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"str_id", "ImGuiWindowFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginPopup(str_id, ImGuiWindowFlags);return returnedJSObj;")
-    public static native boolean internal_native_BeginPopup(String str_id, int ImGuiWindowFlags);
+    @org.teavm.jso.JSBody(params = {"str_id", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginPopup(str_id, flags);return returnedJSObj;")
+    public static native boolean internal_native_BeginPopup(String str_id, int flags);
 
     public static boolean BeginPopup(String str_id) {
         return internal_native_BeginPopup(str_id);
@@ -5168,17 +5760,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"str_id"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginPopup(str_id);return returnedJSObj;")
     public static native boolean internal_native_BeginPopup(String str_id);
 
-    public static boolean BeginPopupModal(String name, IDLBoolArray p_open, ImGuiWindowFlags ImGuiWindowFlags) {
-        return internal_native_BeginPopupModal(name, p_open.native_void_address, (int) ImGuiWindowFlags.getValue());
+    public static boolean BeginPopupModal(String name, IDLBoolArray p_open, ImGuiWindowFlags flags) {
+        return internal_native_BeginPopupModal(name, p_open.native_void_address, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.BeginPopupModal(name, p_open_addr, ImGuiWindowFlags);
+      var returnedJSObj = imgui.ImGui.prototype.BeginPopupModal(name, p_open_addr, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"name", "p_open_addr", "ImGuiWindowFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginPopupModal(name, p_open_addr, ImGuiWindowFlags);return returnedJSObj;")
-    public static native boolean internal_native_BeginPopupModal(String name, int p_open_addr, int ImGuiWindowFlags);
+    @org.teavm.jso.JSBody(params = {"name", "p_open_addr", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginPopupModal(name, p_open_addr, flags);return returnedJSObj;")
+    public static native boolean internal_native_BeginPopupModal(String name, int p_open_addr, int flags);
 
     public static boolean BeginPopupModal(String name, IDLBoolArray p_open) {
         return internal_native_BeginPopupModal(name, p_open.native_void_address);
@@ -5215,16 +5807,16 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(script = "imgui.ImGui.prototype.EndPopup();")
     public static native void internal_native_EndPopup();
 
-    public static void OpenPopup(String str_id, ImGuiPopupFlags ImGuiPopupFlags) {
-        internal_native_OpenPopup__0(str_id, (int) ImGuiPopupFlags.getValue());
+    public static void OpenPopup(String str_id, ImGuiPopupFlags flags) {
+        internal_native_OpenPopup__0(str_id, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImGui.prototype.OpenPopup__0(str_id, ImGuiPopupFlags);
+      imgui.ImGui.prototype.OpenPopup__0(str_id, flags);
     */
-    @org.teavm.jso.JSBody(params = {"str_id", "ImGuiPopupFlags"}, script = "imgui.ImGui.prototype.OpenPopup__0(str_id, ImGuiPopupFlags);")
-    public static native void internal_native_OpenPopup__0(String str_id, int ImGuiPopupFlags);
+    @org.teavm.jso.JSBody(params = {"str_id", "flags"}, script = "imgui.ImGui.prototype.OpenPopup__0(str_id, flags);")
+    public static native void internal_native_OpenPopup__0(String str_id, int flags);
 
     public static void OpenPopup(String str_id) {
         internal_native_OpenPopup__0(str_id);
@@ -5237,16 +5829,16 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"str_id"}, script = "imgui.ImGui.prototype.OpenPopup__0(str_id);")
     public static native void internal_native_OpenPopup__0(String str_id);
 
-    public static void OpenPopup(int id, ImGuiPopupFlags ImGuiPopupFlags) {
-        internal_native_OpenPopup__1(id, (int) ImGuiPopupFlags.getValue());
+    public static void OpenPopup(int id, ImGuiPopupFlags flags) {
+        internal_native_OpenPopup__1(id, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImGui.prototype.OpenPopup__1(id, ImGuiPopupFlags);
+      imgui.ImGui.prototype.OpenPopup__1(id, flags);
     */
-    @org.teavm.jso.JSBody(params = {"id", "ImGuiPopupFlags"}, script = "imgui.ImGui.prototype.OpenPopup__1(id, ImGuiPopupFlags);")
-    public static native void internal_native_OpenPopup__1(int id, int ImGuiPopupFlags);
+    @org.teavm.jso.JSBody(params = {"id", "flags"}, script = "imgui.ImGui.prototype.OpenPopup__1(id, flags);")
+    public static native void internal_native_OpenPopup__1(int id, int flags);
 
     public static void OpenPopup(int id) {
         internal_native_OpenPopup__1(id);
@@ -5259,16 +5851,16 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"id"}, script = "imgui.ImGui.prototype.OpenPopup__1(id);")
     public static native void internal_native_OpenPopup__1(int id);
 
-    public static void OpenPopupOnItemClick(String str_id, ImGuiPopupFlags ImGuiPopupFlags) {
-        internal_native_OpenPopupOnItemClick(str_id, (int) ImGuiPopupFlags.getValue());
+    public static void OpenPopupOnItemClick(String str_id, ImGuiPopupFlags flags) {
+        internal_native_OpenPopupOnItemClick(str_id, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImGui.prototype.OpenPopupOnItemClick(str_id, ImGuiPopupFlags);
+      imgui.ImGui.prototype.OpenPopupOnItemClick(str_id, flags);
     */
-    @org.teavm.jso.JSBody(params = {"str_id", "ImGuiPopupFlags"}, script = "imgui.ImGui.prototype.OpenPopupOnItemClick(str_id, ImGuiPopupFlags);")
-    public static native void internal_native_OpenPopupOnItemClick(String str_id, int ImGuiPopupFlags);
+    @org.teavm.jso.JSBody(params = {"str_id", "flags"}, script = "imgui.ImGui.prototype.OpenPopupOnItemClick(str_id, flags);")
+    public static native void internal_native_OpenPopupOnItemClick(String str_id, int flags);
 
     public static void OpenPopupOnItemClick(String str_id) {
         internal_native_OpenPopupOnItemClick(str_id);
@@ -5303,17 +5895,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(script = "imgui.ImGui.prototype.CloseCurrentPopup();")
     public static native void internal_native_CloseCurrentPopup();
 
-    public static boolean BeginPopupContextItem(String str_id, ImGuiPopupFlags ImGuiPopupFlags) {
-        return internal_native_BeginPopupContextItem(str_id, (int) ImGuiPopupFlags.getValue());
+    public static boolean BeginPopupContextItem(String str_id, ImGuiPopupFlags flags) {
+        return internal_native_BeginPopupContextItem(str_id, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.BeginPopupContextItem(str_id, ImGuiPopupFlags);
+      var returnedJSObj = imgui.ImGui.prototype.BeginPopupContextItem(str_id, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"str_id", "ImGuiPopupFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginPopupContextItem(str_id, ImGuiPopupFlags);return returnedJSObj;")
-    public static native boolean internal_native_BeginPopupContextItem(String str_id, int ImGuiPopupFlags);
+    @org.teavm.jso.JSBody(params = {"str_id", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginPopupContextItem(str_id, flags);return returnedJSObj;")
+    public static native boolean internal_native_BeginPopupContextItem(String str_id, int flags);
 
     public static boolean BeginPopupContextItem(String str_id) {
         return internal_native_BeginPopupContextItem(str_id);
@@ -5339,17 +5931,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.BeginPopupContextItem();return returnedJSObj;")
     public static native boolean internal_native_BeginPopupContextItem();
 
-    public static boolean BeginPopupContextWindow(String str_id, ImGuiPopupFlags ImGuiPopupFlags) {
-        return internal_native_BeginPopupContextWindow(str_id, (int) ImGuiPopupFlags.getValue());
+    public static boolean BeginPopupContextWindow(String str_id, ImGuiPopupFlags flags) {
+        return internal_native_BeginPopupContextWindow(str_id, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.BeginPopupContextWindow(str_id, ImGuiPopupFlags);
+      var returnedJSObj = imgui.ImGui.prototype.BeginPopupContextWindow(str_id, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"str_id", "ImGuiPopupFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginPopupContextWindow(str_id, ImGuiPopupFlags);return returnedJSObj;")
-    public static native boolean internal_native_BeginPopupContextWindow(String str_id, int ImGuiPopupFlags);
+    @org.teavm.jso.JSBody(params = {"str_id", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginPopupContextWindow(str_id, flags);return returnedJSObj;")
+    public static native boolean internal_native_BeginPopupContextWindow(String str_id, int flags);
 
     public static boolean BeginPopupContextWindow(String str_id) {
         return internal_native_BeginPopupContextWindow(str_id);
@@ -5375,17 +5967,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.BeginPopupContextWindow();return returnedJSObj;")
     public static native boolean internal_native_BeginPopupContextWindow();
 
-    public static boolean BeginPopupContextVoid(String str_id, ImGuiPopupFlags ImGuiPopupFlags) {
-        return internal_native_BeginPopupContextVoid(str_id, (int) ImGuiPopupFlags.getValue());
+    public static boolean BeginPopupContextVoid(String str_id, ImGuiPopupFlags flags) {
+        return internal_native_BeginPopupContextVoid(str_id, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.BeginPopupContextVoid(str_id, ImGuiPopupFlags);
+      var returnedJSObj = imgui.ImGui.prototype.BeginPopupContextVoid(str_id, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"str_id", "ImGuiPopupFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginPopupContextVoid(str_id, ImGuiPopupFlags);return returnedJSObj;")
-    public static native boolean internal_native_BeginPopupContextVoid(String str_id, int ImGuiPopupFlags);
+    @org.teavm.jso.JSBody(params = {"str_id", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginPopupContextVoid(str_id, flags);return returnedJSObj;")
+    public static native boolean internal_native_BeginPopupContextVoid(String str_id, int flags);
 
     public static boolean BeginPopupContextVoid(String str_id) {
         return internal_native_BeginPopupContextVoid(str_id);
@@ -5411,17 +6003,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.BeginPopupContextVoid();return returnedJSObj;")
     public static native boolean internal_native_BeginPopupContextVoid();
 
-    public static boolean IsPopupOpen(String str_id, ImGuiPopupFlags ImGuiPopupFlags) {
-        return internal_native_IsPopupOpen(str_id, (int) ImGuiPopupFlags.getValue());
+    public static boolean IsPopupOpen(String str_id, ImGuiPopupFlags flags) {
+        return internal_native_IsPopupOpen(str_id, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.IsPopupOpen(str_id, ImGuiPopupFlags);
+      var returnedJSObj = imgui.ImGui.prototype.IsPopupOpen(str_id, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"str_id", "ImGuiPopupFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.IsPopupOpen(str_id, ImGuiPopupFlags);return returnedJSObj;")
-    public static native boolean internal_native_IsPopupOpen(String str_id, int ImGuiPopupFlags);
+    @org.teavm.jso.JSBody(params = {"str_id", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.IsPopupOpen(str_id, flags);return returnedJSObj;")
+    public static native boolean internal_native_IsPopupOpen(String str_id, int flags);
 
     public static boolean IsPopupOpen(String str_id) {
         return internal_native_IsPopupOpen(str_id);
@@ -5435,41 +6027,41 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"str_id"}, script = "var returnedJSObj = imgui.ImGui.prototype.IsPopupOpen(str_id);return returnedJSObj;")
     public static native boolean internal_native_IsPopupOpen(String str_id);
 
-    public static boolean BeginTable(String str_id, int column, ImGuiTableFlags ImGuiTableFlags, ImVec2 outer_size, float inner_width) {
-        return internal_native_BeginTable(str_id, column, (int) ImGuiTableFlags.getValue(), outer_size.native_address, inner_width);
+    public static boolean BeginTable(String str_id, int column, ImGuiTableFlags flags, ImVec2 outer_size, float inner_width) {
+        return internal_native_BeginTable(str_id, column, flags.getValue(), outer_size.native_address, inner_width);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.BeginTable(str_id, column, ImGuiTableFlags, outer_size_addr, inner_width);
+      var returnedJSObj = imgui.ImGui.prototype.BeginTable(str_id, column, flags, outer_size_addr, inner_width);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"str_id", "column", "ImGuiTableFlags", "outer_size_addr", "inner_width"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginTable(str_id, column, ImGuiTableFlags, outer_size_addr, inner_width);return returnedJSObj;")
-    public static native boolean internal_native_BeginTable(String str_id, int column, int ImGuiTableFlags, int outer_size_addr, float inner_width);
+    @org.teavm.jso.JSBody(params = {"str_id", "column", "flags", "outer_size_addr", "inner_width"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginTable(str_id, column, flags, outer_size_addr, inner_width);return returnedJSObj;")
+    public static native boolean internal_native_BeginTable(String str_id, int column, int flags, int outer_size_addr, float inner_width);
 
-    public static boolean BeginTable(String str_id, int column, ImGuiTableFlags ImGuiTableFlags, ImVec2 outer_size) {
-        return internal_native_BeginTable(str_id, column, (int) ImGuiTableFlags.getValue(), outer_size.native_address);
+    public static boolean BeginTable(String str_id, int column, ImGuiTableFlags flags, ImVec2 outer_size) {
+        return internal_native_BeginTable(str_id, column, flags.getValue(), outer_size.native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.BeginTable(str_id, column, ImGuiTableFlags, outer_size_addr);
+      var returnedJSObj = imgui.ImGui.prototype.BeginTable(str_id, column, flags, outer_size_addr);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"str_id", "column", "ImGuiTableFlags", "outer_size_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginTable(str_id, column, ImGuiTableFlags, outer_size_addr);return returnedJSObj;")
-    public static native boolean internal_native_BeginTable(String str_id, int column, int ImGuiTableFlags, int outer_size_addr);
+    @org.teavm.jso.JSBody(params = {"str_id", "column", "flags", "outer_size_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginTable(str_id, column, flags, outer_size_addr);return returnedJSObj;")
+    public static native boolean internal_native_BeginTable(String str_id, int column, int flags, int outer_size_addr);
 
-    public static boolean BeginTable(String str_id, int column, ImGuiTableFlags ImGuiTableFlags) {
-        return internal_native_BeginTable(str_id, column, (int) ImGuiTableFlags.getValue());
+    public static boolean BeginTable(String str_id, int column, ImGuiTableFlags flags) {
+        return internal_native_BeginTable(str_id, column, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.BeginTable(str_id, column, ImGuiTableFlags);
+      var returnedJSObj = imgui.ImGui.prototype.BeginTable(str_id, column, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"str_id", "column", "ImGuiTableFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginTable(str_id, column, ImGuiTableFlags);return returnedJSObj;")
-    public static native boolean internal_native_BeginTable(String str_id, int column, int ImGuiTableFlags);
+    @org.teavm.jso.JSBody(params = {"str_id", "column", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginTable(str_id, column, flags);return returnedJSObj;")
+    public static native boolean internal_native_BeginTable(String str_id, int column, int flags);
 
     public static boolean BeginTable(String str_id, int column) {
         return internal_native_BeginTable(str_id, column);
@@ -5551,38 +6143,38 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"column_n"}, script = "var returnedJSObj = imgui.ImGui.prototype.TableSetColumnIndex(column_n);return returnedJSObj;")
     public static native boolean internal_native_TableSetColumnIndex(int column_n);
 
-    public static void TableSetupColumn(String label, ImGuiTableColumnFlags ImGuiTableColumnFlags, float init_width_or_weight, int user_id) {
-        internal_native_TableSetupColumn(label, (int) ImGuiTableColumnFlags.getValue(), init_width_or_weight, user_id);
+    public static void TableSetupColumn(String label, ImGuiTableColumnFlags flags, float init_width_or_weight, int user_id) {
+        internal_native_TableSetupColumn(label, flags.getValue(), init_width_or_weight, user_id);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImGui.prototype.TableSetupColumn(label, ImGuiTableColumnFlags, init_width_or_weight, user_id);
+      imgui.ImGui.prototype.TableSetupColumn(label, flags, init_width_or_weight, user_id);
     */
-    @org.teavm.jso.JSBody(params = {"label", "ImGuiTableColumnFlags", "init_width_or_weight", "user_id"}, script = "imgui.ImGui.prototype.TableSetupColumn(label, ImGuiTableColumnFlags, init_width_or_weight, user_id);")
-    public static native void internal_native_TableSetupColumn(String label, int ImGuiTableColumnFlags, float init_width_or_weight, int user_id);
+    @org.teavm.jso.JSBody(params = {"label", "flags", "init_width_or_weight", "user_id"}, script = "imgui.ImGui.prototype.TableSetupColumn(label, flags, init_width_or_weight, user_id);")
+    public static native void internal_native_TableSetupColumn(String label, int flags, float init_width_or_weight, int user_id);
 
-    public static void TableSetupColumn(String label, ImGuiTableColumnFlags ImGuiTableColumnFlags, float init_width_or_weight) {
-        internal_native_TableSetupColumn(label, (int) ImGuiTableColumnFlags.getValue(), init_width_or_weight);
+    public static void TableSetupColumn(String label, ImGuiTableColumnFlags flags, float init_width_or_weight) {
+        internal_native_TableSetupColumn(label, flags.getValue(), init_width_or_weight);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImGui.prototype.TableSetupColumn(label, ImGuiTableColumnFlags, init_width_or_weight);
+      imgui.ImGui.prototype.TableSetupColumn(label, flags, init_width_or_weight);
     */
-    @org.teavm.jso.JSBody(params = {"label", "ImGuiTableColumnFlags", "init_width_or_weight"}, script = "imgui.ImGui.prototype.TableSetupColumn(label, ImGuiTableColumnFlags, init_width_or_weight);")
-    public static native void internal_native_TableSetupColumn(String label, int ImGuiTableColumnFlags, float init_width_or_weight);
+    @org.teavm.jso.JSBody(params = {"label", "flags", "init_width_or_weight"}, script = "imgui.ImGui.prototype.TableSetupColumn(label, flags, init_width_or_weight);")
+    public static native void internal_native_TableSetupColumn(String label, int flags, float init_width_or_weight);
 
-    public static void TableSetupColumn(String label, ImGuiTableColumnFlags ImGuiTableColumnFlags) {
-        internal_native_TableSetupColumn(label, (int) ImGuiTableColumnFlags.getValue());
+    public static void TableSetupColumn(String label, ImGuiTableColumnFlags flags) {
+        internal_native_TableSetupColumn(label, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      imgui.ImGui.prototype.TableSetupColumn(label, ImGuiTableColumnFlags);
+      imgui.ImGui.prototype.TableSetupColumn(label, flags);
     */
-    @org.teavm.jso.JSBody(params = {"label", "ImGuiTableColumnFlags"}, script = "imgui.ImGui.prototype.TableSetupColumn(label, ImGuiTableColumnFlags);")
-    public static native void internal_native_TableSetupColumn(String label, int ImGuiTableColumnFlags);
+    @org.teavm.jso.JSBody(params = {"label", "flags"}, script = "imgui.ImGui.prototype.TableSetupColumn(label, flags);")
+    public static native void internal_native_TableSetupColumn(String label, int flags);
 
     public static void TableSetupColumn(String label) {
         internal_native_TableSetupColumn(label);
@@ -5694,6 +6286,44 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.TableGetRowIndex();return returnedJSObj;")
     public static native int internal_native_TableGetRowIndex();
 
+    public static IDLString TableGetColumnName(int column_n) {
+        int pointer = internal_native_TableGetColumnName(column_n);
+        if (pointer == 0)
+            return IDLString.NULL;
+        if (IDLString_TEMP_STATIC_GEN_1 == null)
+            IDLString_TEMP_STATIC_GEN_1 = IDLString.native_new();
+        IDLString_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return IDLString_TEMP_STATIC_GEN_1;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.TableGetColumnName(column_n);
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
+    */
+    @org.teavm.jso.JSBody(params = {"column_n"}, script = "var returnedJSObj = imgui.ImGui.prototype.TableGetColumnName(column_n);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_TableGetColumnName(int column_n);
+
+    public static IDLString TableGetColumnName() {
+        int pointer = internal_native_TableGetColumnName();
+        if (pointer == 0)
+            return IDLString.NULL;
+        if (IDLString_TEMP_STATIC_GEN_2 == null)
+            IDLString_TEMP_STATIC_GEN_2 = IDLString.native_new();
+        IDLString_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
+        return IDLString_TEMP_STATIC_GEN_2;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.TableGetColumnName();
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
+    */
+    @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.TableGetColumnName();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_TableGetColumnName();
+
     public static int TableGetColumnFlags(int column_n) {
         return internal_native_TableGetColumnFlags(column_n);
     }
@@ -5729,6 +6359,18 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"column_n", "v"}, script = "imgui.ImGui.prototype.TableSetColumnEnabled(column_n, v);")
     public static native void internal_native_TableSetColumnEnabled(int column_n, boolean v);
 
+    public static int TableGetHoveredColumn() {
+        return internal_native_TableGetHoveredColumn();
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.TableGetHoveredColumn();
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.TableGetHoveredColumn();return returnedJSObj;")
+    public static native int internal_native_TableGetHoveredColumn();
+
     public static void TableSetBgColor(int target, int color, int column_n) {
         internal_native_TableSetBgColor(target, color, column_n);
     }
@@ -5751,17 +6393,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"target", "color"}, script = "imgui.ImGui.prototype.TableSetBgColor(target, color);")
     public static native void internal_native_TableSetBgColor(int target, int color);
 
-    public static boolean BeginTabBar(String str_id, ImGuiTabBarFlags ImGuiTabBarFlags) {
-        return internal_native_BeginTabBar(str_id, (int) ImGuiTabBarFlags.getValue());
+    public static boolean BeginTabBar(String str_id, ImGuiTabBarFlags flags) {
+        return internal_native_BeginTabBar(str_id, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.BeginTabBar(str_id, ImGuiTabBarFlags);
+      var returnedJSObj = imgui.ImGui.prototype.BeginTabBar(str_id, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"str_id", "ImGuiTabBarFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginTabBar(str_id, ImGuiTabBarFlags);return returnedJSObj;")
-    public static native boolean internal_native_BeginTabBar(String str_id, int ImGuiTabBarFlags);
+    @org.teavm.jso.JSBody(params = {"str_id", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginTabBar(str_id, flags);return returnedJSObj;")
+    public static native boolean internal_native_BeginTabBar(String str_id, int flags);
 
     public static boolean BeginTabBar(String str_id) {
         return internal_native_BeginTabBar(str_id);
@@ -5786,17 +6428,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(script = "imgui.ImGui.prototype.EndTabBar();")
     public static native void internal_native_EndTabBar();
 
-    public static boolean BeginTabItem(String label, IDLBoolArray p_open, ImGuiTabItemFlags ImGuiTabItemFlags) {
-        return internal_native_BeginTabItem(label, p_open.native_void_address, (int) ImGuiTabItemFlags.getValue());
+    public static boolean BeginTabItem(String label, IDLBoolArray p_open, ImGuiTabItemFlags flags) {
+        return internal_native_BeginTabItem(label, p_open.native_void_address, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.BeginTabItem(label, p_open_addr, ImGuiTabItemFlags);
+      var returnedJSObj = imgui.ImGui.prototype.BeginTabItem(label, p_open_addr, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "p_open_addr", "ImGuiTabItemFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginTabItem(label, p_open_addr, ImGuiTabItemFlags);return returnedJSObj;")
-    public static native boolean internal_native_BeginTabItem(String label, int p_open_addr, int ImGuiTabItemFlags);
+    @org.teavm.jso.JSBody(params = {"label", "p_open_addr", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginTabItem(label, p_open_addr, flags);return returnedJSObj;")
+    public static native boolean internal_native_BeginTabItem(String label, int p_open_addr, int flags);
 
     public static boolean BeginTabItem(String label, IDLBoolArray p_open) {
         return internal_native_BeginTabItem(label, p_open.native_void_address);
@@ -5833,17 +6475,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(script = "imgui.ImGui.prototype.EndTabItem();")
     public static native void internal_native_EndTabItem();
 
-    public static boolean TabItemButton(String label, ImGuiTabItemFlags ImGuiTabItemFlags) {
-        return internal_native_TabItemButton(label, (int) ImGuiTabItemFlags.getValue());
+    public static boolean TabItemButton(String label, ImGuiTabItemFlags flags) {
+        return internal_native_TabItemButton(label, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.TabItemButton(label, ImGuiTabItemFlags);
+      var returnedJSObj = imgui.ImGui.prototype.TabItemButton(label, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"label", "ImGuiTabItemFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.TabItemButton(label, ImGuiTabItemFlags);return returnedJSObj;")
-    public static native boolean internal_native_TabItemButton(String label, int ImGuiTabItemFlags);
+    @org.teavm.jso.JSBody(params = {"label", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.TabItemButton(label, flags);return returnedJSObj;")
+    public static native boolean internal_native_TabItemButton(String label, int flags);
 
     public static void SetTabItemClosed(String tab_or_docked_window_label) {
         internal_native_SetTabItemClosed(tab_or_docked_window_label);
@@ -5856,29 +6498,29 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"tab_or_docked_window_label"}, script = "imgui.ImGui.prototype.SetTabItemClosed(tab_or_docked_window_label);")
     public static native void internal_native_SetTabItemClosed(String tab_or_docked_window_label);
 
-    public static int DockSpace(int id, ImVec2 size, ImGuiDockNodeFlags ImGuiDockNodeFlags, ImGuiWindowClass window_class) {
-        return internal_native_DockSpace(id, size.native_address, (int) ImGuiDockNodeFlags.getValue(), window_class.native_address);
+    public static int DockSpace(int id, ImVec2 size, ImGuiDockNodeFlags flags, ImGuiWindowClass window_class) {
+        return internal_native_DockSpace(id, size.native_address, flags.getValue(), window_class.native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.DockSpace(id, size_addr, ImGuiDockNodeFlags, window_class_addr);
+      var returnedJSObj = imgui.ImGui.prototype.DockSpace(id, size_addr, flags, window_class_addr);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"id", "size_addr", "ImGuiDockNodeFlags", "window_class_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.DockSpace(id, size_addr, ImGuiDockNodeFlags, window_class_addr);return returnedJSObj;")
-    public static native int internal_native_DockSpace(int id, int size_addr, int ImGuiDockNodeFlags, int window_class_addr);
+    @org.teavm.jso.JSBody(params = {"id", "size_addr", "flags", "window_class_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.DockSpace(id, size_addr, flags, window_class_addr);return returnedJSObj;")
+    public static native int internal_native_DockSpace(int id, int size_addr, int flags, int window_class_addr);
 
-    public static int DockSpace(int id, ImVec2 size, ImGuiDockNodeFlags ImGuiDockNodeFlags) {
-        return internal_native_DockSpace(id, size.native_address, (int) ImGuiDockNodeFlags.getValue());
+    public static int DockSpace(int id, ImVec2 size, ImGuiDockNodeFlags flags) {
+        return internal_native_DockSpace(id, size.native_address, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.DockSpace(id, size_addr, ImGuiDockNodeFlags);
+      var returnedJSObj = imgui.ImGui.prototype.DockSpace(id, size_addr, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"id", "size_addr", "ImGuiDockNodeFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DockSpace(id, size_addr, ImGuiDockNodeFlags);return returnedJSObj;")
-    public static native int internal_native_DockSpace(int id, int size_addr, int ImGuiDockNodeFlags);
+    @org.teavm.jso.JSBody(params = {"id", "size_addr", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DockSpace(id, size_addr, flags);return returnedJSObj;")
+    public static native int internal_native_DockSpace(int id, int size_addr, int flags);
 
     public static int DockSpace(int id, ImVec2 size) {
         return internal_native_DockSpace(id, size.native_address);
@@ -5904,29 +6546,29 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"id"}, script = "var returnedJSObj = imgui.ImGui.prototype.DockSpace(id);return returnedJSObj;")
     public static native int internal_native_DockSpace(int id);
 
-    public static int DockSpaceOverViewport(int dockspace_id, ImGuiViewport viewport, ImGuiDockNodeFlags ImGuiDockNodeFlags, ImGuiWindowClass window_class) {
-        return internal_native_DockSpaceOverViewport(dockspace_id, viewport.native_address, (int) ImGuiDockNodeFlags.getValue(), window_class.native_address);
+    public static int DockSpaceOverViewport(int dockspace_id, ImGuiViewport viewport, ImGuiDockNodeFlags flags, ImGuiWindowClass window_class) {
+        return internal_native_DockSpaceOverViewport(dockspace_id, viewport.native_address, flags.getValue(), window_class.native_address);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.DockSpaceOverViewport(dockspace_id, viewport_addr, ImGuiDockNodeFlags, window_class_addr);
+      var returnedJSObj = imgui.ImGui.prototype.DockSpaceOverViewport(dockspace_id, viewport_addr, flags, window_class_addr);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"dockspace_id", "viewport_addr", "ImGuiDockNodeFlags", "window_class_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.DockSpaceOverViewport(dockspace_id, viewport_addr, ImGuiDockNodeFlags, window_class_addr);return returnedJSObj;")
-    public static native int internal_native_DockSpaceOverViewport(int dockspace_id, int viewport_addr, int ImGuiDockNodeFlags, int window_class_addr);
+    @org.teavm.jso.JSBody(params = {"dockspace_id", "viewport_addr", "flags", "window_class_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.DockSpaceOverViewport(dockspace_id, viewport_addr, flags, window_class_addr);return returnedJSObj;")
+    public static native int internal_native_DockSpaceOverViewport(int dockspace_id, int viewport_addr, int flags, int window_class_addr);
 
-    public static int DockSpaceOverViewport(int dockspace_id, ImGuiViewport viewport, ImGuiDockNodeFlags ImGuiDockNodeFlags) {
-        return internal_native_DockSpaceOverViewport(dockspace_id, viewport.native_address, (int) ImGuiDockNodeFlags.getValue());
+    public static int DockSpaceOverViewport(int dockspace_id, ImGuiViewport viewport, ImGuiDockNodeFlags flags) {
+        return internal_native_DockSpaceOverViewport(dockspace_id, viewport.native_address, flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.DockSpaceOverViewport(dockspace_id, viewport_addr, ImGuiDockNodeFlags);
+      var returnedJSObj = imgui.ImGui.prototype.DockSpaceOverViewport(dockspace_id, viewport_addr, flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"dockspace_id", "viewport_addr", "ImGuiDockNodeFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DockSpaceOverViewport(dockspace_id, viewport_addr, ImGuiDockNodeFlags);return returnedJSObj;")
-    public static native int internal_native_DockSpaceOverViewport(int dockspace_id, int viewport_addr, int ImGuiDockNodeFlags);
+    @org.teavm.jso.JSBody(params = {"dockspace_id", "viewport_addr", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.DockSpaceOverViewport(dockspace_id, viewport_addr, flags);return returnedJSObj;")
+    public static native int internal_native_DockSpaceOverViewport(int dockspace_id, int viewport_addr, int flags);
 
     public static int DockSpaceOverViewport(int dockspace_id, ImGuiViewport viewport) {
         return internal_native_DockSpaceOverViewport(dockspace_id, viewport.native_address);
@@ -5965,7 +6607,7 @@ public class ImGui extends IDLBase {
     public static native int internal_native_DockSpaceOverViewport();
 
     public static void SetNextWindowDockID(int dock_id, ImGuiCond ImGuiCond) {
-        internal_native_SetNextWindowDockID(dock_id, (int) ImGuiCond.getValue());
+        internal_native_SetNextWindowDockID(dock_id, ImGuiCond.getValue());
     }
 
     /*
@@ -6021,17 +6663,127 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.IsWindowDocked();return returnedJSObj;")
     public static native boolean internal_native_IsWindowDocked();
 
-    public static boolean BeginDragDropSource(ImGuiDragDropFlags ImGuiDragDropFlags) {
-        return internal_native_BeginDragDropSource((int) ImGuiDragDropFlags.getValue());
+    public static void LogToTTY(int auto_open_depth) {
+        internal_native_LogToTTY(auto_open_depth);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.BeginDragDropSource(ImGuiDragDropFlags);
+      imgui.ImGui.prototype.LogToTTY(auto_open_depth);
+    */
+    @org.teavm.jso.JSBody(params = {"auto_open_depth"}, script = "imgui.ImGui.prototype.LogToTTY(auto_open_depth);")
+    public static native void internal_native_LogToTTY(int auto_open_depth);
+
+    public static void LogToTTY() {
+        internal_native_LogToTTY();
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      imgui.ImGui.prototype.LogToTTY();
+    */
+    @org.teavm.jso.JSBody(script = "imgui.ImGui.prototype.LogToTTY();")
+    public static native void internal_native_LogToTTY();
+
+    public static void LogToFile(int auto_open_depth, String filename) {
+        internal_native_LogToFile(auto_open_depth, filename);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      imgui.ImGui.prototype.LogToFile(auto_open_depth, filename);
+    */
+    @org.teavm.jso.JSBody(params = {"auto_open_depth", "filename"}, script = "imgui.ImGui.prototype.LogToFile(auto_open_depth, filename);")
+    public static native void internal_native_LogToFile(int auto_open_depth, String filename);
+
+    public static void LogToFile(int auto_open_depth) {
+        internal_native_LogToFile(auto_open_depth);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      imgui.ImGui.prototype.LogToFile(auto_open_depth);
+    */
+    @org.teavm.jso.JSBody(params = {"auto_open_depth"}, script = "imgui.ImGui.prototype.LogToFile(auto_open_depth);")
+    public static native void internal_native_LogToFile(int auto_open_depth);
+
+    public static void LogToFile() {
+        internal_native_LogToFile();
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      imgui.ImGui.prototype.LogToFile();
+    */
+    @org.teavm.jso.JSBody(script = "imgui.ImGui.prototype.LogToFile();")
+    public static native void internal_native_LogToFile();
+
+    public static void LogToClipboard(int auto_open_depth) {
+        internal_native_LogToClipboard(auto_open_depth);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      imgui.ImGui.prototype.LogToClipboard(auto_open_depth);
+    */
+    @org.teavm.jso.JSBody(params = {"auto_open_depth"}, script = "imgui.ImGui.prototype.LogToClipboard(auto_open_depth);")
+    public static native void internal_native_LogToClipboard(int auto_open_depth);
+
+    public static void LogToClipboard() {
+        internal_native_LogToClipboard();
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      imgui.ImGui.prototype.LogToClipboard();
+    */
+    @org.teavm.jso.JSBody(script = "imgui.ImGui.prototype.LogToClipboard();")
+    public static native void internal_native_LogToClipboard();
+
+    public static void LogFinish() {
+        internal_native_LogFinish();
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      imgui.ImGui.prototype.LogFinish();
+    */
+    @org.teavm.jso.JSBody(script = "imgui.ImGui.prototype.LogFinish();")
+    public static native void internal_native_LogFinish();
+
+    public static void LogButtons() {
+        internal_native_LogButtons();
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      imgui.ImGui.prototype.LogButtons();
+    */
+    @org.teavm.jso.JSBody(script = "imgui.ImGui.prototype.LogButtons();")
+    public static native void internal_native_LogButtons();
+
+    public static void LogText(String fmt) {
+        internal_native_LogText(fmt);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      imgui.ImGui.prototype.LogText(fmt);
+    */
+    @org.teavm.jso.JSBody(params = {"fmt"}, script = "imgui.ImGui.prototype.LogText(fmt);")
+    public static native void internal_native_LogText(String fmt);
+
+    public static boolean BeginDragDropSource(ImGuiDragDropFlags flags) {
+        return internal_native_BeginDragDropSource(flags.getValue());
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.BeginDragDropSource(flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"ImGuiDragDropFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginDragDropSource(ImGuiDragDropFlags);return returnedJSObj;")
-    public static native boolean internal_native_BeginDragDropSource(int ImGuiDragDropFlags);
+    @org.teavm.jso.JSBody(params = {"flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.BeginDragDropSource(flags);return returnedJSObj;")
+    public static native boolean internal_native_BeginDragDropSource(int flags);
 
     public static boolean BeginDragDropSource() {
         return internal_native_BeginDragDropSource();
@@ -6045,29 +6797,29 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.BeginDragDropSource();return returnedJSObj;")
     public static native boolean internal_native_BeginDragDropSource();
 
-    public static boolean SetDragDropPayload(String type, int data, ImGuiCond ImGuiCond) {
-        return internal_native_SetDragDropPayload(type, data, (int) ImGuiCond.getValue());
+    public static boolean SetDragDropPayload(String type, IDLBase data, int size_t, ImGuiCond ImGuiCond) {
+        return internal_native_SetDragDropPayload(type, data.native_void_address, size_t, ImGuiCond.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.SetDragDropPayload(type, data, ImGuiCond);
+      var returnedJSObj = imgui.ImGui.prototype.SetDragDropPayload(type, data_addr, size_t, ImGuiCond);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"type", "data", "ImGuiCond"}, script = "var returnedJSObj = imgui.ImGui.prototype.SetDragDropPayload(type, data, ImGuiCond);return returnedJSObj;")
-    public static native boolean internal_native_SetDragDropPayload(String type, int data, int ImGuiCond);
+    @org.teavm.jso.JSBody(params = {"type", "data_addr", "size_t", "ImGuiCond"}, script = "var returnedJSObj = imgui.ImGui.prototype.SetDragDropPayload(type, data_addr, size_t, ImGuiCond);return returnedJSObj;")
+    public static native boolean internal_native_SetDragDropPayload(String type, int data_addr, int size_t, int ImGuiCond);
 
-    public static boolean SetDragDropPayload(String type, int data) {
-        return internal_native_SetDragDropPayload(type, data);
+    public static boolean SetDragDropPayload(String type, IDLBase data, int size_t) {
+        return internal_native_SetDragDropPayload(type, data.native_void_address, size_t);
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.SetDragDropPayload(type, data);
+      var returnedJSObj = imgui.ImGui.prototype.SetDragDropPayload(type, data_addr, size_t);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"type", "data"}, script = "var returnedJSObj = imgui.ImGui.prototype.SetDragDropPayload(type, data);return returnedJSObj;")
-    public static native boolean internal_native_SetDragDropPayload(String type, int data);
+    @org.teavm.jso.JSBody(params = {"type", "data_addr", "size_t"}, script = "var returnedJSObj = imgui.ImGui.prototype.SetDragDropPayload(type, data_addr, size_t);return returnedJSObj;")
+    public static native boolean internal_native_SetDragDropPayload(String type, int data_addr, int size_t);
 
     public static void EndDragDropSource() {
         internal_native_EndDragDropSource();
@@ -6092,8 +6844,8 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.BeginDragDropTarget();return returnedJSObj;")
     public static native boolean internal_native_BeginDragDropTarget();
 
-    public static ImGuiPayload AcceptDragDropPayload(String type, ImGuiDragDropFlags ImGuiDragDropFlags) {
-        int pointer = internal_native_AcceptDragDropPayload(type, (int) ImGuiDragDropFlags.getValue());
+    public static ImGuiPayload AcceptDragDropPayload(String type, ImGuiDragDropFlags flags) {
+        int pointer = internal_native_AcceptDragDropPayload(type, flags.getValue());
         if (pointer == 0)
             return ImGuiPayload.NULL;
         if (ImGuiPayload_TEMP_STATIC_GEN_0 == null)
@@ -6104,12 +6856,12 @@ public class ImGui extends IDLBase {
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.AcceptDragDropPayload(type, ImGuiDragDropFlags);
+      var returnedJSObj = imgui.ImGui.prototype.AcceptDragDropPayload(type, flags);
       if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
       return imgui.getPointer(returnedJSObj);
     */
-    @org.teavm.jso.JSBody(params = {"type", "ImGuiDragDropFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.AcceptDragDropPayload(type, ImGuiDragDropFlags);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_AcceptDragDropPayload(String type, int ImGuiDragDropFlags);
+    @org.teavm.jso.JSBody(params = {"type", "flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.AcceptDragDropPayload(type, flags);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_AcceptDragDropPayload(String type, int flags);
 
     public static ImGuiPayload AcceptDragDropPayload(String type) {
         int pointer = internal_native_AcceptDragDropPayload(type);
@@ -6259,17 +7011,17 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(script = "imgui.ImGui.prototype.SetNextItemAllowOverlap();")
     public static native void internal_native_SetNextItemAllowOverlap();
 
-    public static boolean IsItemHovered(ImGuiHoveredFlags ImGuiHoveredFlags) {
-        return internal_native_IsItemHovered((int) ImGuiHoveredFlags.getValue());
+    public static boolean IsItemHovered(ImGuiHoveredFlags flags) {
+        return internal_native_IsItemHovered(flags.getValue());
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.IsItemHovered(ImGuiHoveredFlags);
+      var returnedJSObj = imgui.ImGui.prototype.IsItemHovered(flags);
       return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(params = {"ImGuiHoveredFlags"}, script = "var returnedJSObj = imgui.ImGui.prototype.IsItemHovered(ImGuiHoveredFlags);return returnedJSObj;")
-    public static native boolean internal_native_IsItemHovered(int ImGuiHoveredFlags);
+    @org.teavm.jso.JSBody(params = {"flags"}, script = "var returnedJSObj = imgui.ImGui.prototype.IsItemHovered(flags);return returnedJSObj;")
+    public static native boolean internal_native_IsItemHovered(int flags);
 
     public static boolean IsItemHovered() {
         return internal_native_IsItemHovered();
@@ -6308,7 +7060,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsItemFocused();
 
     public static boolean IsItemClicked(ImGuiMouseButton ImGuiMouseButton) {
-        return internal_native_IsItemClicked((int) ImGuiMouseButton.getValue());
+        return internal_native_IsItemClicked(ImGuiMouseButton.getValue());
     }
 
     /*
@@ -6527,8 +7279,8 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.GetMainViewport();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_GetMainViewport();
 
-    public static ImDrawList GetBackgroundDrawList() {
-        int pointer = internal_native_GetBackgroundDrawList__0();
+    public static ImDrawList GetBackgroundDrawList(ImGuiViewport viewport) {
+        int pointer = internal_native_GetBackgroundDrawList(viewport.native_address);
         if (pointer == 0)
             return ImDrawList.NULL;
         if (ImDrawList_TEMP_STATIC_GEN_1 == null)
@@ -6539,15 +7291,15 @@ public class ImGui extends IDLBase {
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.GetBackgroundDrawList__0();
+      var returnedJSObj = imgui.ImGui.prototype.GetBackgroundDrawList(viewport_addr);
       if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
       return imgui.getPointer(returnedJSObj);
     */
-    @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.GetBackgroundDrawList__0();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_GetBackgroundDrawList__0();
+    @org.teavm.jso.JSBody(params = {"viewport_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.GetBackgroundDrawList(viewport_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_GetBackgroundDrawList(int viewport_addr);
 
-    public static ImDrawList GetBackgroundDrawList(ImGuiViewport viewport) {
-        int pointer = internal_native_GetBackgroundDrawList__1(viewport.native_address);
+    public static ImDrawList GetBackgroundDrawList() {
+        int pointer = internal_native_GetBackgroundDrawList();
         if (pointer == 0)
             return ImDrawList.NULL;
         if (ImDrawList_TEMP_STATIC_GEN_2 == null)
@@ -6558,15 +7310,15 @@ public class ImGui extends IDLBase {
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.GetBackgroundDrawList__1(viewport_addr);
+      var returnedJSObj = imgui.ImGui.prototype.GetBackgroundDrawList();
       if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
       return imgui.getPointer(returnedJSObj);
     */
-    @org.teavm.jso.JSBody(params = {"viewport_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.GetBackgroundDrawList__1(viewport_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_GetBackgroundDrawList__1(int viewport_addr);
+    @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.GetBackgroundDrawList();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_GetBackgroundDrawList();
 
     public static ImDrawList GetForegroundDrawList(ImGuiViewport viewport) {
-        int pointer = internal_native_GetForegroundDrawList__2(viewport.native_address);
+        int pointer = internal_native_GetForegroundDrawList(viewport.native_address);
         if (pointer == 0)
             return ImDrawList.NULL;
         if (ImDrawList_TEMP_STATIC_GEN_3 == null)
@@ -6577,12 +7329,12 @@ public class ImGui extends IDLBase {
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.GetForegroundDrawList__2(viewport_addr);
+      var returnedJSObj = imgui.ImGui.prototype.GetForegroundDrawList(viewport_addr);
       if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
       return imgui.getPointer(returnedJSObj);
     */
-    @org.teavm.jso.JSBody(params = {"viewport_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.GetForegroundDrawList__2(viewport_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_GetForegroundDrawList__2(int viewport_addr);
+    @org.teavm.jso.JSBody(params = {"viewport_addr"}, script = "var returnedJSObj = imgui.ImGui.prototype.GetForegroundDrawList(viewport_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_GetForegroundDrawList(int viewport_addr);
 
     public static ImDrawList GetForegroundDrawList() {
         int pointer = internal_native_GetForegroundDrawList();
@@ -6669,6 +7421,25 @@ public class ImGui extends IDLBase {
     */
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.GetDrawListSharedData();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_GetDrawListSharedData();
+
+    public static IDLString GetStyleColorName(int idx) {
+        int pointer = internal_native_GetStyleColorName(idx);
+        if (pointer == 0)
+            return IDLString.NULL;
+        if (IDLString_TEMP_STATIC_GEN_3 == null)
+            IDLString_TEMP_STATIC_GEN_3 = IDLString.native_new();
+        IDLString_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
+        return IDLString_TEMP_STATIC_GEN_3;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.GetStyleColorName(idx);
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
+    */
+    @org.teavm.jso.JSBody(params = {"idx"}, script = "var returnedJSObj = imgui.ImGui.prototype.GetStyleColorName(idx);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_GetStyleColorName(int idx);
 
     public static void SetStateStorage(ImGuiStorage storage) {
         internal_native_SetStateStorage(storage.native_address);
@@ -6830,7 +7601,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_ColorConvertHSVtoRGB(float h, float s, float v, int out_r_addr, int out_g_addr, int out_b_addr);
 
     public static boolean IsKeyDown(ImGuiKey ImGuiKey) {
-        return internal_native_IsKeyDown((int) ImGuiKey.getValue());
+        return internal_native_IsKeyDown(ImGuiKey.getValue());
     }
 
     /*
@@ -6842,7 +7613,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsKeyDown(int ImGuiKey);
 
     public static boolean IsKeyPressed(ImGuiKey ImGuiKey, boolean repeat) {
-        return internal_native_IsKeyPressed((int) ImGuiKey.getValue(), repeat);
+        return internal_native_IsKeyPressed(ImGuiKey.getValue(), repeat);
     }
 
     /*
@@ -6854,7 +7625,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsKeyPressed(int ImGuiKey, boolean repeat);
 
     public static boolean IsKeyPressed(ImGuiKey ImGuiKey) {
-        return internal_native_IsKeyPressed((int) ImGuiKey.getValue());
+        return internal_native_IsKeyPressed(ImGuiKey.getValue());
     }
 
     /*
@@ -6866,7 +7637,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsKeyPressed(int ImGuiKey);
 
     public static boolean IsKeyReleased(ImGuiKey ImGuiKey) {
-        return internal_native_IsKeyReleased((int) ImGuiKey.getValue());
+        return internal_native_IsKeyReleased(ImGuiKey.getValue());
     }
 
     /*
@@ -6890,7 +7661,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsKeyChordPressed(int key_chord);
 
     public static int GetKeyPressedAmount(ImGuiKey ImGuiKey, float repeat_delay, float rate) {
-        return internal_native_GetKeyPressedAmount((int) ImGuiKey.getValue(), repeat_delay, rate);
+        return internal_native_GetKeyPressedAmount(ImGuiKey.getValue(), repeat_delay, rate);
     }
 
     /*
@@ -6900,6 +7671,25 @@ public class ImGui extends IDLBase {
     */
     @org.teavm.jso.JSBody(params = {"ImGuiKey", "repeat_delay", "rate"}, script = "var returnedJSObj = imgui.ImGui.prototype.GetKeyPressedAmount(ImGuiKey, repeat_delay, rate);return returnedJSObj;")
     public static native int internal_native_GetKeyPressedAmount(int ImGuiKey, float repeat_delay, float rate);
+
+    public static IDLString GetKeyName(ImGuiKey key) {
+        int pointer = internal_native_GetKeyName(key.getValue());
+        if (pointer == 0)
+            return IDLString.NULL;
+        if (IDLString_TEMP_STATIC_GEN_4 == null)
+            IDLString_TEMP_STATIC_GEN_4 = IDLString.native_new();
+        IDLString_TEMP_STATIC_GEN_4.internal_reset(pointer, false);
+        return IDLString_TEMP_STATIC_GEN_4;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.GetKeyName(key);
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
+    */
+    @org.teavm.jso.JSBody(params = {"key"}, script = "var returnedJSObj = imgui.ImGui.prototype.GetKeyName(key);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_GetKeyName(int key);
 
     public static void SetNextFrameWantCaptureKeyboard(boolean want_capture_keyboard) {
         internal_native_SetNextFrameWantCaptureKeyboard(want_capture_keyboard);
@@ -6913,7 +7703,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetNextFrameWantCaptureKeyboard(boolean want_capture_keyboard);
 
     public static boolean Shortcut(int key_chord, ImGuiInputFlags flags) {
-        return internal_native_Shortcut(key_chord, (int) flags.getValue());
+        return internal_native_Shortcut(key_chord, flags.getValue());
     }
 
     /*
@@ -6937,7 +7727,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_Shortcut(int key_chord);
 
     public static void SetNextItemShortcut(int key_chord, ImGuiInputFlags flags) {
-        internal_native_SetNextItemShortcut(key_chord, (int) flags.getValue());
+        internal_native_SetNextItemShortcut(key_chord, flags.getValue());
     }
 
     /*
@@ -6959,7 +7749,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetNextItemShortcut(int key_chord);
 
     public static void SetItemKeyOwner(ImGuiKey key) {
-        internal_native_SetItemKeyOwner((int) key.getValue());
+        internal_native_SetItemKeyOwner(key.getValue());
     }
 
     /*
@@ -6970,7 +7760,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetItemKeyOwner(int key);
 
     public static boolean IsMouseDown(ImGuiMouseButton ImGuiMouseButton) {
-        return internal_native_IsMouseDown((int) ImGuiMouseButton.getValue());
+        return internal_native_IsMouseDown(ImGuiMouseButton.getValue());
     }
 
     /*
@@ -6982,7 +7772,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsMouseDown(int ImGuiMouseButton);
 
     public static boolean IsMouseClicked(ImGuiMouseButton ImGuiMouseButton, boolean repeat) {
-        return internal_native_IsMouseClicked((int) ImGuiMouseButton.getValue(), repeat);
+        return internal_native_IsMouseClicked(ImGuiMouseButton.getValue(), repeat);
     }
 
     /*
@@ -6994,7 +7784,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsMouseClicked(int ImGuiMouseButton, boolean repeat);
 
     public static boolean IsMouseClicked(ImGuiMouseButton ImGuiMouseButton) {
-        return internal_native_IsMouseClicked((int) ImGuiMouseButton.getValue());
+        return internal_native_IsMouseClicked(ImGuiMouseButton.getValue());
     }
 
     /*
@@ -7006,7 +7796,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsMouseClicked(int ImGuiMouseButton);
 
     public static boolean IsMouseReleased(ImGuiMouseButton ImGuiMouseButton) {
-        return internal_native_IsMouseReleased((int) ImGuiMouseButton.getValue());
+        return internal_native_IsMouseReleased(ImGuiMouseButton.getValue());
     }
 
     /*
@@ -7018,7 +7808,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsMouseReleased(int ImGuiMouseButton);
 
     public static boolean IsMouseDoubleClicked(ImGuiMouseButton ImGuiMouseButton) {
-        return internal_native_IsMouseDoubleClicked((int) ImGuiMouseButton.getValue());
+        return internal_native_IsMouseDoubleClicked(ImGuiMouseButton.getValue());
     }
 
     /*
@@ -7029,8 +7819,20 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"ImGuiMouseButton"}, script = "var returnedJSObj = imgui.ImGui.prototype.IsMouseDoubleClicked(ImGuiMouseButton);return returnedJSObj;")
     public static native boolean internal_native_IsMouseDoubleClicked(int ImGuiMouseButton);
 
+    public static boolean IsMouseReleasedWithDelay(ImGuiMouseButton ImGuiMouseButton, float delay) {
+        return internal_native_IsMouseReleasedWithDelay(ImGuiMouseButton.getValue(), delay);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.IsMouseReleasedWithDelay(ImGuiMouseButton, delay);
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"ImGuiMouseButton", "delay"}, script = "var returnedJSObj = imgui.ImGui.prototype.IsMouseReleasedWithDelay(ImGuiMouseButton, delay);return returnedJSObj;")
+    public static native boolean internal_native_IsMouseReleasedWithDelay(int ImGuiMouseButton, float delay);
+
     public static int GetMouseClickedCount(ImGuiMouseButton ImGuiMouseButton) {
-        return internal_native_GetMouseClickedCount((int) ImGuiMouseButton.getValue());
+        return internal_native_GetMouseClickedCount(ImGuiMouseButton.getValue());
     }
 
     /*
@@ -7140,7 +7942,7 @@ public class ImGui extends IDLBase {
     public static native int internal_native_GetMousePosOnOpeningCurrentPopup();
 
     public static boolean IsMouseDragging(ImGuiMouseButton ImGuiMouseButton, float lock_threshold) {
-        return internal_native_IsMouseDragging((int) ImGuiMouseButton.getValue(), lock_threshold);
+        return internal_native_IsMouseDragging(ImGuiMouseButton.getValue(), lock_threshold);
     }
 
     /*
@@ -7152,7 +7954,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsMouseDragging(int ImGuiMouseButton, float lock_threshold);
 
     public static boolean IsMouseDragging(ImGuiMouseButton ImGuiMouseButton) {
-        return internal_native_IsMouseDragging((int) ImGuiMouseButton.getValue());
+        return internal_native_IsMouseDragging(ImGuiMouseButton.getValue());
     }
 
     /*
@@ -7164,7 +7966,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsMouseDragging(int ImGuiMouseButton);
 
     public static ImVec2 GetMouseDragDelta(ImGuiMouseButton ImGuiMouseButton, float lock_threshold) {
-        int pointer = internal_native_GetMouseDragDelta((int) ImGuiMouseButton.getValue(), lock_threshold);
+        int pointer = internal_native_GetMouseDragDelta(ImGuiMouseButton.getValue(), lock_threshold);
         if (pointer == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_STATIC_GEN_16 == null)
@@ -7183,7 +7985,7 @@ public class ImGui extends IDLBase {
     public static native int internal_native_GetMouseDragDelta(int ImGuiMouseButton, float lock_threshold);
 
     public static ImVec2 GetMouseDragDelta(ImGuiMouseButton ImGuiMouseButton) {
-        int pointer = internal_native_GetMouseDragDelta((int) ImGuiMouseButton.getValue());
+        int pointer = internal_native_GetMouseDragDelta(ImGuiMouseButton.getValue());
         if (pointer == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_STATIC_GEN_17 == null)
@@ -7221,7 +8023,7 @@ public class ImGui extends IDLBase {
     public static native int internal_native_GetMouseDragDelta();
 
     public static void ResetMouseDragDelta(ImGuiMouseButton ImGuiMouseButton) {
-        internal_native_ResetMouseDragDelta((int) ImGuiMouseButton.getValue());
+        internal_native_ResetMouseDragDelta(ImGuiMouseButton.getValue());
     }
 
     /*
@@ -7275,6 +8077,25 @@ public class ImGui extends IDLBase {
     */
     @org.teavm.jso.JSBody(params = {"want_capture_mouse"}, script = "imgui.ImGui.prototype.SetNextFrameWantCaptureMouse(want_capture_mouse);")
     public static native void internal_native_SetNextFrameWantCaptureMouse(boolean want_capture_mouse);
+
+    public static IDLString GetClipboardText() {
+        int pointer = internal_native_GetClipboardText();
+        if (pointer == 0)
+            return IDLString.NULL;
+        if (IDLString_TEMP_STATIC_GEN_5 == null)
+            IDLString_TEMP_STATIC_GEN_5 = IDLString.native_new();
+        IDLString_TEMP_STATIC_GEN_5.internal_reset(pointer, false);
+        return IDLString_TEMP_STATIC_GEN_5;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.ImGui.prototype.GetClipboardText();
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
+    */
+    @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.GetClipboardText();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_GetClipboardText();
 
     public static void SetClipboardText(String text) {
         internal_native_SetClipboardText(text);
@@ -7335,10 +8156,10 @@ public class ImGui extends IDLBase {
         int pointer = internal_native_SaveIniSettingsToMemory();
         if (pointer == 0)
             return IDLString.NULL;
-        if (IDLString_TEMP_STATIC_GEN_0 == null)
-            IDLString_TEMP_STATIC_GEN_0 = IDLString.native_new();
-        IDLString_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
-        return IDLString_TEMP_STATIC_GEN_0;
+        if (IDLString_TEMP_STATIC_GEN_6 == null)
+            IDLString_TEMP_STATIC_GEN_6 = IDLString.native_new();
+        IDLString_TEMP_STATIC_GEN_6.internal_reset(pointer, false);
+        return IDLString_TEMP_STATIC_GEN_6;
     }
 
     /*
@@ -7361,6 +8182,28 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"text"}, script = "imgui.ImGui.prototype.DebugTextEncoding(text);")
     public static native void internal_native_DebugTextEncoding(String text);
 
+    public static void DebugFlashStyleColor(int idx) {
+        internal_native_DebugFlashStyleColor(idx);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      imgui.ImGui.prototype.DebugFlashStyleColor(idx);
+    */
+    @org.teavm.jso.JSBody(params = {"idx"}, script = "imgui.ImGui.prototype.DebugFlashStyleColor(idx);")
+    public static native void internal_native_DebugFlashStyleColor(int idx);
+
+    public static void DebugStartItemPicker() {
+        internal_native_DebugStartItemPicker();
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      imgui.ImGui.prototype.DebugStartItemPicker();
+    */
+    @org.teavm.jso.JSBody(script = "imgui.ImGui.prototype.DebugStartItemPicker();")
+    public static native void internal_native_DebugStartItemPicker();
+
     public static boolean DebugCheckVersionAndDataLayout(String version_str, long sz_io, long sz_style, long sz_vec2, long sz_vec4, long sz_drawvert, long sz_drawidx) {
         return internal_native_DebugCheckVersionAndDataLayout(version_str, (int) sz_io, (int) sz_style, (int) sz_vec2, (int) sz_vec4, (int) sz_drawvert, (int) sz_drawidx);
     }
@@ -7373,24 +8216,34 @@ public class ImGui extends IDLBase {
     @org.teavm.jso.JSBody(params = {"version_str", "sz_io", "sz_style", "sz_vec2", "sz_vec4", "sz_drawvert", "sz_drawidx"}, script = "var returnedJSObj = imgui.ImGui.prototype.DebugCheckVersionAndDataLayout(version_str, sz_io, sz_style, sz_vec2, sz_vec4, sz_drawvert, sz_drawidx);return returnedJSObj;")
     public static native boolean internal_native_DebugCheckVersionAndDataLayout(String version_str, int sz_io, int sz_style, int sz_vec2, int sz_vec4, int sz_drawvert, int sz_drawidx);
 
-    public static ImGuiPlatformIO GetPlatformIO() {
-        int pointer = internal_native_GetPlatformIO();
+    public static IDLBase MemAlloc(long size) {
+        int pointer = internal_native_MemAlloc((int) size);
         if (pointer == 0)
-            return ImGuiPlatformIO.NULL;
-        if (ImGuiPlatformIO_TEMP_STATIC_GEN_0 == null)
-            ImGuiPlatformIO_TEMP_STATIC_GEN_0 = ImGuiPlatformIO.native_new();
-        ImGuiPlatformIO_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
-        return ImGuiPlatformIO_TEMP_STATIC_GEN_0;
+            return IDLBase.NULL;
+        if (IDLBase_TEMP_STATIC_GEN_0 == null)
+            IDLBase_TEMP_STATIC_GEN_0 = IDLBase.native_new();
+        IDLBase_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLBase_TEMP_STATIC_GEN_0;
     }
 
     /*
       [-TEAVM;-NATIVE]
-      var returnedJSObj = imgui.ImGui.prototype.GetPlatformIO();
-      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
-      return imgui.getPointer(returnedJSObj);
+      var returnedJSObj = imgui.ImGui.prototype.MemAlloc(size);
+      return returnedJSObj;
     */
-    @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGui.prototype.GetPlatformIO();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_GetPlatformIO();
+    @org.teavm.jso.JSBody(params = {"size"}, script = "var returnedJSObj = imgui.ImGui.prototype.MemAlloc(size);return returnedJSObj;")
+    public static native int internal_native_MemAlloc(int size);
+
+    public static void MemFree(IDLBase ptr) {
+        internal_native_MemFree(ptr.native_void_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      imgui.ImGui.prototype.MemFree(ptr_addr);
+    */
+    @org.teavm.jso.JSBody(params = {"ptr_addr"}, script = "imgui.ImGui.prototype.MemFree(ptr_addr);")
+    public static native void internal_native_MemFree(int ptr_addr);
 
     public static void UpdatePlatformWindows() {
         internal_native_UpdatePlatformWindows();

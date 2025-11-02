@@ -9,9 +9,9 @@ import com.github.xpenatan.jParser.idl.IDLBase;
 
 public class ImDrawCmd extends IDLBase {
 
-    private ImVec4 ImVec4_TEMP_GEN_0;
+    private ImTextureIDRef ImTextureIDRef_TEMP_GEN_0;
 
-    private IDLBase IDLBase_TEMP_GEN_0;
+    private ImVec4 ImVec4_TEMP_GEN_0;
 
     static public final ImDrawCmd NULL = ImDrawCmd.native_new();
 
@@ -38,6 +38,23 @@ ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
 delete nativeObject;
 */
     public static native void internal_native_deleteNative(long this_addr);
+
+    public ImTextureIDRef GetTexID() {
+        long pointer = internal_native_GetTexID(native_address);
+        if (pointer == 0)
+            return ImTextureIDRef.NULL;
+        if (ImTextureIDRef_TEMP_GEN_0 == null)
+            ImTextureIDRef_TEMP_GEN_0 = ImTextureIDRef.native_new();
+        ImTextureIDRef_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImTextureIDRef_TEMP_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
+static ImTextureIDRef copy_addr;
+copy_addr = nativeObject->GetTexID();
+return (jlong)&copy_addr;*/
+    public static native long internal_native_GetTexID(long this_addr);
 
     public ImVec4 get_ClipRect() {
         long pointer = internal_native_get_ClipRect(native_address);
@@ -124,30 +141,4 @@ ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
 nativeObject->ElemCount = ElemCount;
 */
     public static native void internal_native_set_ElemCount(long this_addr, int ElemCount);
-
-    public IDLBase get_TextureId() {
-        long pointer = internal_native_get_TextureId(native_address);
-        if (pointer == 0)
-            return IDLBase.NULL;
-        if (IDLBase_TEMP_GEN_0 == null)
-            IDLBase_TEMP_GEN_0 = IDLBase.native_new();
-        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
-        return IDLBase_TEMP_GEN_0;
-    }
-
-    /*[-JNI;-NATIVE]
-ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
-return (jlong)nativeObject->TextureId;
-*/
-    public static native long internal_native_get_TextureId(long this_addr);
-
-    public void set_TextureId(IDLBase TextureId) {
-        internal_native_set_TextureId(native_address, TextureId.native_void_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
-nativeObject->TextureId = (void**)TextureId_addr;
-*/
-    public static native void internal_native_set_TextureId(long this_addr, long TextureId_addr);
 }

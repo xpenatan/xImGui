@@ -24,6 +24,11 @@ allprojects  {
         mavenCentral()
         maven { url = uri("https://central.sonatype.com/repository/maven-snapshots/") }
         maven { url = uri("https://jitpack.io") }
+
+        maven {
+            url = uri("http://teavm.org/maven/repository/")
+            isAllowInsecureProtocol = true
+        }
     }
 
     configurations.configureEach {

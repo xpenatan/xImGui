@@ -9,6 +9,8 @@ import gen.com.github.xpenatan.jParser.idl.IDLBase;
 
 public class ImGuiPlatformIO extends IDLBase {
 
+    private ImVectorImTextureDataPtr ImVectorImTextureDataPtr_TEMP_GEN_0;
+
     static public final ImGuiPlatformIO NULL = ImGuiPlatformIO.native_new();
 
     /**
@@ -35,4 +37,34 @@ imgui.destroy(jsObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPlatformIO);imgui.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
+
+    public ImVectorImTextureDataPtr get_Textures() {
+        int pointer = internal_native_get_Textures(native_address);
+        if (pointer == 0)
+            return ImVectorImTextureDataPtr.NULL;
+        if (ImVectorImTextureDataPtr_TEMP_GEN_0 == null)
+            ImVectorImTextureDataPtr_TEMP_GEN_0 = ImVectorImTextureDataPtr.native_new();
+        ImVectorImTextureDataPtr_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImVectorImTextureDataPtr_TEMP_GEN_0;
+    }
+
+    /*[-TEAVM;-NATIVE]
+var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPlatformIO);
+var returnedJSObj = jsObj.get_Textures();
+if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
+return imgui.getPointer(returnedJSObj);
+*/
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPlatformIO);var returnedJSObj = jsObj.get_Textures();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_get_Textures(int this_addr);
+
+    public void set_Textures(ImVectorImTextureDataPtr Textures) {
+        internal_native_set_Textures(native_address, Textures.native_address);
+    }
+
+    /*[-TEAVM;-NATIVE]
+var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPlatformIO);
+jsObj.set_Textures(Textures_addr);
+*/
+    @org.teavm.jso.JSBody(params = {"this_addr", "Textures_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPlatformIO);jsObj.set_Textures(Textures_addr);")
+    public static native void internal_native_set_Textures(int this_addr, int Textures_addr);
 }

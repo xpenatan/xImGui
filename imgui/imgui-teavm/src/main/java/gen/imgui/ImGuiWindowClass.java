@@ -6,6 +6,9 @@
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
+import gen.imgui.enums.ImGuiViewportFlags;
+import gen.imgui.enums.ImGuiTabItemFlags;
+import gen.imgui.enums.ImGuiDockNodeFlags;
 
 public class ImGuiWindowClass extends IDLBase {
 
@@ -116,7 +119,13 @@ jsObj.set_FocusRouteParentWindowId(FocusRouteParentWindowId);
 
     public ImGuiViewportFlags get_ViewportFlagsOverrideSet() {
         int value = internal_native_get_ViewportFlagsOverrideSet(native_address);
-        return ImGuiViewportFlags.MAP.get(value);
+        ImGuiViewportFlags[] values = ImGuiViewportFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiViewportFlags enumVal = values[i];
+            if (enumVal != ImGuiViewportFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiViewportFlags.CUSTOM.setValue(value);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -127,7 +136,7 @@ return jsObj.get_ViewportFlagsOverrideSet();
     public static native int internal_native_get_ViewportFlagsOverrideSet(int this_addr);
 
     public void set_ViewportFlagsOverrideSet(ImGuiViewportFlags ViewportFlagsOverrideSet) {
-        internal_native_set_ViewportFlagsOverrideSet(native_address, (int) ViewportFlagsOverrideSet.getValue());
+        internal_native_set_ViewportFlagsOverrideSet(native_address, ViewportFlagsOverrideSet.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
@@ -139,7 +148,13 @@ jsObj.set_ViewportFlagsOverrideSet(ViewportFlagsOverrideSet);
 
     public ImGuiViewportFlags get_ViewportFlagsOverrideClear() {
         int value = internal_native_get_ViewportFlagsOverrideClear(native_address);
-        return ImGuiViewportFlags.MAP.get(value);
+        ImGuiViewportFlags[] values = ImGuiViewportFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiViewportFlags enumVal = values[i];
+            if (enumVal != ImGuiViewportFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiViewportFlags.CUSTOM.setValue(value);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -150,7 +165,7 @@ return jsObj.get_ViewportFlagsOverrideClear();
     public static native int internal_native_get_ViewportFlagsOverrideClear(int this_addr);
 
     public void set_ViewportFlagsOverrideClear(ImGuiViewportFlags ViewportFlagsOverrideClear) {
-        internal_native_set_ViewportFlagsOverrideClear(native_address, (int) ViewportFlagsOverrideClear.getValue());
+        internal_native_set_ViewportFlagsOverrideClear(native_address, ViewportFlagsOverrideClear.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
@@ -162,7 +177,13 @@ jsObj.set_ViewportFlagsOverrideClear(ViewportFlagsOverrideClear);
 
     public ImGuiTabItemFlags get_TabItemFlagsOverrideSet() {
         int value = internal_native_get_TabItemFlagsOverrideSet(native_address);
-        return ImGuiTabItemFlags.MAP.get(value);
+        ImGuiTabItemFlags[] values = ImGuiTabItemFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiTabItemFlags enumVal = values[i];
+            if (enumVal != ImGuiTabItemFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiTabItemFlags.CUSTOM.setValue(value);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -173,7 +194,7 @@ return jsObj.get_TabItemFlagsOverrideSet();
     public static native int internal_native_get_TabItemFlagsOverrideSet(int this_addr);
 
     public void set_TabItemFlagsOverrideSet(ImGuiTabItemFlags TabItemFlagsOverrideSet) {
-        internal_native_set_TabItemFlagsOverrideSet(native_address, (int) TabItemFlagsOverrideSet.getValue());
+        internal_native_set_TabItemFlagsOverrideSet(native_address, TabItemFlagsOverrideSet.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
@@ -185,7 +206,13 @@ jsObj.set_TabItemFlagsOverrideSet(TabItemFlagsOverrideSet);
 
     public ImGuiDockNodeFlags get_DockNodeFlagsOverrideSet() {
         int value = internal_native_get_DockNodeFlagsOverrideSet(native_address);
-        return ImGuiDockNodeFlags.MAP.get(value);
+        ImGuiDockNodeFlags[] values = ImGuiDockNodeFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiDockNodeFlags enumVal = values[i];
+            if (enumVal != ImGuiDockNodeFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiDockNodeFlags.CUSTOM.setValue(value);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -196,7 +223,7 @@ return jsObj.get_DockNodeFlagsOverrideSet();
     public static native int internal_native_get_DockNodeFlagsOverrideSet(int this_addr);
 
     public void set_DockNodeFlagsOverrideSet(ImGuiDockNodeFlags DockNodeFlagsOverrideSet) {
-        internal_native_set_DockNodeFlagsOverrideSet(native_address, (int) DockNodeFlagsOverrideSet.getValue());
+        internal_native_set_DockNodeFlagsOverrideSet(native_address, DockNodeFlagsOverrideSet.getValue());
     }
 
     /*[-TEAVM;-NATIVE]

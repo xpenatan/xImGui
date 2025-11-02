@@ -11,8 +11,6 @@ import gen.com.github.xpenatan.jParser.idl.IDLBase;
 
 public class ImFont extends IDLBase {
 
-    private ImFontConfig ImFontConfig_TEMP_GEN_0;
-
     public final static ImFont NULL = native_new();
 
     public static ImFont native_new() {
@@ -22,18 +20,21 @@ public class ImFont extends IDLBase {
     private ImFont(byte v, char c) {
     }
 
-    public void setName(String name) {
-        updateNameNATIVE((int) native_address, name, get_ConfigData().get_SizePixels());
-    }
-
-    /*
-      [-TEAVM;-NATIVE]
-              var font = [MODULE].wrapPointer(addr, [MODULE].ImFont);
-              [MODULE].ImHelper.prototype.updateFontName(font, name, size);
-    */
-    @org.teavm.jso.JSBody(params = {"addr", "name", "size"}, script = "var font = imgui.wrapPointer(addr, imgui.ImFont); imgui.ImHelper.prototype.updateFontName(font, name, size);")
-    private static native void updateNameNATIVE(int addr, String name, float size);
-
+    // public native ImFontConfig get_ConfigData();
+    // 
+    // public void setName(String name) {
+    // updateNameNATIVE(native_address, name, get_ConfigData().get_SizePixels());
+    // }
+    // 
+    // /*[-TEAVM;-NATIVE]
+    // var font = [MODULE].wrapPointer(addr, [MODULE].ImFont);
+    // [MODULE].ImHelper.prototype.updateFontName(font, name, size);
+    // */
+    // /*[-JNI;-NATIVE]
+    // ImFont* font = (ImFont*)addr;
+    // ImHelper::updateFontName(font, name, size);
+    // */
+    // private static native void updateNameNATIVE(long addr, String name, float size);
     protected void deleteNative() {
         internal_native_deleteNative(native_address);
     }
@@ -45,24 +46,4 @@ public class ImFont extends IDLBase {
     */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFont);imgui.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
-
-    public ImFontConfig get_ConfigData() {
-        int pointer = internal_native_get_ConfigData(native_address);
-        if (pointer == 0)
-            return ImFontConfig.NULL;
-        if (ImFontConfig_TEMP_GEN_0 == null)
-            ImFontConfig_TEMP_GEN_0 = ImFontConfig.native_new();
-        ImFontConfig_TEMP_GEN_0.internal_reset(pointer, false);
-        return ImFontConfig_TEMP_GEN_0;
-    }
-
-    /*
-      [-TEAVM;-NATIVE]
-      var jsObj = imgui.wrapPointer(this_addr, imgui.ImFont);
-      var returnedJSObj = jsObj.get_ConfigData();
-      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
-      return imgui.getPointer(returnedJSObj);
-    */
-    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFont);var returnedJSObj = jsObj.get_ConfigData();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_get_ConfigData(int this_addr);
 }

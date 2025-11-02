@@ -9,7 +9,23 @@ import gen.com.github.xpenatan.jParser.idl.IDLBase;
 
 public class ImGuiStorage extends IDLBase {
 
+    private IDLBase IDLBase_TEMP_GEN_0;
+
+    private ImVectorImGuiStoragePair ImVectorImGuiStoragePair_TEMP_GEN_0;
+
     static public final ImGuiStorage NULL = ImGuiStorage.native_new();
+
+    public ImGuiStorage() {
+        int addr = internal_native_create();
+        internal_reset(addr, true);
+    }
+
+    /*[-TEAVM;-NATIVE]
+var jsObj = new imgui.ImGuiStorage();
+return imgui.getPointer(jsObj);
+*/
+    @org.teavm.jso.JSBody(script = "var jsObj = new imgui.ImGuiStorage();return imgui.getPointer(jsObj);")
+    public static native int internal_native_create();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -151,4 +167,52 @@ jsObj.SetFloat(key, val);
 */
     @org.teavm.jso.JSBody(params = {"this_addr", "key", "val"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStorage);jsObj.SetFloat(key, val);")
     public static native void internal_native_SetFloat(int this_addr, int key, float val);
+
+    public IDLBase GetVoidPtr(int key) {
+        int pointer = internal_native_GetVoidPtr(native_address, key);
+        if (pointer == 0)
+            return IDLBase.NULL;
+        if (IDLBase_TEMP_GEN_0 == null)
+            IDLBase_TEMP_GEN_0 = IDLBase.native_new();
+        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
+        return IDLBase_TEMP_GEN_0;
+    }
+
+    /*[-TEAVM;-NATIVE]
+var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStorage);
+var returnedJSObj = jsObj.GetVoidPtr(key);
+return returnedJSObj;
+*/
+    @org.teavm.jso.JSBody(params = {"this_addr", "key"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStorage);var returnedJSObj = jsObj.GetVoidPtr(key);return returnedJSObj;")
+    public static native int internal_native_GetVoidPtr(int this_addr, int key);
+
+    public void SetVoidPtr(int key, IDLBase val) {
+        internal_native_SetVoidPtr(native_address, key, val.native_void_address);
+    }
+
+    /*[-TEAVM;-NATIVE]
+var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStorage);
+jsObj.SetVoidPtr(key, val_addr);
+*/
+    @org.teavm.jso.JSBody(params = {"this_addr", "key", "val_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStorage);jsObj.SetVoidPtr(key, val_addr);")
+    public static native void internal_native_SetVoidPtr(int this_addr, int key, int val_addr);
+
+    public ImVectorImGuiStoragePair get_Data() {
+        int pointer = internal_native_get_Data(native_address);
+        if (pointer == 0)
+            return ImVectorImGuiStoragePair.NULL;
+        if (ImVectorImGuiStoragePair_TEMP_GEN_0 == null)
+            ImVectorImGuiStoragePair_TEMP_GEN_0 = ImVectorImGuiStoragePair.native_new();
+        ImVectorImGuiStoragePair_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImVectorImGuiStoragePair_TEMP_GEN_0;
+    }
+
+    /*[-TEAVM;-NATIVE]
+var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStorage);
+var returnedJSObj = jsObj.get_Data();
+if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
+return imgui.getPointer(returnedJSObj);
+*/
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStorage);var returnedJSObj = jsObj.get_Data();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_get_Data(int this_addr);
 }

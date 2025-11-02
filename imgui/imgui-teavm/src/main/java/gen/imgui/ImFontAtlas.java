@@ -17,8 +17,6 @@ public class ImFontAtlas extends IDLBase {
 
     private ImFont ImFont_TEMP_GEN_1;
 
-    private IDLBase IDLBase_TEMP_GEN_0;
-
     public final static ImFontAtlas NULL = native_new();
 
     public static ImFontAtlas native_new() {
@@ -28,38 +26,49 @@ public class ImFontAtlas extends IDLBase {
     private ImFontAtlas(byte v, char c) {
     }
 
-    public ImFont AddFontFromMemoryTTF(byte[] fontData, int font_size) {
-        IDLByteArray byteArray = new IDLByteArray(fontData.length);
-        byteArray.copy(fontData);
-        return AddFontFromMemoryTTF(byteArray, byteArray.getSize(), font_size);
-    }
-
-    public void GetTexDataAsRGBA32(IDLByteArray pixelBuffer, IDLInt outWidth, IDLInt outHeight) {
-        GetTexDataAsRGBA32NATIVE((int) native_address, (int) pixelBuffer.native_address, (int) outWidth.native_void_address, (int) outHeight.native_void_address);
-    }
-
-    public void GetTexDataAsAlpha8(IDLByteArray pixelBuffer, IDLInt outWidth, IDLInt outHeight) {
-        GetTexDataAsAlpha8((int) native_address, (int) pixelBuffer.native_address, (int) outWidth.native_void_address, (int) outHeight.native_void_address);
-    }
-
-    /*
-      [-TEAVM;-NATIVE]
-              var fontAtlas = [MODULE].wrapPointer(addr, [MODULE].ImFontAtlas);
-              var pixelBufferArray = [MODULE].wrapPointer(pixelBufferAddr, [MODULE].IDLByteArray);
-              [MODULE].ImHelper.prototype.memcpyFont32(fontAtlas, pixelBufferArray, widthAddr, heightAddr);
-    */
-    @org.teavm.jso.JSBody(params = {"addr", "pixelBufferAddr", "widthAddr", "heightAddr"}, script = "var fontAtlas = imgui.wrapPointer(addr, imgui.ImFontAtlas); var pixelBufferArray = imgui.wrapPointer(pixelBufferAddr, imgui.IDLByteArray); imgui.ImHelper.prototype.memcpyFont32(fontAtlas, pixelBufferArray, widthAddr, heightAddr);")
-    private static native void GetTexDataAsRGBA32NATIVE(int addr, int pixelBufferAddr, int widthAddr, int heightAddr);
-
-    /*
-      [-TEAVM;-NATIVE]
-              var fontAtlas = [MODULE].wrapPointer(addr, [MODULE].ImFontAtlas);
-              var pixelBufferArray = [MODULE].wrapPointer(pixelBufferAddr, [MODULE].IDLByteArray);
-              [MODULE].ImHelper.prototype.memcpyFont8(fontAtlas, pixelBufferArray, widthAddr, heightAddr);
-    */
-    @org.teavm.jso.JSBody(params = {"addr", "pixelBufferAddr", "widthAddr", "heightAddr"}, script = "var fontAtlas = imgui.wrapPointer(addr, imgui.ImFontAtlas); var pixelBufferArray = imgui.wrapPointer(pixelBufferAddr, imgui.IDLByteArray); imgui.ImHelper.prototype.memcpyFont8(fontAtlas, pixelBufferArray, widthAddr, heightAddr);")
-    private static native void GetTexDataAsAlpha8(int addr, int pixelBufferAddr, int widthAddr, int heightAddr);
-
+    // public ImFont AddFontFromMemoryTTF(byte[] fontData, int font_size) {
+    // IDLByteArray byteArray = new IDLByteArray(fontData.length);
+    // byteArray.copy(fontData);
+    // return AddFontFromMemoryTTF(byteArray, byteArray.getSize(), font_size);
+    // }
+    // 
+    // public void GetTexDataAsRGBA32(IDLByteArray pixelBuffer, IDLInt outWidth, IDLInt outHeight) {
+    // GetTexDataAsRGBA32NATIVE(native_address, pixelBuffer.native_address, outWidth.native_void_address, outHeight.native_void_address);
+    // }
+    // 
+    // public void GetTexDataAsAlpha8(IDLByteArray pixelBuffer, IDLInt outWidth, IDLInt outHeight) {
+    // GetTexDataAsAlpha8(native_address, pixelBuffer.native_address, outWidth.native_void_address, outHeight.native_void_address);
+    // }
+    // 
+    // /*[-TEAVM;-NATIVE]
+    // var fontAtlas = [MODULE].wrapPointer(addr, [MODULE].ImFontAtlas);
+    // var pixelBufferArray = [MODULE].wrapPointer(pixelBufferAddr, [MODULE].IDLByteArray);
+    // [MODULE].ImHelper.prototype.memcpyFont32(fontAtlas, pixelBufferArray, widthAddr, heightAddr);
+    // */
+    // /*[-JNI;-NATIVE]
+    // ImFontAtlas* fontAtlas = (ImFontAtlas*)addr;
+    // IDLByteArray* pixelBuffer = (IDLByteArray*)pixelBufferAddr;
+    // int* widthPtr = (int*)widthAddr;
+    // int* heightPtr = (int*)heightAddr;
+    // ImHelper::memcpyFont32(fontAtlas, pixelBuffer, widthPtr, heightPtr);
+    // */
+    // private static native void GetTexDataAsRGBA32NATIVE(long addr, long pixelBufferAddr, long widthAddr, long heightAddr);
+    // 
+    // /*[-TEAVM;-NATIVE]
+    // var fontAtlas = [MODULE].wrapPointer(addr, [MODULE].ImFontAtlas);
+    // var pixelBufferArray = [MODULE].wrapPointer(pixelBufferAddr, [MODULE].IDLByteArray);
+    // [MODULE].ImHelper.prototype.memcpyFont8(fontAtlas, pixelBufferArray, widthAddr, heightAddr);
+    // */
+    // /*[-JNI;-NATIVE]
+    // ImFontAtlas* fontAtlas = (ImFontAtlas*)addr;
+    // IDLByteArray* pixelBuffer = (IDLByteArray*)pixelBufferAddr;
+    // int* widthPtr = (int*)widthAddr;
+    // int* heightPtr = (int*)heightAddr;
+    // ImHelper::memcpyFont8(fontAtlas, pixelBuffer, widthPtr, heightPtr);
+    // */
+    // private static native void GetTexDataAsAlpha8(long addr, long pixelBufferAddr, long widthAddr, long heightAddr);
+    // 
+    // public native ImFont AddFontFromMemoryTTF(IDLBase font_data, int font_data_size, int size_pixels);
     protected void deleteNative() {
         internal_native_deleteNative(native_address);
     }
@@ -111,34 +120,4 @@ public class ImFontAtlas extends IDLBase {
     */
     @org.teavm.jso.JSBody(params = {"this_addr", "font_data_addr", "font_data_size", "size_pixels"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontAtlas);var returnedJSObj = jsObj.AddFontFromMemoryTTF(font_data_addr, font_data_size, size_pixels);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_AddFontFromMemoryTTF(int this_addr, int font_data_addr, int font_data_size, int size_pixels);
-
-    public IDLBase get_TexID() {
-        int pointer = internal_native_get_TexID(native_address);
-        if (pointer == 0)
-            return IDLBase.NULL;
-        if (IDLBase_TEMP_GEN_0 == null)
-            IDLBase_TEMP_GEN_0 = IDLBase.native_new();
-        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
-        return IDLBase_TEMP_GEN_0;
-    }
-
-    /*
-      [-TEAVM;-NATIVE]
-      var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontAtlas);
-      return jsObj.get_TexID();
-    */
-    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontAtlas);return jsObj.get_TexID();")
-    public static native int internal_native_get_TexID(int this_addr);
-
-    public void set_TexID(IDLBase TexID) {
-        internal_native_set_TexID(native_address, TexID.native_void_address);
-    }
-
-    /*
-      [-TEAVM;-NATIVE]
-      var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontAtlas);
-      jsObj.set_TexID(TexID_addr);
-    */
-    @org.teavm.jso.JSBody(params = {"this_addr", "TexID_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontAtlas);jsObj.set_TexID(TexID_addr);")
-    public static native void internal_native_set_TexID(int this_addr, int TexID_addr);
 }

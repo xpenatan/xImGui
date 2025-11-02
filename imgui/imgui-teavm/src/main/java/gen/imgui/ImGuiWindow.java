@@ -6,6 +6,7 @@
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
+import gen.imgui.enums.ImGuiWindowFlags;
 
 public class ImGuiWindow extends IDLBase {
 
@@ -15,7 +16,7 @@ public class ImGuiWindow extends IDLBase {
 
     private ImRect ImRect_TEMP_GEN_2;
 
-    private ImVectorInt ImVectorInt_TEMP_GEN_0;
+    private ImVectorUnsignedInt ImVectorUnsignedInt_TEMP_GEN_0;
 
     private ImGuiWindowTempData ImGuiWindowTempData_TEMP_GEN_0;
 
@@ -54,8 +55,6 @@ public class ImGuiWindow extends IDLBase {
     private ImGuiDockNode ImGuiDockNode_TEMP_GEN_0;
 
     private ImGuiDockNode ImGuiDockNode_TEMP_GEN_1;
-
-    private ImRect ImRect_TEMP_GEN_3;
 
     static public final ImGuiWindow NULL = ImGuiWindow.native_new();
 
@@ -116,18 +115,6 @@ return imgui.getPointer(returnedJSObj);
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindow);var returnedJSObj = jsObj.Rect();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_Rect(int this_addr);
 
-    public float CalcFontSize() {
-        return internal_native_CalcFontSize(native_address);
-    }
-
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindow);
-var returnedJSObj = jsObj.CalcFontSize();
-return returnedJSObj;
-*/
-    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindow);var returnedJSObj = jsObj.CalcFontSize();return returnedJSObj;")
-    public static native float internal_native_CalcFontSize(int this_addr);
-
     public ImRect TitleBarRect() {
         int pointer = internal_native_TitleBarRect(native_address);
         if (pointer == 0)
@@ -166,14 +153,14 @@ return imgui.getPointer(returnedJSObj);
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindow);var returnedJSObj = jsObj.MenuBarRect();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_MenuBarRect(int this_addr);
 
-    public ImVectorInt get_IDStack() {
+    public ImVectorUnsignedInt get_IDStack() {
         int pointer = internal_native_get_IDStack(native_address);
         if (pointer == 0)
-            return ImVectorInt.NULL;
-        if (ImVectorInt_TEMP_GEN_0 == null)
-            ImVectorInt_TEMP_GEN_0 = ImVectorInt.native_new();
-        ImVectorInt_TEMP_GEN_0.internal_reset(pointer, false);
-        return ImVectorInt_TEMP_GEN_0;
+            return ImVectorUnsignedInt.NULL;
+        if (ImVectorUnsignedInt_TEMP_GEN_0 == null)
+            ImVectorUnsignedInt_TEMP_GEN_0 = ImVectorUnsignedInt.native_new();
+        ImVectorUnsignedInt_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImVectorUnsignedInt_TEMP_GEN_0;
     }
 
     /*[-TEAVM;-NATIVE]
@@ -217,7 +204,13 @@ return jsObj.get_ID();
 
     public ImGuiWindowFlags get_Flags() {
         int value = internal_native_get_Flags(native_address);
-        return ImGuiWindowFlags.MAP.get(value);
+        ImGuiWindowFlags[] values = ImGuiWindowFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiWindowFlags enumVal = values[i];
+            if (enumVal != ImGuiWindowFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiWindowFlags.CUSTOM.setValue(value);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -229,7 +222,13 @@ return jsObj.get_Flags();
 
     public ImGuiWindowFlags get_FlagsPreviousFrame() {
         int value = internal_native_get_FlagsPreviousFrame(native_address);
-        return ImGuiWindowFlags.MAP.get(value);
+        ImGuiWindowFlags[] values = ImGuiWindowFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiWindowFlags enumVal = values[i];
+            if (enumVal != ImGuiWindowFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiWindowFlags.CUSTOM.setValue(value);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -1460,58 +1459,6 @@ jsObj.set_DockId(DockId);
 */
     @org.teavm.jso.JSBody(params = {"this_addr", "DockId"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindow);jsObj.set_DockId(DockId);")
     public static native void internal_native_set_DockId(int this_addr, int DockId);
-
-    public int get_DockTabItemStatusFlags() {
-        return internal_native_get_DockTabItemStatusFlags(native_address);
-    }
-
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindow);
-return jsObj.get_DockTabItemStatusFlags();
-*/
-    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindow);return jsObj.get_DockTabItemStatusFlags();")
-    public static native int internal_native_get_DockTabItemStatusFlags(int this_addr);
-
-    public void set_DockTabItemStatusFlags(int DockTabItemStatusFlags) {
-        internal_native_set_DockTabItemStatusFlags(native_address, DockTabItemStatusFlags);
-    }
-
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindow);
-jsObj.set_DockTabItemStatusFlags(DockTabItemStatusFlags);
-*/
-    @org.teavm.jso.JSBody(params = {"this_addr", "DockTabItemStatusFlags"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindow);jsObj.set_DockTabItemStatusFlags(DockTabItemStatusFlags);")
-    public static native void internal_native_set_DockTabItemStatusFlags(int this_addr, int DockTabItemStatusFlags);
-
-    public ImRect get_DockTabItemRect() {
-        int pointer = internal_native_get_DockTabItemRect(native_address);
-        if (pointer == 0)
-            return ImRect.NULL;
-        if (ImRect_TEMP_GEN_3 == null)
-            ImRect_TEMP_GEN_3 = ImRect.native_new();
-        ImRect_TEMP_GEN_3.internal_reset(pointer, false);
-        return ImRect_TEMP_GEN_3;
-    }
-
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindow);
-var returnedJSObj = jsObj.get_DockTabItemRect();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
-    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindow);var returnedJSObj = jsObj.get_DockTabItemRect();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_get_DockTabItemRect(int this_addr);
-
-    public void set_DockTabItemRect(ImRect DockTabItemRect) {
-        internal_native_set_DockTabItemRect(native_address, DockTabItemRect.native_address);
-    }
-
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindow);
-jsObj.set_DockTabItemRect(DockTabItemRect_addr);
-*/
-    @org.teavm.jso.JSBody(params = {"this_addr", "DockTabItemRect_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindow);jsObj.set_DockTabItemRect(DockTabItemRect_addr);")
-    public static native void internal_native_set_DockTabItemRect(int this_addr, int DockTabItemRect_addr);
 
     public float get_TitleBarHeight() {
         return internal_native_get_TitleBarHeight(native_address);

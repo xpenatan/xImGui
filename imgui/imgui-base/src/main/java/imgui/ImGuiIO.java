@@ -18,19 +18,19 @@ public class ImGuiIO extends IDLBase {
     public ImGuiIO(boolean cMemoryOwn) {
     }
 
-    public void SetClipboardTextFunction(ClipboardTextFunction function) {
-        setClipboardTextFunctionNATIVE(native_address, function.native_address);
-    }
-
-    /*[-TEAVM;-NATIVE]
-        var io = [MODULE].wrapPointer(addr, [MODULE].ImGuiIO);
-        var clipboardFunction = [MODULE].wrapPointer(function_addr, [MODULE].ClipboardTextFunction);
-        [MODULE].ImHelper.prototype.setClipboardTextFunction(io, clipboardFunction);
-    */
-    /*[-JNI;-NATIVE]
-        ImGuiIO* io = (ImGuiIO*)addr;
-        ClipboardTextFunction* clipboardFunction = (ClipboardTextFunction*)function_addr;
-        ImHelper::setClipboardTextFunction(io, clipboardFunction);
-    */
-    private static native void setClipboardTextFunctionNATIVE(long addr, long function_addr);
+//    public void SetClipboardTextFunction(ClipboardTextFunction function) {
+//        setClipboardTextFunctionNATIVE(native_address, function.native_address);
+//    }
+//
+//    /*[-TEAVM;-NATIVE]
+//        var io = [MODULE].wrapPointer(addr, [MODULE].ImGuiIO);
+//        var clipboardFunction = [MODULE].wrapPointer(function_addr, [MODULE].ClipboardTextFunction);
+//        [MODULE].ImHelper.prototype.setClipboardTextFunction(io, clipboardFunction);
+//    */
+//    /*[-JNI;-NATIVE]
+//        ImGuiIO* io = (ImGuiIO*)addr;
+//        ClipboardTextFunction* clipboardFunction = (ClipboardTextFunction*)function_addr;
+//        ImHelper::setClipboardTextFunction(io, clipboardFunction);
+//    */
+//    private static native void setClipboardTextFunctionNATIVE(long addr, long function_addr);
 }

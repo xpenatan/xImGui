@@ -6,6 +6,7 @@
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
+import imgui.enums.ImGuiViewportFlags;
 
 public class ImGuiViewport extends IDLBase {
 
@@ -67,7 +68,13 @@ nativeObject->ID = ID;
 
     public ImGuiViewportFlags get_Flags() {
         int value = internal_native_get_Flags(native_address);
-        return ImGuiViewportFlags.MAP.get(value);
+        ImGuiViewportFlags[] values = ImGuiViewportFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiViewportFlags enumVal = values[i];
+            if (enumVal != ImGuiViewportFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiViewportFlags.CUSTOM.setValue(value);
     }
 
     /*[-JNI;-NATIVE]
@@ -84,7 +91,7 @@ return (jint)nativeObject->Flags;
 ImGuiViewport* nativeObject = (ImGuiViewport*)this_addr;
 nativeObject->Flags = (::ImGuiViewportFlags)Flags;
 */
-    public static native void internal_native_set_Flags(long this_addr, long Flags);
+    public static native void internal_native_set_Flags(long this_addr, int Flags);
 
     public ImVec2 get_Pos() {
         long pointer = internal_native_get_Pos(native_address);

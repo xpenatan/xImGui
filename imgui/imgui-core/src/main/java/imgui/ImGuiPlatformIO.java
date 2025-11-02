@@ -9,6 +9,8 @@ import com.github.xpenatan.jParser.idl.IDLBase;
 
 public class ImGuiPlatformIO extends IDLBase {
 
+    private ImVectorImTextureDataPtr ImVectorImTextureDataPtr_TEMP_GEN_0;
+
     static public final ImGuiPlatformIO NULL = ImGuiPlatformIO.native_new();
 
     /**
@@ -34,4 +36,30 @@ ImGuiPlatformIO* nativeObject = (ImGuiPlatformIO*)this_addr;
 delete nativeObject;
 */
     public static native void internal_native_deleteNative(long this_addr);
+
+    public ImVectorImTextureDataPtr get_Textures() {
+        long pointer = internal_native_get_Textures(native_address);
+        if (pointer == 0)
+            return ImVectorImTextureDataPtr.NULL;
+        if (ImVectorImTextureDataPtr_TEMP_GEN_0 == null)
+            ImVectorImTextureDataPtr_TEMP_GEN_0 = ImVectorImTextureDataPtr.native_new();
+        ImVectorImTextureDataPtr_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImVectorImTextureDataPtr_TEMP_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiPlatformIO* nativeObject = (ImGuiPlatformIO*)this_addr;
+return (jlong)&nativeObject->Textures;
+*/
+    public static native long internal_native_get_Textures(long this_addr);
+
+    public void set_Textures(ImVectorImTextureDataPtr Textures) {
+        internal_native_set_Textures(native_address, Textures.native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiPlatformIO* nativeObject = (ImGuiPlatformIO*)this_addr;
+nativeObject->Textures = *((ImVectorImTextureDataPtr*)Textures_addr);
+*/
+    public static native void internal_native_set_Textures(long this_addr, long Textures_addr);
 }

@@ -4,9 +4,9 @@ import com.badlogic.gdx.Input.Buttons;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.InputAdapter;
 import imgui.ImGui;
-import imgui.ImGuiFocusedFlags;
+import imgui.enums.ImGuiFocusedFlags;
 import imgui.ImGuiIO;
-import imgui.ImGuiKey;
+import imgui.enums.ImGuiKey;
 
 /**
  * ImGui use this class to update UI inputs. It will also block (return true) some inputs that is triggered inside ImGui window.
@@ -103,16 +103,16 @@ public class ImGuiGdxInput extends InputAdapter {
             superKey = true;
         ImGuiKey imGuiKey = getImGuiKey(keycode);
         if(superKey) {
-            io.AddKeyEvent(ImGuiKey.Mod_Super, true);
+            io.AddKeyEvent(ImGuiKey.ImGuiMod_Super, true);
         }
         else if(ctrlKey) {
-            io.AddKeyEvent(ImGuiKey.Mod_Ctrl, true);
+            io.AddKeyEvent(ImGuiKey.ImGuiMod_Ctrl, true);
         }
         else if(shiftKey) {
-            io.AddKeyEvent(ImGuiKey.Mod_Shift, true);
+            io.AddKeyEvent(ImGuiKey.ImGuiMod_Shift, true);
         }
         else if(altKey) {
-            io.AddKeyEvent(ImGuiKey.Mod_Alt, true);
+            io.AddKeyEvent(ImGuiKey.ImGuiMod_Alt, true);
         }
 
         io.AddKeyEvent(imGuiKey, true);
@@ -141,16 +141,16 @@ public class ImGuiGdxInput extends InputAdapter {
             superKey = true;
         ImGuiKey imGuiKey = getImGuiKey(keycode);
         if(superKey) {
-            io.AddKeyEvent(ImGuiKey.Mod_Super, false);
+            io.AddKeyEvent(ImGuiKey.ImGuiMod_Super, false);
         }
         else if(ctrlKey) {
-            io.AddKeyEvent(ImGuiKey.Mod_Ctrl, false);
+            io.AddKeyEvent(ImGuiKey.ImGuiMod_Ctrl, false);
         }
         else if(shiftKey) {
-            io.AddKeyEvent(ImGuiKey.Mod_Shift, false);
+            io.AddKeyEvent(ImGuiKey.ImGuiMod_Shift, false);
         }
         else if(altKey) {
-            io.AddKeyEvent(ImGuiKey.Mod_Alt, false);
+            io.AddKeyEvent(ImGuiKey.ImGuiMod_Alt, false);
         }
 
         io.AddKeyEvent(imGuiKey, false);

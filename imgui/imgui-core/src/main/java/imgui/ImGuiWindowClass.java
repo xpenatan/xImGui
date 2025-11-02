@@ -6,6 +6,9 @@
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
+import imgui.enums.ImGuiViewportFlags;
+import imgui.enums.ImGuiTabItemFlags;
+import imgui.enums.ImGuiDockNodeFlags;
 
 public class ImGuiWindowClass extends IDLBase {
 
@@ -107,7 +110,13 @@ nativeObject->FocusRouteParentWindowId = FocusRouteParentWindowId;
 
     public ImGuiViewportFlags get_ViewportFlagsOverrideSet() {
         int value = internal_native_get_ViewportFlagsOverrideSet(native_address);
-        return ImGuiViewportFlags.MAP.get(value);
+        ImGuiViewportFlags[] values = ImGuiViewportFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiViewportFlags enumVal = values[i];
+            if (enumVal != ImGuiViewportFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiViewportFlags.CUSTOM.setValue(value);
     }
 
     /*[-JNI;-NATIVE]
@@ -124,11 +133,17 @@ return (jint)nativeObject->ViewportFlagsOverrideSet;
 ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
 nativeObject->ViewportFlagsOverrideSet = (::ImGuiViewportFlags)ViewportFlagsOverrideSet;
 */
-    public static native void internal_native_set_ViewportFlagsOverrideSet(long this_addr, long ViewportFlagsOverrideSet);
+    public static native void internal_native_set_ViewportFlagsOverrideSet(long this_addr, int ViewportFlagsOverrideSet);
 
     public ImGuiViewportFlags get_ViewportFlagsOverrideClear() {
         int value = internal_native_get_ViewportFlagsOverrideClear(native_address);
-        return ImGuiViewportFlags.MAP.get(value);
+        ImGuiViewportFlags[] values = ImGuiViewportFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiViewportFlags enumVal = values[i];
+            if (enumVal != ImGuiViewportFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiViewportFlags.CUSTOM.setValue(value);
     }
 
     /*[-JNI;-NATIVE]
@@ -145,11 +160,17 @@ return (jint)nativeObject->ViewportFlagsOverrideClear;
 ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
 nativeObject->ViewportFlagsOverrideClear = (::ImGuiViewportFlags)ViewportFlagsOverrideClear;
 */
-    public static native void internal_native_set_ViewportFlagsOverrideClear(long this_addr, long ViewportFlagsOverrideClear);
+    public static native void internal_native_set_ViewportFlagsOverrideClear(long this_addr, int ViewportFlagsOverrideClear);
 
     public ImGuiTabItemFlags get_TabItemFlagsOverrideSet() {
         int value = internal_native_get_TabItemFlagsOverrideSet(native_address);
-        return ImGuiTabItemFlags.MAP.get(value);
+        ImGuiTabItemFlags[] values = ImGuiTabItemFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiTabItemFlags enumVal = values[i];
+            if (enumVal != ImGuiTabItemFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiTabItemFlags.CUSTOM.setValue(value);
     }
 
     /*[-JNI;-NATIVE]
@@ -166,11 +187,17 @@ return (jint)nativeObject->TabItemFlagsOverrideSet;
 ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
 nativeObject->TabItemFlagsOverrideSet = (::ImGuiTabItemFlags)TabItemFlagsOverrideSet;
 */
-    public static native void internal_native_set_TabItemFlagsOverrideSet(long this_addr, long TabItemFlagsOverrideSet);
+    public static native void internal_native_set_TabItemFlagsOverrideSet(long this_addr, int TabItemFlagsOverrideSet);
 
     public ImGuiDockNodeFlags get_DockNodeFlagsOverrideSet() {
         int value = internal_native_get_DockNodeFlagsOverrideSet(native_address);
-        return ImGuiDockNodeFlags.MAP.get(value);
+        ImGuiDockNodeFlags[] values = ImGuiDockNodeFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiDockNodeFlags enumVal = values[i];
+            if (enumVal != ImGuiDockNodeFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiDockNodeFlags.CUSTOM.setValue(value);
     }
 
     /*[-JNI;-NATIVE]
@@ -187,7 +214,7 @@ return (jint)nativeObject->DockNodeFlagsOverrideSet;
 ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
 nativeObject->DockNodeFlagsOverrideSet = (::ImGuiDockNodeFlags)DockNodeFlagsOverrideSet;
 */
-    public static native void internal_native_set_DockNodeFlagsOverrideSet(long this_addr, long DockNodeFlagsOverrideSet);
+    public static native void internal_native_set_DockNodeFlagsOverrideSet(long this_addr, int DockNodeFlagsOverrideSet);
 
     public boolean get_DockingAlwaysTabBar() {
         return internal_native_get_DockingAlwaysTabBar(native_address);
