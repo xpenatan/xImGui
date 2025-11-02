@@ -5,8 +5,6 @@
  *-------------------------------------------------------*/
 package gen.imgui;
 
-import java.util.Map;
-import java.util.HashMap;
 import com.github.xpenatan.jParser.idl.IDLEnum;
 
 public enum ImGuiFocusRequestFlags implements IDLEnum<ImGuiFocusRequestFlags> {
@@ -33,16 +31,6 @@ public enum ImGuiFocusRequestFlags implements IDLEnum<ImGuiFocusRequestFlags> {
 
     public ImGuiFocusRequestFlags getCustom() {
         return CUSTOM;
-    }
-
-    public static final Map<Integer, ImGuiFocusRequestFlags> MAP = new HashMap<>();
-
-    static {
-        for (ImGuiFocusRequestFlags value : values()) {
-            if (value != CUSTOM) {
-                MAP.put(value.value, value);
-            }
-        }
     }
 
     /*[-TEAVM;-NATIVE]

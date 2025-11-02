@@ -5,8 +5,6 @@
  *-------------------------------------------------------*/
 package gen.imgui;
 
-import java.util.Map;
-import java.util.HashMap;
 import com.github.xpenatan.jParser.idl.IDLEnum;
 
 public enum ImGuiTabItemFlags implements IDLEnum<ImGuiTabItemFlags> {
@@ -42,16 +40,6 @@ public enum ImGuiTabItemFlags implements IDLEnum<ImGuiTabItemFlags> {
 
     public ImGuiTabItemFlags getCustom() {
         return CUSTOM;
-    }
-
-    public static final Map<Integer, ImGuiTabItemFlags> MAP = new HashMap<>();
-
-    static {
-        for (ImGuiTabItemFlags value : values()) {
-            if (value != CUSTOM) {
-                MAP.put(value.value, value);
-            }
-        }
     }
 
     /*[-TEAVM;-NATIVE]

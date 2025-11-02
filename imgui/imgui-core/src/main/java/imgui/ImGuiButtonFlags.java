@@ -5,8 +5,6 @@
  *-------------------------------------------------------*/
 package imgui;
 
-import java.util.Map;
-import java.util.HashMap;
 import com.github.xpenatan.jParser.idl.IDLEnum;
 
 public enum ImGuiButtonFlags implements IDLEnum<ImGuiButtonFlags> {
@@ -33,16 +31,6 @@ public enum ImGuiButtonFlags implements IDLEnum<ImGuiButtonFlags> {
 
     public ImGuiButtonFlags getCustom() {
         return CUSTOM;
-    }
-
-    public static final Map<Integer, ImGuiButtonFlags> MAP = new HashMap<>();
-
-    static {
-        for (ImGuiButtonFlags value : values()) {
-            if (value != CUSTOM) {
-                MAP.put(value.value, value);
-            }
-        }
     }
 
     /*[-JNI;-NATIVE]

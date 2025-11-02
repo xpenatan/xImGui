@@ -5,8 +5,6 @@
  *-------------------------------------------------------*/
 package imgui.extension.imlayout;
 
-import java.util.Map;
-import java.util.HashMap;
 import com.github.xpenatan.jParser.idl.IDLEnum;
 
 public enum ImOrientation implements IDLEnum<ImOrientation> {
@@ -33,16 +31,6 @@ public enum ImOrientation implements IDLEnum<ImOrientation> {
 
     public ImOrientation getCustom() {
         return CUSTOM;
-    }
-
-    public static final Map<Integer, ImOrientation> MAP = new HashMap<>();
-
-    static {
-        for (ImOrientation value : values()) {
-            if (value != CUSTOM) {
-                MAP.put(value.value, value);
-            }
-        }
     }
 
     /*[-JNI;-NATIVE]

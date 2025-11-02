@@ -5,8 +5,6 @@
  *-------------------------------------------------------*/
 package gen.imgui;
 
-import java.util.Map;
-import java.util.HashMap;
 import com.github.xpenatan.jParser.idl.IDLEnum;
 
 public enum ImGuiPopupFlags implements IDLEnum<ImGuiPopupFlags> {
@@ -44,16 +42,6 @@ public enum ImGuiPopupFlags implements IDLEnum<ImGuiPopupFlags> {
 
     public ImGuiPopupFlags getCustom() {
         return CUSTOM;
-    }
-
-    public static final Map<Integer, ImGuiPopupFlags> MAP = new HashMap<>();
-
-    static {
-        for (ImGuiPopupFlags value : values()) {
-            if (value != CUSTOM) {
-                MAP.put(value.value, value);
-            }
-        }
     }
 
     /*[-TEAVM;-NATIVE]

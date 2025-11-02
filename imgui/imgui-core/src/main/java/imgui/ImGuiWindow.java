@@ -198,7 +198,13 @@ return nativeObject->ID;
 
     public ImGuiWindowFlags get_Flags() {
         int value = internal_native_get_Flags(native_address);
-        return ImGuiWindowFlags.MAP.get(value);
+        ImGuiWindowFlags[] values = ImGuiWindowFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiWindowFlags enumVal = values[i];
+            if (enumVal != ImGuiWindowFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiWindowFlags.CUSTOM.setValue(value);
     }
 
     /*[-JNI;-NATIVE]
@@ -209,7 +215,13 @@ return (jint)nativeObject->Flags;
 
     public ImGuiWindowFlags get_FlagsPreviousFrame() {
         int value = internal_native_get_FlagsPreviousFrame(native_address);
-        return ImGuiWindowFlags.MAP.get(value);
+        ImGuiWindowFlags[] values = ImGuiWindowFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiWindowFlags enumVal = values[i];
+            if (enumVal != ImGuiWindowFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiWindowFlags.CUSTOM.setValue(value);
     }
 
     /*[-JNI;-NATIVE]

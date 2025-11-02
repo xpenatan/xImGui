@@ -5,8 +5,6 @@
  *-------------------------------------------------------*/
 package imgui;
 
-import java.util.Map;
-import java.util.HashMap;
 import com.github.xpenatan.jParser.idl.IDLEnum;
 
 public enum ImGuiScrollFlags implements IDLEnum<ImGuiScrollFlags> {
@@ -43,16 +41,6 @@ public enum ImGuiScrollFlags implements IDLEnum<ImGuiScrollFlags> {
 
     public ImGuiScrollFlags getCustom() {
         return CUSTOM;
-    }
-
-    public static final Map<Integer, ImGuiScrollFlags> MAP = new HashMap<>();
-
-    static {
-        for (ImGuiScrollFlags value : values()) {
-            if (value != CUSTOM) {
-                MAP.put(value.value, value);
-            }
-        }
     }
 
     /*[-JNI;-NATIVE]

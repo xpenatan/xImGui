@@ -314,7 +314,13 @@ public class ImGuiStyle extends IDLBase {
 
     public ImGuiDir get_WindowMenuButtonPosition() {
         int value = internal_native_get_WindowMenuButtonPosition(native_address);
-        return ImGuiDir.MAP.get(value);
+        ImGuiDir[] values = ImGuiDir.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiDir enumVal = values[i];
+            if (enumVal != ImGuiDir.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiDir.CUSTOM.setValue(value);
     }
 
     /*
@@ -326,7 +332,7 @@ public class ImGuiStyle extends IDLBase {
     public static native int internal_native_get_WindowMenuButtonPosition(int this_addr);
 
     public void set_WindowMenuButtonPosition(ImGuiDir WindowMenuButtonPosition) {
-        internal_native_set_WindowMenuButtonPosition(native_address, (int) WindowMenuButtonPosition.getValue());
+        internal_native_set_WindowMenuButtonPosition(native_address, WindowMenuButtonPosition.getValue());
     }
 
     /*
@@ -907,7 +913,13 @@ public class ImGuiStyle extends IDLBase {
 
     public ImGuiDir get_ColorButtonPosition() {
         int value = internal_native_get_ColorButtonPosition(native_address);
-        return ImGuiDir.MAP.get(value);
+        ImGuiDir[] values = ImGuiDir.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiDir enumVal = values[i];
+            if (enumVal != ImGuiDir.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiDir.CUSTOM.setValue(value);
     }
 
     /*
@@ -919,7 +931,7 @@ public class ImGuiStyle extends IDLBase {
     public static native int internal_native_get_ColorButtonPosition(int this_addr);
 
     public void set_ColorButtonPosition(ImGuiDir ColorButtonPosition) {
-        internal_native_set_ColorButtonPosition(native_address, (int) ColorButtonPosition.getValue());
+        internal_native_set_ColorButtonPosition(native_address, ColorButtonPosition.getValue());
     }
 
     /*
@@ -1388,7 +1400,13 @@ public class ImGuiStyle extends IDLBase {
 
     public ImGuiHoveredFlags get_HoverFlagsForTooltipMouse() {
         int value = internal_native_get_HoverFlagsForTooltipMouse(native_address);
-        return ImGuiHoveredFlags.MAP.get(value);
+        ImGuiHoveredFlags[] values = ImGuiHoveredFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiHoveredFlags enumVal = values[i];
+            if (enumVal != ImGuiHoveredFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiHoveredFlags.CUSTOM.setValue(value);
     }
 
     /*
@@ -1400,7 +1418,7 @@ public class ImGuiStyle extends IDLBase {
     public static native int internal_native_get_HoverFlagsForTooltipMouse(int this_addr);
 
     public void set_HoverFlagsForTooltipMouse(ImGuiHoveredFlags HoverFlagsForTooltipMouse) {
-        internal_native_set_HoverFlagsForTooltipMouse(native_address, (int) HoverFlagsForTooltipMouse.getValue());
+        internal_native_set_HoverFlagsForTooltipMouse(native_address, HoverFlagsForTooltipMouse.getValue());
     }
 
     /*
@@ -1413,7 +1431,13 @@ public class ImGuiStyle extends IDLBase {
 
     public ImGuiHoveredFlags get_HoverFlagsForTooltipNav() {
         int value = internal_native_get_HoverFlagsForTooltipNav(native_address);
-        return ImGuiHoveredFlags.MAP.get(value);
+        ImGuiHoveredFlags[] values = ImGuiHoveredFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiHoveredFlags enumVal = values[i];
+            if (enumVal != ImGuiHoveredFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiHoveredFlags.CUSTOM.setValue(value);
     }
 
     /*
@@ -1425,7 +1449,7 @@ public class ImGuiStyle extends IDLBase {
     public static native int internal_native_get_HoverFlagsForTooltipNav(int this_addr);
 
     public void set_HoverFlagsForTooltipNav(ImGuiHoveredFlags HoverFlagsForTooltipNav) {
-        internal_native_set_HoverFlagsForTooltipNav(native_address, (int) HoverFlagsForTooltipNav.getValue());
+        internal_native_set_HoverFlagsForTooltipNav(native_address, HoverFlagsForTooltipNav.getValue());
     }
 
     /*

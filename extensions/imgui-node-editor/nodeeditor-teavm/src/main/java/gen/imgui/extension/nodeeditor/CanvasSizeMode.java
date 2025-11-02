@@ -5,8 +5,6 @@
  *-------------------------------------------------------*/
 package gen.imgui.extension.nodeeditor;
 
-import java.util.Map;
-import java.util.HashMap;
 import com.github.xpenatan.jParser.idl.IDLEnum;
 
 public enum CanvasSizeMode implements IDLEnum<CanvasSizeMode> {
@@ -33,16 +31,6 @@ public enum CanvasSizeMode implements IDLEnum<CanvasSizeMode> {
 
     public CanvasSizeMode getCustom() {
         return CUSTOM;
-    }
-
-    public static final Map<Integer, CanvasSizeMode> MAP = new HashMap<>();
-
-    static {
-        for (CanvasSizeMode value : values()) {
-            if (value != CUSTOM) {
-                MAP.put(value.value, value);
-            }
-        }
     }
 
     /*[-TEAVM;-NATIVE]

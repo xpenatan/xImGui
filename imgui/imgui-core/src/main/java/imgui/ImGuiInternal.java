@@ -147,7 +147,7 @@ return (jlong)ImGuiWrapper::ImGuiInternal::FindWindowByName(name);
     /*[-JNI;-NATIVE]
 ImGuiWrapper::ImGuiInternal::FocusWindow((ImGuiWindow* )window_addr, (::ImGuiFocusRequestFlags)ImGuiFocusRequestFlags);
 */
-    public static native void internal_native_FocusWindow(long window_addr, long ImGuiFocusRequestFlags);
+    public static native void internal_native_FocusWindow(long window_addr, int ImGuiFocusRequestFlags);
 
     public static void FocusWindow(ImGuiWindow window) {
         internal_native_FocusWindow(window.native_address);
@@ -201,7 +201,7 @@ ImGuiWrapper::ImGuiInternal::ItemSize(*((ImRect* )bb_addr));
     /*[-JNI;-NATIVE]
 return ImGuiWrapper::ImGuiInternal::ItemAdd(*((ImRect* )bb_addr), (int)id, (ImRect* )nav_bb_addr, (::ImGuiItemFlags)ImGuiItemFlags);
 */
-    public static native boolean internal_native_ItemAdd(long bb_addr, int id, long nav_bb_addr, long ImGuiItemFlags);
+    public static native boolean internal_native_ItemAdd(long bb_addr, int id, long nav_bb_addr, int ImGuiItemFlags);
 
     public static boolean ItemAdd(ImRect bb, int id, ImRect nav_bb) {
         return internal_native_ItemAdd(bb.native_address, id, nav_bb.native_address);
@@ -228,7 +228,7 @@ return ImGuiWrapper::ImGuiInternal::ItemAdd(*((ImRect* )bb_addr), (int)id);
     /*[-JNI;-NATIVE]
 return ImGuiWrapper::ImGuiInternal::ItemHoverable(*((ImRect* )bb_addr), (int)id, (::ImGuiItemFlags)ImGuiItemFlags);
 */
-    public static native boolean internal_native_ItemHoverable(long bb_addr, int id, long ImGuiItemFlags);
+    public static native boolean internal_native_ItemHoverable(long bb_addr, int id, int ImGuiItemFlags);
 
     public static boolean IsWindowContentHoverable(ImGuiWindow window, ImGuiHoveredFlags ImGuiHoveredFlags) {
         return internal_native_IsWindowContentHoverable(window.native_address, ImGuiHoveredFlags.getValue());
@@ -237,7 +237,7 @@ return ImGuiWrapper::ImGuiInternal::ItemHoverable(*((ImRect* )bb_addr), (int)id,
     /*[-JNI;-NATIVE]
 return ImGuiWrapper::ImGuiInternal::IsWindowContentHoverable((ImGuiWindow* )window_addr, (::ImGuiHoveredFlags)ImGuiHoveredFlags);
 */
-    public static native boolean internal_native_IsWindowContentHoverable(long window_addr, long ImGuiHoveredFlags);
+    public static native boolean internal_native_IsWindowContentHoverable(long window_addr, int ImGuiHoveredFlags);
 
     public static boolean IsWindowContentHoverable(ImGuiWindow window) {
         return internal_native_IsWindowContentHoverable(window.native_address);
@@ -264,7 +264,7 @@ return ImGuiWrapper::ImGuiInternal::IsClippedEx(*((ImRect* )bb_addr), (int)id);
     /*[-JNI;-NATIVE]
 ImGuiWrapper::ImGuiInternal::SetLastItemData((int)item_id, (::ImGuiItemFlags)ImGuiItemFlags, (::ImGuiItemStatusFlags)ImGuiItemStatusFlags, *((ImRect* )item_rect_addr));
 */
-    public static native void internal_native_SetLastItemData(int item_id, long ImGuiItemFlags, long ImGuiItemStatusFlags, long item_rect_addr);
+    public static native void internal_native_SetLastItemData(int item_id, int ImGuiItemFlags, int ImGuiItemStatusFlags, long item_rect_addr);
 
     public static ImVec2 CalcItemSize(ImVec2 size, float default_w, float default_h) {
         long pointer = internal_native_CalcItemSize(size.native_address, default_w, default_h);
@@ -364,7 +364,7 @@ return (jlong)ImGuiWrapper::ImGuiInternal::DockBuilderGetCentralNode((int)node_i
     /*[-JNI;-NATIVE]
 return ImGuiWrapper::ImGuiInternal::DockBuilderAddNode((int)node_id, (::ImGuiDockNodeFlags)ImGuiDockNodeFlags);
 */
-    public static native int internal_native_DockBuilderAddNode(int node_id, long ImGuiDockNodeFlags);
+    public static native int internal_native_DockBuilderAddNode(int node_id, int ImGuiDockNodeFlags);
 
     public static int DockBuilderAddNode(int node_id) {
         return internal_native_DockBuilderAddNode(node_id);
@@ -445,7 +445,7 @@ ImGuiWrapper::ImGuiInternal::DockBuilderSetNodeSize((int)node_id, *((ImVec2* )si
     /*[-JNI;-NATIVE]
 return ImGuiWrapper::ImGuiInternal::DockBuilderSplitNode((int)node_id, (::ImGuiDir)split_dir, (float)size_ratio_for_node_at_dir, (int*)out_id_at_dir_addr, (int*)out_id_at_opposite_dir_addr);
 */
-    public static native int internal_native_DockBuilderSplitNode(int node_id, long split_dir, float size_ratio_for_node_at_dir, long out_id_at_dir_addr, long out_id_at_opposite_dir_addr);
+    public static native int internal_native_DockBuilderSplitNode(int node_id, int split_dir, float size_ratio_for_node_at_dir, long out_id_at_dir_addr, long out_id_at_opposite_dir_addr);
 
     public static void DockBuilderCopyWindowSettings(String src_name, String dst_name) {
         internal_native_DockBuilderCopyWindowSettings(src_name, dst_name);
@@ -472,7 +472,7 @@ ImGuiWrapper::ImGuiInternal::DockBuilderFinish((int)node_id);
     /*[-JNI;-NATIVE]
 return ImGuiWrapper::ImGuiInternal::BeginTableEx(str_id, (int)id, (int)column, (::ImGuiTableFlags)ImGuiTableFlags, *((ImVec2* )outer_size_addr), (float)inner_width);
 */
-    public static native boolean internal_native_BeginTableEx(String str_id, int id, int column, long ImGuiTableFlags, long outer_size_addr, float inner_width);
+    public static native boolean internal_native_BeginTableEx(String str_id, int id, int column, int ImGuiTableFlags, long outer_size_addr, float inner_width);
 
     public static boolean BeginTableEx(String str_id, int id, int column, ImGuiTableFlags ImGuiTableFlags, ImVec2 outer_size) {
         return internal_native_BeginTableEx(str_id, id, column, ImGuiTableFlags.getValue(), outer_size.native_address);
@@ -481,7 +481,7 @@ return ImGuiWrapper::ImGuiInternal::BeginTableEx(str_id, (int)id, (int)column, (
     /*[-JNI;-NATIVE]
 return ImGuiWrapper::ImGuiInternal::BeginTableEx(str_id, (int)id, (int)column, (::ImGuiTableFlags)ImGuiTableFlags, *((ImVec2* )outer_size_addr));
 */
-    public static native boolean internal_native_BeginTableEx(String str_id, int id, int column, long ImGuiTableFlags, long outer_size_addr);
+    public static native boolean internal_native_BeginTableEx(String str_id, int id, int column, int ImGuiTableFlags, long outer_size_addr);
 
     public static boolean BeginTableEx(String str_id, int id, int column, ImGuiTableFlags ImGuiTableFlags) {
         return internal_native_BeginTableEx(str_id, id, column, ImGuiTableFlags.getValue());
@@ -490,7 +490,7 @@ return ImGuiWrapper::ImGuiInternal::BeginTableEx(str_id, (int)id, (int)column, (
     /*[-JNI;-NATIVE]
 return ImGuiWrapper::ImGuiInternal::BeginTableEx(str_id, (int)id, (int)column, (::ImGuiTableFlags)ImGuiTableFlags);
 */
-    public static native boolean internal_native_BeginTableEx(String str_id, int id, int column, long ImGuiTableFlags);
+    public static native boolean internal_native_BeginTableEx(String str_id, int id, int column, int ImGuiTableFlags);
 
     public static boolean BeginTableEx(String str_id, int id, int column) {
         return internal_native_BeginTableEx(str_id, id, column);
@@ -697,7 +697,7 @@ ImGuiWrapper::ImGuiInternal::RenderDragDropTargetRect(*((ImRect* )bb_addr), *((I
     /*[-JNI;-NATIVE]
 ImGuiWrapper::ImGuiInternal::RenderArrow((ImDrawList* )draw_list_addr, *((ImVec2* )pos_addr), (int)col, (::ImGuiDir)dir, (float)scale);
 */
-    public static native void internal_native_RenderArrow(long draw_list_addr, long pos_addr, int col, long dir, float scale);
+    public static native void internal_native_RenderArrow(long draw_list_addr, long pos_addr, int col, int dir, float scale);
 
     public static void RenderArrow(ImDrawList draw_list, ImVec2 pos, int col, ImGuiDir dir) {
         internal_native_RenderArrow(draw_list.native_address, pos.native_address, col, dir.getValue());
@@ -706,7 +706,7 @@ ImGuiWrapper::ImGuiInternal::RenderArrow((ImDrawList* )draw_list_addr, *((ImVec2
     /*[-JNI;-NATIVE]
 ImGuiWrapper::ImGuiInternal::RenderArrow((ImDrawList* )draw_list_addr, *((ImVec2* )pos_addr), (int)col, (::ImGuiDir)dir);
 */
-    public static native void internal_native_RenderArrow(long draw_list_addr, long pos_addr, int col, long dir);
+    public static native void internal_native_RenderArrow(long draw_list_addr, long pos_addr, int col, int dir);
 
     public static void RenderBullet(ImDrawList draw_list, ImVec2 pos, int col) {
         internal_native_RenderBullet(draw_list.native_address, pos.native_address, col);
@@ -733,7 +733,7 @@ ImGuiWrapper::ImGuiInternal::RenderCheckMark((ImDrawList* )draw_list_addr, *((Im
     /*[-JNI;-NATIVE]
 ImGuiWrapper::ImGuiInternal::RenderArrowPointingAt((ImDrawList* )draw_list_addr, *((ImVec2* )pos_addr), *((ImVec2* )half_sz_addr), (::ImGuiDir)direction, (int)col);
 */
-    public static native void internal_native_RenderArrowPointingAt(long draw_list_addr, long pos_addr, long half_sz_addr, long direction, int col);
+    public static native void internal_native_RenderArrowPointingAt(long draw_list_addr, long pos_addr, long half_sz_addr, int direction, int col);
 
     public static void RenderArrowDockMenu(ImDrawList draw_list, ImVec2 p_min, float sz, int col) {
         internal_native_RenderArrowDockMenu(draw_list.native_address, p_min.native_address, sz, col);
@@ -764,7 +764,13 @@ ImGuiWrapper::ImGuiInternal::RenderRectFilledWithHole((ImDrawList* )draw_list_ad
 
     public static ImDrawFlags CalcRoundingFlagsForRectInRect(ImRect r_in, ImRect r_outer, float threshold) {
         int value = internal_native_CalcRoundingFlagsForRectInRect(r_in.native_address, r_outer.native_address, threshold);
-        return ImDrawFlags.MAP.get(value);
+        ImDrawFlags[] values = ImDrawFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImDrawFlags enumVal = values[i];
+            if (enumVal != ImDrawFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImDrawFlags.CUSTOM.setValue(value);
     }
 
     /*[-JNI;-NATIVE]
@@ -779,7 +785,7 @@ return (int)ImGuiWrapper::ImGuiInternal::CalcRoundingFlagsForRectInRect(*((ImRec
     /*[-JNI;-NATIVE]
 return ImGuiWrapper::ImGuiInternal::ArrowButtonEx(str_id, (::ImGuiDir)dir, *((ImVec2* )size_arg_addr), (::ImGuiButtonFlags)ImGuiButtonFlags);
 */
-    public static native boolean internal_native_ArrowButtonEx(String str_id, long dir, long size_arg_addr, long ImGuiButtonFlags);
+    public static native boolean internal_native_ArrowButtonEx(String str_id, int dir, long size_arg_addr, int ImGuiButtonFlags);
 
     public static boolean ArrowButtonEx(String str_id, ImGuiDir dir, ImVec2 size_arg) {
         return internal_native_ArrowButtonEx(str_id, dir.getValue(), size_arg.native_address);
@@ -788,7 +794,7 @@ return ImGuiWrapper::ImGuiInternal::ArrowButtonEx(str_id, (::ImGuiDir)dir, *((Im
     /*[-JNI;-NATIVE]
 return ImGuiWrapper::ImGuiInternal::ArrowButtonEx(str_id, (::ImGuiDir)dir, *((ImVec2* )size_arg_addr));
 */
-    public static native boolean internal_native_ArrowButtonEx(String str_id, long dir, long size_arg_addr);
+    public static native boolean internal_native_ArrowButtonEx(String str_id, int dir, long size_arg_addr);
 
     public static boolean ButtonBehavior(ImRect bb, int id, IDLBoolArray out_hovered, IDLBoolArray out_held, ImGuiButtonFlags ImGuiButtonFlags) {
         return internal_native_ButtonBehavior(bb.native_address, id, out_hovered.native_void_address, out_held.native_void_address, ImGuiButtonFlags.getValue());
@@ -797,7 +803,7 @@ return ImGuiWrapper::ImGuiInternal::ArrowButtonEx(str_id, (::ImGuiDir)dir, *((Im
     /*[-JNI;-NATIVE]
 return ImGuiWrapper::ImGuiInternal::ButtonBehavior(*((ImRect* )bb_addr), (int)id, (bool*)out_hovered_addr, (bool*)out_held_addr, (::ImGuiButtonFlags)ImGuiButtonFlags);
 */
-    public static native boolean internal_native_ButtonBehavior(long bb_addr, int id, long out_hovered_addr, long out_held_addr, long ImGuiButtonFlags);
+    public static native boolean internal_native_ButtonBehavior(long bb_addr, int id, long out_hovered_addr, long out_held_addr, int ImGuiButtonFlags);
 
     public static boolean ButtonBehavior(ImRect bb, int id, IDLBoolArray out_hovered, IDLBoolArray out_held) {
         return internal_native_ButtonBehavior(bb.native_address, id, out_hovered.native_void_address, out_held.native_void_address);
@@ -815,7 +821,7 @@ return ImGuiWrapper::ImGuiInternal::ButtonBehavior(*((ImRect* )bb_addr), (int)id
     /*[-JNI;-NATIVE]
 return ImGuiWrapper::ImGuiInternal::DragBehavior((int)id, (::ImGuiDataType)ImGuiDataType, (void*)p_v_addr, (float)v_speed, (void*)p_min_addr, (void*)p_max_addr, format, (::ImGuiSliderFlags)ImGuiSliderFlags);
 */
-    public static native boolean internal_native_DragBehavior(int id, long ImGuiDataType, long p_v_addr, float v_speed, long p_min_addr, long p_max_addr, String format, long ImGuiSliderFlags);
+    public static native boolean internal_native_DragBehavior(int id, int ImGuiDataType, long p_v_addr, float v_speed, long p_min_addr, long p_max_addr, String format, int ImGuiSliderFlags);
 
     public static boolean SliderBehavior(ImRect bb, int id, ImGuiDataType ImGuiDataType, IDLBase p_v, IDLBase p_min, IDLBase p_max, String format, ImGuiSliderFlags ImGuiSliderFlags, ImRect out_grab_bb) {
         return internal_native_SliderBehavior(bb.native_address, id, ImGuiDataType.getValue(), p_v.native_void_address, p_min.native_void_address, p_max.native_void_address, format, ImGuiSliderFlags.getValue(), out_grab_bb.native_address);
@@ -824,7 +830,7 @@ return ImGuiWrapper::ImGuiInternal::DragBehavior((int)id, (::ImGuiDataType)ImGui
     /*[-JNI;-NATIVE]
 return ImGuiWrapper::ImGuiInternal::SliderBehavior(*((ImRect* )bb_addr), (int)id, (::ImGuiDataType)ImGuiDataType, (void*)p_v_addr, (void*)p_min_addr, (void*)p_max_addr, format, (::ImGuiSliderFlags)ImGuiSliderFlags, (ImRect* )out_grab_bb_addr);
 */
-    public static native boolean internal_native_SliderBehavior(long bb_addr, int id, long ImGuiDataType, long p_v_addr, long p_min_addr, long p_max_addr, String format, long ImGuiSliderFlags, long out_grab_bb_addr);
+    public static native boolean internal_native_SliderBehavior(long bb_addr, int id, int ImGuiDataType, long p_v_addr, long p_min_addr, long p_max_addr, String format, int ImGuiSliderFlags, long out_grab_bb_addr);
 
     public static boolean SplitterBehavior(ImRect bb, int id, ImGuiAxis axis, IDLFloatArray size1, IDLFloatArray size2, float min_size1, float min_size2, float hover_extend, float hover_visibility_delay, int bg_col) {
         return internal_native_SplitterBehavior(bb.native_address, id, axis.getValue(), size1.native_void_address, size2.native_void_address, min_size1, min_size2, hover_extend, hover_visibility_delay, bg_col);
@@ -833,7 +839,7 @@ return ImGuiWrapper::ImGuiInternal::SliderBehavior(*((ImRect* )bb_addr), (int)id
     /*[-JNI;-NATIVE]
 return ImGuiWrapper::ImGuiInternal::SplitterBehavior(*((ImRect* )bb_addr), (int)id, (::ImGuiAxis)axis, (float*)size1_addr, (float*)size2_addr, (float)min_size1, (float)min_size2, (float)hover_extend, (float)hover_visibility_delay, (int)bg_col);
 */
-    public static native boolean internal_native_SplitterBehavior(long bb_addr, int id, long axis, long size1_addr, long size2_addr, float min_size1, float min_size2, float hover_extend, float hover_visibility_delay, int bg_col);
+    public static native boolean internal_native_SplitterBehavior(long bb_addr, int id, int axis, long size1_addr, long size2_addr, float min_size1, float min_size2, float hover_extend, float hover_visibility_delay, int bg_col);
 
     public static boolean SplitterBehavior(ImRect bb, int id, ImGuiAxis axis, IDLFloatArray size1, IDLFloatArray size2, float min_size1, float min_size2, float hover_extend, float hover_visibility_delay) {
         return internal_native_SplitterBehavior(bb.native_address, id, axis.getValue(), size1.native_void_address, size2.native_void_address, min_size1, min_size2, hover_extend, hover_visibility_delay);
@@ -842,7 +848,7 @@ return ImGuiWrapper::ImGuiInternal::SplitterBehavior(*((ImRect* )bb_addr), (int)
     /*[-JNI;-NATIVE]
 return ImGuiWrapper::ImGuiInternal::SplitterBehavior(*((ImRect* )bb_addr), (int)id, (::ImGuiAxis)axis, (float*)size1_addr, (float*)size2_addr, (float)min_size1, (float)min_size2, (float)hover_extend, (float)hover_visibility_delay);
 */
-    public static native boolean internal_native_SplitterBehavior(long bb_addr, int id, long axis, long size1_addr, long size2_addr, float min_size1, float min_size2, float hover_extend, float hover_visibility_delay);
+    public static native boolean internal_native_SplitterBehavior(long bb_addr, int id, int axis, long size1_addr, long size2_addr, float min_size1, float min_size2, float hover_extend, float hover_visibility_delay);
 
     public static boolean SplitterBehavior(ImRect bb, int id, ImGuiAxis axis, IDLFloatArray size1, IDLFloatArray size2, float min_size1, float min_size2, float hover_extend) {
         return internal_native_SplitterBehavior(bb.native_address, id, axis.getValue(), size1.native_void_address, size2.native_void_address, min_size1, min_size2, hover_extend);
@@ -851,7 +857,7 @@ return ImGuiWrapper::ImGuiInternal::SplitterBehavior(*((ImRect* )bb_addr), (int)
     /*[-JNI;-NATIVE]
 return ImGuiWrapper::ImGuiInternal::SplitterBehavior(*((ImRect* )bb_addr), (int)id, (::ImGuiAxis)axis, (float*)size1_addr, (float*)size2_addr, (float)min_size1, (float)min_size2, (float)hover_extend);
 */
-    public static native boolean internal_native_SplitterBehavior(long bb_addr, int id, long axis, long size1_addr, long size2_addr, float min_size1, float min_size2, float hover_extend);
+    public static native boolean internal_native_SplitterBehavior(long bb_addr, int id, int axis, long size1_addr, long size2_addr, float min_size1, float min_size2, float hover_extend);
 
     public static boolean SplitterBehavior(ImRect bb, int id, ImGuiAxis axis, IDLFloatArray size1, IDLFloatArray size2, float min_size1, float min_size2) {
         return internal_native_SplitterBehavior(bb.native_address, id, axis.getValue(), size1.native_void_address, size2.native_void_address, min_size1, min_size2);
@@ -860,7 +866,7 @@ return ImGuiWrapper::ImGuiInternal::SplitterBehavior(*((ImRect* )bb_addr), (int)
     /*[-JNI;-NATIVE]
 return ImGuiWrapper::ImGuiInternal::SplitterBehavior(*((ImRect* )bb_addr), (int)id, (::ImGuiAxis)axis, (float*)size1_addr, (float*)size2_addr, (float)min_size1, (float)min_size2);
 */
-    public static native boolean internal_native_SplitterBehavior(long bb_addr, int id, long axis, long size1_addr, long size2_addr, float min_size1, float min_size2);
+    public static native boolean internal_native_SplitterBehavior(long bb_addr, int id, int axis, long size1_addr, long size2_addr, float min_size1, float min_size2);
 
     public static boolean TreeNodeBehavior(int id, ImGuiTreeNodeFlags ImGuiTreeNodeFlags, String label, String label_end) {
         return internal_native_TreeNodeBehavior(id, ImGuiTreeNodeFlags.getValue(), label, label_end);
@@ -869,7 +875,7 @@ return ImGuiWrapper::ImGuiInternal::SplitterBehavior(*((ImRect* )bb_addr), (int)
     /*[-JNI;-NATIVE]
 return ImGuiWrapper::ImGuiInternal::TreeNodeBehavior((int)id, (::ImGuiTreeNodeFlags)ImGuiTreeNodeFlags, label, label_end);
 */
-    public static native boolean internal_native_TreeNodeBehavior(int id, long ImGuiTreeNodeFlags, String label, String label_end);
+    public static native boolean internal_native_TreeNodeBehavior(int id, int ImGuiTreeNodeFlags, String label, String label_end);
 
     public static boolean TreeNodeBehavior(int id, ImGuiTreeNodeFlags ImGuiTreeNodeFlags, String label) {
         return internal_native_TreeNodeBehavior(id, ImGuiTreeNodeFlags.getValue(), label);
@@ -878,7 +884,7 @@ return ImGuiWrapper::ImGuiInternal::TreeNodeBehavior((int)id, (::ImGuiTreeNodeFl
     /*[-JNI;-NATIVE]
 return ImGuiWrapper::ImGuiInternal::TreeNodeBehavior((int)id, (::ImGuiTreeNodeFlags)ImGuiTreeNodeFlags, label);
 */
-    public static native boolean internal_native_TreeNodeBehavior(int id, long ImGuiTreeNodeFlags, String label);
+    public static native boolean internal_native_TreeNodeBehavior(int id, int ImGuiTreeNodeFlags, String label);
 
     public static void TreePushOverrideID(int id) {
         internal_native_TreePushOverrideID(id);
@@ -905,7 +911,7 @@ ImGuiWrapper::ImGuiInternal::TreeNodeSetOpen((int)id, open);
     /*[-JNI;-NATIVE]
 return ImGuiWrapper::ImGuiInternal::TreeNodeUpdateNextOpen((int)id, (::ImGuiTreeNodeFlags)ImGuiTreeNodeFlags);
 */
-    public static native boolean internal_native_TreeNodeUpdateNextOpen(int id, long ImGuiTreeNodeFlags);
+    public static native boolean internal_native_TreeNodeUpdateNextOpen(int id, int ImGuiTreeNodeFlags);
 
     public static void SetNextItemSelectionUserData(int selection_user_data) {
         internal_native_SetNextItemSelectionUserData(selection_user_data);
@@ -923,7 +929,7 @@ ImGuiWrapper::ImGuiInternal::SetNextItemSelectionUserData((int)selection_user_da
     /*[-JNI;-NATIVE]
 return ImGuiWrapper::ImGuiInternal::GetKeyOwner((::ImGuiKey)ImGuiKey);
 */
-    public static native int internal_native_GetKeyOwner(long ImGuiKey);
+    public static native int internal_native_GetKeyOwner(int ImGuiKey);
 
     public static void SetKeyOwner(ImGuiKey ImGuiKey, int owner_id, ImGuiInputFlags ImGuiInputFlags) {
         internal_native_SetKeyOwner(ImGuiKey.getValue(), owner_id, ImGuiInputFlags.getValue());
@@ -932,7 +938,7 @@ return ImGuiWrapper::ImGuiInternal::GetKeyOwner((::ImGuiKey)ImGuiKey);
     /*[-JNI;-NATIVE]
 ImGuiWrapper::ImGuiInternal::SetKeyOwner((::ImGuiKey)ImGuiKey, (int)owner_id, (::ImGuiInputFlags)ImGuiInputFlags);
 */
-    public static native void internal_native_SetKeyOwner(long ImGuiKey, int owner_id, long ImGuiInputFlags);
+    public static native void internal_native_SetKeyOwner(int ImGuiKey, int owner_id, int ImGuiInputFlags);
 
     public static void SetKeyOwner(ImGuiKey ImGuiKey, int owner_id) {
         internal_native_SetKeyOwner(ImGuiKey.getValue(), owner_id);
@@ -941,7 +947,7 @@ ImGuiWrapper::ImGuiInternal::SetKeyOwner((::ImGuiKey)ImGuiKey, (int)owner_id, (:
     /*[-JNI;-NATIVE]
 ImGuiWrapper::ImGuiInternal::SetKeyOwner((::ImGuiKey)ImGuiKey, (int)owner_id);
 */
-    public static native void internal_native_SetKeyOwner(long ImGuiKey, int owner_id);
+    public static native void internal_native_SetKeyOwner(int ImGuiKey, int owner_id);
 
     public static void SetItemKeyOwner(ImGuiKey ImGuiKey, ImGuiInputFlags ImGuiInputFlags) {
         internal_native_SetItemKeyOwner(ImGuiKey.getValue(), ImGuiInputFlags.getValue());
@@ -950,7 +956,7 @@ ImGuiWrapper::ImGuiInternal::SetKeyOwner((::ImGuiKey)ImGuiKey, (int)owner_id);
     /*[-JNI;-NATIVE]
 ImGuiWrapper::ImGuiInternal::SetItemKeyOwner((::ImGuiKey)ImGuiKey, (::ImGuiInputFlags)ImGuiInputFlags);
 */
-    public static native void internal_native_SetItemKeyOwner(long ImGuiKey, long ImGuiInputFlags);
+    public static native void internal_native_SetItemKeyOwner(int ImGuiKey, int ImGuiInputFlags);
 
     public static void SetItemKeyOwner(ImGuiKey ImGuiKey) {
         internal_native_SetItemKeyOwner(ImGuiKey.getValue());
@@ -959,7 +965,7 @@ ImGuiWrapper::ImGuiInternal::SetItemKeyOwner((::ImGuiKey)ImGuiKey, (::ImGuiInput
     /*[-JNI;-NATIVE]
 ImGuiWrapper::ImGuiInternal::SetItemKeyOwner((::ImGuiKey)ImGuiKey);
 */
-    public static native void internal_native_SetItemKeyOwner(long ImGuiKey);
+    public static native void internal_native_SetItemKeyOwner(int ImGuiKey);
 
     public static boolean TestKeyOwner(ImGuiKey ImGuiKey, int owner_id) {
         return internal_native_TestKeyOwner(ImGuiKey.getValue(), owner_id);
@@ -968,7 +974,7 @@ ImGuiWrapper::ImGuiInternal::SetItemKeyOwner((::ImGuiKey)ImGuiKey);
     /*[-JNI;-NATIVE]
 return ImGuiWrapper::ImGuiInternal::TestKeyOwner((::ImGuiKey)ImGuiKey, (int)owner_id);
 */
-    public static native boolean internal_native_TestKeyOwner(long ImGuiKey, int owner_id);
+    public static native boolean internal_native_TestKeyOwner(int ImGuiKey, int owner_id);
 
     public static void ScrollToItem(ImGuiScrollFlags flags) {
         internal_native_ScrollToItem(flags.getValue());
@@ -977,7 +983,7 @@ return ImGuiWrapper::ImGuiInternal::TestKeyOwner((::ImGuiKey)ImGuiKey, (int)owne
     /*[-JNI;-NATIVE]
 ImGuiWrapper::ImGuiInternal::ScrollToItem((::ImGuiScrollFlags)flags);
 */
-    public static native void internal_native_ScrollToItem(long flags);
+    public static native void internal_native_ScrollToItem(int flags);
 
     public static void ScrollToItem() {
         internal_native_ScrollToItem();
@@ -995,7 +1001,7 @@ ImGuiWrapper::ImGuiInternal::ScrollToItem();
     /*[-JNI;-NATIVE]
 ImGuiWrapper::ImGuiInternal::ScrollToRect((ImGuiWindow* )window_addr, *((ImRect* )rect_addr), (::ImGuiScrollFlags)flags);
 */
-    public static native void internal_native_ScrollToRect(long window_addr, long rect_addr, long flags);
+    public static native void internal_native_ScrollToRect(long window_addr, long rect_addr, int flags);
 
     public static void ScrollToRect(ImGuiWindow window, ImRect rect) {
         internal_native_ScrollToRect(window.native_address, rect.native_address);
@@ -1020,7 +1026,7 @@ ImGuiWrapper::ImGuiInternal::ScrollToRect((ImGuiWindow* )window_addr, *((ImRect*
 static ImVec2 copy_addr;
 copy_addr = ImGuiWrapper::ImGuiInternal::ScrollToRectEx((ImGuiWindow* )window_addr, *((ImRect* )rect_addr), (::ImGuiScrollFlags)flags);
 return (jlong)&copy_addr;*/
-    public static native long internal_native_ScrollToRectEx(long window_addr, long rect_addr, long flags);
+    public static native long internal_native_ScrollToRectEx(long window_addr, long rect_addr, int flags);
 
     public static ImVec2 ScrollToRectEx(ImGuiWindow window, ImRect rect) {
         long pointer = internal_native_ScrollToRectEx(window.native_address, rect.native_address);

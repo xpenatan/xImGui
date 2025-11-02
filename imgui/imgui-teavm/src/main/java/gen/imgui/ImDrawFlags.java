@@ -5,8 +5,6 @@
  *-------------------------------------------------------*/
 package gen.imgui;
 
-import java.util.Map;
-import java.util.HashMap;
 import com.github.xpenatan.jParser.idl.IDLEnum;
 
 public enum ImDrawFlags implements IDLEnum<ImDrawFlags> {
@@ -47,16 +45,6 @@ public enum ImDrawFlags implements IDLEnum<ImDrawFlags> {
 
     public ImDrawFlags getCustom() {
         return CUSTOM;
-    }
-
-    public static final Map<Integer, ImDrawFlags> MAP = new HashMap<>();
-
-    static {
-        for (ImDrawFlags value : values()) {
-            if (value != CUSTOM) {
-                MAP.put(value.value, value);
-            }
-        }
     }
 
     /*[-TEAVM;-NATIVE]

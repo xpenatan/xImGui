@@ -104,7 +104,13 @@ jsObj.set_BufTextLen(BufTextLen);
 
     public ImGuiInputTextFlags get_Flags() {
         int value = internal_native_get_Flags(native_address);
-        return ImGuiInputTextFlags.MAP.get(value);
+        ImGuiInputTextFlags[] values = ImGuiInputTextFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiInputTextFlags enumVal = values[i];
+            if (enumVal != ImGuiInputTextFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiInputTextFlags.CUSTOM.setValue(value);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -115,7 +121,7 @@ return jsObj.get_Flags();
     public static native int internal_native_get_Flags(int this_addr);
 
     public void set_Flags(ImGuiInputTextFlags Flags) {
-        internal_native_set_Flags(native_address, (int) Flags.getValue());
+        internal_native_set_Flags(native_address, Flags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]

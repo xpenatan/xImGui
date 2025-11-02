@@ -290,7 +290,13 @@ public class ImGuiStyle extends IDLBase {
 
     public ImGuiDir get_WindowMenuButtonPosition() {
         int value = internal_native_get_WindowMenuButtonPosition(native_address);
-        return ImGuiDir.MAP.get(value);
+        ImGuiDir[] values = ImGuiDir.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiDir enumVal = values[i];
+            if (enumVal != ImGuiDir.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiDir.CUSTOM.setValue(value);
     }
 
     /*
@@ -309,7 +315,7 @@ public class ImGuiStyle extends IDLBase {
       ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
       nativeObject->WindowMenuButtonPosition = (::ImGuiDir)WindowMenuButtonPosition;
     */
-    public static native void internal_native_set_WindowMenuButtonPosition(long this_addr, long WindowMenuButtonPosition);
+    public static native void internal_native_set_WindowMenuButtonPosition(long this_addr, int WindowMenuButtonPosition);
 
     public float get_ChildRounding() {
         return internal_native_get_ChildRounding(native_address);
@@ -827,7 +833,13 @@ public class ImGuiStyle extends IDLBase {
 
     public ImGuiDir get_ColorButtonPosition() {
         int value = internal_native_get_ColorButtonPosition(native_address);
-        return ImGuiDir.MAP.get(value);
+        ImGuiDir[] values = ImGuiDir.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiDir enumVal = values[i];
+            if (enumVal != ImGuiDir.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiDir.CUSTOM.setValue(value);
     }
 
     /*
@@ -846,7 +858,7 @@ public class ImGuiStyle extends IDLBase {
       ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
       nativeObject->ColorButtonPosition = (::ImGuiDir)ColorButtonPosition;
     */
-    public static native void internal_native_set_ColorButtonPosition(long this_addr, long ColorButtonPosition);
+    public static native void internal_native_set_ColorButtonPosition(long this_addr, int ColorButtonPosition);
 
     public ImVec2 get_ButtonTextAlign() {
         long pointer = internal_native_get_ButtonTextAlign(native_address);
@@ -1260,7 +1272,13 @@ public class ImGuiStyle extends IDLBase {
 
     public ImGuiHoveredFlags get_HoverFlagsForTooltipMouse() {
         int value = internal_native_get_HoverFlagsForTooltipMouse(native_address);
-        return ImGuiHoveredFlags.MAP.get(value);
+        ImGuiHoveredFlags[] values = ImGuiHoveredFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiHoveredFlags enumVal = values[i];
+            if (enumVal != ImGuiHoveredFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiHoveredFlags.CUSTOM.setValue(value);
     }
 
     /*
@@ -1279,11 +1297,17 @@ public class ImGuiStyle extends IDLBase {
       ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
       nativeObject->HoverFlagsForTooltipMouse = (::ImGuiHoveredFlags)HoverFlagsForTooltipMouse;
     */
-    public static native void internal_native_set_HoverFlagsForTooltipMouse(long this_addr, long HoverFlagsForTooltipMouse);
+    public static native void internal_native_set_HoverFlagsForTooltipMouse(long this_addr, int HoverFlagsForTooltipMouse);
 
     public ImGuiHoveredFlags get_HoverFlagsForTooltipNav() {
         int value = internal_native_get_HoverFlagsForTooltipNav(native_address);
-        return ImGuiHoveredFlags.MAP.get(value);
+        ImGuiHoveredFlags[] values = ImGuiHoveredFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiHoveredFlags enumVal = values[i];
+            if (enumVal != ImGuiHoveredFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiHoveredFlags.CUSTOM.setValue(value);
     }
 
     /*
@@ -1302,7 +1326,7 @@ public class ImGuiStyle extends IDLBase {
       ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
       nativeObject->HoverFlagsForTooltipNav = (::ImGuiHoveredFlags)HoverFlagsForTooltipNav;
     */
-    public static native void internal_native_set_HoverFlagsForTooltipNav(long this_addr, long HoverFlagsForTooltipNav);
+    public static native void internal_native_set_HoverFlagsForTooltipNav(long this_addr, int HoverFlagsForTooltipNav);
 
     public ImVec4 get_Colors(int index) {
         long pointer = internal_native_get_Colors(native_address, index);

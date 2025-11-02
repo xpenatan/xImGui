@@ -5,8 +5,6 @@
  *-------------------------------------------------------*/
 package imgui.extension.nodeeditor;
 
-import java.util.Map;
-import java.util.HashMap;
 import com.github.xpenatan.jParser.idl.IDLEnum;
 
 public enum FlowDirection implements IDLEnum<FlowDirection> {
@@ -33,16 +31,6 @@ public enum FlowDirection implements IDLEnum<FlowDirection> {
 
     public FlowDirection getCustom() {
         return CUSTOM;
-    }
-
-    public static final Map<Integer, FlowDirection> MAP = new HashMap<>();
-
-    static {
-        for (FlowDirection value : values()) {
-            if (value != CUSTOM) {
-                MAP.put(value.value, value);
-            }
-        }
     }
 
     /*[-JNI;-NATIVE]

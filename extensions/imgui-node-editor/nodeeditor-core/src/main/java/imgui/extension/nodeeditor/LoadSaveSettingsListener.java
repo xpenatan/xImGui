@@ -92,7 +92,16 @@ delete nativeObject;
         if (IDLString_TEMP_STATIC_GEN_1 == null)
             IDLString_TEMP_STATIC_GEN_1 = IDLString.native_new();
         IDLString_TEMP_STATIC_GEN_1.internal_reset(data_addr, false);
-        return onSave(IDLString_TEMP_STATIC_GEN_1, SaveReasonFlags.MAP.get(reason_addr));
+        SaveReasonFlags reason_addr_enum = SaveReasonFlags.CUSTOM.setValue(reason_addr);
+        SaveReasonFlags[] reason_addr_enum_values = SaveReasonFlags.values();
+        for (int i = 0; i < reason_addr_enum_values.length; i++) {
+            SaveReasonFlags enumVal = reason_addr_enum_values[i];
+            if (enumVal != SaveReasonFlags.CUSTOM && enumVal.getValue() == reason_addr) {
+                reason_addr_enum = reason_addr_enum_values[i];
+                break;
+            }
+        }
+        return onSave(IDLString_TEMP_STATIC_GEN_1, reason_addr_enum);
     }
 
     /*[-JNI;-NATIVE]

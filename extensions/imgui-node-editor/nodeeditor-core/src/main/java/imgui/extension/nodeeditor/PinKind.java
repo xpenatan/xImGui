@@ -5,8 +5,6 @@
  *-------------------------------------------------------*/
 package imgui.extension.nodeeditor;
 
-import java.util.Map;
-import java.util.HashMap;
 import com.github.xpenatan.jParser.idl.IDLEnum;
 
 public enum PinKind implements IDLEnum<PinKind> {
@@ -33,16 +31,6 @@ public enum PinKind implements IDLEnum<PinKind> {
 
     public PinKind getCustom() {
         return CUSTOM;
-    }
-
-    public static final Map<Integer, PinKind> MAP = new HashMap<>();
-
-    static {
-        for (PinKind value : values()) {
-            if (value != CUSTOM) {
-                MAP.put(value.value, value);
-            }
-        }
     }
 
     /*[-JNI;-NATIVE]

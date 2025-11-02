@@ -211,7 +211,7 @@ public class NodeEditor extends IDLBase {
       copy_addr = NodeEditor::GetStyleColorName((::StyleColor)colorIndex);
       return (jlong)&copy_addr;
     */
-    public static native long internal_native_GetStyleColorName(long colorIndex);
+    public static native long internal_native_GetStyleColorName(int colorIndex);
 
     public static void PushStyleColor(StyleColor colorIndex, ImVec4 color) {
         internal_native_PushStyleColor(colorIndex.getValue(), color.native_address);
@@ -221,7 +221,7 @@ public class NodeEditor extends IDLBase {
       [-JNI;-NATIVE]
       NodeEditor::PushStyleColor((::StyleColor)colorIndex, *((ImVec4* )color_addr));
     */
-    public static native void internal_native_PushStyleColor(long colorIndex, long color_addr);
+    public static native void internal_native_PushStyleColor(int colorIndex, long color_addr);
 
     public static void PopStyleColor(int count) {
         internal_native_PopStyleColor(count);
@@ -251,7 +251,7 @@ public class NodeEditor extends IDLBase {
       [-JNI;-NATIVE]
       NodeEditor::PushStyleVar((::StyleVar)varIndex, (float)value);
     */
-    public static native void internal_native_PushStyleVar__0(long varIndex, float value);
+    public static native void internal_native_PushStyleVar__0(int varIndex, float value);
 
     public static void PushStyleVar(StyleVar varIndex, ImVec2 value) {
         internal_native_PushStyleVar__1(varIndex.getValue(), value.native_address);
@@ -261,7 +261,7 @@ public class NodeEditor extends IDLBase {
       [-JNI;-NATIVE]
       NodeEditor::PushStyleVar((::StyleVar)varIndex, *((ImVec2* )value_addr));
     */
-    public static native void internal_native_PushStyleVar__1(long varIndex, long value_addr);
+    public static native void internal_native_PushStyleVar__1(int varIndex, long value_addr);
 
     public static void PushStyleVar(StyleVar varIndex, ImVec4 value) {
         internal_native_PushStyleVar__2(varIndex.getValue(), value.native_address);
@@ -271,7 +271,7 @@ public class NodeEditor extends IDLBase {
       [-JNI;-NATIVE]
       NodeEditor::PushStyleVar((::StyleVar)varIndex, *((ImVec4* )value_addr));
     */
-    public static native void internal_native_PushStyleVar__2(long varIndex, long value_addr);
+    public static native void internal_native_PushStyleVar__2(int varIndex, long value_addr);
 
     public static void PopStyleVar(int count) {
         internal_native_PopStyleVar(count);
@@ -341,7 +341,7 @@ public class NodeEditor extends IDLBase {
       [-JNI;-NATIVE]
       NodeEditor::BeginPin((int)id, (PinKind)kind);
     */
-    public static native void internal_native_BeginPin(int id, long kind);
+    public static native void internal_native_BeginPin(int id, int kind);
 
     public static void PinRect(ImVec2 a, ImVec2 b) {
         internal_native_PinRect(a.native_address, b.native_address);
@@ -565,7 +565,7 @@ public class NodeEditor extends IDLBase {
       [-JNI;-NATIVE]
       NodeEditor::Flow((int)linkId, (FlowDirection)direction);
     */
-    public static native void internal_native_Flow(int linkId, long direction);
+    public static native void internal_native_Flow(int linkId, int direction);
 
     public static void Flow(int linkId) {
         internal_native_Flow(linkId);

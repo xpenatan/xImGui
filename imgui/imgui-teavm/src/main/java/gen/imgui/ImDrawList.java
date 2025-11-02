@@ -173,7 +173,7 @@ jsObj.AddLine(p1_addr, p2_addr, col);
     public static native void internal_native_AddLine(int this_addr, int p1_addr, int p2_addr, int col);
 
     public void AddRect(ImVec2 p_min, ImVec2 p_max, int col, float rounding, ImDrawFlags ImDrawFlags, float thickness) {
-        internal_native_AddRect(native_address, p_min.native_address, p_max.native_address, col, rounding, (int) ImDrawFlags.getValue(), thickness);
+        internal_native_AddRect(native_address, p_min.native_address, p_max.native_address, col, rounding, ImDrawFlags.getValue(), thickness);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -184,7 +184,7 @@ jsObj.AddRect(p_min_addr, p_max_addr, col, rounding, ImDrawFlags, thickness);
     public static native void internal_native_AddRect(int this_addr, int p_min_addr, int p_max_addr, int col, float rounding, int ImDrawFlags, float thickness);
 
     public void AddRect(ImVec2 p_min, ImVec2 p_max, int col, float rounding, ImDrawFlags ImDrawFlags) {
-        internal_native_AddRect(native_address, p_min.native_address, p_max.native_address, col, rounding, (int) ImDrawFlags.getValue());
+        internal_native_AddRect(native_address, p_min.native_address, p_max.native_address, col, rounding, ImDrawFlags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
@@ -217,7 +217,7 @@ jsObj.AddRect(p_min_addr, p_max_addr, col);
     public static native void internal_native_AddRect(int this_addr, int p_min_addr, int p_max_addr, int col);
 
     public void AddRectFilled(ImVec2 p_min, ImVec2 p_max, int col, float rounding, ImDrawFlags ImDrawFlags) {
-        internal_native_AddRectFilled(native_address, p_min.native_address, p_max.native_address, col, rounding, (int) ImDrawFlags.getValue());
+        internal_native_AddRectFilled(native_address, p_min.native_address, p_max.native_address, col, rounding, ImDrawFlags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
@@ -712,7 +712,7 @@ jsObj.AddImageQuad(user_texture_id_addr, p1_addr, p2_addr, p3_addr, p4_addr);
     public static native void internal_native_AddImageQuad(int this_addr, int user_texture_id_addr, int p1_addr, int p2_addr, int p3_addr, int p4_addr);
 
     public void AddImageRounded(IDLBase user_texture_id, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max, int col, float rounding, ImDrawFlags ImDrawFlags) {
-        internal_native_AddImageRounded(native_address, user_texture_id.native_void_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address, col, rounding, (int) ImDrawFlags.getValue());
+        internal_native_AddImageRounded(native_address, user_texture_id.native_void_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address, col, rounding, ImDrawFlags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
@@ -778,7 +778,7 @@ jsObj.PathFillConvex(col);
     public static native void internal_native_PathFillConvex(int this_addr, int col);
 
     public void PathStroke(int col, ImDrawFlags ImDrawFlags, float thickness) {
-        internal_native_PathStroke(native_address, col, (int) ImDrawFlags.getValue(), thickness);
+        internal_native_PathStroke(native_address, col, ImDrawFlags.getValue(), thickness);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -789,7 +789,7 @@ jsObj.PathStroke(col, ImDrawFlags, thickness);
     public static native void internal_native_PathStroke(int this_addr, int col, int ImDrawFlags, float thickness);
 
     public void PathStroke(int col, ImDrawFlags ImDrawFlags) {
-        internal_native_PathStroke(native_address, col, (int) ImDrawFlags.getValue());
+        internal_native_PathStroke(native_address, col, ImDrawFlags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]

@@ -196,7 +196,7 @@ public class TextEditor extends IDLBase {
     public static native int internal_native_GetLineCount(int this_addr);
 
     public void SetPalette(PaletteId aValue) {
-        internal_native_SetPalette(native_address, (int) aValue.getValue());
+        internal_native_SetPalette(native_address, aValue.getValue());
     }
 
     /*
@@ -209,7 +209,13 @@ public class TextEditor extends IDLBase {
 
     public PaletteId GetPalette() {
         int value = internal_native_GetPalette(native_address);
-        return PaletteId.MAP.get(value);
+        PaletteId[] values = PaletteId.values();
+        for (int i = 0; i < values.length; i++) {
+            PaletteId enumVal = values[i];
+            if (enumVal != PaletteId.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return PaletteId.CUSTOM.setValue(value);
     }
 
     /*
@@ -222,7 +228,7 @@ public class TextEditor extends IDLBase {
     public static native int internal_native_GetPalette(int this_addr);
 
     public void SetLanguageDefinition(LanguageDefinitionId aValue) {
-        internal_native_SetLanguageDefinition(native_address, (int) aValue.getValue());
+        internal_native_SetLanguageDefinition(native_address, aValue.getValue());
     }
 
     /*
@@ -235,7 +241,13 @@ public class TextEditor extends IDLBase {
 
     public LanguageDefinitionId GetLanguageDefinition() {
         int value = internal_native_GetLanguageDefinition(native_address);
-        return LanguageDefinitionId.MAP.get(value);
+        LanguageDefinitionId[] values = LanguageDefinitionId.values();
+        for (int i = 0; i < values.length; i++) {
+            LanguageDefinitionId enumVal = values[i];
+            if (enumVal != LanguageDefinitionId.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return LanguageDefinitionId.CUSTOM.setValue(value);
     }
 
     /*
@@ -318,7 +330,7 @@ public class TextEditor extends IDLBase {
     public static native float internal_native_GetLineSpacing(int this_addr);
 
     public static void SetDefaultPalette(PaletteId aValue) {
-        internal_native_SetDefaultPalette((int) aValue.getValue());
+        internal_native_SetDefaultPalette(aValue.getValue());
     }
 
     /*
@@ -330,7 +342,13 @@ public class TextEditor extends IDLBase {
 
     public static PaletteId GetDefaultPalette() {
         int value = internal_native_GetDefaultPalette();
-        return PaletteId.MAP.get(value);
+        PaletteId[] values = PaletteId.values();
+        for (int i = 0; i < values.length; i++) {
+            PaletteId enumVal = values[i];
+            if (enumVal != PaletteId.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return PaletteId.CUSTOM.setValue(value);
     }
 
     /*
@@ -526,7 +544,7 @@ public class TextEditor extends IDLBase {
     public static native int internal_native_GetLastVisibleLine(int this_addr);
 
     public void SetViewAtLine(int aLine, SetViewAtLineMode aMode) {
-        internal_native_SetViewAtLine(native_address, aLine, (int) aMode.getValue());
+        internal_native_SetViewAtLine(native_address, aLine, aMode.getValue());
     }
 
     /*

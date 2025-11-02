@@ -5,8 +5,6 @@
  *-------------------------------------------------------*/
 package imgui;
 
-import java.util.Map;
-import java.util.HashMap;
 import com.github.xpenatan.jParser.idl.IDLEnum;
 
 public enum ImGuiTableColumnFlags implements IDLEnum<ImGuiTableColumnFlags> {
@@ -53,16 +51,6 @@ public enum ImGuiTableColumnFlags implements IDLEnum<ImGuiTableColumnFlags> {
 
     public ImGuiTableColumnFlags getCustom() {
         return CUSTOM;
-    }
-
-    public static final Map<Integer, ImGuiTableColumnFlags> MAP = new HashMap<>();
-
-    static {
-        for (ImGuiTableColumnFlags value : values()) {
-            if (value != CUSTOM) {
-                MAP.put(value.value, value);
-            }
-        }
     }
 
     /*[-JNI;-NATIVE]

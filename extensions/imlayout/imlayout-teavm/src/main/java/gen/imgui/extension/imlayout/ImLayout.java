@@ -236,7 +236,7 @@ public class ImLayout extends IDLBase {
     public static native int internal_native_GetCurrentLayout();
 
     public static void SetOrientation(ImOrientation ImOrientation) {
-        internal_native_SetOrientation((int) ImOrientation.getValue());
+        internal_native_SetOrientation(ImOrientation.getValue());
     }
 
     /*
@@ -727,7 +727,7 @@ public class ImLayout extends IDLBase {
     public static native float internal_native_GetTreeHeight(float padding);
 
     public static int ButtonBehavior(int id, ImRect bb, boolean isSelected, int selectedColor, int hoveredColor, int hoveredStrokeColor, ImGuiButtonFlags ImGuiButtonFlags, float clickDelay) {
-        return internal_native_ButtonBehavior(id, bb.native_address, isSelected, selectedColor, hoveredColor, hoveredStrokeColor, (int) ImGuiButtonFlags.getValue(), clickDelay);
+        return internal_native_ButtonBehavior(id, bb.native_address, isSelected, selectedColor, hoveredColor, hoveredStrokeColor, ImGuiButtonFlags.getValue(), clickDelay);
     }
 
     /*
@@ -739,7 +739,7 @@ public class ImLayout extends IDLBase {
     public static native int internal_native_ButtonBehavior(int id, int bb_addr, boolean isSelected, int selectedColor, int hoveredColor, int hoveredStrokeColor, int ImGuiButtonFlags, float clickDelay);
 
     public static int ButtonBehavior(int id, ImRect bb, boolean isSelected, int selectedColor, int hoveredColor, int hoveredStrokeColor, ImGuiButtonFlags ImGuiButtonFlags) {
-        return internal_native_ButtonBehavior(id, bb.native_address, isSelected, selectedColor, hoveredColor, hoveredStrokeColor, (int) ImGuiButtonFlags.getValue());
+        return internal_native_ButtonBehavior(id, bb.native_address, isSelected, selectedColor, hoveredColor, hoveredStrokeColor, ImGuiButtonFlags.getValue());
     }
 
     /*

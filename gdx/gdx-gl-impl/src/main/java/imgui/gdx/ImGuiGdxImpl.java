@@ -12,7 +12,6 @@ import com.badlogic.gdx.math.Matrix4;
 import com.badlogic.gdx.utils.BufferUtils;
 import com.github.xpenatan.jParser.idl.IDLBase;
 import imgui.ClipboardTextFunction;
-import imgui.IDLTemp;
 import imgui.ImDrawCmd;
 import imgui.ImDrawData;
 import imgui.ImDrawList;
@@ -28,6 +27,7 @@ import imgui.VecVtxBuffer;
 import imgui.idl.helper.IDLByteArray;
 import imgui.idl.helper.IDLInt;
 import imgui.idl.helper.IDLString;
+import imgui.idl.helper.IDLTemp;
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
 
@@ -152,7 +152,7 @@ public class ImGuiGdxImpl implements ImGuiImpl {
 
         BufferUtils.disposeUnsafeByteBuffer(buffer);
         IDLBase textureId = new IDLBase();
-        textureId.native_setVoid(g_FontTexture);
+        textureId.native_setAddress(g_FontTexture);
         io.get_Fonts().set_TexID(textureId);
     }
 
@@ -279,7 +279,7 @@ public class ImGuiGdxImpl implements ImGuiImpl {
                     int indices = idxOffset * 2;
 
                     IDLBase textureId = drawCmd.get_TextureId();
-                    int texId = textureId.getIntNativeAddress();
+                    int texId = textureId.native_getAddressInt();
                     Gdx.gl.glBindTexture(GL20.GL_TEXTURE_2D, texId);
                     Gdx.gl.glDrawElements(GL20.GL_TRIANGLES, elemCount, GL20.GL_UNSIGNED_SHORT, indices);
                 }

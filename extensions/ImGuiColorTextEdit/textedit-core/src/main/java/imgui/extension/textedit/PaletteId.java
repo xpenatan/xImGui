@@ -5,8 +5,6 @@
  *-------------------------------------------------------*/
 package imgui.extension.textedit;
 
-import java.util.Map;
-import java.util.HashMap;
 import com.github.xpenatan.jParser.idl.IDLEnum;
 
 public enum PaletteId implements IDLEnum<PaletteId> {
@@ -33,16 +31,6 @@ public enum PaletteId implements IDLEnum<PaletteId> {
 
     public PaletteId getCustom() {
         return CUSTOM;
-    }
-
-    public static final Map<Integer, PaletteId> MAP = new HashMap<>();
-
-    static {
-        for (PaletteId value : values()) {
-            if (value != CUSTOM) {
-                MAP.put(value.value, value);
-            }
-        }
     }
 
     /*[-JNI;-NATIVE]

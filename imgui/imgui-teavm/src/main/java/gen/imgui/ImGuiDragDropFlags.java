@@ -5,8 +5,6 @@
  *-------------------------------------------------------*/
 package gen.imgui;
 
-import java.util.Map;
-import java.util.HashMap;
 import com.github.xpenatan.jParser.idl.IDLEnum;
 
 public enum ImGuiDragDropFlags implements IDLEnum<ImGuiDragDropFlags> {
@@ -44,16 +42,6 @@ public enum ImGuiDragDropFlags implements IDLEnum<ImGuiDragDropFlags> {
 
     public ImGuiDragDropFlags getCustom() {
         return CUSTOM;
-    }
-
-    public static final Map<Integer, ImGuiDragDropFlags> MAP = new HashMap<>();
-
-    static {
-        for (ImGuiDragDropFlags value : values()) {
-            if (value != CUSTOM) {
-                MAP.put(value.value, value);
-            }
-        }
     }
 
     /*[-TEAVM;-NATIVE]

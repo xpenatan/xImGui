@@ -96,7 +96,7 @@ public class ImGuiIO extends IDLBase {
       ImGuiIO* nativeObject = (ImGuiIO*)this_addr;
       nativeObject->AddKeyEvent((::ImGuiKey)ImGuiKey, down);
     */
-    public static native void internal_native_AddKeyEvent(long this_addr, long ImGuiKey, boolean down);
+    public static native void internal_native_AddKeyEvent(long this_addr, int ImGuiKey, boolean down);
 
     public void AddInputCharacter(int c) {
         internal_native_AddInputCharacter(native_address, c);
@@ -350,7 +350,13 @@ public class ImGuiIO extends IDLBase {
 
     public ImGuiConfigFlags get_ConfigFlags() {
         int value = internal_native_get_ConfigFlags(native_address);
-        return ImGuiConfigFlags.MAP.get(value);
+        ImGuiConfigFlags[] values = ImGuiConfigFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiConfigFlags enumVal = values[i];
+            if (enumVal != ImGuiConfigFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiConfigFlags.CUSTOM.setValue(value);
     }
 
     /*
@@ -369,7 +375,7 @@ public class ImGuiIO extends IDLBase {
       ImGuiIO* nativeObject = (ImGuiIO*)this_addr;
       nativeObject->ConfigFlags = (::ImGuiConfigFlags)ConfigFlags;
     */
-    public static native void internal_native_set_ConfigFlags(long this_addr, long ConfigFlags);
+    public static native void internal_native_set_ConfigFlags(long this_addr, int ConfigFlags);
 
     public float get_IniSavingRate() {
         return internal_native_get_IniSavingRate(native_address);

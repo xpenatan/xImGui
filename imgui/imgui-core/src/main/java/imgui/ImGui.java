@@ -523,7 +523,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::Begin(name, (bool*)p_open_addr, (::ImGuiWindowFlags)ImGuiWindowFlags);
     */
-    public static native boolean internal_native_Begin(String name, long p_open_addr, long ImGuiWindowFlags);
+    public static native boolean internal_native_Begin(String name, long p_open_addr, int ImGuiWindowFlags);
 
     public static boolean Begin(String name, IDLBoolArray p_open) {
         return internal_native_Begin(name, p_open.native_void_address);
@@ -563,7 +563,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::BeginChild(str_id, *((ImVec2* )size_addr), (::ImGuiChildFlags)ImGuiChildFlags, (::ImGuiWindowFlags)ImGuiWindowFlags);
     */
-    public static native boolean internal_native_BeginChild__0(String str_id, long size_addr, long ImGuiChildFlags, long ImGuiWindowFlags);
+    public static native boolean internal_native_BeginChild__0(String str_id, long size_addr, int ImGuiChildFlags, int ImGuiWindowFlags);
 
     public static boolean BeginChild(String str_id, ImVec2 size, ImGuiChildFlags ImGuiChildFlags) {
         return internal_native_BeginChild__0(str_id, size.native_address, ImGuiChildFlags.getValue());
@@ -573,7 +573,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::BeginChild(str_id, *((ImVec2* )size_addr), (::ImGuiChildFlags)ImGuiChildFlags);
     */
-    public static native boolean internal_native_BeginChild__0(String str_id, long size_addr, long ImGuiChildFlags);
+    public static native boolean internal_native_BeginChild__0(String str_id, long size_addr, int ImGuiChildFlags);
 
     public static boolean BeginChild(String str_id, ImVec2 size) {
         return internal_native_BeginChild__0(str_id, size.native_address);
@@ -603,7 +603,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::BeginChild((int)id, *((ImVec2* )size_addr), (::ImGuiChildFlags)ImGuiChildFlags, (::ImGuiWindowFlags)ImGuiWindowFlags);
     */
-    public static native boolean internal_native_BeginChild__1(int id, long size_addr, long ImGuiChildFlags, long ImGuiWindowFlags);
+    public static native boolean internal_native_BeginChild__1(int id, long size_addr, int ImGuiChildFlags, int ImGuiWindowFlags);
 
     public static boolean BeginChild(int id, ImVec2 size, ImGuiChildFlags ImGuiChildFlags) {
         return internal_native_BeginChild__1(id, size.native_address, ImGuiChildFlags.getValue());
@@ -613,7 +613,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::BeginChild((int)id, *((ImVec2* )size_addr), (::ImGuiChildFlags)ImGuiChildFlags);
     */
-    public static native boolean internal_native_BeginChild__1(int id, long size_addr, long ImGuiChildFlags);
+    public static native boolean internal_native_BeginChild__1(int id, long size_addr, int ImGuiChildFlags);
 
     public static boolean BeginChild(int id, ImVec2 size) {
         return internal_native_BeginChild__1(id, size.native_address);
@@ -673,7 +673,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::IsWindowFocused((::ImGuiFocusedFlags)ImGuiFocusedFlags);
     */
-    public static native boolean internal_native_IsWindowFocused(long ImGuiFocusedFlags);
+    public static native boolean internal_native_IsWindowFocused(int ImGuiFocusedFlags);
 
     public static boolean IsWindowFocused() {
         return internal_native_IsWindowFocused();
@@ -693,7 +693,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::IsWindowHovered((::ImGuiHoveredFlags)ImGuiFocusedFlags);
     */
-    public static native boolean internal_native_IsWindowHovered(long ImGuiFocusedFlags);
+    public static native boolean internal_native_IsWindowHovered(int ImGuiFocusedFlags);
 
     public static boolean IsWindowHovered() {
         return internal_native_IsWindowHovered();
@@ -811,7 +811,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::SetNextWindowPos(*((ImVec2* )pos_addr), (::ImGuiCond)ImGuiCond, *((ImVec2* )pivot_addr));
     */
-    public static native void internal_native_SetNextWindowPos(long pos_addr, long ImGuiCond, long pivot_addr);
+    public static native void internal_native_SetNextWindowPos(long pos_addr, int ImGuiCond, long pivot_addr);
 
     public static void SetNextWindowPos(ImVec2 pos, ImGuiCond ImGuiCond) {
         internal_native_SetNextWindowPos(pos.native_address, ImGuiCond.getValue());
@@ -821,7 +821,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::SetNextWindowPos(*((ImVec2* )pos_addr), (::ImGuiCond)ImGuiCond);
     */
-    public static native void internal_native_SetNextWindowPos(long pos_addr, long ImGuiCond);
+    public static native void internal_native_SetNextWindowPos(long pos_addr, int ImGuiCond);
 
     public static void SetNextWindowPos(ImVec2 pos) {
         internal_native_SetNextWindowPos(pos.native_address);
@@ -841,7 +841,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::SetNextWindowSize(*((ImVec2* )size_addr), (::ImGuiCond)ImGuiCond);
     */
-    public static native void internal_native_SetNextWindowSize(long size_addr, long ImGuiCond);
+    public static native void internal_native_SetNextWindowSize(long size_addr, int ImGuiCond);
 
     public static void SetNextWindowSize(ImVec2 size) {
         internal_native_SetNextWindowSize(size.native_address);
@@ -881,7 +881,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::SetNextWindowCollapsed(collapsed, (::ImGuiCond)ImGuiCond);
     */
-    public static native void internal_native_SetNextWindowCollapsed(boolean collapsed, long ImGuiCond);
+    public static native void internal_native_SetNextWindowCollapsed(boolean collapsed, int ImGuiCond);
 
     public static void SetNextWindowCollapsed(boolean collapsed) {
         internal_native_SetNextWindowCollapsed(collapsed);
@@ -941,7 +941,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::SetWindowPos(*((ImVec2* )pos_addr), (::ImGuiCond)ImGuiCond);
     */
-    public static native void internal_native_SetWindowPos__0(long pos_addr, long ImGuiCond);
+    public static native void internal_native_SetWindowPos__0(long pos_addr, int ImGuiCond);
 
     public static void SetWindowPos(ImVec2 pos) {
         internal_native_SetWindowPos__0(pos.native_address);
@@ -961,7 +961,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::SetWindowPos(name, *((ImVec2* )pos_addr), (::ImGuiCond)ImGuiCond);
     */
-    public static native void internal_native_SetWindowPos__1(String name, long pos_addr, long ImGuiCond);
+    public static native void internal_native_SetWindowPos__1(String name, long pos_addr, int ImGuiCond);
 
     public static void SetWindowPos(String name, ImVec2 pos) {
         internal_native_SetWindowPos__1(name, pos.native_address);
@@ -981,7 +981,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::SetWindowSize(*((ImVec2* )size_addr), (::ImGuiCond)ImGuiCond);
     */
-    public static native void internal_native_SetWindowSize__0(long size_addr, long ImGuiCond);
+    public static native void internal_native_SetWindowSize__0(long size_addr, int ImGuiCond);
 
     public static void SetWindowSize(ImVec2 size) {
         internal_native_SetWindowSize__0(size.native_address);
@@ -1001,7 +1001,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::SetWindowSize(name, *((ImVec2* )size_addr), (::ImGuiCond)ImGuiCond);
     */
-    public static native void internal_native_SetWindowSize__1(String name, long size_addr, long ImGuiCond);
+    public static native void internal_native_SetWindowSize__1(String name, long size_addr, int ImGuiCond);
 
     public static void SetWindowSize(String name, ImVec2 size) {
         internal_native_SetWindowSize__1(name, size.native_address);
@@ -1021,7 +1021,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::SetWindowCollapsed(collapsed, (::ImGuiCond)ImGuiCond);
     */
-    public static native void internal_native_SetWindowCollapsed__0(boolean collapsed, long ImGuiCond);
+    public static native void internal_native_SetWindowCollapsed__0(boolean collapsed, int ImGuiCond);
 
     public static void SetWindowCollapsed(boolean collapsed) {
         internal_native_SetWindowCollapsed__0(collapsed);
@@ -1041,7 +1041,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::SetWindowCollapsed_1(name, collapsed, (::ImGuiCond)ImGuiCond);
     */
-    public static native void internal_native_SetWindowCollapsed__1(String name, boolean collapsed, long ImGuiCond);
+    public static native void internal_native_SetWindowCollapsed__1(String name, boolean collapsed, int ImGuiCond);
 
     public static void SetWindowCollapsed(String name, boolean collapsed) {
         internal_native_SetWindowCollapsed__1(name, collapsed);
@@ -1251,7 +1251,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::PushStyleColor((::ImGuiCol)idx, col);
     */
-    public static native void internal_native_PushStyleColor__0(long idx, int col);
+    public static native void internal_native_PushStyleColor__0(int idx, int col);
 
     public static void PushStyleColor(ImGuiCol idx, ImVec4 col) {
         internal_native_PushStyleColor__1(idx.getValue(), col.native_address);
@@ -1261,7 +1261,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::PushStyleColor((::ImGuiCol)idx, *((ImVec4* )col_addr));
     */
-    public static native void internal_native_PushStyleColor__1(long idx, long col_addr);
+    public static native void internal_native_PushStyleColor__1(int idx, long col_addr);
 
     public static void PopStyleColor(int count) {
         internal_native_PopStyleColor(count);
@@ -1291,7 +1291,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::PushStyleVar((::ImGuiStyleVar)idx, (float)val);
     */
-    public static native void internal_native_PushStyleVar__0(long idx, float val);
+    public static native void internal_native_PushStyleVar__0(int idx, float val);
 
     public static void PushStyleVar(ImGuiStyleVar idx, ImVec2 val) {
         internal_native_PushStyleVar__1(idx.getValue(), val.native_address);
@@ -1301,7 +1301,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::PushStyleVar((::ImGuiStyleVar)idx, *((ImVec2* )val_addr));
     */
-    public static native void internal_native_PushStyleVar__1(long idx, long val_addr);
+    public static native void internal_native_PushStyleVar__1(int idx, long val_addr);
 
     public static void PopStyleVar(int count) {
         internal_native_PopStyleVar(count);
@@ -2003,7 +2003,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::InvisibleButton(str_id, *((ImVec2* )size_addr), (::ImGuiButtonFlags)ImGuiButtonFlags);
     */
-    public static native boolean internal_native_InvisibleButton(String str_id, long size_addr, long ImGuiButtonFlags);
+    public static native boolean internal_native_InvisibleButton(String str_id, long size_addr, int ImGuiButtonFlags);
 
     public static boolean InvisibleButton(String str_id, ImVec2 size) {
         return internal_native_InvisibleButton(str_id, size.native_address);
@@ -2023,7 +2023,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::ArrowButton(str_id, (::ImGuiDir)dir);
     */
-    public static native boolean internal_native_ArrowButton(String str_id, long dir);
+    public static native boolean internal_native_ArrowButton(String str_id, int dir);
 
     public static boolean Checkbox(String label, IDLBoolArray v) {
         return internal_native_Checkbox(label, v.native_void_address);
@@ -2243,7 +2243,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::BeginCombo(label, preview_value, (::ImGuiComboFlags)ImGuiComboFlags);
     */
-    public static native boolean internal_native_BeginCombo(String label, String preview_value, long ImGuiComboFlags);
+    public static native boolean internal_native_BeginCombo(String label, String preview_value, int ImGuiComboFlags);
 
     public static boolean BeginCombo(String label, String preview_value) {
         return internal_native_BeginCombo(label, preview_value);
@@ -2293,7 +2293,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::DragFloat(label, (float*)v_addr, (float)v_speed, (float)v_min, (float)v_max, format, (::ImGuiSliderFlags)ImGuiSliderFlags);
     */
-    public static native boolean internal_native_DragFloat(String label, long v_addr, float v_speed, float v_min, float v_max, String format, long ImGuiSliderFlags);
+    public static native boolean internal_native_DragFloat(String label, long v_addr, float v_speed, float v_min, float v_max, String format, int ImGuiSliderFlags);
 
     public static boolean DragFloat(String label, IDLFloatArray v, float v_speed, float v_min, float v_max, String format) {
         return internal_native_DragFloat(label, v.native_void_address, v_speed, v_min, v_max, format);
@@ -2353,7 +2353,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::DragFloat2(label, (float*)v_addr, (float)v_speed, (float)v_min, (float)v_max, format, (::ImGuiSliderFlags)ImGuiSliderFlags);
     */
-    public static native boolean internal_native_DragFloat2(String label, long v_addr, float v_speed, float v_min, float v_max, String format, long ImGuiSliderFlags);
+    public static native boolean internal_native_DragFloat2(String label, long v_addr, float v_speed, float v_min, float v_max, String format, int ImGuiSliderFlags);
 
     public static boolean DragFloat2(String label, IDLFloatArray v, float v_speed, float v_min, float v_max, String format) {
         return internal_native_DragFloat2(label, v.native_void_address, v_speed, v_min, v_max, format);
@@ -2413,7 +2413,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::DragFloat3(label, (float*)v_addr, (float)v_speed, (float)v_min, (float)v_max, format, (::ImGuiSliderFlags)ImGuiSliderFlags);
     */
-    public static native boolean internal_native_DragFloat3(String label, long v_addr, float v_speed, float v_min, float v_max, String format, long ImGuiSliderFlags);
+    public static native boolean internal_native_DragFloat3(String label, long v_addr, float v_speed, float v_min, float v_max, String format, int ImGuiSliderFlags);
 
     public static boolean DragFloat3(String label, IDLFloatArray v, float v_speed, float v_min, float v_max, String format) {
         return internal_native_DragFloat3(label, v.native_void_address, v_speed, v_min, v_max, format);
@@ -2473,7 +2473,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::DragFloat4(label, (float*)v_addr, (float)v_speed, (float)v_min, (float)v_max, format, (::ImGuiSliderFlags)ImGuiSliderFlags);
     */
-    public static native boolean internal_native_DragFloat4(String label, long v_addr, float v_speed, float v_min, float v_max, String format, long ImGuiSliderFlags);
+    public static native boolean internal_native_DragFloat4(String label, long v_addr, float v_speed, float v_min, float v_max, String format, int ImGuiSliderFlags);
 
     public static boolean DragFloat4(String label, IDLFloatArray v, float v_speed, float v_min, float v_max, String format) {
         return internal_native_DragFloat4(label, v.native_void_address, v_speed, v_min, v_max, format);
@@ -2533,7 +2533,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::DragFloatRange2(label, (float*)v_current_min_addr, (float*)v_current_max_addr, (float)v_speed, (float)v_min, (float)v_max, format, format_max, (::ImGuiSliderFlags)ImGuiSliderFlags);
     */
-    public static native boolean internal_native_DragFloatRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed, float v_min, float v_max, String format, String format_max, long ImGuiSliderFlags);
+    public static native boolean internal_native_DragFloatRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed, float v_min, float v_max, String format, String format_max, int ImGuiSliderFlags);
 
     public static boolean DragFloatRange2(String label, IDLFloatArray v_current_min, IDLFloatArray v_current_max, float v_speed, float v_min, float v_max, String format, String format_max) {
         return internal_native_DragFloatRange2(label, v_current_min.native_void_address, v_current_max.native_void_address, v_speed, v_min, v_max, format, format_max);
@@ -2603,7 +2603,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::DragInt(label, (int*)v_addr, (float)v_speed, (int)v_min, (int)v_max, format, (::ImGuiSliderFlags)ImGuiSliderFlags);
     */
-    public static native boolean internal_native_DragInt(String label, long v_addr, float v_speed, int v_min, int v_max, String format, long ImGuiSliderFlags);
+    public static native boolean internal_native_DragInt(String label, long v_addr, float v_speed, int v_min, int v_max, String format, int ImGuiSliderFlags);
 
     public static boolean DragInt(String label, IDLIntArray v, float v_speed, int v_min, int v_max, String format) {
         return internal_native_DragInt(label, v.native_void_address, v_speed, v_min, v_max, format);
@@ -2663,7 +2663,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::DragInt2(label, (int*)v_addr, (float)v_speed, (int)v_min, (int)v_max, format, (::ImGuiSliderFlags)ImGuiSliderFlags);
     */
-    public static native boolean internal_native_DragInt2(String label, long v_addr, float v_speed, int v_min, int v_max, String format, long ImGuiSliderFlags);
+    public static native boolean internal_native_DragInt2(String label, long v_addr, float v_speed, int v_min, int v_max, String format, int ImGuiSliderFlags);
 
     public static boolean DragInt2(String label, IDLIntArray v, float v_speed, int v_min, int v_max, String format) {
         return internal_native_DragInt2(label, v.native_void_address, v_speed, v_min, v_max, format);
@@ -2723,7 +2723,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::DragInt3(label, (int*)v_addr, (float)v_speed, (int)v_min, (int)v_max, format, (::ImGuiSliderFlags)ImGuiSliderFlags);
     */
-    public static native boolean internal_native_DragInt3(String label, long v_addr, float v_speed, int v_min, int v_max, String format, long ImGuiSliderFlags);
+    public static native boolean internal_native_DragInt3(String label, long v_addr, float v_speed, int v_min, int v_max, String format, int ImGuiSliderFlags);
 
     public static boolean DragInt3(String label, IDLIntArray v, float v_speed, int v_min, int v_max, String format) {
         return internal_native_DragInt3(label, v.native_void_address, v_speed, v_min, v_max, format);
@@ -2783,7 +2783,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::DragInt4(label, (int*)v_addr, (float)v_speed, (int)v_min, (int)v_max, format, (::ImGuiSliderFlags)ImGuiSliderFlags);
     */
-    public static native boolean internal_native_DragInt4(String label, long v_addr, float v_speed, int v_min, int v_max, String format, long ImGuiSliderFlags);
+    public static native boolean internal_native_DragInt4(String label, long v_addr, float v_speed, int v_min, int v_max, String format, int ImGuiSliderFlags);
 
     public static boolean DragInt4(String label, IDLIntArray v, float v_speed, int v_min, int v_max, String format) {
         return internal_native_DragInt4(label, v.native_void_address, v_speed, v_min, v_max, format);
@@ -2843,7 +2843,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::DragIntRange2(label, (int*)v_current_min_addr, (int*)v_current_max_addr, (float)v_speed, (int)v_min, (int)v_max, format, format_max, (::ImGuiSliderFlags)ImGuiSliderFlags);
     */
-    public static native boolean internal_native_DragIntRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed, int v_min, int v_max, String format, String format_max, long ImGuiSliderFlags);
+    public static native boolean internal_native_DragIntRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed, int v_min, int v_max, String format, String format_max, int ImGuiSliderFlags);
 
     public static boolean DragIntRange2(String label, IDLIntArray v_current_min, IDLIntArray v_current_max, float v_speed, int v_min, int v_max, String format, String format_max) {
         return internal_native_DragIntRange2(label, v_current_min.native_void_address, v_current_max.native_void_address, v_speed, v_min, v_max, format, format_max);
@@ -2913,7 +2913,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::SliderFloat(label, (float*)v_addr, (float)v_min, (float)v_max, format, (::ImGuiSliderFlags)ImGuiSliderFlags);
     */
-    public static native boolean internal_native_SliderFloat(String label, long v_addr, float v_min, float v_max, String format, long ImGuiSliderFlags);
+    public static native boolean internal_native_SliderFloat(String label, long v_addr, float v_min, float v_max, String format, int ImGuiSliderFlags);
 
     public static boolean SliderFloat(String label, IDLFloatArray v, float v_min, float v_max, String format) {
         return internal_native_SliderFloat(label, v.native_void_address, v_min, v_max, format);
@@ -2943,7 +2943,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::SliderFloat2(label, (float*)v_addr, (float)v_min, (float)v_max, format, (::ImGuiSliderFlags)ImGuiSliderFlags);
     */
-    public static native boolean internal_native_SliderFloat2(String label, long v_addr, float v_min, float v_max, String format, long ImGuiSliderFlags);
+    public static native boolean internal_native_SliderFloat2(String label, long v_addr, float v_min, float v_max, String format, int ImGuiSliderFlags);
 
     public static boolean SliderFloat2(String label, IDLFloatArray v, float v_min, float v_max, String format) {
         return internal_native_SliderFloat2(label, v.native_void_address, v_min, v_max, format);
@@ -2973,7 +2973,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::SliderFloat3(label, (float*)v_addr, (float)v_min, (float)v_max, format, (::ImGuiSliderFlags)ImGuiSliderFlags);
     */
-    public static native boolean internal_native_SliderFloat3(String label, long v_addr, float v_min, float v_max, String format, long ImGuiSliderFlags);
+    public static native boolean internal_native_SliderFloat3(String label, long v_addr, float v_min, float v_max, String format, int ImGuiSliderFlags);
 
     public static boolean SliderFloat3(String label, IDLFloatArray v, float v_min, float v_max, String format) {
         return internal_native_SliderFloat3(label, v.native_void_address, v_min, v_max, format);
@@ -3003,7 +3003,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::SliderFloat4(label, (float*)v_addr, (float)v_min, (float)v_max, format, (::ImGuiSliderFlags)ImGuiSliderFlags);
     */
-    public static native boolean internal_native_SliderFloat4(String label, long v_addr, float v_min, float v_max, String format, long ImGuiSliderFlags);
+    public static native boolean internal_native_SliderFloat4(String label, long v_addr, float v_min, float v_max, String format, int ImGuiSliderFlags);
 
     public static boolean SliderFloat4(String label, IDLFloatArray v, float v_min, float v_max, String format) {
         return internal_native_SliderFloat4(label, v.native_void_address, v_min, v_max, format);
@@ -3033,7 +3033,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::SliderAngle(label, (float*)v_rad_addr, (float)v_degrees_min, (float)v_degrees_max, format, (::ImGuiSliderFlags)ImGuiSliderFlags);
     */
-    public static native boolean internal_native_SliderAngle(String label, long v_rad_addr, float v_degrees_min, float v_degrees_max, String format, long ImGuiSliderFlags);
+    public static native boolean internal_native_SliderAngle(String label, long v_rad_addr, float v_degrees_min, float v_degrees_max, String format, int ImGuiSliderFlags);
 
     public static boolean SliderAngle(String label, IDLFloatArray v_rad, float v_degrees_min, float v_degrees_max, String format) {
         return internal_native_SliderAngle(label, v_rad.native_void_address, v_degrees_min, v_degrees_max, format);
@@ -3083,7 +3083,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::SliderInt(label, (int*)v_addr, (int)v_min, (int)v_max, format, (::ImGuiSliderFlags)ImGuiSliderFlags);
     */
-    public static native boolean internal_native_SliderInt(String label, long v_addr, int v_min, int v_max, String format, long ImGuiSliderFlags);
+    public static native boolean internal_native_SliderInt(String label, long v_addr, int v_min, int v_max, String format, int ImGuiSliderFlags);
 
     public static boolean SliderInt(String label, IDLIntArray v, int v_min, int v_max, String format) {
         return internal_native_SliderInt(label, v.native_void_address, v_min, v_max, format);
@@ -3113,7 +3113,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::SliderInt2(label, (int*)v_addr, (int)v_min, (int)v_max, format, (::ImGuiSliderFlags)ImGuiSliderFlags);
     */
-    public static native boolean internal_native_SliderInt2(String label, long v_addr, int v_min, int v_max, String format, long ImGuiSliderFlags);
+    public static native boolean internal_native_SliderInt2(String label, long v_addr, int v_min, int v_max, String format, int ImGuiSliderFlags);
 
     public static boolean SliderInt2(String label, IDLIntArray v, int v_min, int v_max, String format) {
         return internal_native_SliderInt2(label, v.native_void_address, v_min, v_max, format);
@@ -3143,7 +3143,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::SliderInt3(label, (int*)v_addr, (int)v_min, (int)v_max, format, (::ImGuiSliderFlags)ImGuiSliderFlags);
     */
-    public static native boolean internal_native_SliderInt3(String label, long v_addr, int v_min, int v_max, String format, long ImGuiSliderFlags);
+    public static native boolean internal_native_SliderInt3(String label, long v_addr, int v_min, int v_max, String format, int ImGuiSliderFlags);
 
     public static boolean SliderInt3(String label, IDLIntArray v, int v_min, int v_max, String format) {
         return internal_native_SliderInt3(label, v.native_void_address, v_min, v_max, format);
@@ -3173,7 +3173,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::SliderInt4(label, (int*)v_addr, (int)v_min, (int)v_max, format, (::ImGuiSliderFlags)ImGuiSliderFlags);
     */
-    public static native boolean internal_native_SliderInt4(String label, long v_addr, int v_min, int v_max, String format, long ImGuiSliderFlags);
+    public static native boolean internal_native_SliderInt4(String label, long v_addr, int v_min, int v_max, String format, int ImGuiSliderFlags);
 
     public static boolean SliderInt4(String label, IDLIntArray v, int v_min, int v_max, String format) {
         return internal_native_SliderInt4(label, v.native_void_address, v_min, v_max, format);
@@ -3203,7 +3203,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::VSliderFloat(label, *((ImVec2* )size_addr), (float*)v_addr, (float)v_min, (float)v_max, format, (::ImGuiSliderFlags)ImGuiSliderFlags);
     */
-    public static native boolean internal_native_VSliderFloat(String label, long size_addr, long v_addr, float v_min, float v_max, String format, long ImGuiSliderFlags);
+    public static native boolean internal_native_VSliderFloat(String label, long size_addr, long v_addr, float v_min, float v_max, String format, int ImGuiSliderFlags);
 
     public static boolean VSliderFloat(String label, ImVec2 size, IDLFloatArray v, float v_min, float v_max, String format) {
         return internal_native_VSliderFloat(label, size.native_address, v.native_void_address, v_min, v_max, format);
@@ -3233,7 +3233,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::VSliderInt(label, *((ImVec2* )size_addr), (int*)v_addr, (int)v_min, (int)v_max, format, (::ImGuiSliderFlags)ImGuiSliderFlags);
     */
-    public static native boolean internal_native_VSliderInt(String label, long size_addr, long v_addr, int v_min, int v_max, String format, long ImGuiSliderFlags);
+    public static native boolean internal_native_VSliderInt(String label, long size_addr, long v_addr, int v_min, int v_max, String format, int ImGuiSliderFlags);
 
     public static boolean VSliderInt(String label, ImVec2 size, IDLIntArray v, int v_min, int v_max, String format) {
         return internal_native_VSliderInt(label, size.native_address, v.native_void_address, v_min, v_max, format);
@@ -3263,7 +3263,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::InputText(label, (char*)buf_addr, (int)buf_size, (::ImGuiInputTextFlags)ImGuiInputTextFlags);
     */
-    public static native boolean internal_native_InputText(String label, long buf_addr, int buf_size, long ImGuiInputTextFlags);
+    public static native boolean internal_native_InputText(String label, long buf_addr, int buf_size, int ImGuiInputTextFlags);
 
     public static boolean InputText(String label, IDLByteArray buf, int buf_size) {
         return internal_native_InputText(label, buf.native_void_address, buf_size);
@@ -3283,7 +3283,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::InputTextMultiline(label, (char*)buf_addr, (int)buf_size, *((ImVec2* )size_addr), (::ImGuiInputTextFlags)ImGuiInputTextFlags);
     */
-    public static native boolean internal_native_InputTextMultiline(String label, long buf_addr, int buf_size, long size_addr, long ImGuiInputTextFlags);
+    public static native boolean internal_native_InputTextMultiline(String label, long buf_addr, int buf_size, long size_addr, int ImGuiInputTextFlags);
 
     public static boolean InputTextMultiline(String label, IDLByteArray buf, int buf_size, ImVec2 size) {
         return internal_native_InputTextMultiline(label, buf.native_void_address, buf_size, size.native_address);
@@ -3313,7 +3313,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::InputTextWithHint(label, hint, (char*)buf_addr, (int)buf_size, (::ImGuiInputTextFlags)ImGuiInputTextFlags);
     */
-    public static native boolean internal_native_InputTextWithHint(String label, String hint, long buf_addr, int buf_size, long ImGuiInputTextFlags);
+    public static native boolean internal_native_InputTextWithHint(String label, String hint, long buf_addr, int buf_size, int ImGuiInputTextFlags);
 
     public static boolean InputTextWithHint(String label, String hint, IDLByteArray buf, int buf_size) {
         return internal_native_InputTextWithHint(label, hint, buf.native_void_address, buf_size);
@@ -3333,7 +3333,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::InputFloat(label, (float*)v_addr, (float)step, (float)step_fast, format, (::ImGuiInputTextFlags)ImGuiInputTextFlags);
     */
-    public static native boolean internal_native_InputFloat(String label, long v_addr, float step, float step_fast, String format, long ImGuiInputTextFlags);
+    public static native boolean internal_native_InputFloat(String label, long v_addr, float step, float step_fast, String format, int ImGuiInputTextFlags);
 
     public static boolean InputFloat(String label, IDLFloatArray v, float step, float step_fast, String format) {
         return internal_native_InputFloat(label, v.native_void_address, step, step_fast, format);
@@ -3383,7 +3383,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::InputFloat2(label, (float*)v_addr, format, (::ImGuiInputTextFlags)ImGuiInputTextFlags);
     */
-    public static native boolean internal_native_InputFloat2(String label, long v_addr, String format, long ImGuiInputTextFlags);
+    public static native boolean internal_native_InputFloat2(String label, long v_addr, String format, int ImGuiInputTextFlags);
 
     public static boolean InputFloat2(String label, IDLFloatArray v, String format) {
         return internal_native_InputFloat2(label, v.native_void_address, format);
@@ -3413,7 +3413,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::InputFloat3(label, (float*)v_addr, format, (::ImGuiInputTextFlags)ImGuiInputTextFlags);
     */
-    public static native boolean internal_native_InputFloat3(String label, long v_addr, String format, long ImGuiInputTextFlags);
+    public static native boolean internal_native_InputFloat3(String label, long v_addr, String format, int ImGuiInputTextFlags);
 
     public static boolean InputFloat3(String label, IDLFloatArray v, String format) {
         return internal_native_InputFloat3(label, v.native_void_address, format);
@@ -3443,7 +3443,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::InputFloat4(label, (float*)v_addr, format, (::ImGuiInputTextFlags)ImGuiInputTextFlags);
     */
-    public static native boolean internal_native_InputFloat4(String label, long v_addr, String format, long ImGuiInputTextFlags);
+    public static native boolean internal_native_InputFloat4(String label, long v_addr, String format, int ImGuiInputTextFlags);
 
     public static boolean InputFloat4(String label, IDLFloatArray v, String format) {
         return internal_native_InputFloat4(label, v.native_void_address, format);
@@ -3473,7 +3473,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::InputInt(label, (int*)v_addr, (int)step, (int)step_fast, (::ImGuiInputTextFlags)ImGuiInputTextFlags);
     */
-    public static native boolean internal_native_InputInt(String label, long v_addr, int step, int step_fast, long ImGuiInputTextFlags);
+    public static native boolean internal_native_InputInt(String label, long v_addr, int step, int step_fast, int ImGuiInputTextFlags);
 
     public static boolean InputInt(String label, IDLIntArray v, int step, int step_fast) {
         return internal_native_InputInt(label, v.native_void_address, step, step_fast);
@@ -3513,7 +3513,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::InputInt2(label, (int*)v_addr, (::ImGuiInputTextFlags)ImGuiInputTextFlags);
     */
-    public static native boolean internal_native_InputInt2(String label, long v_addr, long ImGuiInputTextFlags);
+    public static native boolean internal_native_InputInt2(String label, long v_addr, int ImGuiInputTextFlags);
 
     public static boolean InputInt2(String label, IDLIntArray v) {
         return internal_native_InputInt2(label, v.native_void_address);
@@ -3533,7 +3533,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::InputInt3(label, (int*)v_addr, (::ImGuiInputTextFlags)ImGuiInputTextFlags);
     */
-    public static native boolean internal_native_InputInt3(String label, long v_addr, long ImGuiInputTextFlags);
+    public static native boolean internal_native_InputInt3(String label, long v_addr, int ImGuiInputTextFlags);
 
     public static boolean InputInt3(String label, IDLIntArray v) {
         return internal_native_InputInt3(label, v.native_void_address);
@@ -3553,7 +3553,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::InputInt4(label, (int*)v_addr, (::ImGuiInputTextFlags)ImGuiInputTextFlags);
     */
-    public static native boolean internal_native_InputInt4(String label, long v_addr, long ImGuiInputTextFlags);
+    public static native boolean internal_native_InputInt4(String label, long v_addr, int ImGuiInputTextFlags);
 
     public static boolean InputInt4(String label, IDLIntArray v) {
         return internal_native_InputInt4(label, v.native_void_address);
@@ -3573,7 +3573,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::InputDouble(label, (double*)v_addr, (double)step, (double)step_fast, format, (::ImGuiInputTextFlags)ImGuiInputTextFlags);
     */
-    public static native boolean internal_native_InputDouble(String label, long v_addr, double step, double step_fast, String format, long ImGuiInputTextFlags);
+    public static native boolean internal_native_InputDouble(String label, long v_addr, double step, double step_fast, String format, int ImGuiInputTextFlags);
 
     public static boolean InputDouble(String label, IDLDoubleArray v, double step, double step_fast, String format) {
         return internal_native_InputDouble(label, v.native_void_address, step, step_fast, format);
@@ -3623,7 +3623,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::ColorEdit3(label, (float*)col_addr, (::ImGuiColorEditFlags)ImGuiColorEditFlags);
     */
-    public static native boolean internal_native_ColorEdit3(String label, long col_addr, long ImGuiColorEditFlags);
+    public static native boolean internal_native_ColorEdit3(String label, long col_addr, int ImGuiColorEditFlags);
 
     public static boolean ColorEdit3(String label, IDLFloatArray col) {
         return internal_native_ColorEdit3(label, col.native_void_address);
@@ -3643,7 +3643,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::ColorEdit4(label, (float*)col_addr, (::ImGuiColorEditFlags)ImGuiColorEditFlags);
     */
-    public static native boolean internal_native_ColorEdit4(String label, long col_addr, long ImGuiColorEditFlags);
+    public static native boolean internal_native_ColorEdit4(String label, long col_addr, int ImGuiColorEditFlags);
 
     public static boolean ColorEdit4(String label, IDLFloatArray col) {
         return internal_native_ColorEdit4(label, col.native_void_address);
@@ -3663,7 +3663,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::ColorPicker3(label, (float*)col_addr, (::ImGuiColorEditFlags)ImGuiColorEditFlags);
     */
-    public static native boolean internal_native_ColorPicker3(String label, long col_addr, long ImGuiColorEditFlags);
+    public static native boolean internal_native_ColorPicker3(String label, long col_addr, int ImGuiColorEditFlags);
 
     public static boolean ColorPicker3(String label, IDLFloatArray col) {
         return internal_native_ColorPicker3(label, col.native_void_address);
@@ -3683,7 +3683,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::ColorPicker4(label, (float*)col_addr, (::ImGuiColorEditFlags)ImGuiColorEditFlags, (float*)ref_col_addr);
     */
-    public static native boolean internal_native_ColorPicker4(String label, long col_addr, long ImGuiColorEditFlags, long ref_col_addr);
+    public static native boolean internal_native_ColorPicker4(String label, long col_addr, int ImGuiColorEditFlags, long ref_col_addr);
 
     public static boolean ColorPicker4(String label, IDLFloatArray col, ImGuiColorEditFlags ImGuiColorEditFlags) {
         return internal_native_ColorPicker4(label, col.native_void_address, ImGuiColorEditFlags.getValue());
@@ -3693,7 +3693,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::ColorPicker4(label, (float*)col_addr, (::ImGuiColorEditFlags)ImGuiColorEditFlags);
     */
-    public static native boolean internal_native_ColorPicker4(String label, long col_addr, long ImGuiColorEditFlags);
+    public static native boolean internal_native_ColorPicker4(String label, long col_addr, int ImGuiColorEditFlags);
 
     public static boolean ColorPicker4(String label, IDLFloatArray col) {
         return internal_native_ColorPicker4(label, col.native_void_address);
@@ -3713,7 +3713,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::ColorButton(desc_id, *((ImVec4* )col_addr), (::ImGuiColorEditFlags)ImGuiColorEditFlags, *((ImVec2* )size_addr));
     */
-    public static native boolean internal_native_ColorButton(String desc_id, long col_addr, long ImGuiColorEditFlags, long size_addr);
+    public static native boolean internal_native_ColorButton(String desc_id, long col_addr, int ImGuiColorEditFlags, long size_addr);
 
     public static boolean ColorButton(String desc_id, ImVec4 col, ImGuiColorEditFlags ImGuiColorEditFlags) {
         return internal_native_ColorButton(desc_id, col.native_address, ImGuiColorEditFlags.getValue());
@@ -3723,7 +3723,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::ColorButton(desc_id, *((ImVec4* )col_addr), (::ImGuiColorEditFlags)ImGuiColorEditFlags);
     */
-    public static native boolean internal_native_ColorButton(String desc_id, long col_addr, long ImGuiColorEditFlags);
+    public static native boolean internal_native_ColorButton(String desc_id, long col_addr, int ImGuiColorEditFlags);
 
     public static boolean ColorButton(String desc_id, ImVec4 col) {
         return internal_native_ColorButton(desc_id, col.native_address);
@@ -3743,7 +3743,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::SetColorEditOptions((::ImGuiColorEditFlags)ImGuiColorEditFlags);
     */
-    public static native void internal_native_SetColorEditOptions(long ImGuiColorEditFlags);
+    public static native void internal_native_SetColorEditOptions(int ImGuiColorEditFlags);
 
     public static boolean TreeNode(String label) {
         return internal_native_TreeNode__0(label);
@@ -3783,7 +3783,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::TreeNodeEx(label, (::ImGuiTreeNodeFlags)flaImGuiTreeNodeFlagsgs);
     */
-    public static native boolean internal_native_TreeNodeEx__0(String label, long flaImGuiTreeNodeFlagsgs);
+    public static native boolean internal_native_TreeNodeEx__0(String label, int flaImGuiTreeNodeFlagsgs);
 
     public static boolean TreeNodeEx(String label) {
         return internal_native_TreeNodeEx__0(label);
@@ -3803,7 +3803,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::TreeNodeEx(str_id, (::ImGuiTreeNodeFlags)ImGuiTreeNodeFlags, fmt);
     */
-    public static native boolean internal_native_TreeNodeEx__1(String str_id, long ImGuiTreeNodeFlags, String fmt);
+    public static native boolean internal_native_TreeNodeEx__1(String str_id, int ImGuiTreeNodeFlags, String fmt);
 
     public static boolean TreeNodeEx(IDLBase ptr_id, ImGuiTreeNodeFlags ImGuiTreeNodeFlags, String fmt) {
         return internal_native_TreeNodeEx__2(ptr_id.native_void_address, ImGuiTreeNodeFlags.getValue(), fmt);
@@ -3813,7 +3813,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::TreeNodeEx((void*)ptr_id_addr, (::ImGuiTreeNodeFlags)ImGuiTreeNodeFlags, fmt);
     */
-    public static native boolean internal_native_TreeNodeEx__2(long ptr_id_addr, long ImGuiTreeNodeFlags, String fmt);
+    public static native boolean internal_native_TreeNodeEx__2(long ptr_id_addr, int ImGuiTreeNodeFlags, String fmt);
 
     public static void TreePush(String str_id) {
         internal_native_TreePush(str_id);
@@ -3853,7 +3853,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::CollapsingHeader(label, (::ImGuiTreeNodeFlags)ImGuiTreeNodeFlags);
     */
-    public static native boolean internal_native_CollapsingHeader__0(String label, long ImGuiTreeNodeFlags);
+    public static native boolean internal_native_CollapsingHeader__0(String label, int ImGuiTreeNodeFlags);
 
     public static boolean CollapsingHeader(String label) {
         return internal_native_CollapsingHeader__0(label);
@@ -3873,7 +3873,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::CollapsingHeader(label, (bool*)p_visible_addr, (::ImGuiTreeNodeFlags)ImGuiTreeNodeFlags);
     */
-    public static native boolean internal_native_CollapsingHeader__1(String label, long p_visible_addr, long ImGuiTreeNodeFlags);
+    public static native boolean internal_native_CollapsingHeader__1(String label, long p_visible_addr, int ImGuiTreeNodeFlags);
 
     public static boolean CollapsingHeader(String label, IDLBoolArray p_visible) {
         return internal_native_CollapsingHeader__1(label, p_visible.native_void_address);
@@ -3893,7 +3893,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::SetNextItemOpen(is_open, (::ImGuiCond)ImGuiCond);
     */
-    public static native void internal_native_SetNextItemOpen(boolean is_open, long ImGuiCond);
+    public static native void internal_native_SetNextItemOpen(boolean is_open, int ImGuiCond);
 
     public static void SetNextItemOpen(boolean is_open) {
         internal_native_SetNextItemOpen(is_open);
@@ -3923,7 +3923,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::Selectable(label, selected, (::ImGuiSelectableFlags)flags, *((ImVec2* )size_addr));
     */
-    public static native boolean internal_native_Selectable__0(String label, boolean selected, long flags, long size_addr);
+    public static native boolean internal_native_Selectable__0(String label, boolean selected, int flags, long size_addr);
 
     public static boolean Selectable(String label, boolean selected, ImGuiSelectableFlags flags) {
         return internal_native_Selectable__0(label, selected, flags.getValue());
@@ -3933,7 +3933,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::Selectable(label, selected, (::ImGuiSelectableFlags)flags);
     */
-    public static native boolean internal_native_Selectable__0(String label, boolean selected, long flags);
+    public static native boolean internal_native_Selectable__0(String label, boolean selected, int flags);
 
     public static boolean Selectable(String label, boolean selected) {
         return internal_native_Selectable__0(label, selected);
@@ -3963,7 +3963,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::Selectable(label, (bool*)p_selected_addr, (::ImGuiSelectableFlags)flags, *((ImVec2* )size_addr));
     */
-    public static native boolean internal_native_Selectable__1(String label, long p_selected_addr, long flags, long size_addr);
+    public static native boolean internal_native_Selectable__1(String label, long p_selected_addr, int flags, long size_addr);
 
     public static boolean Selectable(String label, IDLBoolArray p_selected, ImGuiSelectableFlags flags) {
         return internal_native_Selectable__1(label, p_selected.native_void_address, flags.getValue());
@@ -3973,7 +3973,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::Selectable(label, (bool*)p_selected_addr, (::ImGuiSelectableFlags)flags);
     */
-    public static native boolean internal_native_Selectable__1(String label, long p_selected_addr, long flags);
+    public static native boolean internal_native_Selectable__1(String label, long p_selected_addr, int flags);
 
     public static boolean Selectable(String label, IDLBoolArray p_selected) {
         return internal_native_Selectable__1(label, p_selected.native_void_address);
@@ -3999,7 +3999,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return (jlong)ImGuiWrapper::ImGui::BeginMultiSelect((::ImGuiMultiSelectFlags)flags, (int)selection_size, (int)items_count);
     */
-    public static native long internal_native_BeginMultiSelect(long flags, int selection_size, int items_count);
+    public static native long internal_native_BeginMultiSelect(int flags, int selection_size, int items_count);
 
     public static ImGuiMultiSelectIO BeginMultiSelect(ImGuiMultiSelectFlags flags, int selection_size) {
         long pointer = internal_native_BeginMultiSelect(flags.getValue(), selection_size);
@@ -4015,7 +4015,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return (jlong)ImGuiWrapper::ImGui::BeginMultiSelect((::ImGuiMultiSelectFlags)flags, (int)selection_size);
     */
-    public static native long internal_native_BeginMultiSelect(long flags, int selection_size);
+    public static native long internal_native_BeginMultiSelect(int flags, int selection_size);
 
     public static ImGuiMultiSelectIO BeginMultiSelect(ImGuiMultiSelectFlags flags) {
         long pointer = internal_native_BeginMultiSelect(flags.getValue());
@@ -4031,7 +4031,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return (jlong)ImGuiWrapper::ImGui::BeginMultiSelect((::ImGuiMultiSelectFlags)flags);
     */
-    public static native long internal_native_BeginMultiSelect(long flags);
+    public static native long internal_native_BeginMultiSelect(int flags);
 
     public static ImGuiMultiSelectIO EndMultiSelect() {
         long pointer = internal_native_EndMultiSelect();
@@ -4467,7 +4467,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::BeginPopup(str_id, (::ImGuiWindowFlags)ImGuiWindowFlags);
     */
-    public static native boolean internal_native_BeginPopup(String str_id, long ImGuiWindowFlags);
+    public static native boolean internal_native_BeginPopup(String str_id, int ImGuiWindowFlags);
 
     public static boolean BeginPopup(String str_id) {
         return internal_native_BeginPopup(str_id);
@@ -4487,7 +4487,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::BeginPopupModal(name, (bool*)p_open_addr, (::ImGuiWindowFlags)ImGuiWindowFlags);
     */
-    public static native boolean internal_native_BeginPopupModal(String name, long p_open_addr, long ImGuiWindowFlags);
+    public static native boolean internal_native_BeginPopupModal(String name, long p_open_addr, int ImGuiWindowFlags);
 
     public static boolean BeginPopupModal(String name, IDLBoolArray p_open) {
         return internal_native_BeginPopupModal(name, p_open.native_void_address);
@@ -4527,7 +4527,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::OpenPopup(str_id, (::ImGuiPopupFlags)ImGuiPopupFlags);
     */
-    public static native void internal_native_OpenPopup__0(String str_id, long ImGuiPopupFlags);
+    public static native void internal_native_OpenPopup__0(String str_id, int ImGuiPopupFlags);
 
     public static void OpenPopup(String str_id) {
         internal_native_OpenPopup__0(str_id);
@@ -4547,7 +4547,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::OpenPopup((int)id, (::ImGuiPopupFlags)ImGuiPopupFlags);
     */
-    public static native void internal_native_OpenPopup__1(int id, long ImGuiPopupFlags);
+    public static native void internal_native_OpenPopup__1(int id, int ImGuiPopupFlags);
 
     public static void OpenPopup(int id) {
         internal_native_OpenPopup__1(id);
@@ -4567,7 +4567,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::OpenPopupOnItemClick(str_id, (::ImGuiPopupFlags)ImGuiPopupFlags);
     */
-    public static native void internal_native_OpenPopupOnItemClick(String str_id, long ImGuiPopupFlags);
+    public static native void internal_native_OpenPopupOnItemClick(String str_id, int ImGuiPopupFlags);
 
     public static void OpenPopupOnItemClick(String str_id) {
         internal_native_OpenPopupOnItemClick(str_id);
@@ -4607,7 +4607,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::BeginPopupContextItem(str_id, (::ImGuiPopupFlags)ImGuiPopupFlags);
     */
-    public static native boolean internal_native_BeginPopupContextItem(String str_id, long ImGuiPopupFlags);
+    public static native boolean internal_native_BeginPopupContextItem(String str_id, int ImGuiPopupFlags);
 
     public static boolean BeginPopupContextItem(String str_id) {
         return internal_native_BeginPopupContextItem(str_id);
@@ -4637,7 +4637,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::BeginPopupContextWindow(str_id, (::ImGuiPopupFlags)ImGuiPopupFlags);
     */
-    public static native boolean internal_native_BeginPopupContextWindow(String str_id, long ImGuiPopupFlags);
+    public static native boolean internal_native_BeginPopupContextWindow(String str_id, int ImGuiPopupFlags);
 
     public static boolean BeginPopupContextWindow(String str_id) {
         return internal_native_BeginPopupContextWindow(str_id);
@@ -4667,7 +4667,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::BeginPopupContextVoid(str_id, (::ImGuiPopupFlags)ImGuiPopupFlags);
     */
-    public static native boolean internal_native_BeginPopupContextVoid(String str_id, long ImGuiPopupFlags);
+    public static native boolean internal_native_BeginPopupContextVoid(String str_id, int ImGuiPopupFlags);
 
     public static boolean BeginPopupContextVoid(String str_id) {
         return internal_native_BeginPopupContextVoid(str_id);
@@ -4697,7 +4697,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::IsPopupOpen(str_id, (::ImGuiPopupFlags)ImGuiPopupFlags);
     */
-    public static native boolean internal_native_IsPopupOpen(String str_id, long ImGuiPopupFlags);
+    public static native boolean internal_native_IsPopupOpen(String str_id, int ImGuiPopupFlags);
 
     public static boolean IsPopupOpen(String str_id) {
         return internal_native_IsPopupOpen(str_id);
@@ -4717,7 +4717,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::BeginTable(str_id, (int)column, (::ImGuiTableFlags)ImGuiTableFlags, *((ImVec2* )outer_size_addr), (float)inner_width);
     */
-    public static native boolean internal_native_BeginTable(String str_id, int column, long ImGuiTableFlags, long outer_size_addr, float inner_width);
+    public static native boolean internal_native_BeginTable(String str_id, int column, int ImGuiTableFlags, long outer_size_addr, float inner_width);
 
     public static boolean BeginTable(String str_id, int column, ImGuiTableFlags ImGuiTableFlags, ImVec2 outer_size) {
         return internal_native_BeginTable(str_id, column, ImGuiTableFlags.getValue(), outer_size.native_address);
@@ -4727,7 +4727,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::BeginTable(str_id, (int)column, (::ImGuiTableFlags)ImGuiTableFlags, *((ImVec2* )outer_size_addr));
     */
-    public static native boolean internal_native_BeginTable(String str_id, int column, long ImGuiTableFlags, long outer_size_addr);
+    public static native boolean internal_native_BeginTable(String str_id, int column, int ImGuiTableFlags, long outer_size_addr);
 
     public static boolean BeginTable(String str_id, int column, ImGuiTableFlags ImGuiTableFlags) {
         return internal_native_BeginTable(str_id, column, ImGuiTableFlags.getValue());
@@ -4737,7 +4737,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::BeginTable(str_id, (int)column, (::ImGuiTableFlags)ImGuiTableFlags);
     */
-    public static native boolean internal_native_BeginTable(String str_id, int column, long ImGuiTableFlags);
+    public static native boolean internal_native_BeginTable(String str_id, int column, int ImGuiTableFlags);
 
     public static boolean BeginTable(String str_id, int column) {
         return internal_native_BeginTable(str_id, column);
@@ -4817,7 +4817,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::TableSetupColumn(label, (::ImGuiTableColumnFlags)ImGuiTableColumnFlags, (float)init_width_or_weight, (int)user_id);
     */
-    public static native void internal_native_TableSetupColumn(String label, long ImGuiTableColumnFlags, float init_width_or_weight, int user_id);
+    public static native void internal_native_TableSetupColumn(String label, int ImGuiTableColumnFlags, float init_width_or_weight, int user_id);
 
     public static void TableSetupColumn(String label, ImGuiTableColumnFlags ImGuiTableColumnFlags, float init_width_or_weight) {
         internal_native_TableSetupColumn(label, ImGuiTableColumnFlags.getValue(), init_width_or_weight);
@@ -4827,7 +4827,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::TableSetupColumn(label, (::ImGuiTableColumnFlags)ImGuiTableColumnFlags, (float)init_width_or_weight);
     */
-    public static native void internal_native_TableSetupColumn(String label, long ImGuiTableColumnFlags, float init_width_or_weight);
+    public static native void internal_native_TableSetupColumn(String label, int ImGuiTableColumnFlags, float init_width_or_weight);
 
     public static void TableSetupColumn(String label, ImGuiTableColumnFlags ImGuiTableColumnFlags) {
         internal_native_TableSetupColumn(label, ImGuiTableColumnFlags.getValue());
@@ -4837,7 +4837,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::TableSetupColumn(label, (::ImGuiTableColumnFlags)ImGuiTableColumnFlags);
     */
-    public static native void internal_native_TableSetupColumn(String label, long ImGuiTableColumnFlags);
+    public static native void internal_native_TableSetupColumn(String label, int ImGuiTableColumnFlags);
 
     public static void TableSetupColumn(String label) {
         internal_native_TableSetupColumn(label);
@@ -4993,7 +4993,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::BeginTabBar(str_id, (::ImGuiTabBarFlags)ImGuiTabBarFlags);
     */
-    public static native boolean internal_native_BeginTabBar(String str_id, long ImGuiTabBarFlags);
+    public static native boolean internal_native_BeginTabBar(String str_id, int ImGuiTabBarFlags);
 
     public static boolean BeginTabBar(String str_id) {
         return internal_native_BeginTabBar(str_id);
@@ -5023,7 +5023,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::BeginTabItem(label, (bool*)p_open_addr, (::ImGuiTabItemFlags)ImGuiTabItemFlags);
     */
-    public static native boolean internal_native_BeginTabItem(String label, long p_open_addr, long ImGuiTabItemFlags);
+    public static native boolean internal_native_BeginTabItem(String label, long p_open_addr, int ImGuiTabItemFlags);
 
     public static boolean BeginTabItem(String label, IDLBoolArray p_open) {
         return internal_native_BeginTabItem(label, p_open.native_void_address);
@@ -5063,7 +5063,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::TabItemButton(label, (::ImGuiTabItemFlags)ImGuiTabItemFlags);
     */
-    public static native boolean internal_native_TabItemButton(String label, long ImGuiTabItemFlags);
+    public static native boolean internal_native_TabItemButton(String label, int ImGuiTabItemFlags);
 
     public static void SetTabItemClosed(String tab_or_docked_window_label) {
         internal_native_SetTabItemClosed(tab_or_docked_window_label);
@@ -5083,7 +5083,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::DockSpace((int)id, *((ImVec2* )size_addr), (::ImGuiDockNodeFlags)ImGuiDockNodeFlags, (ImGuiWindowClass* )window_class_addr);
     */
-    public static native int internal_native_DockSpace(int id, long size_addr, long ImGuiDockNodeFlags, long window_class_addr);
+    public static native int internal_native_DockSpace(int id, long size_addr, int ImGuiDockNodeFlags, long window_class_addr);
 
     public static int DockSpace(int id, ImVec2 size, ImGuiDockNodeFlags ImGuiDockNodeFlags) {
         return internal_native_DockSpace(id, size.native_address, ImGuiDockNodeFlags.getValue());
@@ -5093,7 +5093,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::DockSpace((int)id, *((ImVec2* )size_addr), (::ImGuiDockNodeFlags)ImGuiDockNodeFlags);
     */
-    public static native int internal_native_DockSpace(int id, long size_addr, long ImGuiDockNodeFlags);
+    public static native int internal_native_DockSpace(int id, long size_addr, int ImGuiDockNodeFlags);
 
     public static int DockSpace(int id, ImVec2 size) {
         return internal_native_DockSpace(id, size.native_address);
@@ -5123,7 +5123,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::DockSpaceOverViewport((int)dockspace_id, (ImGuiViewport* )viewport_addr, (::ImGuiDockNodeFlags)ImGuiDockNodeFlags, (ImGuiWindowClass* )window_class_addr);
     */
-    public static native int internal_native_DockSpaceOverViewport(int dockspace_id, long viewport_addr, long ImGuiDockNodeFlags, long window_class_addr);
+    public static native int internal_native_DockSpaceOverViewport(int dockspace_id, long viewport_addr, int ImGuiDockNodeFlags, long window_class_addr);
 
     public static int DockSpaceOverViewport(int dockspace_id, ImGuiViewport viewport, ImGuiDockNodeFlags ImGuiDockNodeFlags) {
         return internal_native_DockSpaceOverViewport(dockspace_id, viewport.native_address, ImGuiDockNodeFlags.getValue());
@@ -5133,7 +5133,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::DockSpaceOverViewport((int)dockspace_id, (ImGuiViewport* )viewport_addr, (::ImGuiDockNodeFlags)ImGuiDockNodeFlags);
     */
-    public static native int internal_native_DockSpaceOverViewport(int dockspace_id, long viewport_addr, long ImGuiDockNodeFlags);
+    public static native int internal_native_DockSpaceOverViewport(int dockspace_id, long viewport_addr, int ImGuiDockNodeFlags);
 
     public static int DockSpaceOverViewport(int dockspace_id, ImGuiViewport viewport) {
         return internal_native_DockSpaceOverViewport(dockspace_id, viewport.native_address);
@@ -5173,7 +5173,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::SetNextWindowDockID((int)dock_id, (::ImGuiCond)ImGuiCond);
     */
-    public static native void internal_native_SetNextWindowDockID(int dock_id, long ImGuiCond);
+    public static native void internal_native_SetNextWindowDockID(int dock_id, int ImGuiCond);
 
     public static void SetNextWindowDockID(int dock_id) {
         internal_native_SetNextWindowDockID(dock_id);
@@ -5223,7 +5223,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::BeginDragDropSource((::ImGuiDragDropFlags)ImGuiDragDropFlags);
     */
-    public static native boolean internal_native_BeginDragDropSource(long ImGuiDragDropFlags);
+    public static native boolean internal_native_BeginDragDropSource(int ImGuiDragDropFlags);
 
     public static boolean BeginDragDropSource() {
         return internal_native_BeginDragDropSource();
@@ -5243,7 +5243,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::SetDragDropPayload(type, (int)data, (::ImGuiCond)ImGuiCond);
     */
-    public static native boolean internal_native_SetDragDropPayload(String type, int data, long ImGuiCond);
+    public static native boolean internal_native_SetDragDropPayload(String type, int data, int ImGuiCond);
 
     public static boolean SetDragDropPayload(String type, int data) {
         return internal_native_SetDragDropPayload(type, data);
@@ -5289,7 +5289,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return (jlong)ImGuiWrapper::ImGui::AcceptDragDropPayload(type, (::ImGuiDragDropFlags)ImGuiDragDropFlags);
     */
-    public static native long internal_native_AcceptDragDropPayload(String type, long ImGuiDragDropFlags);
+    public static native long internal_native_AcceptDragDropPayload(String type, int ImGuiDragDropFlags);
 
     public static ImGuiPayload AcceptDragDropPayload(String type) {
         long pointer = internal_native_AcceptDragDropPayload(type);
@@ -5431,7 +5431,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::IsItemHovered((::ImGuiHoveredFlags)ImGuiHoveredFlags);
     */
-    public static native boolean internal_native_IsItemHovered(long ImGuiHoveredFlags);
+    public static native boolean internal_native_IsItemHovered(int ImGuiHoveredFlags);
 
     public static boolean IsItemHovered() {
         return internal_native_IsItemHovered();
@@ -5471,7 +5471,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::IsItemClicked((::ImGuiMouseButton)ImGuiMouseButton);
     */
-    public static native boolean internal_native_IsItemClicked(long ImGuiMouseButton);
+    public static native boolean internal_native_IsItemClicked(int ImGuiMouseButton);
 
     public static boolean IsItemClicked() {
         return internal_native_IsItemClicked();
@@ -5927,7 +5927,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::IsKeyDown((::ImGuiKey)ImGuiKey);
     */
-    public static native boolean internal_native_IsKeyDown(long ImGuiKey);
+    public static native boolean internal_native_IsKeyDown(int ImGuiKey);
 
     public static boolean IsKeyPressed(ImGuiKey ImGuiKey, boolean repeat) {
         return internal_native_IsKeyPressed(ImGuiKey.getValue(), repeat);
@@ -5937,7 +5937,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::IsKeyPressed((::ImGuiKey)ImGuiKey, repeat);
     */
-    public static native boolean internal_native_IsKeyPressed(long ImGuiKey, boolean repeat);
+    public static native boolean internal_native_IsKeyPressed(int ImGuiKey, boolean repeat);
 
     public static boolean IsKeyPressed(ImGuiKey ImGuiKey) {
         return internal_native_IsKeyPressed(ImGuiKey.getValue());
@@ -5947,7 +5947,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::IsKeyPressed((::ImGuiKey)ImGuiKey);
     */
-    public static native boolean internal_native_IsKeyPressed(long ImGuiKey);
+    public static native boolean internal_native_IsKeyPressed(int ImGuiKey);
 
     public static boolean IsKeyReleased(ImGuiKey ImGuiKey) {
         return internal_native_IsKeyReleased(ImGuiKey.getValue());
@@ -5957,7 +5957,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::IsKeyReleased((::ImGuiKey)ImGuiKey);
     */
-    public static native boolean internal_native_IsKeyReleased(long ImGuiKey);
+    public static native boolean internal_native_IsKeyReleased(int ImGuiKey);
 
     public static boolean IsKeyChordPressed(int key_chord) {
         return internal_native_IsKeyChordPressed(key_chord);
@@ -5977,7 +5977,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::GetKeyPressedAmount((::ImGuiKey)ImGuiKey, (float)repeat_delay, (float)rate);
     */
-    public static native int internal_native_GetKeyPressedAmount(long ImGuiKey, float repeat_delay, float rate);
+    public static native int internal_native_GetKeyPressedAmount(int ImGuiKey, float repeat_delay, float rate);
 
     public static void SetNextFrameWantCaptureKeyboard(boolean want_capture_keyboard) {
         internal_native_SetNextFrameWantCaptureKeyboard(want_capture_keyboard);
@@ -5997,7 +5997,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::Shortcut((int)key_chord, (::ImGuiInputFlags)flags);
     */
-    public static native boolean internal_native_Shortcut(int key_chord, long flags);
+    public static native boolean internal_native_Shortcut(int key_chord, int flags);
 
     public static boolean Shortcut(int key_chord) {
         return internal_native_Shortcut(key_chord);
@@ -6017,7 +6017,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::SetNextItemShortcut((int)key_chord, (::ImGuiInputFlags)flags);
     */
-    public static native void internal_native_SetNextItemShortcut(int key_chord, long flags);
+    public static native void internal_native_SetNextItemShortcut(int key_chord, int flags);
 
     public static void SetNextItemShortcut(int key_chord) {
         internal_native_SetNextItemShortcut(key_chord);
@@ -6037,7 +6037,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::SetItemKeyOwner((::ImGuiKey)key);
     */
-    public static native void internal_native_SetItemKeyOwner(long key);
+    public static native void internal_native_SetItemKeyOwner(int key);
 
     public static boolean IsMouseDown(ImGuiMouseButton ImGuiMouseButton) {
         return internal_native_IsMouseDown(ImGuiMouseButton.getValue());
@@ -6047,7 +6047,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::IsMouseDown((::ImGuiMouseButton)ImGuiMouseButton);
     */
-    public static native boolean internal_native_IsMouseDown(long ImGuiMouseButton);
+    public static native boolean internal_native_IsMouseDown(int ImGuiMouseButton);
 
     public static boolean IsMouseClicked(ImGuiMouseButton ImGuiMouseButton, boolean repeat) {
         return internal_native_IsMouseClicked(ImGuiMouseButton.getValue(), repeat);
@@ -6057,7 +6057,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::IsMouseClicked((::ImGuiMouseButton)ImGuiMouseButton, repeat);
     */
-    public static native boolean internal_native_IsMouseClicked(long ImGuiMouseButton, boolean repeat);
+    public static native boolean internal_native_IsMouseClicked(int ImGuiMouseButton, boolean repeat);
 
     public static boolean IsMouseClicked(ImGuiMouseButton ImGuiMouseButton) {
         return internal_native_IsMouseClicked(ImGuiMouseButton.getValue());
@@ -6067,7 +6067,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::IsMouseClicked((::ImGuiMouseButton)ImGuiMouseButton);
     */
-    public static native boolean internal_native_IsMouseClicked(long ImGuiMouseButton);
+    public static native boolean internal_native_IsMouseClicked(int ImGuiMouseButton);
 
     public static boolean IsMouseReleased(ImGuiMouseButton ImGuiMouseButton) {
         return internal_native_IsMouseReleased(ImGuiMouseButton.getValue());
@@ -6077,7 +6077,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::IsMouseReleased((::ImGuiMouseButton)ImGuiMouseButton);
     */
-    public static native boolean internal_native_IsMouseReleased(long ImGuiMouseButton);
+    public static native boolean internal_native_IsMouseReleased(int ImGuiMouseButton);
 
     public static boolean IsMouseDoubleClicked(ImGuiMouseButton ImGuiMouseButton) {
         return internal_native_IsMouseDoubleClicked(ImGuiMouseButton.getValue());
@@ -6087,7 +6087,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::IsMouseDoubleClicked((::ImGuiMouseButton)ImGuiMouseButton);
     */
-    public static native boolean internal_native_IsMouseDoubleClicked(long ImGuiMouseButton);
+    public static native boolean internal_native_IsMouseDoubleClicked(int ImGuiMouseButton);
 
     public static int GetMouseClickedCount(ImGuiMouseButton ImGuiMouseButton) {
         return internal_native_GetMouseClickedCount(ImGuiMouseButton.getValue());
@@ -6097,7 +6097,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::GetMouseClickedCount((::ImGuiMouseButton)ImGuiMouseButton);
     */
-    public static native int internal_native_GetMouseClickedCount(long ImGuiMouseButton);
+    public static native int internal_native_GetMouseClickedCount(int ImGuiMouseButton);
 
     public static boolean IsMouseHoveringRect(ImVec2 r_min, ImVec2 r_max, boolean clip) {
         return internal_native_IsMouseHoveringRect(r_min.native_address, r_max.native_address, clip);
@@ -6193,7 +6193,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::IsMouseDragging((::ImGuiMouseButton)ImGuiMouseButton, (float)lock_threshold);
     */
-    public static native boolean internal_native_IsMouseDragging(long ImGuiMouseButton, float lock_threshold);
+    public static native boolean internal_native_IsMouseDragging(int ImGuiMouseButton, float lock_threshold);
 
     public static boolean IsMouseDragging(ImGuiMouseButton ImGuiMouseButton) {
         return internal_native_IsMouseDragging(ImGuiMouseButton.getValue());
@@ -6203,7 +6203,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       return ImGuiWrapper::ImGui::IsMouseDragging((::ImGuiMouseButton)ImGuiMouseButton);
     */
-    public static native boolean internal_native_IsMouseDragging(long ImGuiMouseButton);
+    public static native boolean internal_native_IsMouseDragging(int ImGuiMouseButton);
 
     public static ImVec2 GetMouseDragDelta(ImGuiMouseButton ImGuiMouseButton, float lock_threshold) {
         long pointer = internal_native_GetMouseDragDelta(ImGuiMouseButton.getValue(), lock_threshold);
@@ -6221,7 +6221,7 @@ public class ImGui extends IDLBase {
       copy_addr = ImGuiWrapper::ImGui::GetMouseDragDelta((::ImGuiMouseButton)ImGuiMouseButton, (float)lock_threshold);
       return (jlong)&copy_addr;
     */
-    public static native long internal_native_GetMouseDragDelta(long ImGuiMouseButton, float lock_threshold);
+    public static native long internal_native_GetMouseDragDelta(int ImGuiMouseButton, float lock_threshold);
 
     public static ImVec2 GetMouseDragDelta(ImGuiMouseButton ImGuiMouseButton) {
         long pointer = internal_native_GetMouseDragDelta(ImGuiMouseButton.getValue());
@@ -6239,7 +6239,7 @@ public class ImGui extends IDLBase {
       copy_addr = ImGuiWrapper::ImGui::GetMouseDragDelta((::ImGuiMouseButton)ImGuiMouseButton);
       return (jlong)&copy_addr;
     */
-    public static native long internal_native_GetMouseDragDelta(long ImGuiMouseButton);
+    public static native long internal_native_GetMouseDragDelta(int ImGuiMouseButton);
 
     public static ImVec2 GetMouseDragDelta() {
         long pointer = internal_native_GetMouseDragDelta();
@@ -6267,7 +6267,7 @@ public class ImGui extends IDLBase {
       [-JNI;-NATIVE]
       ImGuiWrapper::ImGui::ResetMouseDragDelta((::ImGuiMouseButton)ImGuiMouseButton);
     */
-    public static native void internal_native_ResetMouseDragDelta(long ImGuiMouseButton);
+    public static native void internal_native_ResetMouseDragDelta(int ImGuiMouseButton);
 
     public static void ResetMouseDragDelta() {
         internal_native_ResetMouseDragDelta();

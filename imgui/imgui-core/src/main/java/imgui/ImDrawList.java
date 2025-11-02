@@ -167,7 +167,7 @@ nativeObject->AddLine(*((ImVec2* )p1_addr), *((ImVec2* )p2_addr), (int)col);
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
 nativeObject->AddRect(*((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), (int)col, (float)rounding, (::ImDrawFlags)ImDrawFlags, (float)thickness);
 */
-    public static native void internal_native_AddRect(long this_addr, long p_min_addr, long p_max_addr, int col, float rounding, long ImDrawFlags, float thickness);
+    public static native void internal_native_AddRect(long this_addr, long p_min_addr, long p_max_addr, int col, float rounding, int ImDrawFlags, float thickness);
 
     public void AddRect(ImVec2 p_min, ImVec2 p_max, int col, float rounding, ImDrawFlags ImDrawFlags) {
         internal_native_AddRect(native_address, p_min.native_address, p_max.native_address, col, rounding, ImDrawFlags.getValue());
@@ -177,7 +177,7 @@ nativeObject->AddRect(*((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), (int)col
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
 nativeObject->AddRect(*((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), (int)col, (float)rounding, (::ImDrawFlags)ImDrawFlags);
 */
-    public static native void internal_native_AddRect(long this_addr, long p_min_addr, long p_max_addr, int col, float rounding, long ImDrawFlags);
+    public static native void internal_native_AddRect(long this_addr, long p_min_addr, long p_max_addr, int col, float rounding, int ImDrawFlags);
 
     public void AddRect(ImVec2 p_min, ImVec2 p_max, int col, float rounding) {
         internal_native_AddRect(native_address, p_min.native_address, p_max.native_address, col, rounding);
@@ -207,7 +207,7 @@ nativeObject->AddRect(*((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), (int)col
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
 nativeObject->AddRectFilled(*((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), (int)col, (float)rounding, (::ImDrawFlags)ImDrawFlags);
 */
-    public static native void internal_native_AddRectFilled(long this_addr, long p_min_addr, long p_max_addr, int col, float rounding, long ImDrawFlags);
+    public static native void internal_native_AddRectFilled(long this_addr, long p_min_addr, long p_max_addr, int col, float rounding, int ImDrawFlags);
 
     public void AddRectFilled(ImVec2 p_min, ImVec2 p_max, int col, float rounding) {
         internal_native_AddRectFilled(native_address, p_min.native_address, p_max.native_address, col, rounding);
@@ -657,7 +657,7 @@ nativeObject->AddImageQuad((void*)user_texture_id_addr, *((ImVec2* )p1_addr), *(
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
 nativeObject->AddImageRounded((void*)user_texture_id_addr, *((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), *((ImVec2* )uv_min_addr), *((ImVec2* )uv_max_addr), (int)col, (float)rounding, (::ImDrawFlags)ImDrawFlags);
 */
-    public static native void internal_native_AddImageRounded(long this_addr, long user_texture_id_addr, long p_min_addr, long p_max_addr, long uv_min_addr, long uv_max_addr, int col, float rounding, long ImDrawFlags);
+    public static native void internal_native_AddImageRounded(long this_addr, long user_texture_id_addr, long p_min_addr, long p_max_addr, long uv_min_addr, long uv_max_addr, int col, float rounding, int ImDrawFlags);
 
     public void AddImageRounded(IDLBase user_texture_id, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max, int col, float rounding) {
         internal_native_AddImageRounded(native_address, user_texture_id.native_void_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address, col, rounding);
@@ -717,7 +717,7 @@ nativeObject->PathFillConvex((int)col);
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
 nativeObject->PathStroke((int)col, (::ImDrawFlags)ImDrawFlags, (float)thickness);
 */
-    public static native void internal_native_PathStroke(long this_addr, int col, long ImDrawFlags, float thickness);
+    public static native void internal_native_PathStroke(long this_addr, int col, int ImDrawFlags, float thickness);
 
     public void PathStroke(int col, ImDrawFlags ImDrawFlags) {
         internal_native_PathStroke(native_address, col, ImDrawFlags.getValue());
@@ -727,7 +727,7 @@ nativeObject->PathStroke((int)col, (::ImDrawFlags)ImDrawFlags, (float)thickness)
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
 nativeObject->PathStroke((int)col, (::ImDrawFlags)ImDrawFlags);
 */
-    public static native void internal_native_PathStroke(long this_addr, int col, long ImDrawFlags);
+    public static native void internal_native_PathStroke(long this_addr, int col, int ImDrawFlags);
 
     public void PathStroke(int col) {
         internal_native_PathStroke(native_address, col);

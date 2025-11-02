@@ -5,8 +5,6 @@
  *-------------------------------------------------------*/
 package gen.imgui;
 
-import java.util.Map;
-import java.util.HashMap;
 import com.github.xpenatan.jParser.idl.IDLEnum;
 
 public enum ImGuiDockNodeFlags implements IDLEnum<ImGuiDockNodeFlags> {
@@ -41,16 +39,6 @@ public enum ImGuiDockNodeFlags implements IDLEnum<ImGuiDockNodeFlags> {
 
     public ImGuiDockNodeFlags getCustom() {
         return CUSTOM;
-    }
-
-    public static final Map<Integer, ImGuiDockNodeFlags> MAP = new HashMap<>();
-
-    static {
-        for (ImGuiDockNodeFlags value : values()) {
-            if (value != CUSTOM) {
-                MAP.put(value.value, value);
-            }
-        }
     }
 
     /*[-TEAVM;-NATIVE]

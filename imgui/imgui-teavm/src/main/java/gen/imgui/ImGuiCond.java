@@ -5,8 +5,6 @@
  *-------------------------------------------------------*/
 package gen.imgui;
 
-import java.util.Map;
-import java.util.HashMap;
 import com.github.xpenatan.jParser.idl.IDLEnum;
 
 public enum ImGuiCond implements IDLEnum<ImGuiCond> {
@@ -38,16 +36,6 @@ public enum ImGuiCond implements IDLEnum<ImGuiCond> {
 
     public ImGuiCond getCustom() {
         return CUSTOM;
-    }
-
-    public static final Map<Integer, ImGuiCond> MAP = new HashMap<>();
-
-    static {
-        for (ImGuiCond value : values()) {
-            if (value != CUSTOM) {
-                MAP.put(value.value, value);
-            }
-        }
     }
 
     /*[-TEAVM;-NATIVE]

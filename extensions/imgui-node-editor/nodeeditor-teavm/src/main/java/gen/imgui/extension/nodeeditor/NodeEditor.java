@@ -213,7 +213,7 @@ public class NodeEditor extends IDLBase {
     public static native int internal_native_GetStyle();
 
     public static IDLString GetStyleColorName(StyleColor colorIndex) {
-        int pointer = internal_native_GetStyleColorName((int) colorIndex.getValue());
+        int pointer = internal_native_GetStyleColorName(colorIndex.getValue());
         if (pointer == 0)
             return IDLString.NULL;
         if (IDLString_TEMP_STATIC_GEN_0 == null)
@@ -232,7 +232,7 @@ public class NodeEditor extends IDLBase {
     public static native int internal_native_GetStyleColorName(int colorIndex);
 
     public static void PushStyleColor(StyleColor colorIndex, ImVec4 color) {
-        internal_native_PushStyleColor((int) colorIndex.getValue(), color.native_address);
+        internal_native_PushStyleColor(colorIndex.getValue(), color.native_address);
     }
 
     /*
@@ -265,7 +265,7 @@ public class NodeEditor extends IDLBase {
     public static native void internal_native_PopStyleColor();
 
     public static void PushStyleVar(StyleVar varIndex, float value) {
-        internal_native_PushStyleVar__0((int) varIndex.getValue(), value);
+        internal_native_PushStyleVar__0(varIndex.getValue(), value);
     }
 
     /*
@@ -276,7 +276,7 @@ public class NodeEditor extends IDLBase {
     public static native void internal_native_PushStyleVar__0(int varIndex, float value);
 
     public static void PushStyleVar(StyleVar varIndex, ImVec2 value) {
-        internal_native_PushStyleVar__1((int) varIndex.getValue(), value.native_address);
+        internal_native_PushStyleVar__1(varIndex.getValue(), value.native_address);
     }
 
     /*
@@ -287,7 +287,7 @@ public class NodeEditor extends IDLBase {
     public static native void internal_native_PushStyleVar__1(int varIndex, int value_addr);
 
     public static void PushStyleVar(StyleVar varIndex, ImVec4 value) {
-        internal_native_PushStyleVar__2((int) varIndex.getValue(), value.native_address);
+        internal_native_PushStyleVar__2(varIndex.getValue(), value.native_address);
     }
 
     /*
@@ -364,7 +364,7 @@ public class NodeEditor extends IDLBase {
     public static native void internal_native_BeginNode(int id);
 
     public static void BeginPin(int id, PinKind kind) {
-        internal_native_BeginPin(id, (int) kind.getValue());
+        internal_native_BeginPin(id, kind.getValue());
     }
 
     /*
@@ -617,7 +617,7 @@ public class NodeEditor extends IDLBase {
     public static native boolean internal_native_Link(int id, int startPinId, int endPinId);
 
     public static void Flow(int linkId, FlowDirection direction) {
-        internal_native_Flow(linkId, (int) direction.getValue());
+        internal_native_Flow(linkId, direction.getValue());
     }
 
     /*

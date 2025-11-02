@@ -228,7 +228,7 @@ public class ImLayout extends IDLBase {
       [-JNI;-NATIVE]
       ImLayout::SetOrientation((::ImOrientation)ImOrientation);
     */
-    public static native void internal_native_SetOrientation(long ImOrientation);
+    public static native void internal_native_SetOrientation(int ImOrientation);
 
     public static void EndLayout() {
         internal_native_EndLayout();
@@ -664,7 +664,7 @@ public class ImLayout extends IDLBase {
       [-JNI;-NATIVE]
       return ImLayout::ButtonBehavior((int)id, *((ImRect* )bb_addr), isSelected, (int)selectedColor, (int)hoveredColor, (int)hoveredStrokeColor, ImGuiButtonFlags, (float)clickDelay);
     */
-    public static native int internal_native_ButtonBehavior(int id, long bb_addr, boolean isSelected, int selectedColor, int hoveredColor, int hoveredStrokeColor, long ImGuiButtonFlags, float clickDelay);
+    public static native int internal_native_ButtonBehavior(int id, long bb_addr, boolean isSelected, int selectedColor, int hoveredColor, int hoveredStrokeColor, int ImGuiButtonFlags, float clickDelay);
 
     public static int ButtonBehavior(int id, ImRect bb, boolean isSelected, int selectedColor, int hoveredColor, int hoveredStrokeColor, ImGuiButtonFlags ImGuiButtonFlags) {
         return internal_native_ButtonBehavior(id, bb.native_address, isSelected, selectedColor, hoveredColor, hoveredStrokeColor, ImGuiButtonFlags.getValue());
@@ -674,7 +674,7 @@ public class ImLayout extends IDLBase {
       [-JNI;-NATIVE]
       return ImLayout::ButtonBehavior((int)id, *((ImRect* )bb_addr), isSelected, (int)selectedColor, (int)hoveredColor, (int)hoveredStrokeColor, ImGuiButtonFlags);
     */
-    public static native int internal_native_ButtonBehavior(int id, long bb_addr, boolean isSelected, int selectedColor, int hoveredColor, int hoveredStrokeColor, long ImGuiButtonFlags);
+    public static native int internal_native_ButtonBehavior(int id, long bb_addr, boolean isSelected, int selectedColor, int hoveredColor, int hoveredStrokeColor, int ImGuiButtonFlags);
 
     public static int ButtonBehavior(int id, ImRect bb, boolean isSelected, int selectedColor, int hoveredColor, int hoveredStrokeColor) {
         return internal_native_ButtonBehavior(id, bb.native_address, isSelected, selectedColor, hoveredColor, hoveredStrokeColor);

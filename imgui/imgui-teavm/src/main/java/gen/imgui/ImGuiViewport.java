@@ -70,7 +70,13 @@ jsObj.set_ID(ID);
 
     public ImGuiViewportFlags get_Flags() {
         int value = internal_native_get_Flags(native_address);
-        return ImGuiViewportFlags.MAP.get(value);
+        ImGuiViewportFlags[] values = ImGuiViewportFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiViewportFlags enumVal = values[i];
+            if (enumVal != ImGuiViewportFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiViewportFlags.CUSTOM.setValue(value);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -81,7 +87,7 @@ return jsObj.get_Flags();
     public static native int internal_native_get_Flags(int this_addr);
 
     public void set_Flags(ImGuiViewportFlags Flags) {
-        internal_native_set_Flags(native_address, (int) Flags.getValue());
+        internal_native_set_Flags(native_address, Flags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]

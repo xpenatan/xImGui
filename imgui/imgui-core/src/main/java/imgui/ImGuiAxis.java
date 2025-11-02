@@ -5,8 +5,6 @@
  *-------------------------------------------------------*/
 package imgui;
 
-import java.util.Map;
-import java.util.HashMap;
 import com.github.xpenatan.jParser.idl.IDLEnum;
 
 public enum ImGuiAxis implements IDLEnum<ImGuiAxis> {
@@ -33,16 +31,6 @@ public enum ImGuiAxis implements IDLEnum<ImGuiAxis> {
 
     public ImGuiAxis getCustom() {
         return CUSTOM;
-    }
-
-    public static final Map<Integer, ImGuiAxis> MAP = new HashMap<>();
-
-    static {
-        for (ImGuiAxis value : values()) {
-            if (value != CUSTOM) {
-                MAP.put(value.value, value);
-            }
-        }
     }
 
     /*[-JNI;-NATIVE]

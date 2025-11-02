@@ -5,8 +5,6 @@
  *-------------------------------------------------------*/
 package gen.imgui;
 
-import java.util.Map;
-import java.util.HashMap;
 import com.github.xpenatan.jParser.idl.IDLEnum;
 
 public enum ImGuiMultiSelectFlags implements IDLEnum<ImGuiMultiSelectFlags> {
@@ -50,16 +48,6 @@ public enum ImGuiMultiSelectFlags implements IDLEnum<ImGuiMultiSelectFlags> {
 
     public ImGuiMultiSelectFlags getCustom() {
         return CUSTOM;
-    }
-
-    public static final Map<Integer, ImGuiMultiSelectFlags> MAP = new HashMap<>();
-
-    static {
-        for (ImGuiMultiSelectFlags value : values()) {
-            if (value != CUSTOM) {
-                MAP.put(value.value, value);
-            }
-        }
     }
 
     /*[-TEAVM;-NATIVE]

@@ -563,7 +563,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_StyleColorsClassic();
 
     public static boolean Begin(String name, IDLBoolArray p_open, ImGuiWindowFlags ImGuiWindowFlags) {
-        return internal_native_Begin(name, p_open.native_void_address, (int) ImGuiWindowFlags.getValue());
+        return internal_native_Begin(name, p_open.native_void_address, ImGuiWindowFlags.getValue());
     }
 
     /*
@@ -610,7 +610,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_End();
 
     public static boolean BeginChild(String str_id, ImVec2 size, ImGuiChildFlags ImGuiChildFlags, ImGuiWindowFlags ImGuiWindowFlags) {
-        return internal_native_BeginChild__0(str_id, size.native_address, (int) ImGuiChildFlags.getValue(), (int) ImGuiWindowFlags.getValue());
+        return internal_native_BeginChild__0(str_id, size.native_address, ImGuiChildFlags.getValue(), ImGuiWindowFlags.getValue());
     }
 
     /*
@@ -622,7 +622,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_BeginChild__0(String str_id, int size_addr, int ImGuiChildFlags, int ImGuiWindowFlags);
 
     public static boolean BeginChild(String str_id, ImVec2 size, ImGuiChildFlags ImGuiChildFlags) {
-        return internal_native_BeginChild__0(str_id, size.native_address, (int) ImGuiChildFlags.getValue());
+        return internal_native_BeginChild__0(str_id, size.native_address, ImGuiChildFlags.getValue());
     }
 
     /*
@@ -658,7 +658,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_BeginChild__0(String str_id);
 
     public static boolean BeginChild(int id, ImVec2 size, ImGuiChildFlags ImGuiChildFlags, ImGuiWindowFlags ImGuiWindowFlags) {
-        return internal_native_BeginChild__1(id, size.native_address, (int) ImGuiChildFlags.getValue(), (int) ImGuiWindowFlags.getValue());
+        return internal_native_BeginChild__1(id, size.native_address, ImGuiChildFlags.getValue(), ImGuiWindowFlags.getValue());
     }
 
     /*
@@ -670,7 +670,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_BeginChild__1(int id, int size_addr, int ImGuiChildFlags, int ImGuiWindowFlags);
 
     public static boolean BeginChild(int id, ImVec2 size, ImGuiChildFlags ImGuiChildFlags) {
-        return internal_native_BeginChild__1(id, size.native_address, (int) ImGuiChildFlags.getValue());
+        return internal_native_BeginChild__1(id, size.native_address, ImGuiChildFlags.getValue());
     }
 
     /*
@@ -741,7 +741,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsWindowCollapsed();
 
     public static boolean IsWindowFocused(ImGuiFocusedFlags ImGuiFocusedFlags) {
-        return internal_native_IsWindowFocused((int) ImGuiFocusedFlags.getValue());
+        return internal_native_IsWindowFocused(ImGuiFocusedFlags.getValue());
     }
 
     /*
@@ -765,7 +765,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsWindowFocused();
 
     public static boolean IsWindowHovered(ImGuiHoveredFlags ImGuiFocusedFlags) {
-        return internal_native_IsWindowHovered((int) ImGuiFocusedFlags.getValue());
+        return internal_native_IsWindowHovered(ImGuiFocusedFlags.getValue());
     }
 
     /*
@@ -901,7 +901,7 @@ public class ImGui extends IDLBase {
     public static native int internal_native_GetWindowViewport();
 
     public static void SetNextWindowPos(ImVec2 pos, ImGuiCond ImGuiCond, ImVec2 pivot) {
-        internal_native_SetNextWindowPos(pos.native_address, (int) ImGuiCond.getValue(), pivot.native_address);
+        internal_native_SetNextWindowPos(pos.native_address, ImGuiCond.getValue(), pivot.native_address);
     }
 
     /*
@@ -912,7 +912,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetNextWindowPos(int pos_addr, int ImGuiCond, int pivot_addr);
 
     public static void SetNextWindowPos(ImVec2 pos, ImGuiCond ImGuiCond) {
-        internal_native_SetNextWindowPos(pos.native_address, (int) ImGuiCond.getValue());
+        internal_native_SetNextWindowPos(pos.native_address, ImGuiCond.getValue());
     }
 
     /*
@@ -934,7 +934,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetNextWindowPos(int pos_addr);
 
     public static void SetNextWindowSize(ImVec2 size, ImGuiCond ImGuiCond) {
-        internal_native_SetNextWindowSize(size.native_address, (int) ImGuiCond.getValue());
+        internal_native_SetNextWindowSize(size.native_address, ImGuiCond.getValue());
     }
 
     /*
@@ -978,7 +978,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetNextWindowContentSize(int size_addr);
 
     public static void SetNextWindowCollapsed(boolean collapsed, ImGuiCond ImGuiCond) {
-        internal_native_SetNextWindowCollapsed(collapsed, (int) ImGuiCond.getValue());
+        internal_native_SetNextWindowCollapsed(collapsed, ImGuiCond.getValue());
     }
 
     /*
@@ -1044,7 +1044,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetNextWindowViewport(int viewport_id);
 
     public static void SetWindowPos(ImVec2 pos, ImGuiCond ImGuiCond) {
-        internal_native_SetWindowPos__0(pos.native_address, (int) ImGuiCond.getValue());
+        internal_native_SetWindowPos__0(pos.native_address, ImGuiCond.getValue());
     }
 
     /*
@@ -1066,7 +1066,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetWindowPos__0(int pos_addr);
 
     public static void SetWindowPos(String name, ImVec2 pos, ImGuiCond ImGuiCond) {
-        internal_native_SetWindowPos__1(name, pos.native_address, (int) ImGuiCond.getValue());
+        internal_native_SetWindowPos__1(name, pos.native_address, ImGuiCond.getValue());
     }
 
     /*
@@ -1088,7 +1088,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetWindowPos__1(String name, int pos_addr);
 
     public static void SetWindowSize(ImVec2 size, ImGuiCond ImGuiCond) {
-        internal_native_SetWindowSize__0(size.native_address, (int) ImGuiCond.getValue());
+        internal_native_SetWindowSize__0(size.native_address, ImGuiCond.getValue());
     }
 
     /*
@@ -1110,7 +1110,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetWindowSize__0(int size_addr);
 
     public static void SetWindowSize(String name, ImVec2 size, ImGuiCond ImGuiCond) {
-        internal_native_SetWindowSize__1(name, size.native_address, (int) ImGuiCond.getValue());
+        internal_native_SetWindowSize__1(name, size.native_address, ImGuiCond.getValue());
     }
 
     /*
@@ -1132,7 +1132,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetWindowSize__1(String name, int size_addr);
 
     public static void SetWindowCollapsed(boolean collapsed, ImGuiCond ImGuiCond) {
-        internal_native_SetWindowCollapsed__0(collapsed, (int) ImGuiCond.getValue());
+        internal_native_SetWindowCollapsed__0(collapsed, ImGuiCond.getValue());
     }
 
     /*
@@ -1154,7 +1154,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetWindowCollapsed__0(boolean collapsed);
 
     public static void SetWindowCollapsed(String name, boolean collapsed, ImGuiCond ImGuiCond) {
-        internal_native_SetWindowCollapsed__1(name, collapsed, (int) ImGuiCond.getValue());
+        internal_native_SetWindowCollapsed__1(name, collapsed, ImGuiCond.getValue());
     }
 
     /*
@@ -1389,7 +1389,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_PopFont();
 
     public static void PushStyleColor(ImGuiCol idx, int col) {
-        internal_native_PushStyleColor__0((int) idx.getValue(), col);
+        internal_native_PushStyleColor__0(idx.getValue(), col);
     }
 
     /*
@@ -1400,7 +1400,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_PushStyleColor__0(int idx, int col);
 
     public static void PushStyleColor(ImGuiCol idx, ImVec4 col) {
-        internal_native_PushStyleColor__1((int) idx.getValue(), col.native_address);
+        internal_native_PushStyleColor__1(idx.getValue(), col.native_address);
     }
 
     /*
@@ -1433,7 +1433,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_PopStyleColor();
 
     public static void PushStyleVar(ImGuiStyleVar idx, float val) {
-        internal_native_PushStyleVar__0((int) idx.getValue(), val);
+        internal_native_PushStyleVar__0(idx.getValue(), val);
     }
 
     /*
@@ -1444,7 +1444,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_PushStyleVar__0(int idx, float val);
 
     public static void PushStyleVar(ImGuiStyleVar idx, ImVec2 val) {
-        internal_native_PushStyleVar__1((int) idx.getValue(), val.native_address);
+        internal_native_PushStyleVar__1(idx.getValue(), val.native_address);
     }
 
     /*
@@ -2233,7 +2233,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_SmallButton(String label);
 
     public static boolean InvisibleButton(String str_id, ImVec2 size, ImGuiButtonFlags ImGuiButtonFlags) {
-        return internal_native_InvisibleButton(str_id, size.native_address, (int) ImGuiButtonFlags.getValue());
+        return internal_native_InvisibleButton(str_id, size.native_address, ImGuiButtonFlags.getValue());
     }
 
     /*
@@ -2257,7 +2257,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_InvisibleButton(String str_id, int size_addr);
 
     public static boolean ArrowButton(String str_id, ImGuiDir dir) {
-        return internal_native_ArrowButton(str_id, (int) dir.getValue());
+        return internal_native_ArrowButton(str_id, dir.getValue());
     }
 
     /*
@@ -2510,7 +2510,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_ImageButton(String str_id, int user_texture_id, int size_addr);
 
     public static boolean BeginCombo(String label, String preview_value, ImGuiComboFlags ImGuiComboFlags) {
-        return internal_native_BeginCombo(label, preview_value, (int) ImGuiComboFlags.getValue());
+        return internal_native_BeginCombo(label, preview_value, ImGuiComboFlags.getValue());
     }
 
     /*
@@ -2569,7 +2569,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_Combo(String label, int current_item_addr, String items_separated_by_zeros);
 
     public static boolean DragFloat(String label, IDLFloatArray v, float v_speed, float v_min, float v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_DragFloat(label, v.native_void_address, v_speed, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+        return internal_native_DragFloat(label, v.native_void_address, v_speed, v_min, v_max, format, ImGuiSliderFlags.getValue());
     }
 
     /*
@@ -2641,7 +2641,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_DragFloat(String label, int v_addr);
 
     public static boolean DragFloat2(String label, IDLFloatArray v, float v_speed, float v_min, float v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_DragFloat2(label, v.native_void_address, v_speed, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+        return internal_native_DragFloat2(label, v.native_void_address, v_speed, v_min, v_max, format, ImGuiSliderFlags.getValue());
     }
 
     /*
@@ -2713,7 +2713,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_DragFloat2(String label, int v_addr);
 
     public static boolean DragFloat3(String label, IDLFloatArray v, float v_speed, float v_min, float v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_DragFloat3(label, v.native_void_address, v_speed, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+        return internal_native_DragFloat3(label, v.native_void_address, v_speed, v_min, v_max, format, ImGuiSliderFlags.getValue());
     }
 
     /*
@@ -2785,7 +2785,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_DragFloat3(String label, int v_addr);
 
     public static boolean DragFloat4(String label, IDLFloatArray v, float v_speed, float v_min, float v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_DragFloat4(label, v.native_void_address, v_speed, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+        return internal_native_DragFloat4(label, v.native_void_address, v_speed, v_min, v_max, format, ImGuiSliderFlags.getValue());
     }
 
     /*
@@ -2857,7 +2857,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_DragFloat4(String label, int v_addr);
 
     public static boolean DragFloatRange2(String label, IDLFloatArray v_current_min, IDLFloatArray v_current_max, float v_speed, float v_min, float v_max, String format, String format_max, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_DragFloatRange2(label, v_current_min.native_void_address, v_current_max.native_void_address, v_speed, v_min, v_max, format, format_max, (int) ImGuiSliderFlags.getValue());
+        return internal_native_DragFloatRange2(label, v_current_min.native_void_address, v_current_max.native_void_address, v_speed, v_min, v_max, format, format_max, ImGuiSliderFlags.getValue());
     }
 
     /*
@@ -2941,7 +2941,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_DragFloatRange2(String label, int v_current_min_addr, int v_current_max_addr);
 
     public static boolean DragInt(String label, IDLIntArray v, float v_speed, int v_min, int v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_DragInt(label, v.native_void_address, v_speed, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+        return internal_native_DragInt(label, v.native_void_address, v_speed, v_min, v_max, format, ImGuiSliderFlags.getValue());
     }
 
     /*
@@ -3013,7 +3013,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_DragInt(String label, int v_addr);
 
     public static boolean DragInt2(String label, IDLIntArray v, float v_speed, int v_min, int v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_DragInt2(label, v.native_void_address, v_speed, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+        return internal_native_DragInt2(label, v.native_void_address, v_speed, v_min, v_max, format, ImGuiSliderFlags.getValue());
     }
 
     /*
@@ -3085,7 +3085,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_DragInt2(String label, int v_addr);
 
     public static boolean DragInt3(String label, IDLIntArray v, float v_speed, int v_min, int v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_DragInt3(label, v.native_void_address, v_speed, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+        return internal_native_DragInt3(label, v.native_void_address, v_speed, v_min, v_max, format, ImGuiSliderFlags.getValue());
     }
 
     /*
@@ -3157,7 +3157,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_DragInt3(String label, int v_addr);
 
     public static boolean DragInt4(String label, IDLIntArray v, float v_speed, int v_min, int v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_DragInt4(label, v.native_void_address, v_speed, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+        return internal_native_DragInt4(label, v.native_void_address, v_speed, v_min, v_max, format, ImGuiSliderFlags.getValue());
     }
 
     /*
@@ -3229,7 +3229,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_DragInt4(String label, int v_addr);
 
     public static boolean DragIntRange2(String label, IDLIntArray v_current_min, IDLIntArray v_current_max, float v_speed, int v_min, int v_max, String format, String format_max, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_DragIntRange2(label, v_current_min.native_void_address, v_current_max.native_void_address, v_speed, v_min, v_max, format, format_max, (int) ImGuiSliderFlags.getValue());
+        return internal_native_DragIntRange2(label, v_current_min.native_void_address, v_current_max.native_void_address, v_speed, v_min, v_max, format, format_max, ImGuiSliderFlags.getValue());
     }
 
     /*
@@ -3313,7 +3313,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_DragIntRange2(String label, int v_current_min_addr, int v_current_max_addr);
 
     public static boolean SliderFloat(String label, IDLFloatArray v, float v_min, float v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_SliderFloat(label, v.native_void_address, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+        return internal_native_SliderFloat(label, v.native_void_address, v_min, v_max, format, ImGuiSliderFlags.getValue());
     }
 
     /*
@@ -3349,7 +3349,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_SliderFloat(String label, int v_addr, float v_min, float v_max);
 
     public static boolean SliderFloat2(String label, IDLFloatArray v, float v_min, float v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_SliderFloat2(label, v.native_void_address, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+        return internal_native_SliderFloat2(label, v.native_void_address, v_min, v_max, format, ImGuiSliderFlags.getValue());
     }
 
     /*
@@ -3385,7 +3385,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_SliderFloat2(String label, int v_addr, float v_min, float v_max);
 
     public static boolean SliderFloat3(String label, IDLFloatArray v, float v_min, float v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_SliderFloat3(label, v.native_void_address, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+        return internal_native_SliderFloat3(label, v.native_void_address, v_min, v_max, format, ImGuiSliderFlags.getValue());
     }
 
     /*
@@ -3421,7 +3421,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_SliderFloat3(String label, int v_addr, float v_min, float v_max);
 
     public static boolean SliderFloat4(String label, IDLFloatArray v, float v_min, float v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_SliderFloat4(label, v.native_void_address, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+        return internal_native_SliderFloat4(label, v.native_void_address, v_min, v_max, format, ImGuiSliderFlags.getValue());
     }
 
     /*
@@ -3457,7 +3457,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_SliderFloat4(String label, int v_addr, float v_min, float v_max);
 
     public static boolean SliderAngle(String label, IDLFloatArray v_rad, float v_degrees_min, float v_degrees_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_SliderAngle(label, v_rad.native_void_address, v_degrees_min, v_degrees_max, format, (int) ImGuiSliderFlags.getValue());
+        return internal_native_SliderAngle(label, v_rad.native_void_address, v_degrees_min, v_degrees_max, format, ImGuiSliderFlags.getValue());
     }
 
     /*
@@ -3517,7 +3517,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_SliderAngle(String label, int v_rad_addr);
 
     public static boolean SliderInt(String label, IDLIntArray v, int v_min, int v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_SliderInt(label, v.native_void_address, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+        return internal_native_SliderInt(label, v.native_void_address, v_min, v_max, format, ImGuiSliderFlags.getValue());
     }
 
     /*
@@ -3553,7 +3553,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_SliderInt(String label, int v_addr, int v_min, int v_max);
 
     public static boolean SliderInt2(String label, IDLIntArray v, int v_min, int v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_SliderInt2(label, v.native_void_address, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+        return internal_native_SliderInt2(label, v.native_void_address, v_min, v_max, format, ImGuiSliderFlags.getValue());
     }
 
     /*
@@ -3589,7 +3589,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_SliderInt2(String label, int v_addr, int v_min, int v_max);
 
     public static boolean SliderInt3(String label, IDLIntArray v, int v_min, int v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_SliderInt3(label, v.native_void_address, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+        return internal_native_SliderInt3(label, v.native_void_address, v_min, v_max, format, ImGuiSliderFlags.getValue());
     }
 
     /*
@@ -3625,7 +3625,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_SliderInt3(String label, int v_addr, int v_min, int v_max);
 
     public static boolean SliderInt4(String label, IDLIntArray v, int v_min, int v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_SliderInt4(label, v.native_void_address, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+        return internal_native_SliderInt4(label, v.native_void_address, v_min, v_max, format, ImGuiSliderFlags.getValue());
     }
 
     /*
@@ -3661,7 +3661,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_SliderInt4(String label, int v_addr, int v_min, int v_max);
 
     public static boolean VSliderFloat(String label, ImVec2 size, IDLFloatArray v, float v_min, float v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_VSliderFloat(label, size.native_address, v.native_void_address, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+        return internal_native_VSliderFloat(label, size.native_address, v.native_void_address, v_min, v_max, format, ImGuiSliderFlags.getValue());
     }
 
     /*
@@ -3697,7 +3697,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_VSliderFloat(String label, int size_addr, int v_addr, float v_min, float v_max);
 
     public static boolean VSliderInt(String label, ImVec2 size, IDLIntArray v, int v_min, int v_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_VSliderInt(label, size.native_address, v.native_void_address, v_min, v_max, format, (int) ImGuiSliderFlags.getValue());
+        return internal_native_VSliderInt(label, size.native_address, v.native_void_address, v_min, v_max, format, ImGuiSliderFlags.getValue());
     }
 
     /*
@@ -3733,7 +3733,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_VSliderInt(String label, int size_addr, int v_addr, int v_min, int v_max);
 
     public static boolean InputText(String label, IDLByteArray buf, int buf_size, ImGuiInputTextFlags ImGuiInputTextFlags) {
-        return internal_native_InputText(label, buf.native_void_address, buf_size, (int) ImGuiInputTextFlags.getValue());
+        return internal_native_InputText(label, buf.native_void_address, buf_size, ImGuiInputTextFlags.getValue());
     }
 
     /*
@@ -3757,7 +3757,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_InputText(String label, int buf_addr, int buf_size);
 
     public static boolean InputTextMultiline(String label, IDLByteArray buf, int buf_size, ImVec2 size, ImGuiInputTextFlags ImGuiInputTextFlags) {
-        return internal_native_InputTextMultiline(label, buf.native_void_address, buf_size, size.native_address, (int) ImGuiInputTextFlags.getValue());
+        return internal_native_InputTextMultiline(label, buf.native_void_address, buf_size, size.native_address, ImGuiInputTextFlags.getValue());
     }
 
     /*
@@ -3793,7 +3793,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_InputTextMultiline(String label, int buf_addr, int buf_size);
 
     public static boolean InputTextWithHint(String label, String hint, IDLByteArray buf, int buf_size, ImGuiInputTextFlags ImGuiInputTextFlags) {
-        return internal_native_InputTextWithHint(label, hint, buf.native_void_address, buf_size, (int) ImGuiInputTextFlags.getValue());
+        return internal_native_InputTextWithHint(label, hint, buf.native_void_address, buf_size, ImGuiInputTextFlags.getValue());
     }
 
     /*
@@ -3817,7 +3817,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_InputTextWithHint(String label, String hint, int buf_addr, int buf_size);
 
     public static boolean InputFloat(String label, IDLFloatArray v, float step, float step_fast, String format, ImGuiInputTextFlags ImGuiInputTextFlags) {
-        return internal_native_InputFloat(label, v.native_void_address, step, step_fast, format, (int) ImGuiInputTextFlags.getValue());
+        return internal_native_InputFloat(label, v.native_void_address, step, step_fast, format, ImGuiInputTextFlags.getValue());
     }
 
     /*
@@ -3877,7 +3877,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_InputFloat(String label, int v_addr);
 
     public static boolean InputFloat2(String label, IDLFloatArray v, String format, ImGuiInputTextFlags ImGuiInputTextFlags) {
-        return internal_native_InputFloat2(label, v.native_void_address, format, (int) ImGuiInputTextFlags.getValue());
+        return internal_native_InputFloat2(label, v.native_void_address, format, ImGuiInputTextFlags.getValue());
     }
 
     /*
@@ -3913,7 +3913,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_InputFloat2(String label, int v_addr);
 
     public static boolean InputFloat3(String label, IDLFloatArray v, String format, ImGuiInputTextFlags ImGuiInputTextFlags) {
-        return internal_native_InputFloat3(label, v.native_void_address, format, (int) ImGuiInputTextFlags.getValue());
+        return internal_native_InputFloat3(label, v.native_void_address, format, ImGuiInputTextFlags.getValue());
     }
 
     /*
@@ -3949,7 +3949,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_InputFloat3(String label, int v_addr);
 
     public static boolean InputFloat4(String label, IDLFloatArray v, String format, ImGuiInputTextFlags ImGuiInputTextFlags) {
-        return internal_native_InputFloat4(label, v.native_void_address, format, (int) ImGuiInputTextFlags.getValue());
+        return internal_native_InputFloat4(label, v.native_void_address, format, ImGuiInputTextFlags.getValue());
     }
 
     /*
@@ -3985,7 +3985,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_InputFloat4(String label, int v_addr);
 
     public static boolean InputInt(String label, IDLIntArray v, int step, int step_fast, ImGuiInputTextFlags ImGuiInputTextFlags) {
-        return internal_native_InputInt(label, v.native_void_address, step, step_fast, (int) ImGuiInputTextFlags.getValue());
+        return internal_native_InputInt(label, v.native_void_address, step, step_fast, ImGuiInputTextFlags.getValue());
     }
 
     /*
@@ -4033,7 +4033,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_InputInt(String label, int v_addr);
 
     public static boolean InputInt2(String label, IDLIntArray v, ImGuiInputTextFlags ImGuiInputTextFlags) {
-        return internal_native_InputInt2(label, v.native_void_address, (int) ImGuiInputTextFlags.getValue());
+        return internal_native_InputInt2(label, v.native_void_address, ImGuiInputTextFlags.getValue());
     }
 
     /*
@@ -4057,7 +4057,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_InputInt2(String label, int v_addr);
 
     public static boolean InputInt3(String label, IDLIntArray v, ImGuiInputTextFlags ImGuiInputTextFlags) {
-        return internal_native_InputInt3(label, v.native_void_address, (int) ImGuiInputTextFlags.getValue());
+        return internal_native_InputInt3(label, v.native_void_address, ImGuiInputTextFlags.getValue());
     }
 
     /*
@@ -4081,7 +4081,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_InputInt3(String label, int v_addr);
 
     public static boolean InputInt4(String label, IDLIntArray v, ImGuiInputTextFlags ImGuiInputTextFlags) {
-        return internal_native_InputInt4(label, v.native_void_address, (int) ImGuiInputTextFlags.getValue());
+        return internal_native_InputInt4(label, v.native_void_address, ImGuiInputTextFlags.getValue());
     }
 
     /*
@@ -4105,7 +4105,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_InputInt4(String label, int v_addr);
 
     public static boolean InputDouble(String label, IDLDoubleArray v, double step, double step_fast, String format, ImGuiInputTextFlags ImGuiInputTextFlags) {
-        return internal_native_InputDouble(label, v.native_void_address, step, step_fast, format, (int) ImGuiInputTextFlags.getValue());
+        return internal_native_InputDouble(label, v.native_void_address, step, step_fast, format, ImGuiInputTextFlags.getValue());
     }
 
     /*
@@ -4165,7 +4165,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_InputDouble(String label, int v_addr);
 
     public static boolean ColorEdit3(String label, IDLFloatArray col, ImGuiColorEditFlags ImGuiColorEditFlags) {
-        return internal_native_ColorEdit3(label, col.native_void_address, (int) ImGuiColorEditFlags.getValue());
+        return internal_native_ColorEdit3(label, col.native_void_address, ImGuiColorEditFlags.getValue());
     }
 
     /*
@@ -4189,7 +4189,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_ColorEdit3(String label, int col_addr);
 
     public static boolean ColorEdit4(String label, IDLFloatArray col, ImGuiColorEditFlags ImGuiColorEditFlags) {
-        return internal_native_ColorEdit4(label, col.native_void_address, (int) ImGuiColorEditFlags.getValue());
+        return internal_native_ColorEdit4(label, col.native_void_address, ImGuiColorEditFlags.getValue());
     }
 
     /*
@@ -4213,7 +4213,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_ColorEdit4(String label, int col_addr);
 
     public static boolean ColorPicker3(String label, IDLFloatArray col, ImGuiColorEditFlags ImGuiColorEditFlags) {
-        return internal_native_ColorPicker3(label, col.native_void_address, (int) ImGuiColorEditFlags.getValue());
+        return internal_native_ColorPicker3(label, col.native_void_address, ImGuiColorEditFlags.getValue());
     }
 
     /*
@@ -4237,7 +4237,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_ColorPicker3(String label, int col_addr);
 
     public static boolean ColorPicker4(String label, IDLFloatArray col, ImGuiColorEditFlags ImGuiColorEditFlags, IDLFloatArray ref_col) {
-        return internal_native_ColorPicker4(label, col.native_void_address, (int) ImGuiColorEditFlags.getValue(), ref_col.native_void_address);
+        return internal_native_ColorPicker4(label, col.native_void_address, ImGuiColorEditFlags.getValue(), ref_col.native_void_address);
     }
 
     /*
@@ -4249,7 +4249,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_ColorPicker4(String label, int col_addr, int ImGuiColorEditFlags, int ref_col_addr);
 
     public static boolean ColorPicker4(String label, IDLFloatArray col, ImGuiColorEditFlags ImGuiColorEditFlags) {
-        return internal_native_ColorPicker4(label, col.native_void_address, (int) ImGuiColorEditFlags.getValue());
+        return internal_native_ColorPicker4(label, col.native_void_address, ImGuiColorEditFlags.getValue());
     }
 
     /*
@@ -4273,7 +4273,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_ColorPicker4(String label, int col_addr);
 
     public static boolean ColorButton(String desc_id, ImVec4 col, ImGuiColorEditFlags ImGuiColorEditFlags, ImVec2 size) {
-        return internal_native_ColorButton(desc_id, col.native_address, (int) ImGuiColorEditFlags.getValue(), size.native_address);
+        return internal_native_ColorButton(desc_id, col.native_address, ImGuiColorEditFlags.getValue(), size.native_address);
     }
 
     /*
@@ -4285,7 +4285,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_ColorButton(String desc_id, int col_addr, int ImGuiColorEditFlags, int size_addr);
 
     public static boolean ColorButton(String desc_id, ImVec4 col, ImGuiColorEditFlags ImGuiColorEditFlags) {
-        return internal_native_ColorButton(desc_id, col.native_address, (int) ImGuiColorEditFlags.getValue());
+        return internal_native_ColorButton(desc_id, col.native_address, ImGuiColorEditFlags.getValue());
     }
 
     /*
@@ -4309,7 +4309,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_ColorButton(String desc_id, int col_addr);
 
     public static void SetColorEditOptions(ImGuiColorEditFlags ImGuiColorEditFlags) {
-        internal_native_SetColorEditOptions((int) ImGuiColorEditFlags.getValue());
+        internal_native_SetColorEditOptions(ImGuiColorEditFlags.getValue());
     }
 
     /*
@@ -4356,7 +4356,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_TreeNode__2(int ptr_id_addr, String fmt);
 
     public static boolean TreeNodeEx(String label, ImGuiTreeNodeFlags flaImGuiTreeNodeFlagsgs) {
-        return internal_native_TreeNodeEx__0(label, (int) flaImGuiTreeNodeFlagsgs.getValue());
+        return internal_native_TreeNodeEx__0(label, flaImGuiTreeNodeFlagsgs.getValue());
     }
 
     /*
@@ -4380,7 +4380,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_TreeNodeEx__0(String label);
 
     public static boolean TreeNodeEx(String str_id, ImGuiTreeNodeFlags ImGuiTreeNodeFlags, String fmt) {
-        return internal_native_TreeNodeEx__1(str_id, (int) ImGuiTreeNodeFlags.getValue(), fmt);
+        return internal_native_TreeNodeEx__1(str_id, ImGuiTreeNodeFlags.getValue(), fmt);
     }
 
     /*
@@ -4392,7 +4392,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_TreeNodeEx__1(String str_id, int ImGuiTreeNodeFlags, String fmt);
 
     public static boolean TreeNodeEx(IDLBase ptr_id, ImGuiTreeNodeFlags ImGuiTreeNodeFlags, String fmt) {
-        return internal_native_TreeNodeEx__2(ptr_id.native_void_address, (int) ImGuiTreeNodeFlags.getValue(), fmt);
+        return internal_native_TreeNodeEx__2(ptr_id.native_void_address, ImGuiTreeNodeFlags.getValue(), fmt);
     }
 
     /*
@@ -4438,7 +4438,7 @@ public class ImGui extends IDLBase {
     public static native float internal_native_GetTreeNodeToLabelSpacing();
 
     public static boolean CollapsingHeader(String label, ImGuiTreeNodeFlags ImGuiTreeNodeFlags) {
-        return internal_native_CollapsingHeader__0(label, (int) ImGuiTreeNodeFlags.getValue());
+        return internal_native_CollapsingHeader__0(label, ImGuiTreeNodeFlags.getValue());
     }
 
     /*
@@ -4462,7 +4462,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_CollapsingHeader__0(String label);
 
     public static boolean CollapsingHeader(String label, IDLBoolArray p_visible, ImGuiTreeNodeFlags ImGuiTreeNodeFlags) {
-        return internal_native_CollapsingHeader__1(label, p_visible.native_void_address, (int) ImGuiTreeNodeFlags.getValue());
+        return internal_native_CollapsingHeader__1(label, p_visible.native_void_address, ImGuiTreeNodeFlags.getValue());
     }
 
     /*
@@ -4486,7 +4486,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_CollapsingHeader__1(String label, int p_visible_addr);
 
     public static void SetNextItemOpen(boolean is_open, ImGuiCond ImGuiCond) {
-        internal_native_SetNextItemOpen(is_open, (int) ImGuiCond.getValue());
+        internal_native_SetNextItemOpen(is_open, ImGuiCond.getValue());
     }
 
     /*
@@ -4519,7 +4519,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetNextItemStorageID(int storage_id);
 
     public static boolean Selectable(String label, boolean selected, ImGuiSelectableFlags flags, ImVec2 size) {
-        return internal_native_Selectable__0(label, selected, (int) flags.getValue(), size.native_address);
+        return internal_native_Selectable__0(label, selected, flags.getValue(), size.native_address);
     }
 
     /*
@@ -4531,7 +4531,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_Selectable__0(String label, boolean selected, int flags, int size_addr);
 
     public static boolean Selectable(String label, boolean selected, ImGuiSelectableFlags flags) {
-        return internal_native_Selectable__0(label, selected, (int) flags.getValue());
+        return internal_native_Selectable__0(label, selected, flags.getValue());
     }
 
     /*
@@ -4567,7 +4567,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_Selectable__0(String label);
 
     public static boolean Selectable(String label, IDLBoolArray p_selected, ImGuiSelectableFlags flags, ImVec2 size) {
-        return internal_native_Selectable__1(label, p_selected.native_void_address, (int) flags.getValue(), size.native_address);
+        return internal_native_Selectable__1(label, p_selected.native_void_address, flags.getValue(), size.native_address);
     }
 
     /*
@@ -4579,7 +4579,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_Selectable__1(String label, int p_selected_addr, int flags, int size_addr);
 
     public static boolean Selectable(String label, IDLBoolArray p_selected, ImGuiSelectableFlags flags) {
-        return internal_native_Selectable__1(label, p_selected.native_void_address, (int) flags.getValue());
+        return internal_native_Selectable__1(label, p_selected.native_void_address, flags.getValue());
     }
 
     /*
@@ -4603,7 +4603,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_Selectable__1(String label, int p_selected_addr);
 
     public static ImGuiMultiSelectIO BeginMultiSelect(ImGuiMultiSelectFlags flags, int selection_size, int items_count) {
-        int pointer = internal_native_BeginMultiSelect((int) flags.getValue(), selection_size, items_count);
+        int pointer = internal_native_BeginMultiSelect(flags.getValue(), selection_size, items_count);
         if (pointer == 0)
             return ImGuiMultiSelectIO.NULL;
         if (ImGuiMultiSelectIO_TEMP_STATIC_GEN_0 == null)
@@ -4622,7 +4622,7 @@ public class ImGui extends IDLBase {
     public static native int internal_native_BeginMultiSelect(int flags, int selection_size, int items_count);
 
     public static ImGuiMultiSelectIO BeginMultiSelect(ImGuiMultiSelectFlags flags, int selection_size) {
-        int pointer = internal_native_BeginMultiSelect((int) flags.getValue(), selection_size);
+        int pointer = internal_native_BeginMultiSelect(flags.getValue(), selection_size);
         if (pointer == 0)
             return ImGuiMultiSelectIO.NULL;
         if (ImGuiMultiSelectIO_TEMP_STATIC_GEN_1 == null)
@@ -4641,7 +4641,7 @@ public class ImGui extends IDLBase {
     public static native int internal_native_BeginMultiSelect(int flags, int selection_size);
 
     public static ImGuiMultiSelectIO BeginMultiSelect(ImGuiMultiSelectFlags flags) {
-        int pointer = internal_native_BeginMultiSelect((int) flags.getValue());
+        int pointer = internal_native_BeginMultiSelect(flags.getValue());
         if (pointer == 0)
             return ImGuiMultiSelectIO.NULL;
         if (ImGuiMultiSelectIO_TEMP_STATIC_GEN_2 == null)
@@ -5145,7 +5145,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetItemTooltip(String fmt);
 
     public static boolean BeginPopup(String str_id, ImGuiWindowFlags ImGuiWindowFlags) {
-        return internal_native_BeginPopup(str_id, (int) ImGuiWindowFlags.getValue());
+        return internal_native_BeginPopup(str_id, ImGuiWindowFlags.getValue());
     }
 
     /*
@@ -5169,7 +5169,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_BeginPopup(String str_id);
 
     public static boolean BeginPopupModal(String name, IDLBoolArray p_open, ImGuiWindowFlags ImGuiWindowFlags) {
-        return internal_native_BeginPopupModal(name, p_open.native_void_address, (int) ImGuiWindowFlags.getValue());
+        return internal_native_BeginPopupModal(name, p_open.native_void_address, ImGuiWindowFlags.getValue());
     }
 
     /*
@@ -5216,7 +5216,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_EndPopup();
 
     public static void OpenPopup(String str_id, ImGuiPopupFlags ImGuiPopupFlags) {
-        internal_native_OpenPopup__0(str_id, (int) ImGuiPopupFlags.getValue());
+        internal_native_OpenPopup__0(str_id, ImGuiPopupFlags.getValue());
     }
 
     /*
@@ -5238,7 +5238,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_OpenPopup__0(String str_id);
 
     public static void OpenPopup(int id, ImGuiPopupFlags ImGuiPopupFlags) {
-        internal_native_OpenPopup__1(id, (int) ImGuiPopupFlags.getValue());
+        internal_native_OpenPopup__1(id, ImGuiPopupFlags.getValue());
     }
 
     /*
@@ -5260,7 +5260,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_OpenPopup__1(int id);
 
     public static void OpenPopupOnItemClick(String str_id, ImGuiPopupFlags ImGuiPopupFlags) {
-        internal_native_OpenPopupOnItemClick(str_id, (int) ImGuiPopupFlags.getValue());
+        internal_native_OpenPopupOnItemClick(str_id, ImGuiPopupFlags.getValue());
     }
 
     /*
@@ -5304,7 +5304,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_CloseCurrentPopup();
 
     public static boolean BeginPopupContextItem(String str_id, ImGuiPopupFlags ImGuiPopupFlags) {
-        return internal_native_BeginPopupContextItem(str_id, (int) ImGuiPopupFlags.getValue());
+        return internal_native_BeginPopupContextItem(str_id, ImGuiPopupFlags.getValue());
     }
 
     /*
@@ -5340,7 +5340,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_BeginPopupContextItem();
 
     public static boolean BeginPopupContextWindow(String str_id, ImGuiPopupFlags ImGuiPopupFlags) {
-        return internal_native_BeginPopupContextWindow(str_id, (int) ImGuiPopupFlags.getValue());
+        return internal_native_BeginPopupContextWindow(str_id, ImGuiPopupFlags.getValue());
     }
 
     /*
@@ -5376,7 +5376,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_BeginPopupContextWindow();
 
     public static boolean BeginPopupContextVoid(String str_id, ImGuiPopupFlags ImGuiPopupFlags) {
-        return internal_native_BeginPopupContextVoid(str_id, (int) ImGuiPopupFlags.getValue());
+        return internal_native_BeginPopupContextVoid(str_id, ImGuiPopupFlags.getValue());
     }
 
     /*
@@ -5412,7 +5412,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_BeginPopupContextVoid();
 
     public static boolean IsPopupOpen(String str_id, ImGuiPopupFlags ImGuiPopupFlags) {
-        return internal_native_IsPopupOpen(str_id, (int) ImGuiPopupFlags.getValue());
+        return internal_native_IsPopupOpen(str_id, ImGuiPopupFlags.getValue());
     }
 
     /*
@@ -5436,7 +5436,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsPopupOpen(String str_id);
 
     public static boolean BeginTable(String str_id, int column, ImGuiTableFlags ImGuiTableFlags, ImVec2 outer_size, float inner_width) {
-        return internal_native_BeginTable(str_id, column, (int) ImGuiTableFlags.getValue(), outer_size.native_address, inner_width);
+        return internal_native_BeginTable(str_id, column, ImGuiTableFlags.getValue(), outer_size.native_address, inner_width);
     }
 
     /*
@@ -5448,7 +5448,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_BeginTable(String str_id, int column, int ImGuiTableFlags, int outer_size_addr, float inner_width);
 
     public static boolean BeginTable(String str_id, int column, ImGuiTableFlags ImGuiTableFlags, ImVec2 outer_size) {
-        return internal_native_BeginTable(str_id, column, (int) ImGuiTableFlags.getValue(), outer_size.native_address);
+        return internal_native_BeginTable(str_id, column, ImGuiTableFlags.getValue(), outer_size.native_address);
     }
 
     /*
@@ -5460,7 +5460,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_BeginTable(String str_id, int column, int ImGuiTableFlags, int outer_size_addr);
 
     public static boolean BeginTable(String str_id, int column, ImGuiTableFlags ImGuiTableFlags) {
-        return internal_native_BeginTable(str_id, column, (int) ImGuiTableFlags.getValue());
+        return internal_native_BeginTable(str_id, column, ImGuiTableFlags.getValue());
     }
 
     /*
@@ -5552,7 +5552,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_TableSetColumnIndex(int column_n);
 
     public static void TableSetupColumn(String label, ImGuiTableColumnFlags ImGuiTableColumnFlags, float init_width_or_weight, int user_id) {
-        internal_native_TableSetupColumn(label, (int) ImGuiTableColumnFlags.getValue(), init_width_or_weight, user_id);
+        internal_native_TableSetupColumn(label, ImGuiTableColumnFlags.getValue(), init_width_or_weight, user_id);
     }
 
     /*
@@ -5563,7 +5563,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_TableSetupColumn(String label, int ImGuiTableColumnFlags, float init_width_or_weight, int user_id);
 
     public static void TableSetupColumn(String label, ImGuiTableColumnFlags ImGuiTableColumnFlags, float init_width_or_weight) {
-        internal_native_TableSetupColumn(label, (int) ImGuiTableColumnFlags.getValue(), init_width_or_weight);
+        internal_native_TableSetupColumn(label, ImGuiTableColumnFlags.getValue(), init_width_or_weight);
     }
 
     /*
@@ -5574,7 +5574,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_TableSetupColumn(String label, int ImGuiTableColumnFlags, float init_width_or_weight);
 
     public static void TableSetupColumn(String label, ImGuiTableColumnFlags ImGuiTableColumnFlags) {
-        internal_native_TableSetupColumn(label, (int) ImGuiTableColumnFlags.getValue());
+        internal_native_TableSetupColumn(label, ImGuiTableColumnFlags.getValue());
     }
 
     /*
@@ -5752,7 +5752,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_TableSetBgColor(int target, int color);
 
     public static boolean BeginTabBar(String str_id, ImGuiTabBarFlags ImGuiTabBarFlags) {
-        return internal_native_BeginTabBar(str_id, (int) ImGuiTabBarFlags.getValue());
+        return internal_native_BeginTabBar(str_id, ImGuiTabBarFlags.getValue());
     }
 
     /*
@@ -5787,7 +5787,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_EndTabBar();
 
     public static boolean BeginTabItem(String label, IDLBoolArray p_open, ImGuiTabItemFlags ImGuiTabItemFlags) {
-        return internal_native_BeginTabItem(label, p_open.native_void_address, (int) ImGuiTabItemFlags.getValue());
+        return internal_native_BeginTabItem(label, p_open.native_void_address, ImGuiTabItemFlags.getValue());
     }
 
     /*
@@ -5834,7 +5834,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_EndTabItem();
 
     public static boolean TabItemButton(String label, ImGuiTabItemFlags ImGuiTabItemFlags) {
-        return internal_native_TabItemButton(label, (int) ImGuiTabItemFlags.getValue());
+        return internal_native_TabItemButton(label, ImGuiTabItemFlags.getValue());
     }
 
     /*
@@ -5857,7 +5857,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetTabItemClosed(String tab_or_docked_window_label);
 
     public static int DockSpace(int id, ImVec2 size, ImGuiDockNodeFlags ImGuiDockNodeFlags, ImGuiWindowClass window_class) {
-        return internal_native_DockSpace(id, size.native_address, (int) ImGuiDockNodeFlags.getValue(), window_class.native_address);
+        return internal_native_DockSpace(id, size.native_address, ImGuiDockNodeFlags.getValue(), window_class.native_address);
     }
 
     /*
@@ -5869,7 +5869,7 @@ public class ImGui extends IDLBase {
     public static native int internal_native_DockSpace(int id, int size_addr, int ImGuiDockNodeFlags, int window_class_addr);
 
     public static int DockSpace(int id, ImVec2 size, ImGuiDockNodeFlags ImGuiDockNodeFlags) {
-        return internal_native_DockSpace(id, size.native_address, (int) ImGuiDockNodeFlags.getValue());
+        return internal_native_DockSpace(id, size.native_address, ImGuiDockNodeFlags.getValue());
     }
 
     /*
@@ -5905,7 +5905,7 @@ public class ImGui extends IDLBase {
     public static native int internal_native_DockSpace(int id);
 
     public static int DockSpaceOverViewport(int dockspace_id, ImGuiViewport viewport, ImGuiDockNodeFlags ImGuiDockNodeFlags, ImGuiWindowClass window_class) {
-        return internal_native_DockSpaceOverViewport(dockspace_id, viewport.native_address, (int) ImGuiDockNodeFlags.getValue(), window_class.native_address);
+        return internal_native_DockSpaceOverViewport(dockspace_id, viewport.native_address, ImGuiDockNodeFlags.getValue(), window_class.native_address);
     }
 
     /*
@@ -5917,7 +5917,7 @@ public class ImGui extends IDLBase {
     public static native int internal_native_DockSpaceOverViewport(int dockspace_id, int viewport_addr, int ImGuiDockNodeFlags, int window_class_addr);
 
     public static int DockSpaceOverViewport(int dockspace_id, ImGuiViewport viewport, ImGuiDockNodeFlags ImGuiDockNodeFlags) {
-        return internal_native_DockSpaceOverViewport(dockspace_id, viewport.native_address, (int) ImGuiDockNodeFlags.getValue());
+        return internal_native_DockSpaceOverViewport(dockspace_id, viewport.native_address, ImGuiDockNodeFlags.getValue());
     }
 
     /*
@@ -5965,7 +5965,7 @@ public class ImGui extends IDLBase {
     public static native int internal_native_DockSpaceOverViewport();
 
     public static void SetNextWindowDockID(int dock_id, ImGuiCond ImGuiCond) {
-        internal_native_SetNextWindowDockID(dock_id, (int) ImGuiCond.getValue());
+        internal_native_SetNextWindowDockID(dock_id, ImGuiCond.getValue());
     }
 
     /*
@@ -6022,7 +6022,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsWindowDocked();
 
     public static boolean BeginDragDropSource(ImGuiDragDropFlags ImGuiDragDropFlags) {
-        return internal_native_BeginDragDropSource((int) ImGuiDragDropFlags.getValue());
+        return internal_native_BeginDragDropSource(ImGuiDragDropFlags.getValue());
     }
 
     /*
@@ -6046,7 +6046,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_BeginDragDropSource();
 
     public static boolean SetDragDropPayload(String type, int data, ImGuiCond ImGuiCond) {
-        return internal_native_SetDragDropPayload(type, data, (int) ImGuiCond.getValue());
+        return internal_native_SetDragDropPayload(type, data, ImGuiCond.getValue());
     }
 
     /*
@@ -6093,7 +6093,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_BeginDragDropTarget();
 
     public static ImGuiPayload AcceptDragDropPayload(String type, ImGuiDragDropFlags ImGuiDragDropFlags) {
-        int pointer = internal_native_AcceptDragDropPayload(type, (int) ImGuiDragDropFlags.getValue());
+        int pointer = internal_native_AcceptDragDropPayload(type, ImGuiDragDropFlags.getValue());
         if (pointer == 0)
             return ImGuiPayload.NULL;
         if (ImGuiPayload_TEMP_STATIC_GEN_0 == null)
@@ -6260,7 +6260,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetNextItemAllowOverlap();
 
     public static boolean IsItemHovered(ImGuiHoveredFlags ImGuiHoveredFlags) {
-        return internal_native_IsItemHovered((int) ImGuiHoveredFlags.getValue());
+        return internal_native_IsItemHovered(ImGuiHoveredFlags.getValue());
     }
 
     /*
@@ -6308,7 +6308,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsItemFocused();
 
     public static boolean IsItemClicked(ImGuiMouseButton ImGuiMouseButton) {
-        return internal_native_IsItemClicked((int) ImGuiMouseButton.getValue());
+        return internal_native_IsItemClicked(ImGuiMouseButton.getValue());
     }
 
     /*
@@ -6830,7 +6830,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_ColorConvertHSVtoRGB(float h, float s, float v, int out_r_addr, int out_g_addr, int out_b_addr);
 
     public static boolean IsKeyDown(ImGuiKey ImGuiKey) {
-        return internal_native_IsKeyDown((int) ImGuiKey.getValue());
+        return internal_native_IsKeyDown(ImGuiKey.getValue());
     }
 
     /*
@@ -6842,7 +6842,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsKeyDown(int ImGuiKey);
 
     public static boolean IsKeyPressed(ImGuiKey ImGuiKey, boolean repeat) {
-        return internal_native_IsKeyPressed((int) ImGuiKey.getValue(), repeat);
+        return internal_native_IsKeyPressed(ImGuiKey.getValue(), repeat);
     }
 
     /*
@@ -6854,7 +6854,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsKeyPressed(int ImGuiKey, boolean repeat);
 
     public static boolean IsKeyPressed(ImGuiKey ImGuiKey) {
-        return internal_native_IsKeyPressed((int) ImGuiKey.getValue());
+        return internal_native_IsKeyPressed(ImGuiKey.getValue());
     }
 
     /*
@@ -6866,7 +6866,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsKeyPressed(int ImGuiKey);
 
     public static boolean IsKeyReleased(ImGuiKey ImGuiKey) {
-        return internal_native_IsKeyReleased((int) ImGuiKey.getValue());
+        return internal_native_IsKeyReleased(ImGuiKey.getValue());
     }
 
     /*
@@ -6890,7 +6890,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsKeyChordPressed(int key_chord);
 
     public static int GetKeyPressedAmount(ImGuiKey ImGuiKey, float repeat_delay, float rate) {
-        return internal_native_GetKeyPressedAmount((int) ImGuiKey.getValue(), repeat_delay, rate);
+        return internal_native_GetKeyPressedAmount(ImGuiKey.getValue(), repeat_delay, rate);
     }
 
     /*
@@ -6913,7 +6913,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetNextFrameWantCaptureKeyboard(boolean want_capture_keyboard);
 
     public static boolean Shortcut(int key_chord, ImGuiInputFlags flags) {
-        return internal_native_Shortcut(key_chord, (int) flags.getValue());
+        return internal_native_Shortcut(key_chord, flags.getValue());
     }
 
     /*
@@ -6937,7 +6937,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_Shortcut(int key_chord);
 
     public static void SetNextItemShortcut(int key_chord, ImGuiInputFlags flags) {
-        internal_native_SetNextItemShortcut(key_chord, (int) flags.getValue());
+        internal_native_SetNextItemShortcut(key_chord, flags.getValue());
     }
 
     /*
@@ -6959,7 +6959,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetNextItemShortcut(int key_chord);
 
     public static void SetItemKeyOwner(ImGuiKey key) {
-        internal_native_SetItemKeyOwner((int) key.getValue());
+        internal_native_SetItemKeyOwner(key.getValue());
     }
 
     /*
@@ -6970,7 +6970,7 @@ public class ImGui extends IDLBase {
     public static native void internal_native_SetItemKeyOwner(int key);
 
     public static boolean IsMouseDown(ImGuiMouseButton ImGuiMouseButton) {
-        return internal_native_IsMouseDown((int) ImGuiMouseButton.getValue());
+        return internal_native_IsMouseDown(ImGuiMouseButton.getValue());
     }
 
     /*
@@ -6982,7 +6982,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsMouseDown(int ImGuiMouseButton);
 
     public static boolean IsMouseClicked(ImGuiMouseButton ImGuiMouseButton, boolean repeat) {
-        return internal_native_IsMouseClicked((int) ImGuiMouseButton.getValue(), repeat);
+        return internal_native_IsMouseClicked(ImGuiMouseButton.getValue(), repeat);
     }
 
     /*
@@ -6994,7 +6994,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsMouseClicked(int ImGuiMouseButton, boolean repeat);
 
     public static boolean IsMouseClicked(ImGuiMouseButton ImGuiMouseButton) {
-        return internal_native_IsMouseClicked((int) ImGuiMouseButton.getValue());
+        return internal_native_IsMouseClicked(ImGuiMouseButton.getValue());
     }
 
     /*
@@ -7006,7 +7006,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsMouseClicked(int ImGuiMouseButton);
 
     public static boolean IsMouseReleased(ImGuiMouseButton ImGuiMouseButton) {
-        return internal_native_IsMouseReleased((int) ImGuiMouseButton.getValue());
+        return internal_native_IsMouseReleased(ImGuiMouseButton.getValue());
     }
 
     /*
@@ -7018,7 +7018,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsMouseReleased(int ImGuiMouseButton);
 
     public static boolean IsMouseDoubleClicked(ImGuiMouseButton ImGuiMouseButton) {
-        return internal_native_IsMouseDoubleClicked((int) ImGuiMouseButton.getValue());
+        return internal_native_IsMouseDoubleClicked(ImGuiMouseButton.getValue());
     }
 
     /*
@@ -7030,7 +7030,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsMouseDoubleClicked(int ImGuiMouseButton);
 
     public static int GetMouseClickedCount(ImGuiMouseButton ImGuiMouseButton) {
-        return internal_native_GetMouseClickedCount((int) ImGuiMouseButton.getValue());
+        return internal_native_GetMouseClickedCount(ImGuiMouseButton.getValue());
     }
 
     /*
@@ -7140,7 +7140,7 @@ public class ImGui extends IDLBase {
     public static native int internal_native_GetMousePosOnOpeningCurrentPopup();
 
     public static boolean IsMouseDragging(ImGuiMouseButton ImGuiMouseButton, float lock_threshold) {
-        return internal_native_IsMouseDragging((int) ImGuiMouseButton.getValue(), lock_threshold);
+        return internal_native_IsMouseDragging(ImGuiMouseButton.getValue(), lock_threshold);
     }
 
     /*
@@ -7152,7 +7152,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsMouseDragging(int ImGuiMouseButton, float lock_threshold);
 
     public static boolean IsMouseDragging(ImGuiMouseButton ImGuiMouseButton) {
-        return internal_native_IsMouseDragging((int) ImGuiMouseButton.getValue());
+        return internal_native_IsMouseDragging(ImGuiMouseButton.getValue());
     }
 
     /*
@@ -7164,7 +7164,7 @@ public class ImGui extends IDLBase {
     public static native boolean internal_native_IsMouseDragging(int ImGuiMouseButton);
 
     public static ImVec2 GetMouseDragDelta(ImGuiMouseButton ImGuiMouseButton, float lock_threshold) {
-        int pointer = internal_native_GetMouseDragDelta((int) ImGuiMouseButton.getValue(), lock_threshold);
+        int pointer = internal_native_GetMouseDragDelta(ImGuiMouseButton.getValue(), lock_threshold);
         if (pointer == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_STATIC_GEN_16 == null)
@@ -7183,7 +7183,7 @@ public class ImGui extends IDLBase {
     public static native int internal_native_GetMouseDragDelta(int ImGuiMouseButton, float lock_threshold);
 
     public static ImVec2 GetMouseDragDelta(ImGuiMouseButton ImGuiMouseButton) {
-        int pointer = internal_native_GetMouseDragDelta((int) ImGuiMouseButton.getValue());
+        int pointer = internal_native_GetMouseDragDelta(ImGuiMouseButton.getValue());
         if (pointer == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_STATIC_GEN_17 == null)
@@ -7221,7 +7221,7 @@ public class ImGui extends IDLBase {
     public static native int internal_native_GetMouseDragDelta();
 
     public static void ResetMouseDragDelta(ImGuiMouseButton ImGuiMouseButton) {
-        internal_native_ResetMouseDragDelta((int) ImGuiMouseButton.getValue());
+        internal_native_ResetMouseDragDelta(ImGuiMouseButton.getValue());
     }
 
     /*

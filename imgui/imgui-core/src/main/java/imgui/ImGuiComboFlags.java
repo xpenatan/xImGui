@@ -5,8 +5,6 @@
  *-------------------------------------------------------*/
 package imgui;
 
-import java.util.Map;
-import java.util.HashMap;
 import com.github.xpenatan.jParser.idl.IDLEnum;
 
 public enum ImGuiComboFlags implements IDLEnum<ImGuiComboFlags> {
@@ -42,16 +40,6 @@ public enum ImGuiComboFlags implements IDLEnum<ImGuiComboFlags> {
 
     public ImGuiComboFlags getCustom() {
         return CUSTOM;
-    }
-
-    public static final Map<Integer, ImGuiComboFlags> MAP = new HashMap<>();
-
-    static {
-        for (ImGuiComboFlags value : values()) {
-            if (value != CUSTOM) {
-                MAP.put(value.value, value);
-            }
-        }
     }
 
     /*[-JNI;-NATIVE]

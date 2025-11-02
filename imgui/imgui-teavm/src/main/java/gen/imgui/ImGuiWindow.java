@@ -217,7 +217,13 @@ return jsObj.get_ID();
 
     public ImGuiWindowFlags get_Flags() {
         int value = internal_native_get_Flags(native_address);
-        return ImGuiWindowFlags.MAP.get(value);
+        ImGuiWindowFlags[] values = ImGuiWindowFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiWindowFlags enumVal = values[i];
+            if (enumVal != ImGuiWindowFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiWindowFlags.CUSTOM.setValue(value);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -229,7 +235,13 @@ return jsObj.get_Flags();
 
     public ImGuiWindowFlags get_FlagsPreviousFrame() {
         int value = internal_native_get_FlagsPreviousFrame(native_address);
-        return ImGuiWindowFlags.MAP.get(value);
+        ImGuiWindowFlags[] values = ImGuiWindowFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiWindowFlags enumVal = values[i];
+            if (enumVal != ImGuiWindowFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiWindowFlags.CUSTOM.setValue(value);
     }
 
     /*[-TEAVM;-NATIVE]

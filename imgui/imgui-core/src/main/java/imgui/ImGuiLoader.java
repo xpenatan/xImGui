@@ -7,8 +7,8 @@
 */
 package imgui;
 
-import com.github.xpenatan.jparser.loader.JParserLibraryLoader;
-import com.github.xpenatan.jparser.loader.JParserLibraryLoaderListener;
+import com.github.xpenatan.jParser.loader.JParserLibraryLoader;
+import com.github.xpenatan.jParser.loader.JParserLibraryLoaderListener;
 
 /**
  * @author xpenatan

@@ -188,11 +188,17 @@ public class TextEditor extends IDLBase {
       TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
       nativeObject->SetPalette((PaletteId)aValue);
     */
-    public static native void internal_native_SetPalette(long this_addr, long aValue);
+    public static native void internal_native_SetPalette(long this_addr, int aValue);
 
     public PaletteId GetPalette() {
         int value = internal_native_GetPalette(native_address);
-        return PaletteId.MAP.get(value);
+        PaletteId[] values = PaletteId.values();
+        for (int i = 0; i < values.length; i++) {
+            PaletteId enumVal = values[i];
+            if (enumVal != PaletteId.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return PaletteId.CUSTOM.setValue(value);
     }
 
     /*
@@ -211,11 +217,17 @@ public class TextEditor extends IDLBase {
       TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
       nativeObject->SetLanguageDefinition((LanguageDefinitionId)aValue);
     */
-    public static native void internal_native_SetLanguageDefinition(long this_addr, long aValue);
+    public static native void internal_native_SetLanguageDefinition(long this_addr, int aValue);
 
     public LanguageDefinitionId GetLanguageDefinition() {
         int value = internal_native_GetLanguageDefinition(native_address);
-        return LanguageDefinitionId.MAP.get(value);
+        LanguageDefinitionId[] values = LanguageDefinitionId.values();
+        for (int i = 0; i < values.length; i++) {
+            LanguageDefinitionId enumVal = values[i];
+            if (enumVal != LanguageDefinitionId.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return LanguageDefinitionId.CUSTOM.setValue(value);
     }
 
     /*
@@ -296,11 +308,17 @@ public class TextEditor extends IDLBase {
       [-JNI;-NATIVE]
       TextEditorWrapper::TextEditor::SetDefaultPalette((PaletteId)aValue);
     */
-    public static native void internal_native_SetDefaultPalette(long aValue);
+    public static native void internal_native_SetDefaultPalette(int aValue);
 
     public static PaletteId GetDefaultPalette() {
         int value = internal_native_GetDefaultPalette();
-        return PaletteId.MAP.get(value);
+        PaletteId[] values = PaletteId.values();
+        for (int i = 0; i < values.length; i++) {
+            PaletteId enumVal = values[i];
+            if (enumVal != PaletteId.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return PaletteId.CUSTOM.setValue(value);
     }
 
     /*
@@ -483,7 +501,7 @@ public class TextEditor extends IDLBase {
       TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
       nativeObject->SetViewAtLine((int)aLine, (SetViewAtLineMode)aMode);
     */
-    public static native void internal_native_SetViewAtLine(long this_addr, int aLine, long aMode);
+    public static native void internal_native_SetViewAtLine(long this_addr, int aLine, int aMode);
 
     public void Copy() {
         internal_native_Copy(native_address);

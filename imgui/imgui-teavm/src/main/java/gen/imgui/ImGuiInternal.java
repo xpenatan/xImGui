@@ -160,7 +160,7 @@ return imgui.getPointer(returnedJSObj);
     public static native int internal_native_FindWindowByName(String name);
 
     public static void FocusWindow(ImGuiWindow window, ImGuiFocusRequestFlags ImGuiFocusRequestFlags) {
-        internal_native_FocusWindow(window.native_address, (int) ImGuiFocusRequestFlags.getValue());
+        internal_native_FocusWindow(window.native_address, ImGuiFocusRequestFlags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
@@ -220,7 +220,7 @@ imgui.ImGuiInternal.prototype.ItemSize__1(bb_addr);
     public static native void internal_native_ItemSize__1(int bb_addr);
 
     public static boolean ItemAdd(ImRect bb, int id, ImRect nav_bb, ImGuiItemFlags ImGuiItemFlags) {
-        return internal_native_ItemAdd(bb.native_address, id, nav_bb.native_address, (int) ImGuiItemFlags.getValue());
+        return internal_native_ItemAdd(bb.native_address, id, nav_bb.native_address, ImGuiItemFlags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
@@ -253,7 +253,7 @@ return returnedJSObj;
     public static native boolean internal_native_ItemAdd(int bb_addr, int id);
 
     public static boolean ItemHoverable(ImRect bb, int id, ImGuiItemFlags ImGuiItemFlags) {
-        return internal_native_ItemHoverable(bb.native_address, id, (int) ImGuiItemFlags.getValue());
+        return internal_native_ItemHoverable(bb.native_address, id, ImGuiItemFlags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
@@ -264,7 +264,7 @@ return returnedJSObj;
     public static native boolean internal_native_ItemHoverable(int bb_addr, int id, int ImGuiItemFlags);
 
     public static boolean IsWindowContentHoverable(ImGuiWindow window, ImGuiHoveredFlags ImGuiHoveredFlags) {
-        return internal_native_IsWindowContentHoverable(window.native_address, (int) ImGuiHoveredFlags.getValue());
+        return internal_native_IsWindowContentHoverable(window.native_address, ImGuiHoveredFlags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
@@ -297,7 +297,7 @@ return returnedJSObj;
     public static native boolean internal_native_IsClippedEx(int bb_addr, int id);
 
     public static void SetLastItemData(int item_id, ImGuiItemFlags ImGuiItemFlags, ImGuiItemStatusFlags ImGuiItemStatusFlags, ImRect item_rect) {
-        internal_native_SetLastItemData(item_id, (int) ImGuiItemFlags.getValue(), (int) ImGuiItemStatusFlags.getValue(), item_rect.native_address);
+        internal_native_SetLastItemData(item_id, ImGuiItemFlags.getValue(), ImGuiItemStatusFlags.getValue(), item_rect.native_address);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -413,7 +413,7 @@ return imgui.getPointer(returnedJSObj);
     public static native int internal_native_DockBuilderGetCentralNode(int node_id);
 
     public static int DockBuilderAddNode(int node_id, ImGuiDockNodeFlags ImGuiDockNodeFlags) {
-        return internal_native_DockBuilderAddNode(node_id, (int) ImGuiDockNodeFlags.getValue());
+        return internal_native_DockBuilderAddNode(node_id, ImGuiDockNodeFlags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
@@ -506,7 +506,7 @@ imgui.ImGuiInternal.prototype.DockBuilderSetNodeSize(node_id, size_addr);
     public static native void internal_native_DockBuilderSetNodeSize(int node_id, int size_addr);
 
     public static int DockBuilderSplitNode(int node_id, ImGuiDir split_dir, float size_ratio_for_node_at_dir, IDLIntArray out_id_at_dir, IDLIntArray out_id_at_opposite_dir) {
-        return internal_native_DockBuilderSplitNode(node_id, (int) split_dir.getValue(), size_ratio_for_node_at_dir, out_id_at_dir.native_void_address, out_id_at_opposite_dir.native_void_address);
+        return internal_native_DockBuilderSplitNode(node_id, split_dir.getValue(), size_ratio_for_node_at_dir, out_id_at_dir.native_void_address, out_id_at_opposite_dir.native_void_address);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -537,7 +537,7 @@ imgui.ImGuiInternal.prototype.DockBuilderFinish(node_id);
     public static native void internal_native_DockBuilderFinish(int node_id);
 
     public static boolean BeginTableEx(String str_id, int id, int column, ImGuiTableFlags ImGuiTableFlags, ImVec2 outer_size, float inner_width) {
-        return internal_native_BeginTableEx(str_id, id, column, (int) ImGuiTableFlags.getValue(), outer_size.native_address, inner_width);
+        return internal_native_BeginTableEx(str_id, id, column, ImGuiTableFlags.getValue(), outer_size.native_address, inner_width);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -548,7 +548,7 @@ return returnedJSObj;
     public static native boolean internal_native_BeginTableEx(String str_id, int id, int column, int ImGuiTableFlags, int outer_size_addr, float inner_width);
 
     public static boolean BeginTableEx(String str_id, int id, int column, ImGuiTableFlags ImGuiTableFlags, ImVec2 outer_size) {
-        return internal_native_BeginTableEx(str_id, id, column, (int) ImGuiTableFlags.getValue(), outer_size.native_address);
+        return internal_native_BeginTableEx(str_id, id, column, ImGuiTableFlags.getValue(), outer_size.native_address);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -559,7 +559,7 @@ return returnedJSObj;
     public static native boolean internal_native_BeginTableEx(String str_id, int id, int column, int ImGuiTableFlags, int outer_size_addr);
 
     public static boolean BeginTableEx(String str_id, int id, int column, ImGuiTableFlags ImGuiTableFlags) {
-        return internal_native_BeginTableEx(str_id, id, column, (int) ImGuiTableFlags.getValue());
+        return internal_native_BeginTableEx(str_id, id, column, ImGuiTableFlags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
@@ -801,7 +801,7 @@ imgui.ImGuiInternal.prototype.RenderDragDropTargetRect(bb_addr, item_clip_rect_a
     public static native void internal_native_RenderDragDropTargetRect(int bb_addr, int item_clip_rect_addr);
 
     public static void RenderArrow(ImDrawList draw_list, ImVec2 pos, int col, ImGuiDir dir, float scale) {
-        internal_native_RenderArrow(draw_list.native_address, pos.native_address, col, (int) dir.getValue(), scale);
+        internal_native_RenderArrow(draw_list.native_address, pos.native_address, col, dir.getValue(), scale);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -811,7 +811,7 @@ imgui.ImGuiInternal.prototype.RenderArrow(draw_list_addr, pos_addr, col, dir, sc
     public static native void internal_native_RenderArrow(int draw_list_addr, int pos_addr, int col, int dir, float scale);
 
     public static void RenderArrow(ImDrawList draw_list, ImVec2 pos, int col, ImGuiDir dir) {
-        internal_native_RenderArrow(draw_list.native_address, pos.native_address, col, (int) dir.getValue());
+        internal_native_RenderArrow(draw_list.native_address, pos.native_address, col, dir.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
@@ -841,7 +841,7 @@ imgui.ImGuiInternal.prototype.RenderCheckMark(draw_list_addr, pos_addr, col, sz)
     public static native void internal_native_RenderCheckMark(int draw_list_addr, int pos_addr, int col, float sz);
 
     public static void RenderArrowPointingAt(ImDrawList draw_list, ImVec2 pos, ImVec2 half_sz, ImGuiDir direction, int col) {
-        internal_native_RenderArrowPointingAt(draw_list.native_address, pos.native_address, half_sz.native_address, (int) direction.getValue(), col);
+        internal_native_RenderArrowPointingAt(draw_list.native_address, pos.native_address, half_sz.native_address, direction.getValue(), col);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -882,7 +882,13 @@ imgui.ImGuiInternal.prototype.RenderRectFilledWithHole(draw_list_addr, outer_add
 
     public static ImDrawFlags CalcRoundingFlagsForRectInRect(ImRect r_in, ImRect r_outer, float threshold) {
         int value = internal_native_CalcRoundingFlagsForRectInRect(r_in.native_address, r_outer.native_address, threshold);
-        return ImDrawFlags.MAP.get(value);
+        ImDrawFlags[] values = ImDrawFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImDrawFlags enumVal = values[i];
+            if (enumVal != ImDrawFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImDrawFlags.CUSTOM.setValue(value);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -893,7 +899,7 @@ return returnedJSObj;
     public static native int internal_native_CalcRoundingFlagsForRectInRect(int r_in_addr, int r_outer_addr, float threshold);
 
     public static boolean ArrowButtonEx(String str_id, ImGuiDir dir, ImVec2 size_arg, ImGuiButtonFlags ImGuiButtonFlags) {
-        return internal_native_ArrowButtonEx(str_id, (int) dir.getValue(), size_arg.native_address, (int) ImGuiButtonFlags.getValue());
+        return internal_native_ArrowButtonEx(str_id, dir.getValue(), size_arg.native_address, ImGuiButtonFlags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
@@ -904,7 +910,7 @@ return returnedJSObj;
     public static native boolean internal_native_ArrowButtonEx(String str_id, int dir, int size_arg_addr, int ImGuiButtonFlags);
 
     public static boolean ArrowButtonEx(String str_id, ImGuiDir dir, ImVec2 size_arg) {
-        return internal_native_ArrowButtonEx(str_id, (int) dir.getValue(), size_arg.native_address);
+        return internal_native_ArrowButtonEx(str_id, dir.getValue(), size_arg.native_address);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -915,7 +921,7 @@ return returnedJSObj;
     public static native boolean internal_native_ArrowButtonEx(String str_id, int dir, int size_arg_addr);
 
     public static boolean ButtonBehavior(ImRect bb, int id, IDLBoolArray out_hovered, IDLBoolArray out_held, ImGuiButtonFlags ImGuiButtonFlags) {
-        return internal_native_ButtonBehavior(bb.native_address, id, out_hovered.native_void_address, out_held.native_void_address, (int) ImGuiButtonFlags.getValue());
+        return internal_native_ButtonBehavior(bb.native_address, id, out_hovered.native_void_address, out_held.native_void_address, ImGuiButtonFlags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
@@ -937,7 +943,7 @@ return returnedJSObj;
     public static native boolean internal_native_ButtonBehavior(int bb_addr, int id, int out_hovered_addr, int out_held_addr);
 
     public static boolean DragBehavior(int id, ImGuiDataType ImGuiDataType, IDLBase p_v, float v_speed, IDLBase p_min, IDLBase p_max, String format, ImGuiSliderFlags ImGuiSliderFlags) {
-        return internal_native_DragBehavior(id, (int) ImGuiDataType.getValue(), p_v.native_void_address, v_speed, p_min.native_void_address, p_max.native_void_address, format, (int) ImGuiSliderFlags.getValue());
+        return internal_native_DragBehavior(id, ImGuiDataType.getValue(), p_v.native_void_address, v_speed, p_min.native_void_address, p_max.native_void_address, format, ImGuiSliderFlags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
@@ -948,7 +954,7 @@ return returnedJSObj;
     public static native boolean internal_native_DragBehavior(int id, int ImGuiDataType, int p_v_addr, float v_speed, int p_min_addr, int p_max_addr, String format, int ImGuiSliderFlags);
 
     public static boolean SliderBehavior(ImRect bb, int id, ImGuiDataType ImGuiDataType, IDLBase p_v, IDLBase p_min, IDLBase p_max, String format, ImGuiSliderFlags ImGuiSliderFlags, ImRect out_grab_bb) {
-        return internal_native_SliderBehavior(bb.native_address, id, (int) ImGuiDataType.getValue(), p_v.native_void_address, p_min.native_void_address, p_max.native_void_address, format, (int) ImGuiSliderFlags.getValue(), out_grab_bb.native_address);
+        return internal_native_SliderBehavior(bb.native_address, id, ImGuiDataType.getValue(), p_v.native_void_address, p_min.native_void_address, p_max.native_void_address, format, ImGuiSliderFlags.getValue(), out_grab_bb.native_address);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -959,7 +965,7 @@ return returnedJSObj;
     public static native boolean internal_native_SliderBehavior(int bb_addr, int id, int ImGuiDataType, int p_v_addr, int p_min_addr, int p_max_addr, String format, int ImGuiSliderFlags, int out_grab_bb_addr);
 
     public static boolean SplitterBehavior(ImRect bb, int id, ImGuiAxis axis, IDLFloatArray size1, IDLFloatArray size2, float min_size1, float min_size2, float hover_extend, float hover_visibility_delay, int bg_col) {
-        return internal_native_SplitterBehavior(bb.native_address, id, (int) axis.getValue(), size1.native_void_address, size2.native_void_address, min_size1, min_size2, hover_extend, hover_visibility_delay, bg_col);
+        return internal_native_SplitterBehavior(bb.native_address, id, axis.getValue(), size1.native_void_address, size2.native_void_address, min_size1, min_size2, hover_extend, hover_visibility_delay, bg_col);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -970,7 +976,7 @@ return returnedJSObj;
     public static native boolean internal_native_SplitterBehavior(int bb_addr, int id, int axis, int size1_addr, int size2_addr, float min_size1, float min_size2, float hover_extend, float hover_visibility_delay, int bg_col);
 
     public static boolean SplitterBehavior(ImRect bb, int id, ImGuiAxis axis, IDLFloatArray size1, IDLFloatArray size2, float min_size1, float min_size2, float hover_extend, float hover_visibility_delay) {
-        return internal_native_SplitterBehavior(bb.native_address, id, (int) axis.getValue(), size1.native_void_address, size2.native_void_address, min_size1, min_size2, hover_extend, hover_visibility_delay);
+        return internal_native_SplitterBehavior(bb.native_address, id, axis.getValue(), size1.native_void_address, size2.native_void_address, min_size1, min_size2, hover_extend, hover_visibility_delay);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -981,7 +987,7 @@ return returnedJSObj;
     public static native boolean internal_native_SplitterBehavior(int bb_addr, int id, int axis, int size1_addr, int size2_addr, float min_size1, float min_size2, float hover_extend, float hover_visibility_delay);
 
     public static boolean SplitterBehavior(ImRect bb, int id, ImGuiAxis axis, IDLFloatArray size1, IDLFloatArray size2, float min_size1, float min_size2, float hover_extend) {
-        return internal_native_SplitterBehavior(bb.native_address, id, (int) axis.getValue(), size1.native_void_address, size2.native_void_address, min_size1, min_size2, hover_extend);
+        return internal_native_SplitterBehavior(bb.native_address, id, axis.getValue(), size1.native_void_address, size2.native_void_address, min_size1, min_size2, hover_extend);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -992,7 +998,7 @@ return returnedJSObj;
     public static native boolean internal_native_SplitterBehavior(int bb_addr, int id, int axis, int size1_addr, int size2_addr, float min_size1, float min_size2, float hover_extend);
 
     public static boolean SplitterBehavior(ImRect bb, int id, ImGuiAxis axis, IDLFloatArray size1, IDLFloatArray size2, float min_size1, float min_size2) {
-        return internal_native_SplitterBehavior(bb.native_address, id, (int) axis.getValue(), size1.native_void_address, size2.native_void_address, min_size1, min_size2);
+        return internal_native_SplitterBehavior(bb.native_address, id, axis.getValue(), size1.native_void_address, size2.native_void_address, min_size1, min_size2);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -1003,7 +1009,7 @@ return returnedJSObj;
     public static native boolean internal_native_SplitterBehavior(int bb_addr, int id, int axis, int size1_addr, int size2_addr, float min_size1, float min_size2);
 
     public static boolean TreeNodeBehavior(int id, ImGuiTreeNodeFlags ImGuiTreeNodeFlags, String label, String label_end) {
-        return internal_native_TreeNodeBehavior(id, (int) ImGuiTreeNodeFlags.getValue(), label, label_end);
+        return internal_native_TreeNodeBehavior(id, ImGuiTreeNodeFlags.getValue(), label, label_end);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -1014,7 +1020,7 @@ return returnedJSObj;
     public static native boolean internal_native_TreeNodeBehavior(int id, int ImGuiTreeNodeFlags, String label, String label_end);
 
     public static boolean TreeNodeBehavior(int id, ImGuiTreeNodeFlags ImGuiTreeNodeFlags, String label) {
-        return internal_native_TreeNodeBehavior(id, (int) ImGuiTreeNodeFlags.getValue(), label);
+        return internal_native_TreeNodeBehavior(id, ImGuiTreeNodeFlags.getValue(), label);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -1045,7 +1051,7 @@ imgui.ImGuiInternal.prototype.TreeNodeSetOpen(id, open);
     public static native void internal_native_TreeNodeSetOpen(int id, boolean open);
 
     public static boolean TreeNodeUpdateNextOpen(int id, ImGuiTreeNodeFlags ImGuiTreeNodeFlags) {
-        return internal_native_TreeNodeUpdateNextOpen(id, (int) ImGuiTreeNodeFlags.getValue());
+        return internal_native_TreeNodeUpdateNextOpen(id, ImGuiTreeNodeFlags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
@@ -1066,7 +1072,7 @@ imgui.ImGuiInternal.prototype.SetNextItemSelectionUserData(selection_user_data);
     public static native void internal_native_SetNextItemSelectionUserData(int selection_user_data);
 
     public static int GetKeyOwner(ImGuiKey ImGuiKey) {
-        return internal_native_GetKeyOwner((int) ImGuiKey.getValue());
+        return internal_native_GetKeyOwner(ImGuiKey.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
@@ -1077,7 +1083,7 @@ return returnedJSObj;
     public static native int internal_native_GetKeyOwner(int ImGuiKey);
 
     public static void SetKeyOwner(ImGuiKey ImGuiKey, int owner_id, ImGuiInputFlags ImGuiInputFlags) {
-        internal_native_SetKeyOwner((int) ImGuiKey.getValue(), owner_id, (int) ImGuiInputFlags.getValue());
+        internal_native_SetKeyOwner(ImGuiKey.getValue(), owner_id, ImGuiInputFlags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
@@ -1087,7 +1093,7 @@ imgui.ImGuiInternal.prototype.SetKeyOwner(ImGuiKey, owner_id, ImGuiInputFlags);
     public static native void internal_native_SetKeyOwner(int ImGuiKey, int owner_id, int ImGuiInputFlags);
 
     public static void SetKeyOwner(ImGuiKey ImGuiKey, int owner_id) {
-        internal_native_SetKeyOwner((int) ImGuiKey.getValue(), owner_id);
+        internal_native_SetKeyOwner(ImGuiKey.getValue(), owner_id);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -1097,7 +1103,7 @@ imgui.ImGuiInternal.prototype.SetKeyOwner(ImGuiKey, owner_id);
     public static native void internal_native_SetKeyOwner(int ImGuiKey, int owner_id);
 
     public static void SetItemKeyOwner(ImGuiKey ImGuiKey, ImGuiInputFlags ImGuiInputFlags) {
-        internal_native_SetItemKeyOwner((int) ImGuiKey.getValue(), (int) ImGuiInputFlags.getValue());
+        internal_native_SetItemKeyOwner(ImGuiKey.getValue(), ImGuiInputFlags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
@@ -1107,7 +1113,7 @@ imgui.ImGuiInternal.prototype.SetItemKeyOwner(ImGuiKey, ImGuiInputFlags);
     public static native void internal_native_SetItemKeyOwner(int ImGuiKey, int ImGuiInputFlags);
 
     public static void SetItemKeyOwner(ImGuiKey ImGuiKey) {
-        internal_native_SetItemKeyOwner((int) ImGuiKey.getValue());
+        internal_native_SetItemKeyOwner(ImGuiKey.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
@@ -1117,7 +1123,7 @@ imgui.ImGuiInternal.prototype.SetItemKeyOwner(ImGuiKey);
     public static native void internal_native_SetItemKeyOwner(int ImGuiKey);
 
     public static boolean TestKeyOwner(ImGuiKey ImGuiKey, int owner_id) {
-        return internal_native_TestKeyOwner((int) ImGuiKey.getValue(), owner_id);
+        return internal_native_TestKeyOwner(ImGuiKey.getValue(), owner_id);
     }
 
     /*[-TEAVM;-NATIVE]
@@ -1128,7 +1134,7 @@ return returnedJSObj;
     public static native boolean internal_native_TestKeyOwner(int ImGuiKey, int owner_id);
 
     public static void ScrollToItem(ImGuiScrollFlags flags) {
-        internal_native_ScrollToItem((int) flags.getValue());
+        internal_native_ScrollToItem(flags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
@@ -1148,7 +1154,7 @@ imgui.ImGuiInternal.prototype.ScrollToItem();
     public static native void internal_native_ScrollToItem();
 
     public static void ScrollToRect(ImGuiWindow window, ImRect rect, ImGuiScrollFlags flags) {
-        internal_native_ScrollToRect(window.native_address, rect.native_address, (int) flags.getValue());
+        internal_native_ScrollToRect(window.native_address, rect.native_address, flags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
@@ -1168,7 +1174,7 @@ imgui.ImGuiInternal.prototype.ScrollToRect(window_addr, rect_addr);
     public static native void internal_native_ScrollToRect(int window_addr, int rect_addr);
 
     public static ImVec2 ScrollToRectEx(ImGuiWindow window, ImRect rect, ImGuiScrollFlags flags) {
-        int pointer = internal_native_ScrollToRectEx(window.native_address, rect.native_address, (int) flags.getValue());
+        int pointer = internal_native_ScrollToRectEx(window.native_address, rect.native_address, flags.getValue());
         if (pointer == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_STATIC_GEN_1 == null)

@@ -5,8 +5,6 @@
  *-------------------------------------------------------*/
 package gen.imgui.extension.textedit;
 
-import java.util.Map;
-import java.util.HashMap;
 import com.github.xpenatan.jParser.idl.IDLEnum;
 
 public enum LanguageDefinitionId implements IDLEnum<LanguageDefinitionId> {
@@ -44,16 +42,6 @@ public enum LanguageDefinitionId implements IDLEnum<LanguageDefinitionId> {
 
     public LanguageDefinitionId getCustom() {
         return CUSTOM;
-    }
-
-    public static final Map<Integer, LanguageDefinitionId> MAP = new HashMap<>();
-
-    static {
-        for (LanguageDefinitionId value : values()) {
-            if (value != CUSTOM) {
-                MAP.put(value.value, value);
-            }
-        }
     }
 
     /*[-TEAVM;-NATIVE]

@@ -5,8 +5,6 @@
  *-------------------------------------------------------*/
 package imgui.extension.nodeeditor;
 
-import java.util.Map;
-import java.util.HashMap;
 import com.github.xpenatan.jParser.idl.IDLEnum;
 
 public enum StyleVar implements IDLEnum<StyleVar> {
@@ -61,16 +59,6 @@ public enum StyleVar implements IDLEnum<StyleVar> {
 
     public StyleVar getCustom() {
         return CUSTOM;
-    }
-
-    public static final Map<Integer, StyleVar> MAP = new HashMap<>();
-
-    static {
-        for (StyleVar value : values()) {
-            if (value != CUSTOM) {
-                MAP.put(value.value, value);
-            }
-        }
     }
 
     /*[-JNI;-NATIVE]

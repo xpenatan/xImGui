@@ -93,7 +93,7 @@ public class ImGuiIO extends IDLBase {
     public static native void internal_native_AddMousePosEvent(int this_addr, float x, float y);
 
     public void AddKeyEvent(ImGuiKey ImGuiKey, boolean down) {
-        internal_native_AddKeyEvent(native_address, (int) ImGuiKey.getValue(), down);
+        internal_native_AddKeyEvent(native_address, ImGuiKey.getValue(), down);
     }
 
     /*
@@ -382,7 +382,13 @@ public class ImGuiIO extends IDLBase {
 
     public ImGuiConfigFlags get_ConfigFlags() {
         int value = internal_native_get_ConfigFlags(native_address);
-        return ImGuiConfigFlags.MAP.get(value);
+        ImGuiConfigFlags[] values = ImGuiConfigFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiConfigFlags enumVal = values[i];
+            if (enumVal != ImGuiConfigFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiConfigFlags.CUSTOM.setValue(value);
     }
 
     /*
@@ -394,7 +400,7 @@ public class ImGuiIO extends IDLBase {
     public static native int internal_native_get_ConfigFlags(int this_addr);
 
     public void set_ConfigFlags(ImGuiConfigFlags ConfigFlags) {
-        internal_native_set_ConfigFlags(native_address, (int) ConfigFlags.getValue());
+        internal_native_set_ConfigFlags(native_address, ConfigFlags.getValue());
     }
 
     /*
