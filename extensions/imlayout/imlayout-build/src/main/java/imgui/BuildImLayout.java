@@ -1,15 +1,15 @@
 package imgui;
 
-import com.github.xpenatan.jparser.builder.BuildMultiTarget;
-import com.github.xpenatan.jparser.builder.targets.EmscriptenTarget;
-import com.github.xpenatan.jparser.builder.targets.LinuxTarget;
-import com.github.xpenatan.jparser.builder.targets.MacTarget;
-import com.github.xpenatan.jparser.builder.targets.WindowsMSVCTarget;
-import com.github.xpenatan.jparser.builder.tool.BuildToolListener;
-import com.github.xpenatan.jparser.builder.tool.BuildToolOptions;
-import com.github.xpenatan.jparser.builder.tool.BuilderTool;
-import com.github.xpenatan.jparser.core.JParser;
-import com.github.xpenatan.jparser.idl.IDLReader;
+import com.github.xpenatan.jParser.builder.BuildMultiTarget;
+import com.github.xpenatan.jParser.builder.targets.EmscriptenTarget;
+import com.github.xpenatan.jParser.builder.targets.LinuxTarget;
+import com.github.xpenatan.jParser.builder.targets.MacTarget;
+import com.github.xpenatan.jParser.builder.targets.WindowsMSVCTarget;
+import com.github.xpenatan.jParser.builder.tool.BuildToolListener;
+import com.github.xpenatan.jParser.builder.tool.BuildToolOptions;
+import com.github.xpenatan.jParser.builder.tool.BuilderTool;
+import com.github.xpenatan.jParser.core.JParser;
+import com.github.xpenatan.jParser.idl.IDLReader;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
