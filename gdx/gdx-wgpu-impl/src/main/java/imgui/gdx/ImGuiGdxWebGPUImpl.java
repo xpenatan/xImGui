@@ -117,6 +117,7 @@ import imgui.idl.helper.IDLUtils;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
+import java.util.Locale;
 import static com.github.xpenatan.webgpu.WGPUTextureFormat.RGBA8Unorm;
 
 public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
@@ -514,6 +515,8 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
     }
 
     private void createImageBindGroup(WGPUBindGroupLayout layout, WGPUTextureView texture, WGPUBindGroup bindGroup) {
+
+        boolean valid = texture.isValid();
         WGPUVectorBindGroupEntry entries = WGPUVectorBindGroupEntry.obtain();
         {
             WGPUBindGroupEntry texEntry = WGPUBindGroupEntry.obtain();
@@ -781,17 +784,10 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
                 ImDrawCmd pcmd = cmdBuffer.getData(cmd_i);
                 ImVec4 clipRect = pcmd.get_ClipRect();
 
-//                IDLInt temp = new IDLInt();
-//                temp.set(326201136);
-//                int tex_id_hash = ImGuiInternal.ImHashData(temp, Integer.BYTES, 0);
-//                storage.SetInt(100, 200);
-//                int val1 = storage.GetInt(100);
-//                System.out.println("tex_id_hash: " + tex_id_hash);
-//                System.out.println("Val1: " + val1);
-
                 ImTextureIDRef imTextureIDRef = pcmd.GetTexID();
-                tmp_textureView.native_copy(imTextureIDRef);
-                int tex_id_hash = ImGuiInternal.ImHashData(tmp_textureView, Integer.BYTES, 0);
+                long get = imTextureIDRef.Get();
+                int tex_id_hash = ImGuiInternal.ImHashData(IDLTemp.Long_1(get), Long.BYTES, 0); // Pass ImGui long memory to create hash
+                tmp_textureView.native_setAddress(get);
                 IDLBase voidPtr = storage.GetVoidPtr(tex_id_hash);
                 temp_bindGroup.native_copy(voidPtr);
                 if(temp_bindGroup.native_isNULL()) {

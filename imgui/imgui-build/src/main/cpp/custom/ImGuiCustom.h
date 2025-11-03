@@ -1201,22 +1201,13 @@ class ImTextureIDRef {
         ImTextureID value;
 
     public:
-        ImTextureIDRef(ImTextureID v = 0) : value(v) {}
-
-        operator ImTextureID() const {
-            return value;
-        }
-
-        ImTextureIDRef& operator=(ImTextureID v) {
-            value = v;
-            return *this;
-        }
-
-        operator void*() const {
-            return reinterpret_cast<void*>(static_cast<uintptr_t>(value));
-        }
-
-        ImTextureID Get() const { return value; }
+    ImTextureIDRef(ImTextureID v = 0) : value(v) {}
+    ImTextureIDRef& operator=(ImTextureID v) { value = v; return *this; }
+    operator ImTextureID() const { return value; }
+    operator ImTextureID* () { return &value; }
+    operator const ImTextureID* () const { return &value; }
+    operator void* () const { return reinterpret_cast<void*>(const_cast<ImTextureID*>(&value)); }
+    ImTextureID Get() const { return value; }
 };
 
 
@@ -1496,63 +1487,3 @@ class ImTemp {
         }
 };
 
-class ImHelper {
-    public:
-//        static void setClipboardTextFunction(ImGuiIO * io, ClipboardTextFunction * clipboardFunction) {
-//            auto pointer = reinterpret_cast<std::uintptr_t>(clipboardFunction);
-//            io->ClipboardUserData = (void*)pointer;
-//            io->SetClipboardTextFn = &ImGui_Impl_SetClipboardText;
-//            io->GetClipboardTextFn = &ImGui_Impl_GetClipboardText;
-//        }
-//
-//        static void memcpyIdx(void* destination, ImDrawList * drawList, int num) {
-//            memcpy(destination, drawList->IdxBuffer.Data, num);
-//        }
-//
-//        static void memcpyVtx(void* destination, ImDrawList * drawList, int num) {
-//            memcpy(destination, drawList->VtxBuffer.Data, num);
-//        }
-//
-//        static void memcpyFont32(ImFontAtlas* fontAtlas, IDLByteArray* byteArray, int* width, int* height) {
-//            unsigned char* pixels;
-//            fontAtlas->GetTexDataAsRGBA32(&pixels, width, height);
-//            int size = (*width) * (*height) * 4;
-//            byteArray->resize(size);
-//            for(int i = 0; i < size; i++) {
-//                byteArray->setValue(i, pixels[i]);
-//            }
-//        }
-//
-//        static void memcpyFont8(ImFontAtlas* fontAtlas, IDLByteArray* byteArray, int* width, int* height) {
-//            unsigned char* pixels;
-//            fontAtlas->GetTexDataAsAlpha8(&pixels, width, height);
-//            int size = (*width) * (*height);
-//            byteArray->resize(size);
-//            for(int i = 0; i < size; i++) {
-//                byteArray->setValue(i, pixels[i]);
-//            }
-//        }
-//
-//        static void updateFontName(ImFont* font, const char* name, float size_pixels) {
-//            ImFontConfig* fontConfig = const_cast<ImFontConfig*>(font->ConfigData);
-//            ImFormatString(fontConfig->Name, IM_ARRAYSIZE(fontConfig->Name), "%s, %.0fpx", name, size_pixels);
-//        }
-//
-//        static intptr_t getTextureId(ImDrawCmd* nativeObject) {
-//            return (intptr_t)nativeObject->TextureId;
-//        }
-//
-//        static void setIniFilename(ImGuiIO * io, char* fileName) {
-//            // not possible to change a readonly attribute in webidl file.
-//            io->IniFilename = fileName;
-//        }
-//
-//        static void removeIniFilename(ImGuiIO * io) {
-//            // not possible to change a readonly attribute in webidl file.
-//            ImGui::GetIO().IniFilename = NULL;
-//        }
-//
-//        static int getImGuiPayloadData(ImGuiPayload * payload) {
-//            return *(const int*)payload->Data;
-//        }
-};
