@@ -96,7 +96,7 @@ include(":examples:imgui-node-editor:teavm")
 //includeBuild("E:\\Dev\\Projects\\java\\gdx-webgpu") {
 //    dependencySubstitution {
 //        substitute(module("io.github.monstroussoftware.gdx-webgpu:gdx-webgpu")).using(project(":gdx-webgpu"))
-//        substitute(module("io.github.monstroussoftware.gdx-webgpu:gdx-desktop-webgpu")).using(project(":backends:gdx-desktop-webgpu"))
-//        substitute(module("io.github.monstroussoftware.gdx-webgpu:gdx-teavm-webgpu")).using(project(":backends:gdx-teavm-webgpu"))
+//        substitute(module("io.github.monstroussoftware.gdx-webgpu:backend-desktop")).using(project(":backends:backend-desktop"))
+//        substitute(module("io.github.monstroussoftware.gdx-webgpu:backend-teavm")).using(project(":backends:backend-teavm"))
 //    }
 //}

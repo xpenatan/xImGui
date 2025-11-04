@@ -22,7 +22,7 @@ dependencies {
     }
 
     implementation("com.badlogicgames.gdx:gdx-platform:${LibExt.gdxVersion}:natives-desktop")
-    implementation("io.github.monstroussoftware.gdx-webgpu:gdx-desktop-webgpu:${LibExt.gdxWebGPUVersion}")
+    implementation("io.github.monstroussoftware.gdx-webgpu:backend-desktop:${LibExt.gdxWebGPUVersion}")
 }
 
 val mainClassName = "imgui.example.basic.Main"
