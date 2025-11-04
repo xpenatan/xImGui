@@ -278,8 +278,8 @@ public class IDLTemp extends IDLBase {
     @org.teavm.jso.JSBody(params = {"value"}, script = "var returnedJSObj = imgui.IDLTemp.prototype.Int_4__0(value);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_Int_4__0(int value);
 
-    public static IDLLong Long_1(int value) {
-        int pointer = internal_native_Long_1__0(value);
+    public static IDLLong Long_1(long value) {
+        int pointer = internal_native_Long_1__0((int) value);
         if (pointer == 0)
             return IDLLong.NULL;
         if (IDLLong_TEMP_STATIC_GEN_0 == null)
@@ -297,8 +297,8 @@ public class IDLTemp extends IDLBase {
     @org.teavm.jso.JSBody(params = {"value"}, script = "var returnedJSObj = imgui.IDLTemp.prototype.Long_1__0(value);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_Long_1__0(int value);
 
-    public static IDLLong Long_2(int value) {
-        int pointer = internal_native_Long_2__0(value);
+    public static IDLLong Long_2(long value) {
+        int pointer = internal_native_Long_2__0((int) value);
         if (pointer == 0)
             return IDLLong.NULL;
         if (IDLLong_TEMP_STATIC_GEN_1 == null)
@@ -316,8 +316,8 @@ public class IDLTemp extends IDLBase {
     @org.teavm.jso.JSBody(params = {"value"}, script = "var returnedJSObj = imgui.IDLTemp.prototype.Long_2__0(value);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_Long_2__0(int value);
 
-    public static IDLLong Long_3(int value) {
-        int pointer = internal_native_Long_3__0(value);
+    public static IDLLong Long_3(long value) {
+        int pointer = internal_native_Long_3__0((int) value);
         if (pointer == 0)
             return IDLLong.NULL;
         if (IDLLong_TEMP_STATIC_GEN_2 == null)
@@ -335,8 +335,8 @@ public class IDLTemp extends IDLBase {
     @org.teavm.jso.JSBody(params = {"value"}, script = "var returnedJSObj = imgui.IDLTemp.prototype.Long_3__0(value);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_Long_3__0(int value);
 
-    public static IDLLong Long_4(int value) {
-        int pointer = internal_native_Long_4__0(value);
+    public static IDLLong Long_4(long value) {
+        int pointer = internal_native_Long_4__0((int) value);
         if (pointer == 0)
             return IDLLong.NULL;
         if (IDLLong_TEMP_STATIC_GEN_3 == null)

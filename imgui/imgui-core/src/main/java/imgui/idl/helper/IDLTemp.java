@@ -253,7 +253,7 @@ public class IDLTemp extends IDLBase {
     */
     public static native long internal_native_Int_4__0(int value);
 
-    public static IDLLong Long_1(int value) {
+    public static IDLLong Long_1(long value) {
         long pointer = internal_native_Long_1__0(value);
         if (pointer == 0)
             return IDLLong.NULL;
@@ -265,11 +265,11 @@ public class IDLTemp extends IDLBase {
 
     /*
       [-JNI;-NATIVE]
-      return (jlong)IDLTemp::Long_1((int)value);
+      return (jlong)IDLTemp::Long_1(value);
     */
-    public static native long internal_native_Long_1__0(int value);
+    public static native long internal_native_Long_1__0(long value);
 
-    public static IDLLong Long_2(int value) {
+    public static IDLLong Long_2(long value) {
         long pointer = internal_native_Long_2__0(value);
         if (pointer == 0)
             return IDLLong.NULL;
@@ -281,11 +281,11 @@ public class IDLTemp extends IDLBase {
 
     /*
       [-JNI;-NATIVE]
-      return (jlong)IDLTemp::Long_2((int)value);
+      return (jlong)IDLTemp::Long_2(value);
     */
-    public static native long internal_native_Long_2__0(int value);
+    public static native long internal_native_Long_2__0(long value);
 
-    public static IDLLong Long_3(int value) {
+    public static IDLLong Long_3(long value) {
         long pointer = internal_native_Long_3__0(value);
         if (pointer == 0)
             return IDLLong.NULL;
@@ -297,11 +297,11 @@ public class IDLTemp extends IDLBase {
 
     /*
       [-JNI;-NATIVE]
-      return (jlong)IDLTemp::Long_3((int)value);
+      return (jlong)IDLTemp::Long_3(value);
     */
-    public static native long internal_native_Long_3__0(int value);
+    public static native long internal_native_Long_3__0(long value);
 
-    public static IDLLong Long_4(int value) {
+    public static IDLLong Long_4(long value) {
         long pointer = internal_native_Long_4__0(value);
         if (pointer == 0)
             return IDLLong.NULL;
@@ -313,9 +313,9 @@ public class IDLTemp extends IDLBase {
 
     /*
       [-JNI;-NATIVE]
-      return (jlong)IDLTemp::Long_4((int)value);
+      return (jlong)IDLTemp::Long_4(value);
     */
-    public static native long internal_native_Long_4__0(int value);
+    public static native long internal_native_Long_4__0(long value);
 
     public static IDLFloat Float_1(float value) {
         long pointer = internal_native_Float_1__0(value);
