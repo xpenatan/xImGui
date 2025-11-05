@@ -14,13 +14,13 @@ object LibExt {
     const val java11Target = "11"
 
     const val gdxVersion = "1.14.0"
-    const val teaVMVersion = "0.12.3"
-    const val gdxTeaVMVersion = "1.3.3"
-    const val gdxWebGPUVersion = "update-webgpu-SNAPSHOT"
-    const val jParserVersion = "-SNAPSHOT"
+    const val teaVMVersion = "0.13.0"
+    const val gdxTeaVMVersion = "1.4.0"
+    const val gdxWebGPUVersion = "0.7"
+    const val jParserVersion = "1.0.0-b26"
     const val jUnitVersion = "4.12"
 
-    const val useRepoLibs = false
+    const val useRepoLibs = true
 }
 
 private fun getVersion(): String {
