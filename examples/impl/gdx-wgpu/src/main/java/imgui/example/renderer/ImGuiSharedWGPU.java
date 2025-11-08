@@ -7,7 +7,7 @@ import com.monstrous.gdx.webgpu.graphics.WgTexture;
 import com.monstrous.gdx.webgpu.graphics.utils.WgScreenUtils;
 import imgui.ImGuiImpl;
 import imgui.gdx.ImGuiGdxInputMultiplexer;
-import imgui.gdx.ImGuiGdxWebGPUImpl;
+import imgui.gdx.ImGuiGdxWGPUImpl;
 
 public class ImGuiSharedWGPU implements ImGuiShared.ImGuiSharedInstance {
     @Override
@@ -17,7 +17,7 @@ public class ImGuiSharedWGPU implements ImGuiShared.ImGuiSharedInstance {
 
     @Override
     public ImGuiImpl createImpl() {
-        return new ImGuiGdxWebGPUImpl();
+        return new ImGuiGdxWGPUImpl();
     }
 
     @Override

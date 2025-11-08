@@ -2,7 +2,6 @@ package imgui.gdx;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
-import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.utils.BufferUtils;
 import com.github.xpenatan.jParser.idl.IDLBase;
 import com.github.xpenatan.webgpu.WGPUAddressMode;
@@ -89,12 +88,10 @@ import imgui.ImTemp;
 import imgui.ImTextureIDRef;
 import imgui.ImVectorImGuiStoragePair;
 import imgui.enums.ImGuiBackendFlags;
-import imgui.idl.helper.IDLLong;
 import imgui.idl.helper.IDLTemp;
 import imgui.ImDrawCmd;
 import imgui.ImDrawData;
 import imgui.ImDrawList;
-import imgui.ImFontAtlas;
 import imgui.ImGui;
 import imgui.ImGuiIO;
 import imgui.ImGuiImpl;
@@ -108,19 +105,14 @@ import imgui.ImVectorImDrawIdx;
 import imgui.ImVectorImDrawListPtr;
 import imgui.ImVectorImDrawVert;
 import imgui.ImVectorImTextureDataPtr;
-import imgui.ImVectorImTextureRect;
 import imgui.enums.ImTextureStatus;
-import imgui.idl.helper.IDLByteArray;
-import imgui.idl.helper.IDLInt;
 import imgui.idl.helper.IDLString;
 import imgui.idl.helper.IDLUtils;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
-import java.util.Locale;
-import static com.github.xpenatan.webgpu.WGPUTextureFormat.RGBA8Unorm;
 
-public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
+public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
 
     private static int VTX_BUFFER_SIZE = 8 + 8 + 4;// = ImVec2 + ImVec2 + ImU32;
     private final static int IDX_BUFFER_SIZE = 2; // short
@@ -161,17 +153,17 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
 
     private WGPUBindGroup temp_bindGroup = WGPUBindGroup.native_new();
 
-    public ImGuiGdxWebGPUImpl() {
+    public ImGuiGdxWGPUImpl() {
         WgGraphics gfx = (WgGraphics) Gdx.graphics;
         WebGPUContext webgpu = gfx.getContext();
         setup(Gdx.files.local("imgui.ini"), webgpu.device, webgpu.surfaceFormat);
     }
 
-    public ImGuiGdxWebGPUImpl(WGPUDevice device, WGPUTextureFormat renderFormat) {
+    public ImGuiGdxWGPUImpl(WGPUDevice device, WGPUTextureFormat renderFormat) {
         setup(Gdx.files.local("imgui.ini"), device, renderFormat);
     }
 
-    public ImGuiGdxWebGPUImpl(FileHandle imgui, WGPUDevice device, WGPUTextureFormat renderFormat) {
+    public ImGuiGdxWGPUImpl(FileHandle imgui, WGPUDevice device, WGPUTextureFormat renderFormat) {
         setup(imgui, device, renderFormat);
     }
 
@@ -549,6 +541,7 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
 
     @Override
     public void dispose() {
+        super.dispose();
         deleteTexture();
         if(vertexByteBuffer != null) {
             BufferUtils.disposeUnsafeByteBuffer(vertexByteBuffer);

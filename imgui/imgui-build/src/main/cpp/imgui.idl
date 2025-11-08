@@ -6,7 +6,6 @@ interface ImTextureIDRef {
     unsigned long long Get();
 };
 
-//
 //interface ImHelper {
 //    void setClipboardTextFunction(ImGuiIO io, ClipboardTextFunction clipboardFunction);
 //    void memcpyIdx(any destination, ImDrawList drawList, long num);
@@ -1844,8 +1843,7 @@ interface ImGuiPlatformIO {
 };
 
 interface ClipboardTextFunction {
-    void onGetClipboardText(IDLString strOut);
-    void onSetClipboardText(IDLString text);
+    static void setClipboardTextFunction(ImGuiPlatformIO io, ClipboardTextFunction clipboardFunction);
 };
 
 [JSImplementation="ClipboardTextFunction"]

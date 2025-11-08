@@ -1177,6 +1177,29 @@ class ClipboardTextFunction
 
         virtual void onGetClipboardText(std::string* strOut) = 0;
         virtual void onSetClipboardText(std::string* text) = 0;
+
+        static void setClipboardTextFunction(ImGuiPlatformIO* platform_io, ClipboardTextFunction * clipboardFunction) {
+            auto pointer = reinterpret_cast<std::uintptr_t>(clipboardFunction);
+            platform_io->Platform_ClipboardUserData = (void*)pointer;
+            platform_io->Platform_SetClipboardTextFn = [](ImGuiContext* context, const char* text) {
+                void* user_data = context->PlatformIO.Platform_ClipboardUserData;
+                auto addr = reinterpret_cast<std::uintptr_t>(user_data);
+                ClipboardTextFunction* clipboardFunction = reinterpret_cast<ClipboardTextFunction*>(addr);
+                std::string& str = clipboardFunction->text;
+                str = text;
+                clipboardFunction->onSetClipboardText(&str);
+
+            };
+            platform_io->Platform_GetClipboardTextFn = [](ImGuiContext* context) {
+                void* user_data = context->PlatformIO.Platform_ClipboardUserData;
+                auto addr = reinterpret_cast<std::uintptr_t>(user_data);
+                ClipboardTextFunction* clipboardFunction = reinterpret_cast<ClipboardTextFunction*>(addr);
+                std::string& str = clipboardFunction->text;
+                str.clear();
+                clipboardFunction->onGetClipboardText(&str);
+                return str.c_str();
+            };
+        }
 };
 
 static const char* ImGui_Impl_GetClipboardText(void* user_data) {
@@ -1487,3 +1510,30 @@ class ImTemp {
         }
 };
 
+
+//class ImHelper {
+//    public:
+//        static void setClipboardTextFunction(ImGuiPlatformIO* platform_io, ClipboardTextFunction * clipboardFunction) {
+//            auto pointer = reinterpret_cast<std::uintptr_t>(clipboardFunction);
+//            platform_io->Platform_ClipboardUserData = (void*)pointer;
+//            platform_io->Platform_SetClipboardTextFn = [](ImGuiContext* context, const char* text) {
+//                void* user_data = context->PlatformIO.Platform_ClipboardUserData;
+//                auto addr = reinterpret_cast<std::uintptr_t>(user_data);
+//                ClipboardTextFunction* clipboardFunction = reinterpret_cast<ClipboardTextFunction*>(addr);
+//                std::string& str = clipboardFunction->text;
+//                str = text;
+//                clipboardFunction->onSetClipboardText(&str);
+//
+//            };
+//            platform_io->Platform_GetClipboardTextFn = [](ImGuiContext* context) {
+//                void* user_data = context->PlatformIO.Platform_ClipboardUserData;
+//                auto addr = reinterpret_cast<std::uintptr_t>(user_data);
+//                ClipboardTextFunction* clipboardFunction = reinterpret_cast<ClipboardTextFunction*>(addr);
+//                std::string& str = clipboardFunction->text;
+//                str.clear();
+//                clipboardFunction->onGetClipboardText(&str);
+//                return str.c_str();
+//            };
+//        }
+//
+//};

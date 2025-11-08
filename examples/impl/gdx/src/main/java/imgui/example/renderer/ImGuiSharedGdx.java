@@ -6,7 +6,7 @@ import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import imgui.ImGuiImpl;
-import imgui.gdx.ImGuiGdxImpl;
+import imgui.gdx.ImGuiGdxGLImpl;
 import imgui.gdx.ImGuiGdxInputMultiplexer;
 
 public class ImGuiSharedGdx implements ImGuiShared.ImGuiSharedInstance {
@@ -18,7 +18,7 @@ public class ImGuiSharedGdx implements ImGuiShared.ImGuiSharedInstance {
 
     @Override
     public ImGuiImpl createImpl() {
-        return new ImGuiGdxImpl();
+        return new ImGuiGdxGLImpl();
     }
 
     @Override

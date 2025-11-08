@@ -44,7 +44,7 @@ import java.nio.IntBuffer;
 /**
  * @author xpenatan
  */
-public class ImGuiGdxImpl implements ImGuiImpl {
+public class ImGuiGdxGLImpl extends ImGuiGdxImpl {
 
     private final static int VTX_BUFFER_SIZE = 8 + 8 + 4;// = ImVec2 + ImVec2 + ImU32;
     private final static int IDX_BUFFER_SIZE = 2; // short
@@ -73,11 +73,11 @@ public class ImGuiGdxImpl implements ImGuiImpl {
     private ByteBuffer tempBuffer;
     private IntBuffer tempTextureBuffer;
 
-    public ImGuiGdxImpl() {
+    public ImGuiGdxGLImpl() {
         this(Gdx.files.local("imgui.ini"));
     }
 
-    public ImGuiGdxImpl(FileHandle imgui) {
+    public ImGuiGdxGLImpl(FileHandle imgui) {
         this.imgui = imgui;
         tempBuffer = BufferUtils.newUnsafeByteBuffer(4);
         tempTextureBuffer = tempBuffer.asIntBuffer();
@@ -119,21 +119,6 @@ public class ImGuiGdxImpl implements ImGuiImpl {
                 }
             }
         }
-
-        //TODO IMPL
-//        ImGui.GetIO().SetClipboardTextFunction(new ClipboardTextFunction() {
-//            @Override
-//            public void onGetClipboardText(IDLString strOut) {
-//                String contents = Gdx.app.getClipboard().getContents();
-//                strOut.append(contents);
-//            }
-//
-//            @Override
-//            public void onSetClipboardText(IDLString text) {
-//                String contents = text.c_str();
-//                Gdx.app.getClipboard().setContents(contents);
-//            }
-//        });
     }
 
     private void updateTexture(ImTextureData tex) {
@@ -528,7 +513,9 @@ public class ImGuiGdxImpl implements ImGuiImpl {
         }
     }
 
+    @Override
     public void dispose() {
+        super.dispose();
         deleteTexture();
         BufferUtils.disposeUnsafeByteBuffer(tempBuffer);
 
