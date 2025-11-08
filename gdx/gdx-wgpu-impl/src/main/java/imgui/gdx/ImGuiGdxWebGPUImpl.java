@@ -692,8 +692,10 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
                 int vtxByteSize = vtxBuffer.size() * VTX_BUFFER_SIZE;
                 int idxByteSize = idxBuffer.size() * IDX_BUFFER_SIZE;
 
-                vtxBuffer.getByteBuffer(vtxByteSize, vtxOffset, vertexByteBuffer);
-                idxBuffer.getByteBuffer(idxByteSize, idxOffset, indexByteBuffer);
+                IDLBase vtxData = vtxBuffer.get_Data();
+                IDLBase idxData = idxBuffer.get_Data();
+                IDLUtils.copyToByteBuffer(vtxData, vertexByteBuffer, vtxOffset, vtxByteSize);
+                IDLUtils.copyToByteBuffer(idxData, indexByteBuffer, idxOffset, idxByteSize);
 
                 vtxOffset += vtxByteSize;
                 idxOffset += idxByteSize;
@@ -920,7 +922,7 @@ public class ImGuiGdxWebGPUImpl implements ImGuiImpl {
             int bufferSize = width * upload_h * bytesPerPixel;
             ByteBuffer buffer = BufferUtils.newUnsafeByteBuffer(bufferSize);
             buffer.order(ByteOrder.LITTLE_ENDIAN);
-            IDLBase pixels = tex.GetPixels();
+            IDLBase pixels = tex.GetPixelsAt(upload_x, upload_y);
             IDLUtils.copyToByteBuffer(pixels, buffer,0 , bufferSize);
             device.getQueue().writeTexture(dst_view, buffer, bufferSize, layout, write_size);
             tex.SetStatus(ImTextureStatus.OK);

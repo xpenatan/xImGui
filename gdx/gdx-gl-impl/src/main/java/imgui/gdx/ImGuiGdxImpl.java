@@ -3,6 +3,7 @@ package imgui.gdx;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.GL30;
 import com.badlogic.gdx.graphics.VertexAttribute;
 import com.badlogic.gdx.graphics.VertexAttributes;
 import com.badlogic.gdx.graphics.VertexAttributes.Usage;
@@ -32,15 +33,13 @@ import imgui.ImVectorImDrawVert;
 import imgui.ImVectorImTextureDataPtr;
 import imgui.ImVectorImTextureRect;
 import imgui.enums.ImGuiBackendFlags;
+import imgui.enums.ImTextureFormat;
 import imgui.enums.ImTextureStatus;
-import imgui.idl.helper.IDLByteArray;
-import imgui.idl.helper.IDLInt;
 import imgui.idl.helper.IDLString;
 import imgui.idl.helper.IDLUtils;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.IntBuffer;
-import static com.badlogic.gdx.net.HttpResponseHeader.Status;
 
 /**
  * @author xpenatan
@@ -49,6 +48,8 @@ public class ImGuiGdxImpl implements ImGuiImpl {
 
     private final static int VTX_BUFFER_SIZE = 8 + 8 + 4;// = ImVec2 + ImVec2 + ImU32;
     private final static int IDX_BUFFER_SIZE = 2; // short
+
+    private boolean optionA = true; // A copy to a contiguous buffer; B upload line by line
 
     private VertexAttributes vertexAttributes;
 
@@ -63,7 +64,6 @@ public class ImGuiGdxImpl implements ImGuiImpl {
 
     int glVersion;
     boolean isGL30 = false;
-    boolean isGL32 = false;
 
     private FileHandle imgui;
 
@@ -83,7 +83,7 @@ public class ImGuiGdxImpl implements ImGuiImpl {
         tempTextureBuffer = tempBuffer.asIntBuffer();
 
         ImGuiIO io = ImGui.GetIO();
-        io.set_BackendFlags(ImGuiBackendFlags.RendererHasTextures.or(ImGuiBackendFlags.HasMouseCursors));
+        io.set_BackendFlags(ImGuiBackendFlags.RendererHasVtxOffset.or(ImGuiBackendFlags.RendererHasTextures).or(ImGuiBackendFlags.HasMouseCursors));
 
         vertexAttributes = new VertexAttributes(
                 new VertexAttribute(Usage.Position, 2, GL20.GL_FLOAT, false, "Position"),
@@ -94,7 +94,6 @@ public class ImGuiGdxImpl implements ImGuiImpl {
         GLVersion glVersionObj = Gdx.graphics.getGLVersion();
         glVersion = glVersionObj.getMajorVersion() * 100 + glVersionObj.getMinorVersion() * 10;
         isGL30 = Gdx.graphics.isGL30Available();
-        isGL32 = Gdx.graphics.isGL32Available();
 
         String vertex = getVertexShaderGlsl130();
         String fragment = getFragmentShaderGlsl130();
@@ -139,63 +138,99 @@ public class ImGuiGdxImpl implements ImGuiImpl {
 
     private void updateTexture(ImTextureData tex) {
         ImTextureStatus status = tex.get_Status();
+        ImTextureFormat format = tex.get_Format();
+        int sizeBytes = tex.GetSizeInBytes();
 
         if(status == ImTextureStatus.WantCreate || status == ImTextureStatus.WantUpdates) {
             Gdx.gl.glPixelStorei(GL20.GL_UNPACK_ALIGNMENT, 1);
         }
 
         if (status == ImTextureStatus.WantCreate) {
-            int sizeBytes = tex.GetSizeInBytes();
-            ByteBuffer buffer = BufferUtils.newUnsafeByteBuffer(sizeBytes);
-            buffer.order(ByteOrder.LITTLE_ENDIAN);
-            IDLBase pixels = tex.GetPixels();
-            IDLUtils.copyToByteBuffer(pixels, buffer,0 , sizeBytes);
+            int bytesPerPixel = tex.get_BytesPerPixel();
+            ByteBuffer pixels = BufferUtils.newUnsafeByteBuffer(sizeBytes);
+            pixels.order(ByteOrder.LITTLE_ENDIAN);
+            IDLBase pixelsBuff = tex.GetPixels();
+            IDLUtils.copyToByteBuffer(pixelsBuff, pixels,0 , sizeBytes);
             int width = tex.get_Width();
             int height = tex.get_Height();
-            int g_Texture = Gdx.gl.glGenTexture();;
-
+            tempTextureBuffer.put(0, 0);
             Gdx.gl.glGetIntegerv(GL20.GL_ACTIVE_TEXTURE, tempTextureBuffer);
             int last_texture = tempTextureBuffer.get(0);
+            int g_Texture = Gdx.gl.glGenTexture();
             Gdx.gl.glBindTexture(GL20.GL_TEXTURE_2D, g_Texture);
             Gdx.gl.glTexParameteri(GL20.GL_TEXTURE_2D, GL20.GL_TEXTURE_MIN_FILTER, GL20.GL_LINEAR);
             Gdx.gl.glTexParameteri(GL20.GL_TEXTURE_2D, GL20.GL_TEXTURE_MAG_FILTER, GL20.GL_LINEAR);
             Gdx.gl.glTexParameteri(GL20.GL_TEXTURE_2D, GL20.GL_TEXTURE_WRAP_S, GL20.GL_CLAMP_TO_EDGE);
             Gdx.gl.glTexParameteri(GL20.GL_TEXTURE_2D, GL20.GL_TEXTURE_WRAP_T, GL20.GL_CLAMP_TO_EDGE);
-            Gdx.gl.glTexImage2D(GL20.GL_TEXTURE_2D, 0, GL20.GL_RGBA, width, height, 0, GL20.GL_RGBA, GL20.GL_UNSIGNED_BYTE, buffer);
-            BufferUtils.disposeUnsafeByteBuffer(buffer);
+            Gdx.gl.glTexImage2D(GL20.GL_TEXTURE_2D, 0, GL20.GL_RGBA, width, height, 0, GL20.GL_RGBA, GL20.GL_UNSIGNED_BYTE, pixels);
+            BufferUtils.disposeUnsafeByteBuffer(pixels);
             tex.SetTexID(ImTemp.ImTextureIDRef_1(g_Texture));
             tex.SetStatus(ImTextureStatus.OK);
             Gdx.gl.glBindTexture(GL20.GL_TEXTURE_2D, last_texture);
         }
         else if(status == ImTextureStatus.WantUpdates) {
+            int bytesPerPixel = tex.get_BytesPerPixel();
+            tempTextureBuffer.put(0, 0);
             Gdx.gl.glGetIntegerv(GL20.GL_ACTIVE_TEXTURE, tempTextureBuffer);
             int last_texture = tempTextureBuffer.get(0);
             ImTextureIDRef imTextureIDRef = tex.GetTexID();
-            long texId = imTextureIDRef.Get();
-            Gdx.gl.glBindTexture(GL20.GL_TEXTURE_2D, (int)texId);
-
+            int texId = (int)imTextureIDRef.Get();
+            Gdx.gl.glBindTexture(GL20.GL_TEXTURE_2D, texId);
             ImVectorImTextureRect updates = tex.get_Updates();
-            int bytesPerPixel = tex.get_BytesPerPixel();
             int size = updates.size();
-            for(int i = 0; i < size; i++) {
-                ImTextureRect r = updates.getData(i);
-                short r_x = r.get_x();
-                short r_y = r.get_y();
-                short r_w = r.get_w();
-                short r_h = r.get_h();
-                int src_pitch = r_w * bytesPerPixel;
-
-                int bufferSize = r_h * src_pitch;
-                ByteBuffer byteBuffer = BufferUtils.newUnsafeByteBuffer(bufferSize);
-                byteBuffer.order(ByteOrder.LITTLE_ENDIAN);
-                int offset = 0;
-                for (int y = 0; y < r_h; y++) {
-                    IDLBase pixel = tex.GetPixelsAt(r_x, r_y + y);
-                    IDLUtils.copyToByteBuffer(pixel, byteBuffer, offset, src_pitch);
-                    offset += src_pitch;
+            int width = tex.get_Width();
+            int height = tex.get_Height();
+            if(Gdx.gl30 != null) {
+                Gdx.gl.glPixelStorei(GL30.GL_UNPACK_ROW_LENGTH, width);
+                for(int i = 0; i < size; i++) {
+                    ImTextureRect r = updates.getData(i);
+                    short r_x = r.get_x();
+                    short r_y = r.get_y();
+                    short r_w = r.get_w();
+                    short r_h = r.get_h();
+                    int bufferSize = width * r_h * bytesPerPixel;
+                    IDLBase pixels = tex.GetPixelsAt(r_x, r_y);
+                    ByteBuffer byteBuffer = BufferUtils.newUnsafeByteBuffer(bufferSize);
+                    byteBuffer.order(ByteOrder.LITTLE_ENDIAN);
+                    IDLUtils.copyToByteBuffer(pixels, byteBuffer, 0, bufferSize);
+                    Gdx.gl.glTexSubImage2D(GL20.GL_TEXTURE_2D, 0, r_x, r_y, r_w, r_h, GL20.GL_RGBA, GL20.GL_UNSIGNED_BYTE, byteBuffer);
+                    BufferUtils.disposeUnsafeByteBuffer(byteBuffer);
                 }
-                Gdx.gl.glTexSubImage2D(GL20.GL_TEXTURE, 0, r_x, r_y, r_w, r_h, GL20.GL_RGBA, GL20.GL_UNSIGNED_BYTE, byteBuffer);
-                BufferUtils.disposeUnsafeByteBuffer(byteBuffer);
+                Gdx.gl.glPixelStorei(GL30.GL_UNPACK_ROW_LENGTH, 0);
+            }
+            else {
+                for(int i = 0; i < size; i++) {
+                    ImTextureRect r = updates.getData(i);
+                    short r_x = r.get_x();
+                    short r_y = r.get_y();
+                    short r_w = r.get_w();
+                    short r_h = r.get_h();
+                    if(optionA) {
+                        int src_pitch = r_w * bytesPerPixel;
+                        int bufferSize = r_h * src_pitch;
+                        ByteBuffer byteBuffer = BufferUtils.newUnsafeByteBuffer(bufferSize);
+
+                        int offset = 0;
+                        for (int y = 0; y < r_h; y++) {
+                            IDLBase src_row = tex.GetPixelsAt(r_x, r_y + y);
+                            IDLUtils.copyToByteBuffer(src_row, byteBuffer, offset, src_pitch);
+                            offset += src_pitch;
+                        }
+                        Gdx.gl.glTexSubImage2D(GL20.GL_TEXTURE_2D, 0, r_x, r_y, r_w, r_h, GL20.GL_RGBA, GL20.GL_UNSIGNED_BYTE, byteBuffer);
+                        BufferUtils.disposeUnsafeByteBuffer(byteBuffer);
+                    }
+                    else {
+                        int bufferSize = r_w * bytesPerPixel;
+                        ByteBuffer byteBuffer = BufferUtils.newUnsafeByteBuffer(bufferSize);
+                        byteBuffer.order(ByteOrder.LITTLE_ENDIAN);
+                        for (int y = 0; y < r_h; y++) {
+                            IDLBase row_pixels = tex.GetPixelsAt(r_x, r_y + y);
+                            IDLUtils.copyToByteBuffer(row_pixels, byteBuffer, 0, bufferSize);
+                            Gdx.gl.glTexSubImage2D(GL20.GL_TEXTURE_2D, 0, r_x, r_y + y, r_w, r_h, GL20.GL_RGBA, GL20.GL_UNSIGNED_BYTE, byteBuffer);
+                        }
+                        BufferUtils.disposeUnsafeByteBuffer(byteBuffer);
+                    }
+                }
             }
             tex.SetStatus(ImTextureStatus.OK);
             Gdx.gl.glBindTexture(GL20.GL_TEXTURE_2D, last_texture);
@@ -270,7 +305,7 @@ public class ImGuiGdxImpl implements ImGuiImpl {
             int size = textures.size();
             for(int i = 0; i < size; i++) {
                 ImTextureData tex = textures.getData(i);
-                if(tex.get_Status().isNotEqual(ImTextureStatus.OK)) {
+                if(tex.get_Status() != ImTextureStatus.OK) {
                     updateTexture(tex);
                 }
             }
@@ -312,7 +347,8 @@ public class ImGuiGdxImpl implements ImGuiImpl {
                 if(vertexByteBuffer != null) {
                     BufferUtils.disposeUnsafeByteBuffer(vertexByteBuffer);
                 }
-                vertexByteBuffer = BufferUtils.newUnsafeByteBuffer(vtxByteSize + 5000);
+                vertexByteBuffer = BufferUtils.newUnsafeByteBuffer(vtxByteSize);
+                vertexByteBuffer.order(ByteOrder.LITTLE_ENDIAN);
             }
             int idxBufferSize = 0;
             if(indexByteBuffer != null) {
@@ -322,11 +358,14 @@ public class ImGuiGdxImpl implements ImGuiImpl {
                 if(indexByteBuffer != null) {
                     BufferUtils.disposeUnsafeByteBuffer(indexByteBuffer);
                 }
-                indexByteBuffer = BufferUtils.newUnsafeByteBuffer(idxByteSize + 5000);
+                indexByteBuffer = BufferUtils.newUnsafeByteBuffer(idxByteSize);
+                indexByteBuffer.order(ByteOrder.LITTLE_ENDIAN);
             }
 
-            vtxBuffer.getByteBuffer(vtxByteSize, 0, vertexByteBuffer);
-            idxBuffer.getByteBuffer(idxByteSize, 0, indexByteBuffer);
+            IDLBase vtxData = vtxBuffer.get_Data();
+            IDLBase idxData = idxBuffer.get_Data();
+            IDLUtils.copyToByteBuffer(vtxData, vertexByteBuffer, 0, vtxByteSize);
+            IDLUtils.copyToByteBuffer(idxData, indexByteBuffer, 0, idxByteSize);
 
             Gdx.gl.glBufferData(GL20.GL_ARRAY_BUFFER, vtxByteSize, vertexByteBuffer, GL20.GL_STREAM_DRAW);
             Gdx.gl.glBufferData(GL20.GL_ELEMENT_ARRAY_BUFFER, idxByteSize, indexByteBuffer, GL20.GL_STREAM_DRAW);

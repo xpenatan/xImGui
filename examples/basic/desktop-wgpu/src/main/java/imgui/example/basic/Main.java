@@ -11,7 +11,7 @@ public class Main {
         ImGuiShared.instance = new ImGuiSharedWGPU();
 
         WgDesktopApplicationConfiguration config = new WgDesktopApplicationConfiguration();
-        config.setWindowedMode(640, 480);
+        config.setWindowedMode(1444, 800);
         config.setTitle("WGPU ImGui Basic Example");
         config.enableGPUtiming = false;
         config.useVsync(false);
