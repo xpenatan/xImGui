@@ -1024,20 +1024,29 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
 
     public boolean getGamma(WGPUTextureFormat surfaceFormat) {
         switch(surfaceFormat) {
-            case RGBA8UnormSrgb:
-            case BGRA8UnormSrgb:
+            case ASTC10x10UnormSrgb:
+            case ASTC10x5UnormSrgb:
+            case ASTC10x6UnormSrgb:
+            case ASTC10x8UnormSrgb:
+            case ASTC12x10UnormSrgb:
+            case ASTC12x12UnormSrgb:
+            case ASTC4x4UnormSrgb:
+            case ASTC5x5UnormSrgb:
+            case ASTC6x5UnormSrgb:
+            case ASTC6x6UnormSrgb:
+            case ASTC8x5UnormSrgb:
+            case ASTC8x6UnormSrgb:
+            case ASTC8x8UnormSrgb:
+            case BC1RGBAUnormSrgb:
             case BC2RGBAUnormSrgb:
             case BC3RGBAUnormSrgb:
             case BC7RGBAUnormSrgb:
+            case BGRA8UnormSrgb:
+            case ETC2RGB8A1UnormSrgb:
+            case ETC2RGB8UnormSrgb:
             case ETC2RGBA8UnormSrgb:
+            case RGBA8UnormSrgb:
                 return true;
-            case RGBA8Unorm:
-            case BGRA8Unorm:
-            case BC2RGBAUnorm:
-            case BC3RGBAUnorm:
-            case BC7RGBAUnorm:
-            case ETC2RGBA8Unorm:
-                return false;
         }
         return false;
     }
