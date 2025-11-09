@@ -130,9 +130,6 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
     private WGPUSampler sampler;
     private WGPUBuffer uniformBuffer;
     private WGPUBindGroup commonBindGroup;
-    private WGPUTexture fontTexture;
-    private WGPUTextureView fontTextureView;
-    private WGPUBindGroup fontBindGroup;
     private WGPUBuffer vertexBuffer;
     private WGPUBuffer indexBuffer;
     private int vertexBufferSizeBytes = 0;
@@ -564,12 +561,6 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
         uniformBuffer.dispose();
         commonBindGroup.release();
         commonBindGroup.dispose();
-        fontTexture.release();
-        fontTexture.dispose();
-        fontTextureView.release();
-        fontTextureView.dispose();
-        fontBindGroup.release();
-        fontBindGroup.dispose();
         if (vertexBuffer != null) {
             vertexBuffer.release();
             vertexBuffer.dispose();

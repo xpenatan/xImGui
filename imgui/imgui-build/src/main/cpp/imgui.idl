@@ -1617,13 +1617,15 @@ interface ImFontAtlas {
 //    attribute any TexID;
 //
     ImFont AddFont([Const] ImFontConfig font_cfg);
-    ImFont AddFontFromMemoryTTF(any font_data, long font_data_size, long size_pixels);
+    ImFont AddFontDefault([Const] optional ImFontConfig font_cfg);
+    ImFont AddFontFromMemoryTTF(any font_data, long font_data_size, long size_pixels, [Const] optional ImFontConfig font_cfg);
 };
 
 interface ImFontConfig {
     void ImFontConfig();
 
     // Data Source
+    attribute byte[] Name;
     attribute any FontData;
     attribute long FontDataSize;
     attribute boolean FontDataOwnedByAtlas;

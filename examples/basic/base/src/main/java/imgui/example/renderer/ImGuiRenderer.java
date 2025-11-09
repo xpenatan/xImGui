@@ -5,11 +5,13 @@ import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.files.FileHandle;
 import imgui.ImFontAtlas;
+import imgui.ImFontConfig;
 import imgui.ImGuiImpl;
 import imgui.ImDrawData;
 import imgui.ImGui;
 import imgui.enums.ImGuiConfigFlags;
 import imgui.ImGuiIO;
+import imgui.idl.helper.IDLByteArray;
 
 public abstract class ImGuiRenderer extends ScreenAdapter {
 
@@ -27,13 +29,28 @@ public abstract class ImGuiRenderer extends ScreenAdapter {
 
         Gdx.input.setInputProcessor(input);
 
-        ImFontAtlas fonts = ImGui.GetIO().get_Fonts();
         FileHandle fontFile01 = Gdx.files.internal("fonts/Cousine-Regular.ttf");
         FileHandle fontFile02 = Gdx.files.internal("fonts/DroidSans.ttf");
+        addFont(fontFile01, fontFile01.name());
+        addFont(fontFile02, fontFile02.name());
+    }
 
-        // TODO impl custom font
-//        fonts.AddFontFromMemoryTTF(fontFile01.readBytes(), 16).setName(fontFile01.name());
-//        fonts.AddFontFromMemoryTTF(fontFile02.readBytes(), 20).setName(fontFile02.name());
+    private void addFont(FileHandle fontFile, String name) {
+        byte[] bytes = fontFile.readBytes();
+        IDLByteArray byteArray = new IDLByteArray(bytes.length);
+        for(int i = 0; i < bytes.length; i++) {
+            byteArray.setValue(i, bytes[i]);
+        }
+        ImFontConfig fontConfig = new ImFontConfig();
+        byte[] bytes1 = name.getBytes();
+        for(int i = 0; i < bytes1.length; i++) {
+            fontConfig.set_Name(i, bytes1[i]);
+        }
+        ImFontAtlas fonts = ImGui.GetIO().get_Fonts();
+        // Cannot dispose byteArray as it is used by ImGui after this method
+        // Font size is controlled by ImGui FontSizeBase
+        fonts.AddFontFromMemoryTTF(byteArray, bytes.length, 0, fontConfig);
+        fontConfig.dispose();
     }
 
     @Override
