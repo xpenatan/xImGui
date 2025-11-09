@@ -113,11 +113,11 @@ import java.nio.FloatBuffer;
 
 public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
 
-    private static int VTX_BUFFER_SIZE = 8 + 8 + 4;// = ImVec2 + ImVec2 + ImU32;
+    private static final int VTX_BUFFER_SIZE = 8 + 8 + 4;// = ImVec2 + ImVec2 + ImU32;
     private final static int IDX_BUFFER_SIZE = 2; // short
 
-    private WGPUTexture tmp_texture = WGPUTexture.native_new();
-    private WGPUTextureView tmp_textureView = WGPUTextureView.native_new();
+    private final WGPUTexture tmp_texture = WGPUTexture.native_new();
+    private final WGPUTextureView tmp_textureView = WGPUTextureView.native_new();
 
     private WGPUDevice device;
     private WGPURenderPassEncoder renderPass;
@@ -134,11 +134,17 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
     private WGPUBuffer indexBuffer;
     private int vertexBufferSizeBytes = 0;
     private int indexBufferSizeBytes = 0;
-    private float[] orthoProj = new float[16];
+
+    private final int prjSizeBytes = 64;
+    private final int gamaSizeBytes = 4;
+    private ByteBuffer projBuffer;
+    private FloatBuffer projFloatView;
+    private ByteBuffer gammaBuffer;
+    private FloatBuffer gammaFloatBuffer;
 
     private boolean init = true;
 
-    private IDLBase empty_01 = IDLBase.native_new();
+    private final IDLBase empty_01 = IDLBase.native_new();
 
     private ByteBuffer vertexByteBuffer;
     private ByteBuffer indexByteBuffer;
@@ -147,7 +153,7 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
 
     private ImGuiStorage storage;
 
-    private WGPUBindGroup temp_bindGroup = WGPUBindGroup.native_new();
+    private final WGPUBindGroup temp_bindGroup = WGPUBindGroup.native_new();
 
     public ImGuiGdxWGPUImpl() {
         WgGraphics gfx = (WgGraphics) Gdx.graphics;
@@ -183,6 +189,13 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
                 }
             }
         }
+
+        projBuffer = BufferUtils.newUnsafeByteBuffer(prjSizeBytes)
+                .order(ByteOrder.LITTLE_ENDIAN);
+        projFloatView = projBuffer.asFloatBuffer();
+        gammaBuffer = BufferUtils.newUnsafeByteBuffer(prjSizeBytes)
+                .order(ByteOrder.LITTLE_ENDIAN);
+        gammaFloatBuffer = gammaBuffer.asFloatBuffer();
     }
 
     @Override
@@ -233,8 +246,7 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
         wgslDesc.getChain().setNext(WGPUChainedStruct.NULL);
         wgslDesc.getChain().setSType(WGPUSType.ShaderSourceWGSL);
 
-        boolean gamma = getGamma(renderFormat);
-        String shader = getShader(gamma);
+        String shader = getShader();
         wgslDesc.setCode(shader);
         shaderDesc.setNextInChain(wgslDesc.getChain());
 
@@ -569,6 +581,10 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
             indexBuffer.release();
             indexBuffer.dispose();
         }
+
+        BufferUtils.disposeUnsafeByteBuffer(projBuffer);
+        BufferUtils.disposeUnsafeByteBuffer(gammaBuffer);
+
     }
 
     public void saveImGuiData(FileHandle path) {
@@ -939,33 +955,27 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
             float T = displayY;
             float B = displayY + displaySizeY;
 
-            orthoProj[0] = 2.0f / (R - L);
-            orthoProj[1] = 0.0f;
-            orthoProj[2] = 0.0f;
-            orthoProj[3] = 0.0f;
-            orthoProj[4] = 0.0f;
-            orthoProj[5] = 2.0f / (T - B);
-            orthoProj[6] = 0;
-            orthoProj[7] = 0;
-            orthoProj[8] = 0;
-            orthoProj[9] = 0;
-            orthoProj[10] = 0.5f;
-            orthoProj[11] = 0f;
-            orthoProj[12] = (R + L) / (L - R);
-            orthoProj[13] = (T + B) / (B - T);
-            orthoProj[14] = 0.5f;
-            orthoProj[15] = 1.0f;
+            projFloatView.put(0, 2.0f / (R - L));
+            projFloatView.put(1, 0.0f);
+            projFloatView.put(2, 0.0f);
+            projFloatView.put(3, 0.0f);
+            projFloatView.put(4, 0.0f);
+            projFloatView.put(5, 2.0f / (T - B));
+            projFloatView.put(6, 0.0f);
+            projFloatView.put(7, 0.0f);
+            projFloatView.put(8, 0.0f);
+            projFloatView.put(9, 0.0f);
+            projFloatView.put(10, 0.5f);
+            projFloatView.put(11, 0.0f);
+            projFloatView.put(12, (R + L) / (L - R));
+            projFloatView.put(13, (T + B) / (B - T));
+            projFloatView.put(14, 0.5f);
+            projFloatView.put(15, 1.0f);
 
-            int prjSizeBytes = 64;
-            int gamaSizeBytes = 4;
-
-            ByteBuffer projBuffer = ByteBuffer.allocateDirect(prjSizeBytes + gamaSizeBytes)
-                    .order(ByteOrder.LITTLE_ENDIAN);
-            FloatBuffer floatView = projBuffer.asFloatBuffer();
-            floatView.put(orthoProj);
-            floatView.put(1);
+            float gamma = getGamma(renderFormat);
+            gammaFloatBuffer.put(0, gamma);
             device.getQueue().writeBuffer(uniformBuffer, 0, projBuffer, prjSizeBytes);
-            device.getQueue().writeBuffer(uniformBuffer, prjSizeBytes, projBuffer, gamaSizeBytes);
+            device.getQueue().writeBuffer(uniformBuffer, prjSizeBytes, gammaBuffer, gamaSizeBytes);
         }
 
         // Setup viewport
@@ -1022,7 +1032,7 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
         return ((size + (align - 1)) & ~(align - 1));
     }
 
-    public boolean getGamma(WGPUTextureFormat surfaceFormat) {
+    public float getGamma(WGPUTextureFormat surfaceFormat) {
         switch(surfaceFormat) {
             case ASTC10x10UnormSrgb:
             case ASTC10x5UnormSrgb:
@@ -1046,14 +1056,13 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
             case ETC2RGB8UnormSrgb:
             case ETC2RGBA8UnormSrgb:
             case RGBA8UnormSrgb:
-                return true;
+                return 2.2f;
         }
-        return false;
+        return 1.0f;
     }
 
-    private String getShader(boolean useGamma) {
-        String wgslCode = "" +
-                "struct VertexInput {\n" +
+    private String getShader() {
+        String wgslCode = "struct VertexInput {\n" +
                 "    @location(0) position: vec2<f32>,\n" +
                 "    @location(1) uv: vec2<f32>,\n" +
                 "    @location(2) color: vec4<f32>,\n" +
@@ -1085,15 +1094,10 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
                 "\n" +
                 "@fragment\n" +
                 "fn fs_main(in: VertexOutput) -> @location(0) vec4<f32> {\n" +
-                "    let color = in.color * textureSample(t, s, in.uv);\n";
-        if(useGamma) {
-            wgslCode += "    let corrected_color = pow(color.rgb, vec3<f32>(2.2));\n" +
-                        "    return vec4<f32>(corrected_color, color.a);\n";
-        }
-        else {
-            wgslCode += "    return color;\n";
-        }
-        wgslCode += "}\n";
+                "    let color = in.color * textureSample(t, s, in.uv);\n" +
+                "    let corrected_color = pow(color.rgb, vec3<f32>(uniforms.gamma));\n" +
+                "    return vec4<f32>(corrected_color, color.a);\n" +
+                "}\n";
         return wgslCode;
     }
 }
