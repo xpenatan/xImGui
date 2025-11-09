@@ -3,6 +3,7 @@ package imgui.gdx;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.utils.BufferUtils;
+import com.badlogic.gdx.utils.IntMap;
 import com.github.xpenatan.jParser.idl.IDLBase;
 import com.github.xpenatan.webgpu.WGPUAddressMode;
 import com.github.xpenatan.webgpu.WGPUBindGroup;
@@ -82,11 +83,8 @@ import com.github.xpenatan.webgpu.WGPUVertexStepMode;
 import com.monstrous.gdx.webgpu.application.WebGPUContext;
 import com.monstrous.gdx.webgpu.application.WgGraphics;
 import imgui.ImGuiInternal;
-import imgui.ImGuiStorage;
-import imgui.ImGuiStoragePair;
 import imgui.ImTemp;
 import imgui.ImTextureIDRef;
-import imgui.ImVectorImGuiStoragePair;
 import imgui.enums.ImGuiBackendFlags;
 import imgui.idl.helper.IDLTemp;
 import imgui.ImDrawCmd;
@@ -110,6 +108,7 @@ import imgui.idl.helper.IDLUtils;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
+import java.util.ArrayList;
 
 public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
 
@@ -134,26 +133,19 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
     private WGPUBuffer indexBuffer;
     private int vertexBufferSizeBytes = 0;
     private int indexBufferSizeBytes = 0;
-
     private final int prjSizeBytes = 64;
     private final int gamaSizeBytes = 4;
     private ByteBuffer projBuffer;
     private FloatBuffer projFloatView;
     private ByteBuffer gammaBuffer;
     private FloatBuffer gammaFloatBuffer;
-
     private boolean init = true;
-
     private final IDLBase empty_01 = IDLBase.native_new();
-
     private ByteBuffer vertexByteBuffer;
     private ByteBuffer indexByteBuffer;
-
     private FileHandle imgui;
-
-    private ImGuiStorage storage;
-
-    private final WGPUBindGroup temp_bindGroup = WGPUBindGroup.native_new();
+    private IntMap<WGPUBindGroup> textureBindGroups = new IntMap<>();
+    private ArrayList<WGPUBindGroup> poolList = new ArrayList<>();
 
     public ImGuiGdxWGPUImpl() {
         WgGraphics gfx = (WgGraphics) Gdx.graphics;
@@ -176,9 +168,6 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
 
         ImGuiIO io = ImGui.GetIO();
         io.set_BackendFlags(ImGuiBackendFlags.RendererHasTextures.or(ImGuiBackendFlags.HasMouseCursors));
-
-        storage = new ImGuiStorage();
-        storage.get_Data().reserve(100);
 
         if(imgui != null) {
             boolean exists = imgui.exists();
@@ -446,72 +435,6 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
         return blend;
     }
 
-    private void createFontsTexture() {
-        // TODO update impl
-//        IDLInt width = IDLTemp.Int_1(1);
-//        IDLInt height = IDLTemp.Int_2(1);
-//        IDLByteArray bytesArray = new IDLByteArray(1);
-//
-//        ImGuiIO io = ImGui.GetIO();
-//        ImFontAtlas fonts = io.get_Fonts();
-//        fonts.GetTexDataAsRGBA32(bytesArray, width, height);
-//        int widthValue = width.getValue(0);
-//        int heightValue = height.getValue(0);
-//
-//        int size = bytesArray.getSize();
-//        ByteBuffer buffer = BufferUtils.newUnsafeByteBuffer(size)
-//                .order(ByteOrder.LITTLE_ENDIAN);
-//        for (int i = 0; i < size; i++) {
-//            buffer.put(i, bytesArray.getValue(i));
-//        }
-//        buffer.position(0);
-//        bytesArray.dispose();
-//
-//        WGPUTextureDescriptor texDesc = WGPUTextureDescriptor.obtain();
-//        texDesc.getSize().setWidth(widthValue);
-//        texDesc.getSize().setHeight(heightValue);
-//        texDesc.getSize().setDepthOrArrayLayers(1);
-//        texDesc.setFormat(RGBA8Unorm);
-//        texDesc.setUsage(WGPUTextureUsage.TextureBinding.or(WGPUTextureUsage.CopyDst));
-//        texDesc.setDimension(WGPUTextureDimension._2D);
-//        texDesc.setMipLevelCount(1);
-//        texDesc.setSampleCount(1);
-//        fontTexture = new WGPUTexture();
-//        device.createTexture(texDesc, fontTexture);
-////        fontTexture.setLabel("Font Texture");
-//
-//        WGPUTexelCopyTextureInfo dest = WGPUTexelCopyTextureInfo.obtain();
-//        dest.setTexture(fontTexture);
-//        WGPUTexelCopyBufferLayout dataLayout = WGPUTexelCopyBufferLayout.obtain();
-//        dataLayout.setBytesPerRow(widthValue * 4);
-//        dataLayout.setRowsPerImage(heightValue);
-//        WGPUExtent3D writeSize = WGPUExtent3D.obtain();
-//        writeSize.setWidth(widthValue);
-//        writeSize.setHeight(heightValue);
-//        writeSize.setDepthOrArrayLayers(1);
-//        device.getQueue().writeTexture(dest, buffer, size, dataLayout, writeSize);
-//
-//        WGPUTextureViewDescriptor viewDesc = WGPUTextureViewDescriptor.obtain();
-//        viewDesc.setFormat(RGBA8Unorm);
-//        viewDesc.setDimension(WGPUTextureViewDimension._2D);
-//        viewDesc.setBaseMipLevel(0);
-//        viewDesc.setMipLevelCount(1);
-//        viewDesc.setBaseArrayLayer(0);
-//        viewDesc.setArrayLayerCount(1);
-//        viewDesc.setAspect(WGPUTextureAspect.All);
-//        fontTextureView = new WGPUTextureView();
-//        fontTexture.createView(viewDesc, fontTextureView);
-////        fontTextureView.setLabel("Font Texture View");
-//
-//        fontBindGroup = createImageBindGroup(imageBindGroupLayout, fontTextureView);
-//
-//        IDLBase textureId = new IDLBase();
-//        textureId.native_copy(fontTextureView);
-//        io.get_Fonts().set_TexID(textureId);
-//
-//        BufferUtils.disposeUnsafeByteBuffer(buffer);
-    }
-
     private void createImageBindGroup(WGPUBindGroupLayout layout, WGPUTextureView texture, WGPUBindGroup bindGroup) {
         boolean valid = texture.isValid();
         WGPUVectorBindGroupEntry entries = WGPUVectorBindGroupEntry.obtain();
@@ -585,6 +508,10 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
         BufferUtils.disposeUnsafeByteBuffer(projBuffer);
         BufferUtils.disposeUnsafeByteBuffer(gammaBuffer);
 
+        for(int i = 0; i < poolList.size(); i++) {
+            WGPUBindGroup bindGroup = poolList.get(i);
+            bindGroup.dispose();
+        }
     }
 
     public void saveImGuiData(FileHandle path) {
@@ -788,16 +715,14 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
                     continue;
                 }
                 int tex_id_hash = ImGuiInternal.ImHashData(IDLTemp.Long_1(get), Long.BYTES, 0); // Pass ImGui long memory to create hash
-                tmp_textureView.native_setAddress(get);
-                IDLBase voidPtr = storage.GetVoidPtr(tex_id_hash);
-                temp_bindGroup.native_copy(voidPtr);
-                if(temp_bindGroup.native_isNULL()) {
-                    WGPUBindGroup bindGroup = new WGPUBindGroup();
-                    temp_bindGroup.native_copy(bindGroup);
-                    createImageBindGroup(imageBindGroupLayout, tmp_textureView, temp_bindGroup);
-                    storage.SetVoidPtr(tex_id_hash, bindGroup);
+                WGPUBindGroup bindGroup = textureBindGroups.get(tex_id_hash);
+                if(bindGroup == null) {
+                    tmp_textureView.native_setAddress(get);
+                    bindGroup = obtainBindGroup();
+                    createImageBindGroup(imageBindGroupLayout, tmp_textureView, bindGroup);
+                    textureBindGroups.put(tex_id_hash, bindGroup);
                 }
-                renderPass.setBindGroup(1, temp_bindGroup);
+                renderPass.setBindGroup(1, bindGroup);
 
                 float clipRectX = clipRect.get_x();
                 float clipRectY = clipRect.get_y();
@@ -824,18 +749,14 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
             global_vtx_offset += vtxSize;
         }
 
-        ImVectorImGuiStoragePair data = storage.get_Data();
-        int size = data.size();
-        for(int i = 0; i < size; i++) {
-            ImGuiStoragePair storagePair = data.getData(i);
-            IDLBase valP = storagePair.get_val_p();
-            temp_bindGroup.native_copy(valP);
-            temp_bindGroup.release();
-            temp_bindGroup.native_takeOwnership();
-            temp_bindGroup.dispose();
+        IntMap.Entries<WGPUBindGroup> entries = textureBindGroups.entries();
+        while(entries.hasNext()) {
+            IntMap.Entry<WGPUBindGroup> entry = entries.next();
+            WGPUBindGroup bindGroup = entry.value;
+            bindGroup.release();
+            poolList.add(bindGroup);
         }
-        storage.get_Data().resize(0);
-
+        textureBindGroups.clear();
         renderPass.end();
         renderPass.release();
     }
@@ -1059,6 +980,14 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
                 return 2.2f;
         }
         return 1.0f;
+    }
+
+    private WGPUBindGroup obtainBindGroup() {
+        if(poolList.size() > 0) {
+            return poolList.remove(0);
+        } else {
+            return new WGPUBindGroup();
+        }
     }
 
     private String getShader() {
