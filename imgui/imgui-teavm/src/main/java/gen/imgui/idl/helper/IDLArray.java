@@ -70,6 +70,19 @@ public class IDLArray extends IDLBase {
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.IDLArray);var returnedJSObj = jsObj.getSize();return returnedJSObj;")
     public static native int internal_native_getSize(int this_addr);
 
+    public boolean ownsDataAddress() {
+        return internal_native_ownsDataAddress(native_address);
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var jsObj = imgui.wrapPointer(this_addr, imgui.IDLArray);
+      var returnedJSObj = jsObj.ownsDataAddress();
+      return returnedJSObj;
+    */
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.IDLArray);var returnedJSObj = jsObj.ownsDataAddress();return returnedJSObj;")
+    public static native boolean internal_native_ownsDataAddress(int this_addr);
+
     public IDLBase getVoidData() {
         int pointer = internal_native_getVoidData(native_address);
         if (pointer == 0)

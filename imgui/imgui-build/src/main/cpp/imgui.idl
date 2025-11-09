@@ -1814,8 +1814,10 @@ interface ImGuiPayload {
     readonly attribute any Data;
     readonly attribute long DataSize;
 
-    [Const] boolean IsPreview();
-    [Const] boolean IsDelivery();
+    void Clear();
+    boolean IsDataType([Const] DOMString type);
+    boolean IsPreview();
+    boolean IsDelivery();
 };
 
 interface ImGuiStoragePair {

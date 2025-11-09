@@ -29,9 +29,9 @@ public class DragAndDropRenderer implements UIRenderer {
             ImGuiPayload dragDropPayload = ImGui.AcceptDragDropPayload("DRAG_ENTITY_ID");
             if(!dragDropPayload.native_isNULL()) {
                 System.out.println("dragDropPayload");
+                int dataSize = dragDropPayload.get_DataSize();
                 IDLBase data = dragDropPayload.get_Data();
-                IDLInt idlInt = IDLInt.native_new();
-                idlInt.native_copy(data);
+                IDLInt idlInt = IDLTemp.Int_1(data);
                 int data1 = idlInt.getValue();
                 System.out.println("Value: " + data1);
             }

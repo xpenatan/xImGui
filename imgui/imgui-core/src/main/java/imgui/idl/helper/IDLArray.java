@@ -66,6 +66,17 @@ public class IDLArray extends IDLBase {
     */
     public static native int internal_native_getSize(long this_addr);
 
+    public boolean ownsDataAddress() {
+        return internal_native_ownsDataAddress(native_address);
+    }
+
+    /*
+      [-JNI;-NATIVE]
+      IDL::IDLArray* nativeObject = (IDL::IDLArray*)this_addr;
+      return nativeObject->ownsDataAddress();
+    */
+    public static native boolean internal_native_ownsDataAddress(long this_addr);
+
     public IDLBase getVoidData() {
         long pointer = internal_native_getVoidData(native_address);
         if (pointer == 0)

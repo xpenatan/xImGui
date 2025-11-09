@@ -11,7 +11,29 @@ import gen.com.github.xpenatan.jParser.idl.IDLBase;
 
 public class IDLTemp extends IDLBase {
 
+    static private IDLByteArray IDLByteArray_TEMP_STATIC_GEN_0;
+
+    static private IDLBoolArray IDLBoolArray_TEMP_STATIC_GEN_0;
+
+    static private IDLIntArray IDLIntArray_TEMP_STATIC_GEN_0;
+
+    static private IDLLongArray IDLLongArray_TEMP_STATIC_GEN_0;
+
+    static private IDLFloatArray IDLFloatArray_TEMP_STATIC_GEN_0;
+
+    static private IDLDoubleArray IDLDoubleArray_TEMP_STATIC_GEN_0;
+
+    static private IDLByte IDLByte_TEMP_STATIC_GEN_0;
+
     static private IDLBool IDLBool_TEMP_STATIC_GEN_0;
+
+    static private IDLInt IDLInt_TEMP_STATIC_GEN_0;
+
+    static private IDLLong IDLLong_TEMP_STATIC_GEN_0;
+
+    static private IDLFloat IDLFloat_TEMP_STATIC_GEN_0;
+
+    static private IDLDouble IDLDouble_TEMP_STATIC_GEN_0;
 
     static private IDLBool IDLBool_TEMP_STATIC_GEN_1;
 
@@ -19,7 +41,7 @@ public class IDLTemp extends IDLBase {
 
     static private IDLBool IDLBool_TEMP_STATIC_GEN_3;
 
-    static private IDLInt IDLInt_TEMP_STATIC_GEN_0;
+    static private IDLBool IDLBool_TEMP_STATIC_GEN_4;
 
     static private IDLInt IDLInt_TEMP_STATIC_GEN_1;
 
@@ -27,7 +49,7 @@ public class IDLTemp extends IDLBase {
 
     static private IDLInt IDLInt_TEMP_STATIC_GEN_3;
 
-    static private IDLLong IDLLong_TEMP_STATIC_GEN_0;
+    static private IDLInt IDLInt_TEMP_STATIC_GEN_4;
 
     static private IDLLong IDLLong_TEMP_STATIC_GEN_1;
 
@@ -35,7 +57,7 @@ public class IDLTemp extends IDLBase {
 
     static private IDLLong IDLLong_TEMP_STATIC_GEN_3;
 
-    static private IDLFloat IDLFloat_TEMP_STATIC_GEN_0;
+    static private IDLLong IDLLong_TEMP_STATIC_GEN_4;
 
     static private IDLFloat IDLFloat_TEMP_STATIC_GEN_1;
 
@@ -43,13 +65,15 @@ public class IDLTemp extends IDLBase {
 
     static private IDLFloat IDLFloat_TEMP_STATIC_GEN_3;
 
-    static private IDLDouble IDLDouble_TEMP_STATIC_GEN_0;
+    static private IDLFloat IDLFloat_TEMP_STATIC_GEN_4;
 
     static private IDLDouble IDLDouble_TEMP_STATIC_GEN_1;
 
     static private IDLDouble IDLDouble_TEMP_STATIC_GEN_2;
 
     static private IDLDouble IDLDouble_TEMP_STATIC_GEN_3;
+
+    static private IDLDouble IDLDouble_TEMP_STATIC_GEN_4;
 
     static private IDLInt2 IDLInt2_TEMP_STATIC_GEN_0;
 
@@ -126,14 +150,242 @@ public class IDLTemp extends IDLBase {
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.IDLTemp);imgui.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
-    public static IDLBool Bool_1(boolean value) {
-        int pointer = internal_native_Bool_1__0(value);
+    public static IDLByteArray ByteArray_1(IDLBase dataAddress, int size) {
+        int pointer = internal_native_ByteArray_1(dataAddress.native_void_address, size);
+        if (pointer == 0)
+            return IDLByteArray.NULL;
+        if (IDLByteArray_TEMP_STATIC_GEN_0 == null)
+            IDLByteArray_TEMP_STATIC_GEN_0 = IDLByteArray.native_new();
+        IDLByteArray_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLByteArray_TEMP_STATIC_GEN_0;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.IDLTemp.prototype.ByteArray_1(dataAddress_addr, size);
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
+    */
+    @org.teavm.jso.JSBody(params = {"dataAddress_addr", "size"}, script = "var returnedJSObj = imgui.IDLTemp.prototype.ByteArray_1(dataAddress_addr, size);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_ByteArray_1(int dataAddress_addr, int size);
+
+    public static IDLBoolArray BoolArray_1(IDLBase dataAddress, int size) {
+        int pointer = internal_native_BoolArray_1(dataAddress.native_void_address, size);
+        if (pointer == 0)
+            return IDLBoolArray.NULL;
+        if (IDLBoolArray_TEMP_STATIC_GEN_0 == null)
+            IDLBoolArray_TEMP_STATIC_GEN_0 = IDLBoolArray.native_new();
+        IDLBoolArray_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLBoolArray_TEMP_STATIC_GEN_0;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.IDLTemp.prototype.BoolArray_1(dataAddress_addr, size);
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
+    */
+    @org.teavm.jso.JSBody(params = {"dataAddress_addr", "size"}, script = "var returnedJSObj = imgui.IDLTemp.prototype.BoolArray_1(dataAddress_addr, size);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_BoolArray_1(int dataAddress_addr, int size);
+
+    public static IDLIntArray IntArray_1(IDLBase dataAddress, int size) {
+        int pointer = internal_native_IntArray_1(dataAddress.native_void_address, size);
+        if (pointer == 0)
+            return IDLIntArray.NULL;
+        if (IDLIntArray_TEMP_STATIC_GEN_0 == null)
+            IDLIntArray_TEMP_STATIC_GEN_0 = IDLIntArray.native_new();
+        IDLIntArray_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLIntArray_TEMP_STATIC_GEN_0;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.IDLTemp.prototype.IntArray_1(dataAddress_addr, size);
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
+    */
+    @org.teavm.jso.JSBody(params = {"dataAddress_addr", "size"}, script = "var returnedJSObj = imgui.IDLTemp.prototype.IntArray_1(dataAddress_addr, size);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_IntArray_1(int dataAddress_addr, int size);
+
+    public static IDLLongArray LongArray_1(IDLBase dataAddress, int size) {
+        int pointer = internal_native_LongArray_1(dataAddress.native_void_address, size);
+        if (pointer == 0)
+            return IDLLongArray.NULL;
+        if (IDLLongArray_TEMP_STATIC_GEN_0 == null)
+            IDLLongArray_TEMP_STATIC_GEN_0 = IDLLongArray.native_new();
+        IDLLongArray_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLLongArray_TEMP_STATIC_GEN_0;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.IDLTemp.prototype.LongArray_1(dataAddress_addr, size);
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
+    */
+    @org.teavm.jso.JSBody(params = {"dataAddress_addr", "size"}, script = "var returnedJSObj = imgui.IDLTemp.prototype.LongArray_1(dataAddress_addr, size);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_LongArray_1(int dataAddress_addr, int size);
+
+    public static IDLFloatArray FloatArray_1(IDLBase dataAddress, int size) {
+        int pointer = internal_native_FloatArray_1(dataAddress.native_void_address, size);
+        if (pointer == 0)
+            return IDLFloatArray.NULL;
+        if (IDLFloatArray_TEMP_STATIC_GEN_0 == null)
+            IDLFloatArray_TEMP_STATIC_GEN_0 = IDLFloatArray.native_new();
+        IDLFloatArray_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLFloatArray_TEMP_STATIC_GEN_0;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.IDLTemp.prototype.FloatArray_1(dataAddress_addr, size);
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
+    */
+    @org.teavm.jso.JSBody(params = {"dataAddress_addr", "size"}, script = "var returnedJSObj = imgui.IDLTemp.prototype.FloatArray_1(dataAddress_addr, size);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_FloatArray_1(int dataAddress_addr, int size);
+
+    public static IDLDoubleArray DoubleArray_1(IDLBase dataAddress, int size) {
+        int pointer = internal_native_DoubleArray_1(dataAddress.native_void_address, size);
+        if (pointer == 0)
+            return IDLDoubleArray.NULL;
+        if (IDLDoubleArray_TEMP_STATIC_GEN_0 == null)
+            IDLDoubleArray_TEMP_STATIC_GEN_0 = IDLDoubleArray.native_new();
+        IDLDoubleArray_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLDoubleArray_TEMP_STATIC_GEN_0;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.IDLTemp.prototype.DoubleArray_1(dataAddress_addr, size);
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
+    */
+    @org.teavm.jso.JSBody(params = {"dataAddress_addr", "size"}, script = "var returnedJSObj = imgui.IDLTemp.prototype.DoubleArray_1(dataAddress_addr, size);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_DoubleArray_1(int dataAddress_addr, int size);
+
+    public static IDLByte Byte_1(IDLBase dataAddress) {
+        int pointer = internal_native_Byte_1(dataAddress.native_void_address);
+        if (pointer == 0)
+            return IDLByte.NULL;
+        if (IDLByte_TEMP_STATIC_GEN_0 == null)
+            IDLByte_TEMP_STATIC_GEN_0 = IDLByte.native_new();
+        IDLByte_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLByte_TEMP_STATIC_GEN_0;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.IDLTemp.prototype.Byte_1(dataAddress_addr);
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
+    */
+    @org.teavm.jso.JSBody(params = {"dataAddress_addr"}, script = "var returnedJSObj = imgui.IDLTemp.prototype.Byte_1(dataAddress_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_Byte_1(int dataAddress_addr);
+
+    public static IDLBool Bool_1(IDLBase dataAddress) {
+        int pointer = internal_native_Bool_1(dataAddress.native_void_address);
         if (pointer == 0)
             return IDLBool.NULL;
         if (IDLBool_TEMP_STATIC_GEN_0 == null)
             IDLBool_TEMP_STATIC_GEN_0 = IDLBool.native_new();
         IDLBool_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return IDLBool_TEMP_STATIC_GEN_0;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.IDLTemp.prototype.Bool_1(dataAddress_addr);
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
+    */
+    @org.teavm.jso.JSBody(params = {"dataAddress_addr"}, script = "var returnedJSObj = imgui.IDLTemp.prototype.Bool_1(dataAddress_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_Bool_1(int dataAddress_addr);
+
+    public static IDLInt Int_1(IDLBase dataAddress) {
+        int pointer = internal_native_Int_1(dataAddress.native_void_address);
+        if (pointer == 0)
+            return IDLInt.NULL;
+        if (IDLInt_TEMP_STATIC_GEN_0 == null)
+            IDLInt_TEMP_STATIC_GEN_0 = IDLInt.native_new();
+        IDLInt_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLInt_TEMP_STATIC_GEN_0;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.IDLTemp.prototype.Int_1(dataAddress_addr);
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
+    */
+    @org.teavm.jso.JSBody(params = {"dataAddress_addr"}, script = "var returnedJSObj = imgui.IDLTemp.prototype.Int_1(dataAddress_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_Int_1(int dataAddress_addr);
+
+    public static IDLLong Long_1(IDLBase dataAddress) {
+        int pointer = internal_native_Long_1(dataAddress.native_void_address);
+        if (pointer == 0)
+            return IDLLong.NULL;
+        if (IDLLong_TEMP_STATIC_GEN_0 == null)
+            IDLLong_TEMP_STATIC_GEN_0 = IDLLong.native_new();
+        IDLLong_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLLong_TEMP_STATIC_GEN_0;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.IDLTemp.prototype.Long_1(dataAddress_addr);
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
+    */
+    @org.teavm.jso.JSBody(params = {"dataAddress_addr"}, script = "var returnedJSObj = imgui.IDLTemp.prototype.Long_1(dataAddress_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_Long_1(int dataAddress_addr);
+
+    public static IDLFloat Float_1(IDLBase dataAddress) {
+        int pointer = internal_native_Float_1(dataAddress.native_void_address);
+        if (pointer == 0)
+            return IDLFloat.NULL;
+        if (IDLFloat_TEMP_STATIC_GEN_0 == null)
+            IDLFloat_TEMP_STATIC_GEN_0 = IDLFloat.native_new();
+        IDLFloat_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLFloat_TEMP_STATIC_GEN_0;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.IDLTemp.prototype.Float_1(dataAddress_addr);
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
+    */
+    @org.teavm.jso.JSBody(params = {"dataAddress_addr"}, script = "var returnedJSObj = imgui.IDLTemp.prototype.Float_1(dataAddress_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_Float_1(int dataAddress_addr);
+
+    public static IDLDouble Double_1(IDLBase dataAddress) {
+        int pointer = internal_native_Double_1(dataAddress.native_void_address);
+        if (pointer == 0)
+            return IDLDouble.NULL;
+        if (IDLDouble_TEMP_STATIC_GEN_0 == null)
+            IDLDouble_TEMP_STATIC_GEN_0 = IDLDouble.native_new();
+        IDLDouble_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return IDLDouble_TEMP_STATIC_GEN_0;
+    }
+
+    /*
+      [-TEAVM;-NATIVE]
+      var returnedJSObj = imgui.IDLTemp.prototype.Double_1(dataAddress_addr);
+      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
+      return imgui.getPointer(returnedJSObj);
+    */
+    @org.teavm.jso.JSBody(params = {"dataAddress_addr"}, script = "var returnedJSObj = imgui.IDLTemp.prototype.Double_1(dataAddress_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_Double_1(int dataAddress_addr);
+
+    public static IDLBool Bool_1(boolean value) {
+        int pointer = internal_native_Bool_1__0(value);
+        if (pointer == 0)
+            return IDLBool.NULL;
+        if (IDLBool_TEMP_STATIC_GEN_1 == null)
+            IDLBool_TEMP_STATIC_GEN_1 = IDLBool.native_new();
+        IDLBool_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return IDLBool_TEMP_STATIC_GEN_1;
     }
 
     /*
@@ -149,10 +401,10 @@ public class IDLTemp extends IDLBase {
         int pointer = internal_native_Bool_2__0(value);
         if (pointer == 0)
             return IDLBool.NULL;
-        if (IDLBool_TEMP_STATIC_GEN_1 == null)
-            IDLBool_TEMP_STATIC_GEN_1 = IDLBool.native_new();
-        IDLBool_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
-        return IDLBool_TEMP_STATIC_GEN_1;
+        if (IDLBool_TEMP_STATIC_GEN_2 == null)
+            IDLBool_TEMP_STATIC_GEN_2 = IDLBool.native_new();
+        IDLBool_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
+        return IDLBool_TEMP_STATIC_GEN_2;
     }
 
     /*
@@ -168,10 +420,10 @@ public class IDLTemp extends IDLBase {
         int pointer = internal_native_Bool_3__0(value);
         if (pointer == 0)
             return IDLBool.NULL;
-        if (IDLBool_TEMP_STATIC_GEN_2 == null)
-            IDLBool_TEMP_STATIC_GEN_2 = IDLBool.native_new();
-        IDLBool_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
-        return IDLBool_TEMP_STATIC_GEN_2;
+        if (IDLBool_TEMP_STATIC_GEN_3 == null)
+            IDLBool_TEMP_STATIC_GEN_3 = IDLBool.native_new();
+        IDLBool_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
+        return IDLBool_TEMP_STATIC_GEN_3;
     }
 
     /*
@@ -187,10 +439,10 @@ public class IDLTemp extends IDLBase {
         int pointer = internal_native_Bool_4__0(value);
         if (pointer == 0)
             return IDLBool.NULL;
-        if (IDLBool_TEMP_STATIC_GEN_3 == null)
-            IDLBool_TEMP_STATIC_GEN_3 = IDLBool.native_new();
-        IDLBool_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
-        return IDLBool_TEMP_STATIC_GEN_3;
+        if (IDLBool_TEMP_STATIC_GEN_4 == null)
+            IDLBool_TEMP_STATIC_GEN_4 = IDLBool.native_new();
+        IDLBool_TEMP_STATIC_GEN_4.internal_reset(pointer, false);
+        return IDLBool_TEMP_STATIC_GEN_4;
     }
 
     /*
@@ -206,10 +458,10 @@ public class IDLTemp extends IDLBase {
         int pointer = internal_native_Int_1__0(value);
         if (pointer == 0)
             return IDLInt.NULL;
-        if (IDLInt_TEMP_STATIC_GEN_0 == null)
-            IDLInt_TEMP_STATIC_GEN_0 = IDLInt.native_new();
-        IDLInt_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
-        return IDLInt_TEMP_STATIC_GEN_0;
+        if (IDLInt_TEMP_STATIC_GEN_1 == null)
+            IDLInt_TEMP_STATIC_GEN_1 = IDLInt.native_new();
+        IDLInt_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return IDLInt_TEMP_STATIC_GEN_1;
     }
 
     /*
@@ -225,10 +477,10 @@ public class IDLTemp extends IDLBase {
         int pointer = internal_native_Int_2__0(value);
         if (pointer == 0)
             return IDLInt.NULL;
-        if (IDLInt_TEMP_STATIC_GEN_1 == null)
-            IDLInt_TEMP_STATIC_GEN_1 = IDLInt.native_new();
-        IDLInt_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
-        return IDLInt_TEMP_STATIC_GEN_1;
+        if (IDLInt_TEMP_STATIC_GEN_2 == null)
+            IDLInt_TEMP_STATIC_GEN_2 = IDLInt.native_new();
+        IDLInt_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
+        return IDLInt_TEMP_STATIC_GEN_2;
     }
 
     /*
@@ -244,10 +496,10 @@ public class IDLTemp extends IDLBase {
         int pointer = internal_native_Int_3__0(value);
         if (pointer == 0)
             return IDLInt.NULL;
-        if (IDLInt_TEMP_STATIC_GEN_2 == null)
-            IDLInt_TEMP_STATIC_GEN_2 = IDLInt.native_new();
-        IDLInt_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
-        return IDLInt_TEMP_STATIC_GEN_2;
+        if (IDLInt_TEMP_STATIC_GEN_3 == null)
+            IDLInt_TEMP_STATIC_GEN_3 = IDLInt.native_new();
+        IDLInt_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
+        return IDLInt_TEMP_STATIC_GEN_3;
     }
 
     /*
@@ -263,10 +515,10 @@ public class IDLTemp extends IDLBase {
         int pointer = internal_native_Int_4__0(value);
         if (pointer == 0)
             return IDLInt.NULL;
-        if (IDLInt_TEMP_STATIC_GEN_3 == null)
-            IDLInt_TEMP_STATIC_GEN_3 = IDLInt.native_new();
-        IDLInt_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
-        return IDLInt_TEMP_STATIC_GEN_3;
+        if (IDLInt_TEMP_STATIC_GEN_4 == null)
+            IDLInt_TEMP_STATIC_GEN_4 = IDLInt.native_new();
+        IDLInt_TEMP_STATIC_GEN_4.internal_reset(pointer, false);
+        return IDLInt_TEMP_STATIC_GEN_4;
     }
 
     /*
@@ -282,10 +534,10 @@ public class IDLTemp extends IDLBase {
         int pointer = internal_native_Long_1__0((int) value);
         if (pointer == 0)
             return IDLLong.NULL;
-        if (IDLLong_TEMP_STATIC_GEN_0 == null)
-            IDLLong_TEMP_STATIC_GEN_0 = IDLLong.native_new();
-        IDLLong_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
-        return IDLLong_TEMP_STATIC_GEN_0;
+        if (IDLLong_TEMP_STATIC_GEN_1 == null)
+            IDLLong_TEMP_STATIC_GEN_1 = IDLLong.native_new();
+        IDLLong_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return IDLLong_TEMP_STATIC_GEN_1;
     }
 
     /*
@@ -301,10 +553,10 @@ public class IDLTemp extends IDLBase {
         int pointer = internal_native_Long_2__0((int) value);
         if (pointer == 0)
             return IDLLong.NULL;
-        if (IDLLong_TEMP_STATIC_GEN_1 == null)
-            IDLLong_TEMP_STATIC_GEN_1 = IDLLong.native_new();
-        IDLLong_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
-        return IDLLong_TEMP_STATIC_GEN_1;
+        if (IDLLong_TEMP_STATIC_GEN_2 == null)
+            IDLLong_TEMP_STATIC_GEN_2 = IDLLong.native_new();
+        IDLLong_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
+        return IDLLong_TEMP_STATIC_GEN_2;
     }
 
     /*
@@ -320,10 +572,10 @@ public class IDLTemp extends IDLBase {
         int pointer = internal_native_Long_3__0((int) value);
         if (pointer == 0)
             return IDLLong.NULL;
-        if (IDLLong_TEMP_STATIC_GEN_2 == null)
-            IDLLong_TEMP_STATIC_GEN_2 = IDLLong.native_new();
-        IDLLong_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
-        return IDLLong_TEMP_STATIC_GEN_2;
+        if (IDLLong_TEMP_STATIC_GEN_3 == null)
+            IDLLong_TEMP_STATIC_GEN_3 = IDLLong.native_new();
+        IDLLong_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
+        return IDLLong_TEMP_STATIC_GEN_3;
     }
 
     /*
@@ -339,10 +591,10 @@ public class IDLTemp extends IDLBase {
         int pointer = internal_native_Long_4__0((int) value);
         if (pointer == 0)
             return IDLLong.NULL;
-        if (IDLLong_TEMP_STATIC_GEN_3 == null)
-            IDLLong_TEMP_STATIC_GEN_3 = IDLLong.native_new();
-        IDLLong_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
-        return IDLLong_TEMP_STATIC_GEN_3;
+        if (IDLLong_TEMP_STATIC_GEN_4 == null)
+            IDLLong_TEMP_STATIC_GEN_4 = IDLLong.native_new();
+        IDLLong_TEMP_STATIC_GEN_4.internal_reset(pointer, false);
+        return IDLLong_TEMP_STATIC_GEN_4;
     }
 
     /*
@@ -358,10 +610,10 @@ public class IDLTemp extends IDLBase {
         int pointer = internal_native_Float_1__0(value);
         if (pointer == 0)
             return IDLFloat.NULL;
-        if (IDLFloat_TEMP_STATIC_GEN_0 == null)
-            IDLFloat_TEMP_STATIC_GEN_0 = IDLFloat.native_new();
-        IDLFloat_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
-        return IDLFloat_TEMP_STATIC_GEN_0;
+        if (IDLFloat_TEMP_STATIC_GEN_1 == null)
+            IDLFloat_TEMP_STATIC_GEN_1 = IDLFloat.native_new();
+        IDLFloat_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return IDLFloat_TEMP_STATIC_GEN_1;
     }
 
     /*
@@ -377,10 +629,10 @@ public class IDLTemp extends IDLBase {
         int pointer = internal_native_Float_2__0(value);
         if (pointer == 0)
             return IDLFloat.NULL;
-        if (IDLFloat_TEMP_STATIC_GEN_1 == null)
-            IDLFloat_TEMP_STATIC_GEN_1 = IDLFloat.native_new();
-        IDLFloat_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
-        return IDLFloat_TEMP_STATIC_GEN_1;
+        if (IDLFloat_TEMP_STATIC_GEN_2 == null)
+            IDLFloat_TEMP_STATIC_GEN_2 = IDLFloat.native_new();
+        IDLFloat_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
+        return IDLFloat_TEMP_STATIC_GEN_2;
     }
 
     /*
@@ -396,10 +648,10 @@ public class IDLTemp extends IDLBase {
         int pointer = internal_native_Float_3__0(value);
         if (pointer == 0)
             return IDLFloat.NULL;
-        if (IDLFloat_TEMP_STATIC_GEN_2 == null)
-            IDLFloat_TEMP_STATIC_GEN_2 = IDLFloat.native_new();
-        IDLFloat_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
-        return IDLFloat_TEMP_STATIC_GEN_2;
+        if (IDLFloat_TEMP_STATIC_GEN_3 == null)
+            IDLFloat_TEMP_STATIC_GEN_3 = IDLFloat.native_new();
+        IDLFloat_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
+        return IDLFloat_TEMP_STATIC_GEN_3;
     }
 
     /*
@@ -415,10 +667,10 @@ public class IDLTemp extends IDLBase {
         int pointer = internal_native_Float_4__0(value);
         if (pointer == 0)
             return IDLFloat.NULL;
-        if (IDLFloat_TEMP_STATIC_GEN_3 == null)
-            IDLFloat_TEMP_STATIC_GEN_3 = IDLFloat.native_new();
-        IDLFloat_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
-        return IDLFloat_TEMP_STATIC_GEN_3;
+        if (IDLFloat_TEMP_STATIC_GEN_4 == null)
+            IDLFloat_TEMP_STATIC_GEN_4 = IDLFloat.native_new();
+        IDLFloat_TEMP_STATIC_GEN_4.internal_reset(pointer, false);
+        return IDLFloat_TEMP_STATIC_GEN_4;
     }
 
     /*
@@ -434,10 +686,10 @@ public class IDLTemp extends IDLBase {
         int pointer = internal_native_Double_1__0(value);
         if (pointer == 0)
             return IDLDouble.NULL;
-        if (IDLDouble_TEMP_STATIC_GEN_0 == null)
-            IDLDouble_TEMP_STATIC_GEN_0 = IDLDouble.native_new();
-        IDLDouble_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
-        return IDLDouble_TEMP_STATIC_GEN_0;
+        if (IDLDouble_TEMP_STATIC_GEN_1 == null)
+            IDLDouble_TEMP_STATIC_GEN_1 = IDLDouble.native_new();
+        IDLDouble_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return IDLDouble_TEMP_STATIC_GEN_1;
     }
 
     /*
@@ -453,10 +705,10 @@ public class IDLTemp extends IDLBase {
         int pointer = internal_native_Double_2__0(value);
         if (pointer == 0)
             return IDLDouble.NULL;
-        if (IDLDouble_TEMP_STATIC_GEN_1 == null)
-            IDLDouble_TEMP_STATIC_GEN_1 = IDLDouble.native_new();
-        IDLDouble_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
-        return IDLDouble_TEMP_STATIC_GEN_1;
+        if (IDLDouble_TEMP_STATIC_GEN_2 == null)
+            IDLDouble_TEMP_STATIC_GEN_2 = IDLDouble.native_new();
+        IDLDouble_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
+        return IDLDouble_TEMP_STATIC_GEN_2;
     }
 
     /*
@@ -472,10 +724,10 @@ public class IDLTemp extends IDLBase {
         int pointer = internal_native_Double_3__0(value);
         if (pointer == 0)
             return IDLDouble.NULL;
-        if (IDLDouble_TEMP_STATIC_GEN_2 == null)
-            IDLDouble_TEMP_STATIC_GEN_2 = IDLDouble.native_new();
-        IDLDouble_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
-        return IDLDouble_TEMP_STATIC_GEN_2;
+        if (IDLDouble_TEMP_STATIC_GEN_3 == null)
+            IDLDouble_TEMP_STATIC_GEN_3 = IDLDouble.native_new();
+        IDLDouble_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
+        return IDLDouble_TEMP_STATIC_GEN_3;
     }
 
     /*
@@ -491,10 +743,10 @@ public class IDLTemp extends IDLBase {
         int pointer = internal_native_Double_4__0(value);
         if (pointer == 0)
             return IDLDouble.NULL;
-        if (IDLDouble_TEMP_STATIC_GEN_3 == null)
-            IDLDouble_TEMP_STATIC_GEN_3 = IDLDouble.native_new();
-        IDLDouble_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
-        return IDLDouble_TEMP_STATIC_GEN_3;
+        if (IDLDouble_TEMP_STATIC_GEN_4 == null)
+            IDLDouble_TEMP_STATIC_GEN_4 = IDLDouble.native_new();
+        IDLDouble_TEMP_STATIC_GEN_4.internal_reset(pointer, false);
+        return IDLDouble_TEMP_STATIC_GEN_4;
     }
 
     /*
