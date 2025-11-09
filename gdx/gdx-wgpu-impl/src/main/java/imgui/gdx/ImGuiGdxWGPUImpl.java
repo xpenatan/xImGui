@@ -94,7 +94,6 @@ import imgui.ImDrawData;
 import imgui.ImDrawList;
 import imgui.ImGui;
 import imgui.ImGuiIO;
-import imgui.ImGuiImpl;
 import imgui.ImGuiPlatformIO;
 import imgui.ImTextureData;
 import imgui.ImTextureRect;
@@ -232,8 +231,6 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
     }
 
     private void createDeviceObjects() {
-
-
         WGPUShaderModuleDescriptor shaderDesc = WGPUShaderModuleDescriptor.obtain();
         WGPUShaderSourceWGSL wgslDesc = WGPUShaderSourceWGSL.obtain();
         wgslDesc.getChain().setNext(WGPUChainedStruct.NULL);
@@ -507,7 +504,6 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
     }
 
     private void createImageBindGroup(WGPUBindGroupLayout layout, WGPUTextureView texture, WGPUBindGroup bindGroup) {
-
         boolean valid = texture.isValid();
         WGPUVectorBindGroupEntry entries = WGPUVectorBindGroupEntry.obtain();
         {
@@ -615,7 +611,7 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
             int size = textures.size();
             for(int i = 0; i < size; i++) {
                 ImTextureData tex = textures.getData(i);
-                if(tex.get_Status().isNotEqual(ImTextureStatus.OK)) {
+                if(tex.get_Status() != ImTextureStatus.OK) {
                     updateTexture(tex);
                 }
             }
@@ -781,6 +777,9 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
 
                 ImTextureIDRef imTextureIDRef = pcmd.GetTexID();
                 long get = imTextureIDRef.Get();
+                if(get == 0) {
+                    continue;
+                }
                 int tex_id_hash = ImGuiInternal.ImHashData(IDLTemp.Long_1(get), Long.BYTES, 0); // Pass ImGui long memory to create hash
                 tmp_textureView.native_setAddress(get);
                 IDLBase voidPtr = storage.GetVoidPtr(tex_id_hash);

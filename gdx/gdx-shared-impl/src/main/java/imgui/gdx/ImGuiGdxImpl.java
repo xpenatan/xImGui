@@ -1,10 +1,12 @@
 package imgui.gdx;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Texture;
 import imgui.ClipboardTextFunction;
 import imgui.ImGui;
 import imgui.ImGuiImpl;
 import imgui.ImGuiPlatformIO;
+import imgui.ImTextureRef;
 import imgui.idl.helper.IDLString;
 
 public abstract class ImGuiGdxImpl implements ImGuiImpl {

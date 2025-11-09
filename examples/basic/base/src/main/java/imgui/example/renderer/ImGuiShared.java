@@ -4,6 +4,7 @@ import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
 import imgui.ImGuiImpl;
+import imgui.ImTextureRef;
 
 public final class ImGuiShared {
 
@@ -14,5 +15,6 @@ public final class ImGuiShared {
         ImGuiImpl createImpl();
         InputMultiplexer createInput();
         Texture createTexture(FileHandle fileHandler);
+        ImTextureRef getTextureRef(Texture texture);
     }
 }
