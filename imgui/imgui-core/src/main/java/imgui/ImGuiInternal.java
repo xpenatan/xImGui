@@ -12,6 +12,9 @@ import imgui.enums.ImGuiFocusRequestFlags;
 import imgui.enums.ImGuiWindowRefreshFlags;
 import imgui.enums.ImGuiItemStatusFlags;
 import imgui.enums.ImGuiItemFlags;
+import imgui.enums.ImGuiDockNodeFlags;
+import imgui.enums.ImGuiDir;
+import imgui.idl.helper.IDLIntArray;
 import imgui.idl.helper.IDLBoolArray;
 import imgui.enums.ImGuiButtonFlags;
 import imgui.enums.ImGuiDataType;
@@ -44,6 +47,10 @@ public class ImGuiInternal extends IDLBase {
     static private ImFont ImFont_TEMP_STATIC_GEN_0;
 
     static private ImDrawList ImDrawList_TEMP_STATIC_GEN_0;
+
+    private ImGuiDockNode ImGuiDockNode_TEMP_GEN_0;
+
+    private ImGuiDockNode ImGuiDockNode_TEMP_GEN_1;
 
     static public final ImGuiInternal NULL = ImGuiInternal.native_new();
 
@@ -826,6 +833,190 @@ ImGuiWrapper::ImGuiInternal::ItemSize(*((ImRect* )bb_addr), (float)text_baseline
 ImGuiWrapper::ImGuiInternal::ItemSize(*((ImRect* )bb_addr));
 */
     public static native void internal_native_ItemSize__1(long bb_addr);
+
+    public void DockBuilderDockWindow(String window_name, int node_id) {
+        internal_native_DockBuilderDockWindow(native_address, window_name, node_id);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal* nativeObject = (ImGuiWrapper::ImGuiInternal*)this_addr;
+nativeObject->DockBuilderDockWindow(window_name, (int)node_id);
+*/
+    public static native void internal_native_DockBuilderDockWindow(long this_addr, String window_name, int node_id);
+
+    public ImGuiDockNode DockBuilderGetNode(int node_id) {
+        long pointer = internal_native_DockBuilderGetNode(native_address, node_id);
+        if (pointer == 0)
+            return ImGuiDockNode.NULL;
+        if (ImGuiDockNode_TEMP_GEN_0 == null)
+            ImGuiDockNode_TEMP_GEN_0 = ImGuiDockNode.native_new();
+        ImGuiDockNode_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImGuiDockNode_TEMP_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal* nativeObject = (ImGuiWrapper::ImGuiInternal*)this_addr;
+ImGuiDockNode* obj = nativeObject->DockBuilderGetNode((int)node_id);
+return (jlong)obj;
+*/
+    public static native long internal_native_DockBuilderGetNode(long this_addr, int node_id);
+
+    public ImGuiDockNode DockBuilderGetCentralNode(int node_id) {
+        long pointer = internal_native_DockBuilderGetCentralNode(native_address, node_id);
+        if (pointer == 0)
+            return ImGuiDockNode.NULL;
+        if (ImGuiDockNode_TEMP_GEN_1 == null)
+            ImGuiDockNode_TEMP_GEN_1 = ImGuiDockNode.native_new();
+        ImGuiDockNode_TEMP_GEN_1.internal_reset(pointer, false);
+        return ImGuiDockNode_TEMP_GEN_1;
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal* nativeObject = (ImGuiWrapper::ImGuiInternal*)this_addr;
+ImGuiDockNode* obj = nativeObject->DockBuilderGetCentralNode((int)node_id);
+return (jlong)obj;
+*/
+    public static native long internal_native_DockBuilderGetCentralNode(long this_addr, int node_id);
+
+    public int DockBuilderAddNode(int node_id, ImGuiDockNodeFlags flags) {
+        return internal_native_DockBuilderAddNode(native_address, node_id, flags.getValue());
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal* nativeObject = (ImGuiWrapper::ImGuiInternal*)this_addr;
+return nativeObject->DockBuilderAddNode((int)node_id, (::ImGuiDockNodeFlags)flags);
+*/
+    public static native int internal_native_DockBuilderAddNode(long this_addr, int node_id, int flags);
+
+    public int DockBuilderAddNode(int node_id) {
+        return internal_native_DockBuilderAddNode(native_address, node_id);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal* nativeObject = (ImGuiWrapper::ImGuiInternal*)this_addr;
+return nativeObject->DockBuilderAddNode((int)node_id);
+*/
+    public static native int internal_native_DockBuilderAddNode(long this_addr, int node_id);
+
+    public int DockBuilderAddNode() {
+        return internal_native_DockBuilderAddNode(native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal* nativeObject = (ImGuiWrapper::ImGuiInternal*)this_addr;
+return nativeObject->DockBuilderAddNode();
+*/
+    public static native int internal_native_DockBuilderAddNode(long this_addr);
+
+    public void DockBuilderRemoveNode(int node_id) {
+        internal_native_DockBuilderRemoveNode(native_address, node_id);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal* nativeObject = (ImGuiWrapper::ImGuiInternal*)this_addr;
+nativeObject->DockBuilderRemoveNode((int)node_id);
+*/
+    public static native void internal_native_DockBuilderRemoveNode(long this_addr, int node_id);
+
+    public void DockBuilderRemoveNodeDockedWindows(int node_id, boolean clear_settings_refs) {
+        internal_native_DockBuilderRemoveNodeDockedWindows(native_address, node_id, clear_settings_refs);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal* nativeObject = (ImGuiWrapper::ImGuiInternal*)this_addr;
+nativeObject->DockBuilderRemoveNodeDockedWindows((int)node_id, clear_settings_refs);
+*/
+    public static native void internal_native_DockBuilderRemoveNodeDockedWindows(long this_addr, int node_id, boolean clear_settings_refs);
+
+    public void DockBuilderRemoveNodeDockedWindows(int node_id) {
+        internal_native_DockBuilderRemoveNodeDockedWindows(native_address, node_id);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal* nativeObject = (ImGuiWrapper::ImGuiInternal*)this_addr;
+nativeObject->DockBuilderRemoveNodeDockedWindows((int)node_id);
+*/
+    public static native void internal_native_DockBuilderRemoveNodeDockedWindows(long this_addr, int node_id);
+
+    public void DockBuilderRemoveNodeChildNodes(int node_id) {
+        internal_native_DockBuilderRemoveNodeChildNodes(native_address, node_id);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal* nativeObject = (ImGuiWrapper::ImGuiInternal*)this_addr;
+nativeObject->DockBuilderRemoveNodeChildNodes((int)node_id);
+*/
+    public static native void internal_native_DockBuilderRemoveNodeChildNodes(long this_addr, int node_id);
+
+    public void DockBuilderSetNodePos(int node_id, ImVec2 pos) {
+        internal_native_DockBuilderSetNodePos(native_address, node_id, pos.native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal* nativeObject = (ImGuiWrapper::ImGuiInternal*)this_addr;
+nativeObject->DockBuilderSetNodePos((int)node_id, *((ImVec2* )pos_addr));
+*/
+    public static native void internal_native_DockBuilderSetNodePos(long this_addr, int node_id, long pos_addr);
+
+    public void DockBuilderSetNodeSize(int node_id, ImVec2 size) {
+        internal_native_DockBuilderSetNodeSize(native_address, node_id, size.native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal* nativeObject = (ImGuiWrapper::ImGuiInternal*)this_addr;
+nativeObject->DockBuilderSetNodeSize((int)node_id, *((ImVec2* )size_addr));
+*/
+    public static native void internal_native_DockBuilderSetNodeSize(long this_addr, int node_id, long size_addr);
+
+    public int DockBuilderSplitNode(int node_id, ImGuiDir split_dir, float size_ratio_for_node_at_dir, IDLIntArray out_id_at_dir, IDLIntArray out_id_at_opposite_dir) {
+        return internal_native_DockBuilderSplitNode(native_address, node_id, split_dir.getValue(), size_ratio_for_node_at_dir, out_id_at_dir.native_void_address, out_id_at_opposite_dir.native_void_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal* nativeObject = (ImGuiWrapper::ImGuiInternal*)this_addr;
+return nativeObject->DockBuilderSplitNode((int)node_id, (::ImGuiDir)split_dir, (float)size_ratio_for_node_at_dir, (int*)out_id_at_dir_addr, (int*)out_id_at_opposite_dir_addr);
+*/
+    public static native int internal_native_DockBuilderSplitNode(long this_addr, int node_id, int split_dir, float size_ratio_for_node_at_dir, long out_id_at_dir_addr, long out_id_at_opposite_dir_addr);
+
+    public void DockBuilderCopyDockSpace(int src_dockspace_id, int dst_dockspace_id, ImVectorDOMString in_window_remap_pairs) {
+        internal_native_DockBuilderCopyDockSpace(native_address, src_dockspace_id, dst_dockspace_id, in_window_remap_pairs.native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal* nativeObject = (ImGuiWrapper::ImGuiInternal*)this_addr;
+nativeObject->DockBuilderCopyDockSpace((int)src_dockspace_id, (int)dst_dockspace_id, (ImVectorDOMString* )in_window_remap_pairs_addr);
+*/
+    public static native void internal_native_DockBuilderCopyDockSpace(long this_addr, int src_dockspace_id, int dst_dockspace_id, long in_window_remap_pairs_addr);
+
+    public void DockBuilderCopyNode(int src_node_id, int dst_node_id, ImVectorImGuiID out_node_remap_pairs) {
+        internal_native_DockBuilderCopyNode(native_address, src_node_id, dst_node_id, out_node_remap_pairs.native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal* nativeObject = (ImGuiWrapper::ImGuiInternal*)this_addr;
+nativeObject->DockBuilderCopyNode((int)src_node_id, (int)dst_node_id, (ImVectorImGuiID* )out_node_remap_pairs_addr);
+*/
+    public static native void internal_native_DockBuilderCopyNode(long this_addr, int src_node_id, int dst_node_id, long out_node_remap_pairs_addr);
+
+    public void DockBuilderCopyWindowSettings(String src_name, String dst_name) {
+        internal_native_DockBuilderCopyWindowSettings(native_address, src_name, dst_name);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal* nativeObject = (ImGuiWrapper::ImGuiInternal*)this_addr;
+nativeObject->DockBuilderCopyWindowSettings(src_name, dst_name);
+*/
+    public static native void internal_native_DockBuilderCopyWindowSettings(long this_addr, String src_name, String dst_name);
+
+    public void DockBuilderFinish(int node_id) {
+        internal_native_DockBuilderFinish(native_address, node_id);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal* nativeObject = (ImGuiWrapper::ImGuiInternal*)this_addr;
+nativeObject->DockBuilderFinish((int)node_id);
+*/
+    public static native void internal_native_DockBuilderFinish(long this_addr, int node_id);
 
     public static boolean ButtonBehavior(ImRect bb, int id, IDLBoolArray out_hovered, IDLBoolArray out_held, ImGuiButtonFlags ImGuiButtonFlags) {
         return internal_native_ButtonBehavior(bb.native_address, id, out_hovered.native_void_address, out_held.native_void_address, ImGuiButtonFlags.getValue());

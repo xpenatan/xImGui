@@ -360,22 +360,22 @@ interface ImGuiInternal {
 //    void          BeginDockableDragDropSource(ImGuiWindow* window);
 //    void          BeginDockableDragDropTarget(ImGuiWindow* window);
 //    void          SetWindowDock(ImGuiWindow* window, ImGuiID dock_id, ImGuiCond cond);
-//
-//    // Docking - Builder function needs to be generally called before the node is used/submitted.
-//    void          DockBuilderDockWindow(const char* window_name, ImGuiID node_id);
-//    ImGuiDockNode*DockBuilderGetNode(ImGuiID node_id);
-//    ImGuiDockNode*   DockBuilderGetCentralNode(ImGuiID node_id)              { ImGuiDockNode* node = DockBuilderGetNode(node_id); if (!node) return NULL; return DockNodeGetRootNode(node)->CentralNode; }
-//    ImGuiID       DockBuilderAddNode(ImGuiID node_id = 0, ImGuiDockNodeFlags flags = 0);
-//    void          DockBuilderRemoveNode(ImGuiID node_id);                 // Remove node and all its child, undock all windows
-//    void          DockBuilderRemoveNodeDockedWindows(ImGuiID node_id, bool clear_settings_refs = true);
-//    void          DockBuilderRemoveNodeChildNodes(ImGuiID node_id);       // Remove all split/hierarchy. All remaining docked windows will be re-docked to the remaining root node (node_id).
-//    void          DockBuilderSetNodePos(ImGuiID node_id, ImVec2 pos);
-//    void          DockBuilderSetNodeSize(ImGuiID node_id, ImVec2 size);
-//    ImGuiID       DockBuilderSplitNode(ImGuiID node_id, ImGuiDir split_dir, float size_ratio_for_node_at_dir, ImGuiID* out_id_at_dir, ImGuiID* out_id_at_opposite_dir); // Create 2 child nodes in this parent node.
-//    void          DockBuilderCopyDockSpace(ImGuiID src_dockspace_id, ImGuiID dst_dockspace_id, ImVector<const char*>* in_window_remap_pairs);
-//    void          DockBuilderCopyNode(ImGuiID src_node_id, ImGuiID dst_node_id, ImVector<ImGuiID>* out_node_remap_pairs);
-//    void          DockBuilderCopyWindowSettings(const char* src_name, const char* dst_name);
-//    void          DockBuilderFinish(ImGuiID node_id);
+
+    // Docking - Builder function needs to be generally called before the node is used/submitted.
+    void            DockBuilderDockWindow([Const] DOMString window_name, long node_id);
+    ImGuiDockNode   DockBuilderGetNode(long node_id);
+    ImGuiDockNode   DockBuilderGetCentralNode(long node_id);
+    long            DockBuilderAddNode(optional long node_id, optional ImGuiDockNodeFlags flags);
+    void            DockBuilderRemoveNode(long node_id);                 // Remove node and all its child, undock all windows
+    void            DockBuilderRemoveNodeDockedWindows(long node_id, optional boolean clear_settings_refs);
+    void            DockBuilderRemoveNodeChildNodes(long node_id);       // Remove all split/hierarchy. All remaining docked windows will be re-docked to the remaining root node (node_id).
+    void            DockBuilderSetNodePos(long node_id, [Ref] ImVec2 pos);
+    void            DockBuilderSetNodeSize(long node_id, [Ref] ImVec2 size);
+    long            DockBuilderSplitNode(long node_id, ImGuiDir split_dir, float size_ratio_for_node_at_dir, long[] out_id_at_dir, long[] out_id_at_opposite_dir); // Create 2 child nodes in this parent node.
+    void            DockBuilderCopyDockSpace(long src_dockspace_id, long dst_dockspace_id, ImVectorDOMString in_window_remap_pairs);
+    void            DockBuilderCopyNode(long src_node_id, long dst_node_id, ImVectorImGuiID out_node_remap_pairs);
+    void            DockBuilderCopyWindowSettings([Const] DOMString src_name, [Const] DOMString dst_name);
+    void            DockBuilderFinish(long node_id);
 //
 //    // [EXPERIMENTAL] Focus Scope
 //    void          PushFocusScope(ImGuiID id);
@@ -1247,6 +1247,28 @@ interface ImVectorImGuiStoragePair {
     long size();
     [Operator="[]", Ref] ImGuiStoragePair getData(long index);
     readonly attribute any Data;
+    void reserve(long new_capacity);
+    void resize(long new_size);
+    void clear();
+};
+
+interface ImVectorImGuiID {
+    readonly attribute any Data;
+    void ImVectorImGuiID();
+    long size();
+    [Operator="[]"] long getData(long index);
+    void push_back(long v);
+    void reserve(long new_capacity);
+    void resize(long new_size);
+    void clear();
+};
+
+interface ImVectorDOMString {
+    readonly attribute any Data;
+    void ImVectorDOMString();
+    long size();
+//    [Operator="[]", Const] DOMString getData(long index); // Not supported
+    void push_back([Const] DOMString v);
     void reserve(long new_capacity);
     void resize(long new_size);
     void clear();

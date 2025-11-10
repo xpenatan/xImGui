@@ -20,9 +20,11 @@ using ImVectorUnsignedInt = ImVector<unsigned int>;
 using ImVectorImDrawListPtr = ImVector<ImDrawList*>;
 using ImVectorImGuiWindowPtr = ImVector<ImGuiWindow*>;
 using ImVectorImGuiWindowStackData = ImVector<ImGuiWindowStackData>;
-using ImVectorImTextureDataPtr =  ImVector<ImTextureData*>;
-using ImVectorImTextureRect =  ImVector<ImTextureRect>;
-using ImVectorImGuiStoragePair =  ImVector<ImGuiStoragePair>;
+using ImVectorImTextureDataPtr = ImVector<ImTextureData*>;
+using ImVectorImTextureRect = ImVector<ImTextureRect>;
+using ImVectorImGuiStoragePair = ImVector<ImGuiStoragePair>;
+using ImVectorImGuiID = ImVector<ImGuiID>;
+using ImVectorDOMString = ImVector<const char*>;
 
 
 namespace im = ImGui;
@@ -332,7 +334,7 @@ public:
     static void          DockBuilderRemoveNodeChildNodes(ImGuiID node_id) { im::DockBuilderRemoveNodeChildNodes(node_id); }
     static void          DockBuilderSetNodePos(ImGuiID node_id, ImVec2 pos) { im::DockBuilderSetNodePos(node_id, pos); }
     static void          DockBuilderSetNodeSize(ImGuiID node_id, ImVec2 size) { im::DockBuilderSetNodeSize(node_id, size); }
-    static ImGuiID       DockBuilderSplitNode(ImGuiID node_id, ImGuiDir split_dir, float size_ratio_for_node_at_dir, ImGuiID* out_id_at_dir, ImGuiID* out_id_at_opposite_dir) { return im::DockBuilderSplitNode(node_id, split_dir, size_ratio_for_node_at_dir, out_id_at_dir, out_id_at_opposite_dir); }
+    static ImGuiID       DockBuilderSplitNode(ImGuiID node_id, ImGuiDir split_dir, float size_ratio_for_node_at_dir, int* out_id_at_dir, int* out_id_at_opposite_dir) { return im::DockBuilderSplitNode(node_id, split_dir, size_ratio_for_node_at_dir, (ImGuiID*)out_id_at_dir, (ImGuiID*)out_id_at_opposite_dir); }
     static void          DockBuilderCopyDockSpace(ImGuiID src_dockspace_id, ImGuiID dst_dockspace_id, ImVector<const char*>* in_window_remap_pairs) { im::DockBuilderCopyDockSpace(src_dockspace_id, dst_dockspace_id, in_window_remap_pairs); }
     static void          DockBuilderCopyNode(ImGuiID src_node_id, ImGuiID dst_node_id, ImVector<ImGuiID>* out_node_remap_pairs) { im::DockBuilderCopyNode(src_node_id, dst_node_id, out_node_remap_pairs); }
     static void          DockBuilderCopyWindowSettings(const char* src_name, const char* dst_name) { im::DockBuilderCopyWindowSettings(src_name, dst_name); }
