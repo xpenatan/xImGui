@@ -6,8 +6,11 @@
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
+import imgui.idl.helper.IDLString;
 
 public class ImVectorDOMString extends IDLBase {
+
+    private IDLString IDLString_TEMP_GEN_0;
 
     private IDLBase IDLBase_TEMP_GEN_0;
 
@@ -56,6 +59,23 @@ ImVectorDOMString* nativeObject = (ImVectorDOMString*)this_addr;
 return nativeObject->size();
 */
     public static native int internal_native_size(long this_addr);
+
+    public IDLString getData(int index) {
+        long pointer = internal_native_getData(native_address, index);
+        if (pointer == 0)
+            return IDLString.NULL;
+        if (IDLString_TEMP_GEN_0 == null)
+            IDLString_TEMP_GEN_0 = IDLString.native_new();
+        IDLString_TEMP_GEN_0.internal_reset(pointer, false);
+        return IDLString_TEMP_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+ImVectorDOMString* nativeObject = (ImVectorDOMString*)this_addr;
+static IDLString copy_addr;
+copy_addr = (*nativeObject)[(int)index];
+return (jlong)&copy_addr;*/
+    public static native long internal_native_getData(long this_addr, int index);
 
     public void push_back(String v) {
         internal_native_push_back(native_address, v);

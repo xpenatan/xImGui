@@ -1267,7 +1267,7 @@ interface ImVectorDOMString {
     readonly attribute any Data;
     void ImVectorDOMString();
     long size();
-//    [Operator="[]", Const] DOMString getData(long index); // Not supported
+    [Operator="[]", Const, Value] IDLString getData(long index);
     void push_back([Const] DOMString v);
     void reserve(long new_capacity);
     void resize(long new_size);
