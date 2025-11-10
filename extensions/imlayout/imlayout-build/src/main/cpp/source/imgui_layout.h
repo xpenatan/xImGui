@@ -127,7 +127,7 @@ private:
     float       GrabRounding;
     float       LogSliderDeadzone;
     float       TabRounding;
-    float       TabMinWidthForCloseButton;
+    float       TabCloseButtonMinWidthUnselected;
     float       TabBarOverlineSize;
     ImVec2      SeparatorTextPadding;
     float       DockingSeparatorSize;
@@ -164,7 +164,7 @@ public:
         GrabRounding = style.GrabRounding;
         LogSliderDeadzone = style.LogSliderDeadzone;
         TabRounding = style.TabRounding;
-        TabMinWidthForCloseButton = style.TabMinWidthForCloseButton;
+        TabCloseButtonMinWidthUnselected = style.TabCloseButtonMinWidthUnselected;
         TabBarOverlineSize = style.TabBarOverlineSize;
         SeparatorTextPadding = style.SeparatorTextPadding;
         DockingSeparatorSize = style.DockingSeparatorSize;
@@ -196,7 +196,7 @@ public:
         style.GrabRounding = ImTrunc(GrabRounding * scale_factor);
         style.LogSliderDeadzone = ImTrunc(LogSliderDeadzone * scale_factor);
         style.TabRounding = ImTrunc(TabRounding * scale_factor);
-        style.TabMinWidthForCloseButton = (TabMinWidthForCloseButton != FLT_MAX) ? ImTrunc(TabMinWidthForCloseButton * scale_factor) : FLT_MAX;
+        style.TabCloseButtonMinWidthUnselected = (TabCloseButtonMinWidthUnselected != FLT_MAX) ? ImTrunc(TabCloseButtonMinWidthUnselected * scale_factor) : FLT_MAX;
         style.TabBarOverlineSize = ImTrunc(TabBarOverlineSize * scale_factor);
         style.SeparatorTextPadding = ImTrunc(SeparatorTextPadding * scale_factor);
         style.DockingSeparatorSize = ImTrunc(DockingSeparatorSize * scale_factor);

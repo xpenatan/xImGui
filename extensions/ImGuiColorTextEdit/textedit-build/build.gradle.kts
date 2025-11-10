@@ -35,12 +35,12 @@ val sourceVendorDestination = "${buildDir}/ImGuiColorTextEdit/vendor/regex"
 tasks.register<Download>("download_textedit_source") {
     group = "textedit"
     description = "Download source"
-    src("https://github.com/santaclose/ImGuiColorTextEdit/archive/master.zip")
+    src("https://github.com/santaclose/ImGuiColorTextEdit/archive/264bee49ddc3c789b05d928d09c628649458da47.zip")
     dest(File(zippedPath))
     doLast {
         unzipTo(File(sourcePath), dest)
         copy{
-            from("$sourcePath/ImGuiColorTextEdit-master")
+            from("$sourcePath/ImGuiColorTextEdit-264bee49ddc3c789b05d928d09c628649458da47")
             into(sourceDestination)
         }
         delete(sourcePath)

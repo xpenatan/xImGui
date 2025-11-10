@@ -31,12 +31,12 @@ val sourceDestination = "${buildDir}/imgui-node-editor/"
 tasks.register<Download>("download_source") {
     group = "node-editor"
     description = "Download source"
-    src("https://github.com/thedmd/imgui-node-editor/archive/master.zip")
+    src("https://github.com/stephen-os/imgui-node-editor/archive/3161c85bdeb654268797b216ea9a66739e03c446.zip")
     dest(File(zippedPath))
     doLast {
         unzipTo(File(sourcePath), dest)
         copy{
-            from("$sourcePath/imgui-node-editor-master")
+            from("$sourcePath/imgui-node-editor-3161c85bdeb654268797b216ea9a66739e03c446")
             into(sourceDestination)
         }
         delete(sourcePath)

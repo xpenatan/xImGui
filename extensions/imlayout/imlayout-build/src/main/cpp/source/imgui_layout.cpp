@@ -1156,7 +1156,7 @@ void Begin(float height, bool isLeaf, bool isSelected, int isOpen) {
         if (arrowClicked) {
             isOpen = isOpen == 1 ? 0 : 1;
         }
-        float fontSize = ImGui::GetFont()->FontSize;
+        float fontSize = ImGui::GetFontSize();
         int arrowColor = IM_COL32(255, 255, 255, 255);
         ImVec2 size = bbArrow.GetSize();
         float sizeX = size.x;
@@ -1252,7 +1252,7 @@ bool ImLayout::IsTreeOpen() {
 }
 
 float ImLayout::GetTreeHeight(float padding) {
-    float fontSize = ImGui::GetFont()->FontSize;
+    float fontSize = ImGui::GetFontSize();
     return fontSize + padding;
 }
 

@@ -3,8 +3,10 @@ package imgui.example.imlayout.views;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import imgui.ImGui;
-import imgui.ImGuiDir;
 import imgui.ImTemp;
+import imgui.ImTextureRef;
+import imgui.enums.ImGuiDir;
+import imgui.example.renderer.ImGuiShared;
 import imgui.extension.imlayout.ImLayout;
 import imgui.idl.helper.IDLBoolArray;
 import imgui.idl.helper.IDLFloatArray;
@@ -106,8 +108,9 @@ public class CollapseView {
                 ImLayout.ShowLayoutDebug();
             }
 
-            ImGui.Image(buttonTexture.getTextureObjectHandle(), ImTemp.ImVec2_1(32, 32));
-            ImGui.ImageButton("##textId", buttonTexture.getTextureObjectHandle(), ImTemp.ImVec2_1(42, 42));
+            ImTextureRef textureRef = ImGuiShared.instance.getTextureRef(buttonTexture);
+            ImGui.Image(textureRef, ImTemp.ImVec2_1(32, 32));
+            ImGui.ImageButton("##textId", textureRef, ImTemp.ImVec2_1(42, 42));
 
             ImLayout.EndAlign();
         }
