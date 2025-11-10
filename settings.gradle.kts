@@ -61,10 +61,9 @@ include(":examples:imgui-node-editor:core")
 include(":examples:imgui-node-editor:desktop")
 include(":examples:imgui-node-editor:teavm")
 
-//
-//include(":examples:node-editor:core")
-//include(":examples:node-editor:desktop")
-//include(":examples:node-editor:teavm")
+include(":examples:node-editor:core")
+include(":examples:node-editor:desktop")
+include(":examples:node-editor:teavm")
 
 //include ":examples:gdx-tests:core"
 //include ":examples:gdx-tests:desktop"

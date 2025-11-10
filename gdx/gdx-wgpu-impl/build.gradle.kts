@@ -9,6 +9,7 @@ dependencies {
     api(project(":gdx:gdx-shared-impl"))
     implementation("com.badlogicgames.gdx:gdx:${LibExt.gdxVersion}")
     api("io.github.monstroussoftware.gdx-webgpu:gdx-webgpu:${LibExt.gdxWebGPUVersion}")
+    implementation("com.github.xpenatan.jParser:idl-core:${LibExt.jParserVersion}")
 }
 
 java {

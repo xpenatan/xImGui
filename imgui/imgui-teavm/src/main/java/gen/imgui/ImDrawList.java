@@ -6,6 +6,7 @@
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
+import gen.imgui.enums.ImDrawFlags;
 
 public class ImDrawList extends IDLBase {
 
@@ -13,11 +14,11 @@ public class ImDrawList extends IDLBase {
 
     private ImVec2 ImVec2_TEMP_GEN_1;
 
-    private VecCmdBuffer VecCmdBuffer_TEMP_GEN_0;
+    private ImVectorImDrawCmd ImVectorImDrawCmd_TEMP_GEN_0;
 
-    private VecIdxBuffer VecIdxBuffer_TEMP_GEN_0;
+    private ImVectorImDrawIdx ImVectorImDrawIdx_TEMP_GEN_0;
 
-    private VecVtxBuffer VecVtxBuffer_TEMP_GEN_0;
+    private ImVectorImDrawVert ImVectorImDrawVert_TEMP_GEN_0;
 
     static public final ImDrawList NULL = ImDrawList.native_new();
 
@@ -172,27 +173,27 @@ jsObj.AddLine(p1_addr, p2_addr, col);
     @org.teavm.jso.JSBody(params = {"this_addr", "p1_addr", "p2_addr", "col"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddLine(p1_addr, p2_addr, col);")
     public static native void internal_native_AddLine(int this_addr, int p1_addr, int p2_addr, int col);
 
-    public void AddRect(ImVec2 p_min, ImVec2 p_max, int col, float rounding, ImDrawFlags ImDrawFlags, float thickness) {
-        internal_native_AddRect(native_address, p_min.native_address, p_max.native_address, col, rounding, ImDrawFlags.getValue(), thickness);
+    public void AddRect(ImVec2 p_min, ImVec2 p_max, int col, float rounding, ImDrawFlags flags, float thickness) {
+        internal_native_AddRect(native_address, p_min.native_address, p_max.native_address, col, rounding, flags.getValue(), thickness);
     }
 
     /*[-TEAVM;-NATIVE]
 var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);
-jsObj.AddRect(p_min_addr, p_max_addr, col, rounding, ImDrawFlags, thickness);
+jsObj.AddRect(p_min_addr, p_max_addr, col, rounding, flags, thickness);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "p_min_addr", "p_max_addr", "col", "rounding", "ImDrawFlags", "thickness"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddRect(p_min_addr, p_max_addr, col, rounding, ImDrawFlags, thickness);")
-    public static native void internal_native_AddRect(int this_addr, int p_min_addr, int p_max_addr, int col, float rounding, int ImDrawFlags, float thickness);
+    @org.teavm.jso.JSBody(params = {"this_addr", "p_min_addr", "p_max_addr", "col", "rounding", "flags", "thickness"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddRect(p_min_addr, p_max_addr, col, rounding, flags, thickness);")
+    public static native void internal_native_AddRect(int this_addr, int p_min_addr, int p_max_addr, int col, float rounding, int flags, float thickness);
 
-    public void AddRect(ImVec2 p_min, ImVec2 p_max, int col, float rounding, ImDrawFlags ImDrawFlags) {
-        internal_native_AddRect(native_address, p_min.native_address, p_max.native_address, col, rounding, ImDrawFlags.getValue());
+    public void AddRect(ImVec2 p_min, ImVec2 p_max, int col, float rounding, ImDrawFlags flags) {
+        internal_native_AddRect(native_address, p_min.native_address, p_max.native_address, col, rounding, flags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
 var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);
-jsObj.AddRect(p_min_addr, p_max_addr, col, rounding, ImDrawFlags);
+jsObj.AddRect(p_min_addr, p_max_addr, col, rounding, flags);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "p_min_addr", "p_max_addr", "col", "rounding", "ImDrawFlags"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddRect(p_min_addr, p_max_addr, col, rounding, ImDrawFlags);")
-    public static native void internal_native_AddRect(int this_addr, int p_min_addr, int p_max_addr, int col, float rounding, int ImDrawFlags);
+    @org.teavm.jso.JSBody(params = {"this_addr", "p_min_addr", "p_max_addr", "col", "rounding", "flags"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddRect(p_min_addr, p_max_addr, col, rounding, flags);")
+    public static native void internal_native_AddRect(int this_addr, int p_min_addr, int p_max_addr, int col, float rounding, int flags);
 
     public void AddRect(ImVec2 p_min, ImVec2 p_max, int col, float rounding) {
         internal_native_AddRect(native_address, p_min.native_address, p_max.native_address, col, rounding);
@@ -216,16 +217,16 @@ jsObj.AddRect(p_min_addr, p_max_addr, col);
     @org.teavm.jso.JSBody(params = {"this_addr", "p_min_addr", "p_max_addr", "col"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddRect(p_min_addr, p_max_addr, col);")
     public static native void internal_native_AddRect(int this_addr, int p_min_addr, int p_max_addr, int col);
 
-    public void AddRectFilled(ImVec2 p_min, ImVec2 p_max, int col, float rounding, ImDrawFlags ImDrawFlags) {
-        internal_native_AddRectFilled(native_address, p_min.native_address, p_max.native_address, col, rounding, ImDrawFlags.getValue());
+    public void AddRectFilled(ImVec2 p_min, ImVec2 p_max, int col, float rounding, ImDrawFlags flags) {
+        internal_native_AddRectFilled(native_address, p_min.native_address, p_max.native_address, col, rounding, flags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
 var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);
-jsObj.AddRectFilled(p_min_addr, p_max_addr, col, rounding, ImDrawFlags);
+jsObj.AddRectFilled(p_min_addr, p_max_addr, col, rounding, flags);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "p_min_addr", "p_max_addr", "col", "rounding", "ImDrawFlags"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddRectFilled(p_min_addr, p_max_addr, col, rounding, ImDrawFlags);")
-    public static native void internal_native_AddRectFilled(int this_addr, int p_min_addr, int p_max_addr, int col, float rounding, int ImDrawFlags);
+    @org.teavm.jso.JSBody(params = {"this_addr", "p_min_addr", "p_max_addr", "col", "rounding", "flags"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddRectFilled(p_min_addr, p_max_addr, col, rounding, flags);")
+    public static native void internal_native_AddRectFilled(int this_addr, int p_min_addr, int p_max_addr, int col, float rounding, int flags);
 
     public void AddRectFilled(ImVec2 p_min, ImVec2 p_max, int col, float rounding) {
         internal_native_AddRectFilled(native_address, p_min.native_address, p_max.native_address, col, rounding);
@@ -513,50 +514,6 @@ jsObj.AddText(pos_addr, col, text_begin);
     @org.teavm.jso.JSBody(params = {"this_addr", "pos_addr", "col", "text_begin"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddText(pos_addr, col, text_begin);")
     public static native void internal_native_AddText(int this_addr, int pos_addr, int col, String text_begin);
 
-    public void AddText(ImFont font, float font_size, ImVec2 pos, int col, String text_begin, String text_end, float wrap_width, ImVec4 cpu_fine_clip_rect) {
-        internal_native_AddText(native_address, font.native_address, font_size, pos.native_address, col, text_begin, text_end, wrap_width, cpu_fine_clip_rect.native_address);
-    }
-
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);
-jsObj.AddText(font_addr, font_size, pos_addr, col, text_begin, text_end, wrap_width, cpu_fine_clip_rect_addr);
-*/
-    @org.teavm.jso.JSBody(params = {"this_addr", "font_addr", "font_size", "pos_addr", "col", "text_begin", "text_end", "wrap_width", "cpu_fine_clip_rect_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddText(font_addr, font_size, pos_addr, col, text_begin, text_end, wrap_width, cpu_fine_clip_rect_addr);")
-    public static native void internal_native_AddText(int this_addr, int font_addr, float font_size, int pos_addr, int col, String text_begin, String text_end, float wrap_width, int cpu_fine_clip_rect_addr);
-
-    public void AddText(ImFont font, float font_size, ImVec2 pos, int col, String text_begin, String text_end, float wrap_width) {
-        internal_native_AddText(native_address, font.native_address, font_size, pos.native_address, col, text_begin, text_end, wrap_width);
-    }
-
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);
-jsObj.AddText(font_addr, font_size, pos_addr, col, text_begin, text_end, wrap_width);
-*/
-    @org.teavm.jso.JSBody(params = {"this_addr", "font_addr", "font_size", "pos_addr", "col", "text_begin", "text_end", "wrap_width"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddText(font_addr, font_size, pos_addr, col, text_begin, text_end, wrap_width);")
-    public static native void internal_native_AddText(int this_addr, int font_addr, float font_size, int pos_addr, int col, String text_begin, String text_end, float wrap_width);
-
-    public void AddText(ImFont font, float font_size, ImVec2 pos, int col, String text_begin, String text_end) {
-        internal_native_AddText(native_address, font.native_address, font_size, pos.native_address, col, text_begin, text_end);
-    }
-
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);
-jsObj.AddText(font_addr, font_size, pos_addr, col, text_begin, text_end);
-*/
-    @org.teavm.jso.JSBody(params = {"this_addr", "font_addr", "font_size", "pos_addr", "col", "text_begin", "text_end"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddText(font_addr, font_size, pos_addr, col, text_begin, text_end);")
-    public static native void internal_native_AddText(int this_addr, int font_addr, float font_size, int pos_addr, int col, String text_begin, String text_end);
-
-    public void AddText(ImFont font, float font_size, ImVec2 pos, int col, String text_begin) {
-        internal_native_AddText(native_address, font.native_address, font_size, pos.native_address, col, text_begin);
-    }
-
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);
-jsObj.AddText(font_addr, font_size, pos_addr, col, text_begin);
-*/
-    @org.teavm.jso.JSBody(params = {"this_addr", "font_addr", "font_size", "pos_addr", "col", "text_begin"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddText(font_addr, font_size, pos_addr, col, text_begin);")
-    public static native void internal_native_AddText(int this_addr, int font_addr, float font_size, int pos_addr, int col, String text_begin);
-
     public void AddBezierCubic(ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, int col, float thickness, int num_segments) {
         internal_native_AddBezierCubic(native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, col, thickness, num_segments);
     }
@@ -711,16 +668,16 @@ jsObj.AddImageQuad(user_texture_id_addr, p1_addr, p2_addr, p3_addr, p4_addr);
     @org.teavm.jso.JSBody(params = {"this_addr", "user_texture_id_addr", "p1_addr", "p2_addr", "p3_addr", "p4_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImageQuad(user_texture_id_addr, p1_addr, p2_addr, p3_addr, p4_addr);")
     public static native void internal_native_AddImageQuad(int this_addr, int user_texture_id_addr, int p1_addr, int p2_addr, int p3_addr, int p4_addr);
 
-    public void AddImageRounded(IDLBase user_texture_id, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max, int col, float rounding, ImDrawFlags ImDrawFlags) {
-        internal_native_AddImageRounded(native_address, user_texture_id.native_void_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address, col, rounding, ImDrawFlags.getValue());
+    public void AddImageRounded(IDLBase user_texture_id, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max, int col, float rounding, ImDrawFlags flags) {
+        internal_native_AddImageRounded(native_address, user_texture_id.native_void_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address, col, rounding, flags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
 var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);
-jsObj.AddImageRounded(user_texture_id_addr, p_min_addr, p_max_addr, uv_min_addr, uv_max_addr, col, rounding, ImDrawFlags);
+jsObj.AddImageRounded(user_texture_id_addr, p_min_addr, p_max_addr, uv_min_addr, uv_max_addr, col, rounding, flags);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "user_texture_id_addr", "p_min_addr", "p_max_addr", "uv_min_addr", "uv_max_addr", "col", "rounding", "ImDrawFlags"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImageRounded(user_texture_id_addr, p_min_addr, p_max_addr, uv_min_addr, uv_max_addr, col, rounding, ImDrawFlags);")
-    public static native void internal_native_AddImageRounded(int this_addr, int user_texture_id_addr, int p_min_addr, int p_max_addr, int uv_min_addr, int uv_max_addr, int col, float rounding, int ImDrawFlags);
+    @org.teavm.jso.JSBody(params = {"this_addr", "user_texture_id_addr", "p_min_addr", "p_max_addr", "uv_min_addr", "uv_max_addr", "col", "rounding", "flags"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImageRounded(user_texture_id_addr, p_min_addr, p_max_addr, uv_min_addr, uv_max_addr, col, rounding, flags);")
+    public static native void internal_native_AddImageRounded(int this_addr, int user_texture_id_addr, int p_min_addr, int p_max_addr, int uv_min_addr, int uv_max_addr, int col, float rounding, int flags);
 
     public void AddImageRounded(IDLBase user_texture_id, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max, int col, float rounding) {
         internal_native_AddImageRounded(native_address, user_texture_id.native_void_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address, col, rounding);
@@ -777,27 +734,27 @@ jsObj.PathFillConvex(col);
     @org.teavm.jso.JSBody(params = {"this_addr", "col"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.PathFillConvex(col);")
     public static native void internal_native_PathFillConvex(int this_addr, int col);
 
-    public void PathStroke(int col, ImDrawFlags ImDrawFlags, float thickness) {
-        internal_native_PathStroke(native_address, col, ImDrawFlags.getValue(), thickness);
+    public void PathStroke(int col, ImDrawFlags flags, float thickness) {
+        internal_native_PathStroke(native_address, col, flags.getValue(), thickness);
     }
 
     /*[-TEAVM;-NATIVE]
 var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);
-jsObj.PathStroke(col, ImDrawFlags, thickness);
+jsObj.PathStroke(col, flags, thickness);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "col", "ImDrawFlags", "thickness"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.PathStroke(col, ImDrawFlags, thickness);")
-    public static native void internal_native_PathStroke(int this_addr, int col, int ImDrawFlags, float thickness);
+    @org.teavm.jso.JSBody(params = {"this_addr", "col", "flags", "thickness"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.PathStroke(col, flags, thickness);")
+    public static native void internal_native_PathStroke(int this_addr, int col, int flags, float thickness);
 
-    public void PathStroke(int col, ImDrawFlags ImDrawFlags) {
-        internal_native_PathStroke(native_address, col, ImDrawFlags.getValue());
+    public void PathStroke(int col, ImDrawFlags flags) {
+        internal_native_PathStroke(native_address, col, flags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
 var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);
-jsObj.PathStroke(col, ImDrawFlags);
+jsObj.PathStroke(col, flags);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "col", "ImDrawFlags"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.PathStroke(col, ImDrawFlags);")
-    public static native void internal_native_PathStroke(int this_addr, int col, int ImDrawFlags);
+    @org.teavm.jso.JSBody(params = {"this_addr", "col", "flags"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.PathStroke(col, flags);")
+    public static native void internal_native_PathStroke(int this_addr, int col, int flags);
 
     public void PathStroke(int col) {
         internal_native_PathStroke(native_address, col);
@@ -843,14 +800,14 @@ jsObj.ChannelsSetCurrent(n);
     @org.teavm.jso.JSBody(params = {"this_addr", "n"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.ChannelsSetCurrent(n);")
     public static native void internal_native_ChannelsSetCurrent(int this_addr, int n);
 
-    public VecCmdBuffer get_CmdBuffer() {
+    public ImVectorImDrawCmd get_CmdBuffer() {
         int pointer = internal_native_get_CmdBuffer(native_address);
         if (pointer == 0)
-            return VecCmdBuffer.NULL;
-        if (VecCmdBuffer_TEMP_GEN_0 == null)
-            VecCmdBuffer_TEMP_GEN_0 = VecCmdBuffer.native_new();
-        VecCmdBuffer_TEMP_GEN_0.internal_reset(pointer, false);
-        return VecCmdBuffer_TEMP_GEN_0;
+            return ImVectorImDrawCmd.NULL;
+        if (ImVectorImDrawCmd_TEMP_GEN_0 == null)
+            ImVectorImDrawCmd_TEMP_GEN_0 = ImVectorImDrawCmd.native_new();
+        ImVectorImDrawCmd_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImVectorImDrawCmd_TEMP_GEN_0;
     }
 
     /*[-TEAVM;-NATIVE]
@@ -862,7 +819,7 @@ return imgui.getPointer(returnedJSObj);
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);var returnedJSObj = jsObj.get_CmdBuffer();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_CmdBuffer(int this_addr);
 
-    public void set_CmdBuffer(VecCmdBuffer CmdBuffer) {
+    public void set_CmdBuffer(ImVectorImDrawCmd CmdBuffer) {
         internal_native_set_CmdBuffer(native_address, CmdBuffer.native_address);
     }
 
@@ -873,14 +830,14 @@ jsObj.set_CmdBuffer(CmdBuffer_addr);
     @org.teavm.jso.JSBody(params = {"this_addr", "CmdBuffer_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.set_CmdBuffer(CmdBuffer_addr);")
     public static native void internal_native_set_CmdBuffer(int this_addr, int CmdBuffer_addr);
 
-    public VecIdxBuffer get_IdxBuffer() {
+    public ImVectorImDrawIdx get_IdxBuffer() {
         int pointer = internal_native_get_IdxBuffer(native_address);
         if (pointer == 0)
-            return VecIdxBuffer.NULL;
-        if (VecIdxBuffer_TEMP_GEN_0 == null)
-            VecIdxBuffer_TEMP_GEN_0 = VecIdxBuffer.native_new();
-        VecIdxBuffer_TEMP_GEN_0.internal_reset(pointer, false);
-        return VecIdxBuffer_TEMP_GEN_0;
+            return ImVectorImDrawIdx.NULL;
+        if (ImVectorImDrawIdx_TEMP_GEN_0 == null)
+            ImVectorImDrawIdx_TEMP_GEN_0 = ImVectorImDrawIdx.native_new();
+        ImVectorImDrawIdx_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImVectorImDrawIdx_TEMP_GEN_0;
     }
 
     /*[-TEAVM;-NATIVE]
@@ -892,7 +849,7 @@ return imgui.getPointer(returnedJSObj);
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);var returnedJSObj = jsObj.get_IdxBuffer();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_IdxBuffer(int this_addr);
 
-    public void set_IdxBuffer(VecIdxBuffer IdxBuffer) {
+    public void set_IdxBuffer(ImVectorImDrawIdx IdxBuffer) {
         internal_native_set_IdxBuffer(native_address, IdxBuffer.native_address);
     }
 
@@ -903,14 +860,14 @@ jsObj.set_IdxBuffer(IdxBuffer_addr);
     @org.teavm.jso.JSBody(params = {"this_addr", "IdxBuffer_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.set_IdxBuffer(IdxBuffer_addr);")
     public static native void internal_native_set_IdxBuffer(int this_addr, int IdxBuffer_addr);
 
-    public VecVtxBuffer get_VtxBuffer() {
+    public ImVectorImDrawVert get_VtxBuffer() {
         int pointer = internal_native_get_VtxBuffer(native_address);
         if (pointer == 0)
-            return VecVtxBuffer.NULL;
-        if (VecVtxBuffer_TEMP_GEN_0 == null)
-            VecVtxBuffer_TEMP_GEN_0 = VecVtxBuffer.native_new();
-        VecVtxBuffer_TEMP_GEN_0.internal_reset(pointer, false);
-        return VecVtxBuffer_TEMP_GEN_0;
+            return ImVectorImDrawVert.NULL;
+        if (ImVectorImDrawVert_TEMP_GEN_0 == null)
+            ImVectorImDrawVert_TEMP_GEN_0 = ImVectorImDrawVert.native_new();
+        ImVectorImDrawVert_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImVectorImDrawVert_TEMP_GEN_0;
     }
 
     /*[-TEAVM;-NATIVE]
@@ -922,7 +879,7 @@ return imgui.getPointer(returnedJSObj);
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);var returnedJSObj = jsObj.get_VtxBuffer();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_VtxBuffer(int this_addr);
 
-    public void set_VtxBuffer(VecVtxBuffer VtxBuffer) {
+    public void set_VtxBuffer(ImVectorImDrawVert VtxBuffer) {
         internal_native_set_VtxBuffer(native_address, VtxBuffer.native_address);
     }
 

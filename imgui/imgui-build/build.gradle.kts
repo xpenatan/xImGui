@@ -31,7 +31,7 @@ val sourceDestination = "${buildDir}/imgui/"
 tasks.register<Download>("download_source") {
     group = "imgui"
     description = "Download imgui source"
-    src("https://github.com/xpenatan/imgui/archive/docking.zip")
+    src("https://github.com/ocornut/imgui/archive/v1.92.4-docking.zip")
     dest(File(zippedPath))
     doLast {
         unzipTo(File(sourcePath), dest)

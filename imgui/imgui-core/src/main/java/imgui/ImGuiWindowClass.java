@@ -6,6 +6,9 @@
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
+import imgui.enums.ImGuiViewportFlags;
+import imgui.enums.ImGuiTabItemFlags;
+import imgui.enums.ImGuiDockNodeFlags;
 
 public class ImGuiWindowClass extends IDLBase {
 

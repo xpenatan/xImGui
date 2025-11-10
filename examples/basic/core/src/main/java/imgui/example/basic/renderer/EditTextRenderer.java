@@ -2,11 +2,11 @@ package imgui.example.basic.renderer;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
 import imgui.ImGui;
-import imgui.ImGuiDataType;
-import imgui.ImGuiInputTextFlags;
+import imgui.enums.ImGuiDataType;
+import imgui.enums.ImGuiInputTextFlags;
 import imgui.ImGuiInternal;
-import imgui.ImGuiMouseButton;
-import imgui.ImGuiSliderFlags;
+import imgui.enums.ImGuiMouseButton;
+import imgui.enums.ImGuiSliderFlags;
 import imgui.ImGuiString;
 import imgui.ImGuiWindow;
 import imgui.idl.helper.IDLFloatArray;

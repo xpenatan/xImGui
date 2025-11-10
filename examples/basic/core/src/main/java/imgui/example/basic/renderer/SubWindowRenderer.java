@@ -1,11 +1,11 @@
 package imgui.example.basic.renderer;
 
 import imgui.ImGui;
-import imgui.ImGuiDockNodeFlags;
-import imgui.ImGuiStyleVar;
+import imgui.enums.ImGuiDockNodeFlags;
+import imgui.enums.ImGuiStyleVar;
 import imgui.ImGuiViewport;
 import imgui.ImGuiWindowClass;
-import imgui.ImGuiWindowFlags;
+import imgui.enums.ImGuiWindowFlags;
 import imgui.ImTemp;
 import imgui.ImVec2;
 

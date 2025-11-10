@@ -9,9 +9,9 @@ import gen.com.github.xpenatan.jParser.idl.IDLBase;
 
 public class ImDrawCmd extends IDLBase {
 
-    private ImVec4 ImVec4_TEMP_GEN_0;
+    private ImTextureIDRef ImTextureIDRef_TEMP_GEN_0;
 
-    private IDLBase IDLBase_TEMP_GEN_0;
+    private ImVec4 ImVec4_TEMP_GEN_0;
 
     static public final ImDrawCmd NULL = ImDrawCmd.native_new();
 
@@ -39,6 +39,25 @@ imgui.destroy(jsObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);imgui.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
+
+    public ImTextureIDRef GetTexID() {
+        int pointer = internal_native_GetTexID(native_address);
+        if (pointer == 0)
+            return ImTextureIDRef.NULL;
+        if (ImTextureIDRef_TEMP_GEN_0 == null)
+            ImTextureIDRef_TEMP_GEN_0 = ImTextureIDRef.native_new();
+        ImTextureIDRef_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImTextureIDRef_TEMP_GEN_0;
+    }
+
+    /*[-TEAVM;-NATIVE]
+var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);
+var returnedJSObj = jsObj.GetTexID();
+if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
+return imgui.getPointer(returnedJSObj);
+*/
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);var returnedJSObj = jsObj.GetTexID();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_GetTexID(int this_addr);
 
     public ImVec4 get_ClipRect() {
         int pointer = internal_native_get_ClipRect(native_address);
@@ -135,32 +154,4 @@ jsObj.set_ElemCount(ElemCount);
 */
     @org.teavm.jso.JSBody(params = {"this_addr", "ElemCount"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);jsObj.set_ElemCount(ElemCount);")
     public static native void internal_native_set_ElemCount(int this_addr, int ElemCount);
-
-    public IDLBase get_TextureId() {
-        int pointer = internal_native_get_TextureId(native_address);
-        if (pointer == 0)
-            return IDLBase.NULL;
-        if (IDLBase_TEMP_GEN_0 == null)
-            IDLBase_TEMP_GEN_0 = IDLBase.native_new();
-        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
-        return IDLBase_TEMP_GEN_0;
-    }
-
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);
-return jsObj.get_TextureId();
-*/
-    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);return jsObj.get_TextureId();")
-    public static native int internal_native_get_TextureId(int this_addr);
-
-    public void set_TextureId(IDLBase TextureId) {
-        internal_native_set_TextureId(native_address, TextureId.native_void_address);
-    }
-
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);
-jsObj.set_TextureId(TextureId_addr);
-*/
-    @org.teavm.jso.JSBody(params = {"this_addr", "TextureId_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);jsObj.set_TextureId(TextureId_addr);")
-    public static native void internal_native_set_TextureId(int this_addr, int TextureId_addr);
 }

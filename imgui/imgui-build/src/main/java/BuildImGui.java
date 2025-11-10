@@ -7,7 +7,9 @@ import com.github.xpenatan.jParser.builder.targets.WindowsMSVCTarget;
 import com.github.xpenatan.jParser.builder.tool.BuildToolListener;
 import com.github.xpenatan.jParser.builder.tool.BuildToolOptions;
 import com.github.xpenatan.jParser.builder.tool.BuilderTool;
+import com.github.xpenatan.jParser.idl.IDLClassOrEnum;
 import com.github.xpenatan.jParser.idl.IDLReader;
+import com.github.xpenatan.jParser.idl.IDLRenaming;
 import java.util.ArrayList;
 
 public class BuildImGui {
@@ -54,6 +56,46 @@ public class BuildImGui {
 //                if(op.containsArg("iOS")) {
 //                    targets.add(getIOSTarget(op));
 //                }
+            }
+        }, new IDLRenaming() {
+
+            @Override
+            public String obtainNewPackage(IDLClassOrEnum idlClassOrEnum, String classPackage) {
+                if(idlClassOrEnum.isEnum()) {
+                    classPackage = "enums";
+                }
+                return classPackage;
+            }
+
+            @Override
+            public String getIDLEnumName(String enumName) {
+                String newName = null;
+                if(enumName.contains("_")) {
+                    String[] s = enumName.split("_", 2);
+                    newName = s[1];
+                    switch(newName) {
+                        case "0":
+                        case "1":
+                        case "2":
+                        case "3":
+                        case "4":
+                        case "5":
+                        case "6":
+                        case "7":
+                        case "8":
+                        case "9":
+                        case "10":
+                            newName = "Num_" + newName;
+                        break;
+                    }
+                    if(enumName.startsWith("ImGuiMod")) {
+                        newName = null;
+                    }
+                }
+                if(newName != null) {
+                    enumName = newName;
+                }
+                return enumName;
             }
         });
     }

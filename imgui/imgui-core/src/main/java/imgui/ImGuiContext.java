@@ -9,9 +9,15 @@ import com.github.xpenatan.jParser.idl.IDLBase;
 
 public class ImGuiContext extends IDLBase {
 
-    private ImGuiStorage ImGuiStorage_TEMP_GEN_0;
+    private ImVectorImGuiWindowPtr ImVectorImGuiWindowPtr_TEMP_GEN_0;
 
-    private ImVec2 ImVec2_TEMP_GEN_0;
+    private ImVectorImGuiWindowPtr ImVectorImGuiWindowPtr_TEMP_GEN_1;
+
+    private ImVectorImGuiWindowPtr ImVectorImGuiWindowPtr_TEMP_GEN_2;
+
+    private ImVectorImGuiWindowStackData ImVectorImGuiWindowStackData_TEMP_GEN_0;
+
+    private ImGuiStorage ImGuiStorage_TEMP_GEN_0;
 
     private ImGuiWindow ImGuiWindow_TEMP_GEN_0;
 
@@ -23,9 +29,15 @@ public class ImGuiContext extends IDLBase {
 
     private ImGuiWindow ImGuiWindow_TEMP_GEN_4;
 
+    private ImGuiWindow ImGuiWindow_TEMP_GEN_5;
+
+    private ImVec2 ImVec2_TEMP_GEN_0;
+
     private ImVec2 ImVec2_TEMP_GEN_1;
 
-    private ImGuiWindow ImGuiWindow_TEMP_GEN_5;
+    private ImVec2 ImVec2_TEMP_GEN_2;
+
+    private ImVec2 ImVec2_TEMP_GEN_3;
 
     private ImGuiWindow ImGuiWindow_TEMP_GEN_6;
 
@@ -67,6 +79,70 @@ return nativeObject->NavId;
 */
     public static native int internal_native_get_NavId(long this_addr);
 
+    public ImVectorImGuiWindowPtr get_Windows() {
+        long pointer = internal_native_get_Windows(native_address);
+        if (pointer == 0)
+            return ImVectorImGuiWindowPtr.NULL;
+        if (ImVectorImGuiWindowPtr_TEMP_GEN_0 == null)
+            ImVectorImGuiWindowPtr_TEMP_GEN_0 = ImVectorImGuiWindowPtr.native_new();
+        ImVectorImGuiWindowPtr_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImVectorImGuiWindowPtr_TEMP_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
+return (jlong)&nativeObject->Windows;
+*/
+    public static native long internal_native_get_Windows(long this_addr);
+
+    public ImVectorImGuiWindowPtr get_WindowsFocusOrder() {
+        long pointer = internal_native_get_WindowsFocusOrder(native_address);
+        if (pointer == 0)
+            return ImVectorImGuiWindowPtr.NULL;
+        if (ImVectorImGuiWindowPtr_TEMP_GEN_1 == null)
+            ImVectorImGuiWindowPtr_TEMP_GEN_1 = ImVectorImGuiWindowPtr.native_new();
+        ImVectorImGuiWindowPtr_TEMP_GEN_1.internal_reset(pointer, false);
+        return ImVectorImGuiWindowPtr_TEMP_GEN_1;
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
+return (jlong)&nativeObject->WindowsFocusOrder;
+*/
+    public static native long internal_native_get_WindowsFocusOrder(long this_addr);
+
+    public ImVectorImGuiWindowPtr get_WindowsTempSortBuffer() {
+        long pointer = internal_native_get_WindowsTempSortBuffer(native_address);
+        if (pointer == 0)
+            return ImVectorImGuiWindowPtr.NULL;
+        if (ImVectorImGuiWindowPtr_TEMP_GEN_2 == null)
+            ImVectorImGuiWindowPtr_TEMP_GEN_2 = ImVectorImGuiWindowPtr.native_new();
+        ImVectorImGuiWindowPtr_TEMP_GEN_2.internal_reset(pointer, false);
+        return ImVectorImGuiWindowPtr_TEMP_GEN_2;
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
+return (jlong)&nativeObject->WindowsTempSortBuffer;
+*/
+    public static native long internal_native_get_WindowsTempSortBuffer(long this_addr);
+
+    public ImVectorImGuiWindowStackData get_CurrentWindowStack() {
+        long pointer = internal_native_get_CurrentWindowStack(native_address);
+        if (pointer == 0)
+            return ImVectorImGuiWindowStackData.NULL;
+        if (ImVectorImGuiWindowStackData_TEMP_GEN_0 == null)
+            ImVectorImGuiWindowStackData_TEMP_GEN_0 = ImVectorImGuiWindowStackData.native_new();
+        ImVectorImGuiWindowStackData_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImVectorImGuiWindowStackData_TEMP_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
+return (jlong)&nativeObject->CurrentWindowStack;
+*/
+    public static native long internal_native_get_CurrentWindowStack(long this_addr);
+
     public ImGuiStorage get_WindowsById() {
         long pointer = internal_native_get_WindowsById(native_address);
         if (pointer == 0)
@@ -93,21 +169,15 @@ return nativeObject->WindowsActiveCount;
 */
     public static native int internal_native_get_WindowsActiveCount(long this_addr);
 
-    public ImVec2 get_WindowsHoverPadding() {
-        long pointer = internal_native_get_WindowsHoverPadding(native_address);
-        if (pointer == 0)
-            return ImVec2.NULL;
-        if (ImVec2_TEMP_GEN_0 == null)
-            ImVec2_TEMP_GEN_0 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
-        return ImVec2_TEMP_GEN_0;
+    public float get_WindowsBorderHoverPadding() {
+        return internal_native_get_WindowsBorderHoverPadding(native_address);
     }
 
     /*[-JNI;-NATIVE]
 ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return (jlong)&nativeObject->WindowsHoverPadding;
+return nativeObject->WindowsBorderHoverPadding;
 */
-    public static native long internal_native_get_WindowsHoverPadding(long this_addr);
+    public static native float internal_native_get_WindowsBorderHoverPadding(long this_addr);
 
     public int get_DebugBreakInWindow() {
         return internal_native_get_DebugBreakInWindow(native_address);
@@ -170,14 +240,31 @@ return (jlong)attr;
 */
     public static native long internal_native_get_HoveredWindowUnderMovingWindow(long this_addr);
 
-    public ImGuiWindow get_MovingWindow() {
-        long pointer = internal_native_get_MovingWindow(native_address);
+    public ImGuiWindow get_HoveredWindowBeforeClear() {
+        long pointer = internal_native_get_HoveredWindowBeforeClear(native_address);
         if (pointer == 0)
             return ImGuiWindow.NULL;
         if (ImGuiWindow_TEMP_GEN_3 == null)
             ImGuiWindow_TEMP_GEN_3 = ImGuiWindow.native_new();
         ImGuiWindow_TEMP_GEN_3.internal_reset(pointer, false);
         return ImGuiWindow_TEMP_GEN_3;
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
+ImGuiWindow* attr = nativeObject->HoveredWindowBeforeClear;
+return (jlong)attr;
+*/
+    public static native long internal_native_get_HoveredWindowBeforeClear(long this_addr);
+
+    public ImGuiWindow get_MovingWindow() {
+        long pointer = internal_native_get_MovingWindow(native_address);
+        if (pointer == 0)
+            return ImGuiWindow.NULL;
+        if (ImGuiWindow_TEMP_GEN_4 == null)
+            ImGuiWindow_TEMP_GEN_4 = ImGuiWindow.native_new();
+        ImGuiWindow_TEMP_GEN_4.internal_reset(pointer, false);
+        return ImGuiWindow_TEMP_GEN_4;
     }
 
     /*[-JNI;-NATIVE]
@@ -191,10 +278,10 @@ return (jlong)attr;
         long pointer = internal_native_get_WheelingWindow(native_address);
         if (pointer == 0)
             return ImGuiWindow.NULL;
-        if (ImGuiWindow_TEMP_GEN_4 == null)
-            ImGuiWindow_TEMP_GEN_4 = ImGuiWindow.native_new();
-        ImGuiWindow_TEMP_GEN_4.internal_reset(pointer, false);
-        return ImGuiWindow_TEMP_GEN_4;
+        if (ImGuiWindow_TEMP_GEN_5 == null)
+            ImGuiWindow_TEMP_GEN_5 = ImGuiWindow.native_new();
+        ImGuiWindow_TEMP_GEN_5.internal_reset(pointer, false);
+        return ImGuiWindow_TEMP_GEN_5;
     }
 
     /*[-JNI;-NATIVE]
@@ -204,15 +291,103 @@ return (jlong)attr;
 */
     public static native long internal_native_get_WheelingWindow(long this_addr);
 
-    public int get_DebugHookIdInfo() {
-        return internal_native_get_DebugHookIdInfo(native_address);
+    public ImVec2 get_WheelingWindowRefMousePos() {
+        long pointer = internal_native_get_WheelingWindowRefMousePos(native_address);
+        if (pointer == 0)
+            return ImVec2.NULL;
+        if (ImVec2_TEMP_GEN_0 == null)
+            ImVec2_TEMP_GEN_0 = ImVec2.native_new();
+        ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImVec2_TEMP_GEN_0;
     }
 
     /*[-JNI;-NATIVE]
 ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->DebugHookIdInfo;
+return (jlong)&nativeObject->WheelingWindowRefMousePos;
 */
-    public static native int internal_native_get_DebugHookIdInfo(long this_addr);
+    public static native long internal_native_get_WheelingWindowRefMousePos(long this_addr);
+
+    public int get_WheelingWindowStartFrame() {
+        return internal_native_get_WheelingWindowStartFrame(native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
+return nativeObject->WheelingWindowStartFrame;
+*/
+    public static native int internal_native_get_WheelingWindowStartFrame(long this_addr);
+
+    public int get_WheelingWindowScrolledFrame() {
+        return internal_native_get_WheelingWindowScrolledFrame(native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
+return nativeObject->WheelingWindowScrolledFrame;
+*/
+    public static native int internal_native_get_WheelingWindowScrolledFrame(long this_addr);
+
+    public float get_WheelingWindowReleaseTimer() {
+        return internal_native_get_WheelingWindowReleaseTimer(native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
+return nativeObject->WheelingWindowReleaseTimer;
+*/
+    public static native float internal_native_get_WheelingWindowReleaseTimer(long this_addr);
+
+    public ImVec2 get_WheelingWindowWheelRemainder() {
+        long pointer = internal_native_get_WheelingWindowWheelRemainder(native_address);
+        if (pointer == 0)
+            return ImVec2.NULL;
+        if (ImVec2_TEMP_GEN_1 == null)
+            ImVec2_TEMP_GEN_1 = ImVec2.native_new();
+        ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
+        return ImVec2_TEMP_GEN_1;
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
+return (jlong)&nativeObject->WheelingWindowWheelRemainder;
+*/
+    public static native long internal_native_get_WheelingWindowWheelRemainder(long this_addr);
+
+    public ImVec2 get_WheelingAxisAvg() {
+        long pointer = internal_native_get_WheelingAxisAvg(native_address);
+        if (pointer == 0)
+            return ImVec2.NULL;
+        if (ImVec2_TEMP_GEN_2 == null)
+            ImVec2_TEMP_GEN_2 = ImVec2.native_new();
+        ImVec2_TEMP_GEN_2.internal_reset(pointer, false);
+        return ImVec2_TEMP_GEN_2;
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
+return (jlong)&nativeObject->WheelingAxisAvg;
+*/
+    public static native long internal_native_get_WheelingAxisAvg(long this_addr);
+
+    public int get_DebugDrawIdConflictsId() {
+        return internal_native_get_DebugDrawIdConflictsId(native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
+return nativeObject->DebugDrawIdConflictsId;
+*/
+    public static native int internal_native_get_DebugDrawIdConflictsId(long this_addr);
+
+    public int get_DebugHookIdInfoId() {
+        return internal_native_get_DebugHookIdInfoId(native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
+return nativeObject->DebugHookIdInfoId;
+*/
+    public static native int internal_native_get_DebugHookIdInfoId(long this_addr);
 
     public int get_HoveredId() {
         return internal_native_get_HoveredId(native_address);
@@ -234,15 +409,15 @@ return nativeObject->HoveredIdPreviousFrame;
 */
     public static native int internal_native_get_HoveredIdPreviousFrame(long this_addr);
 
-    public boolean get_HoveredIdAllowOverlap() {
-        return internal_native_get_HoveredIdAllowOverlap(native_address);
+    public int get_HoveredIdPreviousFrameItemCount() {
+        return internal_native_get_HoveredIdPreviousFrameItemCount(native_address);
     }
 
     /*[-JNI;-NATIVE]
 ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->HoveredIdAllowOverlap;
+return nativeObject->HoveredIdPreviousFrameItemCount;
 */
-    public static native boolean internal_native_get_HoveredIdAllowOverlap(long this_addr);
+    public static native int internal_native_get_HoveredIdPreviousFrameItemCount(long this_addr);
 
     public float get_HoveredIdTimer() {
         return internal_native_get_HoveredIdTimer(native_address);
@@ -263,6 +438,36 @@ ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
 return nativeObject->HoveredIdNotActiveTimer;
 */
     public static native float internal_native_get_HoveredIdNotActiveTimer(long this_addr);
+
+    public boolean get_HoveredIdAllowOverlap() {
+        return internal_native_get_HoveredIdAllowOverlap(native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
+return nativeObject->HoveredIdAllowOverlap;
+*/
+    public static native boolean internal_native_get_HoveredIdAllowOverlap(long this_addr);
+
+    public boolean get_HoveredIdIsDisabled() {
+        return internal_native_get_HoveredIdIsDisabled(native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
+return nativeObject->HoveredIdIsDisabled;
+*/
+    public static native boolean internal_native_get_HoveredIdIsDisabled(long this_addr);
+
+    public boolean get_ItemUnclipByLog() {
+        return internal_native_get_ItemUnclipByLog(native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
+return nativeObject->ItemUnclipByLog;
+*/
+    public static native boolean internal_native_get_ItemUnclipByLog(long this_addr);
 
     public int get_ActiveId() {
         return internal_native_get_ActiveId(native_address);
@@ -364,6 +569,16 @@ return nativeObject->ActiveIdFromShortcut;
 */
     public static native boolean internal_native_get_ActiveIdFromShortcut(long this_addr);
 
+    public int get_ActiveIdDisabledId() {
+        return internal_native_get_ActiveIdDisabledId(native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
+return nativeObject->ActiveIdDisabledId;
+*/
+    public static native int internal_native_get_ActiveIdDisabledId(long this_addr);
+
     public int get_ActiveIdMouseButton() {
         return internal_native_get_ActiveIdMouseButton(native_address);
     }
@@ -378,10 +593,10 @@ return nativeObject->ActiveIdMouseButton;
         long pointer = internal_native_get_ActiveIdClickOffset(native_address);
         if (pointer == 0)
             return ImVec2.NULL;
-        if (ImVec2_TEMP_GEN_1 == null)
-            ImVec2_TEMP_GEN_1 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
-        return ImVec2_TEMP_GEN_1;
+        if (ImVec2_TEMP_GEN_3 == null)
+            ImVec2_TEMP_GEN_3 = ImVec2.native_new();
+        ImVec2_TEMP_GEN_3.internal_reset(pointer, false);
+        return ImVec2_TEMP_GEN_3;
     }
 
     /*[-JNI;-NATIVE]
@@ -394,10 +609,10 @@ return (jlong)&nativeObject->ActiveIdClickOffset;
         long pointer = internal_native_get_ActiveIdWindow(native_address);
         if (pointer == 0)
             return ImGuiWindow.NULL;
-        if (ImGuiWindow_TEMP_GEN_5 == null)
-            ImGuiWindow_TEMP_GEN_5 = ImGuiWindow.native_new();
-        ImGuiWindow_TEMP_GEN_5.internal_reset(pointer, false);
-        return ImGuiWindow_TEMP_GEN_5;
+        if (ImGuiWindow_TEMP_GEN_6 == null)
+            ImGuiWindow_TEMP_GEN_6 = ImGuiWindow.native_new();
+        ImGuiWindow_TEMP_GEN_6.internal_reset(pointer, false);
+        return ImGuiWindow_TEMP_GEN_6;
     }
 
     /*[-JNI;-NATIVE]
@@ -416,43 +631,6 @@ ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
 return nativeObject->ActiveIdPreviousFrame;
 */
     public static native int internal_native_get_ActiveIdPreviousFrame(long this_addr);
-
-    public boolean get_ActiveIdPreviousFrameIsAlive() {
-        return internal_native_get_ActiveIdPreviousFrameIsAlive(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdPreviousFrameIsAlive;
-*/
-    public static native boolean internal_native_get_ActiveIdPreviousFrameIsAlive(long this_addr);
-
-    public boolean get_ActiveIdPreviousFrameHasBeenEditedBefore() {
-        return internal_native_get_ActiveIdPreviousFrameHasBeenEditedBefore(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdPreviousFrameHasBeenEditedBefore;
-*/
-    public static native boolean internal_native_get_ActiveIdPreviousFrameHasBeenEditedBefore(long this_addr);
-
-    public ImGuiWindow get_ActiveIdPreviousFrameWindow() {
-        long pointer = internal_native_get_ActiveIdPreviousFrameWindow(native_address);
-        if (pointer == 0)
-            return ImGuiWindow.NULL;
-        if (ImGuiWindow_TEMP_GEN_6 == null)
-            ImGuiWindow_TEMP_GEN_6 = ImGuiWindow.native_new();
-        ImGuiWindow_TEMP_GEN_6.internal_reset(pointer, false);
-        return ImGuiWindow_TEMP_GEN_6;
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-ImGuiWindow* attr = nativeObject->ActiveIdPreviousFrameWindow;
-return (jlong)attr;
-*/
-    public static native long internal_native_get_ActiveIdPreviousFrameWindow(long this_addr);
 
     public int get_LastActiveId() {
         return internal_native_get_LastActiveId(native_address);

@@ -6,8 +6,10 @@ import com.badlogic.gdx.graphics.Texture;
 import com.monstrous.gdx.webgpu.graphics.WgTexture;
 import com.monstrous.gdx.webgpu.graphics.utils.WgScreenUtils;
 import imgui.ImGuiImpl;
+import imgui.ImTemp;
+import imgui.ImTextureRef;
 import imgui.gdx.ImGuiGdxInputMultiplexer;
-import imgui.gdx.ImGuiGdxWebGPUImpl;
+import imgui.gdx.ImGuiGdxWGPUImpl;
 
 public class ImGuiSharedWGPU implements ImGuiShared.ImGuiSharedInstance {
     @Override
@@ -17,7 +19,7 @@ public class ImGuiSharedWGPU implements ImGuiShared.ImGuiSharedInstance {
 
     @Override
     public ImGuiImpl createImpl() {
-        return new ImGuiGdxWebGPUImpl();
+        return new ImGuiGdxWGPUImpl();
     }
 
     @Override
@@ -28,5 +30,12 @@ public class ImGuiSharedWGPU implements ImGuiShared.ImGuiSharedInstance {
     @Override
     public Texture createTexture(FileHandle fileHandler) {
         return new WgTexture(fileHandler);
+    }
+
+    @Override
+    public ImTextureRef getTextureRef(Texture texture) {
+        WgTexture tex = (WgTexture)texture;
+        long l = tex.getTextureView().native_getAddressLong();
+        return ImTemp.ImTextureRef_1(l);
     }
 }

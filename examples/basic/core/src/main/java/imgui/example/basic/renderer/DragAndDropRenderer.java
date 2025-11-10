@@ -1,8 +1,11 @@
 package imgui.example.basic.renderer;
 
+import com.github.xpenatan.jParser.idl.IDLBase;
+import imgui.idl.helper.IDLTemp;
 import imgui.ImGui;
 import imgui.ImGuiPayload;
 import imgui.ImGuiString;
+import imgui.idl.helper.IDLInt;
 
 public class DragAndDropRenderer implements UIRenderer {
 
@@ -16,7 +19,7 @@ public class DragAndDropRenderer implements UIRenderer {
         ImGui.InputText("##test", imString, imString.getSize());
 
         if(ImGui.BeginDragDropSource()) {
-            ImGui.SetDragDropPayload("DRAG_ENTITY_ID", 3);
+            ImGui.SetDragDropPayload("DRAG_ENTITY_ID", IDLTemp.Int_1(3), Integer.BYTES);
             ImGui.Text("Dragging: " + "entityName");
             ImGui.EndDragDropSource();
         }
@@ -26,7 +29,10 @@ public class DragAndDropRenderer implements UIRenderer {
             ImGuiPayload dragDropPayload = ImGui.AcceptDragDropPayload("DRAG_ENTITY_ID");
             if(!dragDropPayload.native_isNULL()) {
                 System.out.println("dragDropPayload");
-                int data1 = dragDropPayload.get_Data();
+                int dataSize = dragDropPayload.get_DataSize();
+                IDLBase data = dragDropPayload.get_Data();
+                IDLInt idlInt = IDLTemp.Int_1(data);
+                int data1 = idlInt.getValue();
                 System.out.println("Value: " + data1);
             }
             ImGui.EndDragDropTarget();

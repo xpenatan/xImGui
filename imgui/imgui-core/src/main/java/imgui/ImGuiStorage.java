@@ -9,7 +9,21 @@ import com.github.xpenatan.jParser.idl.IDLBase;
 
 public class ImGuiStorage extends IDLBase {
 
+    private IDLBase IDLBase_TEMP_GEN_0;
+
+    private ImVectorImGuiStoragePair ImVectorImGuiStoragePair_TEMP_GEN_0;
+
     static public final ImGuiStorage NULL = ImGuiStorage.native_new();
+
+    public ImGuiStorage() {
+        long addr = internal_native_create();
+        internal_reset(addr, true);
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)new ImGuiStorage();
+*/
+    public static native long internal_native_create();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -134,4 +148,46 @@ ImGuiStorage* nativeObject = (ImGuiStorage*)this_addr;
 nativeObject->SetFloat((int)key, (float)val);
 */
     public static native void internal_native_SetFloat(long this_addr, int key, float val);
+
+    public IDLBase GetVoidPtr(int key) {
+        long pointer = internal_native_GetVoidPtr(native_address, key);
+        if (pointer == 0)
+            return IDLBase.NULL;
+        if (IDLBase_TEMP_GEN_0 == null)
+            IDLBase_TEMP_GEN_0 = IDLBase.native_new();
+        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
+        return IDLBase_TEMP_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiStorage* nativeObject = (ImGuiStorage*)this_addr;
+return (jlong)nativeObject->GetVoidPtr((int)key);
+*/
+    public static native long internal_native_GetVoidPtr(long this_addr, int key);
+
+    public void SetVoidPtr(int key, IDLBase val) {
+        internal_native_SetVoidPtr(native_address, key, val.native_void_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiStorage* nativeObject = (ImGuiStorage*)this_addr;
+nativeObject->SetVoidPtr((int)key, (void*)val_addr);
+*/
+    public static native void internal_native_SetVoidPtr(long this_addr, int key, long val_addr);
+
+    public ImVectorImGuiStoragePair get_Data() {
+        long pointer = internal_native_get_Data(native_address);
+        if (pointer == 0)
+            return ImVectorImGuiStoragePair.NULL;
+        if (ImVectorImGuiStoragePair_TEMP_GEN_0 == null)
+            ImVectorImGuiStoragePair_TEMP_GEN_0 = ImVectorImGuiStoragePair.native_new();
+        ImVectorImGuiStoragePair_TEMP_GEN_0.internal_reset(pointer, false);
+        return ImVectorImGuiStoragePair_TEMP_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiStorage* nativeObject = (ImGuiStorage*)this_addr;
+return (jlong)&nativeObject->Data;
+*/
+    public static native long internal_native_get_Data(long this_addr);
 }

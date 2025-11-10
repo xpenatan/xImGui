@@ -6,6 +6,7 @@
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
+import imgui.enums.ImGuiInputTextFlags;
 
 public class ImGuiInputTextCallbackData extends IDLBase {
 

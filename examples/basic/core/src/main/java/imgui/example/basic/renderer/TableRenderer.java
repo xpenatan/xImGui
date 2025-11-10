@@ -1,8 +1,8 @@
 package imgui.example.basic.renderer;
 
 import imgui.ImGui;
-import imgui.ImGuiTableColumnFlags;
-import imgui.ImGuiTableFlags;
+import imgui.enums.ImGuiTableColumnFlags;
+import imgui.enums.ImGuiTableFlags;
 
 public class TableRenderer implements UIRenderer {
 

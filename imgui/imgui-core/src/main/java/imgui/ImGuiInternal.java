@@ -6,8 +6,17 @@
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
-import imgui.idl.helper.IDLIntArray;
+import imgui.enums.ImGuiWindowFlags;
+import imgui.enums.ImGuiCond;
+import imgui.enums.ImGuiFocusRequestFlags;
+import imgui.enums.ImGuiWindowRefreshFlags;
+import imgui.enums.ImGuiItemStatusFlags;
+import imgui.enums.ImGuiItemFlags;
 import imgui.idl.helper.IDLBoolArray;
+import imgui.enums.ImGuiButtonFlags;
+import imgui.enums.ImGuiDataType;
+import imgui.enums.ImGuiSliderFlags;
+import imgui.enums.ImGuiAxis;
 import imgui.idl.helper.IDLFloatArray;
 
 public class ImGuiInternal extends IDLBase {
@@ -18,21 +27,23 @@ public class ImGuiInternal extends IDLBase {
 
     static private ImGuiWindow ImGuiWindow_TEMP_STATIC_GEN_2;
 
+    static private ImGuiWindow ImGuiWindow_TEMP_STATIC_GEN_3;
+
     static private ImVec2 ImVec2_TEMP_STATIC_GEN_0;
 
-    static private ImGuiDockNode ImGuiDockNode_TEMP_STATIC_GEN_0;
+    static private ImRect ImRect_TEMP_STATIC_GEN_0;
 
-    static private ImGuiDockNode ImGuiDockNode_TEMP_STATIC_GEN_1;
-
-    static private ImGuiTabBar ImGuiTabBar_TEMP_STATIC_GEN_0;
-
-    static private ImGuiTabItem ImGuiTabItem_TEMP_STATIC_GEN_0;
-
-    static private ImGuiTabItem ImGuiTabItem_TEMP_STATIC_GEN_1;
+    static private ImRect ImRect_TEMP_STATIC_GEN_1;
 
     static private ImVec2 ImVec2_TEMP_STATIC_GEN_1;
 
     static private ImVec2 ImVec2_TEMP_STATIC_GEN_2;
+
+    static private ImGuiWindow ImGuiWindow_TEMP_STATIC_GEN_4;
+
+    static private ImFont ImFont_TEMP_STATIC_GEN_0;
+
+    static private ImDrawList ImDrawList_TEMP_STATIC_GEN_0;
 
     static public final ImGuiInternal NULL = ImGuiInternal.native_new();
 
@@ -50,23 +61,23 @@ public class ImGuiInternal extends IDLBase {
         return new ImGuiInternal((byte) 0, (char) 0);
     }
 
-    public static int ImHashData(String data, int data_size, int seed) {
-        return internal_native_ImHashData__0(data, data_size, seed);
+    public static int ImHashData(IDLBase data, int data_size, int seed) {
+        return internal_native_ImHashData__0(data.native_void_address, data_size, seed);
     }
 
     /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::ImHashData_1(data, (int)data_size, (int)seed);
+return ImGuiWrapper::ImGuiInternal::ImHashData_1((void*)data_addr, (int)data_size, (int)seed);
 */
-    public static native int internal_native_ImHashData__0(String data, int data_size, int seed);
+    public static native int internal_native_ImHashData__0(long data_addr, int data_size, int seed);
 
-    public static int ImHashData(String data, int data_size) {
-        return internal_native_ImHashData__0(data, data_size);
+    public static int ImHashData(IDLBase data, int data_size) {
+        return internal_native_ImHashData__0(data.native_void_address, data_size);
     }
 
     /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::ImHashData_1(data, (int)data_size);
+return ImGuiWrapper::ImGuiInternal::ImHashData_1((void*)data_addr, (int)data_size);
 */
-    public static native int internal_native_ImHashData__0(String data, int data_size);
+    public static native int internal_native_ImHashData__0(long data_addr, int data_size);
 
     public static int ImHashStr(String data, int data_size, int seed) {
         return internal_native_ImHashStr__0(data, data_size, seed);
@@ -95,14 +106,29 @@ return ImGuiWrapper::ImGuiInternal::ImHashStr_1(data);
 */
     public static native int internal_native_ImHashStr__0(String data);
 
-    public static ImGuiWindow GetCurrentWindow() {
-        long pointer = internal_native_GetCurrentWindow();
+    public static ImGuiWindow GetCurrentWindowRead() {
+        long pointer = internal_native_GetCurrentWindowRead();
         if (pointer == 0)
             return ImGuiWindow.NULL;
         if (ImGuiWindow_TEMP_STATIC_GEN_0 == null)
             ImGuiWindow_TEMP_STATIC_GEN_0 = ImGuiWindow.native_new();
         ImGuiWindow_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
         return ImGuiWindow_TEMP_STATIC_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)ImGuiWrapper::ImGuiInternal::GetCurrentWindowRead();
+*/
+    public static native long internal_native_GetCurrentWindowRead();
+
+    public static ImGuiWindow GetCurrentWindow() {
+        long pointer = internal_native_GetCurrentWindow();
+        if (pointer == 0)
+            return ImGuiWindow.NULL;
+        if (ImGuiWindow_TEMP_STATIC_GEN_1 == null)
+            ImGuiWindow_TEMP_STATIC_GEN_1 = ImGuiWindow.native_new();
+        ImGuiWindow_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return ImGuiWindow_TEMP_STATIC_GEN_1;
     }
 
     /*[-JNI;-NATIVE]
@@ -114,10 +140,10 @@ return (jlong)ImGuiWrapper::ImGuiInternal::GetCurrentWindow();
         long pointer = internal_native_FindWindowByID(id);
         if (pointer == 0)
             return ImGuiWindow.NULL;
-        if (ImGuiWindow_TEMP_STATIC_GEN_1 == null)
-            ImGuiWindow_TEMP_STATIC_GEN_1 = ImGuiWindow.native_new();
-        ImGuiWindow_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
-        return ImGuiWindow_TEMP_STATIC_GEN_1;
+        if (ImGuiWindow_TEMP_STATIC_GEN_2 == null)
+            ImGuiWindow_TEMP_STATIC_GEN_2 = ImGuiWindow.native_new();
+        ImGuiWindow_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
+        return ImGuiWindow_TEMP_STATIC_GEN_2;
     }
 
     /*[-JNI;-NATIVE]
@@ -129,10 +155,10 @@ return (jlong)ImGuiWrapper::ImGuiInternal::FindWindowByID((int)id);
         long pointer = internal_native_FindWindowByName(name);
         if (pointer == 0)
             return ImGuiWindow.NULL;
-        if (ImGuiWindow_TEMP_STATIC_GEN_2 == null)
-            ImGuiWindow_TEMP_STATIC_GEN_2 = ImGuiWindow.native_new();
-        ImGuiWindow_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
-        return ImGuiWindow_TEMP_STATIC_GEN_2;
+        if (ImGuiWindow_TEMP_STATIC_GEN_3 == null)
+            ImGuiWindow_TEMP_STATIC_GEN_3 = ImGuiWindow.native_new();
+        ImGuiWindow_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
+        return ImGuiWindow_TEMP_STATIC_GEN_3;
     }
 
     /*[-JNI;-NATIVE]
@@ -140,134 +166,26 @@ return (jlong)ImGuiWrapper::ImGuiInternal::FindWindowByName(name);
 */
     public static native long internal_native_FindWindowByName(String name);
 
-    public static void FocusWindow(ImGuiWindow window, ImGuiFocusRequestFlags ImGuiFocusRequestFlags) {
-        internal_native_FocusWindow(window.native_address, ImGuiFocusRequestFlags.getValue());
+    public static void UpdateWindowParentAndRootLinks(ImGuiWindow window, ImGuiWindowFlags flags, ImGuiWindow parent_window) {
+        internal_native_UpdateWindowParentAndRootLinks(window.native_address, flags.getValue(), parent_window.native_address);
     }
 
     /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::FocusWindow((ImGuiWindow* )window_addr, (::ImGuiFocusRequestFlags)ImGuiFocusRequestFlags);
+ImGuiWrapper::ImGuiInternal::UpdateWindowParentAndRootLinks((ImGuiWindow* )window_addr, (::ImGuiWindowFlags)flags, (ImGuiWindow* )parent_window_addr);
 */
-    public static native void internal_native_FocusWindow(long window_addr, int ImGuiFocusRequestFlags);
+    public static native void internal_native_UpdateWindowParentAndRootLinks(long window_addr, int flags, long parent_window_addr);
 
-    public static void FocusWindow(ImGuiWindow window) {
-        internal_native_FocusWindow(window.native_address);
+    public static void UpdateWindowSkipRefresh(ImGuiWindow window) {
+        internal_native_UpdateWindowSkipRefresh(window.native_address);
     }
 
     /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::FocusWindow((ImGuiWindow* )window_addr);
+ImGuiWrapper::ImGuiInternal::UpdateWindowSkipRefresh((ImGuiWindow* )window_addr);
 */
-    public static native void internal_native_FocusWindow(long window_addr);
+    public static native void internal_native_UpdateWindowSkipRefresh(long window_addr);
 
-    public static void ItemSize(ImVec2 size, float text_baseline_y) {
-        internal_native_ItemSize__0(size.native_address, text_baseline_y);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::ItemSize(*((ImVec2* )size_addr), (float)text_baseline_y);
-*/
-    public static native void internal_native_ItemSize__0(long size_addr, float text_baseline_y);
-
-    public static void ItemSize(ImVec2 size) {
-        internal_native_ItemSize__0(size.native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::ItemSize(*((ImVec2* )size_addr));
-*/
-    public static native void internal_native_ItemSize__0(long size_addr);
-
-    public static void ItemSize(ImRect bb, float text_baseline_y) {
-        internal_native_ItemSize__1(bb.native_address, text_baseline_y);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::ItemSize(*((ImRect* )bb_addr), (float)text_baseline_y);
-*/
-    public static native void internal_native_ItemSize__1(long bb_addr, float text_baseline_y);
-
-    public static void ItemSize(ImRect bb) {
-        internal_native_ItemSize__1(bb.native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::ItemSize(*((ImRect* )bb_addr));
-*/
-    public static native void internal_native_ItemSize__1(long bb_addr);
-
-    public static boolean ItemAdd(ImRect bb, int id, ImRect nav_bb, ImGuiItemFlags ImGuiItemFlags) {
-        return internal_native_ItemAdd(bb.native_address, id, nav_bb.native_address, ImGuiItemFlags.getValue());
-    }
-
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::ItemAdd(*((ImRect* )bb_addr), (int)id, (ImRect* )nav_bb_addr, (::ImGuiItemFlags)ImGuiItemFlags);
-*/
-    public static native boolean internal_native_ItemAdd(long bb_addr, int id, long nav_bb_addr, int ImGuiItemFlags);
-
-    public static boolean ItemAdd(ImRect bb, int id, ImRect nav_bb) {
-        return internal_native_ItemAdd(bb.native_address, id, nav_bb.native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::ItemAdd(*((ImRect* )bb_addr), (int)id, (ImRect* )nav_bb_addr);
-*/
-    public static native boolean internal_native_ItemAdd(long bb_addr, int id, long nav_bb_addr);
-
-    public static boolean ItemAdd(ImRect bb, int id) {
-        return internal_native_ItemAdd(bb.native_address, id);
-    }
-
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::ItemAdd(*((ImRect* )bb_addr), (int)id);
-*/
-    public static native boolean internal_native_ItemAdd(long bb_addr, int id);
-
-    public static boolean ItemHoverable(ImRect bb, int id, ImGuiItemFlags ImGuiItemFlags) {
-        return internal_native_ItemHoverable(bb.native_address, id, ImGuiItemFlags.getValue());
-    }
-
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::ItemHoverable(*((ImRect* )bb_addr), (int)id, (::ImGuiItemFlags)ImGuiItemFlags);
-*/
-    public static native boolean internal_native_ItemHoverable(long bb_addr, int id, int ImGuiItemFlags);
-
-    public static boolean IsWindowContentHoverable(ImGuiWindow window, ImGuiHoveredFlags ImGuiHoveredFlags) {
-        return internal_native_IsWindowContentHoverable(window.native_address, ImGuiHoveredFlags.getValue());
-    }
-
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::IsWindowContentHoverable((ImGuiWindow* )window_addr, (::ImGuiHoveredFlags)ImGuiHoveredFlags);
-*/
-    public static native boolean internal_native_IsWindowContentHoverable(long window_addr, int ImGuiHoveredFlags);
-
-    public static boolean IsWindowContentHoverable(ImGuiWindow window) {
-        return internal_native_IsWindowContentHoverable(window.native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::IsWindowContentHoverable((ImGuiWindow* )window_addr);
-*/
-    public static native boolean internal_native_IsWindowContentHoverable(long window_addr);
-
-    public static boolean IsClippedEx(ImRect bb, int id) {
-        return internal_native_IsClippedEx(bb.native_address, id);
-    }
-
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::IsClippedEx(*((ImRect* )bb_addr), (int)id);
-*/
-    public static native boolean internal_native_IsClippedEx(long bb_addr, int id);
-
-    public static void SetLastItemData(int item_id, ImGuiItemFlags ImGuiItemFlags, ImGuiItemStatusFlags ImGuiItemStatusFlags, ImRect item_rect) {
-        internal_native_SetLastItemData(item_id, ImGuiItemFlags.getValue(), ImGuiItemStatusFlags.getValue(), item_rect.native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::SetLastItemData((int)item_id, (::ImGuiItemFlags)ImGuiItemFlags, (::ImGuiItemStatusFlags)ImGuiItemStatusFlags, *((ImRect* )item_rect_addr));
-*/
-    public static native void internal_native_SetLastItemData(int item_id, int ImGuiItemFlags, int ImGuiItemStatusFlags, long item_rect_addr);
-
-    public static ImVec2 CalcItemSize(ImVec2 size, float default_w, float default_h) {
-        long pointer = internal_native_CalcItemSize(size.native_address, default_w, default_h);
+    public static ImVec2 CalcWindowNextAutoFitSize(ImGuiWindow window) {
+        long pointer = internal_native_CalcWindowNextAutoFitSize(window.native_address);
         if (pointer == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_STATIC_GEN_0 == null)
@@ -278,300 +196,528 @@ ImGuiWrapper::ImGuiInternal::SetLastItemData((int)item_id, (::ImGuiItemFlags)ImG
 
     /*[-JNI;-NATIVE]
 static ImVec2 copy_addr;
-copy_addr = ImGuiWrapper::ImGuiInternal::CalcItemSize(*((ImVec2* )size_addr), (float)default_w, (float)default_h);
+copy_addr = ImGuiWrapper::ImGuiInternal::CalcWindowNextAutoFitSize((ImGuiWindow* )window_addr);
 return (jlong)&copy_addr;*/
-    public static native long internal_native_CalcItemSize(long size_addr, float default_w, float default_h);
+    public static native long internal_native_CalcWindowNextAutoFitSize(long window_addr);
 
-    public static float CalcWrapWidthForPos(ImVec2 pos, float wrap_pos_x) {
-        return internal_native_CalcWrapWidthForPos(pos.native_address, wrap_pos_x);
+    public static boolean IsWindowChildOf(ImGuiWindow window, ImGuiWindow potential_parent, boolean popup_hierarchy, boolean dock_hierarchy) {
+        return internal_native_IsWindowChildOf(window.native_address, potential_parent.native_address, popup_hierarchy, dock_hierarchy);
     }
 
     /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::CalcWrapWidthForPos(*((ImVec2* )pos_addr), (float)wrap_pos_x);
+return ImGuiWrapper::ImGuiInternal::IsWindowChildOf((ImGuiWindow* )window_addr, (ImGuiWindow* )potential_parent_addr, popup_hierarchy, dock_hierarchy);
 */
-    public static native float internal_native_CalcWrapWidthForPos(long pos_addr, float wrap_pos_x);
+    public static native boolean internal_native_IsWindowChildOf(long window_addr, long potential_parent_addr, boolean popup_hierarchy, boolean dock_hierarchy);
 
-    public static void PushMultiItemsWidths(int components, float width_full) {
-        internal_native_PushMultiItemsWidths(components, width_full);
+    public static boolean IsWindowWithinBeginStackOf(ImGuiWindow window, ImGuiWindow potential_parent) {
+        return internal_native_IsWindowWithinBeginStackOf(window.native_address, potential_parent.native_address);
     }
 
     /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::PushMultiItemsWidths((int)components, (float)width_full);
+return ImGuiWrapper::ImGuiInternal::IsWindowWithinBeginStackOf((ImGuiWindow* )window_addr, (ImGuiWindow* )potential_parent_addr);
 */
-    public static native void internal_native_PushMultiItemsWidths(int components, float width_full);
+    public static native boolean internal_native_IsWindowWithinBeginStackOf(long window_addr, long potential_parent_addr);
 
-    public static boolean IsItemToggledSelection() {
-        return internal_native_IsItemToggledSelection();
+    public static boolean IsWindowAbove(ImGuiWindow potential_above, ImGuiWindow potential_below) {
+        return internal_native_IsWindowAbove(potential_above.native_address, potential_below.native_address);
     }
 
     /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::IsItemToggledSelection();
+return ImGuiWrapper::ImGuiInternal::IsWindowAbove((ImGuiWindow* )potential_above_addr, (ImGuiWindow* )potential_below_addr);
 */
-    public static native boolean internal_native_IsItemToggledSelection();
+    public static native boolean internal_native_IsWindowAbove(long potential_above_addr, long potential_below_addr);
 
-    public static void ShrinkWidths(ImGuiShrinkWidthItem items, int count, float width_excess) {
-        internal_native_ShrinkWidths(items.native_address, count, width_excess);
+    public static boolean IsWindowNavFocusable(ImGuiWindow window) {
+        return internal_native_IsWindowNavFocusable(window.native_address);
     }
 
     /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::ShrinkWidths((ImGuiShrinkWidthItem* )items_addr, (int)count, (float)width_excess);
+return ImGuiWrapper::ImGuiInternal::IsWindowNavFocusable((ImGuiWindow* )window_addr);
 */
-    public static native void internal_native_ShrinkWidths(long items_addr, int count, float width_excess);
+    public static native boolean internal_native_IsWindowNavFocusable(long window_addr);
 
-    public static void DockBuilderDockWindow(String window_name, int node_id) {
-        internal_native_DockBuilderDockWindow(window_name, node_id);
+    public static void SetWindowPos(ImGuiWindow window, ImVec2 pos, ImGuiCond cond) {
+        internal_native_SetWindowPos(window.native_address, pos.native_address, cond.getValue());
     }
 
     /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::DockBuilderDockWindow(window_name, (int)node_id);
+ImGuiWrapper::ImGuiInternal::SetWindowPos((ImGuiWindow* )window_addr, *((ImVec2* )pos_addr), (::ImGuiCond)cond);
 */
-    public static native void internal_native_DockBuilderDockWindow(String window_name, int node_id);
+    public static native void internal_native_SetWindowPos(long window_addr, long pos_addr, int cond);
 
-    public static ImGuiDockNode DockBuilderGetNode(int node_id) {
-        long pointer = internal_native_DockBuilderGetNode(node_id);
+    public static void SetWindowPos(ImGuiWindow window, ImVec2 pos) {
+        internal_native_SetWindowPos(window.native_address, pos.native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::SetWindowPos((ImGuiWindow* )window_addr, *((ImVec2* )pos_addr));
+*/
+    public static native void internal_native_SetWindowPos(long window_addr, long pos_addr);
+
+    public static void SetWindowSize(ImGuiWindow window, ImVec2 size, ImGuiCond cond) {
+        internal_native_SetWindowSize(window.native_address, size.native_address, cond.getValue());
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::SetWindowSize((ImGuiWindow* )window_addr, *((ImVec2* )size_addr), (::ImGuiCond)cond);
+*/
+    public static native void internal_native_SetWindowSize(long window_addr, long size_addr, int cond);
+
+    public static void SetWindowSize(ImGuiWindow window, ImVec2 size) {
+        internal_native_SetWindowSize(window.native_address, size.native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::SetWindowSize((ImGuiWindow* )window_addr, *((ImVec2* )size_addr));
+*/
+    public static native void internal_native_SetWindowSize(long window_addr, long size_addr);
+
+    public static void SetWindowCollapsed(ImGuiWindow window, boolean collapsed, ImGuiCond cond) {
+        internal_native_SetWindowCollapsed(window.native_address, collapsed, cond.getValue());
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::SetWindowCollapsed((ImGuiWindow* )window_addr, collapsed, (::ImGuiCond)cond);
+*/
+    public static native void internal_native_SetWindowCollapsed(long window_addr, boolean collapsed, int cond);
+
+    public static void SetWindowCollapsed(ImGuiWindow window, boolean collapsed) {
+        internal_native_SetWindowCollapsed(window.native_address, collapsed);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::SetWindowCollapsed((ImGuiWindow* )window_addr, collapsed);
+*/
+    public static native void internal_native_SetWindowCollapsed(long window_addr, boolean collapsed);
+
+    public static void SetWindowHitTestHole(ImGuiWindow window, ImVec2 pos, ImVec2 size) {
+        internal_native_SetWindowHitTestHole(window.native_address, pos.native_address, size.native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::SetWindowHitTestHole((ImGuiWindow* )window_addr, *((ImVec2* )pos_addr), *((ImVec2* )size_addr));
+*/
+    public static native void internal_native_SetWindowHitTestHole(long window_addr, long pos_addr, long size_addr);
+
+    public static void SetWindowHiddenAndSkipItemsForCurrentFrame(ImGuiWindow window) {
+        internal_native_SetWindowHiddenAndSkipItemsForCurrentFrame(window.native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::SetWindowHiddenAndSkipItemsForCurrentFrame((ImGuiWindow* )window_addr);
+*/
+    public static native void internal_native_SetWindowHiddenAndSkipItemsForCurrentFrame(long window_addr);
+
+    public static void SetWindowParentWindowForFocusRoute(ImGuiWindow window, ImGuiWindow parent_window) {
+        internal_native_SetWindowParentWindowForFocusRoute(window.native_address, parent_window.native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::SetWindowParentWindowForFocusRoute((ImGuiWindow* )window_addr, (ImGuiWindow* )parent_window_addr);
+*/
+    public static native void internal_native_SetWindowParentWindowForFocusRoute(long window_addr, long parent_window_addr);
+
+    public static ImRect WindowRectAbsToRel(ImGuiWindow window, ImRect r) {
+        long pointer = internal_native_WindowRectAbsToRel(window.native_address, r.native_address);
         if (pointer == 0)
-            return ImGuiDockNode.NULL;
-        if (ImGuiDockNode_TEMP_STATIC_GEN_0 == null)
-            ImGuiDockNode_TEMP_STATIC_GEN_0 = ImGuiDockNode.native_new();
-        ImGuiDockNode_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
-        return ImGuiDockNode_TEMP_STATIC_GEN_0;
+            return ImRect.NULL;
+        if (ImRect_TEMP_STATIC_GEN_0 == null)
+            ImRect_TEMP_STATIC_GEN_0 = ImRect.native_new();
+        ImRect_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return ImRect_TEMP_STATIC_GEN_0;
     }
 
     /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGuiInternal::DockBuilderGetNode((int)node_id);
-*/
-    public static native long internal_native_DockBuilderGetNode(int node_id);
+static ImRect copy_addr;
+copy_addr = ImGuiWrapper::ImGuiInternal::WindowRectAbsToRel((ImGuiWindow* )window_addr, *((ImRect* )r_addr));
+return (jlong)&copy_addr;*/
+    public static native long internal_native_WindowRectAbsToRel(long window_addr, long r_addr);
 
-    public static ImGuiDockNode DockBuilderGetCentralNode(int node_id) {
-        long pointer = internal_native_DockBuilderGetCentralNode(node_id);
+    public static ImRect WindowRectRelToAbs(ImGuiWindow window, ImRect r) {
+        long pointer = internal_native_WindowRectRelToAbs(window.native_address, r.native_address);
         if (pointer == 0)
-            return ImGuiDockNode.NULL;
-        if (ImGuiDockNode_TEMP_STATIC_GEN_1 == null)
-            ImGuiDockNode_TEMP_STATIC_GEN_1 = ImGuiDockNode.native_new();
-        ImGuiDockNode_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
-        return ImGuiDockNode_TEMP_STATIC_GEN_1;
+            return ImRect.NULL;
+        if (ImRect_TEMP_STATIC_GEN_1 == null)
+            ImRect_TEMP_STATIC_GEN_1 = ImRect.native_new();
+        ImRect_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return ImRect_TEMP_STATIC_GEN_1;
     }
 
     /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGuiInternal::DockBuilderGetCentralNode((int)node_id);
-*/
-    public static native long internal_native_DockBuilderGetCentralNode(int node_id);
+static ImRect copy_addr;
+copy_addr = ImGuiWrapper::ImGuiInternal::WindowRectRelToAbs((ImGuiWindow* )window_addr, *((ImRect* )r_addr));
+return (jlong)&copy_addr;*/
+    public static native long internal_native_WindowRectRelToAbs(long window_addr, long r_addr);
 
-    public static int DockBuilderAddNode(int node_id, ImGuiDockNodeFlags ImGuiDockNodeFlags) {
-        return internal_native_DockBuilderAddNode(node_id, ImGuiDockNodeFlags.getValue());
-    }
-
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::DockBuilderAddNode((int)node_id, (::ImGuiDockNodeFlags)ImGuiDockNodeFlags);
-*/
-    public static native int internal_native_DockBuilderAddNode(int node_id, int ImGuiDockNodeFlags);
-
-    public static int DockBuilderAddNode(int node_id) {
-        return internal_native_DockBuilderAddNode(node_id);
-    }
-
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::DockBuilderAddNode((int)node_id);
-*/
-    public static native int internal_native_DockBuilderAddNode(int node_id);
-
-    public static int DockBuilderAddNode() {
-        return internal_native_DockBuilderAddNode();
-    }
-
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::DockBuilderAddNode();
-*/
-    public static native int internal_native_DockBuilderAddNode();
-
-    public static void DockBuilderRemoveNode(int node_id) {
-        internal_native_DockBuilderRemoveNode(node_id);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::DockBuilderRemoveNode((int)node_id);
-*/
-    public static native void internal_native_DockBuilderRemoveNode(int node_id);
-
-    public static void DockBuilderRemoveNodeDockedWindows(int node_id, boolean clear_settings_refs) {
-        internal_native_DockBuilderRemoveNodeDockedWindows(node_id, clear_settings_refs);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::DockBuilderRemoveNodeDockedWindows((int)node_id, clear_settings_refs);
-*/
-    public static native void internal_native_DockBuilderRemoveNodeDockedWindows(int node_id, boolean clear_settings_refs);
-
-    public static void DockBuilderRemoveNodeDockedWindows(int node_id) {
-        internal_native_DockBuilderRemoveNodeDockedWindows(node_id);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::DockBuilderRemoveNodeDockedWindows((int)node_id);
-*/
-    public static native void internal_native_DockBuilderRemoveNodeDockedWindows(int node_id);
-
-    public static void DockBuilderRemoveNodeChildNodes(int node_id) {
-        internal_native_DockBuilderRemoveNodeChildNodes(node_id);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::DockBuilderRemoveNodeChildNodes((int)node_id);
-*/
-    public static native void internal_native_DockBuilderRemoveNodeChildNodes(int node_id);
-
-    public static void DockBuilderSetNodePos(int node_id, ImVec2 pos) {
-        internal_native_DockBuilderSetNodePos(node_id, pos.native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::DockBuilderSetNodePos((int)node_id, *((ImVec2* )pos_addr));
-*/
-    public static native void internal_native_DockBuilderSetNodePos(int node_id, long pos_addr);
-
-    public static void DockBuilderSetNodeSize(int node_id, ImVec2 size) {
-        internal_native_DockBuilderSetNodeSize(node_id, size.native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::DockBuilderSetNodeSize((int)node_id, *((ImVec2* )size_addr));
-*/
-    public static native void internal_native_DockBuilderSetNodeSize(int node_id, long size_addr);
-
-    public static int DockBuilderSplitNode(int node_id, ImGuiDir split_dir, float size_ratio_for_node_at_dir, IDLIntArray out_id_at_dir, IDLIntArray out_id_at_opposite_dir) {
-        return internal_native_DockBuilderSplitNode(node_id, split_dir.getValue(), size_ratio_for_node_at_dir, out_id_at_dir.native_void_address, out_id_at_opposite_dir.native_void_address);
-    }
-
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::DockBuilderSplitNode((int)node_id, (::ImGuiDir)split_dir, (float)size_ratio_for_node_at_dir, (int*)out_id_at_dir_addr, (int*)out_id_at_opposite_dir_addr);
-*/
-    public static native int internal_native_DockBuilderSplitNode(int node_id, int split_dir, float size_ratio_for_node_at_dir, long out_id_at_dir_addr, long out_id_at_opposite_dir_addr);
-
-    public static void DockBuilderCopyWindowSettings(String src_name, String dst_name) {
-        internal_native_DockBuilderCopyWindowSettings(src_name, dst_name);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::DockBuilderCopyWindowSettings(src_name, dst_name);
-*/
-    public static native void internal_native_DockBuilderCopyWindowSettings(String src_name, String dst_name);
-
-    public static void DockBuilderFinish(int node_id) {
-        internal_native_DockBuilderFinish(node_id);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::DockBuilderFinish((int)node_id);
-*/
-    public static native void internal_native_DockBuilderFinish(int node_id);
-
-    public static boolean BeginTableEx(String str_id, int id, int column, ImGuiTableFlags ImGuiTableFlags, ImVec2 outer_size, float inner_width) {
-        return internal_native_BeginTableEx(str_id, id, column, ImGuiTableFlags.getValue(), outer_size.native_address, inner_width);
-    }
-
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::BeginTableEx(str_id, (int)id, (int)column, (::ImGuiTableFlags)ImGuiTableFlags, *((ImVec2* )outer_size_addr), (float)inner_width);
-*/
-    public static native boolean internal_native_BeginTableEx(String str_id, int id, int column, int ImGuiTableFlags, long outer_size_addr, float inner_width);
-
-    public static boolean BeginTableEx(String str_id, int id, int column, ImGuiTableFlags ImGuiTableFlags, ImVec2 outer_size) {
-        return internal_native_BeginTableEx(str_id, id, column, ImGuiTableFlags.getValue(), outer_size.native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::BeginTableEx(str_id, (int)id, (int)column, (::ImGuiTableFlags)ImGuiTableFlags, *((ImVec2* )outer_size_addr));
-*/
-    public static native boolean internal_native_BeginTableEx(String str_id, int id, int column, int ImGuiTableFlags, long outer_size_addr);
-
-    public static boolean BeginTableEx(String str_id, int id, int column, ImGuiTableFlags ImGuiTableFlags) {
-        return internal_native_BeginTableEx(str_id, id, column, ImGuiTableFlags.getValue());
-    }
-
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::BeginTableEx(str_id, (int)id, (int)column, (::ImGuiTableFlags)ImGuiTableFlags);
-*/
-    public static native boolean internal_native_BeginTableEx(String str_id, int id, int column, int ImGuiTableFlags);
-
-    public static boolean BeginTableEx(String str_id, int id, int column) {
-        return internal_native_BeginTableEx(str_id, id, column);
-    }
-
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::BeginTableEx(str_id, (int)id, (int)column);
-*/
-    public static native boolean internal_native_BeginTableEx(String str_id, int id, int column);
-
-    public static ImGuiTabBar GetCurrentTabBar() {
-        long pointer = internal_native_GetCurrentTabBar();
+    public static ImVec2 WindowPosAbsToRel(ImGuiWindow window, ImVec2 p) {
+        long pointer = internal_native_WindowPosAbsToRel(window.native_address, p.native_address);
         if (pointer == 0)
-            return ImGuiTabBar.NULL;
-        if (ImGuiTabBar_TEMP_STATIC_GEN_0 == null)
-            ImGuiTabBar_TEMP_STATIC_GEN_0 = ImGuiTabBar.native_new();
-        ImGuiTabBar_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
-        return ImGuiTabBar_TEMP_STATIC_GEN_0;
+            return ImVec2.NULL;
+        if (ImVec2_TEMP_STATIC_GEN_1 == null)
+            ImVec2_TEMP_STATIC_GEN_1 = ImVec2.native_new();
+        ImVec2_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return ImVec2_TEMP_STATIC_GEN_1;
     }
 
     /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGuiInternal::GetCurrentTabBar();
-*/
-    public static native long internal_native_GetCurrentTabBar();
+static ImVec2 copy_addr;
+copy_addr = ImGuiWrapper::ImGuiInternal::WindowPosAbsToRel((ImGuiWindow* )window_addr, *((ImVec2* )p_addr));
+return (jlong)&copy_addr;*/
+    public static native long internal_native_WindowPosAbsToRel(long window_addr, long p_addr);
 
-    public static ImGuiTabItem TabBarFindTabByID(ImGuiTabBar tab_bar, int tab_id) {
-        long pointer = internal_native_TabBarFindTabByID(tab_bar.native_address, tab_id);
+    public static ImVec2 WindowPosRelToAbs(ImGuiWindow window, ImVec2 p) {
+        long pointer = internal_native_WindowPosRelToAbs(window.native_address, p.native_address);
         if (pointer == 0)
-            return ImGuiTabItem.NULL;
-        if (ImGuiTabItem_TEMP_STATIC_GEN_0 == null)
-            ImGuiTabItem_TEMP_STATIC_GEN_0 = ImGuiTabItem.native_new();
-        ImGuiTabItem_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
-        return ImGuiTabItem_TEMP_STATIC_GEN_0;
+            return ImVec2.NULL;
+        if (ImVec2_TEMP_STATIC_GEN_2 == null)
+            ImVec2_TEMP_STATIC_GEN_2 = ImVec2.native_new();
+        ImVec2_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
+        return ImVec2_TEMP_STATIC_GEN_2;
     }
 
     /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGuiInternal::TabBarFindTabByID((ImGuiTabBar* )tab_bar_addr, (int)tab_id);
-*/
-    public static native long internal_native_TabBarFindTabByID(long tab_bar_addr, int tab_id);
+static ImVec2 copy_addr;
+copy_addr = ImGuiWrapper::ImGuiInternal::WindowPosRelToAbs((ImGuiWindow* )window_addr, *((ImVec2* )p_addr));
+return (jlong)&copy_addr;*/
+    public static native long internal_native_WindowPosRelToAbs(long window_addr, long p_addr);
 
-    public static ImGuiTabItem TabBarFindTabByOrder(ImGuiTabBar tab_bar, int order) {
-        long pointer = internal_native_TabBarFindTabByOrder(tab_bar.native_address, order);
+    public static void FocusWindow(ImGuiWindow window, ImGuiFocusRequestFlags flags) {
+        internal_native_FocusWindow(window.native_address, flags.getValue());
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::FocusWindow((ImGuiWindow* )window_addr, (::ImGuiFocusRequestFlags)flags);
+*/
+    public static native void internal_native_FocusWindow(long window_addr, int flags);
+
+    public static void FocusWindow(ImGuiWindow window) {
+        internal_native_FocusWindow(window.native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::FocusWindow((ImGuiWindow* )window_addr);
+*/
+    public static native void internal_native_FocusWindow(long window_addr);
+
+    public static void FocusTopMostWindowUnderOne(ImGuiWindow under_this_window, ImGuiWindow ignore_window, ImGuiViewport filter_viewport, ImGuiFocusRequestFlags flags) {
+        internal_native_FocusTopMostWindowUnderOne(under_this_window.native_address, ignore_window.native_address, filter_viewport.native_address, flags.getValue());
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::FocusTopMostWindowUnderOne((ImGuiWindow* )under_this_window_addr, (ImGuiWindow* )ignore_window_addr, (ImGuiViewport* )filter_viewport_addr, (::ImGuiFocusRequestFlags)flags);
+*/
+    public static native void internal_native_FocusTopMostWindowUnderOne(long under_this_window_addr, long ignore_window_addr, long filter_viewport_addr, int flags);
+
+    public static void BringWindowToFocusFront(ImGuiWindow window) {
+        internal_native_BringWindowToFocusFront(window.native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::BringWindowToFocusFront((ImGuiWindow* )window_addr);
+*/
+    public static native void internal_native_BringWindowToFocusFront(long window_addr);
+
+    public static void BringWindowToDisplayFront(ImGuiWindow window) {
+        internal_native_BringWindowToDisplayFront(window.native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::BringWindowToDisplayFront((ImGuiWindow* )window_addr);
+*/
+    public static native void internal_native_BringWindowToDisplayFront(long window_addr);
+
+    public static void BringWindowToDisplayBack(ImGuiWindow window) {
+        internal_native_BringWindowToDisplayBack(window.native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::BringWindowToDisplayBack((ImGuiWindow* )window_addr);
+*/
+    public static native void internal_native_BringWindowToDisplayBack(long window_addr);
+
+    public static void BringWindowToDisplayBehind(ImGuiWindow window, ImGuiWindow above_window) {
+        internal_native_BringWindowToDisplayBehind(window.native_address, above_window.native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::BringWindowToDisplayBehind((ImGuiWindow* )window_addr, (ImGuiWindow* )above_window_addr);
+*/
+    public static native void internal_native_BringWindowToDisplayBehind(long window_addr, long above_window_addr);
+
+    public static int FindWindowDisplayIndex(ImGuiWindow window) {
+        return internal_native_FindWindowDisplayIndex(window.native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+return ImGuiWrapper::ImGuiInternal::FindWindowDisplayIndex((ImGuiWindow* )window_addr);
+*/
+    public static native int internal_native_FindWindowDisplayIndex(long window_addr);
+
+    public static ImGuiWindow FindBottomMostVisibleWindowWithinBeginStack(ImGuiWindow window) {
+        long pointer = internal_native_FindBottomMostVisibleWindowWithinBeginStack(window.native_address);
         if (pointer == 0)
-            return ImGuiTabItem.NULL;
-        if (ImGuiTabItem_TEMP_STATIC_GEN_1 == null)
-            ImGuiTabItem_TEMP_STATIC_GEN_1 = ImGuiTabItem.native_new();
-        ImGuiTabItem_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
-        return ImGuiTabItem_TEMP_STATIC_GEN_1;
+            return ImGuiWindow.NULL;
+        if (ImGuiWindow_TEMP_STATIC_GEN_4 == null)
+            ImGuiWindow_TEMP_STATIC_GEN_4 = ImGuiWindow.native_new();
+        ImGuiWindow_TEMP_STATIC_GEN_4.internal_reset(pointer, false);
+        return ImGuiWindow_TEMP_STATIC_GEN_4;
     }
 
     /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGuiInternal::TabBarFindTabByOrder((ImGuiTabBar* )tab_bar_addr, (int)order);
+return (jlong)ImGuiWrapper::ImGuiInternal::FindBottomMostVisibleWindowWithinBeginStack((ImGuiWindow* )window_addr);
 */
-    public static native long internal_native_TabBarFindTabByOrder(long tab_bar_addr, int order);
+    public static native long internal_native_FindBottomMostVisibleWindowWithinBeginStack(long window_addr);
 
-    public static void TabBarCloseTab(ImGuiTabBar tab_bar, ImGuiTabItem tab) {
-        internal_native_TabBarCloseTab(tab_bar.native_address, tab.native_address);
+    public static void SetNextWindowRefreshPolicy(ImGuiWindowRefreshFlags flags) {
+        internal_native_SetNextWindowRefreshPolicy(flags.getValue());
     }
 
     /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::TabBarCloseTab((ImGuiTabBar* )tab_bar_addr, (ImGuiTabItem* )tab_addr);
+ImGuiWrapper::ImGuiInternal::SetNextWindowRefreshPolicy((::ImGuiWindowRefreshFlags)flags);
 */
-    public static native void internal_native_TabBarCloseTab(long tab_bar_addr, long tab_addr);
+    public static native void internal_native_SetNextWindowRefreshPolicy(int flags);
 
-    public static void TabBarQueueFocus(ImGuiTabBar tab_bar, ImGuiTabItem tab) {
-        internal_native_TabBarQueueFocus(tab_bar.native_address, tab.native_address);
+    public static void RegisterUserTexture(ImTextureData tex) {
+        internal_native_RegisterUserTexture(tex.native_address);
     }
 
     /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::TabBarQueueFocus((ImGuiTabBar* )tab_bar_addr, (ImGuiTabItem* )tab_addr);
+ImGuiWrapper::ImGuiInternal::RegisterUserTexture((ImTextureData* )tex_addr);
 */
-    public static native void internal_native_TabBarQueueFocus(long tab_bar_addr, long tab_addr);
+    public static native void internal_native_RegisterUserTexture(long tex_addr);
 
-    public static void TabBarQueueReorder(ImGuiTabBar tab_bar, ImGuiTabItem tab, int offset) {
-        internal_native_TabBarQueueReorder(tab_bar.native_address, tab.native_address, offset);
+    public static void UnregisterUserTexture(ImTextureData tex) {
+        internal_native_UnregisterUserTexture(tex.native_address);
     }
 
     /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::TabBarQueueReorder((ImGuiTabBar* )tab_bar_addr, (ImGuiTabItem* )tab_addr, (int)offset);
+ImGuiWrapper::ImGuiInternal::UnregisterUserTexture((ImTextureData* )tex_addr);
 */
-    public static native void internal_native_TabBarQueueReorder(long tab_bar_addr, long tab_addr, int offset);
+    public static native void internal_native_UnregisterUserTexture(long tex_addr);
+
+    public static void RegisterFontAtlas(ImFontAtlas atlas) {
+        internal_native_RegisterFontAtlas(atlas.native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::RegisterFontAtlas((ImFontAtlas* )atlas_addr);
+*/
+    public static native void internal_native_RegisterFontAtlas(long atlas_addr);
+
+    public static void UnregisterFontAtlas(ImFontAtlas atlas) {
+        internal_native_UnregisterFontAtlas(atlas.native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::UnregisterFontAtlas((ImFontAtlas* )atlas_addr);
+*/
+    public static native void internal_native_UnregisterFontAtlas(long atlas_addr);
+
+    public static void SetCurrentFont(ImFont font, float font_size_before_scaling, float font_size_after_scaling) {
+        internal_native_SetCurrentFont(font.native_address, font_size_before_scaling, font_size_after_scaling);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::SetCurrentFont((ImFont* )font_addr, (float)font_size_before_scaling, (float)font_size_after_scaling);
+*/
+    public static native void internal_native_SetCurrentFont(long font_addr, float font_size_before_scaling, float font_size_after_scaling);
+
+    public static void UpdateCurrentFontSize(float restore_font_size_after_scaling) {
+        internal_native_UpdateCurrentFontSize(restore_font_size_after_scaling);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::UpdateCurrentFontSize((float)restore_font_size_after_scaling);
+*/
+    public static native void internal_native_UpdateCurrentFontSize(float restore_font_size_after_scaling);
+
+    public static void SetFontRasterizerDensity(float rasterizer_density) {
+        internal_native_SetFontRasterizerDensity(rasterizer_density);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::SetFontRasterizerDensity((float)rasterizer_density);
+*/
+    public static native void internal_native_SetFontRasterizerDensity(float rasterizer_density);
+
+    public static float GetFontRasterizerDensity() {
+        return internal_native_GetFontRasterizerDensity();
+    }
+
+    /*[-JNI;-NATIVE]
+return ImGuiWrapper::ImGuiInternal::GetFontRasterizerDensity();
+*/
+    public static native float internal_native_GetFontRasterizerDensity();
+
+    public static float GetRoundedFontSize(float size) {
+        return internal_native_GetRoundedFontSize(size);
+    }
+
+    /*[-JNI;-NATIVE]
+return ImGuiWrapper::ImGuiInternal::GetRoundedFontSize((float)size);
+*/
+    public static native float internal_native_GetRoundedFontSize(float size);
+
+    public static ImFont GetDefaultFont() {
+        long pointer = internal_native_GetDefaultFont();
+        if (pointer == 0)
+            return ImFont.NULL;
+        if (ImFont_TEMP_STATIC_GEN_0 == null)
+            ImFont_TEMP_STATIC_GEN_0 = ImFont.native_new();
+        ImFont_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return ImFont_TEMP_STATIC_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)ImGuiWrapper::ImGuiInternal::GetDefaultFont();
+*/
+    public static native long internal_native_GetDefaultFont();
+
+    public static void PushPasswordFont() {
+        internal_native_PushPasswordFont();
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::PushPasswordFont();
+*/
+    public static native void internal_native_PushPasswordFont();
+
+    public static void PopPasswordFont() {
+        internal_native_PopPasswordFont();
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::PopPasswordFont();
+*/
+    public static native void internal_native_PopPasswordFont();
+
+    public static ImDrawList GetForegroundDrawList(ImGuiWindow window) {
+        long pointer = internal_native_GetForegroundDrawList(window.native_address);
+        if (pointer == 0)
+            return ImDrawList.NULL;
+        if (ImDrawList_TEMP_STATIC_GEN_0 == null)
+            ImDrawList_TEMP_STATIC_GEN_0 = ImDrawList.native_new();
+        ImDrawList_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return ImDrawList_TEMP_STATIC_GEN_0;
+    }
+
+    /*[-JNI;-NATIVE]
+return (jlong)ImGuiWrapper::ImGuiInternal::GetForegroundDrawList((ImGuiWindow* )window_addr);
+*/
+    public static native long internal_native_GetForegroundDrawList(long window_addr);
+
+    public static void Initialize() {
+        internal_native_Initialize();
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::Initialize();
+*/
+    public static native void internal_native_Initialize();
+
+    public static void Shutdown() {
+        internal_native_Shutdown();
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::Shutdown();
+*/
+    public static native void internal_native_Shutdown();
+
+    public static void UpdateInputEvents(boolean trickle_fast_inputs) {
+        internal_native_UpdateInputEvents(trickle_fast_inputs);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::UpdateInputEvents(trickle_fast_inputs);
+*/
+    public static native void internal_native_UpdateInputEvents(boolean trickle_fast_inputs);
+
+    public static void UpdateHoveredWindowAndCaptureFlags(ImVec2 mouse_pos) {
+        internal_native_UpdateHoveredWindowAndCaptureFlags(mouse_pos.native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::UpdateHoveredWindowAndCaptureFlags(*((ImVec2* )mouse_pos_addr));
+*/
+    public static native void internal_native_UpdateHoveredWindowAndCaptureFlags(long mouse_pos_addr);
+
+    public static void StartMouseMovingWindow(ImGuiWindow window) {
+        internal_native_StartMouseMovingWindow(window.native_address);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::StartMouseMovingWindow((ImGuiWindow* )window_addr);
+*/
+    public static native void internal_native_StartMouseMovingWindow(long window_addr);
+
+    public static void StartMouseMovingWindowOrNode(ImGuiWindow window, ImGuiDockNode node, boolean undock) {
+        internal_native_StartMouseMovingWindowOrNode(window.native_address, node.native_address, undock);
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::StartMouseMovingWindowOrNode((ImGuiWindow* )window_addr, (ImGuiDockNode* )node_addr, undock);
+*/
+    public static native void internal_native_StartMouseMovingWindowOrNode(long window_addr, long node_addr, boolean undock);
+
+    public static void StopMouseMovingWindow() {
+        internal_native_StopMouseMovingWindow();
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::StopMouseMovingWindow();
+*/
+    public static native void internal_native_StopMouseMovingWindow();
+
+    public static void UpdateMouseMovingWindowNewFrame() {
+        internal_native_UpdateMouseMovingWindowNewFrame();
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::UpdateMouseMovingWindowNewFrame();
+*/
+    public static native void internal_native_UpdateMouseMovingWindowNewFrame();
+
+    public static void UpdateMouseMovingWindowEndFrame() {
+        internal_native_UpdateMouseMovingWindowEndFrame();
+    }
+
+    /*[-JNI;-NATIVE]
+ImGuiWrapper::ImGuiInternal::UpdateMouseMovingWindowEndFrame();
+*/
+    public static native void internal_native_UpdateMouseMovingWindowEndFrame();
+
+    public static ImGuiItemStatusFlags GetItemStatusFlags() {
+        int value = internal_native_GetItemStatusFlags();
+        ImGuiItemStatusFlags[] values = ImGuiItemStatusFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiItemStatusFlags enumVal = values[i];
+            if (enumVal != ImGuiItemStatusFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiItemStatusFlags.CUSTOM.setValue(value);
+    }
+
+    /*[-JNI;-NATIVE]
+return (int)ImGuiWrapper::ImGuiInternal::GetItemStatusFlags();
+*/
+    public static native int internal_native_GetItemStatusFlags();
+
+    public static ImGuiItemFlags GetItemFlags() {
+        int value = internal_native_GetItemFlags();
+        ImGuiItemFlags[] values = ImGuiItemFlags.values();
+        for (int i = 0; i < values.length; i++) {
+            ImGuiItemFlags enumVal = values[i];
+            if (enumVal != ImGuiItemFlags.CUSTOM && enumVal.getValue() == value)
+                return enumVal;
+        }
+        return ImGuiItemFlags.CUSTOM.setValue(value);
+    }
+
+    /*[-JNI;-NATIVE]
+return (int)ImGuiWrapper::ImGuiInternal::GetItemFlags();
+*/
+    public static native int internal_native_GetItemFlags();
 
     public static int GetActiveID() {
         return internal_native_GetActiveID();
@@ -645,156 +791,41 @@ ImGuiWrapper::ImGuiInternal::KeepAliveID((int)id);
 */
     public static native void internal_native_KeepAliveID(int id);
 
-    public static boolean IsDragDropActive() {
-        return internal_native_IsDragDropActive();
+    public static void ItemSize(ImVec2 size, float text_baseline_y) {
+        internal_native_ItemSize__0(size.native_address, text_baseline_y);
     }
 
     /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::IsDragDropActive();
+ImGuiWrapper::ImGuiInternal::ItemSize(*((ImVec2* )size_addr), (float)text_baseline_y);
 */
-    public static native boolean internal_native_IsDragDropActive();
+    public static native void internal_native_ItemSize__0(long size_addr, float text_baseline_y);
 
-    public static boolean BeginDragDropTargetCustom(ImRect bb, int id) {
-        return internal_native_BeginDragDropTargetCustom(bb.native_address, id);
+    public static void ItemSize(ImVec2 size) {
+        internal_native_ItemSize__0(size.native_address);
     }
 
     /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::BeginDragDropTargetCustom(*((ImRect* )bb_addr), (int)id);
+ImGuiWrapper::ImGuiInternal::ItemSize(*((ImVec2* )size_addr));
 */
-    public static native boolean internal_native_BeginDragDropTargetCustom(long bb_addr, int id);
+    public static native void internal_native_ItemSize__0(long size_addr);
 
-    public static void ClearDragDrop() {
-        internal_native_ClearDragDrop();
+    public static void ItemSize(ImRect bb, float text_baseline_y) {
+        internal_native_ItemSize__1(bb.native_address, text_baseline_y);
     }
 
     /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::ClearDragDrop();
+ImGuiWrapper::ImGuiInternal::ItemSize(*((ImRect* )bb_addr), (float)text_baseline_y);
 */
-    public static native void internal_native_ClearDragDrop();
+    public static native void internal_native_ItemSize__1(long bb_addr, float text_baseline_y);
 
-    public static boolean IsDragDropPayloadBeingAccepted() {
-        return internal_native_IsDragDropPayloadBeingAccepted();
+    public static void ItemSize(ImRect bb) {
+        internal_native_ItemSize__1(bb.native_address);
     }
 
     /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::IsDragDropPayloadBeingAccepted();
+ImGuiWrapper::ImGuiInternal::ItemSize(*((ImRect* )bb_addr));
 */
-    public static native boolean internal_native_IsDragDropPayloadBeingAccepted();
-
-    public static void RenderDragDropTargetRect(ImRect bb, ImRect item_clip_rect) {
-        internal_native_RenderDragDropTargetRect(bb.native_address, item_clip_rect.native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::RenderDragDropTargetRect(*((ImRect* )bb_addr), *((ImRect* )item_clip_rect_addr));
-*/
-    public static native void internal_native_RenderDragDropTargetRect(long bb_addr, long item_clip_rect_addr);
-
-    public static void RenderArrow(ImDrawList draw_list, ImVec2 pos, int col, ImGuiDir dir, float scale) {
-        internal_native_RenderArrow(draw_list.native_address, pos.native_address, col, dir.getValue(), scale);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::RenderArrow((ImDrawList* )draw_list_addr, *((ImVec2* )pos_addr), (int)col, (::ImGuiDir)dir, (float)scale);
-*/
-    public static native void internal_native_RenderArrow(long draw_list_addr, long pos_addr, int col, int dir, float scale);
-
-    public static void RenderArrow(ImDrawList draw_list, ImVec2 pos, int col, ImGuiDir dir) {
-        internal_native_RenderArrow(draw_list.native_address, pos.native_address, col, dir.getValue());
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::RenderArrow((ImDrawList* )draw_list_addr, *((ImVec2* )pos_addr), (int)col, (::ImGuiDir)dir);
-*/
-    public static native void internal_native_RenderArrow(long draw_list_addr, long pos_addr, int col, int dir);
-
-    public static void RenderBullet(ImDrawList draw_list, ImVec2 pos, int col) {
-        internal_native_RenderBullet(draw_list.native_address, pos.native_address, col);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::RenderBullet((ImDrawList* )draw_list_addr, *((ImVec2* )pos_addr), (int)col);
-*/
-    public static native void internal_native_RenderBullet(long draw_list_addr, long pos_addr, int col);
-
-    public static void RenderCheckMark(ImDrawList draw_list, ImVec2 pos, int col, float sz) {
-        internal_native_RenderCheckMark(draw_list.native_address, pos.native_address, col, sz);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::RenderCheckMark((ImDrawList* )draw_list_addr, *((ImVec2* )pos_addr), (int)col, (float)sz);
-*/
-    public static native void internal_native_RenderCheckMark(long draw_list_addr, long pos_addr, int col, float sz);
-
-    public static void RenderArrowPointingAt(ImDrawList draw_list, ImVec2 pos, ImVec2 half_sz, ImGuiDir direction, int col) {
-        internal_native_RenderArrowPointingAt(draw_list.native_address, pos.native_address, half_sz.native_address, direction.getValue(), col);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::RenderArrowPointingAt((ImDrawList* )draw_list_addr, *((ImVec2* )pos_addr), *((ImVec2* )half_sz_addr), (::ImGuiDir)direction, (int)col);
-*/
-    public static native void internal_native_RenderArrowPointingAt(long draw_list_addr, long pos_addr, long half_sz_addr, int direction, int col);
-
-    public static void RenderArrowDockMenu(ImDrawList draw_list, ImVec2 p_min, float sz, int col) {
-        internal_native_RenderArrowDockMenu(draw_list.native_address, p_min.native_address, sz, col);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::RenderArrowDockMenu((ImDrawList* )draw_list_addr, *((ImVec2* )p_min_addr), (float)sz, (int)col);
-*/
-    public static native void internal_native_RenderArrowDockMenu(long draw_list_addr, long p_min_addr, float sz, int col);
-
-    public static void RenderRectFilledRangeH(ImDrawList draw_list, ImRect rect, int col, float x_start_norm, float x_end_norm, float rounding) {
-        internal_native_RenderRectFilledRangeH(draw_list.native_address, rect.native_address, col, x_start_norm, x_end_norm, rounding);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::RenderRectFilledRangeH((ImDrawList* )draw_list_addr, *((ImRect* )rect_addr), (int)col, (float)x_start_norm, (float)x_end_norm, (float)rounding);
-*/
-    public static native void internal_native_RenderRectFilledRangeH(long draw_list_addr, long rect_addr, int col, float x_start_norm, float x_end_norm, float rounding);
-
-    public static void RenderRectFilledWithHole(ImDrawList draw_list, ImRect outer, ImRect inner, int col, float rounding) {
-        internal_native_RenderRectFilledWithHole(draw_list.native_address, outer.native_address, inner.native_address, col, rounding);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::RenderRectFilledWithHole((ImDrawList* )draw_list_addr, *((ImRect* )outer_addr), *((ImRect* )inner_addr), (int)col, (float)rounding);
-*/
-    public static native void internal_native_RenderRectFilledWithHole(long draw_list_addr, long outer_addr, long inner_addr, int col, float rounding);
-
-    public static ImDrawFlags CalcRoundingFlagsForRectInRect(ImRect r_in, ImRect r_outer, float threshold) {
-        int value = internal_native_CalcRoundingFlagsForRectInRect(r_in.native_address, r_outer.native_address, threshold);
-        ImDrawFlags[] values = ImDrawFlags.values();
-        for (int i = 0; i < values.length; i++) {
-            ImDrawFlags enumVal = values[i];
-            if (enumVal != ImDrawFlags.CUSTOM && enumVal.getValue() == value)
-                return enumVal;
-        }
-        return ImDrawFlags.CUSTOM.setValue(value);
-    }
-
-    /*[-JNI;-NATIVE]
-return (int)ImGuiWrapper::ImGuiInternal::CalcRoundingFlagsForRectInRect(*((ImRect* )r_in_addr), *((ImRect* )r_outer_addr), (float)threshold);
-*/
-    public static native int internal_native_CalcRoundingFlagsForRectInRect(long r_in_addr, long r_outer_addr, float threshold);
-
-    public static boolean ArrowButtonEx(String str_id, ImGuiDir dir, ImVec2 size_arg, ImGuiButtonFlags ImGuiButtonFlags) {
-        return internal_native_ArrowButtonEx(str_id, dir.getValue(), size_arg.native_address, ImGuiButtonFlags.getValue());
-    }
-
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::ArrowButtonEx(str_id, (::ImGuiDir)dir, *((ImVec2* )size_arg_addr), (::ImGuiButtonFlags)ImGuiButtonFlags);
-*/
-    public static native boolean internal_native_ArrowButtonEx(String str_id, int dir, long size_arg_addr, int ImGuiButtonFlags);
-
-    public static boolean ArrowButtonEx(String str_id, ImGuiDir dir, ImVec2 size_arg) {
-        return internal_native_ArrowButtonEx(str_id, dir.getValue(), size_arg.native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::ArrowButtonEx(str_id, (::ImGuiDir)dir, *((ImVec2* )size_arg_addr));
-*/
-    public static native boolean internal_native_ArrowButtonEx(String str_id, int dir, long size_arg_addr);
+    public static native void internal_native_ItemSize__1(long bb_addr);
 
     public static boolean ButtonBehavior(ImRect bb, int id, IDLBoolArray out_hovered, IDLBoolArray out_held, ImGuiButtonFlags ImGuiButtonFlags) {
         return internal_native_ButtonBehavior(bb.native_address, id, out_hovered.native_void_address, out_held.native_void_address, ImGuiButtonFlags.getValue());
@@ -867,180 +898,4 @@ return ImGuiWrapper::ImGuiInternal::SplitterBehavior(*((ImRect* )bb_addr), (int)
 return ImGuiWrapper::ImGuiInternal::SplitterBehavior(*((ImRect* )bb_addr), (int)id, (::ImGuiAxis)axis, (float*)size1_addr, (float*)size2_addr, (float)min_size1, (float)min_size2);
 */
     public static native boolean internal_native_SplitterBehavior(long bb_addr, int id, int axis, long size1_addr, long size2_addr, float min_size1, float min_size2);
-
-    public static boolean TreeNodeBehavior(int id, ImGuiTreeNodeFlags ImGuiTreeNodeFlags, String label, String label_end) {
-        return internal_native_TreeNodeBehavior(id, ImGuiTreeNodeFlags.getValue(), label, label_end);
-    }
-
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::TreeNodeBehavior((int)id, (::ImGuiTreeNodeFlags)ImGuiTreeNodeFlags, label, label_end);
-*/
-    public static native boolean internal_native_TreeNodeBehavior(int id, int ImGuiTreeNodeFlags, String label, String label_end);
-
-    public static boolean TreeNodeBehavior(int id, ImGuiTreeNodeFlags ImGuiTreeNodeFlags, String label) {
-        return internal_native_TreeNodeBehavior(id, ImGuiTreeNodeFlags.getValue(), label);
-    }
-
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::TreeNodeBehavior((int)id, (::ImGuiTreeNodeFlags)ImGuiTreeNodeFlags, label);
-*/
-    public static native boolean internal_native_TreeNodeBehavior(int id, int ImGuiTreeNodeFlags, String label);
-
-    public static void TreePushOverrideID(int id) {
-        internal_native_TreePushOverrideID(id);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::TreePushOverrideID((int)id);
-*/
-    public static native void internal_native_TreePushOverrideID(int id);
-
-    public static void TreeNodeSetOpen(int id, boolean open) {
-        internal_native_TreeNodeSetOpen(id, open);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::TreeNodeSetOpen((int)id, open);
-*/
-    public static native void internal_native_TreeNodeSetOpen(int id, boolean open);
-
-    public static boolean TreeNodeUpdateNextOpen(int id, ImGuiTreeNodeFlags ImGuiTreeNodeFlags) {
-        return internal_native_TreeNodeUpdateNextOpen(id, ImGuiTreeNodeFlags.getValue());
-    }
-
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::TreeNodeUpdateNextOpen((int)id, (::ImGuiTreeNodeFlags)ImGuiTreeNodeFlags);
-*/
-    public static native boolean internal_native_TreeNodeUpdateNextOpen(int id, int ImGuiTreeNodeFlags);
-
-    public static void SetNextItemSelectionUserData(int selection_user_data) {
-        internal_native_SetNextItemSelectionUserData(selection_user_data);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::SetNextItemSelectionUserData((int)selection_user_data);
-*/
-    public static native void internal_native_SetNextItemSelectionUserData(int selection_user_data);
-
-    public static int GetKeyOwner(ImGuiKey ImGuiKey) {
-        return internal_native_GetKeyOwner(ImGuiKey.getValue());
-    }
-
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::GetKeyOwner((::ImGuiKey)ImGuiKey);
-*/
-    public static native int internal_native_GetKeyOwner(int ImGuiKey);
-
-    public static void SetKeyOwner(ImGuiKey ImGuiKey, int owner_id, ImGuiInputFlags ImGuiInputFlags) {
-        internal_native_SetKeyOwner(ImGuiKey.getValue(), owner_id, ImGuiInputFlags.getValue());
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::SetKeyOwner((::ImGuiKey)ImGuiKey, (int)owner_id, (::ImGuiInputFlags)ImGuiInputFlags);
-*/
-    public static native void internal_native_SetKeyOwner(int ImGuiKey, int owner_id, int ImGuiInputFlags);
-
-    public static void SetKeyOwner(ImGuiKey ImGuiKey, int owner_id) {
-        internal_native_SetKeyOwner(ImGuiKey.getValue(), owner_id);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::SetKeyOwner((::ImGuiKey)ImGuiKey, (int)owner_id);
-*/
-    public static native void internal_native_SetKeyOwner(int ImGuiKey, int owner_id);
-
-    public static void SetItemKeyOwner(ImGuiKey ImGuiKey, ImGuiInputFlags ImGuiInputFlags) {
-        internal_native_SetItemKeyOwner(ImGuiKey.getValue(), ImGuiInputFlags.getValue());
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::SetItemKeyOwner((::ImGuiKey)ImGuiKey, (::ImGuiInputFlags)ImGuiInputFlags);
-*/
-    public static native void internal_native_SetItemKeyOwner(int ImGuiKey, int ImGuiInputFlags);
-
-    public static void SetItemKeyOwner(ImGuiKey ImGuiKey) {
-        internal_native_SetItemKeyOwner(ImGuiKey.getValue());
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::SetItemKeyOwner((::ImGuiKey)ImGuiKey);
-*/
-    public static native void internal_native_SetItemKeyOwner(int ImGuiKey);
-
-    public static boolean TestKeyOwner(ImGuiKey ImGuiKey, int owner_id) {
-        return internal_native_TestKeyOwner(ImGuiKey.getValue(), owner_id);
-    }
-
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGuiInternal::TestKeyOwner((::ImGuiKey)ImGuiKey, (int)owner_id);
-*/
-    public static native boolean internal_native_TestKeyOwner(int ImGuiKey, int owner_id);
-
-    public static void ScrollToItem(ImGuiScrollFlags flags) {
-        internal_native_ScrollToItem(flags.getValue());
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::ScrollToItem((::ImGuiScrollFlags)flags);
-*/
-    public static native void internal_native_ScrollToItem(int flags);
-
-    public static void ScrollToItem() {
-        internal_native_ScrollToItem();
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::ScrollToItem();
-*/
-    public static native void internal_native_ScrollToItem();
-
-    public static void ScrollToRect(ImGuiWindow window, ImRect rect, ImGuiScrollFlags flags) {
-        internal_native_ScrollToRect(window.native_address, rect.native_address, flags.getValue());
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::ScrollToRect((ImGuiWindow* )window_addr, *((ImRect* )rect_addr), (::ImGuiScrollFlags)flags);
-*/
-    public static native void internal_native_ScrollToRect(long window_addr, long rect_addr, int flags);
-
-    public static void ScrollToRect(ImGuiWindow window, ImRect rect) {
-        internal_native_ScrollToRect(window.native_address, rect.native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGuiInternal::ScrollToRect((ImGuiWindow* )window_addr, *((ImRect* )rect_addr));
-*/
-    public static native void internal_native_ScrollToRect(long window_addr, long rect_addr);
-
-    public static ImVec2 ScrollToRectEx(ImGuiWindow window, ImRect rect, ImGuiScrollFlags flags) {
-        long pointer = internal_native_ScrollToRectEx(window.native_address, rect.native_address, flags.getValue());
-        if (pointer == 0)
-            return ImVec2.NULL;
-        if (ImVec2_TEMP_STATIC_GEN_1 == null)
-            ImVec2_TEMP_STATIC_GEN_1 = ImVec2.native_new();
-        ImVec2_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
-        return ImVec2_TEMP_STATIC_GEN_1;
-    }
-
-    /*[-JNI;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = ImGuiWrapper::ImGuiInternal::ScrollToRectEx((ImGuiWindow* )window_addr, *((ImRect* )rect_addr), (::ImGuiScrollFlags)flags);
-return (jlong)&copy_addr;*/
-    public static native long internal_native_ScrollToRectEx(long window_addr, long rect_addr, int flags);
-
-    public static ImVec2 ScrollToRectEx(ImGuiWindow window, ImRect rect) {
-        long pointer = internal_native_ScrollToRectEx(window.native_address, rect.native_address);
-        if (pointer == 0)
-            return ImVec2.NULL;
-        if (ImVec2_TEMP_STATIC_GEN_2 == null)
-            ImVec2_TEMP_STATIC_GEN_2 = ImVec2.native_new();
-        ImVec2_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
-        return ImVec2_TEMP_STATIC_GEN_2;
-    }
-
-    /*[-JNI;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = ImGuiWrapper::ImGuiInternal::ScrollToRectEx((ImGuiWindow* )window_addr, *((ImRect* )rect_addr));
-return (jlong)&copy_addr;*/
-    public static native long internal_native_ScrollToRectEx(long window_addr, long rect_addr);
 }

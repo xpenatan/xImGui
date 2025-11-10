@@ -6,6 +6,7 @@
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
+import gen.imgui.enums.ImGuiViewportFlags;
 
 public class ImGuiViewport extends IDLBase {
 
