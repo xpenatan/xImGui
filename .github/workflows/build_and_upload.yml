@@ -372,6 +372,7 @@ jobs:
           git config user.email "bot@github.com"
 
       - name: Commit generated code
+        if: ${{ inputs.shouldUpload }}
         run: |
           git add .
           git commit -m "Commit generated code" || echo "No changes to commit"
