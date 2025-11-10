@@ -362,20 +362,20 @@ interface ImGuiInternal {
 //    void          SetWindowDock(ImGuiWindow* window, ImGuiID dock_id, ImGuiCond cond);
 
     // Docking - Builder function needs to be generally called before the node is used/submitted.
-    void            DockBuilderDockWindow([Const] DOMString window_name, long node_id);
-    ImGuiDockNode   DockBuilderGetNode(long node_id);
-    ImGuiDockNode   DockBuilderGetCentralNode(long node_id);
-    long            DockBuilderAddNode(optional long node_id, optional ImGuiDockNodeFlags flags);
-    void            DockBuilderRemoveNode(long node_id);                 // Remove node and all its child, undock all windows
-    void            DockBuilderRemoveNodeDockedWindows(long node_id, optional boolean clear_settings_refs);
-    void            DockBuilderRemoveNodeChildNodes(long node_id);       // Remove all split/hierarchy. All remaining docked windows will be re-docked to the remaining root node (node_id).
-    void            DockBuilderSetNodePos(long node_id, [Ref] ImVec2 pos);
-    void            DockBuilderSetNodeSize(long node_id, [Ref] ImVec2 size);
-    long            DockBuilderSplitNode(long node_id, ImGuiDir split_dir, float size_ratio_for_node_at_dir, long[] out_id_at_dir, long[] out_id_at_opposite_dir); // Create 2 child nodes in this parent node.
-    void            DockBuilderCopyDockSpace(long src_dockspace_id, long dst_dockspace_id, ImVectorDOMString in_window_remap_pairs);
-    void            DockBuilderCopyNode(long src_node_id, long dst_node_id, ImVectorImGuiID out_node_remap_pairs);
-    void            DockBuilderCopyWindowSettings([Const] DOMString src_name, [Const] DOMString dst_name);
-    void            DockBuilderFinish(long node_id);
+    static void            DockBuilderDockWindow([Const] DOMString window_name, long node_id);
+    static ImGuiDockNode   DockBuilderGetNode(long node_id);
+    static ImGuiDockNode   DockBuilderGetCentralNode(long node_id);
+    static long            DockBuilderAddNode(optional long node_id, optional ImGuiDockNodeFlags flags);
+    static void            DockBuilderRemoveNode(long node_id);                 // Remove node and all its child, undock all windows
+    static void            DockBuilderRemoveNodeDockedWindows(long node_id, optional boolean clear_settings_refs);
+    static void            DockBuilderRemoveNodeChildNodes(long node_id);       // Remove all split/hierarchy. All remaining docked windows will be re-docked to the remaining root node (node_id).
+    static void            DockBuilderSetNodePos(long node_id, [Ref] ImVec2 pos);
+    static void            DockBuilderSetNodeSize(long node_id, [Ref] ImVec2 size);
+    static long            DockBuilderSplitNode(long node_id, ImGuiDir split_dir, float size_ratio_for_node_at_dir, long[] out_id_at_dir, long[] out_id_at_opposite_dir); // Create 2 child nodes in this parent node.
+    static void            DockBuilderCopyDockSpace(long src_dockspace_id, long dst_dockspace_id, ImVectorDOMString in_window_remap_pairs);
+    static void            DockBuilderCopyNode(long src_node_id, long dst_node_id, ImVectorImGuiID out_node_remap_pairs);
+    static void            DockBuilderCopyWindowSettings([Const] DOMString src_name, [Const] DOMString dst_name);
+    static void            DockBuilderFinish(long node_id);
 //
 //    // [EXPERIMENTAL] Focus Scope
 //    void          PushFocusScope(ImGuiID id);
