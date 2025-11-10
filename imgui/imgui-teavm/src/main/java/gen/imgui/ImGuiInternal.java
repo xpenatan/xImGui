@@ -48,9 +48,9 @@ public class ImGuiInternal extends IDLBase {
 
     static private ImDrawList ImDrawList_TEMP_STATIC_GEN_0;
 
-    private ImGuiDockNode ImGuiDockNode_TEMP_GEN_0;
+    static private ImGuiDockNode ImGuiDockNode_TEMP_STATIC_GEN_0;
 
-    private ImGuiDockNode ImGuiDockNode_TEMP_GEN_1;
+    static private ImGuiDockNode ImGuiDockNode_TEMP_STATIC_GEN_1;
 
     static public final ImGuiInternal NULL = ImGuiInternal.native_new();
 
@@ -945,212 +945,195 @@ imgui.ImGuiInternal.prototype.ItemSize__1(bb_addr);
     @org.teavm.jso.JSBody(params = {"bb_addr"}, script = "imgui.ImGuiInternal.prototype.ItemSize__1(bb_addr);")
     public static native void internal_native_ItemSize__1(int bb_addr);
 
-    public void DockBuilderDockWindow(String window_name, int node_id) {
-        internal_native_DockBuilderDockWindow(native_address, window_name, node_id);
+    public static void DockBuilderDockWindow(String window_name, int node_id) {
+        internal_native_DockBuilderDockWindow(window_name, node_id);
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);
-jsObj.DockBuilderDockWindow(window_name, node_id);
+imgui.ImGuiInternal.prototype.DockBuilderDockWindow(window_name, node_id);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "window_name", "node_id"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);jsObj.DockBuilderDockWindow(window_name, node_id);")
-    public static native void internal_native_DockBuilderDockWindow(int this_addr, String window_name, int node_id);
+    @org.teavm.jso.JSBody(params = {"window_name", "node_id"}, script = "imgui.ImGuiInternal.prototype.DockBuilderDockWindow(window_name, node_id);")
+    public static native void internal_native_DockBuilderDockWindow(String window_name, int node_id);
 
-    public ImGuiDockNode DockBuilderGetNode(int node_id) {
-        int pointer = internal_native_DockBuilderGetNode(native_address, node_id);
+    public static ImGuiDockNode DockBuilderGetNode(int node_id) {
+        int pointer = internal_native_DockBuilderGetNode(node_id);
         if (pointer == 0)
             return ImGuiDockNode.NULL;
-        if (ImGuiDockNode_TEMP_GEN_0 == null)
-            ImGuiDockNode_TEMP_GEN_0 = ImGuiDockNode.native_new();
-        ImGuiDockNode_TEMP_GEN_0.internal_reset(pointer, false);
-        return ImGuiDockNode_TEMP_GEN_0;
+        if (ImGuiDockNode_TEMP_STATIC_GEN_0 == null)
+            ImGuiDockNode_TEMP_STATIC_GEN_0 = ImGuiDockNode.native_new();
+        ImGuiDockNode_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        return ImGuiDockNode_TEMP_STATIC_GEN_0;
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);
-var returnedJSObj = jsObj.DockBuilderGetNode(node_id);
+var returnedJSObj = imgui.ImGuiInternal.prototype.DockBuilderGetNode(node_id);
 if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
 return imgui.getPointer(returnedJSObj);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "node_id"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);var returnedJSObj = jsObj.DockBuilderGetNode(node_id);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_DockBuilderGetNode(int this_addr, int node_id);
+    @org.teavm.jso.JSBody(params = {"node_id"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.DockBuilderGetNode(node_id);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_DockBuilderGetNode(int node_id);
 
-    public ImGuiDockNode DockBuilderGetCentralNode(int node_id) {
-        int pointer = internal_native_DockBuilderGetCentralNode(native_address, node_id);
+    public static ImGuiDockNode DockBuilderGetCentralNode(int node_id) {
+        int pointer = internal_native_DockBuilderGetCentralNode(node_id);
         if (pointer == 0)
             return ImGuiDockNode.NULL;
-        if (ImGuiDockNode_TEMP_GEN_1 == null)
-            ImGuiDockNode_TEMP_GEN_1 = ImGuiDockNode.native_new();
-        ImGuiDockNode_TEMP_GEN_1.internal_reset(pointer, false);
-        return ImGuiDockNode_TEMP_GEN_1;
+        if (ImGuiDockNode_TEMP_STATIC_GEN_1 == null)
+            ImGuiDockNode_TEMP_STATIC_GEN_1 = ImGuiDockNode.native_new();
+        ImGuiDockNode_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        return ImGuiDockNode_TEMP_STATIC_GEN_1;
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);
-var returnedJSObj = jsObj.DockBuilderGetCentralNode(node_id);
+var returnedJSObj = imgui.ImGuiInternal.prototype.DockBuilderGetCentralNode(node_id);
 if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
 return imgui.getPointer(returnedJSObj);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "node_id"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);var returnedJSObj = jsObj.DockBuilderGetCentralNode(node_id);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_DockBuilderGetCentralNode(int this_addr, int node_id);
+    @org.teavm.jso.JSBody(params = {"node_id"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.DockBuilderGetCentralNode(node_id);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
+    public static native int internal_native_DockBuilderGetCentralNode(int node_id);
 
-    public int DockBuilderAddNode(int node_id, ImGuiDockNodeFlags flags) {
-        return internal_native_DockBuilderAddNode(native_address, node_id, flags.getValue());
+    public static int DockBuilderAddNode(int node_id, ImGuiDockNodeFlags flags) {
+        return internal_native_DockBuilderAddNode(node_id, flags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);
-var returnedJSObj = jsObj.DockBuilderAddNode(node_id, flags);
+var returnedJSObj = imgui.ImGuiInternal.prototype.DockBuilderAddNode(node_id, flags);
 return returnedJSObj;
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "node_id", "flags"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);var returnedJSObj = jsObj.DockBuilderAddNode(node_id, flags);return returnedJSObj;")
-    public static native int internal_native_DockBuilderAddNode(int this_addr, int node_id, int flags);
+    @org.teavm.jso.JSBody(params = {"node_id", "flags"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.DockBuilderAddNode(node_id, flags);return returnedJSObj;")
+    public static native int internal_native_DockBuilderAddNode(int node_id, int flags);
 
-    public int DockBuilderAddNode(int node_id) {
-        return internal_native_DockBuilderAddNode(native_address, node_id);
+    public static int DockBuilderAddNode(int node_id) {
+        return internal_native_DockBuilderAddNode(node_id);
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);
-var returnedJSObj = jsObj.DockBuilderAddNode(node_id);
+var returnedJSObj = imgui.ImGuiInternal.prototype.DockBuilderAddNode(node_id);
 return returnedJSObj;
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "node_id"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);var returnedJSObj = jsObj.DockBuilderAddNode(node_id);return returnedJSObj;")
-    public static native int internal_native_DockBuilderAddNode(int this_addr, int node_id);
+    @org.teavm.jso.JSBody(params = {"node_id"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.DockBuilderAddNode(node_id);return returnedJSObj;")
+    public static native int internal_native_DockBuilderAddNode(int node_id);
 
-    public int DockBuilderAddNode() {
-        return internal_native_DockBuilderAddNode(native_address);
+    public static int DockBuilderAddNode() {
+        return internal_native_DockBuilderAddNode();
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);
-var returnedJSObj = jsObj.DockBuilderAddNode();
+var returnedJSObj = imgui.ImGuiInternal.prototype.DockBuilderAddNode();
 return returnedJSObj;
 */
-    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);var returnedJSObj = jsObj.DockBuilderAddNode();return returnedJSObj;")
-    public static native int internal_native_DockBuilderAddNode(int this_addr);
+    @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGuiInternal.prototype.DockBuilderAddNode();return returnedJSObj;")
+    public static native int internal_native_DockBuilderAddNode();
 
-    public void DockBuilderRemoveNode(int node_id) {
-        internal_native_DockBuilderRemoveNode(native_address, node_id);
+    public static void DockBuilderRemoveNode(int node_id) {
+        internal_native_DockBuilderRemoveNode(node_id);
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);
-jsObj.DockBuilderRemoveNode(node_id);
+imgui.ImGuiInternal.prototype.DockBuilderRemoveNode(node_id);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "node_id"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);jsObj.DockBuilderRemoveNode(node_id);")
-    public static native void internal_native_DockBuilderRemoveNode(int this_addr, int node_id);
+    @org.teavm.jso.JSBody(params = {"node_id"}, script = "imgui.ImGuiInternal.prototype.DockBuilderRemoveNode(node_id);")
+    public static native void internal_native_DockBuilderRemoveNode(int node_id);
 
-    public void DockBuilderRemoveNodeDockedWindows(int node_id, boolean clear_settings_refs) {
-        internal_native_DockBuilderRemoveNodeDockedWindows(native_address, node_id, clear_settings_refs);
+    public static void DockBuilderRemoveNodeDockedWindows(int node_id, boolean clear_settings_refs) {
+        internal_native_DockBuilderRemoveNodeDockedWindows(node_id, clear_settings_refs);
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);
-jsObj.DockBuilderRemoveNodeDockedWindows(node_id, clear_settings_refs);
+imgui.ImGuiInternal.prototype.DockBuilderRemoveNodeDockedWindows(node_id, clear_settings_refs);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "node_id", "clear_settings_refs"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);jsObj.DockBuilderRemoveNodeDockedWindows(node_id, clear_settings_refs);")
-    public static native void internal_native_DockBuilderRemoveNodeDockedWindows(int this_addr, int node_id, boolean clear_settings_refs);
+    @org.teavm.jso.JSBody(params = {"node_id", "clear_settings_refs"}, script = "imgui.ImGuiInternal.prototype.DockBuilderRemoveNodeDockedWindows(node_id, clear_settings_refs);")
+    public static native void internal_native_DockBuilderRemoveNodeDockedWindows(int node_id, boolean clear_settings_refs);
 
-    public void DockBuilderRemoveNodeDockedWindows(int node_id) {
-        internal_native_DockBuilderRemoveNodeDockedWindows(native_address, node_id);
+    public static void DockBuilderRemoveNodeDockedWindows(int node_id) {
+        internal_native_DockBuilderRemoveNodeDockedWindows(node_id);
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);
-jsObj.DockBuilderRemoveNodeDockedWindows(node_id);
+imgui.ImGuiInternal.prototype.DockBuilderRemoveNodeDockedWindows(node_id);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "node_id"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);jsObj.DockBuilderRemoveNodeDockedWindows(node_id);")
-    public static native void internal_native_DockBuilderRemoveNodeDockedWindows(int this_addr, int node_id);
+    @org.teavm.jso.JSBody(params = {"node_id"}, script = "imgui.ImGuiInternal.prototype.DockBuilderRemoveNodeDockedWindows(node_id);")
+    public static native void internal_native_DockBuilderRemoveNodeDockedWindows(int node_id);
 
-    public void DockBuilderRemoveNodeChildNodes(int node_id) {
-        internal_native_DockBuilderRemoveNodeChildNodes(native_address, node_id);
+    public static void DockBuilderRemoveNodeChildNodes(int node_id) {
+        internal_native_DockBuilderRemoveNodeChildNodes(node_id);
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);
-jsObj.DockBuilderRemoveNodeChildNodes(node_id);
+imgui.ImGuiInternal.prototype.DockBuilderRemoveNodeChildNodes(node_id);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "node_id"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);jsObj.DockBuilderRemoveNodeChildNodes(node_id);")
-    public static native void internal_native_DockBuilderRemoveNodeChildNodes(int this_addr, int node_id);
+    @org.teavm.jso.JSBody(params = {"node_id"}, script = "imgui.ImGuiInternal.prototype.DockBuilderRemoveNodeChildNodes(node_id);")
+    public static native void internal_native_DockBuilderRemoveNodeChildNodes(int node_id);
 
-    public void DockBuilderSetNodePos(int node_id, ImVec2 pos) {
-        internal_native_DockBuilderSetNodePos(native_address, node_id, pos.native_address);
+    public static void DockBuilderSetNodePos(int node_id, ImVec2 pos) {
+        internal_native_DockBuilderSetNodePos(node_id, pos.native_address);
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);
-jsObj.DockBuilderSetNodePos(node_id, pos_addr);
+imgui.ImGuiInternal.prototype.DockBuilderSetNodePos(node_id, pos_addr);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "node_id", "pos_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);jsObj.DockBuilderSetNodePos(node_id, pos_addr);")
-    public static native void internal_native_DockBuilderSetNodePos(int this_addr, int node_id, int pos_addr);
+    @org.teavm.jso.JSBody(params = {"node_id", "pos_addr"}, script = "imgui.ImGuiInternal.prototype.DockBuilderSetNodePos(node_id, pos_addr);")
+    public static native void internal_native_DockBuilderSetNodePos(int node_id, int pos_addr);
 
-    public void DockBuilderSetNodeSize(int node_id, ImVec2 size) {
-        internal_native_DockBuilderSetNodeSize(native_address, node_id, size.native_address);
+    public static void DockBuilderSetNodeSize(int node_id, ImVec2 size) {
+        internal_native_DockBuilderSetNodeSize(node_id, size.native_address);
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);
-jsObj.DockBuilderSetNodeSize(node_id, size_addr);
+imgui.ImGuiInternal.prototype.DockBuilderSetNodeSize(node_id, size_addr);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "node_id", "size_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);jsObj.DockBuilderSetNodeSize(node_id, size_addr);")
-    public static native void internal_native_DockBuilderSetNodeSize(int this_addr, int node_id, int size_addr);
+    @org.teavm.jso.JSBody(params = {"node_id", "size_addr"}, script = "imgui.ImGuiInternal.prototype.DockBuilderSetNodeSize(node_id, size_addr);")
+    public static native void internal_native_DockBuilderSetNodeSize(int node_id, int size_addr);
 
-    public int DockBuilderSplitNode(int node_id, ImGuiDir split_dir, float size_ratio_for_node_at_dir, IDLIntArray out_id_at_dir, IDLIntArray out_id_at_opposite_dir) {
-        return internal_native_DockBuilderSplitNode(native_address, node_id, split_dir.getValue(), size_ratio_for_node_at_dir, out_id_at_dir.native_void_address, out_id_at_opposite_dir.native_void_address);
+    public static int DockBuilderSplitNode(int node_id, ImGuiDir split_dir, float size_ratio_for_node_at_dir, IDLIntArray out_id_at_dir, IDLIntArray out_id_at_opposite_dir) {
+        return internal_native_DockBuilderSplitNode(node_id, split_dir.getValue(), size_ratio_for_node_at_dir, out_id_at_dir.native_void_address, out_id_at_opposite_dir.native_void_address);
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);
-var returnedJSObj = jsObj.DockBuilderSplitNode(node_id, split_dir, size_ratio_for_node_at_dir, out_id_at_dir_addr, out_id_at_opposite_dir_addr);
+var returnedJSObj = imgui.ImGuiInternal.prototype.DockBuilderSplitNode(node_id, split_dir, size_ratio_for_node_at_dir, out_id_at_dir_addr, out_id_at_opposite_dir_addr);
 return returnedJSObj;
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "node_id", "split_dir", "size_ratio_for_node_at_dir", "out_id_at_dir_addr", "out_id_at_opposite_dir_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);var returnedJSObj = jsObj.DockBuilderSplitNode(node_id, split_dir, size_ratio_for_node_at_dir, out_id_at_dir_addr, out_id_at_opposite_dir_addr);return returnedJSObj;")
-    public static native int internal_native_DockBuilderSplitNode(int this_addr, int node_id, int split_dir, float size_ratio_for_node_at_dir, int out_id_at_dir_addr, int out_id_at_opposite_dir_addr);
+    @org.teavm.jso.JSBody(params = {"node_id", "split_dir", "size_ratio_for_node_at_dir", "out_id_at_dir_addr", "out_id_at_opposite_dir_addr"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.DockBuilderSplitNode(node_id, split_dir, size_ratio_for_node_at_dir, out_id_at_dir_addr, out_id_at_opposite_dir_addr);return returnedJSObj;")
+    public static native int internal_native_DockBuilderSplitNode(int node_id, int split_dir, float size_ratio_for_node_at_dir, int out_id_at_dir_addr, int out_id_at_opposite_dir_addr);
 
-    public void DockBuilderCopyDockSpace(int src_dockspace_id, int dst_dockspace_id, ImVectorDOMString in_window_remap_pairs) {
-        internal_native_DockBuilderCopyDockSpace(native_address, src_dockspace_id, dst_dockspace_id, in_window_remap_pairs.native_address);
+    public static void DockBuilderCopyDockSpace(int src_dockspace_id, int dst_dockspace_id, ImVectorDOMString in_window_remap_pairs) {
+        internal_native_DockBuilderCopyDockSpace(src_dockspace_id, dst_dockspace_id, in_window_remap_pairs.native_address);
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);
-jsObj.DockBuilderCopyDockSpace(src_dockspace_id, dst_dockspace_id, in_window_remap_pairs_addr);
+imgui.ImGuiInternal.prototype.DockBuilderCopyDockSpace(src_dockspace_id, dst_dockspace_id, in_window_remap_pairs_addr);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "src_dockspace_id", "dst_dockspace_id", "in_window_remap_pairs_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);jsObj.DockBuilderCopyDockSpace(src_dockspace_id, dst_dockspace_id, in_window_remap_pairs_addr);")
-    public static native void internal_native_DockBuilderCopyDockSpace(int this_addr, int src_dockspace_id, int dst_dockspace_id, int in_window_remap_pairs_addr);
+    @org.teavm.jso.JSBody(params = {"src_dockspace_id", "dst_dockspace_id", "in_window_remap_pairs_addr"}, script = "imgui.ImGuiInternal.prototype.DockBuilderCopyDockSpace(src_dockspace_id, dst_dockspace_id, in_window_remap_pairs_addr);")
+    public static native void internal_native_DockBuilderCopyDockSpace(int src_dockspace_id, int dst_dockspace_id, int in_window_remap_pairs_addr);
 
-    public void DockBuilderCopyNode(int src_node_id, int dst_node_id, ImVectorImGuiID out_node_remap_pairs) {
-        internal_native_DockBuilderCopyNode(native_address, src_node_id, dst_node_id, out_node_remap_pairs.native_address);
+    public static void DockBuilderCopyNode(int src_node_id, int dst_node_id, ImVectorImGuiID out_node_remap_pairs) {
+        internal_native_DockBuilderCopyNode(src_node_id, dst_node_id, out_node_remap_pairs.native_address);
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);
-jsObj.DockBuilderCopyNode(src_node_id, dst_node_id, out_node_remap_pairs_addr);
+imgui.ImGuiInternal.prototype.DockBuilderCopyNode(src_node_id, dst_node_id, out_node_remap_pairs_addr);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "src_node_id", "dst_node_id", "out_node_remap_pairs_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);jsObj.DockBuilderCopyNode(src_node_id, dst_node_id, out_node_remap_pairs_addr);")
-    public static native void internal_native_DockBuilderCopyNode(int this_addr, int src_node_id, int dst_node_id, int out_node_remap_pairs_addr);
+    @org.teavm.jso.JSBody(params = {"src_node_id", "dst_node_id", "out_node_remap_pairs_addr"}, script = "imgui.ImGuiInternal.prototype.DockBuilderCopyNode(src_node_id, dst_node_id, out_node_remap_pairs_addr);")
+    public static native void internal_native_DockBuilderCopyNode(int src_node_id, int dst_node_id, int out_node_remap_pairs_addr);
 
-    public void DockBuilderCopyWindowSettings(String src_name, String dst_name) {
-        internal_native_DockBuilderCopyWindowSettings(native_address, src_name, dst_name);
+    public static void DockBuilderCopyWindowSettings(String src_name, String dst_name) {
+        internal_native_DockBuilderCopyWindowSettings(src_name, dst_name);
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);
-jsObj.DockBuilderCopyWindowSettings(src_name, dst_name);
+imgui.ImGuiInternal.prototype.DockBuilderCopyWindowSettings(src_name, dst_name);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "src_name", "dst_name"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);jsObj.DockBuilderCopyWindowSettings(src_name, dst_name);")
-    public static native void internal_native_DockBuilderCopyWindowSettings(int this_addr, String src_name, String dst_name);
+    @org.teavm.jso.JSBody(params = {"src_name", "dst_name"}, script = "imgui.ImGuiInternal.prototype.DockBuilderCopyWindowSettings(src_name, dst_name);")
+    public static native void internal_native_DockBuilderCopyWindowSettings(String src_name, String dst_name);
 
-    public void DockBuilderFinish(int node_id) {
-        internal_native_DockBuilderFinish(native_address, node_id);
+    public static void DockBuilderFinish(int node_id) {
+        internal_native_DockBuilderFinish(node_id);
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);
-jsObj.DockBuilderFinish(node_id);
+imgui.ImGuiInternal.prototype.DockBuilderFinish(node_id);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "node_id"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInternal);jsObj.DockBuilderFinish(node_id);")
-    public static native void internal_native_DockBuilderFinish(int this_addr, int node_id);
+    @org.teavm.jso.JSBody(params = {"node_id"}, script = "imgui.ImGuiInternal.prototype.DockBuilderFinish(node_id);")
+    public static native void internal_native_DockBuilderFinish(int node_id);
 
     public static boolean ButtonBehavior(ImRect bb, int id, IDLBoolArray out_hovered, IDLBoolArray out_held, ImGuiButtonFlags ImGuiButtonFlags) {
         return internal_native_ButtonBehavior(bb.native_address, id, out_hovered.native_void_address, out_held.native_void_address, ImGuiButtonFlags.getValue());
