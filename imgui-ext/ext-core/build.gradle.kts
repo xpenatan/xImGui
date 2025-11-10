@@ -9,7 +9,7 @@ includePom.extendsFrom(configurations.api.get())
 
 dependencies {
     includePom("com.github.xpenatan.jParser:loader-core:${LibExt.jParserVersion}")
-    api("com.github.xpenatan.jParser:idl-core:${LibExt.jParserVersion}")
+    includePom("com.github.xpenatan.jParser:idl-core:${LibExt.jParserVersion}")
     api(project(":imgui:imgui-core"))
     api(project(":extensions:imlayout:imlayout-core"))
     api(project(":extensions:ImGuiColorTextEdit:textedit-core"))

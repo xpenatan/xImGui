@@ -397,41 +397,41 @@ public:
 //    void          TablePopColumnChannel();
 //    void          TableAngledHeadersRowEx(ImGuiID row_id, float angle, float max_label_width, const ImGuiTableHeaderData* data, int data_count);
 //
-//    // Tables: Internals
-//    ImGuiTable*   GetCurrentTable() { ImGuiContext& g = *GImGui; return g.CurrentTable; }
-//    ImGuiTable*   TableFindByID(ImGuiID id);
-//    bool          BeginTableEx(const char* name, ImGuiID id, int columns_count, ImGuiTableFlags flags = 0, const ImVec2& outer_size = ImVec2(0, 0), float inner_width = 0.0f);
-//    void          TableBeginInitMemory(ImGuiTable* table, int columns_count);
-//    void          TableBeginApplyRequests(ImGuiTable* table);
-//    void          TableSetupDrawChannels(ImGuiTable* table);
-//    void          TableUpdateLayout(ImGuiTable* table);
-//    void          TableUpdateBorders(ImGuiTable* table);
-//    void          TableUpdateColumnsWeightFromWidth(ImGuiTable* table);
-//    void          TableDrawBorders(ImGuiTable* table);
-//    void          TableDrawDefaultContextMenu(ImGuiTable* table, ImGuiTableFlags flags_for_section_to_display);
-//    bool          TableBeginContextMenuPopup(ImGuiTable* table);
-//    void          TableMergeDrawChannels(ImGuiTable* table);
-//    ImGuiTableInstanceData*  TableGetInstanceData(ImGuiTable* table, int instance_no) { if (instance_no == 0) return &table->InstanceDataFirst; return &table->InstanceDataExtra[instance_no - 1]; }
-//    ImGuiID                  TableGetInstanceID(ImGuiTable* table, int instance_no)   { return TableGetInstanceData(table, instance_no)->TableInstanceID; }
-//    void          TableSortSpecsSanitize(ImGuiTable* table);
-//    void          TableSortSpecsBuild(ImGuiTable* table);
-//    ImGuiSortDirection TableGetColumnNextSortDirection(ImGuiTableColumn* column);
-//    void          TableFixColumnSortDirection(ImGuiTable* table, ImGuiTableColumn* column);
-//    float         TableGetColumnWidthAuto(ImGuiTable* table, ImGuiTableColumn* column);
-//    void          TableBeginRow(ImGuiTable* table);
-//    void          TableEndRow(ImGuiTable* table);
-//    void          TableBeginCell(ImGuiTable* table, int column_n);
-//    void          TableEndCell(ImGuiTable* table);
-//    ImRect        TableGetCellBgRect(const ImGuiTable* table, int column_n);
-//    const char*   TableGetColumnName(const ImGuiTable* table, int column_n);
-//    ImGuiID       TableGetColumnResizeID(ImGuiTable* table, int column_n, int instance_no = 0);
-//    float         TableCalcMaxColumnWidth(const ImGuiTable* table, int column_n);
-//    void          TableSetColumnWidthAutoSingle(ImGuiTable* table, int column_n);
-//    void          TableSetColumnWidthAutoAll(ImGuiTable* table);
-//    void          TableRemove(ImGuiTable* table);
-//    void          TableGcCompactTransientBuffers(ImGuiTable* table);
-//    void          TableGcCompactTransientBuffers(ImGuiTableTempData* table);
-//    void          TableGcCompactSettings();
+    // Tables: Internals
+//    static ImGuiTable*   GetCurrentTable() { ImGuiContext& g = *GImGui; return g.CurrentTable; }
+//    static ImGuiTable*   TableFindByID(ImGuiID id);
+    static bool          BeginTableEx(const char* name, ImGuiID id, int columns_count, ImGuiTableFlags flags = 0, const ImVec2& outer_size = ImVec2(0, 0), float inner_width = 0.0f) { return im::BeginTableEx(name, id, columns_count, flags, outer_size, inner_width); }
+//    static void          TableBeginInitMemory(ImGuiTable* table, int columns_count);
+//    static void          TableBeginApplyRequests(ImGuiTable* table);
+//    static void          TableSetupDrawChannels(ImGuiTable* table);
+//    static void          TableUpdateLayout(ImGuiTable* table);
+//    static void          TableUpdateBorders(ImGuiTable* table);
+//    static void          TableUpdateColumnsWeightFromWidth(ImGuiTable* table);
+//    static void          TableDrawBorders(ImGuiTable* table);
+//    static void          TableDrawDefaultContextMenu(ImGuiTable* table, ImGuiTableFlags flags_for_section_to_display);
+//    static bool          TableBeginContextMenuPopup(ImGuiTable* table);
+//    static void          TableMergeDrawChannels(ImGuiTable* table);
+//    static ImGuiTableInstanceData*  TableGetInstanceData(ImGuiTable* table, int instance_no) { if (instance_no == 0) return &table->InstanceDataFirst; return &table->InstanceDataExtra[instance_no - 1]; }
+//    static ImGuiID                  TableGetInstanceID(ImGuiTable* table, int instance_no)   { return TableGetInstanceData(table, instance_no)->TableInstanceID; }
+//    static void          TableSortSpecsSanitize(ImGuiTable* table);
+//    static void          TableSortSpecsBuild(ImGuiTable* table);
+//    static ImGuiSortDirection TableGetColumnNextSortDirection(ImGuiTableColumn* column);
+//    static void          TableFixColumnSortDirection(ImGuiTable* table, ImGuiTableColumn* column);
+//    static float         TableGetColumnWidthAuto(ImGuiTable* table, ImGuiTableColumn* column);
+//    static void          TableBeginRow(ImGuiTable* table);
+//    static void          TableEndRow(ImGuiTable* table);
+//    static void          TableBeginCell(ImGuiTable* table, int column_n);
+//    static void          TableEndCell(ImGuiTable* table);
+//    static ImRect        TableGetCellBgRect(const ImGuiTable* table, int column_n);
+//    static const char*   TableGetColumnName(const ImGuiTable* table, int column_n);
+//    static ImGuiID       TableGetColumnResizeID(ImGuiTable* table, int column_n, int instance_no = 0);
+//    static float         TableCalcMaxColumnWidth(const ImGuiTable* table, int column_n);
+//    static void          TableSetColumnWidthAutoSingle(ImGuiTable* table, int column_n);
+//    static void          TableSetColumnWidthAutoAll(ImGuiTable* table);
+//    static void          TableRemove(ImGuiTable* table);
+//    static void          TableGcCompactTransientBuffers(ImGuiTable* table);
+//    static void          TableGcCompactTransientBuffers(ImGuiTableTempData* table);
+//    static void          TableGcCompactSettings();
 //
 //    // Tables: Settings
 //    void                  TableLoadSettings(ImGuiTable* table);

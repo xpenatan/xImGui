@@ -15,6 +15,7 @@ import gen.imgui.enums.ImGuiItemFlags;
 import gen.imgui.enums.ImGuiDockNodeFlags;
 import gen.imgui.enums.ImGuiDir;
 import gen.imgui.idl.helper.IDLIntArray;
+import gen.imgui.enums.ImGuiTableFlags;
 import gen.imgui.idl.helper.IDLBoolArray;
 import gen.imgui.enums.ImGuiButtonFlags;
 import gen.imgui.enums.ImGuiDataType;
@@ -1134,6 +1135,135 @@ imgui.ImGuiInternal.prototype.DockBuilderFinish(node_id);
 */
     @org.teavm.jso.JSBody(params = {"node_id"}, script = "imgui.ImGuiInternal.prototype.DockBuilderFinish(node_id);")
     public static native void internal_native_DockBuilderFinish(int node_id);
+
+    public static boolean IsDragDropActive() {
+        return internal_native_IsDragDropActive();
+    }
+
+    /*[-TEAVM;-NATIVE]
+var returnedJSObj = imgui.ImGuiInternal.prototype.IsDragDropActive();
+return returnedJSObj;
+*/
+    @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGuiInternal.prototype.IsDragDropActive();return returnedJSObj;")
+    public static native boolean internal_native_IsDragDropActive();
+
+    public static boolean BeginDragDropTargetCustom(ImRect bb, int id) {
+        return internal_native_BeginDragDropTargetCustom(bb.native_address, id);
+    }
+
+    /*[-TEAVM;-NATIVE]
+var returnedJSObj = imgui.ImGuiInternal.prototype.BeginDragDropTargetCustom(bb_addr, id);
+return returnedJSObj;
+*/
+    @org.teavm.jso.JSBody(params = {"bb_addr", "id"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.BeginDragDropTargetCustom(bb_addr, id);return returnedJSObj;")
+    public static native boolean internal_native_BeginDragDropTargetCustom(int bb_addr, int id);
+
+    public static boolean BeginDragDropTargetViewport(ImGuiViewport viewport, ImRect p_bb) {
+        return internal_native_BeginDragDropTargetViewport(viewport.native_address, p_bb.native_address);
+    }
+
+    /*[-TEAVM;-NATIVE]
+var returnedJSObj = imgui.ImGuiInternal.prototype.BeginDragDropTargetViewport(viewport_addr, p_bb_addr);
+return returnedJSObj;
+*/
+    @org.teavm.jso.JSBody(params = {"viewport_addr", "p_bb_addr"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.BeginDragDropTargetViewport(viewport_addr, p_bb_addr);return returnedJSObj;")
+    public static native boolean internal_native_BeginDragDropTargetViewport(int viewport_addr, int p_bb_addr);
+
+    public static boolean BeginDragDropTargetViewport(ImGuiViewport viewport) {
+        return internal_native_BeginDragDropTargetViewport(viewport.native_address);
+    }
+
+    /*[-TEAVM;-NATIVE]
+var returnedJSObj = imgui.ImGuiInternal.prototype.BeginDragDropTargetViewport(viewport_addr);
+return returnedJSObj;
+*/
+    @org.teavm.jso.JSBody(params = {"viewport_addr"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.BeginDragDropTargetViewport(viewport_addr);return returnedJSObj;")
+    public static native boolean internal_native_BeginDragDropTargetViewport(int viewport_addr);
+
+    public static void ClearDragDrop() {
+        internal_native_ClearDragDrop();
+    }
+
+    /*[-TEAVM;-NATIVE]
+imgui.ImGuiInternal.prototype.ClearDragDrop();
+*/
+    @org.teavm.jso.JSBody(script = "imgui.ImGuiInternal.prototype.ClearDragDrop();")
+    public static native void internal_native_ClearDragDrop();
+
+    public static boolean IsDragDropPayloadBeingAccepted() {
+        return internal_native_IsDragDropPayloadBeingAccepted();
+    }
+
+    /*[-TEAVM;-NATIVE]
+var returnedJSObj = imgui.ImGuiInternal.prototype.IsDragDropPayloadBeingAccepted();
+return returnedJSObj;
+*/
+    @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGuiInternal.prototype.IsDragDropPayloadBeingAccepted();return returnedJSObj;")
+    public static native boolean internal_native_IsDragDropPayloadBeingAccepted();
+
+    public static void RenderDragDropTargetRectForItem(ImRect bb) {
+        internal_native_RenderDragDropTargetRectForItem(bb.native_address);
+    }
+
+    /*[-TEAVM;-NATIVE]
+imgui.ImGuiInternal.prototype.RenderDragDropTargetRectForItem(bb_addr);
+*/
+    @org.teavm.jso.JSBody(params = {"bb_addr"}, script = "imgui.ImGuiInternal.prototype.RenderDragDropTargetRectForItem(bb_addr);")
+    public static native void internal_native_RenderDragDropTargetRectForItem(int bb_addr);
+
+    public static void RenderDragDropTargetRectEx(ImDrawList draw_list, ImRect bb) {
+        internal_native_RenderDragDropTargetRectEx(draw_list.native_address, bb.native_address);
+    }
+
+    /*[-TEAVM;-NATIVE]
+imgui.ImGuiInternal.prototype.RenderDragDropTargetRectEx(draw_list_addr, bb_addr);
+*/
+    @org.teavm.jso.JSBody(params = {"draw_list_addr", "bb_addr"}, script = "imgui.ImGuiInternal.prototype.RenderDragDropTargetRectEx(draw_list_addr, bb_addr);")
+    public static native void internal_native_RenderDragDropTargetRectEx(int draw_list_addr, int bb_addr);
+
+    public static boolean BeginTableEx(String name, int id, int columns_count, ImGuiTableFlags flags, ImVec2 outer_size, float inner_width) {
+        return internal_native_BeginTableEx(name, id, columns_count, flags.getValue(), outer_size.native_address, inner_width);
+    }
+
+    /*[-TEAVM;-NATIVE]
+var returnedJSObj = imgui.ImGuiInternal.prototype.BeginTableEx(name, id, columns_count, flags, outer_size_addr, inner_width);
+return returnedJSObj;
+*/
+    @org.teavm.jso.JSBody(params = {"name", "id", "columns_count", "flags", "outer_size_addr", "inner_width"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.BeginTableEx(name, id, columns_count, flags, outer_size_addr, inner_width);return returnedJSObj;")
+    public static native boolean internal_native_BeginTableEx(String name, int id, int columns_count, int flags, int outer_size_addr, float inner_width);
+
+    public static boolean BeginTableEx(String name, int id, int columns_count, ImGuiTableFlags flags, ImVec2 outer_size) {
+        return internal_native_BeginTableEx(name, id, columns_count, flags.getValue(), outer_size.native_address);
+    }
+
+    /*[-TEAVM;-NATIVE]
+var returnedJSObj = imgui.ImGuiInternal.prototype.BeginTableEx(name, id, columns_count, flags, outer_size_addr);
+return returnedJSObj;
+*/
+    @org.teavm.jso.JSBody(params = {"name", "id", "columns_count", "flags", "outer_size_addr"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.BeginTableEx(name, id, columns_count, flags, outer_size_addr);return returnedJSObj;")
+    public static native boolean internal_native_BeginTableEx(String name, int id, int columns_count, int flags, int outer_size_addr);
+
+    public static boolean BeginTableEx(String name, int id, int columns_count, ImGuiTableFlags flags) {
+        return internal_native_BeginTableEx(name, id, columns_count, flags.getValue());
+    }
+
+    /*[-TEAVM;-NATIVE]
+var returnedJSObj = imgui.ImGuiInternal.prototype.BeginTableEx(name, id, columns_count, flags);
+return returnedJSObj;
+*/
+    @org.teavm.jso.JSBody(params = {"name", "id", "columns_count", "flags"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.BeginTableEx(name, id, columns_count, flags);return returnedJSObj;")
+    public static native boolean internal_native_BeginTableEx(String name, int id, int columns_count, int flags);
+
+    public static boolean BeginTableEx(String name, int id, int columns_count) {
+        return internal_native_BeginTableEx(name, id, columns_count);
+    }
+
+    /*[-TEAVM;-NATIVE]
+var returnedJSObj = imgui.ImGuiInternal.prototype.BeginTableEx(name, id, columns_count);
+return returnedJSObj;
+*/
+    @org.teavm.jso.JSBody(params = {"name", "id", "columns_count"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.BeginTableEx(name, id, columns_count);return returnedJSObj;")
+    public static native boolean internal_native_BeginTableEx(String name, int id, int columns_count);
 
     public static boolean ButtonBehavior(ImRect bb, int id, IDLBoolArray out_hovered, IDLBoolArray out_held, ImGuiButtonFlags ImGuiButtonFlags) {
         return internal_native_ButtonBehavior(bb.native_address, id, out_hovered.native_void_address, out_held.native_void_address, ImGuiButtonFlags.getValue());
