@@ -1448,7 +1448,7 @@ interface ImDrawList {
     void PushClipRect([Const, Ref] ImVec2 cr_min, [Const, Ref] ImVec2 cr_max, optional boolean intersect_with_current_clip_rect);
     void PushClipRectFullScreen();
     void PopClipRect();
-    void PushTextureID(any user_texture_id);
+    void PushTextureID([Ref] ImTextureRef tex_ref);
     void PopTextureID();
     [Value] ImVec2 GetClipRectMin();
     [Value] ImVec2 GetClipRectMax();
@@ -1479,9 +1479,9 @@ interface ImDrawList {
 //    void  AddConcavePolyFilled([Const] ImVec2[] points, long num_points, long col);
 
     // Image primitives
-    void AddImage(any user_texture_id, [Const, Ref] ImVec2 p_min, [Const, Ref] ImVec2 p_max, [Const, Ref] optional ImVec2 uv_min, [Const, Ref] optional ImVec2 uv_max, optional long col);
-    void AddImageQuad(any user_texture_id, [Const, Ref] ImVec2 p1, [Const, Ref] ImVec2 p2, [Const, Ref] ImVec2 p3, [Const, Ref] ImVec2 p4, [Const, Ref] optional ImVec2 uv1, [Const, Ref] optional ImVec2 uv2, [Const, Ref] optional ImVec2 uv3, [Const, Ref] optional ImVec2 uv4, optional long col);
-    void AddImageRounded(any user_texture_id, [Const, Ref] ImVec2 p_min, [Const, Ref] ImVec2 p_max, [Const, Ref] ImVec2 uv_min, [Const, Ref] ImVec2 uv_max, long col, float rounding, optional ImDrawFlags flags);
+    void AddImage([Ref] ImTextureRef tex_ref, [Const, Ref] ImVec2 p_min, [Const, Ref] ImVec2 p_max, [Const, Ref] optional ImVec2 uv_min, [Const, Ref] optional ImVec2 uv_max, optional long col);
+    void AddImageQuad([Ref] ImTextureRef tex_ref, [Const, Ref] ImVec2 p1, [Const, Ref] ImVec2 p2, [Const, Ref] ImVec2 p3, [Const, Ref] ImVec2 p4, [Const, Ref] optional ImVec2 uv1, [Const, Ref] optional ImVec2 uv2, [Const, Ref] optional ImVec2 uv3, [Const, Ref] optional ImVec2 uv4, optional long col);
+    void AddImageRounded([Ref] ImTextureRef tex_ref, [Const, Ref] ImVec2 p_min, [Const, Ref] ImVec2 p_max, [Const, Ref] ImVec2 uv_min, [Const, Ref] ImVec2 uv_max, long col, float rounding, optional ImDrawFlags flags);
 
     void PathClear();
     void PathLineTo([Const, Ref] ImVec2 pos);

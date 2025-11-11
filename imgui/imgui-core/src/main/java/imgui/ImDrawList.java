@@ -86,15 +86,15 @@ nativeObject->PopClipRect();
 */
     public static native void internal_native_PopClipRect(long this_addr);
 
-    public void PushTextureID(IDLBase user_texture_id) {
-        internal_native_PushTextureID(native_address, user_texture_id.native_void_address);
+    public void PushTextureID(ImTextureRef tex_ref) {
+        internal_native_PushTextureID(native_address, tex_ref.native_address);
     }
 
     /*[-JNI;-NATIVE]
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->PushTextureID((void*)user_texture_id_addr);
+nativeObject->PushTextureID(*((ImTextureRef* )tex_ref_addr));
 */
-    public static native void internal_native_PushTextureID(long this_addr, long user_texture_id_addr);
+    public static native void internal_native_PushTextureID(long this_addr, long tex_ref_addr);
 
     public void PopTextureID() {
         internal_native_PopTextureID(native_address);
@@ -510,125 +510,125 @@ nativeObject->AddBezierQuadratic(*((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((
 */
     public static native void internal_native_AddBezierQuadratic(long this_addr, long p1_addr, long p2_addr, long p3_addr, int col, float thickness);
 
-    public void AddImage(IDLBase user_texture_id, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max, int col) {
-        internal_native_AddImage(native_address, user_texture_id.native_void_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address, col);
+    public void AddImage(ImTextureRef tex_ref, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max, int col) {
+        internal_native_AddImage(native_address, tex_ref.native_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address, col);
     }
 
     /*[-JNI;-NATIVE]
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImage((void*)user_texture_id_addr, *((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), *((ImVec2* )uv_min_addr), *((ImVec2* )uv_max_addr), (int)col);
+nativeObject->AddImage(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), *((ImVec2* )uv_min_addr), *((ImVec2* )uv_max_addr), (int)col);
 */
-    public static native void internal_native_AddImage(long this_addr, long user_texture_id_addr, long p_min_addr, long p_max_addr, long uv_min_addr, long uv_max_addr, int col);
+    public static native void internal_native_AddImage(long this_addr, long tex_ref_addr, long p_min_addr, long p_max_addr, long uv_min_addr, long uv_max_addr, int col);
 
-    public void AddImage(IDLBase user_texture_id, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max) {
-        internal_native_AddImage(native_address, user_texture_id.native_void_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address);
+    public void AddImage(ImTextureRef tex_ref, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max) {
+        internal_native_AddImage(native_address, tex_ref.native_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address);
     }
 
     /*[-JNI;-NATIVE]
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImage((void*)user_texture_id_addr, *((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), *((ImVec2* )uv_min_addr), *((ImVec2* )uv_max_addr));
+nativeObject->AddImage(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), *((ImVec2* )uv_min_addr), *((ImVec2* )uv_max_addr));
 */
-    public static native void internal_native_AddImage(long this_addr, long user_texture_id_addr, long p_min_addr, long p_max_addr, long uv_min_addr, long uv_max_addr);
+    public static native void internal_native_AddImage(long this_addr, long tex_ref_addr, long p_min_addr, long p_max_addr, long uv_min_addr, long uv_max_addr);
 
-    public void AddImage(IDLBase user_texture_id, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min) {
-        internal_native_AddImage(native_address, user_texture_id.native_void_address, p_min.native_address, p_max.native_address, uv_min.native_address);
+    public void AddImage(ImTextureRef tex_ref, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min) {
+        internal_native_AddImage(native_address, tex_ref.native_address, p_min.native_address, p_max.native_address, uv_min.native_address);
     }
 
     /*[-JNI;-NATIVE]
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImage((void*)user_texture_id_addr, *((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), *((ImVec2* )uv_min_addr));
+nativeObject->AddImage(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), *((ImVec2* )uv_min_addr));
 */
-    public static native void internal_native_AddImage(long this_addr, long user_texture_id_addr, long p_min_addr, long p_max_addr, long uv_min_addr);
+    public static native void internal_native_AddImage(long this_addr, long tex_ref_addr, long p_min_addr, long p_max_addr, long uv_min_addr);
 
-    public void AddImage(IDLBase user_texture_id, ImVec2 p_min, ImVec2 p_max) {
-        internal_native_AddImage(native_address, user_texture_id.native_void_address, p_min.native_address, p_max.native_address);
+    public void AddImage(ImTextureRef tex_ref, ImVec2 p_min, ImVec2 p_max) {
+        internal_native_AddImage(native_address, tex_ref.native_address, p_min.native_address, p_max.native_address);
     }
 
     /*[-JNI;-NATIVE]
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImage((void*)user_texture_id_addr, *((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr));
+nativeObject->AddImage(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr));
 */
-    public static native void internal_native_AddImage(long this_addr, long user_texture_id_addr, long p_min_addr, long p_max_addr);
+    public static native void internal_native_AddImage(long this_addr, long tex_ref_addr, long p_min_addr, long p_max_addr);
 
-    public void AddImageQuad(IDLBase user_texture_id, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1, ImVec2 uv2, ImVec2 uv3, ImVec2 uv4, int col) {
-        internal_native_AddImageQuad(native_address, user_texture_id.native_void_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address, uv2.native_address, uv3.native_address, uv4.native_address, col);
+    public void AddImageQuad(ImTextureRef tex_ref, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1, ImVec2 uv2, ImVec2 uv3, ImVec2 uv4, int col) {
+        internal_native_AddImageQuad(native_address, tex_ref.native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address, uv2.native_address, uv3.native_address, uv4.native_address, col);
     }
 
     /*[-JNI;-NATIVE]
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImageQuad((void*)user_texture_id_addr, *((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), *((ImVec2* )p4_addr), *((ImVec2* )uv1_addr), *((ImVec2* )uv2_addr), *((ImVec2* )uv3_addr), *((ImVec2* )uv4_addr), (int)col);
+nativeObject->AddImageQuad(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), *((ImVec2* )p4_addr), *((ImVec2* )uv1_addr), *((ImVec2* )uv2_addr), *((ImVec2* )uv3_addr), *((ImVec2* )uv4_addr), (int)col);
 */
-    public static native void internal_native_AddImageQuad(long this_addr, long user_texture_id_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, long uv1_addr, long uv2_addr, long uv3_addr, long uv4_addr, int col);
+    public static native void internal_native_AddImageQuad(long this_addr, long tex_ref_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, long uv1_addr, long uv2_addr, long uv3_addr, long uv4_addr, int col);
 
-    public void AddImageQuad(IDLBase user_texture_id, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1, ImVec2 uv2, ImVec2 uv3, ImVec2 uv4) {
-        internal_native_AddImageQuad(native_address, user_texture_id.native_void_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address, uv2.native_address, uv3.native_address, uv4.native_address);
+    public void AddImageQuad(ImTextureRef tex_ref, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1, ImVec2 uv2, ImVec2 uv3, ImVec2 uv4) {
+        internal_native_AddImageQuad(native_address, tex_ref.native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address, uv2.native_address, uv3.native_address, uv4.native_address);
     }
 
     /*[-JNI;-NATIVE]
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImageQuad((void*)user_texture_id_addr, *((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), *((ImVec2* )p4_addr), *((ImVec2* )uv1_addr), *((ImVec2* )uv2_addr), *((ImVec2* )uv3_addr), *((ImVec2* )uv4_addr));
+nativeObject->AddImageQuad(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), *((ImVec2* )p4_addr), *((ImVec2* )uv1_addr), *((ImVec2* )uv2_addr), *((ImVec2* )uv3_addr), *((ImVec2* )uv4_addr));
 */
-    public static native void internal_native_AddImageQuad(long this_addr, long user_texture_id_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, long uv1_addr, long uv2_addr, long uv3_addr, long uv4_addr);
+    public static native void internal_native_AddImageQuad(long this_addr, long tex_ref_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, long uv1_addr, long uv2_addr, long uv3_addr, long uv4_addr);
 
-    public void AddImageQuad(IDLBase user_texture_id, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1, ImVec2 uv2, ImVec2 uv3) {
-        internal_native_AddImageQuad(native_address, user_texture_id.native_void_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address, uv2.native_address, uv3.native_address);
+    public void AddImageQuad(ImTextureRef tex_ref, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1, ImVec2 uv2, ImVec2 uv3) {
+        internal_native_AddImageQuad(native_address, tex_ref.native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address, uv2.native_address, uv3.native_address);
     }
 
     /*[-JNI;-NATIVE]
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImageQuad((void*)user_texture_id_addr, *((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), *((ImVec2* )p4_addr), *((ImVec2* )uv1_addr), *((ImVec2* )uv2_addr), *((ImVec2* )uv3_addr));
+nativeObject->AddImageQuad(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), *((ImVec2* )p4_addr), *((ImVec2* )uv1_addr), *((ImVec2* )uv2_addr), *((ImVec2* )uv3_addr));
 */
-    public static native void internal_native_AddImageQuad(long this_addr, long user_texture_id_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, long uv1_addr, long uv2_addr, long uv3_addr);
+    public static native void internal_native_AddImageQuad(long this_addr, long tex_ref_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, long uv1_addr, long uv2_addr, long uv3_addr);
 
-    public void AddImageQuad(IDLBase user_texture_id, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1, ImVec2 uv2) {
-        internal_native_AddImageQuad(native_address, user_texture_id.native_void_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address, uv2.native_address);
+    public void AddImageQuad(ImTextureRef tex_ref, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1, ImVec2 uv2) {
+        internal_native_AddImageQuad(native_address, tex_ref.native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address, uv2.native_address);
     }
 
     /*[-JNI;-NATIVE]
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImageQuad((void*)user_texture_id_addr, *((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), *((ImVec2* )p4_addr), *((ImVec2* )uv1_addr), *((ImVec2* )uv2_addr));
+nativeObject->AddImageQuad(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), *((ImVec2* )p4_addr), *((ImVec2* )uv1_addr), *((ImVec2* )uv2_addr));
 */
-    public static native void internal_native_AddImageQuad(long this_addr, long user_texture_id_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, long uv1_addr, long uv2_addr);
+    public static native void internal_native_AddImageQuad(long this_addr, long tex_ref_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, long uv1_addr, long uv2_addr);
 
-    public void AddImageQuad(IDLBase user_texture_id, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1) {
-        internal_native_AddImageQuad(native_address, user_texture_id.native_void_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address);
+    public void AddImageQuad(ImTextureRef tex_ref, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1) {
+        internal_native_AddImageQuad(native_address, tex_ref.native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address);
     }
 
     /*[-JNI;-NATIVE]
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImageQuad((void*)user_texture_id_addr, *((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), *((ImVec2* )p4_addr), *((ImVec2* )uv1_addr));
+nativeObject->AddImageQuad(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), *((ImVec2* )p4_addr), *((ImVec2* )uv1_addr));
 */
-    public static native void internal_native_AddImageQuad(long this_addr, long user_texture_id_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, long uv1_addr);
+    public static native void internal_native_AddImageQuad(long this_addr, long tex_ref_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, long uv1_addr);
 
-    public void AddImageQuad(IDLBase user_texture_id, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4) {
-        internal_native_AddImageQuad(native_address, user_texture_id.native_void_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address);
+    public void AddImageQuad(ImTextureRef tex_ref, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4) {
+        internal_native_AddImageQuad(native_address, tex_ref.native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address);
     }
 
     /*[-JNI;-NATIVE]
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImageQuad((void*)user_texture_id_addr, *((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), *((ImVec2* )p4_addr));
+nativeObject->AddImageQuad(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), *((ImVec2* )p4_addr));
 */
-    public static native void internal_native_AddImageQuad(long this_addr, long user_texture_id_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr);
+    public static native void internal_native_AddImageQuad(long this_addr, long tex_ref_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr);
 
-    public void AddImageRounded(IDLBase user_texture_id, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max, int col, float rounding, ImDrawFlags flags) {
-        internal_native_AddImageRounded(native_address, user_texture_id.native_void_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address, col, rounding, flags.getValue());
+    public void AddImageRounded(ImTextureRef tex_ref, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max, int col, float rounding, ImDrawFlags flags) {
+        internal_native_AddImageRounded(native_address, tex_ref.native_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address, col, rounding, flags.getValue());
     }
 
     /*[-JNI;-NATIVE]
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImageRounded((void*)user_texture_id_addr, *((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), *((ImVec2* )uv_min_addr), *((ImVec2* )uv_max_addr), (int)col, (float)rounding, (::ImDrawFlags)flags);
+nativeObject->AddImageRounded(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), *((ImVec2* )uv_min_addr), *((ImVec2* )uv_max_addr), (int)col, (float)rounding, (::ImDrawFlags)flags);
 */
-    public static native void internal_native_AddImageRounded(long this_addr, long user_texture_id_addr, long p_min_addr, long p_max_addr, long uv_min_addr, long uv_max_addr, int col, float rounding, int flags);
+    public static native void internal_native_AddImageRounded(long this_addr, long tex_ref_addr, long p_min_addr, long p_max_addr, long uv_min_addr, long uv_max_addr, int col, float rounding, int flags);
 
-    public void AddImageRounded(IDLBase user_texture_id, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max, int col, float rounding) {
-        internal_native_AddImageRounded(native_address, user_texture_id.native_void_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address, col, rounding);
+    public void AddImageRounded(ImTextureRef tex_ref, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max, int col, float rounding) {
+        internal_native_AddImageRounded(native_address, tex_ref.native_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address, col, rounding);
     }
 
     /*[-JNI;-NATIVE]
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImageRounded((void*)user_texture_id_addr, *((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), *((ImVec2* )uv_min_addr), *((ImVec2* )uv_max_addr), (int)col, (float)rounding);
+nativeObject->AddImageRounded(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), *((ImVec2* )uv_min_addr), *((ImVec2* )uv_max_addr), (int)col, (float)rounding);
 */
-    public static native void internal_native_AddImageRounded(long this_addr, long user_texture_id_addr, long p_min_addr, long p_max_addr, long uv_min_addr, long uv_max_addr, int col, float rounding);
+    public static native void internal_native_AddImageRounded(long this_addr, long tex_ref_addr, long p_min_addr, long p_max_addr, long uv_min_addr, long uv_max_addr, int col, float rounding);
 
     public void PathClear() {
         internal_native_PathClear(native_address);

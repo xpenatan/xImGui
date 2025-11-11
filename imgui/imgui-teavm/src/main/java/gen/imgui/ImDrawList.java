@@ -91,16 +91,16 @@ jsObj.PopClipRect();
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.PopClipRect();")
     public static native void internal_native_PopClipRect(int this_addr);
 
-    public void PushTextureID(IDLBase user_texture_id) {
-        internal_native_PushTextureID(native_address, user_texture_id.native_void_address);
+    public void PushTextureID(ImTextureRef tex_ref) {
+        internal_native_PushTextureID(native_address, tex_ref.native_address);
     }
 
     /*[-TEAVM;-NATIVE]
 var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);
-jsObj.PushTextureID(user_texture_id_addr);
+jsObj.PushTextureID(tex_ref_addr);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "user_texture_id_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.PushTextureID(user_texture_id_addr);")
-    public static native void internal_native_PushTextureID(int this_addr, int user_texture_id_addr);
+    @org.teavm.jso.JSBody(params = {"this_addr", "tex_ref_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.PushTextureID(tex_ref_addr);")
+    public static native void internal_native_PushTextureID(int this_addr, int tex_ref_addr);
 
     public void PopTextureID() {
         internal_native_PopTextureID(native_address);
@@ -558,137 +558,137 @@ jsObj.AddBezierQuadratic(p1_addr, p2_addr, p3_addr, col, thickness);
     @org.teavm.jso.JSBody(params = {"this_addr", "p1_addr", "p2_addr", "p3_addr", "col", "thickness"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddBezierQuadratic(p1_addr, p2_addr, p3_addr, col, thickness);")
     public static native void internal_native_AddBezierQuadratic(int this_addr, int p1_addr, int p2_addr, int p3_addr, int col, float thickness);
 
-    public void AddImage(IDLBase user_texture_id, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max, int col) {
-        internal_native_AddImage(native_address, user_texture_id.native_void_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address, col);
+    public void AddImage(ImTextureRef tex_ref, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max, int col) {
+        internal_native_AddImage(native_address, tex_ref.native_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address, col);
     }
 
     /*[-TEAVM;-NATIVE]
 var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);
-jsObj.AddImage(user_texture_id_addr, p_min_addr, p_max_addr, uv_min_addr, uv_max_addr, col);
+jsObj.AddImage(tex_ref_addr, p_min_addr, p_max_addr, uv_min_addr, uv_max_addr, col);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "user_texture_id_addr", "p_min_addr", "p_max_addr", "uv_min_addr", "uv_max_addr", "col"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImage(user_texture_id_addr, p_min_addr, p_max_addr, uv_min_addr, uv_max_addr, col);")
-    public static native void internal_native_AddImage(int this_addr, int user_texture_id_addr, int p_min_addr, int p_max_addr, int uv_min_addr, int uv_max_addr, int col);
+    @org.teavm.jso.JSBody(params = {"this_addr", "tex_ref_addr", "p_min_addr", "p_max_addr", "uv_min_addr", "uv_max_addr", "col"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImage(tex_ref_addr, p_min_addr, p_max_addr, uv_min_addr, uv_max_addr, col);")
+    public static native void internal_native_AddImage(int this_addr, int tex_ref_addr, int p_min_addr, int p_max_addr, int uv_min_addr, int uv_max_addr, int col);
 
-    public void AddImage(IDLBase user_texture_id, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max) {
-        internal_native_AddImage(native_address, user_texture_id.native_void_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address);
+    public void AddImage(ImTextureRef tex_ref, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max) {
+        internal_native_AddImage(native_address, tex_ref.native_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address);
     }
 
     /*[-TEAVM;-NATIVE]
 var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);
-jsObj.AddImage(user_texture_id_addr, p_min_addr, p_max_addr, uv_min_addr, uv_max_addr);
+jsObj.AddImage(tex_ref_addr, p_min_addr, p_max_addr, uv_min_addr, uv_max_addr);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "user_texture_id_addr", "p_min_addr", "p_max_addr", "uv_min_addr", "uv_max_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImage(user_texture_id_addr, p_min_addr, p_max_addr, uv_min_addr, uv_max_addr);")
-    public static native void internal_native_AddImage(int this_addr, int user_texture_id_addr, int p_min_addr, int p_max_addr, int uv_min_addr, int uv_max_addr);
+    @org.teavm.jso.JSBody(params = {"this_addr", "tex_ref_addr", "p_min_addr", "p_max_addr", "uv_min_addr", "uv_max_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImage(tex_ref_addr, p_min_addr, p_max_addr, uv_min_addr, uv_max_addr);")
+    public static native void internal_native_AddImage(int this_addr, int tex_ref_addr, int p_min_addr, int p_max_addr, int uv_min_addr, int uv_max_addr);
 
-    public void AddImage(IDLBase user_texture_id, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min) {
-        internal_native_AddImage(native_address, user_texture_id.native_void_address, p_min.native_address, p_max.native_address, uv_min.native_address);
+    public void AddImage(ImTextureRef tex_ref, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min) {
+        internal_native_AddImage(native_address, tex_ref.native_address, p_min.native_address, p_max.native_address, uv_min.native_address);
     }
 
     /*[-TEAVM;-NATIVE]
 var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);
-jsObj.AddImage(user_texture_id_addr, p_min_addr, p_max_addr, uv_min_addr);
+jsObj.AddImage(tex_ref_addr, p_min_addr, p_max_addr, uv_min_addr);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "user_texture_id_addr", "p_min_addr", "p_max_addr", "uv_min_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImage(user_texture_id_addr, p_min_addr, p_max_addr, uv_min_addr);")
-    public static native void internal_native_AddImage(int this_addr, int user_texture_id_addr, int p_min_addr, int p_max_addr, int uv_min_addr);
+    @org.teavm.jso.JSBody(params = {"this_addr", "tex_ref_addr", "p_min_addr", "p_max_addr", "uv_min_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImage(tex_ref_addr, p_min_addr, p_max_addr, uv_min_addr);")
+    public static native void internal_native_AddImage(int this_addr, int tex_ref_addr, int p_min_addr, int p_max_addr, int uv_min_addr);
 
-    public void AddImage(IDLBase user_texture_id, ImVec2 p_min, ImVec2 p_max) {
-        internal_native_AddImage(native_address, user_texture_id.native_void_address, p_min.native_address, p_max.native_address);
+    public void AddImage(ImTextureRef tex_ref, ImVec2 p_min, ImVec2 p_max) {
+        internal_native_AddImage(native_address, tex_ref.native_address, p_min.native_address, p_max.native_address);
     }
 
     /*[-TEAVM;-NATIVE]
 var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);
-jsObj.AddImage(user_texture_id_addr, p_min_addr, p_max_addr);
+jsObj.AddImage(tex_ref_addr, p_min_addr, p_max_addr);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "user_texture_id_addr", "p_min_addr", "p_max_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImage(user_texture_id_addr, p_min_addr, p_max_addr);")
-    public static native void internal_native_AddImage(int this_addr, int user_texture_id_addr, int p_min_addr, int p_max_addr);
+    @org.teavm.jso.JSBody(params = {"this_addr", "tex_ref_addr", "p_min_addr", "p_max_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImage(tex_ref_addr, p_min_addr, p_max_addr);")
+    public static native void internal_native_AddImage(int this_addr, int tex_ref_addr, int p_min_addr, int p_max_addr);
 
-    public void AddImageQuad(IDLBase user_texture_id, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1, ImVec2 uv2, ImVec2 uv3, ImVec2 uv4, int col) {
-        internal_native_AddImageQuad(native_address, user_texture_id.native_void_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address, uv2.native_address, uv3.native_address, uv4.native_address, col);
+    public void AddImageQuad(ImTextureRef tex_ref, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1, ImVec2 uv2, ImVec2 uv3, ImVec2 uv4, int col) {
+        internal_native_AddImageQuad(native_address, tex_ref.native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address, uv2.native_address, uv3.native_address, uv4.native_address, col);
     }
 
     /*[-TEAVM;-NATIVE]
 var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);
-jsObj.AddImageQuad(user_texture_id_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr, uv2_addr, uv3_addr, uv4_addr, col);
+jsObj.AddImageQuad(tex_ref_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr, uv2_addr, uv3_addr, uv4_addr, col);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "user_texture_id_addr", "p1_addr", "p2_addr", "p3_addr", "p4_addr", "uv1_addr", "uv2_addr", "uv3_addr", "uv4_addr", "col"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImageQuad(user_texture_id_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr, uv2_addr, uv3_addr, uv4_addr, col);")
-    public static native void internal_native_AddImageQuad(int this_addr, int user_texture_id_addr, int p1_addr, int p2_addr, int p3_addr, int p4_addr, int uv1_addr, int uv2_addr, int uv3_addr, int uv4_addr, int col);
+    @org.teavm.jso.JSBody(params = {"this_addr", "tex_ref_addr", "p1_addr", "p2_addr", "p3_addr", "p4_addr", "uv1_addr", "uv2_addr", "uv3_addr", "uv4_addr", "col"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImageQuad(tex_ref_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr, uv2_addr, uv3_addr, uv4_addr, col);")
+    public static native void internal_native_AddImageQuad(int this_addr, int tex_ref_addr, int p1_addr, int p2_addr, int p3_addr, int p4_addr, int uv1_addr, int uv2_addr, int uv3_addr, int uv4_addr, int col);
 
-    public void AddImageQuad(IDLBase user_texture_id, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1, ImVec2 uv2, ImVec2 uv3, ImVec2 uv4) {
-        internal_native_AddImageQuad(native_address, user_texture_id.native_void_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address, uv2.native_address, uv3.native_address, uv4.native_address);
+    public void AddImageQuad(ImTextureRef tex_ref, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1, ImVec2 uv2, ImVec2 uv3, ImVec2 uv4) {
+        internal_native_AddImageQuad(native_address, tex_ref.native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address, uv2.native_address, uv3.native_address, uv4.native_address);
     }
 
     /*[-TEAVM;-NATIVE]
 var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);
-jsObj.AddImageQuad(user_texture_id_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr, uv2_addr, uv3_addr, uv4_addr);
+jsObj.AddImageQuad(tex_ref_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr, uv2_addr, uv3_addr, uv4_addr);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "user_texture_id_addr", "p1_addr", "p2_addr", "p3_addr", "p4_addr", "uv1_addr", "uv2_addr", "uv3_addr", "uv4_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImageQuad(user_texture_id_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr, uv2_addr, uv3_addr, uv4_addr);")
-    public static native void internal_native_AddImageQuad(int this_addr, int user_texture_id_addr, int p1_addr, int p2_addr, int p3_addr, int p4_addr, int uv1_addr, int uv2_addr, int uv3_addr, int uv4_addr);
+    @org.teavm.jso.JSBody(params = {"this_addr", "tex_ref_addr", "p1_addr", "p2_addr", "p3_addr", "p4_addr", "uv1_addr", "uv2_addr", "uv3_addr", "uv4_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImageQuad(tex_ref_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr, uv2_addr, uv3_addr, uv4_addr);")
+    public static native void internal_native_AddImageQuad(int this_addr, int tex_ref_addr, int p1_addr, int p2_addr, int p3_addr, int p4_addr, int uv1_addr, int uv2_addr, int uv3_addr, int uv4_addr);
 
-    public void AddImageQuad(IDLBase user_texture_id, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1, ImVec2 uv2, ImVec2 uv3) {
-        internal_native_AddImageQuad(native_address, user_texture_id.native_void_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address, uv2.native_address, uv3.native_address);
+    public void AddImageQuad(ImTextureRef tex_ref, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1, ImVec2 uv2, ImVec2 uv3) {
+        internal_native_AddImageQuad(native_address, tex_ref.native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address, uv2.native_address, uv3.native_address);
     }
 
     /*[-TEAVM;-NATIVE]
 var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);
-jsObj.AddImageQuad(user_texture_id_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr, uv2_addr, uv3_addr);
+jsObj.AddImageQuad(tex_ref_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr, uv2_addr, uv3_addr);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "user_texture_id_addr", "p1_addr", "p2_addr", "p3_addr", "p4_addr", "uv1_addr", "uv2_addr", "uv3_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImageQuad(user_texture_id_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr, uv2_addr, uv3_addr);")
-    public static native void internal_native_AddImageQuad(int this_addr, int user_texture_id_addr, int p1_addr, int p2_addr, int p3_addr, int p4_addr, int uv1_addr, int uv2_addr, int uv3_addr);
+    @org.teavm.jso.JSBody(params = {"this_addr", "tex_ref_addr", "p1_addr", "p2_addr", "p3_addr", "p4_addr", "uv1_addr", "uv2_addr", "uv3_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImageQuad(tex_ref_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr, uv2_addr, uv3_addr);")
+    public static native void internal_native_AddImageQuad(int this_addr, int tex_ref_addr, int p1_addr, int p2_addr, int p3_addr, int p4_addr, int uv1_addr, int uv2_addr, int uv3_addr);
 
-    public void AddImageQuad(IDLBase user_texture_id, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1, ImVec2 uv2) {
-        internal_native_AddImageQuad(native_address, user_texture_id.native_void_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address, uv2.native_address);
+    public void AddImageQuad(ImTextureRef tex_ref, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1, ImVec2 uv2) {
+        internal_native_AddImageQuad(native_address, tex_ref.native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address, uv2.native_address);
     }
 
     /*[-TEAVM;-NATIVE]
 var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);
-jsObj.AddImageQuad(user_texture_id_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr, uv2_addr);
+jsObj.AddImageQuad(tex_ref_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr, uv2_addr);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "user_texture_id_addr", "p1_addr", "p2_addr", "p3_addr", "p4_addr", "uv1_addr", "uv2_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImageQuad(user_texture_id_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr, uv2_addr);")
-    public static native void internal_native_AddImageQuad(int this_addr, int user_texture_id_addr, int p1_addr, int p2_addr, int p3_addr, int p4_addr, int uv1_addr, int uv2_addr);
+    @org.teavm.jso.JSBody(params = {"this_addr", "tex_ref_addr", "p1_addr", "p2_addr", "p3_addr", "p4_addr", "uv1_addr", "uv2_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImageQuad(tex_ref_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr, uv2_addr);")
+    public static native void internal_native_AddImageQuad(int this_addr, int tex_ref_addr, int p1_addr, int p2_addr, int p3_addr, int p4_addr, int uv1_addr, int uv2_addr);
 
-    public void AddImageQuad(IDLBase user_texture_id, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1) {
-        internal_native_AddImageQuad(native_address, user_texture_id.native_void_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address);
+    public void AddImageQuad(ImTextureRef tex_ref, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1) {
+        internal_native_AddImageQuad(native_address, tex_ref.native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address);
     }
 
     /*[-TEAVM;-NATIVE]
 var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);
-jsObj.AddImageQuad(user_texture_id_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr);
+jsObj.AddImageQuad(tex_ref_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "user_texture_id_addr", "p1_addr", "p2_addr", "p3_addr", "p4_addr", "uv1_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImageQuad(user_texture_id_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr);")
-    public static native void internal_native_AddImageQuad(int this_addr, int user_texture_id_addr, int p1_addr, int p2_addr, int p3_addr, int p4_addr, int uv1_addr);
+    @org.teavm.jso.JSBody(params = {"this_addr", "tex_ref_addr", "p1_addr", "p2_addr", "p3_addr", "p4_addr", "uv1_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImageQuad(tex_ref_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr);")
+    public static native void internal_native_AddImageQuad(int this_addr, int tex_ref_addr, int p1_addr, int p2_addr, int p3_addr, int p4_addr, int uv1_addr);
 
-    public void AddImageQuad(IDLBase user_texture_id, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4) {
-        internal_native_AddImageQuad(native_address, user_texture_id.native_void_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address);
+    public void AddImageQuad(ImTextureRef tex_ref, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4) {
+        internal_native_AddImageQuad(native_address, tex_ref.native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address);
     }
 
     /*[-TEAVM;-NATIVE]
 var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);
-jsObj.AddImageQuad(user_texture_id_addr, p1_addr, p2_addr, p3_addr, p4_addr);
+jsObj.AddImageQuad(tex_ref_addr, p1_addr, p2_addr, p3_addr, p4_addr);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "user_texture_id_addr", "p1_addr", "p2_addr", "p3_addr", "p4_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImageQuad(user_texture_id_addr, p1_addr, p2_addr, p3_addr, p4_addr);")
-    public static native void internal_native_AddImageQuad(int this_addr, int user_texture_id_addr, int p1_addr, int p2_addr, int p3_addr, int p4_addr);
+    @org.teavm.jso.JSBody(params = {"this_addr", "tex_ref_addr", "p1_addr", "p2_addr", "p3_addr", "p4_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImageQuad(tex_ref_addr, p1_addr, p2_addr, p3_addr, p4_addr);")
+    public static native void internal_native_AddImageQuad(int this_addr, int tex_ref_addr, int p1_addr, int p2_addr, int p3_addr, int p4_addr);
 
-    public void AddImageRounded(IDLBase user_texture_id, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max, int col, float rounding, ImDrawFlags flags) {
-        internal_native_AddImageRounded(native_address, user_texture_id.native_void_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address, col, rounding, flags.getValue());
+    public void AddImageRounded(ImTextureRef tex_ref, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max, int col, float rounding, ImDrawFlags flags) {
+        internal_native_AddImageRounded(native_address, tex_ref.native_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address, col, rounding, flags.getValue());
     }
 
     /*[-TEAVM;-NATIVE]
 var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);
-jsObj.AddImageRounded(user_texture_id_addr, p_min_addr, p_max_addr, uv_min_addr, uv_max_addr, col, rounding, flags);
+jsObj.AddImageRounded(tex_ref_addr, p_min_addr, p_max_addr, uv_min_addr, uv_max_addr, col, rounding, flags);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "user_texture_id_addr", "p_min_addr", "p_max_addr", "uv_min_addr", "uv_max_addr", "col", "rounding", "flags"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImageRounded(user_texture_id_addr, p_min_addr, p_max_addr, uv_min_addr, uv_max_addr, col, rounding, flags);")
-    public static native void internal_native_AddImageRounded(int this_addr, int user_texture_id_addr, int p_min_addr, int p_max_addr, int uv_min_addr, int uv_max_addr, int col, float rounding, int flags);
+    @org.teavm.jso.JSBody(params = {"this_addr", "tex_ref_addr", "p_min_addr", "p_max_addr", "uv_min_addr", "uv_max_addr", "col", "rounding", "flags"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImageRounded(tex_ref_addr, p_min_addr, p_max_addr, uv_min_addr, uv_max_addr, col, rounding, flags);")
+    public static native void internal_native_AddImageRounded(int this_addr, int tex_ref_addr, int p_min_addr, int p_max_addr, int uv_min_addr, int uv_max_addr, int col, float rounding, int flags);
 
-    public void AddImageRounded(IDLBase user_texture_id, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max, int col, float rounding) {
-        internal_native_AddImageRounded(native_address, user_texture_id.native_void_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address, col, rounding);
+    public void AddImageRounded(ImTextureRef tex_ref, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max, int col, float rounding) {
+        internal_native_AddImageRounded(native_address, tex_ref.native_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address, col, rounding);
     }
 
     /*[-TEAVM;-NATIVE]
 var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);
-jsObj.AddImageRounded(user_texture_id_addr, p_min_addr, p_max_addr, uv_min_addr, uv_max_addr, col, rounding);
+jsObj.AddImageRounded(tex_ref_addr, p_min_addr, p_max_addr, uv_min_addr, uv_max_addr, col, rounding);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "user_texture_id_addr", "p_min_addr", "p_max_addr", "uv_min_addr", "uv_max_addr", "col", "rounding"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImageRounded(user_texture_id_addr, p_min_addr, p_max_addr, uv_min_addr, uv_max_addr, col, rounding);")
-    public static native void internal_native_AddImageRounded(int this_addr, int user_texture_id_addr, int p_min_addr, int p_max_addr, int uv_min_addr, int uv_max_addr, int col, float rounding);
+    @org.teavm.jso.JSBody(params = {"this_addr", "tex_ref_addr", "p_min_addr", "p_max_addr", "uv_min_addr", "uv_max_addr", "col", "rounding"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);jsObj.AddImageRounded(tex_ref_addr, p_min_addr, p_max_addr, uv_min_addr, uv_max_addr, col, rounding);")
+    public static native void internal_native_AddImageRounded(int this_addr, int tex_ref_addr, int p_min_addr, int p_max_addr, int uv_min_addr, int uv_max_addr, int col, float rounding);
 
     public void PathClear() {
         internal_native_PathClear(native_address);
