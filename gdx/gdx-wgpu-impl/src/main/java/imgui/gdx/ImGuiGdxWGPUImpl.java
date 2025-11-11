@@ -192,7 +192,6 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
         if (init) {
             init = false;
             createDeviceObjects();
-//            createFontsTexture();
         }
 
         float deltaTime = Gdx.graphics.getDeltaTime();
@@ -301,7 +300,6 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
         WGPUVectorVertexBufferLayout buffer_layouts = WGPUVectorVertexBufferLayout.obtain();
         buffer_layouts.push_back(vertexLayout);
         vertexState.setBuffers(buffer_layouts);
-
 
         WGPUColorTargetState color_state = WGPUColorTargetState.obtain();
         color_state.setFormat(renderFormat);
