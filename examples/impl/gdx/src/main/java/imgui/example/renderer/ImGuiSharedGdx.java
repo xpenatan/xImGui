@@ -14,7 +14,7 @@ import imgui.gdx.ImGuiGdxInputMultiplexer;
 public class ImGuiSharedGdx implements ImGuiShared.ImGuiSharedInstance {
     @Override
     public void clearScreen(float red, float green, float blue, float alpha) {
-        Gdx.gl.glClearColor(0.3f, 0.3f, 0.3f, 1);
+        Gdx.gl.glClearColor(red, green, blue, alpha);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
     }
 
