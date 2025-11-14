@@ -134,7 +134,7 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
     private int vertexBufferSizeBytes = 0;
     private int indexBufferSizeBytes = 0;
     private final int prjSizeBytes = 64;
-    private final int gamaSizeBytes = 4;
+    private final int gamaSizeBytes = 8;
     private ByteBuffer projBuffer;
     private FloatBuffer projFloatView;
     private ByteBuffer gammaBuffer;
@@ -335,7 +335,7 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
         device.createSampler(samplerDesc, sampler);
 //        sampler.setLabel("Sampler");
 
-        int gammaSize = 1;
+        int gammaSize = 2;
         int orthoProjSize = 16;
         int uniformSize = orthoProjSize * Float.BYTES + gammaSize * Float.BYTES;
         int uniformAlign = (int)memAlign(uniformSize, 16);
@@ -776,13 +776,13 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
             size.setHeight(height);
             size.setDepthOrArrayLayers(1);
             tex_desc.setSampleCount(1);
-            tex_desc.setFormat(WGPUTextureFormat.RGBA8Unorm);
+            tex_desc.setFormat(renderFormat);
             tex_desc.setMipLevelCount(1);
             tex_desc.setUsage(WGPUTextureUsage.CopyDst.or(WGPUTextureUsage.TextureBinding));
             device.createTexture(tex_desc, texture);
 
             WGPUTextureViewDescriptor tex_view_desc = WGPUTextureViewDescriptor.obtain();
-            tex_view_desc.setFormat(WGPUTextureFormat.RGBA8Unorm);
+            tex_view_desc.setFormat(renderFormat);
             tex_view_desc.setDimension(WGPUTextureViewDimension._2D);
             tex_view_desc.setBaseMipLevel(0);
             tex_view_desc.setMipLevelCount(1);
@@ -892,7 +892,9 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
             projFloatView.put(15, 1.0f);
 
             float gamma = getGamma(renderFormat);
+            float contrast = getContrast(renderFormat);
             gammaFloatBuffer.put(0, gamma);
+            gammaFloatBuffer.put(1, contrast);
             device.getQueue().writeBuffer(uniformBuffer, 0, projBuffer, prjSizeBytes);
             device.getQueue().writeBuffer(uniformBuffer, prjSizeBytes, gammaBuffer, gamaSizeBytes);
         }
@@ -975,9 +977,38 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
             case ETC2RGB8UnormSrgb:
             case ETC2RGBA8UnormSrgb:
             case RGBA8UnormSrgb:
-                return 2.2f;
+                return 1.0f;
         }
-        return 1.0f;
+        return 2.2f;
+    }
+
+    public float getContrast(WGPUTextureFormat surfaceFormat) {
+        switch(surfaceFormat) {
+            case ASTC10x10UnormSrgb:
+            case ASTC10x5UnormSrgb:
+            case ASTC10x6UnormSrgb:
+            case ASTC10x8UnormSrgb:
+            case ASTC12x10UnormSrgb:
+            case ASTC12x12UnormSrgb:
+            case ASTC4x4UnormSrgb:
+            case ASTC5x5UnormSrgb:
+            case ASTC6x5UnormSrgb:
+            case ASTC6x6UnormSrgb:
+            case ASTC8x5UnormSrgb:
+            case ASTC8x6UnormSrgb:
+            case ASTC8x8UnormSrgb:
+            case BC1RGBAUnormSrgb:
+            case BC2RGBAUnormSrgb:
+            case BC3RGBAUnormSrgb:
+            case BC7RGBAUnormSrgb:
+            case BGRA8UnormSrgb:
+            case ETC2RGB8A1UnormSrgb:
+            case ETC2RGB8UnormSrgb:
+            case ETC2RGBA8UnormSrgb:
+            case RGBA8UnormSrgb:
+                return 1.0f;
+        }
+        return 1.03f;
     }
 
     private WGPUBindGroup obtainBindGroup() {
@@ -1003,7 +1034,8 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
                 "\n" +
                 "struct Uniforms {\n" +
                 "    mvp: mat4x4<f32>,\n" +
-                "    gamma: f32\n" +
+                "    gamma: f32,\n" +
+                "    contrast: f32\n" +
                 "};\n" +
                 "\n" +
                 "@group(0) @binding(0) var<uniform> uniforms: Uniforms;\n" +
@@ -1014,7 +1046,7 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
                 "fn vs_main(in: VertexInput) -> VertexOutput {\n" +
                 "    var out: VertexOutput;\n" +
                 "    out.position = uniforms.mvp * vec4<f32>(in.position, 0.0, 1.0);\n" +
-                "    out.color = in.color;\n" +
+                "    out.color = pow(in.color, vec4<f32>(2.2));\n" +
                 "    out.uv = in.uv;\n" +
                 "    return out;\n" +
                 "}\n" +
@@ -1022,8 +1054,9 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
                 "@fragment\n" +
                 "fn fs_main(in: VertexOutput) -> @location(0) vec4<f32> {\n" +
                 "    let color = in.color * textureSample(t, s, in.uv);\n" +
-                "    let corrected_color = pow(color.rgb, vec3<f32>(uniforms.gamma));\n" +
-                "    return vec4<f32>(corrected_color, color.a);\n" +
+                "    let corrected_color = pow(color.rgb, vec3<f32>(1.0 / uniforms.gamma));\n" +
+                "    let contrasted = (corrected_color - 0.5) * uniforms.contrast + 0.5;\n" +
+                "    return vec4<f32>(contrasted, color.a);\n" +
                 "}\n";
         return wgslCode;
     }

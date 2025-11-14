@@ -2,6 +2,7 @@ package imgui.example.renderer;
 
 import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.files.FileHandle;
+import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
 import imgui.ImGuiImpl;
 import imgui.ImTextureRef;
@@ -15,6 +16,7 @@ public final class ImGuiShared {
         ImGuiImpl createImpl();
         InputMultiplexer createInput();
         Texture createTexture(FileHandle fileHandler);
+        Texture createTexture(Pixmap pixmap);
         ImTextureRef getTextureRef(Texture texture);
     }
 }

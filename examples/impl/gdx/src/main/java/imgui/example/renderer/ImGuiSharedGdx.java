@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
 import imgui.ImGuiImpl;
 import imgui.ImTemp;
@@ -31,6 +32,11 @@ public class ImGuiSharedGdx implements ImGuiShared.ImGuiSharedInstance {
     @Override
     public Texture createTexture(FileHandle fileHandler) {
         return new Texture(fileHandler);
+    }
+
+    @Override
+    public Texture createTexture(Pixmap pixmap) {
+        return new Texture(pixmap);
     }
 
     @Override

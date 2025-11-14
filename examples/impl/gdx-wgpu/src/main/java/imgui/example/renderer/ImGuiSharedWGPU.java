@@ -2,6 +2,7 @@ package imgui.example.renderer;
 
 import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.files.FileHandle;
+import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
 import com.monstrous.gdx.webgpu.graphics.WgTexture;
 import com.monstrous.gdx.webgpu.graphics.utils.WgScreenUtils;
@@ -30,6 +31,11 @@ public class ImGuiSharedWGPU implements ImGuiShared.ImGuiSharedInstance {
     @Override
     public Texture createTexture(FileHandle fileHandler) {
         return new WgTexture(fileHandler);
+    }
+
+    @Override
+    public Texture createTexture(Pixmap pixmap) {
+        return new WgTexture(pixmap);
     }
 
     @Override
