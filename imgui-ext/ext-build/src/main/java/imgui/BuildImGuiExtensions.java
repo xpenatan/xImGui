@@ -72,6 +72,7 @@ public class BuildImGuiExtensions {
         String libBuildCPPPath = op.getModuleBuildCPPPath();
 
         WindowsMSVCTarget glueTarget = new WindowsMSVCTarget();
+        glueTarget.cppFlags.add("-std:c++17");
         glueTarget.libDirSuffix += "ext/";
         glueTarget.addJNIHeaders();
         glueTarget.headerDirs.add("-I" + imguiCppPath);
@@ -121,6 +122,7 @@ public class BuildImGuiExtensions {
         String libBuildCPPPath = op.getModuleBuildCPPPath();
 
         LinuxTarget glueTarget = new LinuxTarget();
+        glueTarget.cppFlags.add("-std=c++17");
         glueTarget.libDirSuffix += "ext/";
         glueTarget.addJNIHeaders();
         glueTarget.headerDirs.add("-I" + imguiCppPath);
@@ -170,6 +172,7 @@ public class BuildImGuiExtensions {
         String libBuildCPPPath = op.getModuleBuildCPPPath();
 
         MacTarget macGlueTarget = new MacTarget(isArm);
+        macGlueTarget.cppFlags.add("-std=c++17");
         macGlueTarget.libDirSuffix += "ext/";
         macGlueTarget.addJNIHeaders();
         macGlueTarget.headerDirs.add("-I" + imguiCppPath);
@@ -241,6 +244,7 @@ public class BuildImGuiExtensions {
 
         // Compile glue code and link to make js file
         EmscriptenTarget linkTarget = new EmscriptenTarget(idlReaderCombined);
+        linkTarget.cppFlags.add("-std=c++17");
         linkTarget.libDirSuffix += "ext/";
         linkTarget.headerDirs.add("-I" + imguiCppPath);
         linkTarget.headerDirs.add("-include" + op.getCustomSourceDir() + "ImGuiCustom.h");

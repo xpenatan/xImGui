@@ -107,6 +107,7 @@ public class BuildImGui {
 
         // Make a static library
         WindowsMSVCTarget windowsTarget = new WindowsMSVCTarget();
+        windowsTarget.cppFlags.add("-std:c++17");
         windowsTarget.isStatic = true;
         windowsTarget.headerDirs.add("-I" + sourceDir);
         windowsTarget.cppInclude.add(sourceDir + "/*.cpp");
@@ -115,6 +116,7 @@ public class BuildImGui {
         // Compile glue code and link
         WindowsMSVCTarget linkTarget = new WindowsMSVCTarget();
         linkTarget.addJNIHeaders();
+        linkTarget.cppFlags.add("-std:c++17");
         linkTarget.headerDirs.add("-I" + sourceDir);
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
         linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/windows/vc/imgui64_.lib");
@@ -132,6 +134,7 @@ public class BuildImGui {
         // Make a static library
         LinuxTarget linuxTarget = new LinuxTarget();
         linuxTarget.isStatic = true;
+        linuxTarget.cppFlags.add("-std=c++17");
         linuxTarget.headerDirs.add("-I" + sourceDir);
         linuxTarget.cppInclude.add(sourceDir + "/*.cpp");
         multiTarget.add(linuxTarget);
@@ -139,6 +142,7 @@ public class BuildImGui {
         // Compile glue code and link
         LinuxTarget linkTarget = new LinuxTarget();
         linkTarget.addJNIHeaders();
+        linkTarget.cppFlags.add("-std=c++17");
         linkTarget.headerDirs.add("-I" + sourceDir);
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
         linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/linux/libimgui64_.a");
@@ -156,6 +160,7 @@ public class BuildImGui {
         // Make a static library
         MacTarget macTarget = new MacTarget(isArm);
         macTarget.isStatic = true;
+        macTarget.cppFlags.add("-std=c++17");
         macTarget.headerDirs.add("-I" + sourceDir);
         macTarget.cppInclude.add(sourceDir + "/*.cpp");
         multiTarget.add(macTarget);
@@ -163,6 +168,7 @@ public class BuildImGui {
         // Compile glue code and link
         MacTarget linkTarget = new MacTarget(isArm);
         linkTarget.addJNIHeaders();
+        linkTarget.cppFlags.add("-std=c++17");
         linkTarget.headerDirs.add("-I" + sourceDir);
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
         if(isArm) {
@@ -185,6 +191,7 @@ public class BuildImGui {
         // Make a static library
         EmscriptenTarget libTarget = new EmscriptenTarget(idlReader);
         libTarget.isStatic = true;
+        libTarget.cppFlags.add("-std=c++17");
         libTarget.compileGlueCode = false;
         libTarget.headerDirs.add("-I" + sourceDir);
         libTarget.cppInclude.add(sourceDir + "/*.cpp");
@@ -194,6 +201,7 @@ public class BuildImGui {
 
         // Compile glue code and link
         EmscriptenTarget linkTarget = new EmscriptenTarget(idlReader);
+        linkTarget.cppFlags.add("-std=c++17");
         linkTarget.headerDirs.add("-I" + sourceDir);
         linkTarget.headerDirs.add("-include" + op.getCustomSourceDir() + "ImGuiCustom.h");
         linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/emscripten/imgui_.a");
@@ -221,6 +229,7 @@ public class BuildImGui {
             // Make a static library
             AndroidTarget androidTarget = new AndroidTarget(target, apiLevel);
             androidTarget.isStatic = true;
+            androidTarget.cppFlags.add("-std=c++17");
             androidTarget.headerDirs.add("-I" + sourceDir);
             androidTarget.cppInclude.add(sourceDir + "/imgui/**.cpp");
             androidTarget.cppFlags.add("-Wno-error=format-security");
@@ -231,6 +240,7 @@ public class BuildImGui {
             // Compile glue code and link
             AndroidTarget linkTarget = new AndroidTarget(target, apiLevel);
             linkTarget.addJNIHeaders();
+            linkTarget.cppFlags.add("-std=c++17");
             linkTarget.headerDirs.add("-I" + sourceDir);
             linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
             linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");

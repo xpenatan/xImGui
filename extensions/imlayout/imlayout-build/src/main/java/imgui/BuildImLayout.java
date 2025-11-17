@@ -70,6 +70,7 @@ public class BuildImLayout {
 
         WindowsMSVCTarget windowsTarget = new WindowsMSVCTarget();
         windowsTarget.isStatic = true;
+        windowsTarget.cppFlags.add("-std:c++17");
         windowsTarget.headerDirs.add("-I" + imguiCppPath);
         windowsTarget.headerDirs.add("-I" + sourceDir);
         windowsTarget.cppInclude.add(sourceDir + "/*.cpp");
@@ -86,6 +87,7 @@ public class BuildImLayout {
 
         LinuxTarget linuxTarget = new LinuxTarget();
         linuxTarget.isStatic = true;
+        linuxTarget.cppFlags.add("-std=c++17");
         linuxTarget.headerDirs.add("-I" + imguiCppPath);
         linuxTarget.headerDirs.add("-I" + sourceDir);
         linuxTarget.cppInclude.add(sourceDir + "/*.cpp");
@@ -102,6 +104,7 @@ public class BuildImLayout {
 
         MacTarget macTarget = new MacTarget(isArm);
         macTarget.isStatic = true;
+        macTarget.cppFlags.add("-std=c++17");
         macTarget.headerDirs.add("-I" + imguiCppPath);
         macTarget.headerDirs.add("-I" + sourceDir);
         macTarget.cppInclude.add(sourceDir + "/*.cpp");
@@ -119,6 +122,7 @@ public class BuildImLayout {
         // Make a static library
         EmscriptenTarget libTarget = new EmscriptenTarget(null);
         libTarget.isStatic = true;
+        libTarget.cppFlags.add("-std=c++17");
         libTarget.compileGlueCode = false;
         libTarget.headerDirs.add("-I" + imguiCppPath);
         libTarget.headerDirs.add("-I" + sourceDir);
