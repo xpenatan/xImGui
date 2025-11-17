@@ -17,29 +17,29 @@ public class LoadSaveSettingsListener extends IDLBase {
     static public final LoadSaveSettingsListener NULL = LoadSaveSettingsListener.native_new();
 
     /*[-JNI;-NATIVE]
+	static jmethodID LoadSaveSettingsListenerImpl_onLoadJ_ID;
+	static jmethodID LoadSaveSettingsListenerImpl_onSaveJI_ID;
+
 class LoadSaveSettingsListenerImpl : public LoadSaveSettingsListener {
 private:
 	JNIEnv* env;
 	jobject obj;
 public:
-	inline static jclass jClassID = 0;
-	inline static jmethodID onLoadJ_ID = 0;
-	inline static jmethodID onSaveJI_ID = 0;
-
 void setupCallback(JNIEnv* env, jobject obj) {
 	this->env = env;
 	this->obj = env->NewGlobalRef(obj);
-	if(LoadSaveSettingsListenerImpl::jClassID == 0) {
-		LoadSaveSettingsListenerImpl::jClassID = (jclass)env->NewGlobalRef(env->GetObjectClass(obj));
-		LoadSaveSettingsListenerImpl::onLoadJ_ID = env->GetMethodID(jClassID, "internal_onLoad", "(J)V");
-		LoadSaveSettingsListenerImpl::onSaveJI_ID = env->GetMethodID(jClassID, "internal_onSave", "(JI)Z");
+	static jclass jClassID = 0;
+	if(jClassID == 0) {
+		jClassID = (jclass)env->NewGlobalRef(env->GetObjectClass(obj));
+		LoadSaveSettingsListenerImpl_onLoadJ_ID = env->GetMethodID(jClassID, "internal_onLoad", "(J)V");
+		LoadSaveSettingsListenerImpl_onSaveJI_ID = env->GetMethodID(jClassID, "internal_onSave", "(JI)Z");
 	}
 }
 virtual void onLoad(IDLString* data) {
-   env->CallVoidMethod(obj, LoadSaveSettingsListenerImpl::onLoadJ_ID, (jlong)data);
+   env->CallVoidMethod(obj, LoadSaveSettingsListenerImpl_onLoadJ_ID, (jlong)data);
 }
 virtual bool onSave(IDLString* data, SaveReasonFlags reason) {
-   return env->CallBooleanMethod(obj, LoadSaveSettingsListenerImpl::onSaveJI_ID, (jlong)data, reason);
+   return env->CallBooleanMethod(obj, LoadSaveSettingsListenerImpl_onSaveJI_ID, (jlong)data, reason);
 }
 };
 */

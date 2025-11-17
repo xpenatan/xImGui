@@ -17,29 +17,29 @@ public class ClipboardTextFunction extends IDLBase {
     static public final ClipboardTextFunction NULL = ClipboardTextFunction.native_new();
 
     /*[-JNI;-NATIVE]
+	static jmethodID ClipboardTextFunctionImpl_onGetClipboardTextJ_ID;
+	static jmethodID ClipboardTextFunctionImpl_onSetClipboardTextJ_ID;
+
 class ClipboardTextFunctionImpl : public ClipboardTextFunction {
 private:
 	JNIEnv* env;
 	jobject obj;
 public:
-	inline static jclass jClassID = 0;
-	inline static jmethodID onGetClipboardTextJ_ID = 0;
-	inline static jmethodID onSetClipboardTextJ_ID = 0;
-
 void setupCallback(JNIEnv* env, jobject obj) {
 	this->env = env;
 	this->obj = env->NewGlobalRef(obj);
-	if(ClipboardTextFunctionImpl::jClassID == 0) {
-		ClipboardTextFunctionImpl::jClassID = (jclass)env->NewGlobalRef(env->GetObjectClass(obj));
-		ClipboardTextFunctionImpl::onGetClipboardTextJ_ID = env->GetMethodID(jClassID, "internal_onGetClipboardText", "(J)V");
-		ClipboardTextFunctionImpl::onSetClipboardTextJ_ID = env->GetMethodID(jClassID, "internal_onSetClipboardText", "(J)V");
+	static jclass jClassID = 0;
+	if(jClassID == 0) {
+		jClassID = (jclass)env->NewGlobalRef(env->GetObjectClass(obj));
+		ClipboardTextFunctionImpl_onGetClipboardTextJ_ID = env->GetMethodID(jClassID, "internal_onGetClipboardText", "(J)V");
+		ClipboardTextFunctionImpl_onSetClipboardTextJ_ID = env->GetMethodID(jClassID, "internal_onSetClipboardText", "(J)V");
 	}
 }
 virtual void onGetClipboardText(IDLString* strOut) {
-   env->CallVoidMethod(obj, ClipboardTextFunctionImpl::onGetClipboardTextJ_ID, (jlong)strOut);
+   env->CallVoidMethod(obj, ClipboardTextFunctionImpl_onGetClipboardTextJ_ID, (jlong)strOut);
 }
 virtual void onSetClipboardText(IDLString* text) {
-   env->CallVoidMethod(obj, ClipboardTextFunctionImpl::onSetClipboardTextJ_ID, (jlong)text);
+   env->CallVoidMethod(obj, ClipboardTextFunctionImpl_onSetClipboardTextJ_ID, (jlong)text);
 }
 };
 */
