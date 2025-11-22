@@ -14,11 +14,12 @@ includePom.extendsFrom(configurations.implementation.get())
 includePom.isCanBeResolved = true
 
 dependencies {
-    implementation(project(":imgui:imgui-teavm"))
-    implementation(project(":extensions:imlayout:imlayout-teavm"))
-    implementation(project(":extensions:ImGuiColorTextEdit:textedit-teavm"))
-    implementation(project(":extensions:imgui-node-editor:nodeeditor-teavm"))
     implementation("com.badlogicgames.gdx:gdx:${LibExt.gdxVersion}")
+
+    api(project(":imgui:imgui-teavm"))
+    api(project(":extensions:imlayout:imlayout-teavm"))
+    api(project(":extensions:ImGuiColorTextEdit:textedit-teavm"))
+    api(project(":extensions:imgui-node-editor:nodeeditor-teavm"))
 
     includePom("com.github.xpenatan.jParser:loader-core:${LibExt.jParserVersion}")
     includePom("com.github.xpenatan.jParser:loader-teavm:${LibExt.jParserVersion}")
@@ -74,9 +75,9 @@ tasks.jar {
     from(emscriptenFile)
     from(sourceSets.main.get().output)
 
-    // Include implementation dependencies' jars into the output jar (true fat jar)
+    // Include jars of API dependencies on the classpath (if needed for a true fat jar)
     from({
-        configurations.runtimeClasspath.get().map { file ->
+        configurations.compileClasspath.get().map { file ->
             if (file.extension == "jar") {
                 zipTree(file)
             } else {
