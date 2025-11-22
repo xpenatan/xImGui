@@ -1,3 +1,5 @@
+import org.gradle.api.tasks.SourceSetContainer
+
 plugins {
     id("java-library")
 }
@@ -73,7 +75,10 @@ tasks.jar {
 
     from(sourceSets.main.get().output)
 
-    from(includeJarProjects.flatMap { it.sourceSets["main"].output })
+    from(includeJarProjects.flatMap { project ->
+        val sourceSets = project.extensions.findByName("sourceSets") as? SourceSetContainer
+        sourceSets?.getByName("main")?.output ?: emptyList()
+    })
 
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
