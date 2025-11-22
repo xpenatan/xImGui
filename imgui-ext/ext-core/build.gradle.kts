@@ -68,7 +68,7 @@ tasks.jar {
             null
         }
     })
-    dependsOn(fatJarProjects.map { it.tasks.named("compileJava") })
+    dependsOn(fatJarProjects.mapNotNull { it.tasks.findByName("compileJava") })
     dependsOn(fatJarProjects.mapNotNull { it.tasks.findByName("processResources") })
 
     from(sourceSets.main.get().output)
