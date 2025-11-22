@@ -6,6 +6,7 @@ val moduleName = "imgui-ext-core"
 
 val includePom = configurations.create("includePom")
 includePom.extendsFrom(configurations.api.get())
+includePom.isCanBeResolved = true
 
 dependencies {
     includePom("com.github.xpenatan.jParser:loader-core:${LibExt.jParserVersion}")
@@ -38,7 +39,7 @@ tasks.register<Jar>("fatJar") {
 
     // Include jars of API dependencies on the classpath (if needed for a true fat jar)
     from({
-        configurations["api"].resolvedConfiguration.resolvedArtifacts.map { it.file }.map { file ->
+        configurations.compileClasspath.get().map { file ->
             if (file.extension == "jar") {
                 zipTree(file)
             } else {
