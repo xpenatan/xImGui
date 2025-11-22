@@ -21,14 +21,19 @@ dependencies {
     fatJar(project(":extensions:imgui-node-editor:nodeeditor-core"))
 }
 
-java {
-    sourceCompatibility = JavaVersion.toVersion(LibExt.java8Target)
-    targetCompatibility = JavaVersion.toVersion(LibExt.java8Target)
+val sourcesJar = tasks.register<org.gradle.jvm.tasks.Jar>("sourcesJar") {
+    archiveClassifier.set("sources")
+    from(sourceSets["main"].allSource)
+}
+
+val javadocJar = tasks.register<org.gradle.jvm.tasks.Jar>("javadocJar") {
+    archiveClassifier.set("javadoc")
+    from(tasks.javadoc)
 }
 
 java {
-    withJavadocJar()
-    withSourcesJar()
+    sourceCompatibility = JavaVersion.toVersion(LibExt.java8Target)
+    targetCompatibility = JavaVersion.toVersion(LibExt.java8Target)
 }
 
 tasks.jar {
@@ -64,12 +69,8 @@ publishing {
             group = LibExt.groupId
             version = LibExt.libVersion
             artifact(tasks.jar)
-            artifact(tasks["sourcesJar"]) {
-                classifier = "sources"
-            }
-            artifact(tasks["javadocJar"]) {
-                classifier = "javadoc"
-            }
+            artifact(sourcesJar)
+            artifact(javadocJar)
             pom {
                 withXml {
                     val rootNode = asNode()
