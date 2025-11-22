@@ -8,17 +8,17 @@ val includePom = configurations.create("includePom")
 includePom.extendsFrom(configurations.api.get())
 includePom.isCanBeResolved = true
 
-val fatJar = configurations.create("fatJar")
-fatJar.extendsFrom(configurations["implementation"])
-fatJar.isCanBeResolved = true
+val includeJar = configurations.create("includeJar")
+includeJar.extendsFrom(configurations["implementation"])
+includeJar.isCanBeResolved = true
 
 dependencies {
     includePom("com.github.xpenatan.jParser:loader-core:${LibExt.jParserVersion}")
     includePom("com.github.xpenatan.jParser:idl-core:${LibExt.jParserVersion}")
-    fatJar(project(":imgui:imgui-core"))
-    fatJar(project(":extensions:imlayout:imlayout-core"))
-    fatJar(project(":extensions:ImGuiColorTextEdit:textedit-core"))
-    fatJar(project(":extensions:imgui-node-editor:nodeeditor-core"))
+    includeJar(project(":imgui:imgui-core"))
+    includeJar(project(":extensions:imlayout:imlayout-core"))
+    includeJar(project(":extensions:ImGuiColorTextEdit:textedit-core"))
+    includeJar(project(":extensions:imgui-node-editor:nodeeditor-core"))
 }
 
 java {
@@ -57,7 +57,7 @@ tasks.jar {
     archiveClassifier.set("")
 
     // Include classes from fatJar dependencies
-    val fatJarProjects = configurations["fatJar"].dependencies.filterIsInstance<ProjectDependency>().map { project(it.path) }
+    val includeJarProjects = configurations["includeJar"].dependencies.filterIsInstance<ProjectDependency>().map { project(it.path) }
 
     // Only this project's classes are required as explicit dependency
     dependsOn(tasks.named("classes"))
@@ -68,12 +68,12 @@ tasks.jar {
             null
         }
     })
-    dependsOn(fatJarProjects.mapNotNull { it.tasks.findByName("compileJava") })
-    dependsOn(fatJarProjects.mapNotNull { it.tasks.findByName("processResources") })
+    dependsOn(includeJarProjects.mapNotNull { it.tasks.findByName("compileJava") })
+    dependsOn(includeJarProjects.mapNotNull { it.tasks.findByName("processResources") })
 
     from(sourceSets.main.get().output)
 
-    from(fatJarProjects.flatMap { it.sourceSets["main"].output })
+    from(includeJarProjects.flatMap { it.sourceSets["main"].output })
 
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }

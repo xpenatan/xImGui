@@ -1,5 +1,6 @@
 import org.gradle.jvm.tasks.Jar
 import org.gradle.api.artifacts.ProjectDependency
+import org.gradle.api.tasks.SourceSetContainer
 
 plugins {
     id("java-library")
@@ -13,17 +14,17 @@ val includePom = configurations.create("includePom")
 includePom.extendsFrom(configurations["implementation"])
 includePom.isCanBeResolved = true
 
-val fatJar = configurations.create("fatJar")
-fatJar.extendsFrom(configurations["implementation"])
-fatJar.isCanBeResolved = true
+val includeJar = configurations.create("includeJar")
+includeJar.extendsFrom(configurations["implementation"])
+includeJar.isCanBeResolved = true
 
 dependencies {
     implementation("com.badlogicgames.gdx:gdx:${LibExt.gdxVersion}")
 
-    fatJar(project(":imgui:imgui-teavm"))
-    fatJar(project(":extensions:imlayout:imlayout-teavm"))
-    fatJar(project(":extensions:ImGuiColorTextEdit:textedit-teavm"))
-    fatJar(project(":extensions:imgui-node-editor:nodeeditor-teavm"))
+    includeJar(project(":imgui:imgui-teavm"))
+    includeJar(project(":extensions:imlayout:imlayout-teavm"))
+    includeJar(project(":extensions:ImGuiColorTextEdit:textedit-teavm"))
+    includeJar(project(":extensions:imgui-node-editor:nodeeditor-teavm"))
 
     includePom("com.github.xpenatan.jParser:loader-core:${LibExt.jParserVersion}")
     includePom("com.github.xpenatan.jParser:loader-teavm:${LibExt.jParserVersion}")
@@ -67,7 +68,7 @@ tasks.jar {
     archiveClassifier.set("")
 
     // Include classes from fatJar dependencies
-    val fatJarProjects = configurations["fatJar"].dependencies.filterIsInstance<ProjectDependency>().map { project(it.path) }
+    val includeJarProjects = configurations["includeJar"].dependencies.filterIsInstance<ProjectDependency>().map { project(it.path) }
 
     // Only this project's classes are required as explicit dependency
     dependsOn(tasks.named("classes"))
@@ -78,12 +79,16 @@ tasks.jar {
             null
         }
     })
-    dependsOn(fatJarProjects.map { it.tasks.named("compileJava") })
+    dependsOn(includeJarProjects.mapNotNull { it.tasks.findByName("compileJava") })
+    dependsOn(includeJarProjects.mapNotNull { it.tasks.findByName("processResources") })
 
     from(emscriptenFile)
     from(sourceSets.main.get().output)
 
-    from(fatJarProjects.flatMap { it.sourceSets["main"].output })
+    from(includeJarProjects.flatMap { project ->
+        val sourceSets = project.extensions.findByName("sourceSets") as? SourceSetContainer
+        sourceSets?.getByName("main")?.output ?: emptyList()
+    })
 
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
