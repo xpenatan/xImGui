@@ -10,16 +10,20 @@ val moduleName = "imgui-ext-teavm"
 val emscriptenFile = "$projectDir/../../imgui/imgui-build/build/c++/libs/emscripten/ext/imgui.wasm.js"
 
 val includePom = configurations.create("includePom")
-includePom.extendsFrom(configurations.implementation.get())
+includePom.extendsFrom(configurations["implementation"])
 includePom.isCanBeResolved = true
+
+val fatJar = configurations.create("fatJar")
+fatJar.extendsFrom(configurations["implementation"])
+fatJar.isCanBeResolved = true
 
 dependencies {
     implementation("com.badlogicgames.gdx:gdx:${LibExt.gdxVersion}")
 
-    api(project(":imgui:imgui-teavm"))
-    api(project(":extensions:imlayout:imlayout-teavm"))
-    api(project(":extensions:ImGuiColorTextEdit:textedit-teavm"))
-    api(project(":extensions:imgui-node-editor:nodeeditor-teavm"))
+    fatJar(project(":imgui:imgui-teavm"))
+    fatJar(project(":extensions:imlayout:imlayout-teavm"))
+    fatJar(project(":extensions:ImGuiColorTextEdit:textedit-teavm"))
+    fatJar(project(":extensions:imgui-node-editor:nodeeditor-teavm"))
 
     includePom("com.github.xpenatan.jParser:loader-core:${LibExt.jParserVersion}")
     includePom("com.github.xpenatan.jParser:loader-teavm:${LibExt.jParserVersion}")
@@ -62,6 +66,9 @@ tasks.jar {
     archiveBaseName.set(moduleName)
     archiveClassifier.set("")
 
+    // Include classes from fatJar dependencies
+    val fatJarProjects = configurations["fatJar"].dependencies.filterIsInstance<ProjectDependency>().map { project(it.path) }
+
     // Only this project's classes are required as explicit dependency
     dependsOn(tasks.named("classes"))
     dependsOn(configurations.getByName("runtimeClasspath").dependencies.mapNotNull { dep ->
@@ -71,20 +78,12 @@ tasks.jar {
             null
         }
     })
+    dependsOn(fatJarProjects.map { it.tasks.named("compileJava") })
 
     from(emscriptenFile)
     from(sourceSets.main.get().output)
 
-    // Include jars of API dependencies on the classpath (if needed for a true fat jar)
-    from({
-        configurations.compileClasspath.get().map { file ->
-            if (file.extension == "jar") {
-                zipTree(file)
-            } else {
-                file
-            }
-        }
-    })
+    from(fatJarProjects.flatMap { it.sourceSets["main"].output })
 
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
