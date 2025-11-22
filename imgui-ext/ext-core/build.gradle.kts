@@ -21,6 +21,27 @@ dependencies {
     fatJar(project(":extensions:imgui-node-editor:nodeeditor-core"))
 }
 
+tasks.named("clean") {
+    doFirst {
+        val srcPath = "$projectDir/src/main/java"
+        val jsPath = "$projectDir/src/main/resources/imgui.wasm.js"
+        project.delete(files(srcPath, jsPath))
+    }
+}
+
+java {
+    sourceCompatibility = JavaVersion.toVersion(LibExt.java11Target)
+    targetCompatibility = JavaVersion.toVersion(LibExt.java11Target)
+}
+
+val fromClasses = tasks.register<org.gradle.jvm.tasks.Jar>("fromClasses") {
+    val dependencies = configurations.compileClasspath.get()
+    from(dependencies.map(::zipTree)) {
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    dependsOn("assemble")
+}
+
 val sourcesJar = tasks.register<org.gradle.jvm.tasks.Jar>("sourcesJar") {
     archiveClassifier.set("sources")
     from(sourceSets["main"].allSource)
@@ -29,11 +50,6 @@ val sourcesJar = tasks.register<org.gradle.jvm.tasks.Jar>("sourcesJar") {
 val javadocJar = tasks.register<org.gradle.jvm.tasks.Jar>("javadocJar") {
     archiveClassifier.set("javadoc")
     from(tasks.javadoc)
-}
-
-java {
-    sourceCompatibility = JavaVersion.toVersion(LibExt.java8Target)
-    targetCompatibility = JavaVersion.toVersion(LibExt.java8Target)
 }
 
 tasks.jar {
@@ -52,7 +68,7 @@ tasks.jar {
             null
         }
     })
-    dependsOn(fatJarProjects.mapNotNull { it.tasks.findByName("compileJava") })
+    dependsOn(fatJarProjects.map { it.tasks.named("compileJava") })
     dependsOn(fatJarProjects.mapNotNull { it.tasks.findByName("processResources") })
 
     from(sourceSets.main.get().output)
@@ -71,37 +87,15 @@ publishing {
             artifact(tasks.jar)
             artifact(sourcesJar)
             artifact(javadocJar)
-            pom {
-                withXml {
-                    val rootNode = asNode()
-                    // Find or create the <dependencies> node
-                    val deps = rootNode["dependencies"]
-                    val dependenciesNode: groovy.util.Node = if (deps is groovy.util.NodeList && !deps.isEmpty()) {
-                        deps[0] as groovy.util.Node
-                    } else {
-                        rootNode.appendNode("dependencies")
-                    }
-
-                    // Remove all existing <dependency> children safely
-                    val childrenToRemove = dependenciesNode.children().toList()
-                    childrenToRemove.forEach { child ->
-                        dependenciesNode.remove(child as groovy.util.Node)
-                    }
-
-                    // Add only the includePom configuration dependencies
-                    configurations["includePom"].dependencies.forEach { dep ->
-                        val dependencyNode = dependenciesNode.appendNode("dependency")
-                        dependencyNode.appendNode("groupId", dep.group)
-                        dependencyNode.appendNode("artifactId", dep.name)
-                        dependencyNode.appendNode("version", dep.version)
-                        dependencyNode.appendNode("scope", "compile")
-                    }
+            pom.withXml {
+                val dependencies = asNode().appendNode("dependencies")
+                includePom.dependencies.forEach {
+                    val dependencyNode = dependencies.appendNode("dependency")
+                    dependencyNode.appendNode("groupId", it.group)
+                    dependencyNode.appendNode("artifactId", it.name)
+                    dependencyNode.appendNode("version", it.version)
                 }
             }
         }
     }
-}
-
-tasks.withType<GenerateModuleMetadata> {
-    enabled = false
 }
