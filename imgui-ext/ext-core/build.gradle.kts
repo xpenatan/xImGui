@@ -8,13 +8,17 @@ val includePom = configurations.create("includePom")
 includePom.extendsFrom(configurations.api.get())
 includePom.isCanBeResolved = true
 
+val fatJar = configurations.create("fatJar")
+fatJar.extendsFrom(configurations["implementation"])
+fatJar.isCanBeResolved = true
+
 dependencies {
     includePom("com.github.xpenatan.jParser:loader-core:${LibExt.jParserVersion}")
     includePom("com.github.xpenatan.jParser:idl-core:${LibExt.jParserVersion}")
-    api(project(":imgui:imgui-core"))
-    api(project(":extensions:imlayout:imlayout-core"))
-    api(project(":extensions:ImGuiColorTextEdit:textedit-core"))
-    api(project(":extensions:imgui-node-editor:nodeeditor-core"))
+    fatJar(project(":imgui:imgui-core"))
+    fatJar(project(":extensions:imlayout:imlayout-core"))
+    fatJar(project(":extensions:ImGuiColorTextEdit:textedit-core"))
+    fatJar(project(":extensions:imgui-node-editor:nodeeditor-core"))
 }
 
 java {
@@ -27,26 +31,28 @@ java {
     withSourcesJar()
 }
 
-tasks.register<Jar>("fatJar") {
+tasks.jar {
     archiveBaseName.set(moduleName)
     archiveClassifier.set("")
 
-    // Ensure this project's classes are built
+    // Include classes from fatJar dependencies
+    val fatJarProjects = configurations["fatJar"].dependencies.filterIsInstance<ProjectDependency>().map { project(it.path) }
+
+    // Only this project's classes are required as explicit dependency
     dependsOn(tasks.named("classes"))
-
-    // Include this project's compiled classes
-    from(sourceSets.main.get().output)
-
-    // Include jars of API dependencies on the classpath (if needed for a true fat jar)
-    from({
-        configurations.compileClasspath.get().map { file ->
-            if (file.extension == "jar") {
-                zipTree(file)
-            } else {
-                file
-            }
+    dependsOn(configurations.getByName("runtimeClasspath").dependencies.mapNotNull { dep ->
+        if (dep is ProjectDependency) {
+            project(dep.path).tasks.findByName("classes")
+        } else {
+            null
         }
     })
+    dependsOn(fatJarProjects.map { it.tasks.named("compileJava") })
+    dependsOn(fatJarProjects.map { it.tasks.named("processResources") })
+
+    from(sourceSets.main.get().output)
+
+    from(fatJarProjects.flatMap { it.sourceSets["main"].output })
 
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
@@ -57,7 +63,7 @@ publishing {
             artifactId = moduleName
             group = LibExt.groupId
             version = LibExt.libVersion
-            artifact(tasks["fatJar"])
+            artifact(tasks.jar)
             artifact(tasks["sourcesJar"]) {
                 classifier = "sources"
             }
