@@ -7,7 +7,7 @@ val moduleName = "imgui-android"
 
 android {
     namespace = "imgui"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 21
@@ -21,9 +21,6 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.toVersion(LibExt.java11Target)
         targetCompatibility = JavaVersion.toVersion(LibExt.java11Target)
-    }
-    kotlinOptions {
-        jvmTarget = LibExt.java11Target
     }
 }
 

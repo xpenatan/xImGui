@@ -1,3 +1,6 @@
+import org.gradle.jvm.tasks.Jar
+import org.gradle.api.artifacts.ProjectDependency
+
 plugins {
     id("java-library")
 }
@@ -8,6 +11,7 @@ val emscriptenFile = "$projectDir/../../imgui/imgui-build/build/c++/libs/emscrip
 
 val includePom = configurations.create("includePom")
 includePom.extendsFrom(configurations.implementation.get())
+includePom.isCanBeResolved = true
 
 dependencies {
     implementation(project(":imgui:imgui-teavm"))
@@ -35,10 +39,8 @@ java {
 }
 
 val fromClasses = tasks.register<Jar>("fromClasses") {
-    val dependencies = configurations
-        .compileClasspath
-        .get()
-    from((dependencies).map(::zipTree)) {
+    val dependencies = configurations.compileClasspath.get()
+    from(dependencies.map(::zipTree)) {
         exclude("imgui.wasm.js")
     }
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
@@ -47,8 +49,7 @@ val fromClasses = tasks.register<Jar>("fromClasses") {
 
 val sourcesJar = tasks.register<Jar>("sourcesJar") {
     archiveClassifier.set("sources")
-    from(sourceSets["main"].allSource) {
-    }
+    from(sourceSets["main"].allSource)
 }
 
 val javadocJar = tasks.register<Jar>("javadocJar") {
@@ -60,10 +61,11 @@ tasks.jar {
     archiveBaseName.set(moduleName)
     archiveClassifier.set("")
 
-    dependsOn(tasks.named("classes")) // This project’s classes
-    dependsOn(configurations["implementation"].dependencies.mapNotNull { dep ->
+    // Only this project's classes are required as explicit dependency
+    dependsOn(tasks.named("classes"))
+    dependsOn(configurations.getByName("runtimeClasspath").dependencies.mapNotNull { dep ->
         if (dep is ProjectDependency) {
-            dep.dependencyProject.tasks.findByName("classes")
+            project(dep.path).tasks.findByName("classes")
         } else {
             null
         }
@@ -72,13 +74,15 @@ tasks.jar {
     from(emscriptenFile)
     from(sourceSets.main.get().output)
 
+    // Include implementation dependencies' jars into the output jar (true fat jar)
     from({
-        configurations["implementation"].dependencies
-            .filterIsInstance<ProjectDependency>()
-            .mapNotNull { dep ->
-                val output = dep.dependencyProject.sourceSets.main.get().output
-                output.takeIf { it.files.any { file -> file.exists() } }
+        configurations.runtimeClasspath.get().map { file ->
+            if (file.extension == "jar") {
+                zipTree(file)
+            } else {
+                file
             }
+        }
     })
 
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE

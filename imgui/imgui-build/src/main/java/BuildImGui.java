@@ -189,7 +189,8 @@ public class BuildImGui {
         String sourceDir = op.getSourceDir();
 
         // Make a static library
-        EmscriptenTarget libTarget = new EmscriptenTarget(idlReader);
+        EmscriptenTarget libTarget = new EmscriptenTarget();
+        libTarget.idlReader = idlReader;
         libTarget.isStatic = true;
         libTarget.cppFlags.add("-std=c++17");
         libTarget.compileGlueCode = false;
@@ -200,7 +201,8 @@ public class BuildImGui {
         multiTarget.add(libTarget);
 
         // Compile glue code and link
-        EmscriptenTarget linkTarget = new EmscriptenTarget(idlReader);
+        EmscriptenTarget linkTarget = new EmscriptenTarget();
+        linkTarget.idlReader = idlReader;
         linkTarget.cppFlags.add("-std=c++17");
         linkTarget.headerDirs.add("-I" + sourceDir);
         linkTarget.headerDirs.add("-include" + op.getCustomSourceDir() + "ImGuiCustom.h");
@@ -248,6 +250,7 @@ public class BuildImGui {
             linkTarget.cppFlags.add("-Wno-error=format-security");
             linkTarget.cppFlags.add("-DIMGUI_DISABLE_FILE_FUNCTIONS");
             linkTarget.cppFlags.add("-DIMGUI_DEFINE_MATH_OPERATORS");
+            linkTarget.linkerFlags.add("-Wl,-z,max-page-size=16384");
             multiTarget.add(linkTarget);
         }
 

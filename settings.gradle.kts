@@ -27,13 +27,11 @@ include(":extensions:imlayout:imlayout-teavm")
 include(":extensions:ImGuiColorTextEdit:textedit-build")
 include(":extensions:ImGuiColorTextEdit:textedit-base")
 include(":extensions:ImGuiColorTextEdit:textedit-core")
-include(":extensions:ImGuiColorTextEdit:textedit-desktop")
 include(":extensions:ImGuiColorTextEdit:textedit-teavm")
 
 // Extension imgui-node-editor
 include(":extensions:imgui-node-editor:nodeeditor-build")
 include(":extensions:imgui-node-editor:nodeeditor-base")
-include(":extensions:imgui-node-editor:nodeeditor-cpp")
 include(":extensions:imgui-node-editor:nodeeditor-core")
 include(":extensions:imgui-node-editor:nodeeditor-teavm")
 
@@ -60,10 +58,6 @@ include(":examples:ImGuiColorTextEdit:teavm")
 include(":examples:imgui-node-editor:core")
 include(":examples:imgui-node-editor:desktop")
 include(":examples:imgui-node-editor:teavm")
-
-include(":examples:node-editor:core")
-include(":examples:node-editor:desktop")
-include(":examples:node-editor:teavm")
 
 //include ":examples:gdx-tests:core"
 //include ":examples:gdx-tests:desktop"

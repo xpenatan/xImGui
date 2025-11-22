@@ -2,7 +2,7 @@ plugins {
     id("java")
     id("maven-publish")
     id("signing")
-    id("org.jetbrains.kotlin.android") version "1.8.21" apply false
+    id("org.jetbrains.kotlin.android") version "2.2.21" apply false
 }
 
 buildscript {
@@ -11,8 +11,11 @@ buildscript {
         google()
     }
 
+    val kotlinVersion = "2.1.10"
+
     dependencies {
-        classpath("com.android.tools.build:gradle:8.5.1")
+        classpath("com.android.tools.build:gradle:8.12.3")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
     }
 }
 

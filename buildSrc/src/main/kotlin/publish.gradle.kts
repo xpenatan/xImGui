@@ -9,7 +9,7 @@ var libProjects = mutableSetOf(
     project(":imgui:imgui-core"),
     project(":imgui:imgui-desktop"),
     project(":imgui:imgui-teavm"),
-    project(":imgui:imgui-android"),
+//    project(":imgui:imgui-android"),
     project(":imgui-ext:ext-core"),
     project(":imgui-ext:ext-desktop"),
     project(":imgui-ext:ext-teavm")
@@ -122,7 +122,7 @@ if(!LibExt.libVersion.endsWith("-SNAPSHOT")) {
                 val rawBundleName = "${LibExt.libName}-${LibExt.libVersion}"
                 val encodedBundleName = URLEncoder.encode(rawBundleName, "UTF-8")
 
-                exec {
+                providers.exec {
                     commandLine = listOf(
                         "curl",
                         "-u",
@@ -133,7 +133,7 @@ if(!LibExt.libVersion.endsWith("-SNAPSHOT")) {
                         "bundle=@${zipFile.absolutePath}",
                         "https://central.sonatype.com/api/v1/publisher/upload?name=${encodedBundleName}"
                     )
-                }
+                }.result.get()
             }
         }
     }

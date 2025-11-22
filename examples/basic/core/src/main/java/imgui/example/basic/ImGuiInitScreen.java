@@ -1,6 +1,8 @@
 package imgui.example.basic;
 
 import com.badlogic.gdx.ScreenAdapter;
+import com.github.xpenatan.jParser.loader.JParserLibraryLoaderListener;
+import imgui.ImGui;
 import imgui.ImGuiLoader;
 
 public class ImGuiInitScreen extends ScreenAdapter {

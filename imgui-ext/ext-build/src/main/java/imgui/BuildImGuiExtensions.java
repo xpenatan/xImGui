@@ -243,7 +243,8 @@ public class BuildImGuiExtensions {
         String libBuildCPPPath = op.getModuleBuildCPPPath();
 
         // Compile glue code and link to make js file
-        EmscriptenTarget linkTarget = new EmscriptenTarget(idlReaderCombined);
+        EmscriptenTarget linkTarget = new EmscriptenTarget();
+        linkTarget.idlReader = idlReaderCombined;
         linkTarget.cppFlags.add("-std=c++17");
         linkTarget.libDirSuffix += "ext/";
         linkTarget.headerDirs.add("-I" + imguiCppPath);

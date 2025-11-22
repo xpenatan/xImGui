@@ -139,7 +139,7 @@ public class BuildTextEdit {
         BuildMultiTarget multiTarget = new BuildMultiTarget();
 
         // Make a static library
-        EmscriptenTarget libTarget = new EmscriptenTarget(null);
+        EmscriptenTarget libTarget = new EmscriptenTarget();
         libTarget.isStatic = true;
         libTarget.cppFlags.add("-std=c++17");
         libTarget.compileGlueCode = false;

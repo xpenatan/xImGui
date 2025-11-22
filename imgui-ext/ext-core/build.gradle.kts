@@ -25,28 +25,26 @@ java {
     withJavadocJar()
     withSourcesJar()
 }
+
 tasks.register<Jar>("fatJar") {
     archiveBaseName.set(moduleName)
     archiveClassifier.set("")
 
-    dependsOn(tasks.named("classes")) // This project’s classes
-    dependsOn(configurations["api"].dependencies.mapNotNull { dep ->
-        if (dep is ProjectDependency) {
-            dep.dependencyProject.tasks.findByName("classes")
-        } else {
-            null
-        }
-    })
+    // Ensure this project's classes are built
+    dependsOn(tasks.named("classes"))
 
+    // Include this project's compiled classes
     from(sourceSets.main.get().output)
 
+    // Include jars of API dependencies on the classpath (if needed for a true fat jar)
     from({
-        configurations["api"].dependencies
-            .filterIsInstance<ProjectDependency>()
-            .mapNotNull { dep ->
-                val output = dep.dependencyProject.sourceSets.main.get().output
-                output.takeIf { it.files.any { file -> file.exists() } }
+        configurations["api"].resolvedConfiguration.resolvedArtifacts.map { it.file }.map { file ->
+            if (file.extension == "jar") {
+                zipTree(file)
+            } else {
+                file
             }
+        }
     })
 
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
