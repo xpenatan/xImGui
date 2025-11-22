@@ -21,17 +21,17 @@ dependencies {
     fatJar(project(":extensions:imgui-node-editor:nodeeditor-core"))
 }
 
+java {
+    sourceCompatibility = JavaVersion.toVersion(LibExt.java11Target)
+    targetCompatibility = JavaVersion.toVersion(LibExt.java11Target)
+}
+
 tasks.named("clean") {
     doFirst {
         val srcPath = "$projectDir/src/main/java"
         val jsPath = "$projectDir/src/main/resources/imgui.wasm.js"
         project.delete(files(srcPath, jsPath))
     }
-}
-
-java {
-    sourceCompatibility = JavaVersion.toVersion(LibExt.java11Target)
-    targetCompatibility = JavaVersion.toVersion(LibExt.java11Target)
 }
 
 val fromClasses = tasks.register<org.gradle.jvm.tasks.Jar>("fromClasses") {
