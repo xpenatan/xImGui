@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="build_project_macArm" type="GradleRunConfiguration" factoryName="Gradle" folderName="ImGui">
+  <configuration default="false" name="ImGui_build_project_linux64" type="GradleRunConfiguration" factoryName="Gradle" folderName="ImGui">
     <ExternalSystemSettings>
       <option name="executionName" />
       <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -10,7 +10,7 @@
       </option>
       <option name="taskNames">
         <list>
-          <option value=":imgui:imgui-build:build_project_macArm" />
+          <option value=":imgui:imgui-build:build_project_linux64" />
         </list>
       </option>
       <option name="vmOptions" />
