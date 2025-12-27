@@ -6,10 +6,10 @@ include(":imgui:imgui-desktop")
 include(":imgui:imgui-teavm")
 include(":imgui:imgui-android")
 
-include(":imgui-ext:ext-build")
-include(":imgui-ext:ext-core")
-include(":imgui-ext:ext-desktop")
-include(":imgui-ext:ext-teavm")
+//include(":imgui-ext:ext-build")
+//include(":imgui-ext:ext-core")
+//include(":imgui-ext:ext-desktop")
+//include(":imgui-ext:ext-teavm")
 
 // Implementation
 include(":gdx:gdx-shared-impl")
@@ -21,6 +21,7 @@ include(":gdx:gdx-wgpu-impl")
 include(":extensions:imlayout:imlayout-build")
 include(":extensions:imlayout:imlayout-base")
 include(":extensions:imlayout:imlayout-core")
+include(":extensions:imlayout:imlayout-desktop")
 include(":extensions:imlayout:imlayout-teavm")
 
 // Extension ImGuiColorTextEdit
@@ -51,13 +52,13 @@ include(":examples:imlayout:core")
 include(":examples:imlayout:desktop")
 include(":examples:imlayout:teavm")
 
-include(":examples:ImGuiColorTextEdit:core")
-include(":examples:ImGuiColorTextEdit:desktop")
-include(":examples:ImGuiColorTextEdit:teavm")
-
-include(":examples:imgui-node-editor:core")
-include(":examples:imgui-node-editor:desktop")
-include(":examples:imgui-node-editor:teavm")
+//include(":examples:ImGuiColorTextEdit:core")
+//include(":examples:ImGuiColorTextEdit:desktop")
+//include(":examples:ImGuiColorTextEdit:teavm")
+//
+//include(":examples:imgui-node-editor:core")
+//include(":examples:imgui-node-editor:desktop")
+//include(":examples:imgui-node-editor:teavm")
 
 //include ":examples:gdx-tests:core"
 //include ":examples:gdx-tests:desktop"

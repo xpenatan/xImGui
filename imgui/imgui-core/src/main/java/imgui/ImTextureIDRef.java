@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
@@ -12,24 +13,24 @@ public class ImTextureIDRef extends IDLBase {
     static public final ImTextureIDRef NULL = ImTextureIDRef.native_new();
 
     public ImTextureIDRef(long value) {
-        long addr = internal_native_create_long(value);
+        long addr = internal_native_create_long_addr(value);
         internal_reset(addr, true);
     }
 
     /*[-JNI;-NATIVE]
 return (jlong)new ImTextureIDRef(value);
 */
-    public static native long internal_native_create_long(long value);
+    public static native long internal_native_create_long_addr(long value);
 
     public ImTextureIDRef() {
-        long addr = internal_native_create();
+        long addr = internal_native_create_addr();
         internal_reset(addr, true);
     }
 
     /*[-JNI;-NATIVE]
 return (jlong)new ImTextureIDRef();
 */
-    public static native long internal_native_create();
+    public static native long internal_native_create_addr();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer

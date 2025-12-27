@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
@@ -39,12 +40,12 @@ imgui.destroy(jsObj);
     public static native void internal_native_deleteNative(int this_addr);
 
     public ImVectorImTextureDataPtr get_Textures() {
-        int pointer = internal_native_get_Textures(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_Textures_addr(native_address);
+        if (addr == 0)
             return ImVectorImTextureDataPtr.NULL;
         if (ImVectorImTextureDataPtr_TEMP_GEN_0 == null)
             ImVectorImTextureDataPtr_TEMP_GEN_0 = ImVectorImTextureDataPtr.native_new();
-        ImVectorImTextureDataPtr_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVectorImTextureDataPtr_TEMP_GEN_0.internal_reset(addr, false);
         return ImVectorImTextureDataPtr_TEMP_GEN_0;
     }
 
@@ -55,7 +56,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPlatformIO);var returnedJSObj = jsObj.get_Textures();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_get_Textures(int this_addr);
+    public static native int internal_native_get_Textures_addr(int this_addr);
 
     public void set_Textures(ImVectorImTextureDataPtr Textures) {
         internal_native_set_Textures(native_address, Textures.native_address);

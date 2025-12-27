@@ -7,6 +7,7 @@ import com.github.xpenatan.jParser.builder.targets.WindowsMSVCTarget;
 import com.github.xpenatan.jParser.builder.tool.BuildToolListener;
 import com.github.xpenatan.jParser.builder.tool.BuildToolOptions;
 import com.github.xpenatan.jParser.builder.tool.BuilderTool;
+import com.github.xpenatan.jParser.core.JParser;
 import com.github.xpenatan.jParser.idl.IDLClassOrEnum;
 import com.github.xpenatan.jParser.idl.IDLReader;
 import com.github.xpenatan.jParser.idl.IDLRenaming;
@@ -15,12 +16,14 @@ import java.util.ArrayList;
 public class BuildImGui {
 
     public static void main(String[] args) {
-//        WindowsMSVCTarget.DEBUG_BUILD = true;
+        WindowsMSVCTarget.DEBUG_BUILD = true;
 
         String libName = "imgui";
         String modulePrefix = "imgui";
         String basePackage = "imgui";
         String sourceDir =  "/build/imgui";
+
+        JParser.CREATE_IDL_HELPER = false;
 
         BuildToolOptions.BuildToolParams data = new BuildToolOptions.BuildToolParams();
         data.libName = libName;
@@ -31,6 +34,8 @@ public class BuildImGui {
         data.modulePrefix = modulePrefix;
 
         BuildToolOptions op = new BuildToolOptions(data, args);
+        op.addAdditionalIDLRefPath(IDLReader.getIDLHelperFile());
+
         BuilderTool.build(op, new BuildToolListener() {
             @Override
             public void onAddTarget(BuildToolOptions op, IDLReader idlReader, ArrayList<BuildMultiTarget> targets) {
@@ -108,17 +113,24 @@ public class BuildImGui {
         // Make a static library
         WindowsMSVCTarget windowsTarget = new WindowsMSVCTarget();
         windowsTarget.cppFlags.add("-std:c++17");
+        windowsTarget.cppFlags.add("/DIMGUI_EXPORTS");
+        windowsTarget.cppFlags.add("/DIMGUI_USER_CONFIG=\"\\\"ImGuiCustomConfig.h\\\"\"");
         windowsTarget.isStatic = true;
         windowsTarget.headerDirs.add("-I" + sourceDir);
+        windowsTarget.headerDirs.add("-I" + op.getCustomSourceDir());
         windowsTarget.cppInclude.add(sourceDir + "/*.cpp");
+        windowsTarget.cppInclude.add(op.getCustomSourceDir() + "*.cpp");
         multiTarget.add(windowsTarget);
 
         // Compile glue code and link
         WindowsMSVCTarget linkTarget = new WindowsMSVCTarget();
         linkTarget.addJNIHeaders();
         linkTarget.cppFlags.add("-std:c++17");
+        linkTarget.cppFlags.add("/DIMGUI_EXPORTS");
+        linkTarget.cppFlags.add("/DIMGUI_USER_CONFIG=\"\\\"ImGuiCustomConfig.h\\\"\"");
         linkTarget.headerDirs.add("-I" + sourceDir);
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
+        linkTarget.headerDirs.add("-I" + libBuildCPPPath + "/src/jniglue");
         linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/windows/vc/imgui64_.lib");
         linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");
         multiTarget.add(linkTarget);
@@ -190,7 +202,6 @@ public class BuildImGui {
 
         // Make a static library
         EmscriptenTarget libTarget = new EmscriptenTarget();
-        libTarget.idlReader = idlReader;
         libTarget.isStatic = true;
         libTarget.cppFlags.add("-std=c++17");
         libTarget.compileGlueCode = false;
@@ -202,11 +213,16 @@ public class BuildImGui {
 
         // Compile glue code and link
         EmscriptenTarget linkTarget = new EmscriptenTarget();
+        linkTarget.mainModuleName = "idl";
         linkTarget.idlReader = idlReader;
         linkTarget.cppFlags.add("-std=c++17");
         linkTarget.headerDirs.add("-I" + sourceDir);
         linkTarget.headerDirs.add("-include" + op.getCustomSourceDir() + "ImGuiCustom.h");
         linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/emscripten/imgui_.a");
+        linkTarget.linkerFlags.add("-sSIDE_MODULE=2");
+        linkTarget.linkerFlags.add("-lc++abi"); // C++ ABI (exceptions, thread_atexit, etc.)
+        linkTarget.linkerFlags.add("-lc++"); // C++ STL (std::cout, std::string, etc.)
+        linkTarget.linkerFlags.add("-lc"); // C standard library (fopen, fclose, printf, etc.)
         multiTarget.add(linkTarget);
 
         return multiTarget;

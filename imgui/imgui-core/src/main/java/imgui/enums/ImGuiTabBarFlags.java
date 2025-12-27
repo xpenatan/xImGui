@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package imgui.enums;
 
 import com.github.xpenatan.jParser.idl.IDLEnum;

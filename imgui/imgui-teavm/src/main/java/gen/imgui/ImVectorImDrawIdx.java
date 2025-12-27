@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
@@ -63,12 +64,12 @@ return returnedJSObj;
     public static native short internal_native_getData(int this_addr, int index);
 
     public IDLBase get_Data() {
-        int pointer = internal_native_get_Data(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_Data_addr(native_address);
+        if (addr == 0)
             return IDLBase.NULL;
         if (IDLBase_TEMP_GEN_0 == null)
             IDLBase_TEMP_GEN_0 = IDLBase.native_new();
-        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
+        IDLBase_TEMP_GEN_0.internal_reset(addr, false);
         return IDLBase_TEMP_GEN_0;
     }
 
@@ -77,5 +78,5 @@ var jsObj = imgui.wrapPointer(this_addr, imgui.ImVectorImDrawIdx);
 return jsObj.get_Data();
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImVectorImDrawIdx);return jsObj.get_Data();")
-    public static native int internal_native_get_Data(int this_addr);
+    public static native int internal_native_get_Data_addr(int this_addr);
 }

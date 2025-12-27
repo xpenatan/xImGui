@@ -17,6 +17,8 @@ import java.util.ArrayList;
 public class BuildImLayout {
 
     public static void main(String[] args) throws IOException {
+        WindowsMSVCTarget.DEBUG_BUILD = true;
+
         String libName = "imlayout";
         String basePackage = "imgui.extension.imlayout";
         String modulePrefix = "imlayout";
@@ -32,13 +34,15 @@ public class BuildImLayout {
         BuildToolOptions op = new BuildToolOptions(data, args);
 
         JParser.CREATE_IDL_HELPER = false;
+
         String imguiPath = new File("./../../../imgui/").getCanonicalPath().replace("\\", "/");
-        op.addAdditionalIDLRefPath(imguiPath + "/imgui-build/src/main/cpp/imgui.idl");
+        op.addAdditionalIDLRefPath(IDLReader.parseFile(imguiPath + "/imgui-build/src/main/cpp/imgui.idl"));
+        op.addAdditionalIDLRefPath(IDLReader.getIDLHelperFile());
         BuilderTool.build(op, new BuildToolListener() {
             @Override
             public void onAddTarget(BuildToolOptions op, IDLReader idlReader, ArrayList<BuildMultiTarget> targets) {
                 if(op.containsArg("teavm")) {
-                    targets.add(getTeaVMTarget(op, imguiPath));
+                    targets.add(getTeaVMTarget(op, idlReader, imguiPath));
                 }
                 if(op.containsArg("windows64")) {
                     targets.add(getWindowTarget(op, imguiPath));
@@ -63,7 +67,13 @@ public class BuildImLayout {
     }
 
     private static BuildMultiTarget getWindowTarget(BuildToolOptions op, String imguiPath) {
-        String imguiCppPath = imguiPath + "/imgui-build/build/imgui";
+        String imguiRootBuildPath = imguiPath + "/imgui-build";
+        String imguiCustomSourcePath = imguiRootBuildPath + "/src/main/cpp/custom";
+        String imguiBuildPath = imguiRootBuildPath + "/build";
+        String imguiCppPath = imguiBuildPath + "/c++";
+        String imguiSourcePath = imguiBuildPath + "/imgui";
+        String libBuildCPPPath = op.getModuleBuildCPPPath();
+        String libACustomPath = imguiCppPath + "/custom";
         String sourceDir = op.getSourceDir();
 
         BuildMultiTarget multiTarget = new BuildMultiTarget();
@@ -71,10 +81,27 @@ public class BuildImLayout {
         WindowsMSVCTarget windowsTarget = new WindowsMSVCTarget();
         windowsTarget.isStatic = true;
         windowsTarget.cppFlags.add("-std:c++17");
-        windowsTarget.headerDirs.add("-I" + imguiCppPath);
+        windowsTarget.cppFlags.add("/DIMGUI_USER_CONFIG=\"\\\"ImGuiCustomConfig.h\\\"\"");
+        windowsTarget.headerDirs.add("-I" + imguiSourcePath);
         windowsTarget.headerDirs.add("-I" + sourceDir);
+        windowsTarget.headerDirs.add("-I" + imguiCustomSourcePath);
         windowsTarget.cppInclude.add(sourceDir + "/*.cpp");
         multiTarget.add(windowsTarget);
+
+        // Compile glue code and link
+        WindowsMSVCTarget linkTarget = new WindowsMSVCTarget();
+        linkTarget.addJNIHeaders();
+        linkTarget.cppFlags.add("-std:c++17");
+        linkTarget.cppFlags.add("/DIMGUI_USER_CONFIG=\"\\\"ImGuiCustomConfig.h\\\"\"");
+        linkTarget.headerDirs.add("-I" + imguiSourcePath);
+        linkTarget.headerDirs.add("-I" + sourceDir);
+        linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
+        linkTarget.headerDirs.add("-I" + libBuildCPPPath + "/src/jniglue");
+        linkTarget.headerDirs.add("-I" + imguiCustomSourcePath);
+        linkTarget.linkerFlags.add("/WHOLEARCHIVE:" + imguiCppPath + "/libs/windows/vc/imgui64.lib");
+        linkTarget.linkerFlags.add("/WHOLEARCHIVE:" + libBuildCPPPath + "/libs/windows/vc/imlayout64_.lib");
+        linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");
+        multiTarget.add(linkTarget);
 
         return multiTarget;
     }
@@ -113,8 +140,9 @@ public class BuildImLayout {
         return multiTarget;
     }
 
-    private static BuildMultiTarget getTeaVMTarget(BuildToolOptions op, String imguiPath) {
+    private static BuildMultiTarget getTeaVMTarget(BuildToolOptions op, IDLReader idlReader, String imguiPath) {
         String imguiCppPath = imguiPath + "/imgui-build/build/imgui";
+        String libBuildCPPPath = op.getModuleBuildCPPPath();
         String sourceDir = op.getSourceDir();
 
         BuildMultiTarget multiTarget = new BuildMultiTarget();
@@ -128,6 +156,21 @@ public class BuildImLayout {
         libTarget.headerDirs.add("-I" + sourceDir);
         libTarget.cppInclude.add(sourceDir + "/*.cpp");
         multiTarget.add(libTarget);
+
+        // Compile glue code and link
+        EmscriptenTarget linkTarget = new EmscriptenTarget();
+        linkTarget.mainModuleName = "idl";
+        linkTarget.idlReader = idlReader;
+        linkTarget.cppFlags.add("-std=c++17");
+        linkTarget.headerDirs.add("-I" + imguiCppPath);
+        linkTarget.headerDirs.add("-I" + sourceDir);
+        linkTarget.headerDirs.add("-include" + op.getCustomSourceDir() + "ImLayoutCustom.h");
+        linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/emscripten/imlayout_.a");
+        linkTarget.linkerFlags.add("-sSIDE_MODULE=2");
+        linkTarget.linkerFlags.add("-lc++abi"); // C++ ABI (exceptions, thread_atexit, etc.)
+        linkTarget.linkerFlags.add("-lc++"); // C++ STL (std::cout, std::string, etc.)
+        linkTarget.linkerFlags.add("-lc"); // C standard library (fopen, fclose, printf, etc.)
+        multiTarget.add(linkTarget);
 
         return multiTarget;
     }

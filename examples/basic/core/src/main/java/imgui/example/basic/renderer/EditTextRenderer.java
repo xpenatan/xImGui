@@ -1,6 +1,7 @@
 package imgui.example.basic.renderer;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jparser.idl.helper.IDLFloatArray;
 import imgui.ImGui;
 import imgui.enums.ImGuiDataType;
 import imgui.enums.ImGuiInputTextFlags;
@@ -9,7 +10,6 @@ import imgui.enums.ImGuiMouseButton;
 import imgui.enums.ImGuiSliderFlags;
 import imgui.ImGuiString;
 import imgui.ImGuiWindow;
-import imgui.idl.helper.IDLFloatArray;
 
 public class EditTextRenderer implements UIRenderer {
 

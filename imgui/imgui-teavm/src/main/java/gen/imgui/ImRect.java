@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
@@ -20,7 +21,7 @@ public class ImRect extends IDLBase {
     static public final ImRect NULL = ImRect.native_new();
 
     public ImRect() {
-        int addr = internal_native_create();
+        int addr = internal_native_create_addr();
         internal_reset(addr, true);
     }
 
@@ -29,10 +30,10 @@ var jsObj = new imgui.ImRect();
 return imgui.getPointer(jsObj);
 */
     @org.teavm.jso.JSBody(script = "var jsObj = new imgui.ImRect();return imgui.getPointer(jsObj);")
-    public static native int internal_native_create();
+    public static native int internal_native_create_addr();
 
     public ImRect(float x1, float y1, float x2, float y2) {
-        int addr = internal_native_create_float_float_float_float(x1, y1, x2, y2);
+        int addr = internal_native_create_float_float_float_float_addr(x1, y1, x2, y2);
         internal_reset(addr, true);
     }
 
@@ -41,7 +42,7 @@ var jsObj = new imgui.ImRect(x1, y1, x2, y2);
 return imgui.getPointer(jsObj);
 */
     @org.teavm.jso.JSBody(params = {"x1", "y1", "x2", "y2"}, script = "var jsObj = new imgui.ImRect(x1, y1, x2, y2);return imgui.getPointer(jsObj);")
-    public static native int internal_native_create_float_float_float_float(float x1, float y1, float x2, float y2);
+    public static native int internal_native_create_float_float_float_float_addr(float x1, float y1, float x2, float y2);
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -69,12 +70,12 @@ imgui.destroy(jsObj);
     public static native void internal_native_deleteNative(int this_addr);
 
     public ImVec2 GetCenter() {
-        int pointer = internal_native_GetCenter(native_address);
-        if (pointer == 0)
+        int addr = internal_native_GetCenter_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_0.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_0;
     }
 
@@ -85,15 +86,15 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImRect);var returnedJSObj = jsObj.GetCenter();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_GetCenter(int this_addr);
+    public static native int internal_native_GetCenter_addr(int this_addr);
 
     public ImVec2 GetSize() {
-        int pointer = internal_native_GetSize(native_address);
-        if (pointer == 0)
+        int addr = internal_native_GetSize_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_1 == null)
             ImVec2_TEMP_GEN_1 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_1.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_1;
     }
 
@@ -104,7 +105,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImRect);var returnedJSObj = jsObj.GetSize();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_GetSize(int this_addr);
+    public static native int internal_native_GetSize_addr(int this_addr);
 
     public float GetWidth() {
         return internal_native_GetWidth(native_address);
@@ -143,12 +144,12 @@ return returnedJSObj;
     public static native float internal_native_GetArea(int this_addr);
 
     public ImVec2 get_Min() {
-        int pointer = internal_native_get_Min(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_Min_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_2 == null)
             ImVec2_TEMP_GEN_2 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_2.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_2.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_2;
     }
 
@@ -159,7 +160,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImRect);var returnedJSObj = jsObj.get_Min();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_get_Min(int this_addr);
+    public static native int internal_native_get_Min_addr(int this_addr);
 
     public void set_Min(ImVec2 Min) {
         internal_native_set_Min(native_address, Min.native_address);
@@ -173,12 +174,12 @@ jsObj.set_Min(Min_addr);
     public static native void internal_native_set_Min(int this_addr, int Min_addr);
 
     public ImVec2 get_Max() {
-        int pointer = internal_native_get_Max(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_Max_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_3 == null)
             ImVec2_TEMP_GEN_3 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_3.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_3.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_3;
     }
 
@@ -189,7 +190,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImRect);var returnedJSObj = jsObj.get_Max();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_get_Max(int this_addr);
+    public static native int internal_native_get_Max_addr(int this_addr);
 
     public void set_Max(ImVec2 Max) {
         internal_native_set_Max(native_address, Max.native_address);

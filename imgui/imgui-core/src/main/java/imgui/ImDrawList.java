@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
@@ -107,12 +108,12 @@ nativeObject->PopTextureID();
     public static native void internal_native_PopTextureID(long this_addr);
 
     public ImVec2 GetClipRectMin() {
-        long pointer = internal_native_GetClipRectMin(native_address);
-        if (pointer == 0)
+        long addr = internal_native_GetClipRectMin_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_0.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_0;
     }
 
@@ -121,15 +122,15 @@ ImDrawList* nativeObject = (ImDrawList*)this_addr;
 static ImVec2 copy_addr;
 copy_addr = nativeObject->GetClipRectMin();
 return (jlong)&copy_addr;*/
-    public static native long internal_native_GetClipRectMin(long this_addr);
+    public static native long internal_native_GetClipRectMin_addr(long this_addr);
 
     public ImVec2 GetClipRectMax() {
-        long pointer = internal_native_GetClipRectMax(native_address);
-        if (pointer == 0)
+        long addr = internal_native_GetClipRectMax_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_1 == null)
             ImVec2_TEMP_GEN_1 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_1.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_1;
     }
 
@@ -138,7 +139,7 @@ ImDrawList* nativeObject = (ImDrawList*)this_addr;
 static ImVec2 copy_addr;
 copy_addr = nativeObject->GetClipRectMax();
 return (jlong)&copy_addr;*/
-    public static native long internal_native_GetClipRectMax(long this_addr);
+    public static native long internal_native_GetClipRectMax_addr(long this_addr);
 
     public void AddLine(ImVec2 p1, ImVec2 p2, int col, float thickness) {
         internal_native_AddLine(native_address, p1.native_address, p2.native_address, col, thickness);
@@ -731,12 +732,12 @@ nativeObject->ChannelsSetCurrent((int)n);
     public static native void internal_native_ChannelsSetCurrent(long this_addr, int n);
 
     public ImVectorImDrawCmd get_CmdBuffer() {
-        long pointer = internal_native_get_CmdBuffer(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_CmdBuffer_addr(native_address);
+        if (addr == 0)
             return ImVectorImDrawCmd.NULL;
         if (ImVectorImDrawCmd_TEMP_GEN_0 == null)
             ImVectorImDrawCmd_TEMP_GEN_0 = ImVectorImDrawCmd.native_new();
-        ImVectorImDrawCmd_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVectorImDrawCmd_TEMP_GEN_0.internal_reset(addr, false);
         return ImVectorImDrawCmd_TEMP_GEN_0;
     }
 
@@ -744,7 +745,7 @@ nativeObject->ChannelsSetCurrent((int)n);
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
 return (jlong)&nativeObject->CmdBuffer;
 */
-    public static native long internal_native_get_CmdBuffer(long this_addr);
+    public static native long internal_native_get_CmdBuffer_addr(long this_addr);
 
     public void set_CmdBuffer(ImVectorImDrawCmd CmdBuffer) {
         internal_native_set_CmdBuffer(native_address, CmdBuffer.native_address);
@@ -757,12 +758,12 @@ nativeObject->CmdBuffer = *((ImVectorImDrawCmd*)CmdBuffer_addr);
     public static native void internal_native_set_CmdBuffer(long this_addr, long CmdBuffer_addr);
 
     public ImVectorImDrawIdx get_IdxBuffer() {
-        long pointer = internal_native_get_IdxBuffer(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_IdxBuffer_addr(native_address);
+        if (addr == 0)
             return ImVectorImDrawIdx.NULL;
         if (ImVectorImDrawIdx_TEMP_GEN_0 == null)
             ImVectorImDrawIdx_TEMP_GEN_0 = ImVectorImDrawIdx.native_new();
-        ImVectorImDrawIdx_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVectorImDrawIdx_TEMP_GEN_0.internal_reset(addr, false);
         return ImVectorImDrawIdx_TEMP_GEN_0;
     }
 
@@ -770,7 +771,7 @@ nativeObject->CmdBuffer = *((ImVectorImDrawCmd*)CmdBuffer_addr);
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
 return (jlong)&nativeObject->IdxBuffer;
 */
-    public static native long internal_native_get_IdxBuffer(long this_addr);
+    public static native long internal_native_get_IdxBuffer_addr(long this_addr);
 
     public void set_IdxBuffer(ImVectorImDrawIdx IdxBuffer) {
         internal_native_set_IdxBuffer(native_address, IdxBuffer.native_address);
@@ -783,12 +784,12 @@ nativeObject->IdxBuffer = *((ImVectorImDrawIdx*)IdxBuffer_addr);
     public static native void internal_native_set_IdxBuffer(long this_addr, long IdxBuffer_addr);
 
     public ImVectorImDrawVert get_VtxBuffer() {
-        long pointer = internal_native_get_VtxBuffer(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_VtxBuffer_addr(native_address);
+        if (addr == 0)
             return ImVectorImDrawVert.NULL;
         if (ImVectorImDrawVert_TEMP_GEN_0 == null)
             ImVectorImDrawVert_TEMP_GEN_0 = ImVectorImDrawVert.native_new();
-        ImVectorImDrawVert_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVectorImDrawVert_TEMP_GEN_0.internal_reset(addr, false);
         return ImVectorImDrawVert_TEMP_GEN_0;
     }
 
@@ -796,7 +797,7 @@ nativeObject->IdxBuffer = *((ImVectorImDrawIdx*)IdxBuffer_addr);
 ImDrawList* nativeObject = (ImDrawList*)this_addr;
 return (jlong)&nativeObject->VtxBuffer;
 */
-    public static native long internal_native_get_VtxBuffer(long this_addr);
+    public static native long internal_native_get_VtxBuffer_addr(long this_addr);
 
     public void set_VtxBuffer(ImVectorImDrawVert VtxBuffer) {
         internal_native_set_VtxBuffer(native_address, VtxBuffer.native_address);

@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
@@ -298,12 +299,12 @@ jsObj.set_BackendFlags(BackendFlags);
     public static native void internal_native_set_BackendFlags(int this_addr, int BackendFlags);
 
     public ImVec2 get_DisplaySize() {
-        int pointer = internal_native_get_DisplaySize(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_DisplaySize_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_0.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_0;
     }
 
@@ -314,7 +315,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiIO);var returnedJSObj = jsObj.get_DisplaySize();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_get_DisplaySize(int this_addr);
+    public static native int internal_native_get_DisplaySize_addr(int this_addr);
 
     public void set_DisplaySize(ImVec2 DisplaySize) {
         internal_native_set_DisplaySize(native_address, DisplaySize.native_address);
@@ -328,12 +329,12 @@ jsObj.set_DisplaySize(DisplaySize_addr);
     public static native void internal_native_set_DisplaySize(int this_addr, int DisplaySize_addr);
 
     public ImVec2 get_DisplayFramebufferScale() {
-        int pointer = internal_native_get_DisplayFramebufferScale(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_DisplayFramebufferScale_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_1 == null)
             ImVec2_TEMP_GEN_1 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_1.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_1;
     }
 
@@ -344,7 +345,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiIO);var returnedJSObj = jsObj.get_DisplayFramebufferScale();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_get_DisplayFramebufferScale(int this_addr);
+    public static native int internal_native_get_DisplayFramebufferScale_addr(int this_addr);
 
     public void set_DisplayFramebufferScale(ImVec2 DisplayFramebufferScale) {
         internal_native_set_DisplayFramebufferScale(native_address, DisplayFramebufferScale.native_address);
@@ -402,12 +403,12 @@ jsObj.set_IniSavingRate(IniSavingRate);
     public static native void internal_native_set_IniSavingRate(int this_addr, float IniSavingRate);
 
     public IDLBase get_UserData() {
-        int pointer = internal_native_get_UserData(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_UserData_addr(native_address);
+        if (addr == 0)
             return IDLBase.NULL;
         if (IDLBase_TEMP_GEN_0 == null)
             IDLBase_TEMP_GEN_0 = IDLBase.native_new();
-        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
+        IDLBase_TEMP_GEN_0.internal_reset(addr, false);
         return IDLBase_TEMP_GEN_0;
     }
 
@@ -416,7 +417,7 @@ var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiIO);
 return jsObj.get_UserData();
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiIO);return jsObj.get_UserData();")
-    public static native int internal_native_get_UserData(int this_addr);
+    public static native int internal_native_get_UserData_addr(int this_addr);
 
     public void set_UserData(IDLBase UserData) {
         internal_native_set_UserData(native_address, UserData.native_void_address);
@@ -430,12 +431,12 @@ jsObj.set_UserData(UserData_addr);
     public static native void internal_native_set_UserData(int this_addr, int UserData_addr);
 
     public ImFontAtlas get_Fonts() {
-        int pointer = internal_native_get_Fonts(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_Fonts_addr(native_address);
+        if (addr == 0)
             return ImFontAtlas.NULL;
         if (ImFontAtlas_TEMP_GEN_0 == null)
             ImFontAtlas_TEMP_GEN_0 = ImFontAtlas.native_new();
-        ImFontAtlas_TEMP_GEN_0.internal_reset(pointer, false);
+        ImFontAtlas_TEMP_GEN_0.internal_reset(addr, false);
         return ImFontAtlas_TEMP_GEN_0;
     }
 
@@ -446,7 +447,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiIO);var returnedJSObj = jsObj.get_Fonts();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_get_Fonts(int this_addr);
+    public static native int internal_native_get_Fonts_addr(int this_addr);
 
     public void set_Fonts(ImFontAtlas Fonts) {
         internal_native_set_Fonts(native_address, Fonts.native_address);
@@ -460,12 +461,12 @@ jsObj.set_Fonts(Fonts_addr);
     public static native void internal_native_set_Fonts(int this_addr, int Fonts_addr);
 
     public ImFont get_FontDefault() {
-        int pointer = internal_native_get_FontDefault(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_FontDefault_addr(native_address);
+        if (addr == 0)
             return ImFont.NULL;
         if (ImFont_TEMP_GEN_0 == null)
             ImFont_TEMP_GEN_0 = ImFont.native_new();
-        ImFont_TEMP_GEN_0.internal_reset(pointer, false);
+        ImFont_TEMP_GEN_0.internal_reset(addr, false);
         return ImFont_TEMP_GEN_0;
     }
 
@@ -476,7 +477,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiIO);var returnedJSObj = jsObj.get_FontDefault();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_get_FontDefault(int this_addr);
+    public static native int internal_native_get_FontDefault_addr(int this_addr);
 
     public void set_FontDefault(ImFont FontDefault) {
         internal_native_set_FontDefault(native_address, FontDefault.native_address);
@@ -1524,12 +1525,12 @@ jsObj.set_MetricsActiveWindows(MetricsActiveWindows);
     public static native void internal_native_set_MetricsActiveWindows(int this_addr, int MetricsActiveWindows);
 
     public ImVec2 get_MouseDelta() {
-        int pointer = internal_native_get_MouseDelta(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_MouseDelta_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_2 == null)
             ImVec2_TEMP_GEN_2 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_2.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_2.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_2;
     }
 
@@ -1540,7 +1541,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiIO);var returnedJSObj = jsObj.get_MouseDelta();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_get_MouseDelta(int this_addr);
+    public static native int internal_native_get_MouseDelta_addr(int this_addr);
 
     public void set_MouseDelta(ImVec2 MouseDelta) {
         internal_native_set_MouseDelta(native_address, MouseDelta.native_address);

@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
@@ -83,12 +84,12 @@ jsObj.set_SelectedTabId(SelectedTabId);
     public static native void internal_native_set_SelectedTabId(int this_addr, int SelectedTabId);
 
     public ImGuiTabBar get_TabBar() {
-        int pointer = internal_native_get_TabBar(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_TabBar_addr(native_address);
+        if (addr == 0)
             return ImGuiTabBar.NULL;
         if (ImGuiTabBar_TEMP_GEN_0 == null)
             ImGuiTabBar_TEMP_GEN_0 = ImGuiTabBar.native_new();
-        ImGuiTabBar_TEMP_GEN_0.internal_reset(pointer, false);
+        ImGuiTabBar_TEMP_GEN_0.internal_reset(addr, false);
         return ImGuiTabBar_TEMP_GEN_0;
     }
 
@@ -99,7 +100,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiDockNode);var returnedJSObj = jsObj.get_TabBar();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_get_TabBar(int this_addr);
+    public static native int internal_native_get_TabBar_addr(int this_addr);
 
     public void set_TabBar(ImGuiTabBar TabBar) {
         internal_native_set_TabBar(native_address, TabBar.native_address);

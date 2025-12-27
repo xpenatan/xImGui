@@ -1,9 +1,9 @@
 package imgui.example.basic.renderer;
 
 import com.badlogic.gdx.Gdx;
+import com.github.xpenatan.jparser.idl.helper.IDLFloatArray;
 import imgui.ImGui;
 import imgui.ImTemp;
-import imgui.idl.helper.IDLFloatArray;
 
 public class PlotRenderer implements UIRenderer {
 

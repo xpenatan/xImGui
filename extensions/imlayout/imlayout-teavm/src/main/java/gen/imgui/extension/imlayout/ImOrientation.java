@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui.extension.imlayout;
 
 import com.github.xpenatan.jParser.idl.IDLEnum;

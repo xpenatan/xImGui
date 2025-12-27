@@ -3,6 +3,9 @@ package imgui.example.basic;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.Array;
+import com.github.xpenatan.jparser.idl.helper.IDLBoolArray;
+import com.github.xpenatan.jparser.idl.helper.IDLInt;
+import com.github.xpenatan.jparser.idl.helper.IDLIntArray;
 import imgui.ImGui;
 import imgui.enums.ImGuiCol;
 import imgui.enums.ImGuiCond;
@@ -28,9 +31,6 @@ import imgui.example.basic.renderer.SelectListRenderer;
 import imgui.example.basic.renderer.TableRenderer;
 import imgui.example.basic.renderer.UIRenderer;
 import imgui.example.renderer.ImGuiRenderer;
-import imgui.idl.helper.IDLBoolArray;
-import imgui.idl.helper.IDLInt;
-import imgui.idl.helper.IDLIntArray;
 
 public class BasicExample extends ImGuiRenderer {
 

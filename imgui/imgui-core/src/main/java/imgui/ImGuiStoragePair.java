@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
@@ -38,12 +39,12 @@ delete nativeObject;
     public static native void internal_native_deleteNative(long this_addr);
 
     public IDLBase get_val_p() {
-        long pointer = internal_native_get_val_p(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_val_p_addr(native_address);
+        if (addr == 0)
             return IDLBase.NULL;
         if (IDLBase_TEMP_GEN_0 == null)
             IDLBase_TEMP_GEN_0 = IDLBase.native_new();
-        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
+        IDLBase_TEMP_GEN_0.internal_reset(addr, false);
         return IDLBase_TEMP_GEN_0;
     }
 
@@ -51,7 +52,7 @@ delete nativeObject;
 ImGuiStoragePair* nativeObject = (ImGuiStoragePair*)this_addr;
 return (jlong)nativeObject->val_p;
 */
-    public static native long internal_native_get_val_p(long this_addr);
+    public static native long internal_native_get_val_p_addr(long this_addr);
 
     public void set_val_p(IDLBase val_p) {
         internal_native_set_val_p(native_address, val_p.native_void_address);

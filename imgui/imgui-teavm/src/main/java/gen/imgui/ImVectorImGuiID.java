@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
@@ -14,7 +15,7 @@ public class ImVectorImGuiID extends IDLBase {
     static public final ImVectorImGuiID NULL = ImVectorImGuiID.native_new();
 
     public ImVectorImGuiID() {
-        int addr = internal_native_create();
+        int addr = internal_native_create_addr();
         internal_reset(addr, true);
     }
 
@@ -23,7 +24,7 @@ var jsObj = new imgui.ImVectorImGuiID();
 return imgui.getPointer(jsObj);
 */
     @org.teavm.jso.JSBody(script = "var jsObj = new imgui.ImVectorImGuiID();return imgui.getPointer(jsObj);")
-    public static native int internal_native_create();
+    public static native int internal_native_create_addr();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -119,12 +120,12 @@ jsObj.clear();
     public static native void internal_native_clear(int this_addr);
 
     public IDLBase get_Data() {
-        int pointer = internal_native_get_Data(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_Data_addr(native_address);
+        if (addr == 0)
             return IDLBase.NULL;
         if (IDLBase_TEMP_GEN_0 == null)
             IDLBase_TEMP_GEN_0 = IDLBase.native_new();
-        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
+        IDLBase_TEMP_GEN_0.internal_reset(addr, false);
         return IDLBase_TEMP_GEN_0;
     }
 
@@ -133,5 +134,5 @@ var jsObj = imgui.wrapPointer(this_addr, imgui.ImVectorImGuiID);
 return jsObj.get_Data();
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImVectorImGuiID);return jsObj.get_Data();")
-    public static native int internal_native_get_Data(int this_addr);
+    public static native int internal_native_get_Data_addr(int this_addr);
 }

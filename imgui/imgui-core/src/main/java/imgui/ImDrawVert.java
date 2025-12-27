@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
@@ -40,12 +41,12 @@ delete nativeObject;
     public static native void internal_native_deleteNative(long this_addr);
 
     public ImVec2 get_pos() {
-        long pointer = internal_native_get_pos(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_pos_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_0.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_0;
     }
 
@@ -53,7 +54,7 @@ delete nativeObject;
 ImDrawVert* nativeObject = (ImDrawVert*)this_addr;
 return (jlong)&nativeObject->pos;
 */
-    public static native long internal_native_get_pos(long this_addr);
+    public static native long internal_native_get_pos_addr(long this_addr);
 
     public void set_pos(ImVec2 pos) {
         internal_native_set_pos(native_address, pos.native_address);
@@ -66,12 +67,12 @@ nativeObject->pos = *((ImVec2*)pos_addr);
     public static native void internal_native_set_pos(long this_addr, long pos_addr);
 
     public ImVec2 get_uv() {
-        long pointer = internal_native_get_uv(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_uv_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_1 == null)
             ImVec2_TEMP_GEN_1 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_1.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_1;
     }
 
@@ -79,7 +80,7 @@ nativeObject->pos = *((ImVec2*)pos_addr);
 ImDrawVert* nativeObject = (ImDrawVert*)this_addr;
 return (jlong)&nativeObject->uv;
 */
-    public static native long internal_native_get_uv(long this_addr);
+    public static native long internal_native_get_uv_addr(long this_addr);
 
     public void set_uv(ImVec2 uv) {
         internal_native_set_uv(native_address, uv.native_address);

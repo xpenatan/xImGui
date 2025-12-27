@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
@@ -47,12 +48,12 @@ imgui.destroy(jsObj);
     public static native void internal_native_deleteNative(int this_addr);
 
     public ImFont AddFont(ImFontConfig font_cfg) {
-        int pointer = internal_native_AddFont(native_address, font_cfg.native_address);
-        if (pointer == 0)
+        int addr = internal_native_AddFont_addr(native_address, font_cfg.native_address);
+        if (addr == 0)
             return ImFont.NULL;
         if (ImFont_TEMP_GEN_0 == null)
             ImFont_TEMP_GEN_0 = ImFont.native_new();
-        ImFont_TEMP_GEN_0.internal_reset(pointer, false);
+        ImFont_TEMP_GEN_0.internal_reset(addr, false);
         return ImFont_TEMP_GEN_0;
     }
 
@@ -63,15 +64,15 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr", "font_cfg_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontAtlas);var returnedJSObj = jsObj.AddFont(font_cfg_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_AddFont(int this_addr, int font_cfg_addr);
+    public static native int internal_native_AddFont_addr(int this_addr, int font_cfg_addr);
 
     public ImFont AddFontDefault(ImFontConfig font_cfg) {
-        int pointer = internal_native_AddFontDefault(native_address, font_cfg.native_address);
-        if (pointer == 0)
+        int addr = internal_native_AddFontDefault_addr(native_address, font_cfg.native_address);
+        if (addr == 0)
             return ImFont.NULL;
         if (ImFont_TEMP_GEN_1 == null)
             ImFont_TEMP_GEN_1 = ImFont.native_new();
-        ImFont_TEMP_GEN_1.internal_reset(pointer, false);
+        ImFont_TEMP_GEN_1.internal_reset(addr, false);
         return ImFont_TEMP_GEN_1;
     }
 
@@ -82,15 +83,15 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr", "font_cfg_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontAtlas);var returnedJSObj = jsObj.AddFontDefault(font_cfg_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_AddFontDefault(int this_addr, int font_cfg_addr);
+    public static native int internal_native_AddFontDefault_addr(int this_addr, int font_cfg_addr);
 
     public ImFont AddFontDefault() {
-        int pointer = internal_native_AddFontDefault(native_address);
-        if (pointer == 0)
+        int addr = internal_native_AddFontDefault_addr(native_address);
+        if (addr == 0)
             return ImFont.NULL;
         if (ImFont_TEMP_GEN_2 == null)
             ImFont_TEMP_GEN_2 = ImFont.native_new();
-        ImFont_TEMP_GEN_2.internal_reset(pointer, false);
+        ImFont_TEMP_GEN_2.internal_reset(addr, false);
         return ImFont_TEMP_GEN_2;
     }
 
@@ -101,15 +102,15 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontAtlas);var returnedJSObj = jsObj.AddFontDefault();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_AddFontDefault(int this_addr);
+    public static native int internal_native_AddFontDefault_addr(int this_addr);
 
     public ImFont AddFontFromMemoryTTF(IDLBase font_data, int font_data_size, int size_pixels, ImFontConfig font_cfg) {
-        int pointer = internal_native_AddFontFromMemoryTTF(native_address, font_data.native_void_address, font_data_size, size_pixels, font_cfg.native_address);
-        if (pointer == 0)
+        int addr = internal_native_AddFontFromMemoryTTF_addr(native_address, font_data.native_void_address, font_data_size, size_pixels, font_cfg.native_address);
+        if (addr == 0)
             return ImFont.NULL;
         if (ImFont_TEMP_GEN_3 == null)
             ImFont_TEMP_GEN_3 = ImFont.native_new();
-        ImFont_TEMP_GEN_3.internal_reset(pointer, false);
+        ImFont_TEMP_GEN_3.internal_reset(addr, false);
         return ImFont_TEMP_GEN_3;
     }
 
@@ -120,15 +121,15 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr", "font_data_addr", "font_data_size", "size_pixels", "font_cfg_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontAtlas);var returnedJSObj = jsObj.AddFontFromMemoryTTF(font_data_addr, font_data_size, size_pixels, font_cfg_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_AddFontFromMemoryTTF(int this_addr, int font_data_addr, int font_data_size, int size_pixels, int font_cfg_addr);
+    public static native int internal_native_AddFontFromMemoryTTF_addr(int this_addr, int font_data_addr, int font_data_size, int size_pixels, int font_cfg_addr);
 
     public ImFont AddFontFromMemoryTTF(IDLBase font_data, int font_data_size, int size_pixels) {
-        int pointer = internal_native_AddFontFromMemoryTTF(native_address, font_data.native_void_address, font_data_size, size_pixels);
-        if (pointer == 0)
+        int addr = internal_native_AddFontFromMemoryTTF_addr(native_address, font_data.native_void_address, font_data_size, size_pixels);
+        if (addr == 0)
             return ImFont.NULL;
         if (ImFont_TEMP_GEN_4 == null)
             ImFont_TEMP_GEN_4 = ImFont.native_new();
-        ImFont_TEMP_GEN_4.internal_reset(pointer, false);
+        ImFont_TEMP_GEN_4.internal_reset(addr, false);
         return ImFont_TEMP_GEN_4;
     }
 
@@ -139,5 +140,5 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr", "font_data_addr", "font_data_size", "size_pixels"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontAtlas);var returnedJSObj = jsObj.AddFontFromMemoryTTF(font_data_addr, font_data_size, size_pixels);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_AddFontFromMemoryTTF(int this_addr, int font_data_addr, int font_data_size, int size_pixels);
+    public static native int internal_native_AddFontFromMemoryTTF_addr(int this_addr, int font_data_addr, int font_data_size, int size_pixels);
 }

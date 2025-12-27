@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
@@ -16,7 +17,7 @@ public class ImFontConfig extends IDLBase {
     static public final ImFontConfig NULL = ImFontConfig.native_new();
 
     public ImFontConfig() {
-        int addr = internal_native_create();
+        int addr = internal_native_create_addr();
         internal_reset(addr, true);
     }
 
@@ -25,7 +26,7 @@ var jsObj = new imgui.ImFontConfig();
 return imgui.getPointer(jsObj);
 */
     @org.teavm.jso.JSBody(script = "var jsObj = new imgui.ImFontConfig();return imgui.getPointer(jsObj);")
-    public static native int internal_native_create();
+    public static native int internal_native_create_addr();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -75,12 +76,12 @@ jsObj.set_Name(index, Name);
     public static native void internal_native_set_Name(int this_addr, int index, byte Name);
 
     public IDLBase get_FontData() {
-        int pointer = internal_native_get_FontData(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_FontData_addr(native_address);
+        if (addr == 0)
             return IDLBase.NULL;
         if (IDLBase_TEMP_GEN_0 == null)
             IDLBase_TEMP_GEN_0 = IDLBase.native_new();
-        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
+        IDLBase_TEMP_GEN_0.internal_reset(addr, false);
         return IDLBase_TEMP_GEN_0;
     }
 
@@ -89,7 +90,7 @@ var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
 return jsObj.get_FontData();
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);return jsObj.get_FontData();")
-    public static native int internal_native_get_FontData(int this_addr);
+    public static native int internal_native_get_FontData_addr(int this_addr);
 
     public void set_FontData(IDLBase FontData) {
         internal_native_set_FontData(native_address, FontData.native_void_address);
@@ -301,12 +302,12 @@ jsObj.set_SizePixels(SizePixels);
     public static native void internal_native_set_SizePixels(int this_addr, float SizePixels);
 
     public ImVec2 get_GlyphOffset() {
-        int pointer = internal_native_get_GlyphOffset(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_GlyphOffset_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_0.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_0;
     }
 
@@ -317,7 +318,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);var returnedJSObj = jsObj.get_GlyphOffset();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_get_GlyphOffset(int this_addr);
+    public static native int internal_native_get_GlyphOffset_addr(int this_addr);
 
     public void set_GlyphOffset(ImVec2 GlyphOffset) {
         internal_native_set_GlyphOffset(native_address, GlyphOffset.native_address);

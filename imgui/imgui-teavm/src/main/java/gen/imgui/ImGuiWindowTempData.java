@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
@@ -28,12 +29,12 @@ public class ImGuiWindowTempData extends IDLBase {
     }
 
     public ImVec2 get_CursorPos() {
-        int pointer = internal_native_get_CursorPos(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_CursorPos_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_0.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_0;
     }
 
@@ -44,7 +45,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowTempData);var returnedJSObj = jsObj.get_CursorPos();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_get_CursorPos(int this_addr);
+    public static native int internal_native_get_CursorPos_addr(int this_addr);
 
     public int get_TreeDepth() {
         return internal_native_get_TreeDepth(native_address);

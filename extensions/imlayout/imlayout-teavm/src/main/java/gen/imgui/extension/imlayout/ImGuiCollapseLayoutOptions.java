@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui.extension.imlayout;
 
 public class ImGuiCollapseLayoutOptions extends ImGuiLayoutOptions {
@@ -11,7 +12,7 @@ public class ImGuiCollapseLayoutOptions extends ImGuiLayoutOptions {
 
     public ImGuiCollapseLayoutOptions() {
         super((byte) 1, (char) 1);
-        int addr = internal_native_create();
+        int addr = internal_native_create_addr();
         internal_reset(addr, true);
     }
 
@@ -20,7 +21,7 @@ var jsObj = new imgui.ImGuiCollapseLayoutOptions();
 return imgui.getPointer(jsObj);
 */
     @org.teavm.jso.JSBody(script = "var jsObj = new imgui.ImGuiCollapseLayoutOptions();return imgui.getPointer(jsObj);")
-    public static native int internal_native_create();
+    public static native int internal_native_create_addr();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer

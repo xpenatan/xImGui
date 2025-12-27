@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
@@ -12,24 +13,24 @@ public class ImVec4 extends IDLBase {
     static public final ImVec4 NULL = ImVec4.native_new();
 
     public ImVec4() {
-        long addr = internal_native_create();
+        long addr = internal_native_create_addr();
         internal_reset(addr, true);
     }
 
     /*[-JNI;-NATIVE]
 return (jlong)new ImVec4();
 */
-    public static native long internal_native_create();
+    public static native long internal_native_create_addr();
 
     public ImVec4(float x, float y, float z, float w) {
-        long addr = internal_native_create_float_float_float_float(x, y, z, w);
+        long addr = internal_native_create_float_float_float_float_addr(x, y, z, w);
         internal_reset(addr, true);
     }
 
     /*[-JNI;-NATIVE]
 return (jlong)new ImVec4((float)x, (float)y, (float)z, (float)w);
 */
-    public static native long internal_native_create_float_float_float_float(float x, float y, float z, float w);
+    public static native long internal_native_create_float_float_float_float_addr(float x, float y, float z, float w);
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -56,7 +57,7 @@ delete nativeObject;
     public static native void internal_native_deleteNative(long this_addr);
 
     public ImVec4 copy(ImVec4 value) {
-        internal_native_copy(native_address, value.native_address);
+        internal_native_copy_addr(native_address, value.native_address);
         return this;
     }
 
@@ -64,7 +65,7 @@ delete nativeObject;
 ImVec4* nativeObject = (ImVec4*)this_addr;
 return (jlong)&(*nativeObject = *((ImVec4* )value_addr));
 */
-    public static native long internal_native_copy(long this_addr, long value_addr);
+    public static native long internal_native_copy_addr(long this_addr, long value_addr);
 
     public float get_x() {
         return internal_native_get_x(native_address);

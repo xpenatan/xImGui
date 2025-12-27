@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
@@ -118,12 +119,12 @@ nativeObject->DisabledAlpha = DisabledAlpha;
     public static native void internal_native_set_DisabledAlpha(long this_addr, float DisabledAlpha);
 
     public ImVec2 get_WindowPadding() {
-        long pointer = internal_native_get_WindowPadding(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_WindowPadding_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_0.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_0;
     }
 
@@ -131,7 +132,7 @@ nativeObject->DisabledAlpha = DisabledAlpha;
 ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
 return (jlong)&nativeObject->WindowPadding;
 */
-    public static native long internal_native_get_WindowPadding(long this_addr);
+    public static native long internal_native_get_WindowPadding_addr(long this_addr);
 
     public void set_WindowPadding(ImVec2 WindowPadding) {
         internal_native_set_WindowPadding(native_address, WindowPadding.native_address);
@@ -184,12 +185,12 @@ nativeObject->WindowBorderSize = WindowBorderSize;
     public static native void internal_native_set_WindowBorderSize(long this_addr, float WindowBorderSize);
 
     public ImVec2 get_WindowMinSize() {
-        long pointer = internal_native_get_WindowMinSize(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_WindowMinSize_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_1 == null)
             ImVec2_TEMP_GEN_1 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_1.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_1;
     }
 
@@ -197,7 +198,7 @@ nativeObject->WindowBorderSize = WindowBorderSize;
 ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
 return (jlong)&nativeObject->WindowMinSize;
 */
-    public static native long internal_native_get_WindowMinSize(long this_addr);
+    public static native long internal_native_get_WindowMinSize_addr(long this_addr);
 
     public void set_WindowMinSize(ImVec2 WindowMinSize) {
         internal_native_set_WindowMinSize(native_address, WindowMinSize.native_address);
@@ -210,12 +211,12 @@ nativeObject->WindowMinSize = *((ImVec2*)WindowMinSize_addr);
     public static native void internal_native_set_WindowMinSize(long this_addr, long WindowMinSize_addr);
 
     public ImVec2 get_WindowTitleAlign() {
-        long pointer = internal_native_get_WindowTitleAlign(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_WindowTitleAlign_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_2 == null)
             ImVec2_TEMP_GEN_2 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_2.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_2.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_2;
     }
 
@@ -223,7 +224,7 @@ nativeObject->WindowMinSize = *((ImVec2*)WindowMinSize_addr);
 ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
 return (jlong)&nativeObject->WindowTitleAlign;
 */
-    public static native long internal_native_get_WindowTitleAlign(long this_addr);
+    public static native long internal_native_get_WindowTitleAlign_addr(long this_addr);
 
     public void set_WindowTitleAlign(ImVec2 WindowTitleAlign) {
         internal_native_set_WindowTitleAlign(native_address, WindowTitleAlign.native_address);
@@ -343,12 +344,12 @@ nativeObject->PopupBorderSize = PopupBorderSize;
     public static native void internal_native_set_PopupBorderSize(long this_addr, float PopupBorderSize);
 
     public ImVec2 get_FramePadding() {
-        long pointer = internal_native_get_FramePadding(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_FramePadding_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_3 == null)
             ImVec2_TEMP_GEN_3 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_3.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_3.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_3;
     }
 
@@ -356,7 +357,7 @@ nativeObject->PopupBorderSize = PopupBorderSize;
 ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
 return (jlong)&nativeObject->FramePadding;
 */
-    public static native long internal_native_get_FramePadding(long this_addr);
+    public static native long internal_native_get_FramePadding_addr(long this_addr);
 
     public void set_FramePadding(ImVec2 FramePadding) {
         internal_native_set_FramePadding(native_address, FramePadding.native_address);
@@ -409,12 +410,12 @@ nativeObject->FrameBorderSize = FrameBorderSize;
     public static native void internal_native_set_FrameBorderSize(long this_addr, float FrameBorderSize);
 
     public ImVec2 get_ItemSpacing() {
-        long pointer = internal_native_get_ItemSpacing(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_ItemSpacing_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_4 == null)
             ImVec2_TEMP_GEN_4 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_4.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_4.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_4;
     }
 
@@ -422,7 +423,7 @@ nativeObject->FrameBorderSize = FrameBorderSize;
 ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
 return (jlong)&nativeObject->ItemSpacing;
 */
-    public static native long internal_native_get_ItemSpacing(long this_addr);
+    public static native long internal_native_get_ItemSpacing_addr(long this_addr);
 
     public void set_ItemSpacing(ImVec2 ItemSpacing) {
         internal_native_set_ItemSpacing(native_address, ItemSpacing.native_address);
@@ -435,12 +436,12 @@ nativeObject->ItemSpacing = *((ImVec2*)ItemSpacing_addr);
     public static native void internal_native_set_ItemSpacing(long this_addr, long ItemSpacing_addr);
 
     public ImVec2 get_ItemInnerSpacing() {
-        long pointer = internal_native_get_ItemInnerSpacing(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_ItemInnerSpacing_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_5 == null)
             ImVec2_TEMP_GEN_5 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_5.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_5.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_5;
     }
 
@@ -448,7 +449,7 @@ nativeObject->ItemSpacing = *((ImVec2*)ItemSpacing_addr);
 ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
 return (jlong)&nativeObject->ItemInnerSpacing;
 */
-    public static native long internal_native_get_ItemInnerSpacing(long this_addr);
+    public static native long internal_native_get_ItemInnerSpacing_addr(long this_addr);
 
     public void set_ItemInnerSpacing(ImVec2 ItemInnerSpacing) {
         internal_native_set_ItemInnerSpacing(native_address, ItemInnerSpacing.native_address);
@@ -461,12 +462,12 @@ nativeObject->ItemInnerSpacing = *((ImVec2*)ItemInnerSpacing_addr);
     public static native void internal_native_set_ItemInnerSpacing(long this_addr, long ItemInnerSpacing_addr);
 
     public ImVec2 get_CellPadding() {
-        long pointer = internal_native_get_CellPadding(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_CellPadding_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_6 == null)
             ImVec2_TEMP_GEN_6 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_6.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_6.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_6;
     }
 
@@ -474,7 +475,7 @@ nativeObject->ItemInnerSpacing = *((ImVec2*)ItemInnerSpacing_addr);
 ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
 return (jlong)&nativeObject->CellPadding;
 */
-    public static native long internal_native_get_CellPadding(long this_addr);
+    public static native long internal_native_get_CellPadding_addr(long this_addr);
 
     public void set_CellPadding(ImVec2 CellPadding) {
         internal_native_set_CellPadding(native_address, CellPadding.native_address);
@@ -487,12 +488,12 @@ nativeObject->CellPadding = *((ImVec2*)CellPadding_addr);
     public static native void internal_native_set_CellPadding(long this_addr, long CellPadding_addr);
 
     public ImVec2 get_TouchExtraPadding() {
-        long pointer = internal_native_get_TouchExtraPadding(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_TouchExtraPadding_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_7 == null)
             ImVec2_TEMP_GEN_7 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_7.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_7.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_7;
     }
 
@@ -500,7 +501,7 @@ nativeObject->CellPadding = *((ImVec2*)CellPadding_addr);
 ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
 return (jlong)&nativeObject->TouchExtraPadding;
 */
-    public static native long internal_native_get_TouchExtraPadding(long this_addr);
+    public static native long internal_native_get_TouchExtraPadding_addr(long this_addr);
 
     public void set_TouchExtraPadding(ImVec2 TouchExtraPadding) {
         internal_native_set_TouchExtraPadding(native_address, TouchExtraPadding.native_address);
@@ -740,12 +741,12 @@ nativeObject->ColorButtonPosition = (::ImGuiDir)ColorButtonPosition;
     public static native void internal_native_set_ColorButtonPosition(long this_addr, int ColorButtonPosition);
 
     public ImVec2 get_ButtonTextAlign() {
-        long pointer = internal_native_get_ButtonTextAlign(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_ButtonTextAlign_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_8 == null)
             ImVec2_TEMP_GEN_8 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_8.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_8.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_8;
     }
 
@@ -753,7 +754,7 @@ nativeObject->ColorButtonPosition = (::ImGuiDir)ColorButtonPosition;
 ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
 return (jlong)&nativeObject->ButtonTextAlign;
 */
-    public static native long internal_native_get_ButtonTextAlign(long this_addr);
+    public static native long internal_native_get_ButtonTextAlign_addr(long this_addr);
 
     public void set_ButtonTextAlign(ImVec2 ButtonTextAlign) {
         internal_native_set_ButtonTextAlign(native_address, ButtonTextAlign.native_address);
@@ -766,12 +767,12 @@ nativeObject->ButtonTextAlign = *((ImVec2*)ButtonTextAlign_addr);
     public static native void internal_native_set_ButtonTextAlign(long this_addr, long ButtonTextAlign_addr);
 
     public ImVec2 get_SelectableTextAlign() {
-        long pointer = internal_native_get_SelectableTextAlign(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_SelectableTextAlign_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_9 == null)
             ImVec2_TEMP_GEN_9 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_9.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_9.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_9;
     }
 
@@ -779,7 +780,7 @@ nativeObject->ButtonTextAlign = *((ImVec2*)ButtonTextAlign_addr);
 ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
 return (jlong)&nativeObject->SelectableTextAlign;
 */
-    public static native long internal_native_get_SelectableTextAlign(long this_addr);
+    public static native long internal_native_get_SelectableTextAlign_addr(long this_addr);
 
     public void set_SelectableTextAlign(ImVec2 SelectableTextAlign) {
         internal_native_set_SelectableTextAlign(native_address, SelectableTextAlign.native_address);
@@ -812,12 +813,12 @@ nativeObject->SeparatorTextBorderSize = SeparatorTextBorderSize;
     public static native void internal_native_set_SeparatorTextBorderSize(long this_addr, float SeparatorTextBorderSize);
 
     public ImVec2 get_SeparatorTextAlign() {
-        long pointer = internal_native_get_SeparatorTextAlign(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_SeparatorTextAlign_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_10 == null)
             ImVec2_TEMP_GEN_10 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_10.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_10.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_10;
     }
 
@@ -825,7 +826,7 @@ nativeObject->SeparatorTextBorderSize = SeparatorTextBorderSize;
 ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
 return (jlong)&nativeObject->SeparatorTextAlign;
 */
-    public static native long internal_native_get_SeparatorTextAlign(long this_addr);
+    public static native long internal_native_get_SeparatorTextAlign_addr(long this_addr);
 
     public void set_SeparatorTextAlign(ImVec2 SeparatorTextAlign) {
         internal_native_set_SeparatorTextAlign(native_address, SeparatorTextAlign.native_address);
@@ -838,12 +839,12 @@ nativeObject->SeparatorTextAlign = *((ImVec2*)SeparatorTextAlign_addr);
     public static native void internal_native_set_SeparatorTextAlign(long this_addr, long SeparatorTextAlign_addr);
 
     public ImVec2 get_SeparatorTextPadding() {
-        long pointer = internal_native_get_SeparatorTextPadding(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_SeparatorTextPadding_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_11 == null)
             ImVec2_TEMP_GEN_11 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_11.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_11.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_11;
     }
 
@@ -851,7 +852,7 @@ nativeObject->SeparatorTextAlign = *((ImVec2*)SeparatorTextAlign_addr);
 ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
 return (jlong)&nativeObject->SeparatorTextPadding;
 */
-    public static native long internal_native_get_SeparatorTextPadding(long this_addr);
+    public static native long internal_native_get_SeparatorTextPadding_addr(long this_addr);
 
     public void set_SeparatorTextPadding(ImVec2 SeparatorTextPadding) {
         internal_native_set_SeparatorTextPadding(native_address, SeparatorTextPadding.native_address);
@@ -864,12 +865,12 @@ nativeObject->SeparatorTextPadding = *((ImVec2*)SeparatorTextPadding_addr);
     public static native void internal_native_set_SeparatorTextPadding(long this_addr, long SeparatorTextPadding_addr);
 
     public ImVec2 get_DisplayWindowPadding() {
-        long pointer = internal_native_get_DisplayWindowPadding(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_DisplayWindowPadding_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_12 == null)
             ImVec2_TEMP_GEN_12 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_12.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_12.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_12;
     }
 
@@ -877,7 +878,7 @@ nativeObject->SeparatorTextPadding = *((ImVec2*)SeparatorTextPadding_addr);
 ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
 return (jlong)&nativeObject->DisplayWindowPadding;
 */
-    public static native long internal_native_get_DisplayWindowPadding(long this_addr);
+    public static native long internal_native_get_DisplayWindowPadding_addr(long this_addr);
 
     public void set_DisplayWindowPadding(ImVec2 DisplayWindowPadding) {
         internal_native_set_DisplayWindowPadding(native_address, DisplayWindowPadding.native_address);
@@ -890,12 +891,12 @@ nativeObject->DisplayWindowPadding = *((ImVec2*)DisplayWindowPadding_addr);
     public static native void internal_native_set_DisplayWindowPadding(long this_addr, long DisplayWindowPadding_addr);
 
     public ImVec2 get_DisplaySafeAreaPadding() {
-        long pointer = internal_native_get_DisplaySafeAreaPadding(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_DisplaySafeAreaPadding_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_13 == null)
             ImVec2_TEMP_GEN_13 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_13.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_13.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_13;
     }
 
@@ -903,7 +904,7 @@ nativeObject->DisplayWindowPadding = *((ImVec2*)DisplayWindowPadding_addr);
 ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
 return (jlong)&nativeObject->DisplaySafeAreaPadding;
 */
-    public static native long internal_native_get_DisplaySafeAreaPadding(long this_addr);
+    public static native long internal_native_get_DisplaySafeAreaPadding_addr(long this_addr);
 
     public void set_DisplaySafeAreaPadding(ImVec2 DisplaySafeAreaPadding) {
         internal_native_set_DisplaySafeAreaPadding(native_address, DisplaySafeAreaPadding.native_address);
@@ -1170,12 +1171,12 @@ nativeObject->HoverFlagsForTooltipNav = (::ImGuiHoveredFlags)HoverFlagsForToolti
     public static native void internal_native_set_HoverFlagsForTooltipNav(long this_addr, int HoverFlagsForTooltipNav);
 
     public ImVec4 get_Colors(int index) {
-        long pointer = internal_native_get_Colors(native_address, index);
-        if (pointer == 0)
+        long addr = internal_native_get_Colors_addr(native_address, index);
+        if (addr == 0)
             return ImVec4.NULL;
         if (ImVec4_TEMP_GEN_0 == null)
             ImVec4_TEMP_GEN_0 = ImVec4.native_new();
-        ImVec4_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVec4_TEMP_GEN_0.internal_reset(addr, false);
         return ImVec4_TEMP_GEN_0;
     }
 
@@ -1183,7 +1184,7 @@ nativeObject->HoverFlagsForTooltipNav = (::ImGuiHoveredFlags)HoverFlagsForToolti
 ImGuiStyle* nativeObject = (ImGuiStyle*)this_addr;
 return (jlong)&nativeObject->Colors[index];
 */
-    public static native long internal_native_get_Colors(long this_addr, int index);
+    public static native long internal_native_get_Colors_addr(long this_addr, int index);
 
     public void set_Colors(int index, ImVec4 Colors) {
         internal_native_set_Colors(native_address, index, Colors.native_address);

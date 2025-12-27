@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
@@ -39,12 +40,12 @@ imgui.destroy(jsObj);
     public static native void internal_native_deleteNative(int this_addr);
 
     public ImRect get_Rect() {
-        int pointer = internal_native_get_Rect(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_Rect_addr(native_address);
+        if (addr == 0)
             return ImRect.NULL;
         if (ImRect_TEMP_GEN_0 == null)
             ImRect_TEMP_GEN_0 = ImRect.native_new();
-        ImRect_TEMP_GEN_0.internal_reset(pointer, false);
+        ImRect_TEMP_GEN_0.internal_reset(addr, false);
         return ImRect_TEMP_GEN_0;
     }
 
@@ -55,5 +56,5 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiLastItemData);var returnedJSObj = jsObj.get_Rect();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_get_Rect(int this_addr);
+    public static native int internal_native_get_Rect_addr(int this_addr);
 }

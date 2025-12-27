@@ -1,8 +1,8 @@
 package imgui.example.basic.renderer;
 
 
+import com.github.xpenatan.jparser.idl.helper.IDLFloatArray;
 import imgui.ImGui;
-import imgui.idl.helper.IDLFloatArray;
 
 public class ColorRenderer implements UIRenderer {
 

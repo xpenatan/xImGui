@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
@@ -12,7 +13,7 @@ public class ImVec2 extends IDLBase {
     static public final ImVec2 NULL = ImVec2.native_new();
 
     public ImVec2() {
-        int addr = internal_native_create();
+        int addr = internal_native_create_addr();
         internal_reset(addr, true);
     }
 
@@ -21,10 +22,10 @@ var jsObj = new imgui.ImVec2();
 return imgui.getPointer(jsObj);
 */
     @org.teavm.jso.JSBody(script = "var jsObj = new imgui.ImVec2();return imgui.getPointer(jsObj);")
-    public static native int internal_native_create();
+    public static native int internal_native_create_addr();
 
     public ImVec2(float x, float y) {
-        int addr = internal_native_create_float_float(x, y);
+        int addr = internal_native_create_float_float_addr(x, y);
         internal_reset(addr, true);
     }
 
@@ -33,7 +34,7 @@ var jsObj = new imgui.ImVec2(x, y);
 return imgui.getPointer(jsObj);
 */
     @org.teavm.jso.JSBody(params = {"x", "y"}, script = "var jsObj = new imgui.ImVec2(x, y);return imgui.getPointer(jsObj);")
-    public static native int internal_native_create_float_float(float x, float y);
+    public static native int internal_native_create_float_float_addr(float x, float y);
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer

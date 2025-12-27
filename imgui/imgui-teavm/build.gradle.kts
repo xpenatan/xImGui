@@ -1,5 +1,5 @@
 plugins {
-    id("java")
+    id("java-library")
 }
 
 val moduleName = "imgui-teavm"
@@ -11,6 +11,9 @@ tasks.jar {
 }
 
 dependencies {
+    api("com.github.xpenatan.jParser:idl-helper-core:${LibExt.jParserVersion}")
+    api("com.github.xpenatan.jParser:idl-helper-teavm:${LibExt.jParserVersion}")
+
     implementation("com.badlogicgames.gdx:gdx:${LibExt.gdxVersion}")
     implementation("com.github.xpenatan.jParser:loader-core:${LibExt.jParserVersion}")
     implementation("com.github.xpenatan.jParser:loader-teavm:${LibExt.jParserVersion}")
