@@ -73,7 +73,6 @@ public class BuildImLayout {
         String imguiCppPath = imguiBuildPath + "/c++";
         String imguiSourcePath = imguiBuildPath + "/imgui";
         String libBuildCPPPath = op.getModuleBuildCPPPath();
-        String libACustomPath = imguiCppPath + "/custom";
         String sourceDir = op.getSourceDir();
 
         BuildMultiTarget multiTarget = new BuildMultiTarget();
@@ -107,18 +106,44 @@ public class BuildImLayout {
     }
 
     private static BuildMultiTarget getLinuxTarget(BuildToolOptions op, String imguiPath) {
-        String imguiCppPath = imguiPath + "/imgui-build/build/imgui";
+        String imguiRootBuildPath = imguiPath + "/imgui-build";
+        String imguiCustomSourcePath = imguiRootBuildPath + "/src/main/cpp/custom";
+        String imguiBuildPath = imguiRootBuildPath + "/build";
+        String imguiCppPath = imguiBuildPath + "/c++";
+        String imguiSourcePath = imguiBuildPath + "/imgui";
+        String libBuildCPPPath = op.getModuleBuildCPPPath();
         String sourceDir = op.getSourceDir();
 
         BuildMultiTarget multiTarget = new BuildMultiTarget();
 
+        String config = "-DIMGUI_USER_CONFIG=\"ImGuiCustomConfig.h\"";
+
         LinuxTarget linuxTarget = new LinuxTarget();
         linuxTarget.isStatic = true;
         linuxTarget.cppFlags.add("-std=c++17");
+        linuxTarget.cppFlags.add("-DIMGUI_USER_CONFIG=\"ImGuiCustomConfig.h\"");
         linuxTarget.headerDirs.add("-I" + imguiCppPath);
         linuxTarget.headerDirs.add("-I" + sourceDir);
+        linuxTarget.headerDirs.add("-I" + imguiCustomSourcePath);
         linuxTarget.cppInclude.add(sourceDir + "/*.cpp");
         multiTarget.add(linuxTarget);
+
+        // Compile glue code and link
+        WindowsMSVCTarget linkTarget = new WindowsMSVCTarget();
+        linkTarget.addJNIHeaders();
+        linkTarget.cppFlags.add("-std:c++17");
+        linkTarget.cppFlags.add("-DIMGUI_USER_CONFIG=\"ImGuiCustomConfig.h\"");
+        linkTarget.headerDirs.add("-I" + imguiSourcePath);
+        linkTarget.headerDirs.add("-I" + sourceDir);
+        linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
+        linkTarget.headerDirs.add("-I" + libBuildCPPPath + "/src/jniglue");
+        linkTarget.headerDirs.add("-I" + imguiCustomSourcePath);
+//        linkTarget.linkerFlags.add(imguiCppPath + "/libs/linux/libimgui64.so");
+        linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/linux/libimlayout64_.a");
+        linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");
+        linkTarget.linkerFlags.add("-L" + imguiCppPath + "/libs/linux/");
+        linkTarget.linkerFlags.add("-limgui64");
+        multiTarget.add(linkTarget);
 
         return multiTarget;
     }
