@@ -136,11 +136,9 @@ public class BuildImLayout {
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
         linkTarget.headerDirs.add("-I" + libBuildCPPPath + "/src/jniglue");
         linkTarget.headerDirs.add("-I" + imguiCustomSourcePath);
-        linkTarget.linkerFlags.add(imguiCppPath + "/libs/linux/libimgui64_.a");
+        linkTarget.linkerFlags.add(imguiCppPath + "/libs/linux/libimgui64.so");
         linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/linux/libimlayout64_.a");
         linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");
-        //linkTarget.linkerFlags.add("-L" + imguiCppPath + "/libs/linux/");
-        //linkTarget.linkerFlags.add("-limgui64");
         multiTarget.add(linkTarget);
 
         return multiTarget;
