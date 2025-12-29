@@ -147,7 +147,9 @@ public class BuildImGui {
         LinuxTarget linuxTarget = new LinuxTarget();
         linuxTarget.isStatic = true;
         linuxTarget.cppFlags.add("-std=c++17");
+        linuxTarget.cppFlags.add("-DIMGUI_USER_CONFIG=\"ImGuiCustomConfig.h\"");
         linuxTarget.headerDirs.add("-I" + sourceDir);
+        linuxTarget.headerDirs.add("-I" + op.getCustomSourceDir());
         linuxTarget.cppInclude.add(sourceDir + "/*.cpp");
         multiTarget.add(linuxTarget);
 
@@ -155,6 +157,7 @@ public class BuildImGui {
         LinuxTarget linkTarget = new LinuxTarget();
         linkTarget.addJNIHeaders();
         linkTarget.cppFlags.add("-std=c++17");
+        linkTarget.cppFlags.add("-DIMGUI_USER_CONFIG=\"ImGuiCustomConfig.h\"");
         linkTarget.headerDirs.add("-I" + sourceDir);
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
         linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/linux/libimgui64_.a");
