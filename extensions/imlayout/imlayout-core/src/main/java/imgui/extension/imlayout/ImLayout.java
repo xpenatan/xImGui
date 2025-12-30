@@ -18,10 +18,6 @@ public class ImLayout extends IDLBase {
 
     static private ImRect ImRect_TEMP_STATIC_GEN_0;
 
-    /*
-      [-JNI;-NATIVE]
-              #include "imgui_layout.h"
-    */
     public static final int WRAP_PARENT = get_WRAP_PARENT();
 
     public static final int MATCH_PARENT = get_MATCH_PARENT();

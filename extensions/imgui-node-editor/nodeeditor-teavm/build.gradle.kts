@@ -2,6 +2,15 @@ plugins {
     id("java")
 }
 
+val moduleName = "nodeeditor-teavm"
+
+val emscriptenJS = "$projectDir/../nodeeditor-build/build/c++/libs/emscripten/nodeeditor.js"
+val emscriptenWASM = "$projectDir/../nodeeditor-build/build/c++/libs/emscripten/nodeeditor.wasm"
+
+tasks.jar {
+    from(emscriptenJS, emscriptenWASM)
+}
+
 java {
     sourceCompatibility = JavaVersion.toVersion(LibExt.java11Target)
     targetCompatibility = JavaVersion.toVersion(LibExt.java11Target)

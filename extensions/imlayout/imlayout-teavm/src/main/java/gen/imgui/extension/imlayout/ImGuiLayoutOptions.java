@@ -18,10 +18,10 @@ public class ImGuiLayoutOptions extends IDLBase {
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = new imgui.ImGuiLayoutOptions();
-return imgui.getPointer(jsObj);
+var jsObj = new imlayout.ImGuiLayoutOptions();
+return imlayout.getPointer(jsObj);
 */
-    @org.teavm.jso.JSBody(script = "var jsObj = new imgui.ImGuiLayoutOptions();return imgui.getPointer(jsObj);")
+    @org.teavm.jso.JSBody(script = "var jsObj = new imlayout.ImGuiLayoutOptions();return imlayout.getPointer(jsObj);")
     public static native int internal_native_create_addr();
 
     /**
@@ -43,10 +43,10 @@ return imgui.getPointer(jsObj);
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiLayoutOptions);
-imgui.destroy(jsObj);
+var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);
+imlayout.destroy(jsObj);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiLayoutOptions);imgui.destroy(jsObj);")
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);imlayout.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
     public boolean get_clipping() {
@@ -54,10 +54,10 @@ imgui.destroy(jsObj);
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiLayoutOptions);
+var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);
 return jsObj.get_clipping();
 */
-    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiLayoutOptions);return jsObj.get_clipping();")
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);return jsObj.get_clipping();")
     public static native boolean internal_native_get_clipping(int this_addr);
 
     public void set_clipping(boolean clipping) {
@@ -65,10 +65,10 @@ return jsObj.get_clipping();
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiLayoutOptions);
+var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);
 jsObj.set_clipping(clipping);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "clipping"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiLayoutOptions);jsObj.set_clipping(clipping);")
+    @org.teavm.jso.JSBody(params = {"this_addr", "clipping"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);jsObj.set_clipping(clipping);")
     public static native void internal_native_set_clipping(int this_addr, boolean clipping);
 
     public float get_paddingLeft() {
@@ -76,10 +76,10 @@ jsObj.set_clipping(clipping);
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiLayoutOptions);
+var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);
 return jsObj.get_paddingLeft();
 */
-    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiLayoutOptions);return jsObj.get_paddingLeft();")
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);return jsObj.get_paddingLeft();")
     public static native float internal_native_get_paddingLeft(int this_addr);
 
     public void set_paddingLeft(float paddingLeft) {
@@ -87,10 +87,10 @@ return jsObj.get_paddingLeft();
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiLayoutOptions);
+var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);
 jsObj.set_paddingLeft(paddingLeft);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "paddingLeft"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiLayoutOptions);jsObj.set_paddingLeft(paddingLeft);")
+    @org.teavm.jso.JSBody(params = {"this_addr", "paddingLeft"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);jsObj.set_paddingLeft(paddingLeft);")
     public static native void internal_native_set_paddingLeft(int this_addr, float paddingLeft);
 
     public float get_paddingRight() {
@@ -98,10 +98,10 @@ jsObj.set_paddingLeft(paddingLeft);
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiLayoutOptions);
+var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);
 return jsObj.get_paddingRight();
 */
-    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiLayoutOptions);return jsObj.get_paddingRight();")
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);return jsObj.get_paddingRight();")
     public static native float internal_native_get_paddingRight(int this_addr);
 
     public void set_paddingRight(float paddingRight) {
@@ -109,10 +109,10 @@ return jsObj.get_paddingRight();
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiLayoutOptions);
+var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);
 jsObj.set_paddingRight(paddingRight);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "paddingRight"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiLayoutOptions);jsObj.set_paddingRight(paddingRight);")
+    @org.teavm.jso.JSBody(params = {"this_addr", "paddingRight"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);jsObj.set_paddingRight(paddingRight);")
     public static native void internal_native_set_paddingRight(int this_addr, float paddingRight);
 
     public float get_paddingTop() {
@@ -120,10 +120,10 @@ jsObj.set_paddingRight(paddingRight);
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiLayoutOptions);
+var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);
 return jsObj.get_paddingTop();
 */
-    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiLayoutOptions);return jsObj.get_paddingTop();")
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);return jsObj.get_paddingTop();")
     public static native float internal_native_get_paddingTop(int this_addr);
 
     public void set_paddingTop(float paddingTop) {
@@ -131,10 +131,10 @@ return jsObj.get_paddingTop();
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiLayoutOptions);
+var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);
 jsObj.set_paddingTop(paddingTop);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "paddingTop"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiLayoutOptions);jsObj.set_paddingTop(paddingTop);")
+    @org.teavm.jso.JSBody(params = {"this_addr", "paddingTop"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);jsObj.set_paddingTop(paddingTop);")
     public static native void internal_native_set_paddingTop(int this_addr, float paddingTop);
 
     public float get_paddingBottom() {
@@ -142,10 +142,10 @@ jsObj.set_paddingTop(paddingTop);
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiLayoutOptions);
+var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);
 return jsObj.get_paddingBottom();
 */
-    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiLayoutOptions);return jsObj.get_paddingBottom();")
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);return jsObj.get_paddingBottom();")
     public static native float internal_native_get_paddingBottom(int this_addr);
 
     public void set_paddingBottom(float paddingBottom) {
@@ -153,9 +153,9 @@ return jsObj.get_paddingBottom();
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiLayoutOptions);
+var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);
 jsObj.set_paddingBottom(paddingBottom);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr", "paddingBottom"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiLayoutOptions);jsObj.set_paddingBottom(paddingBottom);")
+    @org.teavm.jso.JSBody(params = {"this_addr", "paddingBottom"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);jsObj.set_paddingBottom(paddingBottom);")
     public static native void internal_native_set_paddingBottom(int this_addr, float paddingBottom);
 }

@@ -1,4 +1,5 @@
 import com.github.xpenatan.jParser.builder.BuildMultiTarget;
+import com.github.xpenatan.jParser.builder.BuildTarget;
 import com.github.xpenatan.jParser.builder.targets.AndroidTarget;
 import com.github.xpenatan.jParser.builder.targets.EmscriptenTarget;
 import com.github.xpenatan.jParser.builder.targets.LinuxTarget;
@@ -16,7 +17,7 @@ import java.util.ArrayList;
 public class BuildImGui {
 
     public static void main(String[] args) {
-        WindowsMSVCTarget.DEBUG_BUILD = true;
+        WindowsMSVCTarget.DEBUG_BUILD = false;
 
         String libName = "imgui";
         String modulePrefix = "imgui";
@@ -177,6 +178,8 @@ public class BuildImGui {
         macTarget.isStatic = true;
         macTarget.cppFlags.add("-std=c++17");
         macTarget.headerDirs.add("-I" + sourceDir);
+        macTarget.headerDirs.add("-I" + op.getCustomSourceDir());
+        macTarget.cppFlags.add("-DIMGUI_USER_CONFIG=\"ImGuiCustomConfig.h\"");
         macTarget.cppInclude.add(sourceDir + "/*.cpp");
         multiTarget.add(macTarget);
 
@@ -184,6 +187,7 @@ public class BuildImGui {
         MacTarget linkTarget = new MacTarget(isArm);
         linkTarget.addJNIHeaders();
         linkTarget.cppFlags.add("-std=c++17");
+        linkTarget.cppFlags.add("-DIMGUI_USER_CONFIG=\"ImGuiCustomConfig.h\"");
         linkTarget.headerDirs.add("-I" + sourceDir);
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
         if(isArm) {
@@ -203,12 +207,22 @@ public class BuildImGui {
         String libBuildCPPPath = op.getModuleBuildCPPPath();
         String sourceDir = op.getSourceDir();
 
+        String config;
+        if(BuildTarget.isWindows()) {
+            config = "-DIMGUI_USER_CONFIG=\"\\\"ImGuiCustomConfig.h\\\"\"";
+        }
+        else {
+            config = "-DIMGUI_USER_CONFIG=\"ImGuiCustomConfig.h\"";
+        }
+
         // Make a static library
         EmscriptenTarget libTarget = new EmscriptenTarget();
         libTarget.isStatic = true;
         libTarget.cppFlags.add("-std=c++17");
+        libTarget.cppFlags.add(config);
         libTarget.compileGlueCode = false;
         libTarget.headerDirs.add("-I" + sourceDir);
+        libTarget.headerDirs.add("-I" + op.getCustomSourceDir());
         libTarget.cppInclude.add(sourceDir + "/*.cpp");
         libTarget.cppFlags.add("-DIMGUI_DISABLE_FILE_FUNCTIONS");
         libTarget.cppFlags.add("-DIMGUI_DEFINE_MATH_OPERATORS");
@@ -220,9 +234,10 @@ public class BuildImGui {
         linkTarget.idlReader = idlReader;
         linkTarget.cppFlags.add("-std=c++17");
         linkTarget.headerDirs.add("-I" + sourceDir);
+        linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
         linkTarget.headerDirs.add("-include" + op.getCustomSourceDir() + "ImGuiCustom.h");
         linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/emscripten/imgui_.a");
-        linkTarget.linkerFlags.add("-sSIDE_MODULE=2");
+        linkTarget.linkerFlags.add("-sSIDE_MODULE=1");
         linkTarget.linkerFlags.add("-lc++abi"); // C++ ABI (exceptions, thread_atexit, etc.)
         linkTarget.linkerFlags.add("-lc++"); // C++ STL (std::cout, std::string, etc.)
         linkTarget.linkerFlags.add("-lc"); // C standard library (fopen, fclose, printf, etc.)

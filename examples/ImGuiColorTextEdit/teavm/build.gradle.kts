@@ -21,10 +21,12 @@ dependencies {
     implementation(project(":examples:impl:gdx"))
 
     if(LibExt.useRepoLibs) {
-        implementation("com.github.xpenatan.xImGui:imgui-ext-teavm:-SNAPSHOT")
+        implementation("com.github.xpenatan.xImGui:imgui-teavm:-SNAPSHOT")
+        implementation("com.github.xpenatan.xImGui:textedit-teavm:-SNAPSHOT")
     }
     else {
-        implementation(project(":imgui-ext:ext-teavm"))
+        implementation(project(":imgui:imgui-teavm"))
+        implementation(project(":extensions:ImGuiColorTextEdit:textedit-teavm"))
     }
 
     implementation("com.badlogicgames.gdx:gdx:${LibExt.gdxVersion}")

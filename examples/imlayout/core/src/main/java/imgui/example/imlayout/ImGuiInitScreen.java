@@ -17,14 +17,14 @@ public class ImGuiInitScreen extends ScreenAdapter {
 
     @Override
     public void show() {
-        ImGuiLoader.init((imgui_isSuccess, imgui_e) -> {
-            if(imgui_e != null) {
-                imgui_e.printStackTrace();
+        ImGuiLoader.init((imgui_isSuccess, imgui_t) -> {
+            if(imgui_t != null) {
+                imgui_t.printStackTrace();
                 return;
             }
-            ImLayoutLoader.init((isSuccess, e) -> {
-                if(e != null) {
-                    e.printStackTrace();
+            ImLayoutLoader.init((isSuccess, t) -> {
+                if(t != null) {
+                    t.printStackTrace();
                     return;
                 }
                 init = isSuccess;

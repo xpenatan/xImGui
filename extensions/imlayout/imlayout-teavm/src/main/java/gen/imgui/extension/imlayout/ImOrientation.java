@@ -35,20 +35,20 @@ public enum ImOrientation implements IDLEnum<ImOrientation> {
     }
 
     /*[-TEAVM;-NATIVE]
-return imgui.NONE;
+return imlayout.NONE;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.NONE;")
+    @org.teavm.jso.JSBody(script = "return imlayout.NONE;")
     private static native int NONE_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.HORIZONTAL;
+return imlayout.HORIZONTAL;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.HORIZONTAL;")
+    @org.teavm.jso.JSBody(script = "return imlayout.HORIZONTAL;")
     private static native int HORIZONTAL_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.VERTICAL;
+return imlayout.VERTICAL;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.VERTICAL;")
+    @org.teavm.jso.JSBody(script = "return imlayout.VERTICAL;")
     private static native int VERTICAL_NATIVE();
 }

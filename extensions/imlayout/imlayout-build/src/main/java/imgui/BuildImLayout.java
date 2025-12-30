@@ -1,6 +1,7 @@
 package imgui;
 
 import com.github.xpenatan.jParser.builder.BuildMultiTarget;
+import com.github.xpenatan.jParser.builder.BuildTarget;
 import com.github.xpenatan.jParser.builder.targets.EmscriptenTarget;
 import com.github.xpenatan.jParser.builder.targets.LinuxTarget;
 import com.github.xpenatan.jParser.builder.targets.MacTarget;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 public class BuildImLayout {
 
     public static void main(String[] args) throws IOException {
-        WindowsMSVCTarget.DEBUG_BUILD = true;
+        WindowsMSVCTarget.DEBUG_BUILD = false;
 
         String libName = "imlayout";
         String basePackage = "imgui.extension.imlayout";
@@ -27,7 +28,7 @@ public class BuildImLayout {
         BuildToolOptions.BuildToolParams data = new BuildToolOptions.BuildToolParams();
         data.libName = libName;
         data.idlName = libName;
-        data.webModuleName = "imgui";
+        data.webModuleName = libName;
         data.packageName = basePackage;
         data.cppSourcePath = sourceDir;
         data.modulePrefix = modulePrefix;
@@ -162,19 +163,32 @@ public class BuildImLayout {
     }
 
     private static BuildMultiTarget getTeaVMTarget(BuildToolOptions op, IDLReader idlReader, String imguiPath) {
-        String imguiCppPath = imguiPath + "/imgui-build/build/imgui";
+        String imguiRootBuildPath = imguiPath + "/imgui-build";
+        String imguiCustomSourcePath = imguiRootBuildPath + "/src/main/cpp/custom";
+        String imguiBuildPath = imguiRootBuildPath + "/build";
+        String imguiSourcePath = imguiBuildPath + "/imgui";
         String libBuildCPPPath = op.getModuleBuildCPPPath();
         String sourceDir = op.getSourceDir();
 
         BuildMultiTarget multiTarget = new BuildMultiTarget();
 
+        String config;
+        if(BuildTarget.isWindows()) {
+            config = "-DIMGUI_USER_CONFIG=\"\\\"ImGuiCustomConfig.h\\\"\"";
+        }
+        else {
+            config = "-DIMGUI_USER_CONFIG=\"ImGuiCustomConfig.h\"";
+        }
+
         // Make a static library
         EmscriptenTarget libTarget = new EmscriptenTarget();
         libTarget.isStatic = true;
         libTarget.cppFlags.add("-std=c++17");
+        libTarget.cppFlags.add(config);
         libTarget.compileGlueCode = false;
-        libTarget.headerDirs.add("-I" + imguiCppPath);
+        libTarget.headerDirs.add("-I" + imguiSourcePath);
         libTarget.headerDirs.add("-I" + sourceDir);
+        libTarget.headerDirs.add("-I" + imguiCustomSourcePath);
         libTarget.cppInclude.add(sourceDir + "/*.cpp");
         multiTarget.add(libTarget);
 
@@ -183,9 +197,12 @@ public class BuildImLayout {
         linkTarget.mainModuleName = "idl";
         linkTarget.idlReader = idlReader;
         linkTarget.cppFlags.add("-std=c++17");
-        linkTarget.headerDirs.add("-I" + imguiCppPath);
+        linkTarget.headerDirs.add("-I" + imguiSourcePath);
         linkTarget.headerDirs.add("-I" + sourceDir);
+        linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
+        linkTarget.headerDirs.add("-I" + imguiCustomSourcePath);
         linkTarget.headerDirs.add("-include" + op.getCustomSourceDir() + "ImLayoutCustom.h");
+        linkTarget.headerDirs.add("-include" + imguiCustomSourcePath + "/ImGuiCustom.h");
         linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/emscripten/imlayout_.a");
         linkTarget.linkerFlags.add("-sSIDE_MODULE=2");
         linkTarget.linkerFlags.add("-lc++abi"); // C++ ABI (exceptions, thread_atexit, etc.)

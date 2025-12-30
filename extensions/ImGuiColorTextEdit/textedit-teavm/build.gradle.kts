@@ -2,6 +2,15 @@ plugins {
     id("java")
 }
 
+val moduleName = "textedit-teavm"
+
+val emscriptenJS = "$projectDir/../textedit-build/build/c++/libs/emscripten/textedit.js"
+val emscriptenWASM = "$projectDir/../textedit-build/build/c++/libs/emscripten/textedit.wasm"
+
+tasks.jar {
+    from(emscriptenJS, emscriptenWASM)
+}
+
 java {
     sourceCompatibility = JavaVersion.toVersion(LibExt.java11Target)
     targetCompatibility = JavaVersion.toVersion(LibExt.java11Target)
@@ -21,5 +30,16 @@ tasks.named("clean") {
     doFirst {
         val srcPath = "$projectDir/src/main/java"
         project.delete(files(srcPath))
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            artifactId = moduleName
+            group = LibExt.groupId
+            version = LibExt.libVersion
+            from(components["java"])
+        }
     }
 }

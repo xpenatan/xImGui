@@ -11,11 +11,13 @@ dependencies {
     implementation(project(":examples:basic:base"))
 
     if(LibExt.useRepoLibs) {
-        implementation("com.github.xpenatan.xImGui:imgui-ext-core:-SNAPSHOT")
+        implementation("com.github.xpenatan.xImGui:imgui-core:-SNAPSHOT")
+        implementation("com.github.xpenatan.xImGui:textedit-core:-SNAPSHOT")
         implementation("com.github.xpenatan.xImGui:gdx-gl-impl:-SNAPSHOT")
     }
     else {
-        implementation(project(":imgui-ext:ext-core"))
+        implementation(project(":imgui:imgui-core"))
+        implementation(project(":extensions:ImGuiColorTextEdit:textedit-core"))
         implementation(project(":gdx:gdx-gl-impl"))
     }
 

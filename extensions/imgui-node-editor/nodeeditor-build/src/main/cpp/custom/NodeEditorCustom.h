@@ -2,6 +2,7 @@
 
 #include <string>
 #include "imgui_node_editor.h"
+#include "IDLHelper.h"
 
 typedef ax::NodeEditor::CanvasSizeMode CanvasSizeMode;
 typedef ax::NodeEditor::FlowDirection FlowDirection;

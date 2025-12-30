@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="ImGui_build_project_mac64" type="GradleRunConfiguration" factoryName="Gradle" folderName="ImGui">
+  <configuration default="false" name="imgui_build_project_mac64" type="GradleRunConfiguration" factoryName="Gradle" folderName="ImGui">
     <ExternalSystemSettings>
       <option name="executionName" />
       <option name="externalProjectPath" value="$PROJECT_DIR$" />

@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="ImLayout_build_project_macArm" type="GradleRunConfiguration" factoryName="Gradle" folderName="ImLayout">
+  <configuration default="false" name="imlayout_build_project_macArm" type="GradleRunConfiguration" factoryName="Gradle" folderName="ImLayout">
     <ExternalSystemSettings>
       <option name="executionName" />
       <option name="externalProjectPath" value="$PROJECT_DIR$" />
