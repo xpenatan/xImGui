@@ -2,6 +2,15 @@ plugins {
     id("java")
 }
 
+val moduleName = "imlayout-teavm"
+
+val emscriptenJS = "$projectDir/../imlayout-build/build/c++/libs/emscripten/imlayout.js"
+val emscriptenWASM = "$projectDir/../imlayout-build/build/c++/libs/emscripten/imlayout.wasm"
+
+tasks.jar {
+    from(emscriptenJS, emscriptenWASM)
+}
+
 java {
     sourceCompatibility = JavaVersion.toVersion(LibExt.java11Target)
     targetCompatibility = JavaVersion.toVersion(LibExt.java11Target)

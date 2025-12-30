@@ -4,11 +4,17 @@ plugins {
 
 val moduleName = "imgui-teavm"
 
-val emscriptenFile = "$projectDir/../imgui-build/build/c++/libs/emscripten/imgui.wasm.js"
+val emscriptenJS = "$projectDir/../imgui-build/build/c++/libs/emscripten/imgui.js"
+val emscriptenWASM = "$projectDir/../imgui-build/build/c++/libs/emscripten/imgui.wasm"
 
 tasks.jar {
-    from(emscriptenFile)
+    from(emscriptenJS, emscriptenWASM)
 }
+
+tasks.jar {
+    from(emscriptenJS, emscriptenWASM)
+}
+
 
 dependencies {
     api("com.github.xpenatan.jParser:idl-helper-core:${LibExt.jParserVersion}")
