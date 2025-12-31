@@ -456,16 +456,34 @@ jobs:
           name: mac-natives-nodeeditor
           path: ./extensions/imgui-node-editor/nodeeditor-build/build/c++/libs/
 
+      - name: Download teavm ImGui natives
+        uses: actions/download-artifact@v4
+        with:
+          name: teavm-natives-imgui
+          path: ./imgui/imgui-build/build/c++/libs/
+
+      - name: Download teavm ImLayout natives
+        uses: actions/download-artifact@v4
+        with:
+          name: teavm-natives-imlayout
+          path: ./extensions/imlayout/imlayout-build/build/c++/libs/
+
+      - name: Download teavm ImGuiColorTextEdit natives
+        uses: actions/download-artifact@v4
+        with:
+          name: teavm-natives-textedit
+          path: ./extensions/ImGuiColorTextEdit/textedit-build/build/c++/libs/
+
+      - name: Download teavm imgui-node-editor natives
+        uses: actions/download-artifact@v4
+        with:
+          name: teavm-natives-nodeeditor
+          path: ./extensions/imgui-node-editor/nodeeditor-build/build/c++/libs/
+
       - name: Download android natives
         uses: actions/download-artifact@v4
         with:
           name: android-natives
-          path: ./imgui/imgui-build/build/c++/libs/
-
-      - name: Download teavm natives
-        uses: actions/download-artifact@v4
-        with:
-          name: teavm-natives
           path: ./imgui/imgui-build/build/c++/libs/
 
       - name: Delete generated files
