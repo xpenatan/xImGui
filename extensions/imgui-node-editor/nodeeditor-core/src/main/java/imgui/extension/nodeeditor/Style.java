@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package imgui.extension.nodeeditor;
 
 import com.github.xpenatan.jParser.idl.IDLBase;

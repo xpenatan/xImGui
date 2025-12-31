@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
@@ -38,12 +39,12 @@ delete nativeObject;
     public static native void internal_native_deleteNative(long this_addr);
 
     public ImVectorImTextureDataPtr get_Textures() {
-        long pointer = internal_native_get_Textures(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_Textures_addr(native_address);
+        if (addr == 0)
             return ImVectorImTextureDataPtr.NULL;
         if (ImVectorImTextureDataPtr_TEMP_GEN_0 == null)
             ImVectorImTextureDataPtr_TEMP_GEN_0 = ImVectorImTextureDataPtr.native_new();
-        ImVectorImTextureDataPtr_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVectorImTextureDataPtr_TEMP_GEN_0.internal_reset(addr, false);
         return ImVectorImTextureDataPtr_TEMP_GEN_0;
     }
 
@@ -51,7 +52,7 @@ delete nativeObject;
 ImGuiPlatformIO* nativeObject = (ImGuiPlatformIO*)this_addr;
 return (jlong)&nativeObject->Textures;
 */
-    public static native long internal_native_get_Textures(long this_addr);
+    public static native long internal_native_get_Textures_addr(long this_addr);
 
     public void set_Textures(ImVectorImTextureDataPtr Textures) {
         internal_native_set_Textures(native_address, Textures.native_address);

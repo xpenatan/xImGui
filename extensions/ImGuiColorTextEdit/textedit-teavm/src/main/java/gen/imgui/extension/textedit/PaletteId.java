@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui.extension.textedit;
 
 import com.github.xpenatan.jParser.idl.IDLEnum;
@@ -34,26 +35,26 @@ public enum PaletteId implements IDLEnum<PaletteId> {
     }
 
     /*[-TEAVM;-NATIVE]
-return imgui.Dark;
+return textedit.Dark;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.Dark;")
+    @org.teavm.jso.JSBody(script = "return textedit.Dark;")
     private static native int Dark_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.Light;
+return textedit.Light;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.Light;")
+    @org.teavm.jso.JSBody(script = "return textedit.Light;")
     private static native int Light_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.Mariana;
+return textedit.Mariana;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.Mariana;")
+    @org.teavm.jso.JSBody(script = "return textedit.Mariana;")
     private static native int Mariana_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.RetroBlue;
+return textedit.RetroBlue;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.RetroBlue;")
+    @org.teavm.jso.JSBody(script = "return textedit.RetroBlue;")
     private static native int RetroBlue_NATIVE();
 }

@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui.extension.nodeeditor;
 
 import com.github.xpenatan.jParser.idl.IDLEnum;
@@ -42,50 +43,50 @@ public enum SaveReasonFlags implements IDLEnum<SaveReasonFlags> {
     }
 
     /*[-TEAVM;-NATIVE]
-return imgui.None;
+return nodeeditor.None;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.None;")
+    @org.teavm.jso.JSBody(script = "return nodeeditor.None;")
     private static native int None_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.Navigation;
+return nodeeditor.Navigation;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.Navigation;")
+    @org.teavm.jso.JSBody(script = "return nodeeditor.Navigation;")
     private static native int Navigation_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.Position;
+return nodeeditor.Position;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.Position;")
+    @org.teavm.jso.JSBody(script = "return nodeeditor.Position;")
     private static native int Position_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.Size;
+return nodeeditor.Size;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.Size;")
+    @org.teavm.jso.JSBody(script = "return nodeeditor.Size;")
     private static native int Size_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.Selection;
+return nodeeditor.Selection;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.Selection;")
+    @org.teavm.jso.JSBody(script = "return nodeeditor.Selection;")
     private static native int Selection_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.AddNode;
+return nodeeditor.AddNode;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.AddNode;")
+    @org.teavm.jso.JSBody(script = "return nodeeditor.AddNode;")
     private static native int AddNode_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.RemoveNode;
+return nodeeditor.RemoveNode;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.RemoveNode;")
+    @org.teavm.jso.JSBody(script = "return nodeeditor.RemoveNode;")
     private static native int RemoveNode_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.User;
+return nodeeditor.User;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.User;")
+    @org.teavm.jso.JSBody(script = "return nodeeditor.User;")
     private static native int User_NATIVE();
 }

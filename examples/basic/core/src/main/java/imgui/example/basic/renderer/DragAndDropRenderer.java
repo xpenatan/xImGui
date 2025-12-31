@@ -1,11 +1,11 @@
 package imgui.example.basic.renderer;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
-import imgui.idl.helper.IDLTemp;
+import com.github.xpenatan.jparser.idl.helper.IDLInt;
+import com.github.xpenatan.jparser.idl.helper.IDLTemp;
 import imgui.ImGui;
 import imgui.ImGuiPayload;
 import imgui.ImGuiString;
-import imgui.idl.helper.IDLInt;
 
 public class DragAndDropRenderer implements UIRenderer {
 

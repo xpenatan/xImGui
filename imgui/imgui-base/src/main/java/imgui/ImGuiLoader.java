@@ -2,6 +2,7 @@ package imgui;
 
 import com.github.xpenatan.jParser.loader.JParserLibraryLoader;
 import com.github.xpenatan.jParser.loader.JParserLibraryLoaderListener;
+import com.github.xpenatan.jparser.idl.IDLLoader;
 
 /**
  * @author xpenatan
@@ -13,6 +14,16 @@ public class ImGuiLoader {
     */
 
     public static void init(JParserLibraryLoaderListener listener) {
-        JParserLibraryLoader.load("imgui", listener);
+        IDLLoader.init(new JParserLibraryLoaderListener() {
+            @Override
+            public void onLoad(boolean idl_isSuccess, Throwable idl_t) {
+                if(idl_isSuccess) {
+                    JParserLibraryLoader.load("imgui", listener);
+                }
+                else {
+                    listener.onLoad(false, idl_t);
+                }
+            }
+        });
     }
 }

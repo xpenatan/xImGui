@@ -6,11 +6,6 @@ include(":imgui:imgui-desktop")
 include(":imgui:imgui-teavm")
 include(":imgui:imgui-android")
 
-include(":imgui-ext:ext-build")
-include(":imgui-ext:ext-core")
-include(":imgui-ext:ext-desktop")
-include(":imgui-ext:ext-teavm")
-
 // Implementation
 include(":gdx:gdx-shared-impl")
 include(":gdx:gdx-gl-impl")
@@ -21,18 +16,21 @@ include(":gdx:gdx-wgpu-impl")
 include(":extensions:imlayout:imlayout-build")
 include(":extensions:imlayout:imlayout-base")
 include(":extensions:imlayout:imlayout-core")
+include(":extensions:imlayout:imlayout-desktop")
 include(":extensions:imlayout:imlayout-teavm")
 
 // Extension ImGuiColorTextEdit
 include(":extensions:ImGuiColorTextEdit:textedit-build")
 include(":extensions:ImGuiColorTextEdit:textedit-base")
 include(":extensions:ImGuiColorTextEdit:textedit-core")
+include(":extensions:ImGuiColorTextEdit:textedit-desktop")
 include(":extensions:ImGuiColorTextEdit:textedit-teavm")
 
 // Extension imgui-node-editor
 include(":extensions:imgui-node-editor:nodeeditor-build")
 include(":extensions:imgui-node-editor:nodeeditor-base")
 include(":extensions:imgui-node-editor:nodeeditor-core")
+include(":extensions:imgui-node-editor:nodeeditor-desktop")
 include(":extensions:imgui-node-editor:nodeeditor-teavm")
 
 // Examples

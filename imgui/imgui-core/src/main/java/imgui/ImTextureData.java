@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
@@ -74,12 +75,12 @@ nativeObject->DestroyPixels();
     public static native void internal_native_DestroyPixels(long this_addr);
 
     public IDLBase GetPixels() {
-        long pointer = internal_native_GetPixels(native_address);
-        if (pointer == 0)
+        long addr = internal_native_GetPixels_addr(native_address);
+        if (addr == 0)
             return IDLBase.NULL;
         if (IDLBase_TEMP_GEN_0 == null)
             IDLBase_TEMP_GEN_0 = IDLBase.native_new();
-        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
+        IDLBase_TEMP_GEN_0.internal_reset(addr, false);
         return IDLBase_TEMP_GEN_0;
     }
 
@@ -87,15 +88,15 @@ nativeObject->DestroyPixels();
 ImTextureData* nativeObject = (ImTextureData*)this_addr;
 return (jlong)nativeObject->GetPixels();
 */
-    public static native long internal_native_GetPixels(long this_addr);
+    public static native long internal_native_GetPixels_addr(long this_addr);
 
     public IDLBase GetPixelsAt(int x, int y) {
-        long pointer = internal_native_GetPixelsAt(native_address, x, y);
-        if (pointer == 0)
+        long addr = internal_native_GetPixelsAt_addr(native_address, x, y);
+        if (addr == 0)
             return IDLBase.NULL;
         if (IDLBase_TEMP_GEN_1 == null)
             IDLBase_TEMP_GEN_1 = IDLBase.native_new();
-        IDLBase_TEMP_GEN_1.internal_reset(pointer, false);
+        IDLBase_TEMP_GEN_1.internal_reset(addr, false);
         return IDLBase_TEMP_GEN_1;
     }
 
@@ -103,7 +104,7 @@ return (jlong)nativeObject->GetPixels();
 ImTextureData* nativeObject = (ImTextureData*)this_addr;
 return (jlong)nativeObject->GetPixelsAt((int)x, (int)y);
 */
-    public static native long internal_native_GetPixelsAt(long this_addr, int x, int y);
+    public static native long internal_native_GetPixelsAt_addr(long this_addr, int x, int y);
 
     public int GetSizeInBytes() {
         return internal_native_GetSizeInBytes(native_address);
@@ -126,12 +127,12 @@ return nativeObject->GetPitch();
     public static native int internal_native_GetPitch(long this_addr);
 
     public ImTextureRef GetTexRef() {
-        long pointer = internal_native_GetTexRef(native_address);
-        if (pointer == 0)
+        long addr = internal_native_GetTexRef_addr(native_address);
+        if (addr == 0)
             return ImTextureRef.NULL;
         if (ImTextureRef_TEMP_GEN_0 == null)
             ImTextureRef_TEMP_GEN_0 = ImTextureRef.native_new();
-        ImTextureRef_TEMP_GEN_0.internal_reset(pointer, false);
+        ImTextureRef_TEMP_GEN_0.internal_reset(addr, false);
         return ImTextureRef_TEMP_GEN_0;
     }
 
@@ -140,15 +141,15 @@ ImTextureData* nativeObject = (ImTextureData*)this_addr;
 static ImTextureRef copy_addr;
 copy_addr = nativeObject->GetTexRef();
 return (jlong)&copy_addr;*/
-    public static native long internal_native_GetTexRef(long this_addr);
+    public static native long internal_native_GetTexRef_addr(long this_addr);
 
     public ImTextureIDRef GetTexID() {
-        long pointer = internal_native_GetTexID(native_address);
-        if (pointer == 0)
+        long addr = internal_native_GetTexID_addr(native_address);
+        if (addr == 0)
             return ImTextureIDRef.NULL;
         if (ImTextureIDRef_TEMP_GEN_0 == null)
             ImTextureIDRef_TEMP_GEN_0 = ImTextureIDRef.native_new();
-        ImTextureIDRef_TEMP_GEN_0.internal_reset(pointer, false);
+        ImTextureIDRef_TEMP_GEN_0.internal_reset(addr, false);
         return ImTextureIDRef_TEMP_GEN_0;
     }
 
@@ -157,7 +158,7 @@ ImTextureData* nativeObject = (ImTextureData*)this_addr;
 static ImTextureIDRef copy_addr;
 copy_addr = nativeObject->GetTexID();
 return (jlong)&copy_addr;*/
-    public static native long internal_native_GetTexID(long this_addr);
+    public static native long internal_native_GetTexID_addr(long this_addr);
 
     public void SetTexID(ImTextureIDRef tex_id) {
         internal_native_SetTexID(native_address, tex_id.native_address);
@@ -207,12 +208,12 @@ return (jint)nativeObject->Status;
     public static native int internal_native_get_Status(long this_addr);
 
     public IDLBase get_BackendUserData() {
-        long pointer = internal_native_get_BackendUserData(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_BackendUserData_addr(native_address);
+        if (addr == 0)
             return IDLBase.NULL;
         if (IDLBase_TEMP_GEN_2 == null)
             IDLBase_TEMP_GEN_2 = IDLBase.native_new();
-        IDLBase_TEMP_GEN_2.internal_reset(pointer, false);
+        IDLBase_TEMP_GEN_2.internal_reset(addr, false);
         return IDLBase_TEMP_GEN_2;
     }
 
@@ -220,7 +221,7 @@ return (jint)nativeObject->Status;
 ImTextureData* nativeObject = (ImTextureData*)this_addr;
 return (jlong)nativeObject->BackendUserData;
 */
-    public static native long internal_native_get_BackendUserData(long this_addr);
+    public static native long internal_native_get_BackendUserData_addr(long this_addr);
 
     public void set_BackendUserData(IDLBase BackendUserData) {
         internal_native_set_BackendUserData(native_address, BackendUserData.native_void_address);
@@ -320,12 +321,12 @@ nativeObject->BytesPerPixel = BytesPerPixel;
     public static native void internal_native_set_BytesPerPixel(long this_addr, int BytesPerPixel);
 
     public ImTextureRect get_UsedRect() {
-        long pointer = internal_native_get_UsedRect(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_UsedRect_addr(native_address);
+        if (addr == 0)
             return ImTextureRect.NULL;
         if (ImTextureRect_TEMP_GEN_0 == null)
             ImTextureRect_TEMP_GEN_0 = ImTextureRect.native_new();
-        ImTextureRect_TEMP_GEN_0.internal_reset(pointer, false);
+        ImTextureRect_TEMP_GEN_0.internal_reset(addr, false);
         return ImTextureRect_TEMP_GEN_0;
     }
 
@@ -333,7 +334,7 @@ nativeObject->BytesPerPixel = BytesPerPixel;
 ImTextureData* nativeObject = (ImTextureData*)this_addr;
 return (jlong)&nativeObject->UsedRect;
 */
-    public static native long internal_native_get_UsedRect(long this_addr);
+    public static native long internal_native_get_UsedRect_addr(long this_addr);
 
     public void set_UsedRect(ImTextureRect UsedRect) {
         internal_native_set_UsedRect(native_address, UsedRect.native_address);
@@ -346,12 +347,12 @@ nativeObject->UsedRect = *((ImTextureRect*)UsedRect_addr);
     public static native void internal_native_set_UsedRect(long this_addr, long UsedRect_addr);
 
     public ImTextureRect get_UpdateRect() {
-        long pointer = internal_native_get_UpdateRect(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_UpdateRect_addr(native_address);
+        if (addr == 0)
             return ImTextureRect.NULL;
         if (ImTextureRect_TEMP_GEN_1 == null)
             ImTextureRect_TEMP_GEN_1 = ImTextureRect.native_new();
-        ImTextureRect_TEMP_GEN_1.internal_reset(pointer, false);
+        ImTextureRect_TEMP_GEN_1.internal_reset(addr, false);
         return ImTextureRect_TEMP_GEN_1;
     }
 
@@ -359,7 +360,7 @@ nativeObject->UsedRect = *((ImTextureRect*)UsedRect_addr);
 ImTextureData* nativeObject = (ImTextureData*)this_addr;
 return (jlong)&nativeObject->UpdateRect;
 */
-    public static native long internal_native_get_UpdateRect(long this_addr);
+    public static native long internal_native_get_UpdateRect_addr(long this_addr);
 
     public void set_UpdateRect(ImTextureRect UpdateRect) {
         internal_native_set_UpdateRect(native_address, UpdateRect.native_address);
@@ -372,12 +373,12 @@ nativeObject->UpdateRect = *((ImTextureRect*)UpdateRect_addr);
     public static native void internal_native_set_UpdateRect(long this_addr, long UpdateRect_addr);
 
     public ImVectorImTextureRect get_Updates() {
-        long pointer = internal_native_get_Updates(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_Updates_addr(native_address);
+        if (addr == 0)
             return ImVectorImTextureRect.NULL;
         if (ImVectorImTextureRect_TEMP_GEN_0 == null)
             ImVectorImTextureRect_TEMP_GEN_0 = ImVectorImTextureRect.native_new();
-        ImVectorImTextureRect_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVectorImTextureRect_TEMP_GEN_0.internal_reset(addr, false);
         return ImVectorImTextureRect_TEMP_GEN_0;
     }
 
@@ -385,7 +386,7 @@ nativeObject->UpdateRect = *((ImTextureRect*)UpdateRect_addr);
 ImTextureData* nativeObject = (ImTextureData*)this_addr;
 return (jlong)&nativeObject->Updates;
 */
-    public static native long internal_native_get_Updates(long this_addr);
+    public static native long internal_native_get_Updates_addr(long this_addr);
 
     public void set_Updates(ImVectorImTextureRect Updates) {
         internal_native_set_Updates(native_address, Updates.native_address);

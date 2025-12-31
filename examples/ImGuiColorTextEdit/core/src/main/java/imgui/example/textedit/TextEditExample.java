@@ -1,11 +1,10 @@
 package imgui.example.textedit;
 
+import com.github.xpenatan.jparser.idl.helper.IDLInt;
 import imgui.ImGui;
 import imgui.example.renderer.ImGuiRenderer;
 import imgui.extension.textedit.LanguageDefinitionId;
 import imgui.extension.textedit.TextEditor;
-import imgui.idl.helper.IDLInt;
-import imgui.idl.helper.IDLString;
 
 public class TextEditExample extends ImGuiRenderer {
 

@@ -10,9 +10,15 @@ var libProjects = mutableSetOf(
     project(":imgui:imgui-desktop"),
     project(":imgui:imgui-teavm"),
 //    project(":imgui:imgui-android"),
-    project(":imgui-ext:ext-core"),
-    project(":imgui-ext:ext-desktop"),
-    project(":imgui-ext:ext-teavm")
+    project(":extensions:imlayout:imlayout-core"),
+    project(":extensions:imlayout:imlayout-desktop"),
+    project(":extensions:imlayout:imlayout-teavm"),
+    project(":extensions:ImGuiColorTextEdit:textedit-core"),
+    project(":extensions:ImGuiColorTextEdit:textedit-desktop"),
+    project(":extensions:ImGuiColorTextEdit:textedit-teavm"),
+    project(":extensions:imgui-node-editor:nodeeditor-core"),
+    project(":extensions:imgui-node-editor:nodeeditor-desktop"),
+    project(":extensions:imgui-node-editor:nodeeditor-teavm"),
 )
 
 LibExt.isRelease = gradle.startParameter.taskNames.any { it == "publishRelease" }

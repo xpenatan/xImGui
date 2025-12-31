@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui.extension.textedit;
 
 import com.github.xpenatan.jParser.idl.IDLEnum;
@@ -34,20 +35,20 @@ public enum SetViewAtLineMode implements IDLEnum<SetViewAtLineMode> {
     }
 
     /*[-TEAVM;-NATIVE]
-return imgui.FirstVisibleLine;
+return textedit.FirstVisibleLine;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.FirstVisibleLine;")
+    @org.teavm.jso.JSBody(script = "return textedit.FirstVisibleLine;")
     private static native int FirstVisibleLine_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.Centered;
+return textedit.Centered;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.Centered;")
+    @org.teavm.jso.JSBody(script = "return textedit.Centered;")
     private static native int Centered_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.LastVisibleLine;
+return textedit.LastVisibleLine;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.LastVisibleLine;")
+    @org.teavm.jso.JSBody(script = "return textedit.LastVisibleLine;")
     private static native int LastVisibleLine_NATIVE();
 }

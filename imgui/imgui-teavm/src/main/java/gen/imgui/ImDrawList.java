@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
@@ -114,12 +115,12 @@ jsObj.PopTextureID();
     public static native void internal_native_PopTextureID(int this_addr);
 
     public ImVec2 GetClipRectMin() {
-        int pointer = internal_native_GetClipRectMin(native_address);
-        if (pointer == 0)
+        int addr = internal_native_GetClipRectMin_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_0.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_0;
     }
 
@@ -130,15 +131,15 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);var returnedJSObj = jsObj.GetClipRectMin();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_GetClipRectMin(int this_addr);
+    public static native int internal_native_GetClipRectMin_addr(int this_addr);
 
     public ImVec2 GetClipRectMax() {
-        int pointer = internal_native_GetClipRectMax(native_address);
-        if (pointer == 0)
+        int addr = internal_native_GetClipRectMax_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_1 == null)
             ImVec2_TEMP_GEN_1 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_1.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_1;
     }
 
@@ -149,7 +150,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);var returnedJSObj = jsObj.GetClipRectMax();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_GetClipRectMax(int this_addr);
+    public static native int internal_native_GetClipRectMax_addr(int this_addr);
 
     public void AddLine(ImVec2 p1, ImVec2 p2, int col, float thickness) {
         internal_native_AddLine(native_address, p1.native_address, p2.native_address, col, thickness);
@@ -801,12 +802,12 @@ jsObj.ChannelsSetCurrent(n);
     public static native void internal_native_ChannelsSetCurrent(int this_addr, int n);
 
     public ImVectorImDrawCmd get_CmdBuffer() {
-        int pointer = internal_native_get_CmdBuffer(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_CmdBuffer_addr(native_address);
+        if (addr == 0)
             return ImVectorImDrawCmd.NULL;
         if (ImVectorImDrawCmd_TEMP_GEN_0 == null)
             ImVectorImDrawCmd_TEMP_GEN_0 = ImVectorImDrawCmd.native_new();
-        ImVectorImDrawCmd_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVectorImDrawCmd_TEMP_GEN_0.internal_reset(addr, false);
         return ImVectorImDrawCmd_TEMP_GEN_0;
     }
 
@@ -817,7 +818,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);var returnedJSObj = jsObj.get_CmdBuffer();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_get_CmdBuffer(int this_addr);
+    public static native int internal_native_get_CmdBuffer_addr(int this_addr);
 
     public void set_CmdBuffer(ImVectorImDrawCmd CmdBuffer) {
         internal_native_set_CmdBuffer(native_address, CmdBuffer.native_address);
@@ -831,12 +832,12 @@ jsObj.set_CmdBuffer(CmdBuffer_addr);
     public static native void internal_native_set_CmdBuffer(int this_addr, int CmdBuffer_addr);
 
     public ImVectorImDrawIdx get_IdxBuffer() {
-        int pointer = internal_native_get_IdxBuffer(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_IdxBuffer_addr(native_address);
+        if (addr == 0)
             return ImVectorImDrawIdx.NULL;
         if (ImVectorImDrawIdx_TEMP_GEN_0 == null)
             ImVectorImDrawIdx_TEMP_GEN_0 = ImVectorImDrawIdx.native_new();
-        ImVectorImDrawIdx_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVectorImDrawIdx_TEMP_GEN_0.internal_reset(addr, false);
         return ImVectorImDrawIdx_TEMP_GEN_0;
     }
 
@@ -847,7 +848,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);var returnedJSObj = jsObj.get_IdxBuffer();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_get_IdxBuffer(int this_addr);
+    public static native int internal_native_get_IdxBuffer_addr(int this_addr);
 
     public void set_IdxBuffer(ImVectorImDrawIdx IdxBuffer) {
         internal_native_set_IdxBuffer(native_address, IdxBuffer.native_address);
@@ -861,12 +862,12 @@ jsObj.set_IdxBuffer(IdxBuffer_addr);
     public static native void internal_native_set_IdxBuffer(int this_addr, int IdxBuffer_addr);
 
     public ImVectorImDrawVert get_VtxBuffer() {
-        int pointer = internal_native_get_VtxBuffer(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_VtxBuffer_addr(native_address);
+        if (addr == 0)
             return ImVectorImDrawVert.NULL;
         if (ImVectorImDrawVert_TEMP_GEN_0 == null)
             ImVectorImDrawVert_TEMP_GEN_0 = ImVectorImDrawVert.native_new();
-        ImVectorImDrawVert_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVectorImDrawVert_TEMP_GEN_0.internal_reset(addr, false);
         return ImVectorImDrawVert_TEMP_GEN_0;
     }
 
@@ -877,7 +878,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawList);var returnedJSObj = jsObj.get_VtxBuffer();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_get_VtxBuffer(int this_addr);
+    public static native int internal_native_get_VtxBuffer_addr(int this_addr);
 
     public void set_VtxBuffer(ImVectorImDrawVert VtxBuffer) {
         internal_native_set_VtxBuffer(native_address, VtxBuffer.native_address);

@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui.extension.nodeeditor;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
@@ -12,16 +13,16 @@ public class Config extends IDLBase {
     static public final Config NULL = Config.native_new();
 
     public Config() {
-        int addr = internal_native_create();
+        int addr = internal_native_create_addr();
         internal_reset(addr, true);
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = new imgui.Config();
-return imgui.getPointer(jsObj);
+var jsObj = new nodeeditor.Config();
+return nodeeditor.getPointer(jsObj);
 */
-    @org.teavm.jso.JSBody(script = "var jsObj = new imgui.Config();return imgui.getPointer(jsObj);")
-    public static native int internal_native_create();
+    @org.teavm.jso.JSBody(script = "var jsObj = new nodeeditor.Config();return nodeeditor.getPointer(jsObj);")
+    public static native int internal_native_create_addr();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -42,9 +43,9 @@ return imgui.getPointer(jsObj);
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.Config);
-imgui.destroy(jsObj);
+var jsObj = nodeeditor.wrapPointer(this_addr, nodeeditor.Config);
+nodeeditor.destroy(jsObj);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.Config);imgui.destroy(jsObj);")
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = nodeeditor.wrapPointer(this_addr, nodeeditor.Config);nodeeditor.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 }

@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
@@ -14,14 +15,14 @@ import gen.imgui.enums.ImGuiItemStatusFlags;
 import gen.imgui.enums.ImGuiItemFlags;
 import gen.imgui.enums.ImGuiDockNodeFlags;
 import gen.imgui.enums.ImGuiDir;
-import gen.imgui.idl.helper.IDLIntArray;
+import gen.com.github.xpenatan.jparser.idl.helper.IDLIntArray;
 import gen.imgui.enums.ImGuiTableFlags;
-import gen.imgui.idl.helper.IDLBoolArray;
+import gen.com.github.xpenatan.jparser.idl.helper.IDLBoolArray;
 import gen.imgui.enums.ImGuiButtonFlags;
 import gen.imgui.enums.ImGuiDataType;
 import gen.imgui.enums.ImGuiSliderFlags;
 import gen.imgui.enums.ImGuiAxis;
-import gen.imgui.idl.helper.IDLFloatArray;
+import gen.com.github.xpenatan.jparser.idl.helper.IDLFloatArray;
 
 public class ImGuiInternal extends IDLBase {
 
@@ -125,12 +126,12 @@ return returnedJSObj;
     public static native int internal_native_ImHashStr__0(String data);
 
     public static ImGuiWindow GetCurrentWindowRead() {
-        int pointer = internal_native_GetCurrentWindowRead();
-        if (pointer == 0)
+        int addr = internal_native_GetCurrentWindowRead_addr();
+        if (addr == 0)
             return ImGuiWindow.NULL;
         if (ImGuiWindow_TEMP_STATIC_GEN_0 == null)
             ImGuiWindow_TEMP_STATIC_GEN_0 = ImGuiWindow.native_new();
-        ImGuiWindow_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        ImGuiWindow_TEMP_STATIC_GEN_0.internal_reset(addr, false);
         return ImGuiWindow_TEMP_STATIC_GEN_0;
     }
 
@@ -140,15 +141,15 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGuiInternal.prototype.GetCurrentWindowRead();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_GetCurrentWindowRead();
+    public static native int internal_native_GetCurrentWindowRead_addr();
 
     public static ImGuiWindow GetCurrentWindow() {
-        int pointer = internal_native_GetCurrentWindow();
-        if (pointer == 0)
+        int addr = internal_native_GetCurrentWindow_addr();
+        if (addr == 0)
             return ImGuiWindow.NULL;
         if (ImGuiWindow_TEMP_STATIC_GEN_1 == null)
             ImGuiWindow_TEMP_STATIC_GEN_1 = ImGuiWindow.native_new();
-        ImGuiWindow_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        ImGuiWindow_TEMP_STATIC_GEN_1.internal_reset(addr, false);
         return ImGuiWindow_TEMP_STATIC_GEN_1;
     }
 
@@ -158,15 +159,15 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGuiInternal.prototype.GetCurrentWindow();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_GetCurrentWindow();
+    public static native int internal_native_GetCurrentWindow_addr();
 
     public static ImGuiWindow FindWindowByID(int id) {
-        int pointer = internal_native_FindWindowByID(id);
-        if (pointer == 0)
+        int addr = internal_native_FindWindowByID_addr(id);
+        if (addr == 0)
             return ImGuiWindow.NULL;
         if (ImGuiWindow_TEMP_STATIC_GEN_2 == null)
             ImGuiWindow_TEMP_STATIC_GEN_2 = ImGuiWindow.native_new();
-        ImGuiWindow_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
+        ImGuiWindow_TEMP_STATIC_GEN_2.internal_reset(addr, false);
         return ImGuiWindow_TEMP_STATIC_GEN_2;
     }
 
@@ -176,15 +177,15 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"id"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.FindWindowByID(id);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_FindWindowByID(int id);
+    public static native int internal_native_FindWindowByID_addr(int id);
 
     public static ImGuiWindow FindWindowByName(String name) {
-        int pointer = internal_native_FindWindowByName(name);
-        if (pointer == 0)
+        int addr = internal_native_FindWindowByName_addr(name);
+        if (addr == 0)
             return ImGuiWindow.NULL;
         if (ImGuiWindow_TEMP_STATIC_GEN_3 == null)
             ImGuiWindow_TEMP_STATIC_GEN_3 = ImGuiWindow.native_new();
-        ImGuiWindow_TEMP_STATIC_GEN_3.internal_reset(pointer, false);
+        ImGuiWindow_TEMP_STATIC_GEN_3.internal_reset(addr, false);
         return ImGuiWindow_TEMP_STATIC_GEN_3;
     }
 
@@ -194,7 +195,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"name"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.FindWindowByName(name);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_FindWindowByName(String name);
+    public static native int internal_native_FindWindowByName_addr(String name);
 
     public static void UpdateWindowParentAndRootLinks(ImGuiWindow window, ImGuiWindowFlags flags, ImGuiWindow parent_window) {
         internal_native_UpdateWindowParentAndRootLinks(window.native_address, flags.getValue(), parent_window.native_address);
@@ -217,12 +218,12 @@ imgui.ImGuiInternal.prototype.UpdateWindowSkipRefresh(window_addr);
     public static native void internal_native_UpdateWindowSkipRefresh(int window_addr);
 
     public static ImVec2 CalcWindowNextAutoFitSize(ImGuiWindow window) {
-        int pointer = internal_native_CalcWindowNextAutoFitSize(window.native_address);
-        if (pointer == 0)
+        int addr = internal_native_CalcWindowNextAutoFitSize_addr(window.native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_STATIC_GEN_0 == null)
             ImVec2_TEMP_STATIC_GEN_0 = ImVec2.native_new();
-        ImVec2_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        ImVec2_TEMP_STATIC_GEN_0.internal_reset(addr, false);
         return ImVec2_TEMP_STATIC_GEN_0;
     }
 
@@ -232,7 +233,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"window_addr"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.CalcWindowNextAutoFitSize(window_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_CalcWindowNextAutoFitSize(int window_addr);
+    public static native int internal_native_CalcWindowNextAutoFitSize_addr(int window_addr);
 
     public static boolean IsWindowChildOf(ImGuiWindow window, ImGuiWindow potential_parent, boolean popup_hierarchy, boolean dock_hierarchy) {
         return internal_native_IsWindowChildOf(window.native_address, potential_parent.native_address, popup_hierarchy, dock_hierarchy);
@@ -369,12 +370,12 @@ imgui.ImGuiInternal.prototype.SetWindowParentWindowForFocusRoute(window_addr, pa
     public static native void internal_native_SetWindowParentWindowForFocusRoute(int window_addr, int parent_window_addr);
 
     public static ImRect WindowRectAbsToRel(ImGuiWindow window, ImRect r) {
-        int pointer = internal_native_WindowRectAbsToRel(window.native_address, r.native_address);
-        if (pointer == 0)
+        int addr = internal_native_WindowRectAbsToRel_addr(window.native_address, r.native_address);
+        if (addr == 0)
             return ImRect.NULL;
         if (ImRect_TEMP_STATIC_GEN_0 == null)
             ImRect_TEMP_STATIC_GEN_0 = ImRect.native_new();
-        ImRect_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        ImRect_TEMP_STATIC_GEN_0.internal_reset(addr, false);
         return ImRect_TEMP_STATIC_GEN_0;
     }
 
@@ -384,15 +385,15 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"window_addr", "r_addr"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.WindowRectAbsToRel(window_addr, r_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_WindowRectAbsToRel(int window_addr, int r_addr);
+    public static native int internal_native_WindowRectAbsToRel_addr(int window_addr, int r_addr);
 
     public static ImRect WindowRectRelToAbs(ImGuiWindow window, ImRect r) {
-        int pointer = internal_native_WindowRectRelToAbs(window.native_address, r.native_address);
-        if (pointer == 0)
+        int addr = internal_native_WindowRectRelToAbs_addr(window.native_address, r.native_address);
+        if (addr == 0)
             return ImRect.NULL;
         if (ImRect_TEMP_STATIC_GEN_1 == null)
             ImRect_TEMP_STATIC_GEN_1 = ImRect.native_new();
-        ImRect_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        ImRect_TEMP_STATIC_GEN_1.internal_reset(addr, false);
         return ImRect_TEMP_STATIC_GEN_1;
     }
 
@@ -402,15 +403,15 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"window_addr", "r_addr"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.WindowRectRelToAbs(window_addr, r_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_WindowRectRelToAbs(int window_addr, int r_addr);
+    public static native int internal_native_WindowRectRelToAbs_addr(int window_addr, int r_addr);
 
     public static ImVec2 WindowPosAbsToRel(ImGuiWindow window, ImVec2 p) {
-        int pointer = internal_native_WindowPosAbsToRel(window.native_address, p.native_address);
-        if (pointer == 0)
+        int addr = internal_native_WindowPosAbsToRel_addr(window.native_address, p.native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_STATIC_GEN_1 == null)
             ImVec2_TEMP_STATIC_GEN_1 = ImVec2.native_new();
-        ImVec2_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        ImVec2_TEMP_STATIC_GEN_1.internal_reset(addr, false);
         return ImVec2_TEMP_STATIC_GEN_1;
     }
 
@@ -420,15 +421,15 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"window_addr", "p_addr"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.WindowPosAbsToRel(window_addr, p_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_WindowPosAbsToRel(int window_addr, int p_addr);
+    public static native int internal_native_WindowPosAbsToRel_addr(int window_addr, int p_addr);
 
     public static ImVec2 WindowPosRelToAbs(ImGuiWindow window, ImVec2 p) {
-        int pointer = internal_native_WindowPosRelToAbs(window.native_address, p.native_address);
-        if (pointer == 0)
+        int addr = internal_native_WindowPosRelToAbs_addr(window.native_address, p.native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_STATIC_GEN_2 == null)
             ImVec2_TEMP_STATIC_GEN_2 = ImVec2.native_new();
-        ImVec2_TEMP_STATIC_GEN_2.internal_reset(pointer, false);
+        ImVec2_TEMP_STATIC_GEN_2.internal_reset(addr, false);
         return ImVec2_TEMP_STATIC_GEN_2;
     }
 
@@ -438,7 +439,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"window_addr", "p_addr"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.WindowPosRelToAbs(window_addr, p_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_WindowPosRelToAbs(int window_addr, int p_addr);
+    public static native int internal_native_WindowPosRelToAbs_addr(int window_addr, int p_addr);
 
     public static void FocusWindow(ImGuiWindow window, ImGuiFocusRequestFlags flags) {
         internal_native_FocusWindow(window.native_address, flags.getValue());
@@ -522,12 +523,12 @@ return returnedJSObj;
     public static native int internal_native_FindWindowDisplayIndex(int window_addr);
 
     public static ImGuiWindow FindBottomMostVisibleWindowWithinBeginStack(ImGuiWindow window) {
-        int pointer = internal_native_FindBottomMostVisibleWindowWithinBeginStack(window.native_address);
-        if (pointer == 0)
+        int addr = internal_native_FindBottomMostVisibleWindowWithinBeginStack_addr(window.native_address);
+        if (addr == 0)
             return ImGuiWindow.NULL;
         if (ImGuiWindow_TEMP_STATIC_GEN_4 == null)
             ImGuiWindow_TEMP_STATIC_GEN_4 = ImGuiWindow.native_new();
-        ImGuiWindow_TEMP_STATIC_GEN_4.internal_reset(pointer, false);
+        ImGuiWindow_TEMP_STATIC_GEN_4.internal_reset(addr, false);
         return ImGuiWindow_TEMP_STATIC_GEN_4;
     }
 
@@ -537,7 +538,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"window_addr"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.FindBottomMostVisibleWindowWithinBeginStack(window_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_FindBottomMostVisibleWindowWithinBeginStack(int window_addr);
+    public static native int internal_native_FindBottomMostVisibleWindowWithinBeginStack_addr(int window_addr);
 
     public static void SetNextWindowRefreshPolicy(ImGuiWindowRefreshFlags flags) {
         internal_native_SetNextWindowRefreshPolicy(flags.getValue());
@@ -642,12 +643,12 @@ return returnedJSObj;
     public static native float internal_native_GetRoundedFontSize(float size);
 
     public static ImFont GetDefaultFont() {
-        int pointer = internal_native_GetDefaultFont();
-        if (pointer == 0)
+        int addr = internal_native_GetDefaultFont_addr();
+        if (addr == 0)
             return ImFont.NULL;
         if (ImFont_TEMP_STATIC_GEN_0 == null)
             ImFont_TEMP_STATIC_GEN_0 = ImFont.native_new();
-        ImFont_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        ImFont_TEMP_STATIC_GEN_0.internal_reset(addr, false);
         return ImFont_TEMP_STATIC_GEN_0;
     }
 
@@ -657,7 +658,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImGuiInternal.prototype.GetDefaultFont();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_GetDefaultFont();
+    public static native int internal_native_GetDefaultFont_addr();
 
     public static void PushPasswordFont() {
         internal_native_PushPasswordFont();
@@ -680,12 +681,12 @@ imgui.ImGuiInternal.prototype.PopPasswordFont();
     public static native void internal_native_PopPasswordFont();
 
     public static ImDrawList GetForegroundDrawList(ImGuiWindow window) {
-        int pointer = internal_native_GetForegroundDrawList(window.native_address);
-        if (pointer == 0)
+        int addr = internal_native_GetForegroundDrawList_addr(window.native_address);
+        if (addr == 0)
             return ImDrawList.NULL;
         if (ImDrawList_TEMP_STATIC_GEN_0 == null)
             ImDrawList_TEMP_STATIC_GEN_0 = ImDrawList.native_new();
-        ImDrawList_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        ImDrawList_TEMP_STATIC_GEN_0.internal_reset(addr, false);
         return ImDrawList_TEMP_STATIC_GEN_0;
     }
 
@@ -695,7 +696,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"window_addr"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.GetForegroundDrawList(window_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_GetForegroundDrawList(int window_addr);
+    public static native int internal_native_GetForegroundDrawList_addr(int window_addr);
 
     public static void Initialize() {
         internal_native_Initialize();
@@ -957,12 +958,12 @@ imgui.ImGuiInternal.prototype.DockBuilderDockWindow(window_name, node_id);
     public static native void internal_native_DockBuilderDockWindow(String window_name, int node_id);
 
     public static ImGuiDockNode DockBuilderGetNode(int node_id) {
-        int pointer = internal_native_DockBuilderGetNode(node_id);
-        if (pointer == 0)
+        int addr = internal_native_DockBuilderGetNode_addr(node_id);
+        if (addr == 0)
             return ImGuiDockNode.NULL;
         if (ImGuiDockNode_TEMP_STATIC_GEN_0 == null)
             ImGuiDockNode_TEMP_STATIC_GEN_0 = ImGuiDockNode.native_new();
-        ImGuiDockNode_TEMP_STATIC_GEN_0.internal_reset(pointer, false);
+        ImGuiDockNode_TEMP_STATIC_GEN_0.internal_reset(addr, false);
         return ImGuiDockNode_TEMP_STATIC_GEN_0;
     }
 
@@ -972,15 +973,15 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"node_id"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.DockBuilderGetNode(node_id);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_DockBuilderGetNode(int node_id);
+    public static native int internal_native_DockBuilderGetNode_addr(int node_id);
 
     public static ImGuiDockNode DockBuilderGetCentralNode(int node_id) {
-        int pointer = internal_native_DockBuilderGetCentralNode(node_id);
-        if (pointer == 0)
+        int addr = internal_native_DockBuilderGetCentralNode_addr(node_id);
+        if (addr == 0)
             return ImGuiDockNode.NULL;
         if (ImGuiDockNode_TEMP_STATIC_GEN_1 == null)
             ImGuiDockNode_TEMP_STATIC_GEN_1 = ImGuiDockNode.native_new();
-        ImGuiDockNode_TEMP_STATIC_GEN_1.internal_reset(pointer, false);
+        ImGuiDockNode_TEMP_STATIC_GEN_1.internal_reset(addr, false);
         return ImGuiDockNode_TEMP_STATIC_GEN_1;
     }
 
@@ -990,7 +991,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"node_id"}, script = "var returnedJSObj = imgui.ImGuiInternal.prototype.DockBuilderGetCentralNode(node_id);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_DockBuilderGetCentralNode(int node_id);
+    public static native int internal_native_DockBuilderGetCentralNode_addr(int node_id);
 
     public static int DockBuilderAddNode(int node_id, ImGuiDockNodeFlags flags) {
         return internal_native_DockBuilderAddNode(node_id, flags.getValue());

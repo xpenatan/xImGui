@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
@@ -40,12 +41,12 @@ delete nativeObject;
     public static native void internal_native_deleteNative(long this_addr);
 
     public ImTextureIDRef GetTexID() {
-        long pointer = internal_native_GetTexID(native_address);
-        if (pointer == 0)
+        long addr = internal_native_GetTexID_addr(native_address);
+        if (addr == 0)
             return ImTextureIDRef.NULL;
         if (ImTextureIDRef_TEMP_GEN_0 == null)
             ImTextureIDRef_TEMP_GEN_0 = ImTextureIDRef.native_new();
-        ImTextureIDRef_TEMP_GEN_0.internal_reset(pointer, false);
+        ImTextureIDRef_TEMP_GEN_0.internal_reset(addr, false);
         return ImTextureIDRef_TEMP_GEN_0;
     }
 
@@ -54,15 +55,15 @@ ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
 static ImTextureIDRef copy_addr;
 copy_addr = nativeObject->GetTexID();
 return (jlong)&copy_addr;*/
-    public static native long internal_native_GetTexID(long this_addr);
+    public static native long internal_native_GetTexID_addr(long this_addr);
 
     public ImVec4 get_ClipRect() {
-        long pointer = internal_native_get_ClipRect(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_ClipRect_addr(native_address);
+        if (addr == 0)
             return ImVec4.NULL;
         if (ImVec4_TEMP_GEN_0 == null)
             ImVec4_TEMP_GEN_0 = ImVec4.native_new();
-        ImVec4_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVec4_TEMP_GEN_0.internal_reset(addr, false);
         return ImVec4_TEMP_GEN_0;
     }
 
@@ -70,7 +71,7 @@ return (jlong)&copy_addr;*/
 ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
 return (jlong)&nativeObject->ClipRect;
 */
-    public static native long internal_native_get_ClipRect(long this_addr);
+    public static native long internal_native_get_ClipRect_addr(long this_addr);
 
     public void set_ClipRect(ImVec4 ClipRect) {
         internal_native_set_ClipRect(native_address, ClipRect.native_address);

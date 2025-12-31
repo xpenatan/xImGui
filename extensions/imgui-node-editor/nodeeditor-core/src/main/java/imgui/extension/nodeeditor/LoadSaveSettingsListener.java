@@ -3,10 +3,11 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package imgui.extension.nodeeditor;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
-import imgui.idl.helper.IDLString;
+import com.github.xpenatan.jparser.idl.helper.IDLString;
 
 public class LoadSaveSettingsListener extends IDLBase {
 
@@ -65,7 +66,7 @@ delete nativeObject;
     public static native void internal_native_deleteNative(long this_addr);
 
     public LoadSaveSettingsListener() {
-        long addr = internal_native_create();
+        long addr = internal_native_create_addr();
         internal_reset(addr, true);
         setupCallback();
     }
@@ -107,7 +108,7 @@ delete nativeObject;
     /*[-JNI;-NATIVE]
 return (jlong)new LoadSaveSettingsListenerImpl();
 */
-    public static native long internal_native_create();
+    public static native long internal_native_create_addr();
 
     /*[-JNI;-NATIVE]
 LoadSaveSettingsListenerImpl* nativeObject = (LoadSaveSettingsListenerImpl*)this_addr;

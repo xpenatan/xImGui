@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
@@ -50,12 +51,12 @@ return nativeObject->size();
     public static native int internal_native_size(long this_addr);
 
     public ImGuiStoragePair getData(int index) {
-        long pointer = internal_native_getData(native_address, index);
-        if (pointer == 0)
+        long addr = internal_native_getData_addr(native_address, index);
+        if (addr == 0)
             return ImGuiStoragePair.NULL;
         if (ImGuiStoragePair_TEMP_GEN_0 == null)
             ImGuiStoragePair_TEMP_GEN_0 = ImGuiStoragePair.native_new();
-        ImGuiStoragePair_TEMP_GEN_0.internal_reset(pointer, false);
+        ImGuiStoragePair_TEMP_GEN_0.internal_reset(addr, false);
         return ImGuiStoragePair_TEMP_GEN_0;
     }
 
@@ -63,7 +64,7 @@ return nativeObject->size();
 ImVectorImGuiStoragePair* nativeObject = (ImVectorImGuiStoragePair*)this_addr;
 return (jlong)&(*nativeObject)[(int)index];
 */
-    public static native long internal_native_getData(long this_addr, int index);
+    public static native long internal_native_getData_addr(long this_addr, int index);
 
     public void reserve(int new_capacity) {
         internal_native_reserve(native_address, new_capacity);
@@ -96,12 +97,12 @@ nativeObject->clear();
     public static native void internal_native_clear(long this_addr);
 
     public IDLBase get_Data() {
-        long pointer = internal_native_get_Data(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_Data_addr(native_address);
+        if (addr == 0)
             return IDLBase.NULL;
         if (IDLBase_TEMP_GEN_0 == null)
             IDLBase_TEMP_GEN_0 = IDLBase.native_new();
-        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
+        IDLBase_TEMP_GEN_0.internal_reset(addr, false);
         return IDLBase_TEMP_GEN_0;
     }
 
@@ -109,5 +110,5 @@ nativeObject->clear();
 ImVectorImGuiStoragePair* nativeObject = (ImVectorImGuiStoragePair*)this_addr;
 return (jlong)nativeObject->Data;
 */
-    public static native long internal_native_get_Data(long this_addr);
+    public static native long internal_native_get_Data_addr(long this_addr);
 }

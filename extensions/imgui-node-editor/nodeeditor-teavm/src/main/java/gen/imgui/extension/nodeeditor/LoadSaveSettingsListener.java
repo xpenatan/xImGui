@@ -3,10 +3,11 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui.extension.nodeeditor;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
-import gen.imgui.idl.helper.IDLString;
+import gen.com.github.xpenatan.jparser.idl.helper.IDLString;
 
 public class LoadSaveSettingsListener extends IDLBase {
 
@@ -35,14 +36,14 @@ public class LoadSaveSettingsListener extends IDLBase {
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.LoadSaveSettingsListenerImpl);
-imgui.destroy(jsObj);
+var jsObj = nodeeditor.wrapPointer(this_addr, nodeeditor.LoadSaveSettingsListenerImpl);
+nodeeditor.destroy(jsObj);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.LoadSaveSettingsListenerImpl);imgui.destroy(jsObj);")
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = nodeeditor.wrapPointer(this_addr, nodeeditor.LoadSaveSettingsListenerImpl);nodeeditor.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
     public LoadSaveSettingsListener() {
-        int addr = internal_native_create();
+        int addr = internal_native_create_addr();
         internal_reset(addr, true);
         setupCallback();
     }
@@ -94,13 +95,13 @@ imgui.destroy(jsObj);
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = new imgui.LoadSaveSettingsListenerImpl();
-return imgui.getPointer(jsObj);
+var jsObj = new nodeeditor.LoadSaveSettingsListenerImpl();
+return nodeeditor.getPointer(jsObj);
 */
-    @org.teavm.jso.JSBody(script = "var jsObj = new imgui.LoadSaveSettingsListenerImpl();return imgui.getPointer(jsObj);")
-    public static native int internal_native_create();
+    @org.teavm.jso.JSBody(script = "var jsObj = new nodeeditor.LoadSaveSettingsListenerImpl();return nodeeditor.getPointer(jsObj);")
+    public static native int internal_native_create_addr();
 
-    @org.teavm.jso.JSBody(params = { "this_addr", "onLoad", "onSave" }, script = "var LoadSaveSettingsListenerImpl = imgui.wrapPointer(this_addr, imgui.LoadSaveSettingsListenerImpl); LoadSaveSettingsListenerImpl.onLoad = onLoad; LoadSaveSettingsListenerImpl.onSave = onSave;")
+    @org.teavm.jso.JSBody(params = { "this_addr", "onLoad", "onSave" }, script = "var LoadSaveSettingsListenerImpl = nodeeditor.wrapPointer(this_addr, nodeeditor.LoadSaveSettingsListenerImpl); LoadSaveSettingsListenerImpl.onLoad = onLoad; LoadSaveSettingsListenerImpl.onSave = onSave;")
     public static native void internal_native_setupCallback(int this_addr, onLoad onLoad, onSave onSave);
 
     @org.teavm.jso.JSFunctor()

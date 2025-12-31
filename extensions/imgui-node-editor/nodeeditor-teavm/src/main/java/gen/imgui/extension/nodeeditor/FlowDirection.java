@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui.extension.nodeeditor;
 
 import com.github.xpenatan.jParser.idl.IDLEnum;
@@ -34,14 +35,14 @@ public enum FlowDirection implements IDLEnum<FlowDirection> {
     }
 
     /*[-TEAVM;-NATIVE]
-return imgui.Forward;
+return nodeeditor.Forward;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.Forward;")
+    @org.teavm.jso.JSBody(script = "return nodeeditor.Forward;")
     private static native int Forward_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.Backward;
+return nodeeditor.Backward;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.Backward;")
+    @org.teavm.jso.JSBody(script = "return nodeeditor.Backward;")
     private static native int Backward_NATIVE();
 }

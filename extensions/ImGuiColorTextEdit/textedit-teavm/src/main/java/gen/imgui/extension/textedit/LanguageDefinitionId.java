@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui.extension.textedit;
 
 import com.github.xpenatan.jParser.idl.IDLEnum;
@@ -45,68 +46,68 @@ public enum LanguageDefinitionId implements IDLEnum<LanguageDefinitionId> {
     }
 
     /*[-TEAVM;-NATIVE]
-return imgui.None;
+return textedit.None;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.None;")
+    @org.teavm.jso.JSBody(script = "return textedit.None;")
     private static native int None_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.Cpp;
+return textedit.Cpp;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.Cpp;")
+    @org.teavm.jso.JSBody(script = "return textedit.Cpp;")
     private static native int Cpp_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.C;
+return textedit.C;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.C;")
+    @org.teavm.jso.JSBody(script = "return textedit.C;")
     private static native int C_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.Cs;
+return textedit.Cs;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.Cs;")
+    @org.teavm.jso.JSBody(script = "return textedit.Cs;")
     private static native int Cs_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.Python;
+return textedit.Python;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.Python;")
+    @org.teavm.jso.JSBody(script = "return textedit.Python;")
     private static native int Python_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.Lua;
+return textedit.Lua;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.Lua;")
+    @org.teavm.jso.JSBody(script = "return textedit.Lua;")
     private static native int Lua_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.Json;
+return textedit.Json;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.Json;")
+    @org.teavm.jso.JSBody(script = "return textedit.Json;")
     private static native int Json_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.Sql;
+return textedit.Sql;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.Sql;")
+    @org.teavm.jso.JSBody(script = "return textedit.Sql;")
     private static native int Sql_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.AngelScript;
+return textedit.AngelScript;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.AngelScript;")
+    @org.teavm.jso.JSBody(script = "return textedit.AngelScript;")
     private static native int AngelScript_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.Glsl;
+return textedit.Glsl;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.Glsl;")
+    @org.teavm.jso.JSBody(script = "return textedit.Glsl;")
     private static native int Glsl_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.Hlsl;
+return textedit.Hlsl;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.Hlsl;")
+    @org.teavm.jso.JSBody(script = "return textedit.Hlsl;")
     private static native int Hlsl_NATIVE();
 }

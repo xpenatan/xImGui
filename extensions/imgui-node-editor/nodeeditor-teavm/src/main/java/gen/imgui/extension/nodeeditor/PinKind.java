@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui.extension.nodeeditor;
 
 import com.github.xpenatan.jParser.idl.IDLEnum;
@@ -34,14 +35,14 @@ public enum PinKind implements IDLEnum<PinKind> {
     }
 
     /*[-TEAVM;-NATIVE]
-return imgui.Input;
+return nodeeditor.Input;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.Input;")
+    @org.teavm.jso.JSBody(script = "return nodeeditor.Input;")
     private static native int Input_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.Output;
+return nodeeditor.Output;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.Output;")
+    @org.teavm.jso.JSBody(script = "return nodeeditor.Output;")
     private static native int Output_NATIVE();
 }

@@ -3,10 +3,11 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
-import gen.imgui.idl.helper.IDLString;
+import gen.com.github.xpenatan.jparser.idl.helper.IDLString;
 
 public class ClipboardTextFunction extends IDLBase {
 
@@ -52,7 +53,7 @@ imgui.ClipboardTextFunction.prototype.setClipboardTextFunction(io_addr, clipboar
     public static native void internal_native_setClipboardTextFunction(int io_addr, int clipboardFunction_addr);
 
     public ClipboardTextFunction() {
-        int addr = internal_native_create();
+        int addr = internal_native_create_addr();
         internal_reset(addr, true);
         setupCallback();
     }
@@ -98,7 +99,7 @@ var jsObj = new imgui.ClipboardTextFunctionImpl();
 return imgui.getPointer(jsObj);
 */
     @org.teavm.jso.JSBody(script = "var jsObj = new imgui.ClipboardTextFunctionImpl();return imgui.getPointer(jsObj);")
-    public static native int internal_native_create();
+    public static native int internal_native_create_addr();
 
     @org.teavm.jso.JSBody(params = { "this_addr", "onGetClipboardText", "onSetClipboardText" }, script = "var ClipboardTextFunctionImpl = imgui.wrapPointer(this_addr, imgui.ClipboardTextFunctionImpl); ClipboardTextFunctionImpl.onGetClipboardText = onGetClipboardText; ClipboardTextFunctionImpl.onSetClipboardText = onSetClipboardText;")
     public static native void internal_native_setupCallback(int this_addr, onGetClipboardText onGetClipboardText, onSetClipboardText onSetClipboardText);

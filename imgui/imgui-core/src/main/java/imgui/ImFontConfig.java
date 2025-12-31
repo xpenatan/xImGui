@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
@@ -16,14 +17,14 @@ public class ImFontConfig extends IDLBase {
     static public final ImFontConfig NULL = ImFontConfig.native_new();
 
     public ImFontConfig() {
-        long addr = internal_native_create();
+        long addr = internal_native_create_addr();
         internal_reset(addr, true);
     }
 
     /*[-JNI;-NATIVE]
 return (jlong)new ImFontConfig();
 */
-    public static native long internal_native_create();
+    public static native long internal_native_create_addr();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -70,12 +71,12 @@ nativeObject->Name[index] = Name;
     public static native void internal_native_set_Name(long this_addr, int index, byte Name);
 
     public IDLBase get_FontData() {
-        long pointer = internal_native_get_FontData(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_FontData_addr(native_address);
+        if (addr == 0)
             return IDLBase.NULL;
         if (IDLBase_TEMP_GEN_0 == null)
             IDLBase_TEMP_GEN_0 = IDLBase.native_new();
-        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
+        IDLBase_TEMP_GEN_0.internal_reset(addr, false);
         return IDLBase_TEMP_GEN_0;
     }
 
@@ -83,7 +84,7 @@ nativeObject->Name[index] = Name;
 ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
 return (jlong)nativeObject->FontData;
 */
-    public static native long internal_native_get_FontData(long this_addr);
+    public static native long internal_native_get_FontData_addr(long this_addr);
 
     public void set_FontData(IDLBase FontData) {
         internal_native_set_FontData(native_address, FontData.native_void_address);
@@ -276,12 +277,12 @@ nativeObject->SizePixels = SizePixels;
     public static native void internal_native_set_SizePixels(long this_addr, float SizePixels);
 
     public ImVec2 get_GlyphOffset() {
-        long pointer = internal_native_get_GlyphOffset(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_GlyphOffset_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_0.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_0;
     }
 
@@ -289,7 +290,7 @@ nativeObject->SizePixels = SizePixels;
 ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
 return (jlong)&nativeObject->GlyphOffset;
 */
-    public static native long internal_native_get_GlyphOffset(long this_addr);
+    public static native long internal_native_get_GlyphOffset_addr(long this_addr);
 
     public void set_GlyphOffset(ImVec2 GlyphOffset) {
         internal_native_set_GlyphOffset(native_address, GlyphOffset.native_address);

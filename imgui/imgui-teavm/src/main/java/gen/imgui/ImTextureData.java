@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
@@ -77,12 +78,12 @@ jsObj.DestroyPixels();
     public static native void internal_native_DestroyPixels(int this_addr);
 
     public IDLBase GetPixels() {
-        int pointer = internal_native_GetPixels(native_address);
-        if (pointer == 0)
+        int addr = internal_native_GetPixels_addr(native_address);
+        if (addr == 0)
             return IDLBase.NULL;
         if (IDLBase_TEMP_GEN_0 == null)
             IDLBase_TEMP_GEN_0 = IDLBase.native_new();
-        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
+        IDLBase_TEMP_GEN_0.internal_reset(addr, false);
         return IDLBase_TEMP_GEN_0;
     }
 
@@ -92,15 +93,15 @@ var returnedJSObj = jsObj.GetPixels();
 return returnedJSObj;
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImTextureData);var returnedJSObj = jsObj.GetPixels();return returnedJSObj;")
-    public static native int internal_native_GetPixels(int this_addr);
+    public static native int internal_native_GetPixels_addr(int this_addr);
 
     public IDLBase GetPixelsAt(int x, int y) {
-        int pointer = internal_native_GetPixelsAt(native_address, x, y);
-        if (pointer == 0)
+        int addr = internal_native_GetPixelsAt_addr(native_address, x, y);
+        if (addr == 0)
             return IDLBase.NULL;
         if (IDLBase_TEMP_GEN_1 == null)
             IDLBase_TEMP_GEN_1 = IDLBase.native_new();
-        IDLBase_TEMP_GEN_1.internal_reset(pointer, false);
+        IDLBase_TEMP_GEN_1.internal_reset(addr, false);
         return IDLBase_TEMP_GEN_1;
     }
 
@@ -110,7 +111,7 @@ var returnedJSObj = jsObj.GetPixelsAt(x, y);
 return returnedJSObj;
 */
     @org.teavm.jso.JSBody(params = {"this_addr", "x", "y"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImTextureData);var returnedJSObj = jsObj.GetPixelsAt(x, y);return returnedJSObj;")
-    public static native int internal_native_GetPixelsAt(int this_addr, int x, int y);
+    public static native int internal_native_GetPixelsAt_addr(int this_addr, int x, int y);
 
     public int GetSizeInBytes() {
         return internal_native_GetSizeInBytes(native_address);
@@ -137,12 +138,12 @@ return returnedJSObj;
     public static native int internal_native_GetPitch(int this_addr);
 
     public ImTextureRef GetTexRef() {
-        int pointer = internal_native_GetTexRef(native_address);
-        if (pointer == 0)
+        int addr = internal_native_GetTexRef_addr(native_address);
+        if (addr == 0)
             return ImTextureRef.NULL;
         if (ImTextureRef_TEMP_GEN_0 == null)
             ImTextureRef_TEMP_GEN_0 = ImTextureRef.native_new();
-        ImTextureRef_TEMP_GEN_0.internal_reset(pointer, false);
+        ImTextureRef_TEMP_GEN_0.internal_reset(addr, false);
         return ImTextureRef_TEMP_GEN_0;
     }
 
@@ -153,15 +154,15 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImTextureData);var returnedJSObj = jsObj.GetTexRef();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_GetTexRef(int this_addr);
+    public static native int internal_native_GetTexRef_addr(int this_addr);
 
     public ImTextureIDRef GetTexID() {
-        int pointer = internal_native_GetTexID(native_address);
-        if (pointer == 0)
+        int addr = internal_native_GetTexID_addr(native_address);
+        if (addr == 0)
             return ImTextureIDRef.NULL;
         if (ImTextureIDRef_TEMP_GEN_0 == null)
             ImTextureIDRef_TEMP_GEN_0 = ImTextureIDRef.native_new();
-        ImTextureIDRef_TEMP_GEN_0.internal_reset(pointer, false);
+        ImTextureIDRef_TEMP_GEN_0.internal_reset(addr, false);
         return ImTextureIDRef_TEMP_GEN_0;
     }
 
@@ -172,7 +173,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImTextureData);var returnedJSObj = jsObj.GetTexID();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_GetTexID(int this_addr);
+    public static native int internal_native_GetTexID_addr(int this_addr);
 
     public void SetTexID(ImTextureIDRef tex_id) {
         internal_native_SetTexID(native_address, tex_id.native_address);
@@ -226,12 +227,12 @@ return jsObj.get_Status();
     public static native int internal_native_get_Status(int this_addr);
 
     public IDLBase get_BackendUserData() {
-        int pointer = internal_native_get_BackendUserData(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_BackendUserData_addr(native_address);
+        if (addr == 0)
             return IDLBase.NULL;
         if (IDLBase_TEMP_GEN_2 == null)
             IDLBase_TEMP_GEN_2 = IDLBase.native_new();
-        IDLBase_TEMP_GEN_2.internal_reset(pointer, false);
+        IDLBase_TEMP_GEN_2.internal_reset(addr, false);
         return IDLBase_TEMP_GEN_2;
     }
 
@@ -240,7 +241,7 @@ var jsObj = imgui.wrapPointer(this_addr, imgui.ImTextureData);
 return jsObj.get_BackendUserData();
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImTextureData);return jsObj.get_BackendUserData();")
-    public static native int internal_native_get_BackendUserData(int this_addr);
+    public static native int internal_native_get_BackendUserData_addr(int this_addr);
 
     public void set_BackendUserData(IDLBase BackendUserData) {
         internal_native_set_BackendUserData(native_address, BackendUserData.native_void_address);
@@ -349,12 +350,12 @@ jsObj.set_BytesPerPixel(BytesPerPixel);
     public static native void internal_native_set_BytesPerPixel(int this_addr, int BytesPerPixel);
 
     public ImTextureRect get_UsedRect() {
-        int pointer = internal_native_get_UsedRect(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_UsedRect_addr(native_address);
+        if (addr == 0)
             return ImTextureRect.NULL;
         if (ImTextureRect_TEMP_GEN_0 == null)
             ImTextureRect_TEMP_GEN_0 = ImTextureRect.native_new();
-        ImTextureRect_TEMP_GEN_0.internal_reset(pointer, false);
+        ImTextureRect_TEMP_GEN_0.internal_reset(addr, false);
         return ImTextureRect_TEMP_GEN_0;
     }
 
@@ -365,7 +366,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImTextureData);var returnedJSObj = jsObj.get_UsedRect();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_get_UsedRect(int this_addr);
+    public static native int internal_native_get_UsedRect_addr(int this_addr);
 
     public void set_UsedRect(ImTextureRect UsedRect) {
         internal_native_set_UsedRect(native_address, UsedRect.native_address);
@@ -379,12 +380,12 @@ jsObj.set_UsedRect(UsedRect_addr);
     public static native void internal_native_set_UsedRect(int this_addr, int UsedRect_addr);
 
     public ImTextureRect get_UpdateRect() {
-        int pointer = internal_native_get_UpdateRect(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_UpdateRect_addr(native_address);
+        if (addr == 0)
             return ImTextureRect.NULL;
         if (ImTextureRect_TEMP_GEN_1 == null)
             ImTextureRect_TEMP_GEN_1 = ImTextureRect.native_new();
-        ImTextureRect_TEMP_GEN_1.internal_reset(pointer, false);
+        ImTextureRect_TEMP_GEN_1.internal_reset(addr, false);
         return ImTextureRect_TEMP_GEN_1;
     }
 
@@ -395,7 +396,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImTextureData);var returnedJSObj = jsObj.get_UpdateRect();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_get_UpdateRect(int this_addr);
+    public static native int internal_native_get_UpdateRect_addr(int this_addr);
 
     public void set_UpdateRect(ImTextureRect UpdateRect) {
         internal_native_set_UpdateRect(native_address, UpdateRect.native_address);
@@ -409,12 +410,12 @@ jsObj.set_UpdateRect(UpdateRect_addr);
     public static native void internal_native_set_UpdateRect(int this_addr, int UpdateRect_addr);
 
     public ImVectorImTextureRect get_Updates() {
-        int pointer = internal_native_get_Updates(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_Updates_addr(native_address);
+        if (addr == 0)
             return ImVectorImTextureRect.NULL;
         if (ImVectorImTextureRect_TEMP_GEN_0 == null)
             ImVectorImTextureRect_TEMP_GEN_0 = ImVectorImTextureRect.native_new();
-        ImVectorImTextureRect_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVectorImTextureRect_TEMP_GEN_0.internal_reset(addr, false);
         return ImVectorImTextureRect_TEMP_GEN_0;
     }
 
@@ -425,7 +426,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImTextureData);var returnedJSObj = jsObj.get_Updates();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_get_Updates(int this_addr);
+    public static native int internal_native_get_Updates_addr(int this_addr);
 
     public void set_Updates(ImVectorImTextureRect Updates) {
         internal_native_set_Updates(native_address, Updates.native_address);

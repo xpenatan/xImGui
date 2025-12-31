@@ -3,10 +3,11 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
-import gen.imgui.idl.helper.IDLString;
+import gen.com.github.xpenatan.jparser.idl.helper.IDLString;
 
 public class ImVectorDOMString extends IDLBase {
 
@@ -17,7 +18,7 @@ public class ImVectorDOMString extends IDLBase {
     static public final ImVectorDOMString NULL = ImVectorDOMString.native_new();
 
     public ImVectorDOMString() {
-        int addr = internal_native_create();
+        int addr = internal_native_create_addr();
         internal_reset(addr, true);
     }
 
@@ -26,7 +27,7 @@ var jsObj = new imgui.ImVectorDOMString();
 return imgui.getPointer(jsObj);
 */
     @org.teavm.jso.JSBody(script = "var jsObj = new imgui.ImVectorDOMString();return imgui.getPointer(jsObj);")
-    public static native int internal_native_create();
+    public static native int internal_native_create_addr();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -66,12 +67,12 @@ return returnedJSObj;
     public static native int internal_native_size(int this_addr);
 
     public IDLString getData(int index) {
-        int pointer = internal_native_getData(native_address, index);
-        if (pointer == 0)
+        int addr = internal_native_getData_addr(native_address, index);
+        if (addr == 0)
             return IDLString.NULL;
         if (IDLString_TEMP_GEN_0 == null)
             IDLString_TEMP_GEN_0 = IDLString.native_new();
-        IDLString_TEMP_GEN_0.internal_reset(pointer, false);
+        IDLString_TEMP_GEN_0.internal_reset(addr, false);
         return IDLString_TEMP_GEN_0;
     }
 
@@ -82,7 +83,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr", "index"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImVectorDOMString);var returnedJSObj = jsObj.getData(index);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_getData(int this_addr, int index);
+    public static native int internal_native_getData_addr(int this_addr, int index);
 
     public void push_back(String v) {
         internal_native_push_back(native_address, v);
@@ -129,12 +130,12 @@ jsObj.clear();
     public static native void internal_native_clear(int this_addr);
 
     public IDLBase get_Data() {
-        int pointer = internal_native_get_Data(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_Data_addr(native_address);
+        if (addr == 0)
             return IDLBase.NULL;
         if (IDLBase_TEMP_GEN_0 == null)
             IDLBase_TEMP_GEN_0 = IDLBase.native_new();
-        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
+        IDLBase_TEMP_GEN_0.internal_reset(addr, false);
         return IDLBase_TEMP_GEN_0;
     }
 
@@ -143,5 +144,5 @@ var jsObj = imgui.wrapPointer(this_addr, imgui.ImVectorDOMString);
 return jsObj.get_Data();
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImVectorDOMString);return jsObj.get_Data();")
-    public static native int internal_native_get_Data(int this_addr);
+    public static native int internal_native_get_Data_addr(int this_addr);
 }

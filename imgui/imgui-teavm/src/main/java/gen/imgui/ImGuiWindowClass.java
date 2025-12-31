@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
@@ -15,7 +16,7 @@ public class ImGuiWindowClass extends IDLBase {
     static public final ImGuiWindowClass NULL = ImGuiWindowClass.native_new();
 
     public ImGuiWindowClass() {
-        int addr = internal_native_create();
+        int addr = internal_native_create_addr();
         internal_reset(addr, true);
     }
 
@@ -24,7 +25,7 @@ var jsObj = new imgui.ImGuiWindowClass();
 return imgui.getPointer(jsObj);
 */
     @org.teavm.jso.JSBody(script = "var jsObj = new imgui.ImGuiWindowClass();return imgui.getPointer(jsObj);")
-    public static native int internal_native_create();
+    public static native int internal_native_create_addr();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer

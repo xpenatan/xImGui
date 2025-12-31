@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui.extension.nodeeditor;
 
 import com.github.xpenatan.jParser.idl.IDLEnum;
@@ -34,20 +35,20 @@ public enum CanvasSizeMode implements IDLEnum<CanvasSizeMode> {
     }
 
     /*[-TEAVM;-NATIVE]
-return imgui.FitVerticalView;
+return nodeeditor.FitVerticalView;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.FitVerticalView;")
+    @org.teavm.jso.JSBody(script = "return nodeeditor.FitVerticalView;")
     private static native int FitVerticalView_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.FitHorizontalView;
+return nodeeditor.FitHorizontalView;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.FitHorizontalView;")
+    @org.teavm.jso.JSBody(script = "return nodeeditor.FitHorizontalView;")
     private static native int FitHorizontalView_NATIVE();
 
     /*[-TEAVM;-NATIVE]
-return imgui.CenterOnly;
+return nodeeditor.CenterOnly;
 */
-    @org.teavm.jso.JSBody(script = "return imgui.CenterOnly;")
+    @org.teavm.jso.JSBody(script = "return nodeeditor.CenterOnly;")
     private static native int CenterOnly_NATIVE();
 }

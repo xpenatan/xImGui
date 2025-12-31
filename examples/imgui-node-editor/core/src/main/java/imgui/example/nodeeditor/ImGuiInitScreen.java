@@ -2,6 +2,7 @@ package imgui.example.nodeeditor;
 
 import com.badlogic.gdx.ScreenAdapter;
 import imgui.ImGuiLoader;
+import imgui.extension.nodeeditor.NodeEditorLoader;
 
 public class ImGuiInitScreen extends ScreenAdapter {
 
@@ -15,7 +16,19 @@ public class ImGuiInitScreen extends ScreenAdapter {
 
     @Override
     public void show() {
-        ImGuiLoader.init((isSuccess, e) -> init = isSuccess);
+        ImGuiLoader.init((imgui_isSuccess, imgui_t) -> {
+            if(imgui_t != null) {
+                imgui_t.printStackTrace();
+                return;
+            }
+            NodeEditorLoader.init((isSuccess, t) -> {
+                if(t != null) {
+                    t.printStackTrace();
+                    return;
+                }
+                init = isSuccess;
+            });
+        });
     }
 
     @Override

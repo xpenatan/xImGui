@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package imgui.extension.imlayout;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
@@ -12,14 +13,14 @@ public class ImGuiLayoutOptions extends IDLBase {
     static public final ImGuiLayoutOptions NULL = ImGuiLayoutOptions.native_new();
 
     public ImGuiLayoutOptions() {
-        long addr = internal_native_create();
+        long addr = internal_native_create_addr();
         internal_reset(addr, true);
     }
 
     /*[-JNI;-NATIVE]
 return (jlong)new ImGuiLayoutOptions();
 */
-    public static native long internal_native_create();
+    public static native long internal_native_create_addr();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer

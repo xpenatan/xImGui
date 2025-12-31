@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package imgui.extension.textedit;
 
 import com.github.xpenatan.jParser.idl.IDLEnum;

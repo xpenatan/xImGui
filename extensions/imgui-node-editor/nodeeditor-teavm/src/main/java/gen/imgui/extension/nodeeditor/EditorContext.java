@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui.extension.nodeeditor;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
@@ -30,9 +31,9 @@ public class EditorContext extends IDLBase {
     }
 
     /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.EditorContext);
-imgui.destroy(jsObj);
+var jsObj = nodeeditor.wrapPointer(this_addr, nodeeditor.EditorContext);
+nodeeditor.destroy(jsObj);
 */
-    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.EditorContext);imgui.destroy(jsObj);")
+    @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = nodeeditor.wrapPointer(this_addr, nodeeditor.EditorContext);nodeeditor.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 }

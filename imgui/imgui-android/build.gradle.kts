@@ -1,6 +1,5 @@
 plugins {
     id("com.android.library")
-    kotlin("android")
 }
 
 val moduleName = "imgui-android"
@@ -10,7 +9,7 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        minSdk = 21
+        minSdk = 29
     }
 
     sourceSets {
@@ -19,12 +18,13 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.toVersion(LibExt.java11Target)
-        targetCompatibility = JavaVersion.toVersion(LibExt.java11Target)
+        sourceCompatibility = JavaVersion.toVersion(LibExt.java8Target)
+        targetCompatibility = JavaVersion.toVersion(LibExt.java8Target)
     }
 }
 
 dependencies {
+    api("com.github.xpenatan.jParser:idl-helper-android:${LibExt.jParserVersion}")
 }
 
 // TODO Uncomment when android is ready
@@ -35,7 +35,7 @@ dependencies {
 //            group = LibExt.groupId
 //            version = LibExt.libVersion
 //            afterEvaluate {
-//                from(components["release"])
+//                artifact(tasks.named("bundleReleaseAar"))
 //            }
 //        }
 //    }

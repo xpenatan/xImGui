@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
@@ -41,12 +42,12 @@ imgui.destroy(jsObj);
     public static native void internal_native_deleteNative(int this_addr);
 
     public ImVec2 get_pos() {
-        int pointer = internal_native_get_pos(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_pos_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_0.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_0;
     }
 
@@ -57,7 +58,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawVert);var returnedJSObj = jsObj.get_pos();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_get_pos(int this_addr);
+    public static native int internal_native_get_pos_addr(int this_addr);
 
     public void set_pos(ImVec2 pos) {
         internal_native_set_pos(native_address, pos.native_address);
@@ -71,12 +72,12 @@ jsObj.set_pos(pos_addr);
     public static native void internal_native_set_pos(int this_addr, int pos_addr);
 
     public ImVec2 get_uv() {
-        int pointer = internal_native_get_uv(native_address);
-        if (pointer == 0)
+        int addr = internal_native_get_uv_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_1 == null)
             ImVec2_TEMP_GEN_1 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_1.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_1;
     }
 
@@ -87,7 +88,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawVert);var returnedJSObj = jsObj.get_uv();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_get_uv(int this_addr);
+    public static native int internal_native_get_uv_addr(int this_addr);
 
     public void set_uv(ImVec2 uv) {
         internal_native_set_uv(native_address, uv.native_address);

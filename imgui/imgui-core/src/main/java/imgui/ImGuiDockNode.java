@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
@@ -78,12 +79,12 @@ nativeObject->SelectedTabId = SelectedTabId;
     public static native void internal_native_set_SelectedTabId(long this_addr, int SelectedTabId);
 
     public ImGuiTabBar get_TabBar() {
-        long pointer = internal_native_get_TabBar(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_TabBar_addr(native_address);
+        if (addr == 0)
             return ImGuiTabBar.NULL;
         if (ImGuiTabBar_TEMP_GEN_0 == null)
             ImGuiTabBar_TEMP_GEN_0 = ImGuiTabBar.native_new();
-        ImGuiTabBar_TEMP_GEN_0.internal_reset(pointer, false);
+        ImGuiTabBar_TEMP_GEN_0.internal_reset(addr, false);
         return ImGuiTabBar_TEMP_GEN_0;
     }
 
@@ -92,7 +93,7 @@ ImGuiDockNode* nativeObject = (ImGuiDockNode*)this_addr;
 ImGuiTabBar* attr = nativeObject->TabBar;
 return (jlong)attr;
 */
-    public static native long internal_native_get_TabBar(long this_addr);
+    public static native long internal_native_get_TabBar_addr(long this_addr);
 
     public void set_TabBar(ImGuiTabBar TabBar) {
         internal_native_set_TabBar(native_address, TabBar.native_address);

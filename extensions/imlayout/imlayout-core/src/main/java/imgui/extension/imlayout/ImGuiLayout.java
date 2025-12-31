@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package imgui.extension.imlayout;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
@@ -49,12 +50,12 @@ delete nativeObject;
     public static native void internal_native_deleteNative(long this_addr);
 
     public ImVec2 getAbsoluteSize() {
-        long pointer = internal_native_getAbsoluteSize(native_address);
-        if (pointer == 0)
+        long addr = internal_native_getAbsoluteSize_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_0.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_0;
     }
 
@@ -63,15 +64,15 @@ ImGuiLayout* nativeObject = (ImGuiLayout*)this_addr;
 static ImVec2 copy_addr;
 copy_addr = nativeObject->getAbsoluteSize();
 return (jlong)&copy_addr;*/
-    public static native long internal_native_getAbsoluteSize(long this_addr);
+    public static native long internal_native_getAbsoluteSize_addr(long this_addr);
 
     public ImVec2 getAbsoluteSizePadding() {
-        long pointer = internal_native_getAbsoluteSizePadding(native_address);
-        if (pointer == 0)
+        long addr = internal_native_getAbsoluteSizePadding_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_1 == null)
             ImVec2_TEMP_GEN_1 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_1.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_1;
     }
 
@@ -80,15 +81,15 @@ ImGuiLayout* nativeObject = (ImGuiLayout*)this_addr;
 static ImVec2 copy_addr;
 copy_addr = nativeObject->getAbsoluteSizePadding();
 return (jlong)&copy_addr;*/
-    public static native long internal_native_getAbsoluteSizePadding(long this_addr);
+    public static native long internal_native_getAbsoluteSizePadding_addr(long this_addr);
 
     public ImVec2 getContentSize() {
-        long pointer = internal_native_getContentSize(native_address);
-        if (pointer == 0)
+        long addr = internal_native_getContentSize_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_2 == null)
             ImVec2_TEMP_GEN_2 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_2.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_2.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_2;
     }
 
@@ -97,15 +98,15 @@ ImGuiLayout* nativeObject = (ImGuiLayout*)this_addr;
 static ImVec2 copy_addr;
 copy_addr = nativeObject->getContentSize();
 return (jlong)&copy_addr;*/
-    public static native long internal_native_getContentSize(long this_addr);
+    public static native long internal_native_getContentSize_addr(long this_addr);
 
     public ImVec2 getPositionPadding() {
-        long pointer = internal_native_getPositionPadding(native_address);
-        if (pointer == 0)
+        long addr = internal_native_getPositionPadding_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_3 == null)
             ImVec2_TEMP_GEN_3 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_3.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_3.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_3;
     }
 
@@ -114,15 +115,15 @@ ImGuiLayout* nativeObject = (ImGuiLayout*)this_addr;
 static ImVec2 copy_addr;
 copy_addr = nativeObject->getPositionPadding();
 return (jlong)&copy_addr;*/
-    public static native long internal_native_getPositionPadding(long this_addr);
+    public static native long internal_native_getPositionPadding_addr(long this_addr);
 
     public ImVec2 get_position() {
-        long pointer = internal_native_get_position(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_position_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_4 == null)
             ImVec2_TEMP_GEN_4 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_4.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_4.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_4;
     }
 
@@ -130,7 +131,7 @@ return (jlong)&copy_addr;*/
 ImGuiLayout* nativeObject = (ImGuiLayout*)this_addr;
 return (jlong)&nativeObject->position;
 */
-    public static native long internal_native_get_position(long this_addr);
+    public static native long internal_native_get_position_addr(long this_addr);
 
     public void set_position(ImVec2 position) {
         internal_native_set_position(native_address, position.native_address);
@@ -143,12 +144,12 @@ nativeObject->position = *((ImVec2*)position_addr);
     public static native void internal_native_set_position(long this_addr, long position_addr);
 
     public ImVec2 get_size() {
-        long pointer = internal_native_get_size(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_size_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_5 == null)
             ImVec2_TEMP_GEN_5 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_5.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_5.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_5;
     }
 
@@ -156,7 +157,7 @@ nativeObject->position = *((ImVec2*)position_addr);
 ImGuiLayout* nativeObject = (ImGuiLayout*)this_addr;
 return (jlong)&nativeObject->size;
 */
-    public static native long internal_native_get_size(long this_addr);
+    public static native long internal_native_get_size_addr(long this_addr);
 
     public void set_size(ImVec2 size) {
         internal_native_set_size(native_address, size.native_address);

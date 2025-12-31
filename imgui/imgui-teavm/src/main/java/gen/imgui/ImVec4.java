@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
@@ -12,7 +13,7 @@ public class ImVec4 extends IDLBase {
     static public final ImVec4 NULL = ImVec4.native_new();
 
     public ImVec4() {
-        int addr = internal_native_create();
+        int addr = internal_native_create_addr();
         internal_reset(addr, true);
     }
 
@@ -21,10 +22,10 @@ var jsObj = new imgui.ImVec4();
 return imgui.getPointer(jsObj);
 */
     @org.teavm.jso.JSBody(script = "var jsObj = new imgui.ImVec4();return imgui.getPointer(jsObj);")
-    public static native int internal_native_create();
+    public static native int internal_native_create_addr();
 
     public ImVec4(float x, float y, float z, float w) {
-        int addr = internal_native_create_float_float_float_float(x, y, z, w);
+        int addr = internal_native_create_float_float_float_float_addr(x, y, z, w);
         internal_reset(addr, true);
     }
 
@@ -33,7 +34,7 @@ var jsObj = new imgui.ImVec4(x, y, z, w);
 return imgui.getPointer(jsObj);
 */
     @org.teavm.jso.JSBody(params = {"x", "y", "z", "w"}, script = "var jsObj = new imgui.ImVec4(x, y, z, w);return imgui.getPointer(jsObj);")
-    public static native int internal_native_create_float_float_float_float(float x, float y, float z, float w);
+    public static native int internal_native_create_float_float_float_float_addr(float x, float y, float z, float w);
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -61,7 +62,7 @@ imgui.destroy(jsObj);
     public static native void internal_native_deleteNative(int this_addr);
 
     public ImVec4 copy(ImVec4 value) {
-        internal_native_copy(native_address, value.native_address);
+        internal_native_copy_addr(native_address, value.native_address);
         return this;
     }
 
@@ -72,7 +73,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr", "value_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImVec4);var returnedJSObj = jsObj.copy(value_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_copy(int this_addr, int value_addr);
+    public static native int internal_native_copy_addr(int this_addr, int value_addr);
 
     public float get_x() {
         return internal_native_get_x(native_address);

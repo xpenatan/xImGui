@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
@@ -12,24 +13,24 @@ public class ImVec2 extends IDLBase {
     static public final ImVec2 NULL = ImVec2.native_new();
 
     public ImVec2() {
-        long addr = internal_native_create();
+        long addr = internal_native_create_addr();
         internal_reset(addr, true);
     }
 
     /*[-JNI;-NATIVE]
 return (jlong)new ImVec2();
 */
-    public static native long internal_native_create();
+    public static native long internal_native_create_addr();
 
     public ImVec2(float x, float y) {
-        long addr = internal_native_create_float_float(x, y);
+        long addr = internal_native_create_float_float_addr(x, y);
         internal_reset(addr, true);
     }
 
     /*[-JNI;-NATIVE]
 return (jlong)new ImVec2((float)x, (float)y);
 */
-    public static native long internal_native_create_float_float(float x, float y);
+    public static native long internal_native_create_float_float_addr(float x, float y);
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer

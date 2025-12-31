@@ -4,14 +4,15 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.files.FileHandle;
+import com.github.xpenatan.jparser.idl.helper.IDLByteArray;
 import imgui.ImFontAtlas;
 import imgui.ImFontConfig;
+import imgui.ImGuiContext;
 import imgui.ImGuiImpl;
 import imgui.ImDrawData;
 import imgui.ImGui;
 import imgui.enums.ImGuiConfigFlags;
 import imgui.ImGuiIO;
-import imgui.idl.helper.IDLByteArray;
 
 public abstract class ImGuiRenderer extends ScreenAdapter {
 
@@ -22,6 +23,9 @@ public abstract class ImGuiRenderer extends ScreenAdapter {
     @Override
     public void show() {
         ImGui.CreateContext();
+
+        ImGuiContext imGuiContext = ImGui.GetCurrentContext();
+        boolean b = imGuiContext.native_isNULL();
         ImGuiIO io = ImGui.GetIO();
         io.set_ConfigFlags(ImGuiConfigFlags.DockingEnable);
         input = ImGuiShared.instance.createInput();

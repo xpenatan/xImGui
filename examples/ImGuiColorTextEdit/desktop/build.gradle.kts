@@ -15,10 +15,12 @@ dependencies {
     implementation(project(":examples:impl:gdx"))
 
     if(LibExt.useRepoLibs) {
-        implementation("com.github.xpenatan.xImGui:imgui-ext-desktop:-SNAPSHOT")
+        implementation("com.github.xpenatan.xImGui:imgui-desktop:-SNAPSHOT")
+        implementation("com.github.xpenatan.xImGui:textedit-desktop:-SNAPSHOT")
     }
     else {
-        implementation(project(":imgui-ext:ext-desktop"))
+        implementation(project(":imgui:imgui-desktop"))
+        implementation(project(":extensions:ImGuiColorTextEdit:textedit-desktop"))
     }
 
     implementation("com.badlogicgames.gdx:gdx-backend-lwjgl3:${LibExt.gdxVersion}")

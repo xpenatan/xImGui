@@ -2,15 +2,16 @@ package imgui.example.imlayout.views;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
+import com.github.xpenatan.jparser.idl.helper.IDLBoolArray;
+import com.github.xpenatan.jparser.idl.helper.IDLFloatArray;
+import com.github.xpenatan.jparser.idl.helper.IDLIntArray;
 import imgui.ImGui;
+import imgui.ImGuiContext;
 import imgui.ImTemp;
 import imgui.ImTextureRef;
 import imgui.enums.ImGuiDir;
 import imgui.example.renderer.ImGuiShared;
 import imgui.extension.imlayout.ImLayout;
-import imgui.idl.helper.IDLBoolArray;
-import imgui.idl.helper.IDLFloatArray;
-import imgui.idl.helper.IDLIntArray;
 
 public class CollapseView {
 
@@ -43,6 +44,8 @@ public class CollapseView {
     }
 
     public void render() {
+        ImGuiContext imGuiContext = ImGui.GetCurrentContext();
+        boolean b = imGuiContext.native_isNULL();
         ImLayout.DrawBoundingBox(100f, 100f,40f, 40f, 255, 0, 0);
 
         if(ImLayout.BeginCollapseLayout("##idd", "Hello", ImLayout.MATCH_PARENT, ImLayout.WRAP_PARENT)) {

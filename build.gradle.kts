@@ -55,23 +55,4 @@ tasks.register("download_all_sources") {
     tasks.findByPath(source3)!!.mustRunAfter(source2)
 }
 
-tasks.register("build_all_projects") {
-    group = "imgui"
-    description = "build all sources"
-
-    val imguiSrc = ":imgui:imgui-build:build_project_all"
-    val source2 = ":extensions:ImGuiColorTextEdit:textedit-build:build_project_all"
-    val source3 = ":extensions:imgui-node-editor:nodeeditor-build:build_project_all"
-    val source4 = ":extensions:imlayout:imlayout-build:build_project_all"
-    val extSrc = ":imgui-ext:ext-build:build_project_all"
-
-    val list = listOf(imguiSrc, source2, source3, source4, extSrc)
-    dependsOn(list)
-
-    tasks.findByPath(source2)!!.mustRunAfter(imguiSrc)
-    tasks.findByPath(source3)!!.mustRunAfter(source2)
-    tasks.findByPath(source4)!!.mustRunAfter(source3)
-    tasks.findByPath(extSrc)!!.mustRunAfter(imguiSrc, source2, source3, source4)
-}
-
 apply(plugin = "publish")

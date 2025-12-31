@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
@@ -38,12 +39,12 @@ delete nativeObject;
     public static native void internal_native_deleteNative(long this_addr);
 
     public ImDrawList getData(int index) {
-        long pointer = internal_native_getData(native_address, index);
-        if (pointer == 0)
+        long addr = internal_native_getData_addr(native_address, index);
+        if (addr == 0)
             return ImDrawList.NULL;
         if (ImDrawList_TEMP_GEN_0 == null)
             ImDrawList_TEMP_GEN_0 = ImDrawList.native_new();
-        ImDrawList_TEMP_GEN_0.internal_reset(pointer, false);
+        ImDrawList_TEMP_GEN_0.internal_reset(addr, false);
         return ImDrawList_TEMP_GEN_0;
     }
 
@@ -52,7 +53,7 @@ ImVectorImDrawListPtr* nativeObject = (ImVectorImDrawListPtr*)this_addr;
 ImDrawList* obj = (*nativeObject)[(int)index];
 return (jlong)obj;
 */
-    public static native long internal_native_getData(long this_addr, int index);
+    public static native long internal_native_getData_addr(long this_addr, int index);
 
     public int size() {
         return internal_native_size(native_address);

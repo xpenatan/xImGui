@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
@@ -276,12 +277,12 @@ nativeObject->BackendFlags = (::ImGuiBackendFlags)BackendFlags;
     public static native void internal_native_set_BackendFlags(long this_addr, int BackendFlags);
 
     public ImVec2 get_DisplaySize() {
-        long pointer = internal_native_get_DisplaySize(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_DisplaySize_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_0.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_0;
     }
 
@@ -289,7 +290,7 @@ nativeObject->BackendFlags = (::ImGuiBackendFlags)BackendFlags;
 ImGuiIO* nativeObject = (ImGuiIO*)this_addr;
 return (jlong)&nativeObject->DisplaySize;
 */
-    public static native long internal_native_get_DisplaySize(long this_addr);
+    public static native long internal_native_get_DisplaySize_addr(long this_addr);
 
     public void set_DisplaySize(ImVec2 DisplaySize) {
         internal_native_set_DisplaySize(native_address, DisplaySize.native_address);
@@ -302,12 +303,12 @@ nativeObject->DisplaySize = *((ImVec2*)DisplaySize_addr);
     public static native void internal_native_set_DisplaySize(long this_addr, long DisplaySize_addr);
 
     public ImVec2 get_DisplayFramebufferScale() {
-        long pointer = internal_native_get_DisplayFramebufferScale(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_DisplayFramebufferScale_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_1 == null)
             ImVec2_TEMP_GEN_1 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_1.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_1.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_1;
     }
 
@@ -315,7 +316,7 @@ nativeObject->DisplaySize = *((ImVec2*)DisplaySize_addr);
 ImGuiIO* nativeObject = (ImGuiIO*)this_addr;
 return (jlong)&nativeObject->DisplayFramebufferScale;
 */
-    public static native long internal_native_get_DisplayFramebufferScale(long this_addr);
+    public static native long internal_native_get_DisplayFramebufferScale_addr(long this_addr);
 
     public void set_DisplayFramebufferScale(ImVec2 DisplayFramebufferScale) {
         internal_native_set_DisplayFramebufferScale(native_address, DisplayFramebufferScale.native_address);
@@ -368,12 +369,12 @@ nativeObject->IniSavingRate = IniSavingRate;
     public static native void internal_native_set_IniSavingRate(long this_addr, float IniSavingRate);
 
     public IDLBase get_UserData() {
-        long pointer = internal_native_get_UserData(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_UserData_addr(native_address);
+        if (addr == 0)
             return IDLBase.NULL;
         if (IDLBase_TEMP_GEN_0 == null)
             IDLBase_TEMP_GEN_0 = IDLBase.native_new();
-        IDLBase_TEMP_GEN_0.internal_reset(pointer, false);
+        IDLBase_TEMP_GEN_0.internal_reset(addr, false);
         return IDLBase_TEMP_GEN_0;
     }
 
@@ -381,7 +382,7 @@ nativeObject->IniSavingRate = IniSavingRate;
 ImGuiIO* nativeObject = (ImGuiIO*)this_addr;
 return (jlong)nativeObject->UserData;
 */
-    public static native long internal_native_get_UserData(long this_addr);
+    public static native long internal_native_get_UserData_addr(long this_addr);
 
     public void set_UserData(IDLBase UserData) {
         internal_native_set_UserData(native_address, UserData.native_void_address);
@@ -394,12 +395,12 @@ nativeObject->UserData = (void**)UserData_addr;
     public static native void internal_native_set_UserData(long this_addr, long UserData_addr);
 
     public ImFontAtlas get_Fonts() {
-        long pointer = internal_native_get_Fonts(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_Fonts_addr(native_address);
+        if (addr == 0)
             return ImFontAtlas.NULL;
         if (ImFontAtlas_TEMP_GEN_0 == null)
             ImFontAtlas_TEMP_GEN_0 = ImFontAtlas.native_new();
-        ImFontAtlas_TEMP_GEN_0.internal_reset(pointer, false);
+        ImFontAtlas_TEMP_GEN_0.internal_reset(addr, false);
         return ImFontAtlas_TEMP_GEN_0;
     }
 
@@ -408,7 +409,7 @@ ImGuiIO* nativeObject = (ImGuiIO*)this_addr;
 ImFontAtlas* attr = nativeObject->Fonts;
 return (jlong)attr;
 */
-    public static native long internal_native_get_Fonts(long this_addr);
+    public static native long internal_native_get_Fonts_addr(long this_addr);
 
     public void set_Fonts(ImFontAtlas Fonts) {
         internal_native_set_Fonts(native_address, Fonts.native_address);
@@ -421,12 +422,12 @@ nativeObject->Fonts = (ImFontAtlas*)Fonts_addr;
     public static native void internal_native_set_Fonts(long this_addr, long Fonts_addr);
 
     public ImFont get_FontDefault() {
-        long pointer = internal_native_get_FontDefault(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_FontDefault_addr(native_address);
+        if (addr == 0)
             return ImFont.NULL;
         if (ImFont_TEMP_GEN_0 == null)
             ImFont_TEMP_GEN_0 = ImFont.native_new();
-        ImFont_TEMP_GEN_0.internal_reset(pointer, false);
+        ImFont_TEMP_GEN_0.internal_reset(addr, false);
         return ImFont_TEMP_GEN_0;
     }
 
@@ -435,7 +436,7 @@ ImGuiIO* nativeObject = (ImGuiIO*)this_addr;
 ImFont* attr = nativeObject->FontDefault;
 return (jlong)attr;
 */
-    public static native long internal_native_get_FontDefault(long this_addr);
+    public static native long internal_native_get_FontDefault_addr(long this_addr);
 
     public void set_FontDefault(ImFont FontDefault) {
         internal_native_set_FontDefault(native_address, FontDefault.native_address);
@@ -1388,12 +1389,12 @@ nativeObject->MetricsActiveWindows = MetricsActiveWindows;
     public static native void internal_native_set_MetricsActiveWindows(long this_addr, int MetricsActiveWindows);
 
     public ImVec2 get_MouseDelta() {
-        long pointer = internal_native_get_MouseDelta(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_MouseDelta_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_2 == null)
             ImVec2_TEMP_GEN_2 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_2.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_2.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_2;
     }
 
@@ -1401,7 +1402,7 @@ nativeObject->MetricsActiveWindows = MetricsActiveWindows;
 ImGuiIO* nativeObject = (ImGuiIO*)this_addr;
 return (jlong)&nativeObject->MouseDelta;
 */
-    public static native long internal_native_get_MouseDelta(long this_addr);
+    public static native long internal_native_get_MouseDelta_addr(long this_addr);
 
     public void set_MouseDelta(ImVec2 MouseDelta) {
         internal_native_set_MouseDelta(native_address, MouseDelta.native_address);

@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
@@ -12,7 +13,7 @@ public class ImTextureRef extends IDLBase {
     static public final ImTextureRef NULL = ImTextureRef.native_new();
 
     public ImTextureRef() {
-        int addr = internal_native_create();
+        int addr = internal_native_create_addr();
         internal_reset(addr, true);
     }
 
@@ -21,10 +22,10 @@ var jsObj = new imgui.ImTextureRef();
 return imgui.getPointer(jsObj);
 */
     @org.teavm.jso.JSBody(script = "var jsObj = new imgui.ImTextureRef();return imgui.getPointer(jsObj);")
-    public static native int internal_native_create();
+    public static native int internal_native_create_addr();
 
     public ImTextureRef(long tex_id) {
-        int addr = internal_native_create_long((int) tex_id);
+        int addr = internal_native_create_long_addr(tex_id);
         internal_reset(addr, true);
     }
 
@@ -33,7 +34,7 @@ var jsObj = new imgui.ImTextureRef(tex_id);
 return imgui.getPointer(jsObj);
 */
     @org.teavm.jso.JSBody(params = {"tex_id"}, script = "var jsObj = new imgui.ImTextureRef(tex_id);return imgui.getPointer(jsObj);")
-    public static native int internal_native_create_long(int tex_id);
+    public static native int internal_native_create_long_addr(long tex_id);
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -70,5 +71,5 @@ var returnedJSObj = jsObj.GetTexID();
 return returnedJSObj;
 */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImTextureRef);var returnedJSObj = jsObj.GetTexID();return returnedJSObj;")
-    public static native int internal_native_GetTexID(int this_addr);
+    public static native long internal_native_GetTexID(int this_addr);
 }

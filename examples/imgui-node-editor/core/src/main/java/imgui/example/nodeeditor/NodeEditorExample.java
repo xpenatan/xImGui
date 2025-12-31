@@ -2,6 +2,7 @@ package imgui.example.nodeeditor;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Preferences;
+import com.github.xpenatan.jparser.idl.helper.IDLString;
 import imgui.example.nodeeditor.demo.BlueprintExample;
 import imgui.example.nodeeditor.demo.SimpleExample;
 import imgui.example.renderer.ImGuiRenderer;
@@ -10,7 +11,6 @@ import imgui.extension.nodeeditor.EditorContext;
 import imgui.extension.nodeeditor.LoadSaveSettingsListener;
 import imgui.extension.nodeeditor.NodeEditor;
 import imgui.extension.nodeeditor.SaveReasonFlags;
-import imgui.idl.helper.IDLString;
 
 public class NodeEditorExample extends ImGuiRenderer {
 

@@ -3,6 +3,7 @@
 
 #include "TextEditor.h"
 #include "imgui.h"
+#include "IDLHelper.h"
 
 typedef TextEditor::SetViewAtLineMode SetViewAtLineMode;
 typedef TextEditor::LanguageDefinitionId LanguageDefinitionId;

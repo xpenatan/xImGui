@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package gen.imgui;
 
 import gen.com.github.xpenatan.jParser.idl.IDLBase;
@@ -39,12 +40,12 @@ imgui.destroy(jsObj);
     public static native void internal_native_deleteNative(int this_addr);
 
     public ImDrawList getData(int index) {
-        int pointer = internal_native_getData(native_address, index);
-        if (pointer == 0)
+        int addr = internal_native_getData_addr(native_address, index);
+        if (addr == 0)
             return ImDrawList.NULL;
         if (ImDrawList_TEMP_GEN_0 == null)
             ImDrawList_TEMP_GEN_0 = ImDrawList.native_new();
-        ImDrawList_TEMP_GEN_0.internal_reset(pointer, false);
+        ImDrawList_TEMP_GEN_0.internal_reset(addr, false);
         return ImDrawList_TEMP_GEN_0;
     }
 
@@ -55,7 +56,7 @@ if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
 return imgui.getPointer(returnedJSObj);
 */
     @org.teavm.jso.JSBody(params = {"this_addr", "index"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImVectorImDrawListPtr);var returnedJSObj = jsObj.getData(index);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
-    public static native int internal_native_getData(int this_addr, int index);
+    public static native int internal_native_getData_addr(int this_addr, int index);
 
     public int size() {
         return internal_native_size(native_address);

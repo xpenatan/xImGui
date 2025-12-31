@@ -3,10 +3,11 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
-import imgui.idl.helper.IDLString;
+import com.github.xpenatan.jparser.idl.helper.IDLString;
 
 public class ClipboardTextFunction extends IDLBase {
 
@@ -74,7 +75,7 @@ ClipboardTextFunction::setClipboardTextFunction((ImGuiPlatformIO* )io_addr, (Cli
     public static native void internal_native_setClipboardTextFunction(long io_addr, long clipboardFunction_addr);
 
     public ClipboardTextFunction() {
-        long addr = internal_native_create();
+        long addr = internal_native_create_addr();
         internal_reset(addr, true);
         setupCallback();
     }
@@ -106,7 +107,7 @@ ClipboardTextFunction::setClipboardTextFunction((ImGuiPlatformIO* )io_addr, (Cli
     /*[-JNI;-NATIVE]
 return (jlong)new ClipboardTextFunctionImpl();
 */
-    public static native long internal_native_create();
+    public static native long internal_native_create_addr();
 
     /*[-JNI;-NATIVE]
 ClipboardTextFunctionImpl* nativeObject = (ClipboardTextFunctionImpl*)this_addr;

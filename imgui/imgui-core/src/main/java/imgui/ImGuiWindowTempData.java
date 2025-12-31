@@ -3,6 +3,7 @@
  *
  * Do not make changes to this file
  *-------------------------------------------------------*/
+
 package imgui;
 
 import com.github.xpenatan.jParser.idl.IDLBase;
@@ -28,12 +29,12 @@ public class ImGuiWindowTempData extends IDLBase {
     }
 
     public ImVec2 get_CursorPos() {
-        long pointer = internal_native_get_CursorPos(native_address);
-        if (pointer == 0)
+        long addr = internal_native_get_CursorPos_addr(native_address);
+        if (addr == 0)
             return ImVec2.NULL;
         if (ImVec2_TEMP_GEN_0 == null)
             ImVec2_TEMP_GEN_0 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_0.internal_reset(pointer, false);
+        ImVec2_TEMP_GEN_0.internal_reset(addr, false);
         return ImVec2_TEMP_GEN_0;
     }
 
@@ -41,7 +42,7 @@ public class ImGuiWindowTempData extends IDLBase {
 ImGuiWindowTempData* nativeObject = (ImGuiWindowTempData*)this_addr;
 return (jlong)&nativeObject->CursorPos;
 */
-    public static native long internal_native_get_CursorPos(long this_addr);
+    public static native long internal_native_get_CursorPos_addr(long this_addr);
 
     public int get_TreeDepth() {
         return internal_native_get_TreeDepth(native_address);
