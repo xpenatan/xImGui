@@ -146,7 +146,12 @@ public class BuildImLayout {
     }
 
     private static BuildMultiTarget getMacTarget(BuildToolOptions op, boolean isArm, String imguiPath) {
-        String imguiCppPath = imguiPath + "/imgui-build/build/imgui";
+        String imguiRootBuildPath = imguiPath + "/imgui-build";
+        String imguiCustomSourcePath = imguiRootBuildPath + "/src/main/cpp/custom";
+        String imguiBuildPath = imguiRootBuildPath + "/build";
+        String imguiCppPath = imguiBuildPath + "/c++";
+        String imguiSourcePath = imguiBuildPath + "/imgui";
+        String libBuildCPPPath = op.getModuleBuildCPPPath();
         String sourceDir = op.getSourceDir();
 
         BuildMultiTarget multiTarget = new BuildMultiTarget();
@@ -154,10 +159,35 @@ public class BuildImLayout {
         MacTarget macTarget = new MacTarget(isArm);
         macTarget.isStatic = true;
         macTarget.cppFlags.add("-std=c++17");
-        macTarget.headerDirs.add("-I" + imguiCppPath);
+        macTarget.headerDirs.add("-I" + imguiSourcePath);
         macTarget.headerDirs.add("-I" + sourceDir);
+        macTarget.headerDirs.add("-I" + imguiCustomSourcePath);
+        macTarget.headerDirs.add("-I" + op.getCustomSourceDir());
         macTarget.cppInclude.add(sourceDir + "/*.cpp");
         multiTarget.add(macTarget);
+
+        // Compile glue code and link
+        MacTarget linkTarget = new MacTarget(isArm);
+        linkTarget.addJNIHeaders();
+        linkTarget.cppFlags.add("-std=c++17");
+        linkTarget.cppFlags.add("-DIMGUI_USER_CONFIG=\"ImGuiCustomConfig.h\"");
+        linkTarget.headerDirs.add("-I" + imguiSourcePath);
+        linkTarget.headerDirs.add("-I" + sourceDir);
+        linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
+        linkTarget.headerDirs.add("-I" + libBuildCPPPath + "/src/jniglue");
+        linkTarget.headerDirs.add("-I" + imguiCustomSourcePath);
+
+        if(isArm) {
+            linkTarget.linkerFlags.add(imguiCppPath + "/libs/mac/arm/libimguiarm64.dylib");
+            linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/mac/arm/libimlayout64_.a");
+        }
+        else {
+            linkTarget.linkerFlags.add(imguiCppPath + "/libs/mac/libimgui64.dylib");
+            linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/mac/libimlayout64_.a");
+        }
+
+        linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");
+        multiTarget.add(linkTarget);
 
         return multiTarget;
     }

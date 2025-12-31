@@ -172,8 +172,16 @@ public class BuildNodeEditor {
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
         linkTarget.headerDirs.add("-I" + libBuildCPPPath + "/src/jniglue");
         linkTarget.headerDirs.add("-I" + imguiCustomSourcePath);
-        linkTarget.linkerFlags.add(imguiCppPath + "/libs/linux/libimgui64.so");
-        linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/linux/libimlayout64_.a");
+
+        if(isArm) {
+            linkTarget.linkerFlags.add(imguiCppPath + "/libs/mac/arm/libimguiarm64.dylib");
+            linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/mac/arm/libnodeeditor64_.a");
+        }
+        else {
+            linkTarget.linkerFlags.add(imguiCppPath + "/libs/mac/libimgui64.dylib");
+            linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/mac/libnodeeditor64_.a");
+        }
+
         linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");
         multiTarget.add(linkTarget);
 
