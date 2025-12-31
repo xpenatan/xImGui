@@ -66,8 +66,10 @@ dependencies {
     implementation("com.github.xpenatan.xImGui:gdx-wgpu-impl:$project.xImGuiVersion") // WebGPU
     implementation("com.github.xpenatan.xImGui:imgui-core:$project.xImGuiVersion")
 
-    // Or the extension build
-    implementation "com.github.xpenatan.xImGui:imgui-ext-core:$project.xImGuiVersion"
+    // Extensions
+    implementation "com.github.xpenatan.xImGui:imlayout-core:$project.xImGuiVersion"
+    implementation "com.github.xpenatan.xImGui:textedit-core:$project.xImGuiVersion"
+    implementation "com.github.xpenatan.xImGui:nodeeditor-core:$project.xImGuiVersion"
 }
 ```
 
@@ -76,8 +78,10 @@ dependencies {
 dependencies {
     implementation("com.github.xpenatan.xImGui:imgui-desktop:$project.xImGuiVersion")
 
-    // Or the extension build
-    implementation "com.github.xpenatan.xImGui:imgui-ext-desktop:$project.xImGuiVersion"
+    // Extensions
+    implementation "com.github.xpenatan.xImGui:imlayout-desktop:$project.xImGuiVersion"
+    implementation "com.github.xpenatan.xImGui:textedit-desktop:$project.xImGuiVersion"
+    implementation "com.github.xpenatan.xImGui:nodeeditor-desktop:$project.xImGuiVersion"
 }
 ```
 
@@ -86,8 +90,10 @@ dependencies {
 dependencies {
     implementation("com.github.xpenatan.xImGui:imgui-teavm:$project.xImGuiVersion")
 
-    // Or the extension build
-    implementation "com.github.xpenatan.xImGui:imgui-ext-teavm:$project.xImGuiVersion"
+    // Extensions
+    implementation "com.github.xpenatan.xImGui:imlayout-teavm:$project.xImGuiVersion"
+    implementation "com.github.xpenatan.xImGui:textedit-teavm:$project.xImGuiVersion"
+    implementation "com.github.xpenatan.xImGui:nodeeditor-teavm:$project.xImGuiVersion"
 }
 ```
 
@@ -95,18 +101,3 @@ dependencies {
 
 * Requirements: Java 11, mingw64 and emscripten
 * Windows only for now.
-
-```
-##### ImGui
-./gradlew :imgui:imgui-build:download_source
-./gradlew :imgui:imgui-build:build_project
-```
-```
-##### ImGui with extensions. Need to build ImGui first
-./gradlew :extensions:imlayout:imlayout-build:build_project
-./gradlew :extensions:ImGuiColorTextEdit:textedit-build:download_source
-./gradlew :extensions:ImGuiColorTextEdit:textedit-build:build_project
-./gradlew :extensions:imgui-node-editor:nodeeditor-build:download_source
-./gradlew :extensions:imgui-node-editor:nodeeditor-build:build_project
-./gradlew :imgui:imgui-ext-build:build_project
-```
