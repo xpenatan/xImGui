@@ -183,7 +183,7 @@ public class BuildTextEdit {
         linkTarget.headerDirs.add("-I" + libBuildCPPPath + "/src/jniglue");
         linkTarget.headerDirs.add("-I" + imguiCustomSourcePath);
         if(isArm) {
-            linkTarget.linkerFlags.add(imguiCppPath + "/libs/mac/arm/libimgui64.dylib");
+            linkTarget.linkerFlags.add(imguiCppPath + "/libs/mac/arm/libimguiarm64.dylib");
             linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/mac/arm/libtextedit64_.a");
         }
         else {
