@@ -76,21 +76,21 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: windows-natives-imlayout
-          path: ./extension/imlayout/imlayout-build/build/c++/libs/
+          path: ./extensions/imlayout/imlayout-build/build/c++/libs/
           if-no-files-found: error
 
       - name: Upload ImGuiColorTextEdit natives
         uses: actions/upload-artifact@v4
         with:
           name: windows-natives-textedit
-          path: ./extension/ImGuiColorTextEdit/textedit-build/build/c++/libs/
+          path: ./extensions/ImGuiColorTextEdit/textedit-build/build/c++/libs/
           if-no-files-found: error
 
       - name: Upload imgui-node-editor natives
         uses: actions/upload-artifact@v4
         with:
           name: windows-natives-nodeeditor
-          path: ./extension/imgui-node-editor/nodeeditor-build/build/c++/libs/
+          path: ./extensions/imgui-node-editor/nodeeditor-build/build/c++/libs/
           if-no-files-found: error
 
   build_linux:
@@ -145,21 +145,21 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: linux-natives-imlayout
-          path: ./extension/imlayout/imlayout-build/build/c++/libs/
+          path: ./extensions/imlayout/imlayout-build/build/c++/libs/
           if-no-files-found: error
 
       - name: Upload ImGuiColorTextEdit natives
         uses: actions/upload-artifact@v4
         with:
           name: linux-natives-textedit
-          path: ./extension/ImGuiColorTextEdit/textedit-build/build/c++/libs/
+          path: ./extensions/ImGuiColorTextEdit/textedit-build/build/c++/libs/
           if-no-files-found: error
 
       - name: Upload imgui-node-editor natives
         uses: actions/upload-artifact@v4
         with:
           name: linux-natives-nodeeditor
-          path: ./extension/imgui-node-editor/nodeeditor-build/build/c++/libs/
+          path: ./extensions/imgui-node-editor/nodeeditor-build/build/c++/libs/
           if-no-files-found: error
 
   build_mac:
@@ -210,21 +210,21 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: mac-natives-imlayout
-          path: ./extension/imlayout/imlayout-build/build/c++/libs/
+          path: ./extensions/imlayout/imlayout-build/build/c++/libs/
           if-no-files-found: error
 
       - name: Upload ImGuiColorTextEdit natives
         uses: actions/upload-artifact@v4
         with:
           name: mac-natives-textedit
-          path: ./extension/ImGuiColorTextEdit/textedit-build/build/c++/libs/
+          path: ./extensions/ImGuiColorTextEdit/textedit-build/build/c++/libs/
           if-no-files-found: error
 
       - name: Upload imgui-node-editor natives
         uses: actions/upload-artifact@v4
         with:
           name: mac-natives-nodeeditor
-          path: ./extension/imgui-node-editor/nodeeditor-build/build/c++/libs/
+          path: ./extensions/imgui-node-editor/nodeeditor-build/build/c++/libs/
           if-no-files-found: error
 
   build_teavm:
@@ -284,21 +284,21 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: teavm-natives-imlayout
-          path: ./extension/imlayout/imlayout-build/build/c++/libs/
+          path: ./extensions/imlayout/imlayout-build/build/c++/libs/
           if-no-files-found: error
 
       - name: Upload ImGuiColorTextEdit natives
         uses: actions/upload-artifact@v4
         with:
           name: teavm-natives-textedit
-          path: ./extension/ImGuiColorTextEdit/textedit-build/build/c++/libs/
+          path: ./extensions/ImGuiColorTextEdit/textedit-build/build/c++/libs/
           if-no-files-found: error
 
       - name: Upload imgui-node-editor natives
         uses: actions/upload-artifact@v4
         with:
           name: teavm-natives-nodeeditor
-          path: ./extension/imgui-node-editor/nodeeditor-build/build/c++/libs/
+          path: ./extensions/imgui-node-editor/nodeeditor-build/build/c++/libs/
           if-no-files-found: error
 
   build_android:
@@ -394,19 +394,19 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: windows-natives-imlayout
-          path: ./extension/imlayout/imlayout-build/build/c++/libs/
+          path: ./extensions/imlayout/imlayout-build/build/c++/libs/
 
       - name: Download mac ImGuiColorTextEdit natives
         uses: actions/download-artifact@v4
         with:
           name: windows-natives-textedit
-          path: ./extension/ImGuiColorTextEdit/textedit-build/build/c++/libs/
+          path: ./extensions/ImGuiColorTextEdit/textedit-build/build/c++/libs/
 
       - name: Download mac imgui-node-editor natives
         uses: actions/download-artifact@v4
         with:
           name: windows-natives-nodeeditor
-          path: ./extension/imgui-node-editor/nodeeditor-build/build/c++/libs/
+          path: ./extensions/imgui-node-editor/nodeeditor-build/build/c++/libs/
 
       - name: Download mac ImGui natives
         uses: actions/download-artifact@v4
@@ -418,19 +418,19 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: linux-natives-imlayout
-          path: ./extension/imlayout/imlayout-build/build/c++/libs/
+          path: ./extensions/imlayout/imlayout-build/build/c++/libs/
 
       - name: Download mac ImGuiColorTextEdit natives
         uses: actions/download-artifact@v4
         with:
           name: linux-natives-textedit
-          path: ./extension/ImGuiColorTextEdit/textedit-build/build/c++/libs/
+          path: ./extensions/ImGuiColorTextEdit/textedit-build/build/c++/libs/
 
       - name: Download mac imgui-node-editor natives
         uses: actions/download-artifact@v4
         with:
           name: linux-natives-nodeeditor
-          path: ./extension/imgui-node-editor/nodeeditor-build/build/c++/libs/
+          path: ./extensions/imgui-node-editor/nodeeditor-build/build/c++/libs/
 
       - name: Download mac ImGui natives
         uses: actions/download-artifact@v4
@@ -442,19 +442,19 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: mac-natives-imlayout
-          path: ./extension/imlayout/imlayout-build/build/c++/libs/
+          path: ./extensions/imlayout/imlayout-build/build/c++/libs/
 
       - name: Download mac ImGuiColorTextEdit natives
         uses: actions/download-artifact@v4
         with:
           name: mac-natives-textedit
-          path: ./extension/ImGuiColorTextEdit/textedit-build/build/c++/libs/
+          path: ./extensions/ImGuiColorTextEdit/textedit-build/build/c++/libs/
 
       - name: Download mac imgui-node-editor natives
         uses: actions/download-artifact@v4
         with:
           name: mac-natives-nodeeditor
-          path: ./extension/imgui-node-editor/nodeeditor-build/build/c++/libs/
+          path: ./extensions/imgui-node-editor/nodeeditor-build/build/c++/libs/
 
       - name: Download android natives
         uses: actions/download-artifact@v4
