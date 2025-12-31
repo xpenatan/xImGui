@@ -161,8 +161,10 @@ public class BuildTextEdit {
         MacTarget macTarget = new MacTarget(isArm);
         macTarget.isStatic = true;
         macTarget.cppFlags.add("-std=c++17");
-        macTarget.headerDirs.add("-I" + imguiCppPath);
+        macTarget.headerDirs.add("-I" + imguiSourcePath);
         macTarget.headerDirs.add("-I" + sourceDir);
+        macTarget.headerDirs.add("-I" + imguiCustomSourcePath);
+        macTarget.headerDirs.add("-I" + op.getCustomSourceDir());
         macTarget.cppInclude.add(sourceDir + "/*.cpp");
         // Boost regex
         macTarget.headerDirs.add("-I" + sourceDir + "/vendor/regex/include");
