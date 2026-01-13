@@ -98,8 +98,14 @@ public class ImGuiGdxGLImpl extends ImGuiGdxImpl {
         String vertex = getVertexShaderGlsl130();
         String fragment = getFragmentShaderGlsl130();
         if(isGL30) {
-            vertex = getVertexShaderGlsl300es();
-            fragment = getFragmentShaderGlsl300es();
+            boolean isWeb = Gdx.app.getType() == com.badlogic.gdx.Application.ApplicationType.WebGL;
+            if(isWeb) {
+                vertex = getVertexShaderGlsl300es();
+                fragment = getFragmentShaderGlsl300es();
+            } else {
+                vertex = getVertexShaderGlsl330();
+                fragment = getFragmentShaderGlsl330();
+            }
         }
 
         shader = new ShaderProgram(vertex, fragment);
@@ -474,7 +480,7 @@ public class ImGuiGdxGLImpl extends ImGuiGdxImpl {
             if(location < 0) continue;
             shader.enableVertexAttribute(location);
             shader.setVertexAttribute(location, attribute.numComponents, attribute.type, attribute.normalized,
-            vertexAttributes.vertexSize, attribute.offset);
+                    vertexAttributes.vertexSize, attribute.offset);
         }
     }
 
@@ -541,34 +547,8 @@ public class ImGuiGdxGLImpl extends ImGuiGdxImpl {
         }
     }
 
-    private String vertex_shader_glsl_130 = "uniform mat4 ProjMtx;\n" +
-            "attribute vec2 Position;\n"
-            + "attribute vec2 UV;\n"
-            + "attribute vec4 Color;\n"
-            + "varying vec2 Frag_UV;\n"
-            + "varying vec4 Frag_Color;\n"
-            + "void main()\n"
-            + "{\n"
-            + "    Frag_UV = UV;\n"
-            + "    Frag_Color = Color;\n"
-            + "    gl_Position = ProjMtx * vec4(Position.xy,0,1);\n"
-            + "}\n";
-
-    private String fragment_shader_glsl_130 = "#ifdef GL_ES\n"
-            + "    precision mediump float;\n"
-            + "#endif\n"
-            + "uniform sampler2D Texture;\n"
-            + "varying vec2 Frag_UV;\n"
-            + "varying vec4 Frag_Color;\n"
-            + "void main()\n"
-            + "{\n"
-            + "    gl_FragColor = Frag_Color * texture2D(Texture, Frag_UV.st);\n"
-            + "}\n";
-
     private String getVertexShaderGlsl130() {
-        return ""
-//                + "#version 130\n"
-                + "uniform mat4 ProjMtx;\n"
+        return "uniform mat4 ProjMtx;\n"
                 + "attribute vec2 Position;\n"
                 + "attribute vec2 UV;\n"
                 + "attribute vec4 Color;\n"
@@ -578,15 +558,13 @@ public class ImGuiGdxGLImpl extends ImGuiGdxImpl {
                 + "{\n"
                 + "    Frag_UV = UV;\n"
                 + "    Frag_Color = Color;\n"
-                + "    gl_Position = ProjMtx * vec4(Position.xy,0,1);\n"
+                + "    gl_Position = ProjMtx * vec4(Position.xy, 0.0, 1.0);\n"
                 + "}\n";
     }
 
     private String getFragmentShaderGlsl130() {
-        return ""
-//                + "#version 130\n"
-                + "#ifdef GL_ES\n"
-                + "    precision mediump float;\n"
+        return "#ifdef GL_ES\n"
+                + "precision mediump float;\n"
                 + "#endif\n"
                 + "uniform sampler2D Texture;\n"
                 + "varying vec2 Frag_UV;\n"
@@ -599,9 +577,9 @@ public class ImGuiGdxGLImpl extends ImGuiGdxImpl {
     private String getVertexShaderGlsl300es() {
         return "#version 300 es\n"
                 + "precision highp float;\n"
-                + "layout (location = 0) in vec2 Position;\n"
-                + "layout (location = 1) in vec2 UV;\n"
-                + "layout (location = 2) in vec4 Color;\n"
+                + "layout(location = 0) in vec2 Position;\n"
+                + "layout(location = 1) in vec2 UV;\n"
+                + "layout(location = 2) in vec4 Color;\n"
                 + "uniform mat4 ProjMtx;\n"
                 + "out vec2 Frag_UV;\n"
                 + "out vec4 Frag_Color;\n"
@@ -609,17 +587,45 @@ public class ImGuiGdxGLImpl extends ImGuiGdxImpl {
                 + "{\n"
                 + "    Frag_UV = UV;\n"
                 + "    Frag_Color = Color;\n"
-                + "    gl_Position = ProjMtx * vec4(Position.xy,0,1);\n"
+                + "    gl_Position = ProjMtx * vec4(Position.xy, 0.0, 1.0);\n"
                 + "}\n";
     }
 
     private String getFragmentShaderGlsl300es() {
         return "#version 300 es\n"
                 + "precision mediump float;\n"
-                + "uniform sampler2D Texture;\n"
                 + "in vec2 Frag_UV;\n"
                 + "in vec4 Frag_Color;\n"
-                + "layout (location = 0) out vec4 Out_Color;\n"
+                + "uniform sampler2D Texture;\n"
+                + "layout(location = 0) out vec4 Out_Color;\n"
+                + "void main()\n"
+                + "{\n"
+                + "    Out_Color = Frag_Color * texture(Texture, Frag_UV.st);\n"
+                + "}\n";
+    }
+
+    private String getVertexShaderGlsl330() {
+        return "#version 330 core\n"
+                + "layout(location = 0) in vec2 Position;\n"
+                + "layout(location = 1) in vec2 UV;\n"
+                + "layout(location = 2) in vec4 Color;\n"
+                + "uniform mat4 ProjMtx;\n"
+                + "out vec2 Frag_UV;\n"
+                + "out vec4 Frag_Color;\n"
+                + "void main()\n"
+                + "{\n"
+                + "    Frag_UV = UV;\n"
+                + "    Frag_Color = Color;\n"
+                + "    gl_Position = ProjMtx * vec4(Position.xy, 0.0, 1.0);\n"
+                + "}\n";
+    }
+
+    private String getFragmentShaderGlsl330() {
+        return "#version 330 core\n"
+                + "in vec2 Frag_UV;\n"
+                + "in vec4 Frag_Color;\n"
+                + "uniform sampler2D Texture;\n"
+                + "layout(location = 0) out vec4 Out_Color;\n"
                 + "void main()\n"
                 + "{\n"
                 + "    Out_Color = Frag_Color * texture(Texture, Frag_UV.st);\n"
