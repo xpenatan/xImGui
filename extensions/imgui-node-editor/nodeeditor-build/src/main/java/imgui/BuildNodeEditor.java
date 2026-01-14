@@ -107,7 +107,6 @@ public class BuildNodeEditor {
         String imguiRootBuildPath = imguiPath + "/imgui-build";
         String imguiCustomSourcePath = imguiRootBuildPath + "/src/main/cpp/custom";
         String imguiBuildPath = imguiRootBuildPath + "/build";
-        String imguiCppPath = imguiBuildPath + "/c++";
         String imguiSourcePath = imguiBuildPath + "/imgui";
         String libBuildCPPPath = op.getModuleBuildCPPPath();
         String sourceDir = op.getSourceDir();
@@ -134,8 +133,11 @@ public class BuildNodeEditor {
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
         linkTarget.headerDirs.add("-I" + libBuildCPPPath + "/src/jniglue");
         linkTarget.headerDirs.add("-I" + imguiCustomSourcePath);
-        linkTarget.linkerFlags.add(imguiCppPath + "/libs/linux/libimgui64.so");
         linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/linux/libnodeeditor64_.a");
+
+        // Use -Wl,--no-undefined with dynamic lookup so symbols from imgui can be resolved at runtime
+        linkTarget.linkerFlags.add("-Wl,--allow-shlib-undefined");
+
         linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");
         multiTarget.add(linkTarget);
 
@@ -146,7 +148,6 @@ public class BuildNodeEditor {
         String imguiRootBuildPath = imguiPath + "/imgui-build";
         String imguiCustomSourcePath = imguiRootBuildPath + "/src/main/cpp/custom";
         String imguiBuildPath = imguiRootBuildPath + "/build";
-        String imguiCppPath = imguiBuildPath + "/c++";
         String imguiSourcePath = imguiBuildPath + "/imgui";
         String libBuildCPPPath = op.getModuleBuildCPPPath();
         String sourceDir = op.getSourceDir();
@@ -175,13 +176,16 @@ public class BuildNodeEditor {
         linkTarget.headerDirs.add("-I" + imguiCustomSourcePath);
 
         if(isArm) {
-            linkTarget.linkerFlags.add(imguiCppPath + "/libs/mac/arm/libimguiarm64.dylib");
             linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/mac/arm/libnodeeditor64_.a");
         }
         else {
-            linkTarget.linkerFlags.add(imguiCppPath + "/libs/mac/libimgui64.dylib");
             linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/mac/libnodeeditor64_.a");
         }
+
+        // Use -undefined dynamic_lookup so symbols from imgui can be resolved at runtime
+        // from already-loaded libraries instead of requiring the dylib file on disk.
+        linkTarget.linkerFlags.add("-undefined");
+        linkTarget.linkerFlags.add("dynamic_lookup");
 
         linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");
         multiTarget.add(linkTarget);

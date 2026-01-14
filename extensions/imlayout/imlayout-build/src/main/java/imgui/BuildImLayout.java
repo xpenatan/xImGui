@@ -138,7 +138,6 @@ public class BuildImLayout {
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
         linkTarget.headerDirs.add("-I" + libBuildCPPPath + "/src/jniglue");
         linkTarget.headerDirs.add("-I" + imguiCustomSourcePath);
-//        linkTarget.linkerFlags.add(imguiCppPath + "/libs/linux/libimgui64.so");
         linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/linux/libimlayout64_.a");
 
         // Use -Wl,--no-undefined with dynamic lookup so symbols from imgui can be resolved at runtime
@@ -192,8 +191,6 @@ public class BuildImLayout {
 
         // Use -undefined dynamic_lookup so symbols from imgui can be resolved at runtime
         // from already-loaded libraries instead of requiring the dylib file on disk.
-        // This allows imlayout to find imgui even when extracted to different temp folders.
-        // We don't link against libimgui64.dylib because it's already loaded in memory.
         linkTarget.linkerFlags.add("-undefined");
         linkTarget.linkerFlags.add("dynamic_lookup");
 
