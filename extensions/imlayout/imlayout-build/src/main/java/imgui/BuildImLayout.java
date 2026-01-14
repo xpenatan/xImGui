@@ -71,7 +71,7 @@ public class BuildImLayout {
         String imguiRootBuildPath = imguiPath + "/imgui-build";
         String imguiCustomSourcePath = imguiRootBuildPath + "/src/main/cpp/custom";
         String imguiBuildPath = imguiRootBuildPath + "/build";
-        String imguiCppPath = imguiBuildPath + "/c++";
+//        String imguiCppPath = imguiBuildPath + "/c++";
         String imguiSourcePath = imguiBuildPath + "/imgui";
         String libBuildCPPPath = op.getModuleBuildCPPPath();
         String sourceDir = op.getSourceDir();
@@ -98,7 +98,10 @@ public class BuildImLayout {
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
         linkTarget.headerDirs.add("-I" + libBuildCPPPath + "/src/jniglue");
         linkTarget.headerDirs.add("-I" + imguiCustomSourcePath);
-        linkTarget.linkerFlags.add("/WHOLEARCHIVE:" + imguiCppPath + "/libs/windows/vc/imgui64.lib");
+//        linkTarget.linkerFlags.add("/WHOLEARCHIVE:" + imguiCppPath + "/libs/windows/vc/imgui64.lib");
+
+        // Note: Windows automatically resolves loaded DLL symbols, so we don't need to link imgui.lib
+        // The imgui64.dll will be loaded separately and its symbols will be found at runtime
         linkTarget.linkerFlags.add("/WHOLEARCHIVE:" + libBuildCPPPath + "/libs/windows/vc/imlayout64_.lib");
         linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");
         linkTarget.linkerFlags.add("-DLL");
@@ -111,7 +114,7 @@ public class BuildImLayout {
         String imguiRootBuildPath = imguiPath + "/imgui-build";
         String imguiCustomSourcePath = imguiRootBuildPath + "/src/main/cpp/custom";
         String imguiBuildPath = imguiRootBuildPath + "/build";
-        String imguiCppPath = imguiBuildPath + "/c++";
+//        String imguiCppPath = imguiBuildPath + "/c++";
         String imguiSourcePath = imguiBuildPath + "/imgui";
         String libBuildCPPPath = op.getModuleBuildCPPPath();
         String sourceDir = op.getSourceDir();
@@ -138,8 +141,14 @@ public class BuildImLayout {
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
         linkTarget.headerDirs.add("-I" + libBuildCPPPath + "/src/jniglue");
         linkTarget.headerDirs.add("-I" + imguiCustomSourcePath);
-        linkTarget.linkerFlags.add(imguiCppPath + "/libs/linux/libimgui64.so");
+//        linkTarget.linkerFlags.add(imguiCppPath + "/libs/linux/libimgui64.so");
         linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/linux/libimlayout64_.a");
+
+        // Use -Wl,--no-undefined with dynamic lookup so symbols from imgui can be resolved at runtime
+        // from already-loaded libraries instead of requiring the .so file on disk.
+        // This allows imlayout to find imgui even when extracted to different temp folders.
+        linkTarget.linkerFlags.add("-Wl,--allow-shlib-undefined");
+
         linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");
         multiTarget.add(linkTarget);
 
@@ -150,7 +159,6 @@ public class BuildImLayout {
         String imguiRootBuildPath = imguiPath + "/imgui-build";
         String imguiCustomSourcePath = imguiRootBuildPath + "/src/main/cpp/custom";
         String imguiBuildPath = imguiRootBuildPath + "/build";
-        String imguiCppPath = imguiBuildPath + "/c++";
         String imguiSourcePath = imguiBuildPath + "/imgui";
         String libBuildCPPPath = op.getModuleBuildCPPPath();
         String sourceDir = op.getSourceDir();
@@ -179,13 +187,18 @@ public class BuildImLayout {
         linkTarget.headerDirs.add("-I" + imguiCustomSourcePath);
 
         if(isArm) {
-            linkTarget.linkerFlags.add(imguiCppPath + "/libs/mac/arm/libimguiarm64.dylib");
             linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/mac/arm/libimlayout64_.a");
         }
         else {
-            linkTarget.linkerFlags.add(imguiCppPath + "/libs/mac/libimgui64.dylib");
             linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/mac/libimlayout64_.a");
         }
+
+        // Use -undefined dynamic_lookup so symbols from imgui can be resolved at runtime
+        // from already-loaded libraries instead of requiring the dylib file on disk.
+        // This allows imlayout to find imgui even when extracted to different temp folders.
+        // We don't link against libimgui64.dylib because it's already loaded in memory.
+        linkTarget.linkerFlags.add("-undefined");
+        linkTarget.linkerFlags.add("dynamic_lookup");
 
         linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");
         multiTarget.add(linkTarget);

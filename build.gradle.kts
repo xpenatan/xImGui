@@ -37,6 +37,11 @@ allprojects  {
     configurations.configureEach {
         // Check for updates every sync
         resolutionStrategy.cacheChangingModulesFor(0, "seconds")
+//        resolutionStrategy {
+//            force("com.github.xpenatan.jWebGPU:webgpu-core:-SNAPSHOT")
+//            force("com.github.xpenatan.jWebGPU:webgpu-desktop:-SNAPSHOT")
+//            force("com.github.xpenatan.jWebGPU:webgpu-teavm:-SNAPSHOT")
+//        }
     }
 }
 
