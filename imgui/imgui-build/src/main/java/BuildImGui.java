@@ -112,16 +112,16 @@ public class BuildImGui {
         String sourceDir = op.getSourceDir();
 
         // Make a static library
-        WindowsMSVCTarget windowsTarget = new WindowsMSVCTarget();
-        windowsTarget.cppFlags.add("-std:c++17");
-        windowsTarget.cppFlags.add("/DIMGUI_EXPORTS");
-        windowsTarget.cppFlags.add("/DIMGUI_USER_CONFIG=\"\\\"ImGuiCustomConfig.h\\\"\"");
-        windowsTarget.isStatic = true;
-        windowsTarget.headerDirs.add("-I" + sourceDir);
-        windowsTarget.headerDirs.add("-I" + op.getCustomSourceDir());
-        windowsTarget.cppInclude.add(sourceDir + "/*.cpp");
-        windowsTarget.cppInclude.add(op.getCustomSourceDir() + "*.cpp");
-        multiTarget.add(windowsTarget);
+        WindowsMSVCTarget compileStaticTarget = new WindowsMSVCTarget();
+        compileStaticTarget.cppFlags.add("-std:c++17");
+        compileStaticTarget.cppFlags.add("/DIMGUI_EXPORTS");
+        compileStaticTarget.cppFlags.add("/DIMGUI_USER_CONFIG=\"\\\"ImGuiCustomConfig.h\\\"\"");
+        compileStaticTarget.isStatic = true;
+        compileStaticTarget.headerDirs.add("-I" + sourceDir);
+        compileStaticTarget.headerDirs.add("-I" + op.getCustomSourceDir());
+        compileStaticTarget.cppInclude.add(sourceDir + "/*.cpp");
+        compileStaticTarget.cppInclude.add(op.getCustomSourceDir() + "*.cpp");
+        multiTarget.add(compileStaticTarget);
 
         // Compile glue code and link
         WindowsMSVCTarget linkTarget = new WindowsMSVCTarget();
@@ -146,19 +146,21 @@ public class BuildImGui {
         String sourceDir = op.getSourceDir();
 
         // Make a static library
-        LinuxTarget linuxTarget = new LinuxTarget();
-        linuxTarget.isStatic = true;
-        linuxTarget.cppFlags.add("-std=c++17");
-        linuxTarget.cppFlags.add("-DIMGUI_USER_CONFIG=\"ImGuiCustomConfig.h\"");
-        linuxTarget.headerDirs.add("-I" + sourceDir);
-        linuxTarget.headerDirs.add("-I" + op.getCustomSourceDir());
-        linuxTarget.cppInclude.add(sourceDir + "/*.cpp");
-        multiTarget.add(linuxTarget);
+        LinuxTarget compileStaticTarget = new LinuxTarget();
+        compileStaticTarget.isStatic = true;
+        compileStaticTarget.cppFlags.add("-std=c++17");
+        compileStaticTarget.cppFlags.add("-fPIC");
+        compileStaticTarget.cppFlags.add("-DIMGUI_USER_CONFIG=\"ImGuiCustomConfig.h\"");
+        compileStaticTarget.headerDirs.add("-I" + sourceDir);
+        compileStaticTarget.headerDirs.add("-I" + op.getCustomSourceDir());
+        compileStaticTarget.cppInclude.add(sourceDir + "/*.cpp");
+        multiTarget.add(compileStaticTarget);
 
         // Compile glue code and link
         LinuxTarget linkTarget = new LinuxTarget();
         linkTarget.addJNIHeaders();
         linkTarget.cppFlags.add("-std=c++17");
+        linkTarget.cppFlags.add("-fPIC");
         linkTarget.cppFlags.add("-DIMGUI_USER_CONFIG=\"ImGuiCustomConfig.h\"");
         linkTarget.headerDirs.add("-I" + sourceDir);
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
@@ -175,19 +177,21 @@ public class BuildImGui {
         String sourceDir = op.getSourceDir();
 
         // Make a static library
-        MacTarget macTarget = new MacTarget(isArm);
-        macTarget.isStatic = true;
-        macTarget.cppFlags.add("-std=c++17");
-        macTarget.headerDirs.add("-I" + sourceDir);
-        macTarget.headerDirs.add("-I" + op.getCustomSourceDir());
-        macTarget.cppFlags.add("-DIMGUI_USER_CONFIG=\"ImGuiCustomConfig.h\"");
-        macTarget.cppInclude.add(sourceDir + "/*.cpp");
-        multiTarget.add(macTarget);
+        MacTarget compileStaticTarget = new MacTarget(isArm);
+        compileStaticTarget.isStatic = true;
+        compileStaticTarget.cppFlags.add("-std=c++17");
+        compileStaticTarget.cppFlags.add("-fPIC");
+        compileStaticTarget.headerDirs.add("-I" + sourceDir);
+        compileStaticTarget.headerDirs.add("-I" + op.getCustomSourceDir());
+        compileStaticTarget.cppFlags.add("-DIMGUI_USER_CONFIG=\"ImGuiCustomConfig.h\"");
+        compileStaticTarget.cppInclude.add(sourceDir + "/*.cpp");
+        multiTarget.add(compileStaticTarget);
 
         // Compile glue code and link
         MacTarget linkTarget = new MacTarget(isArm);
         linkTarget.addJNIHeaders();
         linkTarget.cppFlags.add("-std=c++17");
+        linkTarget.cppFlags.add("-fPIC");
         linkTarget.cppFlags.add("-DIMGUI_USER_CONFIG=\"ImGuiCustomConfig.h\"");
         linkTarget.headerDirs.add("-I" + sourceDir);
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
@@ -217,17 +221,17 @@ public class BuildImGui {
         }
 
         // Make a static library
-        EmscriptenTarget libTarget = new EmscriptenTarget();
-        libTarget.isStatic = true;
-        libTarget.cppFlags.add("-std=c++17");
-        libTarget.cppFlags.add(config);
-        libTarget.compileGlueCode = false;
-        libTarget.headerDirs.add("-I" + sourceDir);
-        libTarget.headerDirs.add("-I" + op.getCustomSourceDir());
-        libTarget.cppInclude.add(sourceDir + "/*.cpp");
-        libTarget.cppFlags.add("-DIMGUI_DISABLE_FILE_FUNCTIONS");
-        libTarget.cppFlags.add("-DIMGUI_DEFINE_MATH_OPERATORS");
-        multiTarget.add(libTarget);
+        EmscriptenTarget compileStaticTarget = new EmscriptenTarget();
+        compileStaticTarget.isStatic = true;
+        compileStaticTarget.cppFlags.add("-std=c++17");
+        compileStaticTarget.cppFlags.add(config);
+        compileStaticTarget.compileGlueCode = false;
+        compileStaticTarget.headerDirs.add("-I" + sourceDir);
+        compileStaticTarget.headerDirs.add("-I" + op.getCustomSourceDir());
+        compileStaticTarget.cppInclude.add(sourceDir + "/*.cpp");
+        compileStaticTarget.cppFlags.add("-DIMGUI_DISABLE_FILE_FUNCTIONS");
+        compileStaticTarget.cppFlags.add("-DIMGUI_DEFINE_MATH_OPERATORS");
+        multiTarget.add(compileStaticTarget);
 
         // Compile glue code and link
         EmscriptenTarget linkTarget = new EmscriptenTarget();
@@ -264,15 +268,15 @@ public class BuildImGui {
             AndroidTarget.Target target = targets.get(i);
 
             // Make a static library
-            AndroidTarget androidTarget = new AndroidTarget(target, apiLevel);
-            androidTarget.isStatic = true;
-            androidTarget.cppFlags.add("-std=c++17");
-            androidTarget.headerDirs.add("-I" + sourceDir);
-            androidTarget.cppInclude.add(sourceDir + "/imgui/**.cpp");
-            androidTarget.cppFlags.add("-Wno-error=format-security");
-            androidTarget.cppFlags.add("-DIMGUI_DISABLE_FILE_FUNCTIONS");
-            androidTarget.cppFlags.add("-DIMGUI_DEFINE_MATH_OPERATORS");
-            multiTarget.add(androidTarget);
+            AndroidTarget compileStaticTarget = new AndroidTarget(target, apiLevel);
+            compileStaticTarget.isStatic = true;
+            compileStaticTarget.cppFlags.add("-std=c++17");
+            compileStaticTarget.headerDirs.add("-I" + sourceDir);
+            compileStaticTarget.cppInclude.add(sourceDir + "/imgui/**.cpp");
+            compileStaticTarget.cppFlags.add("-Wno-error=format-security");
+            compileStaticTarget.cppFlags.add("-DIMGUI_DISABLE_FILE_FUNCTIONS");
+            compileStaticTarget.cppFlags.add("-DIMGUI_DEFINE_MATH_OPERATORS");
+            multiTarget.add(compileStaticTarget);
 
             // Compile glue code and link
             AndroidTarget linkTarget = new AndroidTarget(target, apiLevel);

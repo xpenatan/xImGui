@@ -76,18 +76,18 @@ public class BuildTextEdit {
 
         BuildMultiTarget multiTarget = new BuildMultiTarget();
 
-        WindowsMSVCTarget windowsTarget = new WindowsMSVCTarget();
-        windowsTarget.isStatic = true;
-        windowsTarget.cppFlags.add("-std:c++17");
-        windowsTarget.headerDirs.add("-I" + imguiSourcePath);
-        windowsTarget.headerDirs.add("-I" + sourceDir);
-        windowsTarget.headerDirs.add("-I" + imguiCustomSourcePath);
-        windowsTarget.cppInclude.add(sourceDir + "/*.cpp");
+        WindowsMSVCTarget compileStaticTarget = new WindowsMSVCTarget();
+        compileStaticTarget.isStatic = true;
+        compileStaticTarget.cppFlags.add("-std:c++17");
+        compileStaticTarget.headerDirs.add("-I" + imguiSourcePath);
+        compileStaticTarget.headerDirs.add("-I" + sourceDir);
+        compileStaticTarget.headerDirs.add("-I" + imguiCustomSourcePath);
+        compileStaticTarget.cppInclude.add(sourceDir + "/*.cpp");
         // Boost regex
-        windowsTarget.headerDirs.add("-I" + sourceDir + "/vendor/regex/include");
-        windowsTarget.headerDirs.add("-includecmath");
-        windowsTarget.cppInclude.add(sourceDir + "/vendor/regex/src/*.cpp");
-        multiTarget.add(windowsTarget);
+        compileStaticTarget.headerDirs.add("-I" + sourceDir + "/vendor/regex/include");
+        compileStaticTarget.headerDirs.add("-includecmath");
+        compileStaticTarget.cppInclude.add(sourceDir + "/vendor/regex/src/*.cpp");
+        multiTarget.add(compileStaticTarget);
 
         // Compile glue code and link
         WindowsMSVCTarget linkTarget = new WindowsMSVCTarget();
@@ -117,23 +117,25 @@ public class BuildTextEdit {
 
         BuildMultiTarget multiTarget = new BuildMultiTarget();
 
-        LinuxTarget linuxTarget = new LinuxTarget();
-        linuxTarget.isStatic = true;
-        linuxTarget.cppFlags.add("-std=c++17");
-        linuxTarget.headerDirs.add("-I" + imguiSourcePath);
-        linuxTarget.headerDirs.add("-I" + sourceDir);
-        linuxTarget.headerDirs.add("-I" + imguiCustomSourcePath);
-        linuxTarget.cppInclude.add(sourceDir + "/*.cpp");
+        LinuxTarget compileStaticTarget = new LinuxTarget();
+        compileStaticTarget.isStatic = true;
+        compileStaticTarget.cppFlags.add("-std=c++17");
+        compileStaticTarget.cppFlags.add("-fPIC");
+        compileStaticTarget.headerDirs.add("-I" + imguiSourcePath);
+        compileStaticTarget.headerDirs.add("-I" + sourceDir);
+        compileStaticTarget.headerDirs.add("-I" + imguiCustomSourcePath);
+        compileStaticTarget.cppInclude.add(sourceDir + "/*.cpp");
         // Boost regex
-        linuxTarget.headerDirs.add("-I" + sourceDir + "/vendor/regex/include");
-        linuxTarget.headerDirs.add("-includecmath");
-        linuxTarget.cppInclude.add(sourceDir + "/vendor/regex/src/*.cpp");
-        multiTarget.add(linuxTarget);
+        compileStaticTarget.headerDirs.add("-I" + sourceDir + "/vendor/regex/include");
+        compileStaticTarget.headerDirs.add("-includecmath");
+        compileStaticTarget.cppInclude.add(sourceDir + "/vendor/regex/src/*.cpp");
+        multiTarget.add(compileStaticTarget);
 
         // Compile glue code and link
         LinuxTarget linkTarget = new LinuxTarget();
         linkTarget.addJNIHeaders();
         linkTarget.cppFlags.add("-std=c++17");
+        linkTarget.cppFlags.add("-fPIC");
         linkTarget.headerDirs.add("-I" + imguiSourcePath);
         linkTarget.headerDirs.add("-I" + sourceDir);
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
@@ -160,24 +162,26 @@ public class BuildTextEdit {
 
         BuildMultiTarget multiTarget = new BuildMultiTarget();
 
-        MacTarget macTarget = new MacTarget(isArm);
-        macTarget.isStatic = true;
-        macTarget.cppFlags.add("-std=c++17");
-        macTarget.headerDirs.add("-I" + imguiSourcePath);
-        macTarget.headerDirs.add("-I" + sourceDir);
-        macTarget.headerDirs.add("-I" + imguiCustomSourcePath);
-        macTarget.headerDirs.add("-I" + op.getCustomSourceDir());
-        macTarget.cppInclude.add(sourceDir + "/*.cpp");
+        MacTarget compileStaticTarget = new MacTarget(isArm);
+        compileStaticTarget.isStatic = true;
+        compileStaticTarget.cppFlags.add("-std=c++17");
+        compileStaticTarget.cppFlags.add("-fPIC");
+        compileStaticTarget.headerDirs.add("-I" + imguiSourcePath);
+        compileStaticTarget.headerDirs.add("-I" + sourceDir);
+        compileStaticTarget.headerDirs.add("-I" + imguiCustomSourcePath);
+        compileStaticTarget.headerDirs.add("-I" + op.getCustomSourceDir());
+        compileStaticTarget.cppInclude.add(sourceDir + "/*.cpp");
         // Boost regex
-        macTarget.headerDirs.add("-I" + sourceDir + "/vendor/regex/include");
-        macTarget.headerDirs.add("-includecmath");
-        macTarget.cppInclude.add(sourceDir + "/vendor/regex/src/*.cpp");
-        multiTarget.add(macTarget);
+        compileStaticTarget.headerDirs.add("-I" + sourceDir + "/vendor/regex/include");
+        compileStaticTarget.headerDirs.add("-includecmath");
+        compileStaticTarget.cppInclude.add(sourceDir + "/vendor/regex/src/*.cpp");
+        multiTarget.add(compileStaticTarget);
 
         // Compile glue code and link
         MacTarget linkTarget = new MacTarget(isArm);
         linkTarget.addJNIHeaders();
         linkTarget.cppFlags.add("-std=c++17");
+        linkTarget.cppFlags.add("-fPIC");
         linkTarget.cppFlags.add("-DIMGUI_USER_CONFIG=\"ImGuiCustomConfig.h\"");
         linkTarget.headerDirs.add("-I" + imguiSourcePath);
         linkTarget.headerDirs.add("-I" + sourceDir);
@@ -221,19 +225,19 @@ public class BuildTextEdit {
         }
 
         // Make a static library
-        EmscriptenTarget libTarget = new EmscriptenTarget();
-        libTarget.isStatic = true;
-        libTarget.cppFlags.add("-std=c++17");
-        libTarget.cppFlags.add(config);
-        libTarget.compileGlueCode = false;
-        libTarget.headerDirs.add("-I" + imguiSourcePath);
-        libTarget.headerDirs.add("-I" + sourceDir);
-        libTarget.headerDirs.add("-I" + imguiCustomSourcePath);
-        libTarget.cppInclude.add(sourceDir + "/*.cpp");
+        EmscriptenTarget compileStaticTarget = new EmscriptenTarget();
+        compileStaticTarget.isStatic = true;
+        compileStaticTarget.cppFlags.add("-std=c++17");
+        compileStaticTarget.cppFlags.add(config);
+        compileStaticTarget.compileGlueCode = false;
+        compileStaticTarget.headerDirs.add("-I" + imguiSourcePath);
+        compileStaticTarget.headerDirs.add("-I" + sourceDir);
+        compileStaticTarget.headerDirs.add("-I" + imguiCustomSourcePath);
+        compileStaticTarget.cppInclude.add(sourceDir + "/*.cpp");
         // Boost regex
-        libTarget.headerDirs.add("-I" + sourceDir + "/vendor/regex/include");
-        libTarget.cppInclude.add(sourceDir + "/vendor/regex/src/*.cpp");
-        multiTarget.add(libTarget);
+        compileStaticTarget.headerDirs.add("-I" + sourceDir + "/vendor/regex/include");
+        compileStaticTarget.cppInclude.add(sourceDir + "/vendor/regex/src/*.cpp");
+        multiTarget.add(compileStaticTarget);
 
         // Compile glue code and link
         EmscriptenTarget linkTarget = new EmscriptenTarget();
