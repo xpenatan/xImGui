@@ -117,6 +117,7 @@ public class BuildNodeEditor {
         LinuxTarget compileStaticTarget = new LinuxTarget();
         compileStaticTarget.isStatic = true;
         compileStaticTarget.cppFlags.add("-std=c++17");
+        compileStaticTarget.cppFlags.add("-fPIC");
         compileStaticTarget.cppFlags.add("-DIMGUI_USER_CONFIG=\"ImGuiCustomConfig.h\"");
         compileStaticTarget.headerDirs.add("-I" + imguiSourcePath);
         compileStaticTarget.headerDirs.add("-I" + sourceDir);
@@ -128,6 +129,7 @@ public class BuildNodeEditor {
         LinuxTarget linkTarget = new LinuxTarget();
         linkTarget.addJNIHeaders();
         linkTarget.cppFlags.add("-std=c++17");
+        linkTarget.cppFlags.add("-fPIC");
         linkTarget.cppFlags.add("-DIMGUI_USER_CONFIG=\"ImGuiCustomConfig.h\"");
         linkTarget.headerDirs.add("-I" + imguiSourcePath);
         linkTarget.headerDirs.add("-I" + sourceDir);
