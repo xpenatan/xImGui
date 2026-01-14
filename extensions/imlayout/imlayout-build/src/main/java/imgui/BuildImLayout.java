@@ -71,7 +71,7 @@ public class BuildImLayout {
         String imguiRootBuildPath = imguiPath + "/imgui-build";
         String imguiCustomSourcePath = imguiRootBuildPath + "/src/main/cpp/custom";
         String imguiBuildPath = imguiRootBuildPath + "/build";
-//        String imguiCppPath = imguiBuildPath + "/c++";
+        String imguiCppPath = imguiBuildPath + "/c++";
         String imguiSourcePath = imguiBuildPath + "/imgui";
         String libBuildCPPPath = op.getModuleBuildCPPPath();
         String sourceDir = op.getSourceDir();
@@ -98,10 +98,7 @@ public class BuildImLayout {
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
         linkTarget.headerDirs.add("-I" + libBuildCPPPath + "/src/jniglue");
         linkTarget.headerDirs.add("-I" + imguiCustomSourcePath);
-//        linkTarget.linkerFlags.add("/WHOLEARCHIVE:" + imguiCppPath + "/libs/windows/vc/imgui64.lib");
-
-        // Note: Windows automatically resolves loaded DLL symbols, so we don't need to link imgui.lib
-        // The imgui64.dll will be loaded separately and its symbols will be found at runtime
+        linkTarget.linkerFlags.add("/WHOLEARCHIVE:" + imguiCppPath + "/libs/windows/vc/imgui64.lib");
         linkTarget.linkerFlags.add("/WHOLEARCHIVE:" + libBuildCPPPath + "/libs/windows/vc/imlayout64_.lib");
         linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");
         linkTarget.linkerFlags.add("-DLL");
