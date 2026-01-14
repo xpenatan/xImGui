@@ -164,6 +164,7 @@ public class BuildImGui {
         linkTarget.cppFlags.add("-DIMGUI_USER_CONFIG=\"ImGuiCustomConfig.h\"");
         linkTarget.headerDirs.add("-I" + sourceDir);
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
+        linkTarget.linkerFlags.add("-Wl,-soname,libimgui64.so");
         linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/linux/libimgui64_.a");
         linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");
         multiTarget.add(linkTarget);
