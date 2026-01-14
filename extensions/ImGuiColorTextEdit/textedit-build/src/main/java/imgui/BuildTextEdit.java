@@ -112,6 +112,7 @@ public class BuildTextEdit {
         String imguiCustomSourcePath = imguiRootBuildPath + "/src/main/cpp/custom";
         String imguiBuildPath = imguiRootBuildPath + "/build";
         String imguiSourcePath = imguiBuildPath + "/imgui";
+        String imguiCppPath = imguiBuildPath + "/c++";
         String libBuildCPPPath = op.getModuleBuildCPPPath();
         String sourceDir = op.getSourceDir();
 
@@ -141,10 +142,11 @@ public class BuildTextEdit {
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
         linkTarget.headerDirs.add("-I" + libBuildCPPPath + "/src/jniglue");
         linkTarget.headerDirs.add("-I" + imguiCustomSourcePath);
+        linkTarget.linkerFlags.add(imguiCppPath + "/libs/linux/libimgui64.so");
         linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/linux/libtextedit64_.a");
 
-        // Use -Wl,--no-undefined with dynamic lookup so symbols from imgui can be resolved at runtime
-        linkTarget.linkerFlags.add("-Wl,--allow-shlib-undefined");
+//        // Use -Wl,--no-undefined with dynamic lookup so symbols from imgui can be resolved at runtime
+//        linkTarget.linkerFlags.add("-Wl,--allow-shlib-undefined");
 
         multiTarget.add(linkTarget);
         linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");
