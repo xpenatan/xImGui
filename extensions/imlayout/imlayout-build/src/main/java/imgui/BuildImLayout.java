@@ -140,13 +140,11 @@ public class BuildImLayout {
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
         linkTarget.headerDirs.add("-I" + libBuildCPPPath + "/src/jniglue");
         linkTarget.headerDirs.add("-I" + imguiCustomSourcePath);
-        linkTarget.linkerFlags.add(imguiCppPath + "/libs/linux/libimgui64.so");
         linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/linux/libimlayout64_.a");
 
-//        // Use -Wl,--no-undefined with dynamic lookup so symbols from imgui can be resolved at runtime
-//        // from already-loaded libraries instead of requiring the .so file on disk.
-//        // This allows imlayout to find imgui even when extracted to different temp folders.
-//        linkTarget.linkerFlags.add("-Wl,--allow-shlib-undefined");
+        linkTarget.linkerFlags.add("-Wl,-rpath,$ORIGIN");
+        linkTarget.linkerFlags.add("-L" + imguiCppPath + "/libs/linux");
+        linkTarget.linkerFlags.add("-limgui64");
 
         linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");
         multiTarget.add(linkTarget);
