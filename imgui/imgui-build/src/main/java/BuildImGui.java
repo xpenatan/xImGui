@@ -271,6 +271,7 @@ public class BuildImGui {
             // Make a static library
             AndroidTarget compileStaticTarget = new AndroidTarget(target, apiLevel);
             compileStaticTarget.isStatic = true;
+            compileStaticTarget.cppCompiler.add("-fPIC");
             compileStaticTarget.cppFlags.add("-std=c++17");
             compileStaticTarget.headerDirs.add("-I" + sourceDir);
             compileStaticTarget.cppInclude.add(sourceDir + "/imgui/**.cpp");
@@ -283,6 +284,7 @@ public class BuildImGui {
             AndroidTarget linkTarget = new AndroidTarget(target, apiLevel);
             linkTarget.addJNIHeaders();
             linkTarget.cppFlags.add("-std=c++17");
+            linkTarget.cppCompiler.add("-fPIC");
             linkTarget.headerDirs.add("-I" + sourceDir);
             linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
             linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");
