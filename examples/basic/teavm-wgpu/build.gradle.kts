@@ -22,7 +22,7 @@ dependencies {
 
     implementation("com.badlogicgames.gdx:gdx:${LibExt.gdxVersion}")
     implementation("com.github.xpenatan.gdx-teavm:backend-teavm:${LibExt.gdxTeaVMVersion}")
-    implementation("io.github.monstroussoftware.gdx-webgpu:backend-teavm:${LibExt.gdxWebGPUVersion}")
+    implementation("com.github.xpenatan.gdx-webgpu:backend-teavm:${LibExt.gdxWebGPUVersion}")
 }
 
 java {
