@@ -1,15 +1,14 @@
-package imgui.example.imlayout.launcher;
+package imgui.example.imlayout;
 
-import com.github.xpenatan.gdx.backends.teavm.TeaApplication;
-import com.github.xpenatan.gdx.backends.teavm.TeaApplicationConfiguration;
-import imgui.example.imlayout.ImGuiGame;
+import com.github.xpenatan.gdx.teavm.backends.web.WebApplication;
+import com.github.xpenatan.gdx.teavm.backends.web.WebApplicationConfiguration;
 import imgui.example.renderer.ImGuiShared;
 import imgui.example.renderer.ImGuiSharedGdx;
 
 public class Launcher {
 
     public static void main(String[] args) {
-        TeaApplicationConfiguration config = new TeaApplicationConfiguration("canvas");
+        WebApplicationConfiguration config = new WebApplicationConfiguration("canvas");
         config.useDebugGL = false;
         config.width = 0;
         config.height = 0;
@@ -17,6 +16,6 @@ public class Launcher {
 //        config.useGL30 = false;
 //        config.useGLArrayBuffer = true;
         ImGuiShared.instance = new ImGuiSharedGdx();
-        new TeaApplication(new ImGuiGame(), config);
+        new WebApplication(new ImGuiGame(), config);
     }
 }

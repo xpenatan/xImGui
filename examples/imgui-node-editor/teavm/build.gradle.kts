@@ -1,11 +1,5 @@
 plugins {
     id("java")
-    id("org.gretty") version("4.1.10")
-}
-
-project.extra["webAppDir"] = File(projectDir, "build/dist/webapp")
-gretty {
-    contextPath = "/"
 }
 
 java {
@@ -30,21 +24,12 @@ dependencies {
     }
 
     implementation("com.badlogicgames.gdx:gdx:${LibExt.gdxVersion}")
-    implementation("com.github.xpenatan.gdx-teavm:backend-teavm:${LibExt.gdxTeaVMVersion}")
+    implementation("com.github.xpenatan.gdx-teavm:backend-web:${LibExt.gdxTeaVMVersion}")
 }
 
-tasks.register<JavaExec>("nodeeditor_build_teavm") {
+tasks.register<JavaExec>("nodeeditor_run_teavm") {
     group = "example-teavm"
     description = "Build teavm example"
     mainClass.set(mainClassName)
     classpath = sourceSets["main"].runtimeClasspath
-}
-
-tasks.register("nodeeditor_run_teavm") {
-    group = "example-teavm"
-    description = "Run teavm app"
-    val list = listOf("nodeeditor_build_teavm", "jettyRun")
-    dependsOn(list)
-
-    tasks.findByName("jettyRun")?.mustRunAfter("nodeeditor_build_teavm")
 }
