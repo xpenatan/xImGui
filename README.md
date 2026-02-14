@@ -23,9 +23,6 @@ It's meant to be small and 1-1 to C++. ImGui::Begin() is ImGui.Begin() and so on
 |:--------:|:-----------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------:|
 |  Basic   | [JS](https://xpenatan.github.io/xImGui/wgpu/basic/js) / [WASM](https://xpenatan.github.io/xImGui/wgpu/basic/wasm) | [JS](https://xpenatan.github.io/xImGui/gl/basic/js) / [WASM](https://xpenatan.github.io/xImGui/gl/basic/wasm) | 
 
-* 
-* 
-
 ### ImGui current state:
 
 | Emscripten | Windows | Linux | Mac | Android | iOS |
