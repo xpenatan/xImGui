@@ -44,6 +44,11 @@ java {
     targetCompatibility = JavaVersion.toVersion(LibExt.java11Target)
 }
 
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
 publishing {
     publications {
         create<MavenPublication>("maven") {

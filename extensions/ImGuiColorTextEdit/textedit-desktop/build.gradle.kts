@@ -22,6 +22,11 @@ java {
     targetCompatibility = JavaVersion.toVersion(LibExt.java8Target)
 }
 
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
 publishing {
     publications {
         create<MavenPublication>("maven") {
