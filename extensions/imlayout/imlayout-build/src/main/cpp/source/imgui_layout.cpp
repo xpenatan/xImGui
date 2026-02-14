@@ -1089,7 +1089,7 @@ void Begin(float height, bool isLeaf, bool isSelected, int isOpen) {
     ImGui::ItemAdd(bbArrow, arrowButtonId);
     ImGui::SameLine(0, 0);
 
-    int layoutId = ImGui::GetID("FullLayout");
+    int layoutId = ImGui::GetID("FullLayout2");
     float scrollOffsetH = ImGui::GetScrollX();
     ImVec2 clipRectMin = ImVec2(windowX, windowY);
     float xMin = clipRectMin.x + scrollOffsetH + ImGui::GetWindowContentRegionMin().x;
@@ -1177,7 +1177,7 @@ void Begin(float height, bool isLeaf, bool isSelected, int isOpen) {
         ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(x, 0));
     }
 
-    ImLayout::BeginAlign("FullLayout", ImLayout::MATCH_PARENT, height, 0.0, 0.5);
+    ImLayout::BeginAlign("FullLayout2", ImLayout::MATCH_PARENT, height, 0.0, 0.5);
 }
 
 void ImLayout::BeginTreeLayout(float height, bool isLeaf, bool selected) {
@@ -1187,7 +1187,6 @@ void ImLayout::BeginTreeLayout(float height, bool isLeaf, bool selected) {
 void ImLayout::BeginTreeLayout(float height, bool isLeaf, bool selected, bool isOpen) {
     Begin(height, isLeaf, selected, isOpen ? 1 : 0);
 }
-
 
 bool ImLayout::EndTreeLayout() {
 

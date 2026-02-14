@@ -60,85 +60,85 @@ namespace ImGuiExt
 
 		HelpMarker("Using custom code");
 
-		static std::string strbuffer;
-		static std::string myText[3];
-		struct TextCallback
-		{
-			static int InputTextCallback(ImGuiInputTextCallbackData* data)
-			{
-				std::string* str = (std::string*)data->UserData;
-				if (data->EventFlag == ImGuiInputTextFlags_CallbackResize)
-				{
-					// Resize string callback
-					// If for some reason we refuse the new length (BufTextLen) and/or capacity (BufSize) we need to set them back to what we want.
-					IM_ASSERT(data->Buf == str->c_str());
-					str->resize(data->BufTextLen);
-					data->Buf = (char*)str->c_str();
-				}
-				return 0;
-			}
-		};
+		//static std::string strbuffer;
+		//static std::string myText[3];
+		//struct TextCallback
+		//{
+		//	static int InputTextCallback(ImGuiInputTextCallbackData* data)
+		//	{
+		//		std::string* str = (std::string*)data->UserData;
+		//		if (data->EventFlag == ImGuiInputTextFlags_CallbackResize)
+		//		{
+		//			// Resize string callback
+		//			// If for some reason we refuse the new length (BufTextLen) and/or capacity (BufSize) we need to set them back to what we want.
+		//			IM_ASSERT(data->Buf == str->c_str());
+		//			str->resize(data->BufTextLen);
+		//			data->Buf = (char*)str->c_str();
+		//		}
+		//		return 0;
+		//	}
+		//};
 
-		for (int i = 0; i < 3; ++i) {
-			ImGui::PushID(i);
-			ImGui::Text("Value = %s", myText[i].c_str());
-			ImGui::SameLine();
+		//for (int i = 0; i < 3; ++i) {
+		//	ImGui::PushID(i);
+		//	ImGui::Text("Value = %s", myText[i].c_str());
+		//	ImGui::SameLine();
 
-			void* voidValue = (void*)&strbuffer;
-			int flags = 0;
-			std::string* stringPtr = static_cast<std::string*>(voidValue);
-			std::string str = *stringPtr;
-			str.assign(myText[i]);
-			flags |= ImGuiInputTextFlags_CallbackResize;
-			flags |= ImGuiInputTextFlags_EnterReturnsTrue;
-			char* string = (char*)str.c_str();
-			int capacity = str.capacity() + 1;
-			bool isValid = ImGui::InputText("##input text", string, capacity, flags, TextCallback::InputTextCallback, &str);
-			ImGuiID id = ImGui::GetItemID();
-			ImGuiInputTextState* state = ImGui::GetInputTextState(id);
-			bool isItemDeactivated = ImGui::IsItemDeactivated();
-			bool escKey = ImGui::IsKeyPressed(ImGuiKey_Escape, false);
+		//	void* voidValue = (void*)&strbuffer;
+		//	int flags = 0;
+		//	std::string* stringPtr = static_cast<std::string*>(voidValue);
+		//	std::string str = *stringPtr;
+		//	str.assign(myText[i]);
+		//	flags |= ImGuiInputTextFlags_CallbackResize;
+		//	flags |= ImGuiInputTextFlags_EnterReturnsTrue;
+		//	char* string = (char*)str.c_str();
+		//	int capacity = str.capacity() + 1;
+		//	bool isValid = ImGui::InputText("##input text", string, capacity, flags, TextCallback::InputTextCallback, &str);
+		//	ImGuiID id = ImGui::GetItemID();
+		//	ImGuiInputTextState* state = ImGui::GetInputTextState(id);
+		//	bool isItemDeactivated = ImGui::IsItemDeactivated();
+		//	bool escKey = ImGui::IsKeyPressed(ImGuiKey_Escape, false);
 
-			if (state != NULL && isItemDeactivated && !escKey) {
-				myText[i].assign(state->TextA.Data, state->CurLenA);
-			}
-			ImGui::PopID();
-		}
+		//	if (state != NULL && isItemDeactivated && !escKey) {
+		//		myText[i].assign(state->TextA.Data, state->CurLenA);
+		//	}
+		//	ImGui::PopID();
+		//}
 
-		static float value_buffer[4];
-		static float buffer[1];
-		for (int i = 0; i < 4; ++i)
-		{
-			buffer[0] = value_buffer[i];
-			ImGui::PushID(i);
-			ImGui::Text("Value = %f", buffer[0]);
-			ImGui::SameLine();
-			int flags = 0;
-			//flags |= ImGuiInputTextFlags_CallbackCompletion;
-			//flags |= ImGuiInputTextFlags_EnterReturnsTrue;
-			//bool ImGui::InputScalar(const char* label, ImGuiDataType data_type, void* p_data, const void* p_step, const void* p_step_fast, const char* format, ImGuiInputTextFlags flags)
-			float step = 2.0f;
-			float stepFast = 100.0f;
-			ImGuiContext& g = *GImGui;
-			//bool result = ImGui::InputScalar("", ImGuiDataType_Float , &buffer[0], (void*)(&step), (void*)(&stepFast), "%.3f", flags);
-			bool result = ImGui::InputScalar("", ImGuiDataType_Float, &buffer[0], NULL, NULL, "%.3f", flags);
-			ImGuiIO& io = g.IO;
-			bool mouseClicked = io.MouseClicked[0];
-			ImGuiID id = ImGui::GetItemID();
-			ImGuiInputTextState* state = ImGui::GetInputTextState(id);
-			bool escKey = ImGui::IsKeyPressed(ImGuiKey_Escape, false);
+		//static float value_buffer[4];
+		//static float buffer[1];
+		//for (int i = 0; i < 4; ++i)
+		//{
+		//	buffer[0] = value_buffer[i];
+		//	ImGui::PushID(i);
+		//	ImGui::Text("Value = %f", buffer[0]);
+		//	ImGui::SameLine();
+		//	int flags = 0;
+		//	//flags |= ImGuiInputTextFlags_CallbackCompletion;
+		//	//flags |= ImGuiInputTextFlags_EnterReturnsTrue;
+		//	//bool ImGui::InputScalar(const char* label, ImGuiDataType data_type, void* p_data, const void* p_step, const void* p_step_fast, const char* format, ImGuiInputTextFlags flags)
+		//	float step = 2.0f;
+		//	float stepFast = 100.0f;
+		//	ImGuiContext& g = *GImGui;
+		//	//bool result = ImGui::InputScalar("", ImGuiDataType_Float , &buffer[0], (void*)(&step), (void*)(&stepFast), "%.3f", flags);
+		//	bool result = ImGui::InputScalar("", ImGuiDataType_Float, &buffer[0], NULL, NULL, "%.3f", flags);
+		//	ImGuiIO& io = g.IO;
+		//	bool mouseClicked = io.MouseClicked[0];
+		//	ImGuiID id = ImGui::GetItemID();
+		//	ImGuiInputTextState* state = ImGui::GetInputTextState(id);
+		//	bool escKey = ImGui::IsKeyPressed(ImGuiKey_Escape, false);
 
-			bool IsItemDeactivated = ImGui::IsItemDeactivated();
+		//	bool IsItemDeactivated = ImGui::IsItemDeactivated();
 
-			if (IsItemDeactivated) {
-				if (state != NULL && !escKey) {
-					bool flag = false;
-					flag = ImGui::DataTypeApplyFromText(state->TextA.Data, ImGuiDataType_Float, &buffer[0], "%.3f");
-					value_buffer[i] = buffer[0];
-				}
-			}
-			ImGui::PopID();
-		}
+		//	if (IsItemDeactivated) {
+		//		if (state != NULL && !escKey) {
+		//			bool flag = false;
+		//			flag = ImGui::DataTypeApplyFromText(state->TextA.Data, ImGuiDataType_Float, &buffer[0], "%.3f");
+		//			value_buffer[i] = buffer[0];
+		//		}
+		//	}
+		//	ImGui::PopID();
+		//}
 	}
 
 	inline void test01(const char* name, bool debug) {
@@ -748,20 +748,19 @@ namespace ImGuiExt
 
 	inline void test17(const char* name, bool debug) {
 		ImLayout::BeginBoundingBox();
-		ImGui::Button("TEST", ImVec2(50, 0));
+		ImGui::Button("TEST##btn1", ImVec2(50, 0));
 		ImRect boundingBox = ImLayout::EndBoundingBox();
 		ImLayout::DrawBoundingBox_2(boundingBox.Min, boundingBox.Max, 255, 0, 0, 90);
 
 		ImLayout::BeginBoundingBox();
-		ImGui::Button("TEST", ImVec2(50, 0));
-		ImGui::Button("TEST", ImVec2(30, 0));
+		ImGui::Button("TEST##btn2", ImVec2(50, 0));
 		boundingBox = ImLayout::EndBoundingBox();
 		ImLayout::DrawBoundingBox_2(boundingBox.Min, boundingBox.Max, 255, 0, 0, 90);
 
 		ImLayout::BeginBoundingBox();
-		ImGui::Button("TEST", ImVec2(50, 0));
+		ImGui::Button("TEST##btn3", ImVec2(50, 0));
 		ImGui::SameLine();
-		ImGui::Button("TEST", ImVec2(30, 0));
+		ImGui::Button("TEST##btn4", ImVec2(30, 0));
 		boundingBox = ImLayout::EndBoundingBox();
 		ImLayout::DrawBoundingBox_2(boundingBox.Min, boundingBox.Max, 255, 0, 0, 90);
 	}
@@ -1089,7 +1088,9 @@ namespace ImGuiExt
 					render_file("Test World very very very very big name", thumbnailSize);
 				}
 				else {
+					ImGui::PushID(i);
 					render_file("Test", thumbnailSize);
+					ImGui::PopID();
 				}
 				ImRect rect = imGuiContext->LastItemData.Rect;
 
@@ -1583,7 +1584,7 @@ namespace ImGuiExt
 			//std::cout << "Size2: " << ImGui::GetContentRegionAvail().y << std::endl;
 
 			int padding = 2;
-			ImGui::ImageButton(0, ImVec2(15, size - padding * 2), ImVec2(0, 0), ImVec2(1, 1), padding);
+			ImGui::Button(0, ImVec2(-0.1f, 0));
 
 			ImLayout::EndAlign();
 
