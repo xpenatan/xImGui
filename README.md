@@ -19,8 +19,12 @@ It's meant to be small and 1-1 to C++. ImGui::Begin() is ImGui.Begin() and so on
 [ImLayout](https://github.com/xpenatan/xImGui/tree/master/extensions/imlayout) <br>
 
 ## Examples
-* [basic WebGL](https://xpenatan.github.io/xImGui/gl/basic/)
-* [basic WebGPU](https://xpenatan.github.io/xImGui/wgpu/basic/)
+| Examples |                                                      WebGPU                                                       |                                                    WebGL                                                     
+|:--------:|:-----------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------:|
+|  Basic   | [JS](https://xpenatan.github.io/xImGui/wgpu/basic/js) / [WASM](https://xpenatan.github.io/xImGui/wgpu/basic/wasm) | [JS](https://xpenatan.github.io/xImGui/gl/basic/js) / [WASM](https://xpenatan.github.io/xImGui/gl/basic/wasm) | 
+
+* 
+* 
 
 ### ImGui current state:
 
