@@ -83,6 +83,11 @@ configure(libProjects) {
         (options as StandardJavadocDocletOptions).addStringOption("Xdoclint:none", "-quiet")
     }
 
+    extensions.configure<org.gradle.api.plugins.JavaPluginExtension> {
+        withJavadocJar()
+        withSourcesJar()
+    }
+
     val signingKey = System.getenv("SIGNING_KEY").orEmpty()
     val signingPassword = System.getenv("SIGNING_PASSWORD").orEmpty()
     if (signingKey.isNotEmpty() && signingPassword.isNotEmpty()) {
