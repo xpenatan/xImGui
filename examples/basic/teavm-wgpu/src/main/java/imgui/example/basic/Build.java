@@ -5,7 +5,6 @@ import com.github.xpenatan.gdx.teavm.backends.shared.config.compiler.TeaCompiler
 import com.github.xpenatan.gdx.teavm.backends.web.config.backend.WebBackend;
 import java.io.File;
 import java.io.IOException;
-import org.teavm.tooling.TeaVMSourceFilePolicy;
 import org.teavm.vm.TeaVMOptimizationLevel;
 
 public class Build {
@@ -15,9 +14,6 @@ public class Build {
         new TeaCompiler(new WebBackend()
                 .setStartJettyAfterBuild(true)
                 .setWebAssembly(true))
-                .setDebugInformationGenerated(true)
-                .setSourceMapsFileGenerated(true)
-                .setSourceFilePolicy(TeaVMSourceFilePolicy.COPY)
                 .addAssets(assetsPath)
                 .setOptimizationLevel(TeaVMOptimizationLevel.ADVANCED)
                 .setMainClass(Launcher.class.getName())
