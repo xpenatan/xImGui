@@ -1,9 +1,0 @@
-i:com/badlogic/gdx/utils/lsans-15.png:14652:image/png
-t:com/badlogic/gdx/graphics/g3d/shaders/default.vertex.glsl:9096:application/unknown
-t:com/badlogic/gdx/graphics/g3d/particles/particles.fragment.glsl:820:application/unknown
-t:com/badlogic/gdx/graphics/g3d/particles/particles.vertex.glsl:2886:application/unknown
-t:com/badlogic/gdx/graphics/g3d/shaders/default.fragment.glsl:5874:application/unknown
-t:com/badlogic/gdx/graphics/g3d/shaders/depth.vertex.glsl:2931:application/unknown
-t:com/badlogic/gdx/utils/lsans-15.fnt:17711:application/unknown
-t:com/badlogic/gdx/graphics/g3d/shaders/depth.fragment.glsl:869:application/unknown
-i:startup-logo.png:12214:image/png
