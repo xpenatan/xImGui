@@ -2,7 +2,7 @@
 
 ![Build](https://github.com/xpenatan/xImGui/actions/workflows/snapshot.yml/badge.svg)
 
-[![Maven Central Version](https://img.shields.io/maven-central/v/com.github.xpenatan.xImGui/imgui-core)](https://central.sonatype.com/search?namespace=com.github.xpenatan.xImGui)
+[![Maven Central Version](https://img.shields.io/maven-central/v/com.github.xpenatan.xImGui/imgui-core)](https://central.sonatype.com/namespace/com.github.xpenatan.xImGui)
 [![Static Badge](https://img.shields.io/badge/snapshot---SNAPSHOT-red)](https://central.sonatype.com/service/rest/repository/browse/maven-snapshots/com/github/xpenatan/xImGui/)
 
 xImGui is a java binding for C++ [dear-imgui](https://github.com/ocornut/imgui). <br>
