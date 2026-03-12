@@ -109,6 +109,7 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
 
@@ -150,21 +151,29 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
     public ImGuiGdxWGPUImpl() {
         WgGraphics gfx = (WgGraphics) Gdx.graphics;
         WebGPUContext webgpu = gfx.getContext();
-        setup(Gdx.files.local("imgui.ini"), webgpu.device, webgpu.surfaceFormat);
+        setup(Gdx.files.local("imgui.ini"), webgpu.device, webgpu.surfaceFormats);
     }
 
     public ImGuiGdxWGPUImpl(WGPUDevice device, WGPUTextureFormat renderFormat) {
-        setup(Gdx.files.local("imgui.ini"), device, renderFormat);
+        setup(Gdx.files.local("imgui.ini"), device, (renderFormat != null) ? new WGPUTextureFormat[] { renderFormat } : null);
+    }
+
+    public ImGuiGdxWGPUImpl(WGPUDevice device, WGPUTextureFormat[] renderFormats) {
+        setup(Gdx.files.local("imgui.ini"), device, renderFormats);
     }
 
     public ImGuiGdxWGPUImpl(FileHandle imgui, WGPUDevice device, WGPUTextureFormat renderFormat) {
-        setup(imgui, device, renderFormat);
+        setup(imgui, device, (renderFormat != null) ? new WGPUTextureFormat[] { renderFormat } : null);
     }
 
-    private void setup(FileHandle imgui, WGPUDevice device, WGPUTextureFormat renderFormat) {
+    public ImGuiGdxWGPUImpl(FileHandle imgui, WGPUDevice device, WGPUTextureFormat[] renderFormats) {
+        setup(imgui, device, renderFormats);
+    }
+
+    private void setup(FileHandle imgui, WGPUDevice device, WGPUTextureFormat[] renderFormats) {
         this.imgui = imgui;
         this.device = device;
-        this.renderFormat = renderFormat;
+        this.renderFormat = renderFormats[0];
 
         ImGuiIO io = ImGui.GetIO();
         io.set_BackendFlags(ImGuiBackendFlags.RendererHasTextures.or(ImGuiBackendFlags.HasMouseCursors));
@@ -306,7 +315,15 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
         color_state.setBlend(createBlendState());
         color_state.setWriteMask(WGPUColorWriteMask.All);
         WGPUVectorColorTargetState targets = WGPUVectorColorTargetState.obtain();
-        targets.push_back(color_state);
+        // Currently we only attach a single color view in the render pass (targetView).
+        // To remain compatible (no-end-to-end MRT support yet), create the pipeline
+        // with a single color target using `renderFormat` (first format) so it matches
+        // the single attachment used at render time.
+        WGPUColorTargetState cs = WGPUColorTargetState.obtain();
+        cs.setFormat(renderFormat);
+        cs.setBlend(createBlendState());
+        cs.setWriteMask(WGPUColorWriteMask.All);
+        targets.push_back(cs);
 
         // Fragment state
         WGPUFragmentState fragmentState = WGPUFragmentState.obtain();
@@ -854,7 +871,9 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
         ImTextureIDRef imTextureIDRef = tex.GetTexID();
         long texId = imTextureIDRef.Get();
         tmp_textureView.native_setAddress(texId);
-        tmp_textureView.release();
+        if(tmp_textureView.isValid()) {
+            tmp_textureView.release();
+        }
         tmp_textureView.native_takeOwnership();
         tmp_textureView.dispose();
         IDLBase backendUserData = tex.get_BackendUserData();
