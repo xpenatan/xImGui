@@ -63,9 +63,9 @@ configure(libProjects) {
                         }
                     }
                     scm {
-                        connection.set("scm:git:git://https://github.com/xpenatan/xImGui.git")
-                        developerConnection.set("scm:git:ssh://https://github.com/xpenatan/xImGui.git")
-                        url.set("http://https://github.com/xpenatan/xImGui/tree/master")
+                        connection.set("scm:git@github.com:xpenatan/xImGui.git")
+                        developerConnection.set("scm:git@github.com:xpenatan/xImGui.git")
+                        url.set("https://github.com/xpenatan/xImGui")
                     }
                     licenses {
                         license {
