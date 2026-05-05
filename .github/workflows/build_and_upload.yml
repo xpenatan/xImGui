@@ -23,18 +23,18 @@ jobs:
 
     steps:
       - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.12.1
+        uses: styfle/cancel-workflow-action@0.13.1
         with:
           access_token: ${{ github.token }}
 
       - name: Checkout code
         uses: actions/checkout@v6
 
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
+      - name: Set up JDK 25
+        uses: actions/setup-java@v5
         with:
           distribution: "corretto"
-          java-version: 17
+          java-version: 25
 
       - name: Set up Developer Command Prompt
         uses: TheMrMilchmann/setup-msvc-dev@v3
@@ -108,18 +108,18 @@ jobs:
 
     steps:
       - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.12.1
+        uses: styfle/cancel-workflow-action@0.13.1
         with:
           access_token: ${{ github.token }}
 
       - name: Checkout code
         uses: actions/checkout@v6
 
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
+      - name: Set up JDK 25
+        uses: actions/setup-java@v5
         with:
           distribution: "corretto"
-          java-version: 17
+          java-version: 25
 
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
@@ -185,18 +185,18 @@ jobs:
 
     steps:
       - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.12.1
+        uses: styfle/cancel-workflow-action@0.13.1
         with:
           access_token: ${{ github.token }}
 
       - name: Checkout code
         uses: actions/checkout@v6
 
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
+      - name: Set up JDK 25
+        uses: actions/setup-java@v5
         with:
           distribution: "corretto"
-          java-version: 17
+          java-version: 25
 
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
@@ -262,18 +262,18 @@ jobs:
 
     steps:
       - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.12.1
+        uses: styfle/cancel-workflow-action@0.13.1
         with:
           access_token: ${{ github.token }}
 
       - name: Checkout code
         uses: actions/checkout@v6
 
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
+      - name: Set up JDK 25
+        uses: actions/setup-java@v5
         with:
           distribution: "corretto"
-          java-version: 17
+          java-version: 25
 
       - name: Install emscripten
         uses: mymindstorm/setup-emsdk@v14
@@ -332,18 +332,18 @@ jobs:
 
     steps:
       - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.12.1
+        uses: styfle/cancel-workflow-action@0.13.1
         with:
           access_token: ${{ github.token }}
 
       - name: Checkout code
         uses: actions/checkout@v6
 
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
+      - name: Set up JDK 25
+        uses: actions/setup-java@v5
         with:
           distribution: "corretto"
-          java-version: 17
+          java-version: 25
 
       - name: Install NDK
         id: setup-ndk
@@ -364,7 +364,7 @@ jobs:
           NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
 
       - name: Upload natives
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: android-natives
           path: ./imgui/imgui-build/build/c++/libs/
@@ -377,7 +377,7 @@ jobs:
 
     steps:
       - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.12.1
+        uses: styfle/cancel-workflow-action@0.13.1
         with:
           access_token: ${{ github.token }}
 
@@ -392,113 +392,113 @@ jobs:
           property: version
           default: 0.0.1
 
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
+      - name: Set up JDK 25
+        uses: actions/setup-java@v5
         with:
           distribution: "corretto"
-          java-version: 17
+          java-version: 25
 
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
 
       - name: Download mac ImGui natives
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: windows-natives-imgui
           path: ./imgui/imgui-build/build/c++/libs/
 
       - name: Download mac ImLayout natives
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: windows-natives-imlayout
           path: ./extensions/imlayout/imlayout-build/build/c++/libs/
 
       - name: Download mac ImGuiColorTextEdit natives
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: windows-natives-textedit
           path: ./extensions/ImGuiColorTextEdit/textedit-build/build/c++/libs/
 
       - name: Download mac imgui-node-editor natives
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: windows-natives-nodeeditor
           path: ./extensions/imgui-node-editor/nodeeditor-build/build/c++/libs/
 
       - name: Download mac ImGui natives
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: linux-natives-imgui
           path: ./imgui/imgui-build/build/c++/libs/
 
       - name: Download mac ImLayout natives
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: linux-natives-imlayout
           path: ./extensions/imlayout/imlayout-build/build/c++/libs/
 
       - name: Download mac ImGuiColorTextEdit natives
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: linux-natives-textedit
           path: ./extensions/ImGuiColorTextEdit/textedit-build/build/c++/libs/
 
       - name: Download mac imgui-node-editor natives
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: linux-natives-nodeeditor
           path: ./extensions/imgui-node-editor/nodeeditor-build/build/c++/libs/
 
       - name: Download mac ImGui natives
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: mac-natives-imgui
           path: ./imgui/imgui-build/build/c++/libs/
 
       - name: Download mac ImLayout natives
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: mac-natives-imlayout
           path: ./extensions/imlayout/imlayout-build/build/c++/libs/
 
       - name: Download mac ImGuiColorTextEdit natives
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: mac-natives-textedit
           path: ./extensions/ImGuiColorTextEdit/textedit-build/build/c++/libs/
 
       - name: Download mac imgui-node-editor natives
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: mac-natives-nodeeditor
           path: ./extensions/imgui-node-editor/nodeeditor-build/build/c++/libs/
 
       - name: Download teavm ImGui natives
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: teavm-natives-imgui
           path: ./imgui/imgui-build/build/c++/libs/
 
       - name: Download teavm ImLayout natives
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: teavm-natives-imlayout
           path: ./extensions/imlayout/imlayout-build/build/c++/libs/
 
       - name: Download teavm ImGuiColorTextEdit natives
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: teavm-natives-textedit
           path: ./extensions/ImGuiColorTextEdit/textedit-build/build/c++/libs/
 
       - name: Download teavm imgui-node-editor natives
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: teavm-natives-nodeeditor
           path: ./extensions/imgui-node-editor/nodeeditor-build/build/c++/libs/
 
       - name: Download android natives
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: android-natives
           path: ./imgui/imgui-build/build/c++/libs/
