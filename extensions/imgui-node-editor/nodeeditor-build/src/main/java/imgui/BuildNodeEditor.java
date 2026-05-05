@@ -165,7 +165,7 @@ public class BuildNodeEditor {
         linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/linux/" + api + "/libnodeeditor64_.a");
 
         linkTarget.linkerFlags.add("-Wl,-rpath,$ORIGIN");
-        linkTarget.linkerFlags.add("-L" + imguiCppPath + "/libs/linux");
+        linkTarget.linkerFlags.add("-L" + imguiCppPath + "/libs/linux/" + api);
         linkTarget.linkerFlags.add("-limgui64");
 
         multiTarget.add(linkTarget);

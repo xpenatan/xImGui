@@ -63,11 +63,14 @@ public class BuildImGui {
                 if(op.containsArg("windows64_ffm")) {
                     targets.add(getWindowTarget(op, true));
                 }
-                if(op.containsArg("linux64_jfm")) {
+                if(op.containsArg("linux64_ffm")) {
                     targets.add(getLinuxTarget(op, true));
                 }
                 if(op.containsArg("mac64_ffm")) {
-                    targets.add(getLinuxTarget(op, true));
+                    targets.add(getMacTarget(op, false, true));
+                }
+                if(op.containsArg("macArm_ffm")) {
+                    targets.add(getMacTarget(op, true, true));
                 }
             }
         }, new IDLRenaming() {
