@@ -168,7 +168,7 @@ public class BuildImLayout {
         linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/linux/" + api + "/libimlayout64_.a");
 
         linkTarget.linkerFlags.add("-Wl,-rpath,$ORIGIN");
-        linkTarget.linkerFlags.add("-L" + imguiCppPath + "/libs/linux");
+        linkTarget.linkerFlags.add("-L" + imguiCppPath + "/libs/linux/" + api);
         linkTarget.linkerFlags.add("-limgui64");
 
         multiTarget.add(linkTarget);
@@ -229,7 +229,6 @@ public class BuildImLayout {
         linkTarget.linkerFlags.add("-undefined");
         linkTarget.linkerFlags.add("dynamic_lookup");
 
-        linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");
         multiTarget.add(linkTarget);
 
         return multiTarget;
