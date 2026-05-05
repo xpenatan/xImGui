@@ -8,13 +8,13 @@ dependencies {
     implementation(project(":imgui:imgui-core"))
     api(project(":gdx:gdx-shared-impl"))
     implementation("com.badlogicgames.gdx:gdx:${LibExt.gdxVersion}")
-    api("io.github.monstroussoftware.gdx-webgpu:gdx-webgpu:${LibExt.gdxWebGPUVersion}")
-    implementation("com.github.xpenatan.jParser:idl-core:${LibExt.jParserVersion}")
+    api("${LibExt.gdxWebGPUGroup}:gdx-webgpu:${LibExt.gdxWebGPUVersion}")
+    implementation("com.github.xpenatan.jParser:api-core:${LibExt.jParserVersion}")
 }
 
 java {
-    sourceCompatibility = JavaVersion.toVersion(LibExt.java11Target)
-    targetCompatibility = JavaVersion.toVersion(LibExt.java11Target)
+    sourceCompatibility = JavaVersion.toVersion(LibExt.javaMainTarget)
+    targetCompatibility = JavaVersion.toVersion(LibExt.javaMainTarget)
 }
 
 java {

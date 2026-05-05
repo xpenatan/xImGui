@@ -6,10 +6,10 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 import imgui.enums.ImGuiInputTextFlags;
 
-public class ImGuiInputTextCallbackData extends IDLBase {
+public class ImGuiInputTextCallbackData extends NativeObject {
 
     static public final ImGuiInputTextCallbackData NULL = ImGuiInputTextCallbackData.native_new();
 
@@ -27,100 +27,31 @@ public class ImGuiInputTextCallbackData extends IDLBase {
         return new ImGuiInputTextCallbackData((byte) 0, (char) 0);
     }
 
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
-
     public int get_BufSize() {
-        return internal_native_get_BufSize(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-return nativeObject->BufSize;
-*/
-    public static native int internal_native_get_BufSize(long this_addr);
 
     public void set_BufSize(int BufSize) {
-        internal_native_set_BufSize(native_address, BufSize);
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-nativeObject->BufSize = BufSize;
-*/
-    public static native void internal_native_set_BufSize(long this_addr, int BufSize);
 
     public boolean get_BufDirty() {
-        return internal_native_get_BufDirty(native_address);
+        return false;
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-return nativeObject->BufDirty;
-*/
-    public static native boolean internal_native_get_BufDirty(long this_addr);
 
     public void set_BufDirty(boolean BufDirty) {
-        internal_native_set_BufDirty(native_address, BufDirty);
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-nativeObject->BufDirty = BufDirty;
-*/
-    public static native void internal_native_set_BufDirty(long this_addr, boolean BufDirty);
 
     public int get_BufTextLen() {
-        return internal_native_get_BufTextLen(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-return nativeObject->BufTextLen;
-*/
-    public static native int internal_native_get_BufTextLen(long this_addr);
 
     public void set_BufTextLen(int BufTextLen) {
-        internal_native_set_BufTextLen(native_address, BufTextLen);
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-nativeObject->BufTextLen = BufTextLen;
-*/
-    public static native void internal_native_set_BufTextLen(long this_addr, int BufTextLen);
 
     public ImGuiInputTextFlags get_Flags() {
-        int value = internal_native_get_Flags(native_address);
-        ImGuiInputTextFlags[] values = ImGuiInputTextFlags.values();
-        for (int i = 0; i < values.length; i++) {
-            ImGuiInputTextFlags enumVal = values[i];
-            if (enumVal != ImGuiInputTextFlags.CUSTOM && enumVal.getValue() == value)
-                return enumVal;
-        }
-        return ImGuiInputTextFlags.CUSTOM.setValue(value);
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-return (jint)nativeObject->Flags;
-*/
-    public static native int internal_native_get_Flags(long this_addr);
 
     public void set_Flags(ImGuiInputTextFlags Flags) {
-        internal_native_set_Flags(native_address, Flags.getValue());
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-nativeObject->Flags = (::ImGuiInputTextFlags)Flags;
-*/
-    public static native void internal_native_set_Flags(long this_addr, int Flags);
 }

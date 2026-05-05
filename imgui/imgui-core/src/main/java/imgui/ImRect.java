@@ -6,39 +6,17 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 
-public class ImRect extends IDLBase {
-
-    private ImVec2 ImVec2_TEMP_GEN_0;
-
-    private ImVec2 ImVec2_TEMP_GEN_1;
-
-    private ImVec2 ImVec2_TEMP_GEN_2;
-
-    private ImVec2 ImVec2_TEMP_GEN_3;
+public class ImRect extends NativeObject {
 
     static public final ImRect NULL = ImRect.native_new();
 
     public ImRect() {
-        long addr = internal_native_create_addr();
-        internal_reset(addr, true);
     }
-
-    /*[-JNI;-NATIVE]
-return (jlong)new ImRect();
-*/
-    public static native long internal_native_create_addr();
 
     public ImRect(float x1, float y1, float x2, float y2) {
-        long addr = internal_native_create_float_float_float_float_addr(x1, y1, x2, y2);
-        internal_reset(addr, true);
     }
-
-    /*[-JNI;-NATIVE]
-return (jlong)new ImRect((float)x1, (float)y1, (float)x2, (float)y2);
-*/
-    public static native long internal_native_create_float_float_float_float_addr(float x1, float y1, float x2, float y2);
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -54,129 +32,37 @@ return (jlong)new ImRect((float)x1, (float)y1, (float)x2, (float)y2);
         return new ImRect((byte) 0, (char) 0);
     }
 
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImRect* nativeObject = (ImRect*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
-
     public ImVec2 GetCenter() {
-        long addr = internal_native_GetCenter_addr(native_address);
-        if (addr == 0)
-            return ImVec2.NULL;
-        if (ImVec2_TEMP_GEN_0 == null)
-            ImVec2_TEMP_GEN_0 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_0.internal_reset(addr, false);
-        return ImVec2_TEMP_GEN_0;
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImRect* nativeObject = (ImRect*)this_addr;
-static ImVec2 copy_addr;
-copy_addr = nativeObject->GetCenter();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetCenter_addr(long this_addr);
 
     public ImVec2 GetSize() {
-        long addr = internal_native_GetSize_addr(native_address);
-        if (addr == 0)
-            return ImVec2.NULL;
-        if (ImVec2_TEMP_GEN_1 == null)
-            ImVec2_TEMP_GEN_1 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_1.internal_reset(addr, false);
-        return ImVec2_TEMP_GEN_1;
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImRect* nativeObject = (ImRect*)this_addr;
-static ImVec2 copy_addr;
-copy_addr = nativeObject->GetSize();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetSize_addr(long this_addr);
 
     public float GetWidth() {
-        return internal_native_GetWidth(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImRect* nativeObject = (ImRect*)this_addr;
-return nativeObject->GetWidth();
-*/
-    public static native float internal_native_GetWidth(long this_addr);
 
     public float GetHeight() {
-        return internal_native_GetHeight(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImRect* nativeObject = (ImRect*)this_addr;
-return nativeObject->GetHeight();
-*/
-    public static native float internal_native_GetHeight(long this_addr);
 
     public float GetArea() {
-        return internal_native_GetArea(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImRect* nativeObject = (ImRect*)this_addr;
-return nativeObject->GetArea();
-*/
-    public static native float internal_native_GetArea(long this_addr);
 
     public ImVec2 get_Min() {
-        long addr = internal_native_get_Min_addr(native_address);
-        if (addr == 0)
-            return ImVec2.NULL;
-        if (ImVec2_TEMP_GEN_2 == null)
-            ImVec2_TEMP_GEN_2 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_2.internal_reset(addr, false);
-        return ImVec2_TEMP_GEN_2;
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImRect* nativeObject = (ImRect*)this_addr;
-return (jlong)&nativeObject->Min;
-*/
-    public static native long internal_native_get_Min_addr(long this_addr);
 
     public void set_Min(ImVec2 Min) {
-        internal_native_set_Min(native_address, Min.native_address);
     }
-
-    /*[-JNI;-NATIVE]
-ImRect* nativeObject = (ImRect*)this_addr;
-nativeObject->Min = *((ImVec2*)Min_addr);
-*/
-    public static native void internal_native_set_Min(long this_addr, long Min_addr);
 
     public ImVec2 get_Max() {
-        long addr = internal_native_get_Max_addr(native_address);
-        if (addr == 0)
-            return ImVec2.NULL;
-        if (ImVec2_TEMP_GEN_3 == null)
-            ImVec2_TEMP_GEN_3 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_3.internal_reset(addr, false);
-        return ImVec2_TEMP_GEN_3;
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImRect* nativeObject = (ImRect*)this_addr;
-return (jlong)&nativeObject->Max;
-*/
-    public static native long internal_native_get_Max_addr(long this_addr);
 
     public void set_Max(ImVec2 Max) {
-        internal_native_set_Max(native_address, Max.native_address);
     }
-
-    /*[-JNI;-NATIVE]
-ImRect* nativeObject = (ImRect*)this_addr;
-nativeObject->Max = *((ImVec2*)Max_addr);
-*/
-    public static native void internal_native_set_Max(long this_addr, long Max_addr);
 }

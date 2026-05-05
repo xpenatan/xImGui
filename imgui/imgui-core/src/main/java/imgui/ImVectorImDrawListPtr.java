@@ -6,11 +6,9 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 
-public class ImVectorImDrawListPtr extends IDLBase {
-
-    private ImDrawList ImDrawList_TEMP_GEN_0;
+public class ImVectorImDrawListPtr extends NativeObject {
 
     static public final ImVectorImDrawListPtr NULL = ImVectorImDrawListPtr.native_new();
 
@@ -28,40 +26,11 @@ public class ImVectorImDrawListPtr extends IDLBase {
         return new ImVectorImDrawListPtr((byte) 0, (char) 0);
     }
 
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImVectorImDrawListPtr* nativeObject = (ImVectorImDrawListPtr*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
-
     public ImDrawList getData(int index) {
-        long addr = internal_native_getData_addr(native_address, index);
-        if (addr == 0)
-            return ImDrawList.NULL;
-        if (ImDrawList_TEMP_GEN_0 == null)
-            ImDrawList_TEMP_GEN_0 = ImDrawList.native_new();
-        ImDrawList_TEMP_GEN_0.internal_reset(addr, false);
-        return ImDrawList_TEMP_GEN_0;
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImVectorImDrawListPtr* nativeObject = (ImVectorImDrawListPtr*)this_addr;
-ImDrawList* obj = (*nativeObject)[(int)index];
-return (jlong)obj;
-*/
-    public static native long internal_native_getData_addr(long this_addr, int index);
 
     public int size() {
-        return internal_native_size(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImVectorImDrawListPtr* nativeObject = (ImVectorImDrawListPtr*)this_addr;
-return nativeObject->size();
-*/
-    public static native int internal_native_size(long this_addr);
 }

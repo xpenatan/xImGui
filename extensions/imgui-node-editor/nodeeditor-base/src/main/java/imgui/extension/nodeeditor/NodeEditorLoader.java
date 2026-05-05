@@ -12,6 +12,10 @@ public class NodeEditorLoader {
         #include "NodeEditorCustom.h"
     */
 
+    /*[-FFM;-NATIVE]
+        #include "NodeEditorCustom.h"
+    */
+
     public static void init(JParserLibraryLoaderListener listener) {
         JParserLibraryLoader.load("nodeeditor", listener);
     }

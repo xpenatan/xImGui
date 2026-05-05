@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiSliderFlagsPrivate_ implements IDLEnum<ImGuiSliderFlagsPrivate_> {
+public enum ImGuiSliderFlagsPrivate_ implements NativeEnum<ImGuiSliderFlagsPrivate_> {
 
     CUSTOM(0), Vertical(ImGuiSliderFlags_Vertical_NATIVE()), ReadOnly(ImGuiSliderFlags_ReadOnly_NATIVE());
 
@@ -34,13 +34,7 @@ public enum ImGuiSliderFlagsPrivate_ implements IDLEnum<ImGuiSliderFlagsPrivate_
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSliderFlags_Vertical;
-*/
     private static native int ImGuiSliderFlags_Vertical_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSliderFlags_ReadOnly;
-*/
     private static native int ImGuiSliderFlags_ReadOnly_NATIVE();
 }

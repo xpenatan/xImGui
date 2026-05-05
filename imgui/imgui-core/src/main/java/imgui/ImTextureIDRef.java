@@ -6,31 +6,17 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 
-public class ImTextureIDRef extends IDLBase {
+public class ImTextureIDRef extends NativeObject {
 
     static public final ImTextureIDRef NULL = ImTextureIDRef.native_new();
 
     public ImTextureIDRef(long value) {
-        long addr = internal_native_create_long_addr(value);
-        internal_reset(addr, true);
     }
-
-    /*[-JNI;-NATIVE]
-return (jlong)new ImTextureIDRef(value);
-*/
-    public static native long internal_native_create_long_addr(long value);
 
     public ImTextureIDRef() {
-        long addr = internal_native_create_addr();
-        internal_reset(addr, true);
     }
-
-    /*[-JNI;-NATIVE]
-return (jlong)new ImTextureIDRef();
-*/
-    public static native long internal_native_create_addr();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -46,23 +32,7 @@ return (jlong)new ImTextureIDRef();
         return new ImTextureIDRef((byte) 0, (char) 0);
     }
 
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImTextureIDRef* nativeObject = (ImTextureIDRef*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
-
     public long Get() {
-        return internal_native_Get(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImTextureIDRef* nativeObject = (ImTextureIDRef*)this_addr;
-return nativeObject->Get();
-*/
-    public static native long internal_native_Get(long this_addr);
 }

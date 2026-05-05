@@ -18,7 +18,7 @@ interface TextEditor {
     [Const] PaletteId GetPalette();
     void SetLanguageDefinition(LanguageDefinitionId aValue);
     [Const] LanguageDefinitionId GetLanguageDefinition();
-    [Const, Value] IDLString GetLanguageDefinitionName();
+    [Const, Value] NativeString GetLanguageDefinitionName();
     void SetTabSize(long aValue);
     [Const] long GetTabSize();
     void SetLineSpacing(float aValue);
@@ -53,7 +53,7 @@ interface TextEditor {
     [Const] long GetUndoIndex();
 
     void SetText([Const] DOMString aText);
-    [Const, Value] IDLString GetText();
+    [Const, Value] NativeString GetText();
 
 //    void SetTextLines(const std::vector<std::string>& aLines) { ed.SetTextLines(aLines); }
 //    [Const, Value] std::vector<std::string> GetTextLines() const { return ed.GetTextLines(); }

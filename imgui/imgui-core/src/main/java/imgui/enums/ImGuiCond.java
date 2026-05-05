@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiCond implements IDLEnum<ImGuiCond> {
+public enum ImGuiCond implements NativeEnum<ImGuiCond> {
 
     CUSTOM(0),
     None(ImGuiCond_None_NATIVE()),
@@ -39,28 +39,13 @@ public enum ImGuiCond implements IDLEnum<ImGuiCond> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCond_None;
-*/
     private static native int ImGuiCond_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCond_Always;
-*/
     private static native int ImGuiCond_Always_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCond_Once;
-*/
     private static native int ImGuiCond_Once_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCond_FirstUseEver;
-*/
     private static native int ImGuiCond_FirstUseEver_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCond_Appearing;
-*/
     private static native int ImGuiCond_Appearing_NATIVE();
 }

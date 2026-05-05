@@ -6,9 +6,9 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 
-public class ImGuiWindowStackData extends IDLBase {
+public class ImGuiWindowStackData extends NativeObject {
 
     static public final ImGuiWindowStackData NULL = ImGuiWindowStackData.native_new();
 
@@ -25,14 +25,4 @@ public class ImGuiWindowStackData extends IDLBase {
     public static ImGuiWindowStackData native_new() {
         return new ImGuiWindowStackData((byte) 0, (char) 0);
     }
-
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiWindowStackData* nativeObject = (ImGuiWindowStackData*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
 }

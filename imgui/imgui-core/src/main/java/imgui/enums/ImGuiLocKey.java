@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiLocKey implements IDLEnum<ImGuiLocKey> {
+public enum ImGuiLocKey implements NativeEnum<ImGuiLocKey> {
 
     CUSTOM(0),
     VersionStr(ImGuiLocKey_VersionStr_NATIVE()),
@@ -48,73 +48,31 @@ public enum ImGuiLocKey implements IDLEnum<ImGuiLocKey> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_VersionStr;
-*/
     private static native int ImGuiLocKey_VersionStr_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_TableSizeOne;
-*/
     private static native int ImGuiLocKey_TableSizeOne_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_TableSizeAllFit;
-*/
     private static native int ImGuiLocKey_TableSizeAllFit_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_TableSizeAllDefault;
-*/
     private static native int ImGuiLocKey_TableSizeAllDefault_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_TableResetOrder;
-*/
     private static native int ImGuiLocKey_TableResetOrder_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_WindowingMainMenuBar;
-*/
     private static native int ImGuiLocKey_WindowingMainMenuBar_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_WindowingPopup;
-*/
     private static native int ImGuiLocKey_WindowingPopup_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_WindowingUntitled;
-*/
     private static native int ImGuiLocKey_WindowingUntitled_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_OpenLink_s;
-*/
     private static native int ImGuiLocKey_OpenLink_s_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_CopyLink;
-*/
     private static native int ImGuiLocKey_CopyLink_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_DockingHideTabBar;
-*/
     private static native int ImGuiLocKey_DockingHideTabBar_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_DockingHoldShiftToDock;
-*/
     private static native int ImGuiLocKey_DockingHoldShiftToDock_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_DockingDragToUndockOrMoveNode;
-*/
     private static native int ImGuiLocKey_DockingDragToUndockOrMoveNode_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_COUNT;
-*/
     private static native int ImGuiLocKey_COUNT_NATIVE();
 }

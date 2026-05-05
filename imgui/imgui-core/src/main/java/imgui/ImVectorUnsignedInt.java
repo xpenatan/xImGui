@@ -6,9 +6,9 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 
-public class ImVectorUnsignedInt extends IDLBase {
+public class ImVectorUnsignedInt extends NativeObject {
 
     static public final ImVectorUnsignedInt NULL = ImVectorUnsignedInt.native_new();
 
@@ -26,52 +26,19 @@ public class ImVectorUnsignedInt extends IDLBase {
         return new ImVectorUnsignedInt((byte) 0, (char) 0);
     }
 
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImVectorUnsignedInt* nativeObject = (ImVectorUnsignedInt*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
-
     public int getData(int index) {
-        return internal_native_getData(native_address, index);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImVectorUnsignedInt* nativeObject = (ImVectorUnsignedInt*)this_addr;
-return ((*nativeObject)[(int)index]);*/
-    public static native int internal_native_getData(long this_addr, int index);
 
     public int size() {
-        return internal_native_size(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImVectorUnsignedInt* nativeObject = (ImVectorUnsignedInt*)this_addr;
-return nativeObject->size();
-*/
-    public static native int internal_native_size(long this_addr);
 
     public int front() {
-        return internal_native_front(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImVectorUnsignedInt* nativeObject = (ImVectorUnsignedInt*)this_addr;
-return nativeObject->front();
-*/
-    public static native int internal_native_front(long this_addr);
 
     public int back() {
-        return internal_native_back(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImVectorUnsignedInt* nativeObject = (ImVectorUnsignedInt*)this_addr;
-return nativeObject->back();
-*/
-    public static native int internal_native_back(long this_addr);
 }

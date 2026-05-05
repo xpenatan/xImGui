@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiDragDropFlags implements IDLEnum<ImGuiDragDropFlags> {
+public enum ImGuiDragDropFlags implements NativeEnum<ImGuiDragDropFlags> {
 
     CUSTOM(0),
     None(ImGuiDragDropFlags_None_NATIVE()),
@@ -47,68 +47,29 @@ public enum ImGuiDragDropFlags implements IDLEnum<ImGuiDragDropFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDragDropFlags_None;
-*/
     private static native int ImGuiDragDropFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDragDropFlags_SourceNoPreviewTooltip;
-*/
     private static native int ImGuiDragDropFlags_SourceNoPreviewTooltip_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDragDropFlags_SourceNoDisableHover;
-*/
     private static native int ImGuiDragDropFlags_SourceNoDisableHover_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDragDropFlags_SourceNoHoldToOpenOthers;
-*/
     private static native int ImGuiDragDropFlags_SourceNoHoldToOpenOthers_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDragDropFlags_SourceAllowNullID;
-*/
     private static native int ImGuiDragDropFlags_SourceAllowNullID_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDragDropFlags_SourceExtern;
-*/
     private static native int ImGuiDragDropFlags_SourceExtern_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDragDropFlags_PayloadAutoExpire;
-*/
     private static native int ImGuiDragDropFlags_PayloadAutoExpire_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDragDropFlags_PayloadNoCrossContext;
-*/
     private static native int ImGuiDragDropFlags_PayloadNoCrossContext_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDragDropFlags_PayloadNoCrossProcess;
-*/
     private static native int ImGuiDragDropFlags_PayloadNoCrossProcess_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDragDropFlags_AcceptBeforeDelivery;
-*/
     private static native int ImGuiDragDropFlags_AcceptBeforeDelivery_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDragDropFlags_AcceptNoDrawDefaultRect;
-*/
     private static native int ImGuiDragDropFlags_AcceptNoDrawDefaultRect_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDragDropFlags_AcceptNoPreviewTooltip;
-*/
     private static native int ImGuiDragDropFlags_AcceptNoPreviewTooltip_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDragDropFlags_AcceptPeekOnly;
-*/
     private static native int ImGuiDragDropFlags_AcceptPeekOnly_NATIVE();
 }

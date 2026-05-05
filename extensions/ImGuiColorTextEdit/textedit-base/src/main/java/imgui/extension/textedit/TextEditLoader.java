@@ -12,6 +12,10 @@ public class TextEditLoader {
         #include "TextEditCustom.h"
     */
 
+    /*[-FFM;-NATIVE]
+        #include "TextEditCustom.h"
+    */
+
     public static void init(JParserLibraryLoaderListener listener) {
         JParserLibraryLoader.load("textedit", listener);
     }

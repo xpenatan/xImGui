@@ -6,11 +6,9 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 
-public class ImVectorImDrawIdx extends IDLBase {
-
-    private IDLBase IDLBase_TEMP_GEN_0;
+public class ImVectorImDrawIdx extends NativeObject {
 
     static public final ImVectorImDrawIdx NULL = ImVectorImDrawIdx.native_new();
 
@@ -28,48 +26,15 @@ public class ImVectorImDrawIdx extends IDLBase {
         return new ImVectorImDrawIdx((byte) 0, (char) 0);
     }
 
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImVectorImDrawIdx* nativeObject = (ImVectorImDrawIdx*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
-
     public int size() {
-        return internal_native_size(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImVectorImDrawIdx* nativeObject = (ImVectorImDrawIdx*)this_addr;
-return nativeObject->size();
-*/
-    public static native int internal_native_size(long this_addr);
 
     public short getData(int index) {
-        return internal_native_getData(native_address, index);
+        return 0;
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorImDrawIdx* nativeObject = (ImVectorImDrawIdx*)this_addr;
-return ((*nativeObject)[(int)index]);*/
-    public static native short internal_native_getData(long this_addr, int index);
-
-    public IDLBase get_Data() {
-        long addr = internal_native_get_Data_addr(native_address);
-        if (addr == 0)
-            return IDLBase.NULL;
-        if (IDLBase_TEMP_GEN_0 == null)
-            IDLBase_TEMP_GEN_0 = IDLBase.native_new();
-        IDLBase_TEMP_GEN_0.internal_reset(addr, false);
-        return IDLBase_TEMP_GEN_0;
+    public NativeObject get_Data() {
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImVectorImDrawIdx* nativeObject = (ImVectorImDrawIdx*)this_addr;
-return (jlong)nativeObject->Data;
-*/
-    public static native long internal_native_get_Data_addr(long this_addr);
 }

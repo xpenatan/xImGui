@@ -6,9 +6,9 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 
-public class ImDrawListSharedData extends IDLBase {
+public class ImDrawListSharedData extends NativeObject {
 
     static public final ImDrawListSharedData NULL = ImDrawListSharedData.native_new();
 
@@ -25,14 +25,4 @@ public class ImDrawListSharedData extends IDLBase {
     public static ImDrawListSharedData native_new() {
         return new ImDrawListSharedData((byte) 0, (char) 0);
     }
-
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImDrawListSharedData* nativeObject = (ImDrawListSharedData*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
 }

@@ -6,31 +6,17 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 
-public class ImVec4 extends IDLBase {
+public class ImVec4 extends NativeObject {
 
     static public final ImVec4 NULL = ImVec4.native_new();
 
     public ImVec4() {
-        long addr = internal_native_create_addr();
-        internal_reset(addr, true);
     }
-
-    /*[-JNI;-NATIVE]
-return (jlong)new ImVec4();
-*/
-    public static native long internal_native_create_addr();
 
     public ImVec4(float x, float y, float z, float w) {
-        long addr = internal_native_create_float_float_float_float_addr(x, y, z, w);
-        internal_reset(addr, true);
     }
-
-    /*[-JNI;-NATIVE]
-return (jlong)new ImVec4((float)x, (float)y, (float)z, (float)w);
-*/
-    public static native long internal_native_create_float_float_float_float_addr(float x, float y, float z, float w);
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -46,104 +32,35 @@ return (jlong)new ImVec4((float)x, (float)y, (float)z, (float)w);
         return new ImVec4((byte) 0, (char) 0);
     }
 
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImVec4* nativeObject = (ImVec4*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
-
     public ImVec4 copy(ImVec4 value) {
-        internal_native_copy_addr(native_address, value.native_address);
-        return this;
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImVec4* nativeObject = (ImVec4*)this_addr;
-return (jlong)&(*nativeObject = *((ImVec4* )value_addr));
-*/
-    public static native long internal_native_copy_addr(long this_addr, long value_addr);
 
     public float get_x() {
-        return internal_native_get_x(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImVec4* nativeObject = (ImVec4*)this_addr;
-return nativeObject->x;
-*/
-    public static native float internal_native_get_x(long this_addr);
 
     public void set_x(float x) {
-        internal_native_set_x(native_address, x);
     }
-
-    /*[-JNI;-NATIVE]
-ImVec4* nativeObject = (ImVec4*)this_addr;
-nativeObject->x = x;
-*/
-    public static native void internal_native_set_x(long this_addr, float x);
 
     public float get_y() {
-        return internal_native_get_y(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImVec4* nativeObject = (ImVec4*)this_addr;
-return nativeObject->y;
-*/
-    public static native float internal_native_get_y(long this_addr);
 
     public void set_y(float y) {
-        internal_native_set_y(native_address, y);
     }
-
-    /*[-JNI;-NATIVE]
-ImVec4* nativeObject = (ImVec4*)this_addr;
-nativeObject->y = y;
-*/
-    public static native void internal_native_set_y(long this_addr, float y);
 
     public float get_z() {
-        return internal_native_get_z(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImVec4* nativeObject = (ImVec4*)this_addr;
-return nativeObject->z;
-*/
-    public static native float internal_native_get_z(long this_addr);
 
     public void set_z(float z) {
-        internal_native_set_z(native_address, z);
     }
-
-    /*[-JNI;-NATIVE]
-ImVec4* nativeObject = (ImVec4*)this_addr;
-nativeObject->z = z;
-*/
-    public static native void internal_native_set_z(long this_addr, float z);
 
     public float get_w() {
-        return internal_native_get_w(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImVec4* nativeObject = (ImVec4*)this_addr;
-return nativeObject->w;
-*/
-    public static native float internal_native_get_w(long this_addr);
 
     public void set_w(float w) {
-        internal_native_set_w(native_address, w);
     }
-
-    /*[-JNI;-NATIVE]
-ImVec4* nativeObject = (ImVec4*)this_addr;
-nativeObject->w = w;
-*/
-    public static native void internal_native_set_w(long this_addr, float w);
 }

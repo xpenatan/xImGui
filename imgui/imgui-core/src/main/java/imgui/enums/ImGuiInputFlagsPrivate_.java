@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiInputFlagsPrivate_ implements IDLEnum<ImGuiInputFlagsPrivate_> {
+public enum ImGuiInputFlagsPrivate_ implements NativeEnum<ImGuiInputFlagsPrivate_> {
 
     CUSTOM(0),
     RepeatRateDefault(ImGuiInputFlags_RepeatRateDefault_NATIVE()),
@@ -58,123 +58,51 @@ public enum ImGuiInputFlagsPrivate_ implements IDLEnum<ImGuiInputFlagsPrivate_> 
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RepeatRateDefault;
-*/
     private static native int ImGuiInputFlags_RepeatRateDefault_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RepeatRateNavMove;
-*/
     private static native int ImGuiInputFlags_RepeatRateNavMove_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RepeatRateNavTweak;
-*/
     private static native int ImGuiInputFlags_RepeatRateNavTweak_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RepeatUntilRelease;
-*/
     private static native int ImGuiInputFlags_RepeatUntilRelease_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RepeatUntilKeyModsChange;
-*/
     private static native int ImGuiInputFlags_RepeatUntilKeyModsChange_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RepeatUntilKeyModsChangeFromNone;
-*/
     private static native int ImGuiInputFlags_RepeatUntilKeyModsChangeFromNone_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RepeatUntilOtherKeyPress;
-*/
     private static native int ImGuiInputFlags_RepeatUntilOtherKeyPress_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_LockThisFrame;
-*/
     private static native int ImGuiInputFlags_LockThisFrame_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_LockUntilRelease;
-*/
     private static native int ImGuiInputFlags_LockUntilRelease_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_CondHovered;
-*/
     private static native int ImGuiInputFlags_CondHovered_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_CondActive;
-*/
     private static native int ImGuiInputFlags_CondActive_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_CondDefault_;
-*/
     private static native int ImGuiInputFlags_CondDefault__NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RepeatRateMask_;
-*/
     private static native int ImGuiInputFlags_RepeatRateMask__NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RepeatUntilMask_;
-*/
     private static native int ImGuiInputFlags_RepeatUntilMask__NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RepeatMask_;
-*/
     private static native int ImGuiInputFlags_RepeatMask__NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_CondMask_;
-*/
     private static native int ImGuiInputFlags_CondMask__NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RouteTypeMask_;
-*/
     private static native int ImGuiInputFlags_RouteTypeMask__NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RouteOptionsMask_;
-*/
     private static native int ImGuiInputFlags_RouteOptionsMask__NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_SupportedByIsKeyPressed;
-*/
     private static native int ImGuiInputFlags_SupportedByIsKeyPressed_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_SupportedByIsMouseClicked;
-*/
     private static native int ImGuiInputFlags_SupportedByIsMouseClicked_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_SupportedByShortcut;
-*/
     private static native int ImGuiInputFlags_SupportedByShortcut_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_SupportedBySetNextItemShortcut;
-*/
     private static native int ImGuiInputFlags_SupportedBySetNextItemShortcut_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_SupportedBySetKeyOwner;
-*/
     private static native int ImGuiInputFlags_SupportedBySetKeyOwner_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_SupportedBySetItemKeyOwner;
-*/
     private static native int ImGuiInputFlags_SupportedBySetItemKeyOwner_NATIVE();
 }

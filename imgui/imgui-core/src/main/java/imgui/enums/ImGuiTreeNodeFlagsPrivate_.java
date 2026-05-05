@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiTreeNodeFlagsPrivate_ implements IDLEnum<ImGuiTreeNodeFlagsPrivate_> {
+public enum ImGuiTreeNodeFlagsPrivate_ implements NativeEnum<ImGuiTreeNodeFlagsPrivate_> {
 
     CUSTOM(0),
     NoNavFocus(ImGuiTreeNodeFlags_NoNavFocus_NATIVE()),
@@ -39,28 +39,13 @@ public enum ImGuiTreeNodeFlagsPrivate_ implements IDLEnum<ImGuiTreeNodeFlagsPriv
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_NoNavFocus;
-*/
     private static native int ImGuiTreeNodeFlags_NoNavFocus_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_ClipLabelForTrailingButton;
-*/
     private static native int ImGuiTreeNodeFlags_ClipLabelForTrailingButton_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_UpsideDownArrow;
-*/
     private static native int ImGuiTreeNodeFlags_UpsideDownArrow_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_OpenOnMask_;
-*/
     private static native int ImGuiTreeNodeFlags_OpenOnMask__NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_DrawLinesMask_;
-*/
     private static native int ImGuiTreeNodeFlags_DrawLinesMask__NATIVE();
 }

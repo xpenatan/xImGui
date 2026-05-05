@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiViewportFlags implements IDLEnum<ImGuiViewportFlags> {
+public enum ImGuiViewportFlags implements NativeEnum<ImGuiViewportFlags> {
 
     CUSTOM(0),
     None(ImGuiViewportFlags_None_NATIVE()),
@@ -49,78 +49,33 @@ public enum ImGuiViewportFlags implements IDLEnum<ImGuiViewportFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_None;
-*/
     private static native int ImGuiViewportFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_IsPlatformWindow;
-*/
     private static native int ImGuiViewportFlags_IsPlatformWindow_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_IsPlatformMonitor;
-*/
     private static native int ImGuiViewportFlags_IsPlatformMonitor_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_OwnedByApp;
-*/
     private static native int ImGuiViewportFlags_OwnedByApp_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_NoDecoration;
-*/
     private static native int ImGuiViewportFlags_NoDecoration_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_NoTaskBarIcon;
-*/
     private static native int ImGuiViewportFlags_NoTaskBarIcon_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_NoFocusOnAppearing;
-*/
     private static native int ImGuiViewportFlags_NoFocusOnAppearing_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_NoFocusOnClick;
-*/
     private static native int ImGuiViewportFlags_NoFocusOnClick_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_NoInputs;
-*/
     private static native int ImGuiViewportFlags_NoInputs_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_NoRendererClear;
-*/
     private static native int ImGuiViewportFlags_NoRendererClear_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_NoAutoMerge;
-*/
     private static native int ImGuiViewportFlags_NoAutoMerge_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_TopMost;
-*/
     private static native int ImGuiViewportFlags_TopMost_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_CanHostOtherWindows;
-*/
     private static native int ImGuiViewportFlags_CanHostOtherWindows_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_IsMinimized;
-*/
     private static native int ImGuiViewportFlags_IsMinimized_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_IsFocused;
-*/
     private static native int ImGuiViewportFlags_IsFocused_NATIVE();
 }

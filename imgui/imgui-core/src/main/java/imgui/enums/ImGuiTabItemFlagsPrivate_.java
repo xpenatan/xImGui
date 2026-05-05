@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiTabItemFlagsPrivate_ implements IDLEnum<ImGuiTabItemFlagsPrivate_> {
+public enum ImGuiTabItemFlagsPrivate_ implements NativeEnum<ImGuiTabItemFlagsPrivate_> {
 
     CUSTOM(0),
     SectionMask_(ImGuiTabItemFlags_SectionMask__NATIVE()),
@@ -39,28 +39,13 @@ public enum ImGuiTabItemFlagsPrivate_ implements IDLEnum<ImGuiTabItemFlagsPrivat
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_SectionMask_;
-*/
     private static native int ImGuiTabItemFlags_SectionMask__NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_NoCloseButton;
-*/
     private static native int ImGuiTabItemFlags_NoCloseButton_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_Button;
-*/
     private static native int ImGuiTabItemFlags_Button_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_Invisible;
-*/
     private static native int ImGuiTabItemFlags_Invisible_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_Unsorted;
-*/
     private static native int ImGuiTabItemFlags_Unsorted_NATIVE();
 }

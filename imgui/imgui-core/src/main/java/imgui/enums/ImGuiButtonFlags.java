@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiButtonFlags implements IDLEnum<ImGuiButtonFlags> {
+public enum ImGuiButtonFlags implements NativeEnum<ImGuiButtonFlags> {
 
     CUSTOM(0),
     None(ImGuiButtonFlags_None_NATIVE()),
@@ -40,33 +40,15 @@ public enum ImGuiButtonFlags implements IDLEnum<ImGuiButtonFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_None;
-*/
     private static native int ImGuiButtonFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_MouseButtonLeft;
-*/
     private static native int ImGuiButtonFlags_MouseButtonLeft_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_MouseButtonRight;
-*/
     private static native int ImGuiButtonFlags_MouseButtonRight_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_MouseButtonMiddle;
-*/
     private static native int ImGuiButtonFlags_MouseButtonMiddle_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_MouseButtonMask_;
-*/
     private static native int ImGuiButtonFlags_MouseButtonMask__NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_EnableNav;
-*/
     private static native int ImGuiButtonFlags_EnableNav_NATIVE();
 }

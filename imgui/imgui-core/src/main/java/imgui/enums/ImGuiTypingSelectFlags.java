@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiTypingSelectFlags implements IDLEnum<ImGuiTypingSelectFlags> {
+public enum ImGuiTypingSelectFlags implements NativeEnum<ImGuiTypingSelectFlags> {
 
     CUSTOM(0), None(ImGuiTypingSelectFlags_None_NATIVE()), AllowBackspace(ImGuiTypingSelectFlags_AllowBackspace_NATIVE()), AllowSingleCharMode(ImGuiTypingSelectFlags_AllowSingleCharMode_NATIVE());
 
@@ -34,18 +34,9 @@ public enum ImGuiTypingSelectFlags implements IDLEnum<ImGuiTypingSelectFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTypingSelectFlags_None;
-*/
     private static native int ImGuiTypingSelectFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTypingSelectFlags_AllowBackspace;
-*/
     private static native int ImGuiTypingSelectFlags_AllowBackspace_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTypingSelectFlags_AllowSingleCharMode;
-*/
     private static native int ImGuiTypingSelectFlags_AllowSingleCharMode_NATIVE();
 }

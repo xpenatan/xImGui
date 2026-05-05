@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiTreeNodeFlags implements IDLEnum<ImGuiTreeNodeFlags> {
+public enum ImGuiTreeNodeFlags implements NativeEnum<ImGuiTreeNodeFlags> {
 
     CUSTOM(0),
     None(ImGuiTreeNodeFlags_None_NATIVE()),
@@ -56,113 +56,47 @@ public enum ImGuiTreeNodeFlags implements IDLEnum<ImGuiTreeNodeFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_None;
-*/
     private static native int ImGuiTreeNodeFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_Selected;
-*/
     private static native int ImGuiTreeNodeFlags_Selected_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_Framed;
-*/
     private static native int ImGuiTreeNodeFlags_Framed_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_AllowOverlap;
-*/
     private static native int ImGuiTreeNodeFlags_AllowOverlap_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_NoTreePushOnOpen;
-*/
     private static native int ImGuiTreeNodeFlags_NoTreePushOnOpen_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_NoAutoOpenOnLog;
-*/
     private static native int ImGuiTreeNodeFlags_NoAutoOpenOnLog_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_DefaultOpen;
-*/
     private static native int ImGuiTreeNodeFlags_DefaultOpen_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_OpenOnDoubleClick;
-*/
     private static native int ImGuiTreeNodeFlags_OpenOnDoubleClick_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_OpenOnArrow;
-*/
     private static native int ImGuiTreeNodeFlags_OpenOnArrow_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_Leaf;
-*/
     private static native int ImGuiTreeNodeFlags_Leaf_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_Bullet;
-*/
     private static native int ImGuiTreeNodeFlags_Bullet_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_FramePadding;
-*/
     private static native int ImGuiTreeNodeFlags_FramePadding_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_SpanAvailWidth;
-*/
     private static native int ImGuiTreeNodeFlags_SpanAvailWidth_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_SpanFullWidth;
-*/
     private static native int ImGuiTreeNodeFlags_SpanFullWidth_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_SpanLabelWidth;
-*/
     private static native int ImGuiTreeNodeFlags_SpanLabelWidth_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_SpanAllColumns;
-*/
     private static native int ImGuiTreeNodeFlags_SpanAllColumns_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_LabelSpanAllColumns;
-*/
     private static native int ImGuiTreeNodeFlags_LabelSpanAllColumns_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_NavLeftJumpsToParent;
-*/
     private static native int ImGuiTreeNodeFlags_NavLeftJumpsToParent_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_CollapsingHeader;
-*/
     private static native int ImGuiTreeNodeFlags_CollapsingHeader_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_DrawLinesNone;
-*/
     private static native int ImGuiTreeNodeFlags_DrawLinesNone_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_DrawLinesFull;
-*/
     private static native int ImGuiTreeNodeFlags_DrawLinesFull_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_DrawLinesToNodes;
-*/
     private static native int ImGuiTreeNodeFlags_DrawLinesToNodes_NATIVE();
 }

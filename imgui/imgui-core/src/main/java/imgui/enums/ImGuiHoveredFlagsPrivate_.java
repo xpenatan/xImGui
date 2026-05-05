@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiHoveredFlagsPrivate_ implements IDLEnum<ImGuiHoveredFlagsPrivate_> {
+public enum ImGuiHoveredFlagsPrivate_ implements NativeEnum<ImGuiHoveredFlagsPrivate_> {
 
     CUSTOM(0), DelayMask_(ImGuiHoveredFlags_DelayMask__NATIVE()), AllowedMaskForIsWindowHovered(ImGuiHoveredFlags_AllowedMaskForIsWindowHovered_NATIVE()), AllowedMaskForIsItemHovered(ImGuiHoveredFlags_AllowedMaskForIsItemHovered_NATIVE());
 
@@ -34,18 +34,9 @@ public enum ImGuiHoveredFlagsPrivate_ implements IDLEnum<ImGuiHoveredFlagsPrivat
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_DelayMask_;
-*/
     private static native int ImGuiHoveredFlags_DelayMask__NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_AllowedMaskForIsWindowHovered;
-*/
     private static native int ImGuiHoveredFlags_AllowedMaskForIsWindowHovered_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_AllowedMaskForIsItemHovered;
-*/
     private static native int ImGuiHoveredFlags_AllowedMaskForIsItemHovered_NATIVE();
 }

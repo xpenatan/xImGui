@@ -1,19 +1,19 @@
 package imgui.example.basic.renderer;
 
 import com.badlogic.gdx.Gdx;
-import com.github.xpenatan.jparser.idl.helper.IDLFloatArray;
+import com.github.xpenatan.jparser.runtime.helper.NativeFloatArray;
 import imgui.ImGui;
 import imgui.ImTemp;
 
 public class PlotRenderer implements UIRenderer {
 
-    IDLFloatArray floatArray;
+    NativeFloatArray floatArray;
     int values_offset = 0;
     double refresh_time = 0.0;
     int maxScale = 60;
 
     public PlotRenderer() {
-        floatArray = new IDLFloatArray(90);
+        floatArray = new NativeFloatArray(90);
     }
 
     public void render() {

@@ -6,9 +6,9 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 
-public class ImGuiTableSortSpecs extends IDLBase {
+public class ImGuiTableSortSpecs extends NativeObject {
 
     static public final ImGuiTableSortSpecs NULL = ImGuiTableSortSpecs.native_new();
 
@@ -25,14 +25,4 @@ public class ImGuiTableSortSpecs extends IDLBase {
     public static ImGuiTableSortSpecs native_new() {
         return new ImGuiTableSortSpecs((byte) 0, (char) 0);
     }
-
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiTableSortSpecs* nativeObject = (ImGuiTableSortSpecs*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
 }

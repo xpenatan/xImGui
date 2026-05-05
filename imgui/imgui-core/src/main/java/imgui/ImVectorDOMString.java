@@ -6,26 +6,15 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
-import com.github.xpenatan.jparser.idl.helper.IDLString;
+import com.github.xpenatan.jParser.api.NativeObject;
+import com.github.xpenatan.jparser.runtime.helper.NativeString;
 
-public class ImVectorDOMString extends IDLBase {
-
-    private IDLString IDLString_TEMP_GEN_0;
-
-    private IDLBase IDLBase_TEMP_GEN_0;
+public class ImVectorDOMString extends NativeObject {
 
     static public final ImVectorDOMString NULL = ImVectorDOMString.native_new();
 
     public ImVectorDOMString() {
-        long addr = internal_native_create_addr();
-        internal_reset(addr, true);
     }
-
-    /*[-JNI;-NATIVE]
-return (jlong)new ImVectorDOMString();
-*/
-    public static native long internal_native_create_addr();
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -41,96 +30,27 @@ return (jlong)new ImVectorDOMString();
         return new ImVectorDOMString((byte) 0, (char) 0);
     }
 
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImVectorDOMString* nativeObject = (ImVectorDOMString*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
-
     public int size() {
-        return internal_native_size(native_address);
+        return 0;
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorDOMString* nativeObject = (ImVectorDOMString*)this_addr;
-return nativeObject->size();
-*/
-    public static native int internal_native_size(long this_addr);
-
-    public IDLString getData(int index) {
-        long addr = internal_native_getData_addr(native_address, index);
-        if (addr == 0)
-            return IDLString.NULL;
-        if (IDLString_TEMP_GEN_0 == null)
-            IDLString_TEMP_GEN_0 = IDLString.native_new();
-        IDLString_TEMP_GEN_0.internal_reset(addr, false);
-        return IDLString_TEMP_GEN_0;
+    public NativeString getData(int index) {
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImVectorDOMString* nativeObject = (ImVectorDOMString*)this_addr;
-static IDLString copy_addr;
-copy_addr = (*nativeObject)[(int)index];
-return (jlong)&copy_addr;*/
-    public static native long internal_native_getData_addr(long this_addr, int index);
 
     public void push_back(String v) {
-        internal_native_push_back(native_address, v);
     }
-
-    /*[-JNI;-NATIVE]
-ImVectorDOMString* nativeObject = (ImVectorDOMString*)this_addr;
-nativeObject->push_back(v);
-*/
-    public static native void internal_native_push_back(long this_addr, String v);
 
     public void reserve(int new_capacity) {
-        internal_native_reserve(native_address, new_capacity);
     }
-
-    /*[-JNI;-NATIVE]
-ImVectorDOMString* nativeObject = (ImVectorDOMString*)this_addr;
-nativeObject->reserve((int)new_capacity);
-*/
-    public static native void internal_native_reserve(long this_addr, int new_capacity);
 
     public void resize(int new_size) {
-        internal_native_resize(native_address, new_size);
     }
-
-    /*[-JNI;-NATIVE]
-ImVectorDOMString* nativeObject = (ImVectorDOMString*)this_addr;
-nativeObject->resize((int)new_size);
-*/
-    public static native void internal_native_resize(long this_addr, int new_size);
 
     public void clear() {
-        internal_native_clear(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorDOMString* nativeObject = (ImVectorDOMString*)this_addr;
-nativeObject->clear();
-*/
-    public static native void internal_native_clear(long this_addr);
-
-    public IDLBase get_Data() {
-        long addr = internal_native_get_Data_addr(native_address);
-        if (addr == 0)
-            return IDLBase.NULL;
-        if (IDLBase_TEMP_GEN_0 == null)
-            IDLBase_TEMP_GEN_0 = IDLBase.native_new();
-        IDLBase_TEMP_GEN_0.internal_reset(addr, false);
-        return IDLBase_TEMP_GEN_0;
+    public NativeObject get_Data() {
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImVectorDOMString* nativeObject = (ImVectorDOMString*)this_addr;
-return (jlong)nativeObject->Data;
-*/
-    public static native long internal_native_get_Data_addr(long this_addr);
 }

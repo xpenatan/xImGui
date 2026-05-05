@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiDataAuthority implements IDLEnum<ImGuiDataAuthority> {
+public enum ImGuiDataAuthority implements NativeEnum<ImGuiDataAuthority> {
 
     CUSTOM(0), Auto(ImGuiDataAuthority_Auto_NATIVE()), DockNode(ImGuiDataAuthority_DockNode_NATIVE()), Window(ImGuiDataAuthority_Window_NATIVE());
 
@@ -34,18 +34,9 @@ public enum ImGuiDataAuthority implements IDLEnum<ImGuiDataAuthority> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataAuthority_Auto;
-*/
     private static native int ImGuiDataAuthority_Auto_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataAuthority_DockNode;
-*/
     private static native int ImGuiDataAuthority_DockNode_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataAuthority_Window;
-*/
     private static native int ImGuiDataAuthority_Window_NATIVE();
 }

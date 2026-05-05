@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiSliderFlags implements IDLEnum<ImGuiSliderFlags> {
+public enum ImGuiSliderFlags implements NativeEnum<ImGuiSliderFlags> {
 
     CUSTOM(0),
     None(ImGuiSliderFlags_None_NATIVE()),
@@ -44,53 +44,23 @@ public enum ImGuiSliderFlags implements IDLEnum<ImGuiSliderFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSliderFlags_None;
-*/
     private static native int ImGuiSliderFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSliderFlags_Logarithmic;
-*/
     private static native int ImGuiSliderFlags_Logarithmic_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSliderFlags_NoRoundToFormat;
-*/
     private static native int ImGuiSliderFlags_NoRoundToFormat_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSliderFlags_NoInput;
-*/
     private static native int ImGuiSliderFlags_NoInput_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSliderFlags_WrapAround;
-*/
     private static native int ImGuiSliderFlags_WrapAround_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSliderFlags_ClampOnInput;
-*/
     private static native int ImGuiSliderFlags_ClampOnInput_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSliderFlags_ClampZeroRange;
-*/
     private static native int ImGuiSliderFlags_ClampZeroRange_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSliderFlags_NoSpeedTweaks;
-*/
     private static native int ImGuiSliderFlags_NoSpeedTweaks_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSliderFlags_AlwaysClamp;
-*/
     private static native int ImGuiSliderFlags_AlwaysClamp_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSliderFlags_InvalidMask_;
-*/
     private static native int ImGuiSliderFlags_InvalidMask__NATIVE();
 }

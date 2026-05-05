@@ -1,8 +1,8 @@
 package imgui;
 
-import idl.helper.IDLByteArray;
+import runtime.helper.NativeByteArray;
 
-public class ImGuiString extends IDLByteArray {
+public class ImGuiString extends NativeByteArray {
 
     public final static ImGuiString NULL = native_new();
     public static ImGuiString TMP_1 = new ImGuiString();

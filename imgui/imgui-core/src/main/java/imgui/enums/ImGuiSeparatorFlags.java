@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiSeparatorFlags implements IDLEnum<ImGuiSeparatorFlags> {
+public enum ImGuiSeparatorFlags implements NativeEnum<ImGuiSeparatorFlags> {
 
     CUSTOM(0), None(ImGuiSeparatorFlags_None_NATIVE()), Horizontal(ImGuiSeparatorFlags_Horizontal_NATIVE()), Vertical(ImGuiSeparatorFlags_Vertical_NATIVE()), SpanAllColumns(ImGuiSeparatorFlags_SpanAllColumns_NATIVE());
 
@@ -34,23 +34,11 @@ public enum ImGuiSeparatorFlags implements IDLEnum<ImGuiSeparatorFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSeparatorFlags_None;
-*/
     private static native int ImGuiSeparatorFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSeparatorFlags_Horizontal;
-*/
     private static native int ImGuiSeparatorFlags_Horizontal_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSeparatorFlags_Vertical;
-*/
     private static native int ImGuiSeparatorFlags_Vertical_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSeparatorFlags_SpanAllColumns;
-*/
     private static native int ImGuiSeparatorFlags_SpanAllColumns_NATIVE();
 }

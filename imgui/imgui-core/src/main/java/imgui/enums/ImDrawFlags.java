@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImDrawFlags implements IDLEnum<ImDrawFlags> {
+public enum ImDrawFlags implements NativeEnum<ImDrawFlags> {
 
     CUSTOM(0),
     None(ImDrawFlags_None_NATIVE()),
@@ -48,73 +48,31 @@ public enum ImDrawFlags implements IDLEnum<ImDrawFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImDrawFlags_None;
-*/
     private static native int ImDrawFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImDrawFlags_Closed;
-*/
     private static native int ImDrawFlags_Closed_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImDrawFlags_RoundCornersTopLeft;
-*/
     private static native int ImDrawFlags_RoundCornersTopLeft_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImDrawFlags_RoundCornersTopRight;
-*/
     private static native int ImDrawFlags_RoundCornersTopRight_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImDrawFlags_RoundCornersBottomLeft;
-*/
     private static native int ImDrawFlags_RoundCornersBottomLeft_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImDrawFlags_RoundCornersBottomRight;
-*/
     private static native int ImDrawFlags_RoundCornersBottomRight_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImDrawFlags_RoundCornersNone;
-*/
     private static native int ImDrawFlags_RoundCornersNone_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImDrawFlags_RoundCornersTop;
-*/
     private static native int ImDrawFlags_RoundCornersTop_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImDrawFlags_RoundCornersBottom;
-*/
     private static native int ImDrawFlags_RoundCornersBottom_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImDrawFlags_RoundCornersLeft;
-*/
     private static native int ImDrawFlags_RoundCornersLeft_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImDrawFlags_RoundCornersRight;
-*/
     private static native int ImDrawFlags_RoundCornersRight_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImDrawFlags_RoundCornersAll;
-*/
     private static native int ImDrawFlags_RoundCornersAll_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImDrawFlags_RoundCornersDefault_;
-*/
     private static native int ImDrawFlags_RoundCornersDefault__NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImDrawFlags_RoundCornersMask_;
-*/
     private static native int ImDrawFlags_RoundCornersMask__NATIVE();
 }

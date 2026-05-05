@@ -7,7 +7,7 @@ interface NodeEditor {
     [Const, Ref] static Config GetConfig(optional EditorContext ctx);
 
     [Ref] static Style GetStyle();
-    [Const, Value] static IDLString GetStyleColorName(StyleColor colorIndex);
+    [Const, Value] static NativeString GetStyleColorName(StyleColor colorIndex);
 
     static void PushStyleColor(StyleColor colorIndex, [Const, Ref] ImVec4 color);
     static void PopStyleColor(optional long count);
@@ -151,8 +151,8 @@ interface LoadSaveSettingsListener {
 [JSImplementation="LoadSaveSettingsListener"]
 interface LoadSaveSettingsListenerImpl {
     void LoadSaveSettingsListenerImpl();
-    void onLoad(IDLString data);
-    boolean onSave(IDLString data, SaveReasonFlags reason);
+    void onLoad(NativeString data);
+    boolean onSave(NativeString data, SaveReasonFlags reason);
 };
 
 interface Style {

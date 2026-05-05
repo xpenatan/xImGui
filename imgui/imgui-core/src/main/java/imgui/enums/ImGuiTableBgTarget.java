@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiTableBgTarget implements IDLEnum<ImGuiTableBgTarget> {
+public enum ImGuiTableBgTarget implements NativeEnum<ImGuiTableBgTarget> {
 
     CUSTOM(0), None(ImGuiTableBgTarget_None_NATIVE()), RowBg0(ImGuiTableBgTarget_RowBg0_NATIVE()), RowBg1(ImGuiTableBgTarget_RowBg1_NATIVE()), CellBg(ImGuiTableBgTarget_CellBg_NATIVE());
 
@@ -34,23 +34,11 @@ public enum ImGuiTableBgTarget implements IDLEnum<ImGuiTableBgTarget> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableBgTarget_None;
-*/
     private static native int ImGuiTableBgTarget_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableBgTarget_RowBg0;
-*/
     private static native int ImGuiTableBgTarget_RowBg0_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableBgTarget_RowBg1;
-*/
     private static native int ImGuiTableBgTarget_RowBg1_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableBgTarget_CellBg;
-*/
     private static native int ImGuiTableBgTarget_CellBg_NATIVE();
 }

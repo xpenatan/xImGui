@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiComboFlags implements IDLEnum<ImGuiComboFlags> {
+public enum ImGuiComboFlags implements NativeEnum<ImGuiComboFlags> {
 
     CUSTOM(0),
     None(ImGuiComboFlags_None_NATIVE()),
@@ -44,53 +44,23 @@ public enum ImGuiComboFlags implements IDLEnum<ImGuiComboFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiComboFlags_None;
-*/
     private static native int ImGuiComboFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiComboFlags_PopupAlignLeft;
-*/
     private static native int ImGuiComboFlags_PopupAlignLeft_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiComboFlags_HeightSmall;
-*/
     private static native int ImGuiComboFlags_HeightSmall_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiComboFlags_HeightRegular;
-*/
     private static native int ImGuiComboFlags_HeightRegular_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiComboFlags_HeightLarge;
-*/
     private static native int ImGuiComboFlags_HeightLarge_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiComboFlags_HeightLargest;
-*/
     private static native int ImGuiComboFlags_HeightLargest_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiComboFlags_NoArrowButton;
-*/
     private static native int ImGuiComboFlags_NoArrowButton_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiComboFlags_NoPreview;
-*/
     private static native int ImGuiComboFlags_NoPreview_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiComboFlags_WidthFitPreview;
-*/
     private static native int ImGuiComboFlags_WidthFitPreview_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiComboFlags_HeightMask_;
-*/
     private static native int ImGuiComboFlags_HeightMask__NATIVE();
 }

@@ -6,44 +6,20 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
-import com.github.xpenatan.jparser.idl.helper.IDLString;
+import com.github.xpenatan.jParser.api.NativeObject;
+import com.github.xpenatan.jparser.runtime.helper.NativeString;
 
-public class ClipboardTextFunction extends IDLBase {
+public class ClipboardTextFunction extends NativeObject {
 
-    static private IDLString IDLString_TEMP_STATIC_GEN_0;
+    static private NativeString NativeString_TEMP_STATIC_GEN_0;
 
-    static private IDLString IDLString_TEMP_STATIC_GEN_1;
+    static private NativeString NativeString_TEMP_STATIC_GEN_1;
 
     static public final ClipboardTextFunction NULL = ClipboardTextFunction.native_new();
 
-    /*[-JNI;-NATIVE]
-	static jmethodID ClipboardTextFunctionImpl_onGetClipboardTextJ_ID;
-	static jmethodID ClipboardTextFunctionImpl_onSetClipboardTextJ_ID;
-
-class ClipboardTextFunctionImpl : public ClipboardTextFunction {
-private:
-	JNIEnv* env;
-	jobject obj;
-public:
-void setupCallback(JNIEnv* env, jobject obj) {
-	this->env = env;
-	this->obj = env->NewGlobalRef(obj);
-	static jclass jClassID = 0;
-	if(jClassID == 0) {
-		jClassID = (jclass)env->NewGlobalRef(env->GetObjectClass(obj));
-		ClipboardTextFunctionImpl_onGetClipboardTextJ_ID = env->GetMethodID(jClassID, "internal_onGetClipboardText", "(J)V");
-		ClipboardTextFunctionImpl_onSetClipboardTextJ_ID = env->GetMethodID(jClassID, "internal_onSetClipboardText", "(J)V");
-	}
-}
-virtual void onGetClipboardText(IDLString* strOut) {
-   env->CallVoidMethod(obj, ClipboardTextFunctionImpl_onGetClipboardTextJ_ID, (jlong)strOut);
-}
-virtual void onSetClipboardText(IDLString* text) {
-   env->CallVoidMethod(obj, ClipboardTextFunctionImpl_onSetClipboardTextJ_ID, (jlong)text);
-}
-};
-*/
+    /**
+     * Dummy constructor, used internally to creates objects without C++ pointer
+     */
     @Deprecated()
     protected ClipboardTextFunction(byte b, char c) {
     }
@@ -55,24 +31,8 @@ virtual void onSetClipboardText(IDLString* text) {
         return new ClipboardTextFunction((byte) 0, (char) 0);
     }
 
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ClipboardTextFunctionImpl* nativeObject = (ClipboardTextFunctionImpl*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
-
     public static void setClipboardTextFunction(ImGuiPlatformIO io, ClipboardTextFunction clipboardFunction) {
-        internal_native_setClipboardTextFunction(io.native_address, clipboardFunction.native_address);
     }
-
-    /*[-JNI;-NATIVE]
-ClipboardTextFunction::setClipboardTextFunction((ImGuiPlatformIO* )io_addr, (ClipboardTextFunction* )clipboardFunction_addr);
-*/
-    public static native void internal_native_setClipboardTextFunction(long io_addr, long clipboardFunction_addr);
 
     public ClipboardTextFunction() {
         long addr = internal_native_create_addr();
@@ -81,37 +41,27 @@ ClipboardTextFunction::setClipboardTextFunction((ImGuiPlatformIO* )io_addr, (Cli
     }
 
     private void setupCallback() {
-        internal_native_setupCallback(native_address);
     }
 
-    protected void onGetClipboardText(IDLString strOut) {
+    protected void onGetClipboardText(NativeString strOut) {
     }
 
     private void internal_onGetClipboardText(long strOut_addr) {
-        if (IDLString_TEMP_STATIC_GEN_0 == null)
-            IDLString_TEMP_STATIC_GEN_0 = IDLString.native_new();
-        IDLString_TEMP_STATIC_GEN_0.internal_reset(strOut_addr, false);
-        onGetClipboardText(IDLString_TEMP_STATIC_GEN_0);
+        if (NativeString_TEMP_STATIC_GEN_0 == null)
+            NativeString_TEMP_STATIC_GEN_0 = NativeString.native_new();
+        NativeString_TEMP_STATIC_GEN_0.internal_reset(strOut_addr, false);
+        onGetClipboardText(NativeString_TEMP_STATIC_GEN_0);
     }
 
-    protected void onSetClipboardText(IDLString text) {
+    protected void onSetClipboardText(NativeString text) {
     }
 
     private void internal_onSetClipboardText(long text_addr) {
-        if (IDLString_TEMP_STATIC_GEN_1 == null)
-            IDLString_TEMP_STATIC_GEN_1 = IDLString.native_new();
-        IDLString_TEMP_STATIC_GEN_1.internal_reset(text_addr, false);
-        onSetClipboardText(IDLString_TEMP_STATIC_GEN_1);
+        if (NativeString_TEMP_STATIC_GEN_1 == null)
+            NativeString_TEMP_STATIC_GEN_1 = NativeString.native_new();
+        NativeString_TEMP_STATIC_GEN_1.internal_reset(text_addr, false);
+        onSetClipboardText(NativeString_TEMP_STATIC_GEN_1);
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)new ClipboardTextFunctionImpl();
-*/
     public static native long internal_native_create_addr();
-
-    /*[-JNI;-NATIVE]
-ClipboardTextFunctionImpl* nativeObject = (ClipboardTextFunctionImpl*)this_addr;
-nativeObject->setupCallback(env, object);
-*/
-    public native void internal_native_setupCallback(long this_addr);
 }

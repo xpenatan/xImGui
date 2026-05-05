@@ -1,11 +1,10 @@
 package imgui.example.basic;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.Array;
-import com.github.xpenatan.jparser.idl.helper.IDLBoolArray;
-import com.github.xpenatan.jparser.idl.helper.IDLInt;
-import com.github.xpenatan.jparser.idl.helper.IDLIntArray;
+import com.github.xpenatan.jparser.runtime.helper.NativeBoolArray;
+import com.github.xpenatan.jparser.runtime.helper.NativeInt;
+import com.github.xpenatan.jparser.runtime.helper.NativeIntArray;
 import imgui.ImGui;
 import imgui.enums.ImGuiCol;
 import imgui.enums.ImGuiCond;
@@ -110,7 +109,7 @@ public class BasicExample extends ImGuiRenderer {
     ImGuiDockNodeFlags dockspace_flags = ImGuiDockNodeFlags.PassthruCentralNode;
     int dockspace_id;
 
-    IDLInt tmp01 = new IDLInt();
+    NativeInt tmp01 = new NativeInt();
 
     private void renderDock() {
 
@@ -128,7 +127,7 @@ public class BasicExample extends ImGuiRenderer {
 
         // Create docking space
         ImGui.PushStyleVar(ImGuiStyleVar.WindowPadding, ImTemp.ImVec2_1(0.0f, 0.0f));
-        ImGui.Begin("DockSpace111", IDLBoolArray.NULL, window_flags);
+        ImGui.Begin("DockSpace111", NativeBoolArray.NULL, window_flags);
         ImGui.PopStyleVar();
 
         dockspace_id = ImGui.GetID("MyDockSpace");
@@ -177,18 +176,18 @@ public class BasicExample extends ImGuiRenderer {
         int centralID = 0;
 
         if(layout == 0 ) {
-            int rightId = ImGuiInternal.DockBuilderSplitNode(dockspace_id, ImGuiDir.Right, 0.2f, IDLIntArray.NULL, tmp01);
+            int rightId = ImGuiInternal.DockBuilderSplitNode(dockspace_id, ImGuiDir.Right, 0.2f, NativeIntArray.NULL.NULL, tmp01);
             int leftId = tmp01.getValue();
 
-            int bottomId = ImGuiInternal.DockBuilderSplitNode(leftId, ImGuiDir.Down, 0.3f, IDLIntArray.NULL, tmp01);
+            int bottomId = ImGuiInternal.DockBuilderSplitNode(leftId, ImGuiDir.Down, 0.3f, NativeIntArray.NULL, tmp01);
             int topId = tmp01.getValue();
-            int topLeft = ImGuiInternal.DockBuilderSplitNode(topId, ImGuiDir.Left, 0.4f, IDLIntArray.NULL, tmp01);
+            int topLeft = ImGuiInternal.DockBuilderSplitNode(topId, ImGuiDir.Left, 0.4f, NativeIntArray.NULL, tmp01);
             centralID = tmp01.getValue();
 
-            int rightTopId = ImGuiInternal.DockBuilderSplitNode(rightId, ImGuiDir.Up, 0.5f, IDLIntArray.NULL, tmp01);
+            int rightTopId = ImGuiInternal.DockBuilderSplitNode(rightId, ImGuiDir.Up, 0.5f, NativeIntArray.NULL, tmp01);
             int rightBottomId = tmp01.getValue();
 
-            int bottomLeftId = ImGuiInternal.DockBuilderSplitNode(bottomId, ImGuiDir.Left, 0.4f, IDLIntArray.NULL, tmp01);
+            int bottomLeftId = ImGuiInternal.DockBuilderSplitNode(bottomId, ImGuiDir.Left, 0.4f, NativeIntArray.NULL, tmp01);
             int bottomRightId = tmp01.getValue();
 
             // Plug in all layout ids to window title
@@ -201,20 +200,20 @@ public class BasicExample extends ImGuiRenderer {
             ImGuiInternal.DockBuilderDockWindow("Assets", bottomLeftId);
         }
         else {
-            int rightId = ImGuiInternal.DockBuilderSplitNode(dockspace_id, ImGuiDir.Right, 0.2f, IDLIntArray.NULL, tmp01);
+            int rightId = ImGuiInternal.DockBuilderSplitNode(dockspace_id, ImGuiDir.Right, 0.2f, NativeIntArray.NULL, tmp01);
 
             int leftId = tmp01.getValue();
 
-            int bottomId = ImGuiInternal.DockBuilderSplitNode(leftId, ImGuiDir.Down, 0.2f, IDLIntArray.NULL, tmp01);
+            int bottomId = ImGuiInternal.DockBuilderSplitNode(leftId, ImGuiDir.Down, 0.2f, NativeIntArray.NULL, tmp01);
             int topId = tmp01.getValue();
 
-            int leftLeftId = ImGuiInternal.DockBuilderSplitNode(topId, ImGuiDir.Left, 0.2f, IDLIntArray.NULL, tmp01);
+            int leftLeftId = ImGuiInternal.DockBuilderSplitNode(topId, ImGuiDir.Left, 0.2f, NativeIntArray.NULL, tmp01);
             int middleId = tmp01.getValue();
 
-            int middleLeftId = ImGuiInternal.DockBuilderSplitNode(middleId, ImGuiDir.Left, 0.5f, IDLIntArray.NULL, tmp01);
+            int middleLeftId = ImGuiInternal.DockBuilderSplitNode(middleId, ImGuiDir.Left, 0.5f, NativeIntArray.NULL, tmp01);
             centralID = tmp01.getValue();
 
-            int rightTopId = ImGuiInternal.DockBuilderSplitNode(rightId, ImGuiDir.Up, 0.5f, IDLIntArray.NULL, tmp01);
+            int rightTopId = ImGuiInternal.DockBuilderSplitNode(rightId, ImGuiDir.Up, 0.5f, NativeIntArray.NULL, tmp01);
             int rightBottomId = tmp01.getValue();
 
             ImGuiInternal.DockBuilderDockWindow("Game Editor", centralID);

@@ -8,7 +8,6 @@ import com.github.xpenatan.jParser.builder.targets.WindowsMSVCTarget;
 import com.github.xpenatan.jParser.builder.tool.BuildToolListener;
 import com.github.xpenatan.jParser.builder.tool.BuildToolOptions;
 import com.github.xpenatan.jParser.builder.tool.BuilderTool;
-import com.github.xpenatan.jParser.core.JParser;
 import com.github.xpenatan.jParser.idl.IDLClassOrEnum;
 import com.github.xpenatan.jParser.idl.IDLReader;
 import com.github.xpenatan.jParser.idl.IDLRenaming;
@@ -24,8 +23,6 @@ public class BuildImGui {
         String basePackage = "imgui";
         String sourceDir =  "/build/imgui";
 
-        JParser.CREATE_IDL_HELPER = false;
-
         BuildToolOptions.BuildToolParams data = new BuildToolOptions.BuildToolParams();
         data.libName = libName;
         data.idlName = libName;
@@ -35,33 +32,43 @@ public class BuildImGui {
         data.modulePrefix = modulePrefix;
 
         BuildToolOptions op = new BuildToolOptions(data, args);
-        op.addAdditionalIDLRefPath(IDLReader.getIDLHelperFile());
+        op.addAdditionalIDLRefPath(IDLReader.getRuntimeHelperFile());
 
         BuilderTool.build(op, new BuildToolListener() {
             @Override
             public void onAddTarget(BuildToolOptions op, IDLReader idlReader, ArrayList<BuildMultiTarget> targets) {
-                if(op.containsArg("teavm")) {
+                if(op.containsArg("web_wasm")) {
                     targets.add(getTeaVMTarget(op, idlReader));
                 }
-                if(op.containsArg("windows64")) {
-                    targets.add(getWindowTarget(op));
+                if(op.containsArg("windows64_jni")) {
+                    targets.add(getWindowTarget(op, false));
                 }
-                if(op.containsArg("linux64")) {
-                    targets.add(getLinuxTarget(op));
+                if(op.containsArg("linux64_jni")) {
+                    targets.add(getLinuxTarget(op, false));
                 }
-                if(op.containsArg("mac64")) {
-                    targets.add(getMacTarget(op, false));
+                if(op.containsArg("mac64_jni")) {
+                    targets.add(getMacTarget(op, false, false));
                 }
-                if(op.containsArg("macArm")) {
-                    targets.add(getMacTarget(op, true));
+                if(op.containsArg("macArm_jni")) {
+                    targets.add(getMacTarget(op, true, false));
                 }
-                if(op.containsArg("android")) {
+                if(op.containsArg("android_jni")) {
                     // TODO fix android input and ui scale (Widgets are too small)
                     targets.add(getAndroidTarget(op));
                 }
-//                if(op.containsArg("iOS")) {
+//                if(op.containsArg("ios_jni")) {
 //                    targets.add(getIOSTarget(op));
 //                }
+
+                if(op.containsArg("windows64_ffm")) {
+                    targets.add(getWindowTarget(op, true));
+                }
+                if(op.containsArg("linux64_jfm")) {
+                    targets.add(getLinuxTarget(op, true));
+                }
+                if(op.containsArg("mac64_ffm")) {
+                    targets.add(getLinuxTarget(op, true));
+                }
             }
         }, new IDLRenaming() {
 
@@ -106,13 +113,16 @@ public class BuildImGui {
         });
     }
 
-    private static BuildMultiTarget getWindowTarget(BuildToolOptions op) {
+    private static BuildMultiTarget getWindowTarget(BuildToolOptions op, boolean isFFM) {
         BuildMultiTarget multiTarget = new BuildMultiTarget();
         String libBuildCPPPath = op.getModuleBuildCPPPath();
         String sourceDir = op.getSourceDir();
 
+        String api = isFFM ? "ffm" : "jni";
+
         // Make a static library
         WindowsMSVCTarget compileStaticTarget = new WindowsMSVCTarget();
+        compileStaticTarget.libDirSuffix += api;
         compileStaticTarget.cppFlags.add("-std:c++17");
         compileStaticTarget.cppFlags.add("/DIMGUI_EXPORTS");
         compileStaticTarget.cppFlags.add("/DIMGUI_USER_CONFIG=\"\\\"ImGuiCustomConfig.h\\\"\"");
@@ -125,28 +135,35 @@ public class BuildImGui {
 
         // Compile glue code and link
         WindowsMSVCTarget linkTarget = new WindowsMSVCTarget();
-        linkTarget.addJNIHeaders();
+        linkTarget.libDirSuffix += api;
+        if(isFFM) {
+            linkTarget.setupFFMGlueCode(libBuildCPPPath);
+        }
+        else {
+            linkTarget.setupJNIGlueCode(libBuildCPPPath);
+        }
         linkTarget.cppFlags.add("-std:c++17");
         linkTarget.cppFlags.add("/DIMGUI_EXPORTS");
         linkTarget.cppFlags.add("/DIMGUI_USER_CONFIG=\"\\\"ImGuiCustomConfig.h\\\"\"");
         linkTarget.headerDirs.add("-I" + sourceDir);
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
-        linkTarget.headerDirs.add("-I" + libBuildCPPPath + "/src/jniglue");
-        linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/windows/vc/imgui64_.lib");
-        linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");
+        linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/windows/vc/" + api + "/imgui64_.lib");
         linkTarget.linkerFlags.add("-DLL");
         multiTarget.add(linkTarget);
 
         return multiTarget;
     }
 
-    private static BuildMultiTarget getLinuxTarget(BuildToolOptions op) {
+    private static BuildMultiTarget getLinuxTarget(BuildToolOptions op, boolean isFFM) {
         BuildMultiTarget multiTarget = new BuildMultiTarget();
         String libBuildCPPPath = op.getModuleBuildCPPPath();
         String sourceDir = op.getSourceDir();
 
+        String api = isFFM ? "ffm" : "jni";
+
         // Make a static library
         LinuxTarget compileStaticTarget = new LinuxTarget();
+        compileStaticTarget.libDirSuffix += api;
         compileStaticTarget.isStatic = true;
         compileStaticTarget.cppFlags.add("-std=c++17");
         compileStaticTarget.cppFlags.add("-fPIC");
@@ -158,27 +175,35 @@ public class BuildImGui {
 
         // Compile glue code and link
         LinuxTarget linkTarget = new LinuxTarget();
-        linkTarget.addJNIHeaders();
+        linkTarget.libDirSuffix += api;
+        if(isFFM) {
+            linkTarget.setupFFMGlueCode(libBuildCPPPath);
+        }
+        else {
+            linkTarget.setupJNIGlueCode(libBuildCPPPath);
+        }
         linkTarget.cppFlags.add("-std=c++17");
         linkTarget.cppFlags.add("-fPIC");
         linkTarget.cppFlags.add("-DIMGUI_USER_CONFIG=\"ImGuiCustomConfig.h\"");
         linkTarget.headerDirs.add("-I" + sourceDir);
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
         linkTarget.linkerFlags.add("-Wl,-soname,libimgui64.so");
-        linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/linux/libimgui64_.a");
-        linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");
+        linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/linux/" + api + "/libimgui64_.a");
         multiTarget.add(linkTarget);
 
         return multiTarget;
     }
 
-    private static BuildMultiTarget getMacTarget(BuildToolOptions op, boolean isArm) {
+    private static BuildMultiTarget getMacTarget(BuildToolOptions op, boolean isArm, boolean isFFM) {
         BuildMultiTarget multiTarget = new BuildMultiTarget();
         String libBuildCPPPath = op.getModuleBuildCPPPath();
         String sourceDir = op.getSourceDir();
 
+        String api = isFFM ? "ffm" : "jni";
+
         // Make a static library
         MacTarget compileStaticTarget = new MacTarget(isArm);
+        compileStaticTarget.libDirSuffix += api;
         compileStaticTarget.isStatic = true;
         compileStaticTarget.cppFlags.add("-std=c++17");
         compileStaticTarget.cppFlags.add("-fPIC");
@@ -190,19 +215,24 @@ public class BuildImGui {
 
         // Compile glue code and link
         MacTarget linkTarget = new MacTarget(isArm);
-        linkTarget.addJNIHeaders();
+        linkTarget.libDirSuffix += api;
+        if(isFFM) {
+            linkTarget.setupFFMGlueCode(libBuildCPPPath);
+        }
+        else {
+            linkTarget.setupJNIGlueCode(libBuildCPPPath);
+        }
         linkTarget.cppFlags.add("-std=c++17");
         linkTarget.cppFlags.add("-fPIC");
         linkTarget.cppFlags.add("-DIMGUI_USER_CONFIG=\"ImGuiCustomConfig.h\"");
         linkTarget.headerDirs.add("-I" + sourceDir);
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
         if(isArm) {
-            linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/mac/arm/libimgui64_.a");
+            linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/mac/arm/" + api + "/libimgui64_.a");
         }
         else {
-            linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/mac/libimgui64_.a");
+            linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/mac/" + api + "/libimgui64_.a");
         }
-        linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");
         multiTarget.add(linkTarget);
 
         return multiTarget;
@@ -236,7 +266,7 @@ public class BuildImGui {
 
         // Compile glue code and link
         EmscriptenTarget linkTarget = new EmscriptenTarget();
-        linkTarget.mainModuleName = "idl";
+        linkTarget.mainModuleName = "runtime";
         linkTarget.idlReader = idlReader;
         linkTarget.cppFlags.add("-std=c++17");
         linkTarget.headerDirs.add("-I" + sourceDir);
@@ -282,12 +312,11 @@ public class BuildImGui {
 
             // Compile glue code and link
             AndroidTarget linkTarget = new AndroidTarget(target, apiLevel);
-            linkTarget.addJNIHeaders();
+            linkTarget.setupJNIGlueCode(libBuildCPPPath);
             linkTarget.cppFlags.add("-std=c++17");
             linkTarget.cppCompiler.add("-fPIC");
             linkTarget.headerDirs.add("-I" + sourceDir);
             linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
-            linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");
             linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/android/" + target.getFolder() +"/lib" + op.libName + ".a");
             linkTarget.cppFlags.add("-Wno-error=format-security");
             linkTarget.cppFlags.add("-DIMGUI_DISABLE_FILE_FUNCTIONS");

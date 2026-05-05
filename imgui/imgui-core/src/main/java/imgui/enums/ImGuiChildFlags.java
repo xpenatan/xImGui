@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiChildFlags implements IDLEnum<ImGuiChildFlags> {
+public enum ImGuiChildFlags implements NativeEnum<ImGuiChildFlags> {
 
     CUSTOM(0),
     None(ImGuiChildFlags_None_NATIVE()),
@@ -44,53 +44,23 @@ public enum ImGuiChildFlags implements IDLEnum<ImGuiChildFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiChildFlags_None;
-*/
     private static native int ImGuiChildFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiChildFlags_Borders;
-*/
     private static native int ImGuiChildFlags_Borders_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiChildFlags_AlwaysUseWindowPadding;
-*/
     private static native int ImGuiChildFlags_AlwaysUseWindowPadding_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiChildFlags_ResizeX;
-*/
     private static native int ImGuiChildFlags_ResizeX_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiChildFlags_ResizeY;
-*/
     private static native int ImGuiChildFlags_ResizeY_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiChildFlags_AutoResizeX;
-*/
     private static native int ImGuiChildFlags_AutoResizeX_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiChildFlags_AutoResizeY;
-*/
     private static native int ImGuiChildFlags_AutoResizeY_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiChildFlags_AlwaysAutoResize;
-*/
     private static native int ImGuiChildFlags_AlwaysAutoResize_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiChildFlags_FrameStyle;
-*/
     private static native int ImGuiChildFlags_FrameStyle_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiChildFlags_NavFlattened;
-*/
     private static native int ImGuiChildFlags_NavFlattened_NATIVE();
 }

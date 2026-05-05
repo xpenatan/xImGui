@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImFontAtlasFlags implements IDLEnum<ImFontAtlasFlags> {
+public enum ImFontAtlasFlags implements NativeEnum<ImFontAtlasFlags> {
 
     CUSTOM(0), None(ImFontAtlasFlags_None_NATIVE()), NoPowerOfTwoHeight(ImFontAtlasFlags_NoPowerOfTwoHeight_NATIVE()), NoMouseCursors(ImFontAtlasFlags_NoMouseCursors_NATIVE()), NoBakedLines(ImFontAtlasFlags_NoBakedLines_NATIVE());
 
@@ -34,23 +34,11 @@ public enum ImFontAtlasFlags implements IDLEnum<ImFontAtlasFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImFontAtlasFlags_None;
-*/
     private static native int ImFontAtlasFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImFontAtlasFlags_NoPowerOfTwoHeight;
-*/
     private static native int ImFontAtlasFlags_NoPowerOfTwoHeight_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImFontAtlasFlags_NoMouseCursors;
-*/
     private static native int ImFontAtlasFlags_NoMouseCursors_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImFontAtlasFlags_NoBakedLines;
-*/
     private static native int ImFontAtlasFlags_NoBakedLines_NATIVE();
 }

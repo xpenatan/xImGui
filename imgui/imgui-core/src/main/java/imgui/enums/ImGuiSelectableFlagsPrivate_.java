@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiSelectableFlagsPrivate_ implements IDLEnum<ImGuiSelectableFlagsPrivate_> {
+public enum ImGuiSelectableFlagsPrivate_ implements NativeEnum<ImGuiSelectableFlagsPrivate_> {
 
     CUSTOM(0),
     NoHoldingActiveID(ImGuiSelectableFlags_NoHoldingActiveID_NATIVE()),
@@ -41,38 +41,17 @@ public enum ImGuiSelectableFlagsPrivate_ implements IDLEnum<ImGuiSelectableFlags
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_NoHoldingActiveID;
-*/
     private static native int ImGuiSelectableFlags_NoHoldingActiveID_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_SelectOnClick;
-*/
     private static native int ImGuiSelectableFlags_SelectOnClick_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_SelectOnRelease;
-*/
     private static native int ImGuiSelectableFlags_SelectOnRelease_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_SpanAvailWidth;
-*/
     private static native int ImGuiSelectableFlags_SpanAvailWidth_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_SetNavIdOnHover;
-*/
     private static native int ImGuiSelectableFlags_SetNavIdOnHover_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_NoPadWithHalfSpacing;
-*/
     private static native int ImGuiSelectableFlags_NoPadWithHalfSpacing_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_NoSetKeyOwner;
-*/
     private static native int ImGuiSelectableFlags_NoSetKeyOwner_NATIVE();
 }

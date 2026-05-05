@@ -6,44 +6,20 @@
 
 package imgui.extension.nodeeditor;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
-import com.github.xpenatan.jparser.idl.helper.IDLString;
+import com.github.xpenatan.jParser.api.NativeObject;
+import com.github.xpenatan.jparser.runtime.helper.NativeString;
 
-public class LoadSaveSettingsListener extends IDLBase {
+public class LoadSaveSettingsListener extends NativeObject {
 
-    static private IDLString IDLString_TEMP_STATIC_GEN_0;
+    static private NativeString NativeString_TEMP_STATIC_GEN_0;
 
-    static private IDLString IDLString_TEMP_STATIC_GEN_1;
+    static private NativeString NativeString_TEMP_STATIC_GEN_1;
 
     static public final LoadSaveSettingsListener NULL = LoadSaveSettingsListener.native_new();
 
-    /*[-JNI;-NATIVE]
-	static jmethodID LoadSaveSettingsListenerImpl_onLoadJ_ID;
-	static jmethodID LoadSaveSettingsListenerImpl_onSaveJI_ID;
-
-class LoadSaveSettingsListenerImpl : public LoadSaveSettingsListener {
-private:
-	JNIEnv* env;
-	jobject obj;
-public:
-void setupCallback(JNIEnv* env, jobject obj) {
-	this->env = env;
-	this->obj = env->NewGlobalRef(obj);
-	static jclass jClassID = 0;
-	if(jClassID == 0) {
-		jClassID = (jclass)env->NewGlobalRef(env->GetObjectClass(obj));
-		LoadSaveSettingsListenerImpl_onLoadJ_ID = env->GetMethodID(jClassID, "internal_onLoad", "(J)V");
-		LoadSaveSettingsListenerImpl_onSaveJI_ID = env->GetMethodID(jClassID, "internal_onSave", "(JI)Z");
-	}
-}
-virtual void onLoad(IDLString* data) {
-   env->CallVoidMethod(obj, LoadSaveSettingsListenerImpl_onLoadJ_ID, (jlong)data);
-}
-virtual bool onSave(IDLString* data, SaveReasonFlags reason) {
-   return env->CallBooleanMethod(obj, LoadSaveSettingsListenerImpl_onSaveJI_ID, (jlong)data, reason);
-}
-};
-*/
+    /**
+     * Dummy constructor, used internally to creates objects without C++ pointer
+     */
     @Deprecated()
     protected LoadSaveSettingsListener(byte b, char c) {
     }
@@ -55,16 +31,6 @@ virtual bool onSave(IDLString* data, SaveReasonFlags reason) {
         return new LoadSaveSettingsListener((byte) 0, (char) 0);
     }
 
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-LoadSaveSettingsListenerImpl* nativeObject = (LoadSaveSettingsListenerImpl*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
-
     public LoadSaveSettingsListener() {
         long addr = internal_native_create_addr();
         internal_reset(addr, true);
@@ -72,27 +38,26 @@ delete nativeObject;
     }
 
     private void setupCallback() {
-        internal_native_setupCallback(native_address);
     }
 
-    protected void onLoad(IDLString data) {
+    protected void onLoad(NativeString data) {
     }
 
     private void internal_onLoad(long data_addr) {
-        if (IDLString_TEMP_STATIC_GEN_0 == null)
-            IDLString_TEMP_STATIC_GEN_0 = IDLString.native_new();
-        IDLString_TEMP_STATIC_GEN_0.internal_reset(data_addr, false);
-        onLoad(IDLString_TEMP_STATIC_GEN_0);
+        if (NativeString_TEMP_STATIC_GEN_0 == null)
+            NativeString_TEMP_STATIC_GEN_0 = NativeString.native_new();
+        NativeString_TEMP_STATIC_GEN_0.internal_reset(data_addr, false);
+        onLoad(NativeString_TEMP_STATIC_GEN_0);
     }
 
-    protected boolean onSave(IDLString data, SaveReasonFlags reason) {
+    protected boolean onSave(NativeString data, SaveReasonFlags reason) {
         return false;
     }
 
     private boolean internal_onSave(long data_addr, int reason_addr) {
-        if (IDLString_TEMP_STATIC_GEN_1 == null)
-            IDLString_TEMP_STATIC_GEN_1 = IDLString.native_new();
-        IDLString_TEMP_STATIC_GEN_1.internal_reset(data_addr, false);
+        if (NativeString_TEMP_STATIC_GEN_1 == null)
+            NativeString_TEMP_STATIC_GEN_1 = NativeString.native_new();
+        NativeString_TEMP_STATIC_GEN_1.internal_reset(data_addr, false);
         SaveReasonFlags reason_addr_enum = SaveReasonFlags.CUSTOM.setValue(reason_addr);
         SaveReasonFlags[] reason_addr_enum_values = SaveReasonFlags.values();
         for (int i = 0; i < reason_addr_enum_values.length; i++) {
@@ -102,17 +67,8 @@ delete nativeObject;
                 break;
             }
         }
-        return onSave(IDLString_TEMP_STATIC_GEN_1, reason_addr_enum);
+        return onSave(NativeString_TEMP_STATIC_GEN_1, reason_addr_enum);
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)new LoadSaveSettingsListenerImpl();
-*/
     public static native long internal_native_create_addr();
-
-    /*[-JNI;-NATIVE]
-LoadSaveSettingsListenerImpl* nativeObject = (LoadSaveSettingsListenerImpl*)this_addr;
-nativeObject->setupCallback(env, object);
-*/
-    public native void internal_native_setupCallback(long this_addr);
 }

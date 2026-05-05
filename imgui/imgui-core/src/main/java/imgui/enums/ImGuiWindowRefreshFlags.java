@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiWindowRefreshFlags implements IDLEnum<ImGuiWindowRefreshFlags> {
+public enum ImGuiWindowRefreshFlags implements NativeEnum<ImGuiWindowRefreshFlags> {
 
     CUSTOM(0), None(ImGuiWindowRefreshFlags_None_NATIVE()), TryToAvoidRefresh(ImGuiWindowRefreshFlags_TryToAvoidRefresh_NATIVE()), RefreshOnHover(ImGuiWindowRefreshFlags_RefreshOnHover_NATIVE()), RefreshOnFocus(ImGuiWindowRefreshFlags_RefreshOnFocus_NATIVE());
 
@@ -34,23 +34,11 @@ public enum ImGuiWindowRefreshFlags implements IDLEnum<ImGuiWindowRefreshFlags> 
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowRefreshFlags_None;
-*/
     private static native int ImGuiWindowRefreshFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowRefreshFlags_TryToAvoidRefresh;
-*/
     private static native int ImGuiWindowRefreshFlags_TryToAvoidRefresh_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowRefreshFlags_RefreshOnHover;
-*/
     private static native int ImGuiWindowRefreshFlags_RefreshOnHover_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowRefreshFlags_RefreshOnFocus;
-*/
     private static native int ImGuiWindowRefreshFlags_RefreshOnFocus_NATIVE();
 }

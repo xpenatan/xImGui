@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiSelectableFlags implements IDLEnum<ImGuiSelectableFlags> {
+public enum ImGuiSelectableFlags implements NativeEnum<ImGuiSelectableFlags> {
 
     CUSTOM(0),
     None(ImGuiSelectableFlags_None_NATIVE()),
@@ -42,43 +42,19 @@ public enum ImGuiSelectableFlags implements IDLEnum<ImGuiSelectableFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_None;
-*/
     private static native int ImGuiSelectableFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_NoAutoClosePopups;
-*/
     private static native int ImGuiSelectableFlags_NoAutoClosePopups_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_SpanAllColumns;
-*/
     private static native int ImGuiSelectableFlags_SpanAllColumns_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_AllowDoubleClick;
-*/
     private static native int ImGuiSelectableFlags_AllowDoubleClick_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_Disabled;
-*/
     private static native int ImGuiSelectableFlags_Disabled_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_AllowOverlap;
-*/
     private static native int ImGuiSelectableFlags_AllowOverlap_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_Highlight;
-*/
     private static native int ImGuiSelectableFlags_Highlight_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_SelectOnNav;
-*/
     private static native int ImGuiSelectableFlags_SelectOnNav_NATIVE();
 }

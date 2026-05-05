@@ -6,19 +6,9 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 
-public class ImFontAtlas extends IDLBase {
-
-    private ImFont ImFont_TEMP_GEN_0;
-
-    private ImFont ImFont_TEMP_GEN_1;
-
-    private ImFont ImFont_TEMP_GEN_2;
-
-    private ImFont ImFont_TEMP_GEN_3;
-
-    private ImFont ImFont_TEMP_GEN_4;
+public class ImFontAtlas extends NativeObject {
 
     static public final ImFontAtlas NULL = ImFontAtlas.native_new();
 
@@ -36,98 +26,23 @@ public class ImFontAtlas extends IDLBase {
         return new ImFontAtlas((byte) 0, (char) 0);
     }
 
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImFontAtlas* nativeObject = (ImFontAtlas*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
-
     public ImFont AddFont(ImFontConfig font_cfg) {
-        long addr = internal_native_AddFont_addr(native_address, font_cfg.native_address);
-        if (addr == 0)
-            return ImFont.NULL;
-        if (ImFont_TEMP_GEN_0 == null)
-            ImFont_TEMP_GEN_0 = ImFont.native_new();
-        ImFont_TEMP_GEN_0.internal_reset(addr, false);
-        return ImFont_TEMP_GEN_0;
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImFontAtlas* nativeObject = (ImFontAtlas*)this_addr;
-ImFont* obj = nativeObject->AddFont((ImFontConfig* )font_cfg_addr);
-return (jlong)obj;
-*/
-    public static native long internal_native_AddFont_addr(long this_addr, long font_cfg_addr);
 
     public ImFont AddFontDefault(ImFontConfig font_cfg) {
-        long addr = internal_native_AddFontDefault_addr(native_address, font_cfg.native_address);
-        if (addr == 0)
-            return ImFont.NULL;
-        if (ImFont_TEMP_GEN_1 == null)
-            ImFont_TEMP_GEN_1 = ImFont.native_new();
-        ImFont_TEMP_GEN_1.internal_reset(addr, false);
-        return ImFont_TEMP_GEN_1;
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImFontAtlas* nativeObject = (ImFontAtlas*)this_addr;
-ImFont* obj = nativeObject->AddFontDefault((ImFontConfig* )font_cfg_addr);
-return (jlong)obj;
-*/
-    public static native long internal_native_AddFontDefault_addr(long this_addr, long font_cfg_addr);
 
     public ImFont AddFontDefault() {
-        long addr = internal_native_AddFontDefault_addr(native_address);
-        if (addr == 0)
-            return ImFont.NULL;
-        if (ImFont_TEMP_GEN_2 == null)
-            ImFont_TEMP_GEN_2 = ImFont.native_new();
-        ImFont_TEMP_GEN_2.internal_reset(addr, false);
-        return ImFont_TEMP_GEN_2;
+        return null;
     }
 
-    /*[-JNI;-NATIVE]
-ImFontAtlas* nativeObject = (ImFontAtlas*)this_addr;
-ImFont* obj = nativeObject->AddFontDefault();
-return (jlong)obj;
-*/
-    public static native long internal_native_AddFontDefault_addr(long this_addr);
-
-    public ImFont AddFontFromMemoryTTF(IDLBase font_data, int font_data_size, int size_pixels, ImFontConfig font_cfg) {
-        long addr = internal_native_AddFontFromMemoryTTF_addr(native_address, font_data.native_void_address, font_data_size, size_pixels, font_cfg.native_address);
-        if (addr == 0)
-            return ImFont.NULL;
-        if (ImFont_TEMP_GEN_3 == null)
-            ImFont_TEMP_GEN_3 = ImFont.native_new();
-        ImFont_TEMP_GEN_3.internal_reset(addr, false);
-        return ImFont_TEMP_GEN_3;
+    public ImFont AddFontFromMemoryTTF(NativeObject font_data, int font_data_size, int size_pixels, ImFontConfig font_cfg) {
+        return null;
     }
 
-    /*[-JNI;-NATIVE]
-ImFontAtlas* nativeObject = (ImFontAtlas*)this_addr;
-ImFont* obj = nativeObject->AddFontFromMemoryTTF((void*)font_data_addr, (int)font_data_size, (int)size_pixels, (ImFontConfig* )font_cfg_addr);
-return (jlong)obj;
-*/
-    public static native long internal_native_AddFontFromMemoryTTF_addr(long this_addr, long font_data_addr, int font_data_size, int size_pixels, long font_cfg_addr);
-
-    public ImFont AddFontFromMemoryTTF(IDLBase font_data, int font_data_size, int size_pixels) {
-        long addr = internal_native_AddFontFromMemoryTTF_addr(native_address, font_data.native_void_address, font_data_size, size_pixels);
-        if (addr == 0)
-            return ImFont.NULL;
-        if (ImFont_TEMP_GEN_4 == null)
-            ImFont_TEMP_GEN_4 = ImFont.native_new();
-        ImFont_TEMP_GEN_4.internal_reset(addr, false);
-        return ImFont_TEMP_GEN_4;
+    public ImFont AddFontFromMemoryTTF(NativeObject font_data, int font_data_size, int size_pixels) {
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImFontAtlas* nativeObject = (ImFontAtlas*)this_addr;
-ImFont* obj = nativeObject->AddFontFromMemoryTTF((void*)font_data_addr, (int)font_data_size, (int)size_pixels);
-return (jlong)obj;
-*/
-    public static native long internal_native_AddFontFromMemoryTTF_addr(long this_addr, long font_data_addr, int font_data_size, int size_pixels);
 }

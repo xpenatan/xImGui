@@ -6,9 +6,9 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 
-public class ImGuiTabItem extends IDLBase {
+public class ImGuiTabItem extends NativeObject {
 
     static public final ImGuiTabItem NULL = ImGuiTabItem.native_new();
 
@@ -25,14 +25,4 @@ public class ImGuiTabItem extends IDLBase {
     public static ImGuiTabItem native_new() {
         return new ImGuiTabItem((byte) 0, (char) 0);
     }
-
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiTabItem* nativeObject = (ImGuiTabItem*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
 }

@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiOldColumnFlags implements IDLEnum<ImGuiOldColumnFlags> {
+public enum ImGuiOldColumnFlags implements NativeEnum<ImGuiOldColumnFlags> {
 
     CUSTOM(0),
     None(ImGuiOldColumnFlags_None_NATIVE()),
@@ -40,33 +40,15 @@ public enum ImGuiOldColumnFlags implements IDLEnum<ImGuiOldColumnFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiOldColumnFlags_None;
-*/
     private static native int ImGuiOldColumnFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiOldColumnFlags_NoBorder;
-*/
     private static native int ImGuiOldColumnFlags_NoBorder_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiOldColumnFlags_NoResize;
-*/
     private static native int ImGuiOldColumnFlags_NoResize_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiOldColumnFlags_NoPreserveWidths;
-*/
     private static native int ImGuiOldColumnFlags_NoPreserveWidths_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiOldColumnFlags_NoForceWithinWindow;
-*/
     private static native int ImGuiOldColumnFlags_NoForceWithinWindow_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiOldColumnFlags_GrowParentContentsSize;
-*/
     private static native int ImGuiOldColumnFlags_GrowParentContentsSize_NATIVE();
 }

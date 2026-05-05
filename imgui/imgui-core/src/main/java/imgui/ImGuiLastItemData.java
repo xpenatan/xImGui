@@ -6,11 +6,9 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 
-public class ImGuiLastItemData extends IDLBase {
-
-    private ImRect ImRect_TEMP_GEN_0;
+public class ImGuiLastItemData extends NativeObject {
 
     static public final ImGuiLastItemData NULL = ImGuiLastItemData.native_new();
 
@@ -28,29 +26,7 @@ public class ImGuiLastItemData extends IDLBase {
         return new ImGuiLastItemData((byte) 0, (char) 0);
     }
 
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiLastItemData* nativeObject = (ImGuiLastItemData*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
-
     public ImRect get_Rect() {
-        long addr = internal_native_get_Rect_addr(native_address);
-        if (addr == 0)
-            return ImRect.NULL;
-        if (ImRect_TEMP_GEN_0 == null)
-            ImRect_TEMP_GEN_0 = ImRect.native_new();
-        ImRect_TEMP_GEN_0.internal_reset(addr, false);
-        return ImRect_TEMP_GEN_0;
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiLastItemData* nativeObject = (ImGuiLastItemData*)this_addr;
-return (jlong)&nativeObject->Rect;
-*/
-    public static native long internal_native_get_Rect_addr(long this_addr);
 }

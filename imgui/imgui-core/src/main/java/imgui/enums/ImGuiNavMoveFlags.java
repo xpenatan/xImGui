@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiNavMoveFlags implements IDLEnum<ImGuiNavMoveFlags> {
+public enum ImGuiNavMoveFlags implements NativeEnum<ImGuiNavMoveFlags> {
 
     CUSTOM(0),
     None(ImGuiNavMoveFlags_None_NATIVE()),
@@ -52,93 +52,39 @@ public enum ImGuiNavMoveFlags implements IDLEnum<ImGuiNavMoveFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavMoveFlags_None;
-*/
     private static native int ImGuiNavMoveFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavMoveFlags_LoopX;
-*/
     private static native int ImGuiNavMoveFlags_LoopX_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavMoveFlags_LoopY;
-*/
     private static native int ImGuiNavMoveFlags_LoopY_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavMoveFlags_WrapX;
-*/
     private static native int ImGuiNavMoveFlags_WrapX_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavMoveFlags_WrapY;
-*/
     private static native int ImGuiNavMoveFlags_WrapY_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavMoveFlags_WrapMask_;
-*/
     private static native int ImGuiNavMoveFlags_WrapMask__NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavMoveFlags_AllowCurrentNavId;
-*/
     private static native int ImGuiNavMoveFlags_AllowCurrentNavId_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavMoveFlags_AlsoScoreVisibleSet;
-*/
     private static native int ImGuiNavMoveFlags_AlsoScoreVisibleSet_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavMoveFlags_ScrollToEdgeY;
-*/
     private static native int ImGuiNavMoveFlags_ScrollToEdgeY_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavMoveFlags_Forwarded;
-*/
     private static native int ImGuiNavMoveFlags_Forwarded_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavMoveFlags_DebugNoResult;
-*/
     private static native int ImGuiNavMoveFlags_DebugNoResult_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavMoveFlags_FocusApi;
-*/
     private static native int ImGuiNavMoveFlags_FocusApi_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavMoveFlags_IsTabbing;
-*/
     private static native int ImGuiNavMoveFlags_IsTabbing_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavMoveFlags_IsPageMove;
-*/
     private static native int ImGuiNavMoveFlags_IsPageMove_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavMoveFlags_Activate;
-*/
     private static native int ImGuiNavMoveFlags_Activate_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavMoveFlags_NoSelect;
-*/
     private static native int ImGuiNavMoveFlags_NoSelect_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavMoveFlags_NoSetNavCursorVisible;
-*/
     private static native int ImGuiNavMoveFlags_NoSetNavCursorVisible_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavMoveFlags_NoClearActiveId;
-*/
     private static native int ImGuiNavMoveFlags_NoClearActiveId_NATIVE();
 }

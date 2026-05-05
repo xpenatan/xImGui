@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImFontFlags implements IDLEnum<ImFontFlags> {
+public enum ImFontFlags implements NativeEnum<ImFontFlags> {
 
     CUSTOM(0), None(ImFontFlags_None_NATIVE()), NoLoadError(ImFontFlags_NoLoadError_NATIVE()), NoLoadGlyphs(ImFontFlags_NoLoadGlyphs_NATIVE()), LockBakedSizes(ImFontFlags_LockBakedSizes_NATIVE());
 
@@ -34,23 +34,11 @@ public enum ImFontFlags implements IDLEnum<ImFontFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImFontFlags_None;
-*/
     private static native int ImFontFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImFontFlags_NoLoadError;
-*/
     private static native int ImFontFlags_NoLoadError_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImFontFlags_NoLoadGlyphs;
-*/
     private static native int ImFontFlags_NoLoadGlyphs_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImFontFlags_LockBakedSizes;
-*/
     private static native int ImFontFlags_LockBakedSizes_NATIVE();
 }

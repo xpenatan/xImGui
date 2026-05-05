@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiLogFlags implements IDLEnum<ImGuiLogFlags> {
+public enum ImGuiLogFlags implements NativeEnum<ImGuiLogFlags> {
 
     CUSTOM(0),
     None(ImGuiLogFlags_None_NATIVE()),
@@ -40,33 +40,15 @@ public enum ImGuiLogFlags implements IDLEnum<ImGuiLogFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLogFlags_None;
-*/
     private static native int ImGuiLogFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLogFlags_OutputTTY;
-*/
     private static native int ImGuiLogFlags_OutputTTY_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLogFlags_OutputFile;
-*/
     private static native int ImGuiLogFlags_OutputFile_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLogFlags_OutputBuffer;
-*/
     private static native int ImGuiLogFlags_OutputBuffer_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLogFlags_OutputClipboard;
-*/
     private static native int ImGuiLogFlags_OutputClipboard_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLogFlags_OutputMask_;
-*/
     private static native int ImGuiLogFlags_OutputMask__NATIVE();
 }

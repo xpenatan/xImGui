@@ -6,9 +6,9 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 
-public class ImGuiTabBar extends IDLBase {
+public class ImGuiTabBar extends NativeObject {
 
     static public final ImGuiTabBar NULL = ImGuiTabBar.native_new();
 
@@ -26,53 +26,17 @@ public class ImGuiTabBar extends IDLBase {
         return new ImGuiTabBar((byte) 0, (char) 0);
     }
 
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiTabBar* nativeObject = (ImGuiTabBar*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
-
     public int get_SelectedTabId() {
-        return internal_native_get_SelectedTabId(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiTabBar* nativeObject = (ImGuiTabBar*)this_addr;
-return nativeObject->SelectedTabId;
-*/
-    public static native int internal_native_get_SelectedTabId(long this_addr);
 
     public void set_SelectedTabId(int SelectedTabId) {
-        internal_native_set_SelectedTabId(native_address, SelectedTabId);
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiTabBar* nativeObject = (ImGuiTabBar*)this_addr;
-nativeObject->SelectedTabId = SelectedTabId;
-*/
-    public static native void internal_native_set_SelectedTabId(long this_addr, int SelectedTabId);
 
     public int get_NextSelectedTabId() {
-        return internal_native_get_NextSelectedTabId(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiTabBar* nativeObject = (ImGuiTabBar*)this_addr;
-return nativeObject->NextSelectedTabId;
-*/
-    public static native int internal_native_get_NextSelectedTabId(long this_addr);
 
     public void set_NextSelectedTabId(int NextSelectedTabId) {
-        internal_native_set_NextSelectedTabId(native_address, NextSelectedTabId);
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiTabBar* nativeObject = (ImGuiTabBar*)this_addr;
-nativeObject->NextSelectedTabId = NextSelectedTabId;
-*/
-    public static native void internal_native_set_NextSelectedTabId(long this_addr, int NextSelectedTabId);
 }

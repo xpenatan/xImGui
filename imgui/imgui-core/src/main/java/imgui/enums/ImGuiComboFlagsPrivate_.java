@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiComboFlagsPrivate_ implements IDLEnum<ImGuiComboFlagsPrivate_> {
+public enum ImGuiComboFlagsPrivate_ implements NativeEnum<ImGuiComboFlagsPrivate_> {
 
     CUSTOM(0), CustomPreview(ImGuiComboFlags_CustomPreview_NATIVE());
 
@@ -34,8 +34,5 @@ public enum ImGuiComboFlagsPrivate_ implements IDLEnum<ImGuiComboFlagsPrivate_> 
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiComboFlags_CustomPreview;
-*/
     private static native int ImGuiComboFlags_CustomPreview_NATIVE();
 }

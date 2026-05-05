@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiTabBarFlagsPrivate_ implements IDLEnum<ImGuiTabBarFlagsPrivate_> {
+public enum ImGuiTabBarFlagsPrivate_ implements NativeEnum<ImGuiTabBarFlagsPrivate_> {
 
     CUSTOM(0), DockNode(ImGuiTabBarFlags_DockNode_NATIVE()), IsFocused(ImGuiTabBarFlags_IsFocused_NATIVE()), SaveSettings(ImGuiTabBarFlags_SaveSettings_NATIVE());
 
@@ -34,18 +34,9 @@ public enum ImGuiTabBarFlagsPrivate_ implements IDLEnum<ImGuiTabBarFlagsPrivate_
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabBarFlags_DockNode;
-*/
     private static native int ImGuiTabBarFlags_DockNode_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabBarFlags_IsFocused;
-*/
     private static native int ImGuiTabBarFlags_IsFocused_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabBarFlags_SaveSettings;
-*/
     private static native int ImGuiTabBarFlags_SaveSettings_NATIVE();
 }

@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiMouseButton implements IDLEnum<ImGuiMouseButton> {
+public enum ImGuiMouseButton implements NativeEnum<ImGuiMouseButton> {
 
     CUSTOM(0), Left(ImGuiMouseButton_Left_NATIVE()), Right(ImGuiMouseButton_Right_NATIVE()), Middle(ImGuiMouseButton_Middle_NATIVE());
 
@@ -34,18 +34,9 @@ public enum ImGuiMouseButton implements IDLEnum<ImGuiMouseButton> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseButton_Left;
-*/
     private static native int ImGuiMouseButton_Left_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseButton_Right;
-*/
     private static native int ImGuiMouseButton_Right_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseButton_Middle;
-*/
     private static native int ImGuiMouseButton_Middle_NATIVE();
 }

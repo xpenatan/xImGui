@@ -6,11 +6,9 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 
-public class ImGuiWindowTempData extends IDLBase {
-
-    private ImVec2 ImVec2_TEMP_GEN_0;
+public class ImGuiWindowTempData extends NativeObject {
 
     static public final ImGuiWindowTempData NULL = ImGuiWindowTempData.native_new();
 
@@ -29,38 +27,13 @@ public class ImGuiWindowTempData extends IDLBase {
     }
 
     public ImVec2 get_CursorPos() {
-        long addr = internal_native_get_CursorPos_addr(native_address);
-        if (addr == 0)
-            return ImVec2.NULL;
-        if (ImVec2_TEMP_GEN_0 == null)
-            ImVec2_TEMP_GEN_0 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_0.internal_reset(addr, false);
-        return ImVec2_TEMP_GEN_0;
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiWindowTempData* nativeObject = (ImGuiWindowTempData*)this_addr;
-return (jlong)&nativeObject->CursorPos;
-*/
-    public static native long internal_native_get_CursorPos_addr(long this_addr);
 
     public int get_TreeDepth() {
-        return internal_native_get_TreeDepth(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiWindowTempData* nativeObject = (ImGuiWindowTempData*)this_addr;
-return nativeObject->TreeDepth;
-*/
-    public static native int internal_native_get_TreeDepth(long this_addr);
 
     public void set_TreeDepth(int TreeDepth) {
-        internal_native_set_TreeDepth(native_address, TreeDepth);
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiWindowTempData* nativeObject = (ImGuiWindowTempData*)this_addr;
-nativeObject->TreeDepth = TreeDepth;
-*/
-    public static native void internal_native_set_TreeDepth(long this_addr, int TreeDepth);
 }

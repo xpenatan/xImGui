@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiInputTextFlagsPrivate_ implements IDLEnum<ImGuiInputTextFlagsPrivate_> {
+public enum ImGuiInputTextFlagsPrivate_ implements NativeEnum<ImGuiInputTextFlagsPrivate_> {
 
     CUSTOM(0), Multiline(ImGuiInputTextFlags_Multiline_NATIVE()), MergedItem(ImGuiInputTextFlags_MergedItem_NATIVE()), LocalizeDecimalPoint(ImGuiInputTextFlags_LocalizeDecimalPoint_NATIVE());
 
@@ -34,18 +34,9 @@ public enum ImGuiInputTextFlagsPrivate_ implements IDLEnum<ImGuiInputTextFlagsPr
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_Multiline;
-*/
     private static native int ImGuiInputTextFlags_Multiline_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_MergedItem;
-*/
     private static native int ImGuiInputTextFlags_MergedItem_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_LocalizeDecimalPoint;
-*/
     private static native int ImGuiInputTextFlags_LocalizeDecimalPoint_NATIVE();
 }

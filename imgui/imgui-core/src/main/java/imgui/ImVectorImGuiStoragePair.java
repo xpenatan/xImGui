@@ -6,13 +6,9 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 
-public class ImVectorImGuiStoragePair extends IDLBase {
-
-    private ImGuiStoragePair ImGuiStoragePair_TEMP_GEN_0;
-
-    private IDLBase IDLBase_TEMP_GEN_0;
+public class ImVectorImGuiStoragePair extends NativeObject {
 
     static public final ImVectorImGuiStoragePair NULL = ImVectorImGuiStoragePair.native_new();
 
@@ -30,85 +26,24 @@ public class ImVectorImGuiStoragePair extends IDLBase {
         return new ImVectorImGuiStoragePair((byte) 0, (char) 0);
     }
 
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImVectorImGuiStoragePair* nativeObject = (ImVectorImGuiStoragePair*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
-
     public int size() {
-        return internal_native_size(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImVectorImGuiStoragePair* nativeObject = (ImVectorImGuiStoragePair*)this_addr;
-return nativeObject->size();
-*/
-    public static native int internal_native_size(long this_addr);
 
     public ImGuiStoragePair getData(int index) {
-        long addr = internal_native_getData_addr(native_address, index);
-        if (addr == 0)
-            return ImGuiStoragePair.NULL;
-        if (ImGuiStoragePair_TEMP_GEN_0 == null)
-            ImGuiStoragePair_TEMP_GEN_0 = ImGuiStoragePair.native_new();
-        ImGuiStoragePair_TEMP_GEN_0.internal_reset(addr, false);
-        return ImGuiStoragePair_TEMP_GEN_0;
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImVectorImGuiStoragePair* nativeObject = (ImVectorImGuiStoragePair*)this_addr;
-return (jlong)&(*nativeObject)[(int)index];
-*/
-    public static native long internal_native_getData_addr(long this_addr, int index);
 
     public void reserve(int new_capacity) {
-        internal_native_reserve(native_address, new_capacity);
     }
-
-    /*[-JNI;-NATIVE]
-ImVectorImGuiStoragePair* nativeObject = (ImVectorImGuiStoragePair*)this_addr;
-nativeObject->reserve((int)new_capacity);
-*/
-    public static native void internal_native_reserve(long this_addr, int new_capacity);
 
     public void resize(int new_size) {
-        internal_native_resize(native_address, new_size);
     }
-
-    /*[-JNI;-NATIVE]
-ImVectorImGuiStoragePair* nativeObject = (ImVectorImGuiStoragePair*)this_addr;
-nativeObject->resize((int)new_size);
-*/
-    public static native void internal_native_resize(long this_addr, int new_size);
 
     public void clear() {
-        internal_native_clear(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorImGuiStoragePair* nativeObject = (ImVectorImGuiStoragePair*)this_addr;
-nativeObject->clear();
-*/
-    public static native void internal_native_clear(long this_addr);
-
-    public IDLBase get_Data() {
-        long addr = internal_native_get_Data_addr(native_address);
-        if (addr == 0)
-            return IDLBase.NULL;
-        if (IDLBase_TEMP_GEN_0 == null)
-            IDLBase_TEMP_GEN_0 = IDLBase.native_new();
-        IDLBase_TEMP_GEN_0.internal_reset(addr, false);
-        return IDLBase_TEMP_GEN_0;
+    public NativeObject get_Data() {
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImVectorImGuiStoragePair* nativeObject = (ImVectorImGuiStoragePair*)this_addr;
-return (jlong)nativeObject->Data;
-*/
-    public static native long internal_native_get_Data_addr(long this_addr);
 }

@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiCol implements IDLEnum<ImGuiCol> {
+public enum ImGuiCol implements NativeEnum<ImGuiCol> {
 
     CUSTOM(0),
     Text(ImGuiCol_Text_NATIVE()),
@@ -95,308 +95,125 @@ public enum ImGuiCol implements IDLEnum<ImGuiCol> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_Text;
-*/
     private static native int ImGuiCol_Text_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TextDisabled;
-*/
     private static native int ImGuiCol_TextDisabled_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_WindowBg;
-*/
     private static native int ImGuiCol_WindowBg_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_ChildBg;
-*/
     private static native int ImGuiCol_ChildBg_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_PopupBg;
-*/
     private static native int ImGuiCol_PopupBg_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_Border;
-*/
     private static native int ImGuiCol_Border_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_BorderShadow;
-*/
     private static native int ImGuiCol_BorderShadow_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_FrameBg;
-*/
     private static native int ImGuiCol_FrameBg_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_FrameBgHovered;
-*/
     private static native int ImGuiCol_FrameBgHovered_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_FrameBgActive;
-*/
     private static native int ImGuiCol_FrameBgActive_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TitleBg;
-*/
     private static native int ImGuiCol_TitleBg_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TitleBgActive;
-*/
     private static native int ImGuiCol_TitleBgActive_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TitleBgCollapsed;
-*/
     private static native int ImGuiCol_TitleBgCollapsed_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_MenuBarBg;
-*/
     private static native int ImGuiCol_MenuBarBg_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_ScrollbarBg;
-*/
     private static native int ImGuiCol_ScrollbarBg_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_ScrollbarGrab;
-*/
     private static native int ImGuiCol_ScrollbarGrab_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_ScrollbarGrabHovered;
-*/
     private static native int ImGuiCol_ScrollbarGrabHovered_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_ScrollbarGrabActive;
-*/
     private static native int ImGuiCol_ScrollbarGrabActive_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_CheckMark;
-*/
     private static native int ImGuiCol_CheckMark_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_SliderGrab;
-*/
     private static native int ImGuiCol_SliderGrab_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_SliderGrabActive;
-*/
     private static native int ImGuiCol_SliderGrabActive_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_Button;
-*/
     private static native int ImGuiCol_Button_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_ButtonHovered;
-*/
     private static native int ImGuiCol_ButtonHovered_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_ButtonActive;
-*/
     private static native int ImGuiCol_ButtonActive_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_Header;
-*/
     private static native int ImGuiCol_Header_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_HeaderHovered;
-*/
     private static native int ImGuiCol_HeaderHovered_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_HeaderActive;
-*/
     private static native int ImGuiCol_HeaderActive_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_Separator;
-*/
     private static native int ImGuiCol_Separator_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_SeparatorHovered;
-*/
     private static native int ImGuiCol_SeparatorHovered_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_SeparatorActive;
-*/
     private static native int ImGuiCol_SeparatorActive_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_ResizeGrip;
-*/
     private static native int ImGuiCol_ResizeGrip_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_ResizeGripHovered;
-*/
     private static native int ImGuiCol_ResizeGripHovered_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_ResizeGripActive;
-*/
     private static native int ImGuiCol_ResizeGripActive_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_InputTextCursor;
-*/
     private static native int ImGuiCol_InputTextCursor_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TabHovered;
-*/
     private static native int ImGuiCol_TabHovered_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_Tab;
-*/
     private static native int ImGuiCol_Tab_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TabSelected;
-*/
     private static native int ImGuiCol_TabSelected_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TabSelectedOverline;
-*/
     private static native int ImGuiCol_TabSelectedOverline_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TabDimmed;
-*/
     private static native int ImGuiCol_TabDimmed_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TabDimmedSelected;
-*/
     private static native int ImGuiCol_TabDimmedSelected_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TabDimmedSelectedOverline;
-*/
     private static native int ImGuiCol_TabDimmedSelectedOverline_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_DockingPreview;
-*/
     private static native int ImGuiCol_DockingPreview_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_DockingEmptyBg;
-*/
     private static native int ImGuiCol_DockingEmptyBg_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_PlotLines;
-*/
     private static native int ImGuiCol_PlotLines_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_PlotLinesHovered;
-*/
     private static native int ImGuiCol_PlotLinesHovered_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_PlotHistogram;
-*/
     private static native int ImGuiCol_PlotHistogram_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_PlotHistogramHovered;
-*/
     private static native int ImGuiCol_PlotHistogramHovered_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TableHeaderBg;
-*/
     private static native int ImGuiCol_TableHeaderBg_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TableBorderStrong;
-*/
     private static native int ImGuiCol_TableBorderStrong_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TableBorderLight;
-*/
     private static native int ImGuiCol_TableBorderLight_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TableRowBg;
-*/
     private static native int ImGuiCol_TableRowBg_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TableRowBgAlt;
-*/
     private static native int ImGuiCol_TableRowBgAlt_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TextLink;
-*/
     private static native int ImGuiCol_TextLink_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TextSelectedBg;
-*/
     private static native int ImGuiCol_TextSelectedBg_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TreeLines;
-*/
     private static native int ImGuiCol_TreeLines_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_DragDropTarget;
-*/
     private static native int ImGuiCol_DragDropTarget_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_UnsavedMarker;
-*/
     private static native int ImGuiCol_UnsavedMarker_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_NavCursor;
-*/
     private static native int ImGuiCol_NavCursor_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_NavWindowingHighlight;
-*/
     private static native int ImGuiCol_NavWindowingHighlight_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_NavWindowingDimBg;
-*/
     private static native int ImGuiCol_NavWindowingDimBg_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_ModalWindowDimBg;
-*/
     private static native int ImGuiCol_ModalWindowDimBg_NATIVE();
 }

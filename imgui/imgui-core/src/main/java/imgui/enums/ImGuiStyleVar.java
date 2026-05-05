@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiStyleVar implements IDLEnum<ImGuiStyleVar> {
+public enum ImGuiStyleVar implements NativeEnum<ImGuiStyleVar> {
 
     CUSTOM(0),
     Alpha(ImGuiStyleVar_Alpha_NATIVE()),
@@ -74,203 +74,83 @@ public enum ImGuiStyleVar implements IDLEnum<ImGuiStyleVar> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_Alpha;
-*/
     private static native int ImGuiStyleVar_Alpha_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_DisabledAlpha;
-*/
     private static native int ImGuiStyleVar_DisabledAlpha_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_WindowPadding;
-*/
     private static native int ImGuiStyleVar_WindowPadding_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_WindowRounding;
-*/
     private static native int ImGuiStyleVar_WindowRounding_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_WindowBorderSize;
-*/
     private static native int ImGuiStyleVar_WindowBorderSize_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_WindowMinSize;
-*/
     private static native int ImGuiStyleVar_WindowMinSize_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_WindowTitleAlign;
-*/
     private static native int ImGuiStyleVar_WindowTitleAlign_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_ChildRounding;
-*/
     private static native int ImGuiStyleVar_ChildRounding_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_ChildBorderSize;
-*/
     private static native int ImGuiStyleVar_ChildBorderSize_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_PopupRounding;
-*/
     private static native int ImGuiStyleVar_PopupRounding_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_PopupBorderSize;
-*/
     private static native int ImGuiStyleVar_PopupBorderSize_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_FramePadding;
-*/
     private static native int ImGuiStyleVar_FramePadding_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_FrameRounding;
-*/
     private static native int ImGuiStyleVar_FrameRounding_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_FrameBorderSize;
-*/
     private static native int ImGuiStyleVar_FrameBorderSize_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_ItemSpacing;
-*/
     private static native int ImGuiStyleVar_ItemSpacing_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_ItemInnerSpacing;
-*/
     private static native int ImGuiStyleVar_ItemInnerSpacing_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_IndentSpacing;
-*/
     private static native int ImGuiStyleVar_IndentSpacing_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_CellPadding;
-*/
     private static native int ImGuiStyleVar_CellPadding_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_ScrollbarSize;
-*/
     private static native int ImGuiStyleVar_ScrollbarSize_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_ScrollbarRounding;
-*/
     private static native int ImGuiStyleVar_ScrollbarRounding_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_ScrollbarPadding;
-*/
     private static native int ImGuiStyleVar_ScrollbarPadding_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_GrabMinSize;
-*/
     private static native int ImGuiStyleVar_GrabMinSize_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_GrabRounding;
-*/
     private static native int ImGuiStyleVar_GrabRounding_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_ImageBorderSize;
-*/
     private static native int ImGuiStyleVar_ImageBorderSize_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_TabRounding;
-*/
     private static native int ImGuiStyleVar_TabRounding_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_TabBorderSize;
-*/
     private static native int ImGuiStyleVar_TabBorderSize_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_TabMinWidthBase;
-*/
     private static native int ImGuiStyleVar_TabMinWidthBase_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_TabMinWidthShrink;
-*/
     private static native int ImGuiStyleVar_TabMinWidthShrink_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_TabBarBorderSize;
-*/
     private static native int ImGuiStyleVar_TabBarBorderSize_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_TabBarOverlineSize;
-*/
     private static native int ImGuiStyleVar_TabBarOverlineSize_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_TableAngledHeadersAngle;
-*/
     private static native int ImGuiStyleVar_TableAngledHeadersAngle_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_TableAngledHeadersTextAlign;
-*/
     private static native int ImGuiStyleVar_TableAngledHeadersTextAlign_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_TreeLinesSize;
-*/
     private static native int ImGuiStyleVar_TreeLinesSize_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_TreeLinesRounding;
-*/
     private static native int ImGuiStyleVar_TreeLinesRounding_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_ButtonTextAlign;
-*/
     private static native int ImGuiStyleVar_ButtonTextAlign_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_SelectableTextAlign;
-*/
     private static native int ImGuiStyleVar_SelectableTextAlign_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_SeparatorTextBorderSize;
-*/
     private static native int ImGuiStyleVar_SeparatorTextBorderSize_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_SeparatorTextAlign;
-*/
     private static native int ImGuiStyleVar_SeparatorTextAlign_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_SeparatorTextPadding;
-*/
     private static native int ImGuiStyleVar_SeparatorTextPadding_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_DockingSeparatorSize;
-*/
     private static native int ImGuiStyleVar_DockingSeparatorSize_NATIVE();
 }

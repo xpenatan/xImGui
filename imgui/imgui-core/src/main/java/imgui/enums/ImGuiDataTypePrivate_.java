@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiDataTypePrivate_ implements IDLEnum<ImGuiDataTypePrivate_> {
+public enum ImGuiDataTypePrivate_ implements NativeEnum<ImGuiDataTypePrivate_> {
 
     CUSTOM(0), Pointer(ImGuiDataType_Pointer_NATIVE()), ID(ImGuiDataType_ID_NATIVE());
 
@@ -34,13 +34,7 @@ public enum ImGuiDataTypePrivate_ implements IDLEnum<ImGuiDataTypePrivate_> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_Pointer;
-*/
     private static native int ImGuiDataType_Pointer_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_ID;
-*/
     private static native int ImGuiDataType_ID_NATIVE();
 }

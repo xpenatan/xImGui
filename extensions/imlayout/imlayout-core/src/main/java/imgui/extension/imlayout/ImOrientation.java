@@ -6,9 +6,9 @@
 
 package imgui.extension.imlayout;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImOrientation implements IDLEnum<ImOrientation> {
+public enum ImOrientation implements NativeEnum<ImOrientation> {
 
     CUSTOM(0), NONE(NONE_NATIVE()), HORIZONTAL(HORIZONTAL_NATIVE()), VERTICAL(VERTICAL_NATIVE());
 
@@ -34,18 +34,9 @@ public enum ImOrientation implements IDLEnum<ImOrientation> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)NONE;
-*/
     private static native int NONE_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)HORIZONTAL;
-*/
     private static native int HORIZONTAL_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)VERTICAL;
-*/
     private static native int VERTICAL_NATIVE();
 }

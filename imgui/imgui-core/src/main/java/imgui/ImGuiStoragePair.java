@@ -6,11 +6,9 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 
-public class ImGuiStoragePair extends IDLBase {
-
-    private IDLBase IDLBase_TEMP_GEN_0;
+public class ImGuiStoragePair extends NativeObject {
 
     static public final ImGuiStoragePair NULL = ImGuiStoragePair.native_new();
 
@@ -28,39 +26,10 @@ public class ImGuiStoragePair extends IDLBase {
         return new ImGuiStoragePair((byte) 0, (char) 0);
     }
 
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
+    public NativeObject get_val_p() {
+        return null;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiStoragePair* nativeObject = (ImGuiStoragePair*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
-
-    public IDLBase get_val_p() {
-        long addr = internal_native_get_val_p_addr(native_address);
-        if (addr == 0)
-            return IDLBase.NULL;
-        if (IDLBase_TEMP_GEN_0 == null)
-            IDLBase_TEMP_GEN_0 = IDLBase.native_new();
-        IDLBase_TEMP_GEN_0.internal_reset(addr, false);
-        return IDLBase_TEMP_GEN_0;
+    public void set_val_p(NativeObject val_p) {
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiStoragePair* nativeObject = (ImGuiStoragePair*)this_addr;
-return (jlong)nativeObject->val_p;
-*/
-    public static native long internal_native_get_val_p_addr(long this_addr);
-
-    public void set_val_p(IDLBase val_p) {
-        internal_native_set_val_p(native_address, val_p.native_void_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiStoragePair* nativeObject = (ImGuiStoragePair*)this_addr;
-nativeObject->val_p = (void**)val_p_addr;
-*/
-    public static native void internal_native_set_val_p(long this_addr, long val_p_addr);
 }

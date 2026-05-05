@@ -18,13 +18,20 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.toVersion(LibExt.java8Target)
-        targetCompatibility = JavaVersion.toVersion(LibExt.java8Target)
+        sourceCompatibility = JavaVersion.toVersion(LibExt.javaMainTarget)
+        targetCompatibility = JavaVersion.toVersion(LibExt.javaMainTarget)
     }
 }
 
 dependencies {
-    api("com.github.xpenatan.jParser:idl-helper-android:${LibExt.jParserVersion}")
+    api("com.github.xpenatan.jParser:runtime-android:${LibExt.jParserVersion}")
+}
+
+tasks.named("clean") {
+    doFirst {
+        val srcPath = "$projectDir/src/main/java"
+        project.delete(files(srcPath))
+    }
 }
 
 // TODO Uncomment when android is ready

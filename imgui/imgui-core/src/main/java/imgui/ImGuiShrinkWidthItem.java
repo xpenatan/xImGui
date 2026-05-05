@@ -6,9 +6,9 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 
-public class ImGuiShrinkWidthItem extends IDLBase {
+public class ImGuiShrinkWidthItem extends NativeObject {
 
     static public final ImGuiShrinkWidthItem NULL = ImGuiShrinkWidthItem.native_new();
 
@@ -26,73 +26,24 @@ public class ImGuiShrinkWidthItem extends IDLBase {
         return new ImGuiShrinkWidthItem((byte) 0, (char) 0);
     }
 
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiShrinkWidthItem* nativeObject = (ImGuiShrinkWidthItem*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
-
     public int get_Index() {
-        return internal_native_get_Index(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiShrinkWidthItem* nativeObject = (ImGuiShrinkWidthItem*)this_addr;
-return nativeObject->Index;
-*/
-    public static native int internal_native_get_Index(long this_addr);
 
     public void set_Index(int Index) {
-        internal_native_set_Index(native_address, Index);
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiShrinkWidthItem* nativeObject = (ImGuiShrinkWidthItem*)this_addr;
-nativeObject->Index = Index;
-*/
-    public static native void internal_native_set_Index(long this_addr, int Index);
 
     public float get_Width() {
-        return internal_native_get_Width(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiShrinkWidthItem* nativeObject = (ImGuiShrinkWidthItem*)this_addr;
-return nativeObject->Width;
-*/
-    public static native float internal_native_get_Width(long this_addr);
 
     public void set_Width(float Width) {
-        internal_native_set_Width(native_address, Width);
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiShrinkWidthItem* nativeObject = (ImGuiShrinkWidthItem*)this_addr;
-nativeObject->Width = Width;
-*/
-    public static native void internal_native_set_Width(long this_addr, float Width);
 
     public float get_InitialWidth() {
-        return internal_native_get_InitialWidth(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiShrinkWidthItem* nativeObject = (ImGuiShrinkWidthItem*)this_addr;
-return nativeObject->InitialWidth;
-*/
-    public static native float internal_native_get_InitialWidth(long this_addr);
 
     public void set_InitialWidth(float InitialWidth) {
-        internal_native_set_InitialWidth(native_address, InitialWidth);
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiShrinkWidthItem* nativeObject = (ImGuiShrinkWidthItem*)this_addr;
-nativeObject->InitialWidth = InitialWidth;
-*/
-    public static native void internal_native_set_InitialWidth(long this_addr, float InitialWidth);
 }

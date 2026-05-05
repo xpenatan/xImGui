@@ -6,9 +6,9 @@
 
 package imgui.extension.nodeeditor;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 
-public class Style extends IDLBase {
+public class Style extends NativeObject {
 
     static public final Style NULL = Style.native_new();
 
@@ -25,14 +25,4 @@ public class Style extends IDLBase {
     public static Style native_new() {
         return new Style((byte) 0, (char) 0);
     }
-
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-Style* nativeObject = (Style*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
 }

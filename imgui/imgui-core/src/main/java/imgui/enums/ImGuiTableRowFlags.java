@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiTableRowFlags implements IDLEnum<ImGuiTableRowFlags> {
+public enum ImGuiTableRowFlags implements NativeEnum<ImGuiTableRowFlags> {
 
     CUSTOM(0), None(ImGuiTableRowFlags_None_NATIVE()), Headers(ImGuiTableRowFlags_Headers_NATIVE());
 
@@ -34,13 +34,7 @@ public enum ImGuiTableRowFlags implements IDLEnum<ImGuiTableRowFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableRowFlags_None;
-*/
     private static native int ImGuiTableRowFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableRowFlags_Headers;
-*/
     private static native int ImGuiTableRowFlags_Headers_NATIVE();
 }

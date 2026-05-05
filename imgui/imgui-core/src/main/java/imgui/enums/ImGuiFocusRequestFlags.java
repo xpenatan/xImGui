@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiFocusRequestFlags implements IDLEnum<ImGuiFocusRequestFlags> {
+public enum ImGuiFocusRequestFlags implements NativeEnum<ImGuiFocusRequestFlags> {
 
     CUSTOM(0), None(ImGuiFocusRequestFlags_None_NATIVE()), RestoreFocusedChild(ImGuiFocusRequestFlags_RestoreFocusedChild_NATIVE()), UnlessBelowModal(ImGuiFocusRequestFlags_UnlessBelowModal_NATIVE());
 
@@ -34,18 +34,9 @@ public enum ImGuiFocusRequestFlags implements IDLEnum<ImGuiFocusRequestFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiFocusRequestFlags_None;
-*/
     private static native int ImGuiFocusRequestFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiFocusRequestFlags_RestoreFocusedChild;
-*/
     private static native int ImGuiFocusRequestFlags_RestoreFocusedChild_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiFocusRequestFlags_UnlessBelowModal;
-*/
     private static native int ImGuiFocusRequestFlags_UnlessBelowModal_NATIVE();
 }

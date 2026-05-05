@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiDebugLogFlags implements IDLEnum<ImGuiDebugLogFlags> {
+public enum ImGuiDebugLogFlags implements NativeEnum<ImGuiDebugLogFlags> {
 
     CUSTOM(0),
     None(ImGuiDebugLogFlags_None_NATIVE()),
@@ -50,83 +50,35 @@ public enum ImGuiDebugLogFlags implements IDLEnum<ImGuiDebugLogFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_None;
-*/
     private static native int ImGuiDebugLogFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventError;
-*/
     private static native int ImGuiDebugLogFlags_EventError_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventActiveId;
-*/
     private static native int ImGuiDebugLogFlags_EventActiveId_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventFocus;
-*/
     private static native int ImGuiDebugLogFlags_EventFocus_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventPopup;
-*/
     private static native int ImGuiDebugLogFlags_EventPopup_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventNav;
-*/
     private static native int ImGuiDebugLogFlags_EventNav_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventClipper;
-*/
     private static native int ImGuiDebugLogFlags_EventClipper_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventSelection;
-*/
     private static native int ImGuiDebugLogFlags_EventSelection_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventIO;
-*/
     private static native int ImGuiDebugLogFlags_EventIO_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventFont;
-*/
     private static native int ImGuiDebugLogFlags_EventFont_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventInputRouting;
-*/
     private static native int ImGuiDebugLogFlags_EventInputRouting_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventDocking;
-*/
     private static native int ImGuiDebugLogFlags_EventDocking_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventViewport;
-*/
     private static native int ImGuiDebugLogFlags_EventViewport_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventMask_;
-*/
     private static native int ImGuiDebugLogFlags_EventMask__NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_OutputToTTY;
-*/
     private static native int ImGuiDebugLogFlags_OutputToTTY_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_OutputToTestEngine;
-*/
     private static native int ImGuiDebugLogFlags_OutputToTestEngine_NATIVE();
 }

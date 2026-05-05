@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiSortDirection implements IDLEnum<ImGuiSortDirection> {
+public enum ImGuiSortDirection implements NativeEnum<ImGuiSortDirection> {
 
     CUSTOM(0), None(ImGuiSortDirection_None_NATIVE()), Ascending(ImGuiSortDirection_Ascending_NATIVE()), Descending(ImGuiSortDirection_Descending_NATIVE());
 
@@ -34,18 +34,9 @@ public enum ImGuiSortDirection implements IDLEnum<ImGuiSortDirection> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSortDirection_None;
-*/
     private static native int ImGuiSortDirection_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSortDirection_Ascending;
-*/
     private static native int ImGuiSortDirection_Ascending_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSortDirection_Descending;
-*/
     private static native int ImGuiSortDirection_Descending_NATIVE();
 }

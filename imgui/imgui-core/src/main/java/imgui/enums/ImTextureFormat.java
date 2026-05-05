@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImTextureFormat implements IDLEnum<ImTextureFormat> {
+public enum ImTextureFormat implements NativeEnum<ImTextureFormat> {
 
     CUSTOM(0), RGBA32(ImTextureFormat_RGBA32_NATIVE()), Alpha8(ImTextureFormat_Alpha8_NATIVE());
 
@@ -34,13 +34,7 @@ public enum ImTextureFormat implements IDLEnum<ImTextureFormat> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTextureFormat_RGBA32;
-*/
     private static native int ImTextureFormat_RGBA32_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTextureFormat_Alpha8;
-*/
     private static native int ImTextureFormat_Alpha8_NATIVE();
 }

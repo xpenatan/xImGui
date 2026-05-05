@@ -10,17 +10,21 @@ object LibExt {
             return getVersion()
         }
 
-    const val java8Target = "1.8"
-    const val java11Target = "11"
+    const val javaMainTarget = "1.8"
+    const val javaWebTarget = "11"
+    const val javaFFMTarget = "25"
 
     const val gdxVersion = "1.14.0"
-    const val teaVMVersion = "0.13.0"
-    const val gdxTeaVMVersion = "1.5.1"
-    const val gdxWebGPUVersion = "-SNAPSHOT"
-    const val jParserVersion = "1.0.0"
+    const val gdxTeaVMVersion = "-SNAPSHOT"
+
+//    const val gdxWebGPUGroup = "io.github.monstroussoftware.gdx-webgpu"
+    const val gdxWebGPUGroup = "com.github.xpenatan.gdx-webgpu"
+    const val gdxWebGPUVersion = "ffm-jni-SNAPSHOT"
+
+    const val jParserVersion = "-SNAPSHOT"
     const val jUnitVersion = "4.12"
 
-    const val useRepoLibs = true
+    const val useRepoLibs = false
 }
 
 private fun getVersion(): String {

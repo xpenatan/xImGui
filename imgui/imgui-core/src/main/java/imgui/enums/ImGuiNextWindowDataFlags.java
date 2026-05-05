@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiNextWindowDataFlags implements IDLEnum<ImGuiNextWindowDataFlags> {
+public enum ImGuiNextWindowDataFlags implements NativeEnum<ImGuiNextWindowDataFlags> {
 
     CUSTOM(0),
     None(ImGuiNextWindowDataFlags_None_NATIVE()),
@@ -49,78 +49,33 @@ public enum ImGuiNextWindowDataFlags implements IDLEnum<ImGuiNextWindowDataFlags
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNextWindowDataFlags_None;
-*/
     private static native int ImGuiNextWindowDataFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNextWindowDataFlags_HasPos;
-*/
     private static native int ImGuiNextWindowDataFlags_HasPos_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNextWindowDataFlags_HasSize;
-*/
     private static native int ImGuiNextWindowDataFlags_HasSize_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNextWindowDataFlags_HasContentSize;
-*/
     private static native int ImGuiNextWindowDataFlags_HasContentSize_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNextWindowDataFlags_HasCollapsed;
-*/
     private static native int ImGuiNextWindowDataFlags_HasCollapsed_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNextWindowDataFlags_HasSizeConstraint;
-*/
     private static native int ImGuiNextWindowDataFlags_HasSizeConstraint_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNextWindowDataFlags_HasFocus;
-*/
     private static native int ImGuiNextWindowDataFlags_HasFocus_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNextWindowDataFlags_HasBgAlpha;
-*/
     private static native int ImGuiNextWindowDataFlags_HasBgAlpha_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNextWindowDataFlags_HasScroll;
-*/
     private static native int ImGuiNextWindowDataFlags_HasScroll_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNextWindowDataFlags_HasWindowFlags;
-*/
     private static native int ImGuiNextWindowDataFlags_HasWindowFlags_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNextWindowDataFlags_HasChildFlags;
-*/
     private static native int ImGuiNextWindowDataFlags_HasChildFlags_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNextWindowDataFlags_HasRefreshPolicy;
-*/
     private static native int ImGuiNextWindowDataFlags_HasRefreshPolicy_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNextWindowDataFlags_HasViewport;
-*/
     private static native int ImGuiNextWindowDataFlags_HasViewport_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNextWindowDataFlags_HasDock;
-*/
     private static native int ImGuiNextWindowDataFlags_HasDock_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNextWindowDataFlags_HasWindowClass;
-*/
     private static native int ImGuiNextWindowDataFlags_HasWindowClass_NATIVE();
 }

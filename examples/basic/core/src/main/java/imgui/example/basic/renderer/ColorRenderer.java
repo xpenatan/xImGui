@@ -1,13 +1,13 @@
 package imgui.example.basic.renderer;
 
 
-import com.github.xpenatan.jparser.idl.helper.IDLFloatArray;
+import com.github.xpenatan.jparser.runtime.helper.NativeFloatArray;
 import imgui.ImGui;
 
 public class ColorRenderer implements UIRenderer {
 
-    private final IDLFloatArray color3 = new IDLFloatArray(3);
-    private final IDLFloatArray color4 = new IDLFloatArray(4);
+    private final NativeFloatArray color3 = new NativeFloatArray(3);
+    private final NativeFloatArray color4 = new NativeFloatArray(4);
 
     public ColorRenderer() {
     }

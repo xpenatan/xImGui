@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiDockNodeFlags implements IDLEnum<ImGuiDockNodeFlags> {
+public enum ImGuiDockNodeFlags implements NativeEnum<ImGuiDockNodeFlags> {
 
     CUSTOM(0),
     None(ImGuiDockNodeFlags_None_NATIVE()),
@@ -42,43 +42,19 @@ public enum ImGuiDockNodeFlags implements IDLEnum<ImGuiDockNodeFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_None;
-*/
     private static native int ImGuiDockNodeFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_KeepAliveOnly;
-*/
     private static native int ImGuiDockNodeFlags_KeepAliveOnly_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoDockingOverCentralNode;
-*/
     private static native int ImGuiDockNodeFlags_NoDockingOverCentralNode_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_PassthruCentralNode;
-*/
     private static native int ImGuiDockNodeFlags_PassthruCentralNode_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoDockingSplit;
-*/
     private static native int ImGuiDockNodeFlags_NoDockingSplit_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoResize;
-*/
     private static native int ImGuiDockNodeFlags_NoResize_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_AutoHideTabBar;
-*/
     private static native int ImGuiDockNodeFlags_AutoHideTabBar_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoUndocking;
-*/
     private static native int ImGuiDockNodeFlags_NoUndocking_NATIVE();
 }

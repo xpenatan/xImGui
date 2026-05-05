@@ -5,8 +5,8 @@ plugins {
 val moduleName = "nodeeditor-core"
 
 java {
-    sourceCompatibility = JavaVersion.toVersion(LibExt.java8Target)
-    targetCompatibility = JavaVersion.toVersion(LibExt.java8Target)
+    sourceCompatibility = JavaVersion.toVersion(LibExt.javaMainTarget)
+    targetCompatibility = JavaVersion.toVersion(LibExt.javaMainTarget)
 }
 
 dependencies {

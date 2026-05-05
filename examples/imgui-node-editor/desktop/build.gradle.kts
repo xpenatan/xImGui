@@ -5,8 +5,8 @@ plugins {
 }
 
 java {
-    sourceCompatibility = JavaVersion.toVersion(LibExt.java8Target)
-    targetCompatibility = JavaVersion.toVersion(LibExt.java8Target)
+    sourceCompatibility = JavaVersion.toVersion(LibExt.javaMainTarget)
+    targetCompatibility = JavaVersion.toVersion(LibExt.javaMainTarget)
 }
 
 dependencies {
@@ -15,12 +15,12 @@ dependencies {
     implementation(project(":examples:impl:gdx"))
 
     if(LibExt.useRepoLibs) {
-        implementation("com.github.xpenatan.xImGui:imgui-desktop:-SNAPSHOT")
-        implementation("com.github.xpenatan.xImGui:nodeeditor-desktop:-SNAPSHOT")
+        implementation("com.github.xpenatan.xImGui:imgui-jni:-SNAPSHOT")
+        implementation("com.github.xpenatan.xImGui:nodeeditor-jni:-SNAPSHOT")
     }
     else {
-        implementation(project(":imgui:imgui-desktop"))
-        implementation(project(":extensions:imgui-node-editor:nodeeditor-desktop"))
+        implementation(project(":imgui:imgui-jni"))
+        implementation(project(":extensions:imgui-node-editor:nodeeditor-jni"))
     }
 
     implementation("com.badlogicgames.gdx:gdx-backend-lwjgl3:${LibExt.gdxVersion}")

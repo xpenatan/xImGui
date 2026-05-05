@@ -6,9 +6,9 @@
 
 package imgui.extension.textedit;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum LanguageDefinitionId implements IDLEnum<LanguageDefinitionId> {
+public enum LanguageDefinitionId implements NativeEnum<LanguageDefinitionId> {
 
     CUSTOM(0),
     None(None_NATIVE()),
@@ -45,58 +45,25 @@ public enum LanguageDefinitionId implements IDLEnum<LanguageDefinitionId> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)LanguageDefinitionId::None;
-*/
     private static native int None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)LanguageDefinitionId::Cpp;
-*/
     private static native int Cpp_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)LanguageDefinitionId::C;
-*/
     private static native int C_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)LanguageDefinitionId::Cs;
-*/
     private static native int Cs_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)LanguageDefinitionId::Python;
-*/
     private static native int Python_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)LanguageDefinitionId::Lua;
-*/
     private static native int Lua_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)LanguageDefinitionId::Json;
-*/
     private static native int Json_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)LanguageDefinitionId::Sql;
-*/
     private static native int Sql_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)LanguageDefinitionId::AngelScript;
-*/
     private static native int AngelScript_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)LanguageDefinitionId::Glsl;
-*/
     private static native int Glsl_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)LanguageDefinitionId::Hlsl;
-*/
     private static native int Hlsl_NATIVE();
 }

@@ -6,9 +6,9 @@
 
 package imgui.extension.nodeeditor;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum StyleVar implements IDLEnum<StyleVar> {
+public enum StyleVar implements NativeEnum<StyleVar> {
 
     CUSTOM(0),
     StyleVar_NodePadding(StyleVar_NodePadding_NATIVE()),
@@ -62,143 +62,59 @@ public enum StyleVar implements IDLEnum<StyleVar> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_NodePadding;
-*/
     private static native int StyleVar_NodePadding_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_NodeRounding;
-*/
     private static native int StyleVar_NodeRounding_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_NodeBorderWidth;
-*/
     private static native int StyleVar_NodeBorderWidth_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_HoveredNodeBorderWidth;
-*/
     private static native int StyleVar_HoveredNodeBorderWidth_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_SelectedNodeBorderWidth;
-*/
     private static native int StyleVar_SelectedNodeBorderWidth_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_PinRounding;
-*/
     private static native int StyleVar_PinRounding_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_PinBorderWidth;
-*/
     private static native int StyleVar_PinBorderWidth_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_LinkStrength;
-*/
     private static native int StyleVar_LinkStrength_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_SourceDirection;
-*/
     private static native int StyleVar_SourceDirection_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_TargetDirection;
-*/
     private static native int StyleVar_TargetDirection_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_ScrollDuration;
-*/
     private static native int StyleVar_ScrollDuration_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_FlowMarkerDistance;
-*/
     private static native int StyleVar_FlowMarkerDistance_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_FlowSpeed;
-*/
     private static native int StyleVar_FlowSpeed_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_FlowDuration;
-*/
     private static native int StyleVar_FlowDuration_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_PivotAlignment;
-*/
     private static native int StyleVar_PivotAlignment_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_PivotSize;
-*/
     private static native int StyleVar_PivotSize_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_PivotScale;
-*/
     private static native int StyleVar_PivotScale_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_PinCorners;
-*/
     private static native int StyleVar_PinCorners_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_PinRadius;
-*/
     private static native int StyleVar_PinRadius_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_PinArrowSize;
-*/
     private static native int StyleVar_PinArrowSize_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_PinArrowWidth;
-*/
     private static native int StyleVar_PinArrowWidth_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_GroupRounding;
-*/
     private static native int StyleVar_GroupRounding_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_GroupBorderWidth;
-*/
     private static native int StyleVar_GroupBorderWidth_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_HighlightConnectedLinks;
-*/
     private static native int StyleVar_HighlightConnectedLinks_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_SnapLinkToPinDir;
-*/
     private static native int StyleVar_SnapLinkToPinDir_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_HoveredNodeBorderOffset;
-*/
     private static native int StyleVar_HoveredNodeBorderOffset_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_SelectedNodeBorderOffset;
-*/
     private static native int StyleVar_SelectedNodeBorderOffset_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_Count;
-*/
     private static native int StyleVar_Count_NATIVE();
 }

@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiMultiSelectFlags implements IDLEnum<ImGuiMultiSelectFlags> {
+public enum ImGuiMultiSelectFlags implements NativeEnum<ImGuiMultiSelectFlags> {
 
     CUSTOM(0),
     None(ImGuiMultiSelectFlags_None_NATIVE()),
@@ -51,88 +51,37 @@ public enum ImGuiMultiSelectFlags implements IDLEnum<ImGuiMultiSelectFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_None;
-*/
     private static native int ImGuiMultiSelectFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_SingleSelect;
-*/
     private static native int ImGuiMultiSelectFlags_SingleSelect_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_NoSelectAll;
-*/
     private static native int ImGuiMultiSelectFlags_NoSelectAll_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_NoRangeSelect;
-*/
     private static native int ImGuiMultiSelectFlags_NoRangeSelect_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_NoAutoSelect;
-*/
     private static native int ImGuiMultiSelectFlags_NoAutoSelect_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_NoAutoClear;
-*/
     private static native int ImGuiMultiSelectFlags_NoAutoClear_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_NoAutoClearOnReselect;
-*/
     private static native int ImGuiMultiSelectFlags_NoAutoClearOnReselect_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_BoxSelect1d;
-*/
     private static native int ImGuiMultiSelectFlags_BoxSelect1d_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_BoxSelect2d;
-*/
     private static native int ImGuiMultiSelectFlags_BoxSelect2d_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_BoxSelectNoScroll;
-*/
     private static native int ImGuiMultiSelectFlags_BoxSelectNoScroll_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_ClearOnEscape;
-*/
     private static native int ImGuiMultiSelectFlags_ClearOnEscape_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_ClearOnClickVoid;
-*/
     private static native int ImGuiMultiSelectFlags_ClearOnClickVoid_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_ScopeWindow;
-*/
     private static native int ImGuiMultiSelectFlags_ScopeWindow_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_ScopeRect;
-*/
     private static native int ImGuiMultiSelectFlags_ScopeRect_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_SelectOnClick;
-*/
     private static native int ImGuiMultiSelectFlags_SelectOnClick_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_SelectOnClickRelease;
-*/
     private static native int ImGuiMultiSelectFlags_SelectOnClickRelease_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_NavWrapX;
-*/
     private static native int ImGuiMultiSelectFlags_NavWrapX_NATIVE();
 }

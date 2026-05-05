@@ -6,10 +6,9 @@ val moduleName = "imgui-core"
 
 dependencies {
     api("com.github.xpenatan.jParser:loader-core:${LibExt.jParserVersion}")
-    api("com.github.xpenatan.jParser:idl-core:${LibExt.jParserVersion}")
-    api("com.github.xpenatan.jParser:idl-helper-core:${LibExt.jParserVersion}")
+    api("com.github.xpenatan.jParser:api-core:${LibExt.jParserVersion}")
+    api("com.github.xpenatan.jParser:runtime-core:${LibExt.jParserVersion}")
 
-    testImplementation(project(":imgui:imgui-desktop"))
     testImplementation("junit:junit:${LibExt.jUnitVersion}")
 }
 
@@ -21,8 +20,8 @@ tasks.named("clean") {
 }
 
 java {
-    sourceCompatibility = JavaVersion.toVersion(LibExt.java8Target)
-    targetCompatibility = JavaVersion.toVersion(LibExt.java8Target)
+    sourceCompatibility = JavaVersion.toVersion(LibExt.javaMainTarget)
+    targetCompatibility = JavaVersion.toVersion(LibExt.javaMainTarget)
 }
 
 java {

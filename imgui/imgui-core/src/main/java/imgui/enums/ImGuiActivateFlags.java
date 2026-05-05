@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiActivateFlags implements IDLEnum<ImGuiActivateFlags> {
+public enum ImGuiActivateFlags implements NativeEnum<ImGuiActivateFlags> {
 
     CUSTOM(0),
     None(ImGuiActivateFlags_None_NATIVE()),
@@ -41,38 +41,17 @@ public enum ImGuiActivateFlags implements IDLEnum<ImGuiActivateFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiActivateFlags_None;
-*/
     private static native int ImGuiActivateFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiActivateFlags_PreferInput;
-*/
     private static native int ImGuiActivateFlags_PreferInput_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiActivateFlags_PreferTweak;
-*/
     private static native int ImGuiActivateFlags_PreferTweak_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiActivateFlags_TryToPreserveState;
-*/
     private static native int ImGuiActivateFlags_TryToPreserveState_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiActivateFlags_FromTabbing;
-*/
     private static native int ImGuiActivateFlags_FromTabbing_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiActivateFlags_FromShortcut;
-*/
     private static native int ImGuiActivateFlags_FromShortcut_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiActivateFlags_FromFocusApi;
-*/
     private static native int ImGuiActivateFlags_FromFocusApi_NATIVE();
 }

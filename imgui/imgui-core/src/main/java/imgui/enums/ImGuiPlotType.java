@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiPlotType implements IDLEnum<ImGuiPlotType> {
+public enum ImGuiPlotType implements NativeEnum<ImGuiPlotType> {
 
     CUSTOM(0), Lines(ImGuiPlotType_Lines_NATIVE()), Histogram(ImGuiPlotType_Histogram_NATIVE());
 
@@ -34,13 +34,7 @@ public enum ImGuiPlotType implements IDLEnum<ImGuiPlotType> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiPlotType_Lines;
-*/
     private static native int ImGuiPlotType_Lines_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiPlotType_Histogram;
-*/
     private static native int ImGuiPlotType_Histogram_NATIVE();
 }

@@ -6,17 +6,13 @@
 
 package imgui.extension.imlayout;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
-import imgui.ImRect;
+import com.github.xpenatan.jParser.api.NativeObject;
 import imgui.ImVec2;
+import imgui.ImRect;
 import imgui.enums.ImGuiButtonFlags;
-import com.github.xpenatan.jparser.idl.helper.IDLBoolArray;
+import com.github.xpenatan.jparser.runtime.helper.NativeBoolArray;
 
-public class ImLayout extends IDLBase {
-
-    static private ImGuiLayout ImGuiLayout_TEMP_STATIC_GEN_0;
-
-    static private ImRect ImRect_TEMP_STATIC_GEN_0;
+public class ImLayout extends NativeObject {
 
     public static final int WRAP_PARENT = get_WRAP_PARENT();
 
@@ -38,726 +34,235 @@ public class ImLayout extends IDLBase {
         return new ImLayout((byte) 0, (char) 0);
     }
 
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout* nativeObject = (ImLayout*)this_addr;
-      delete nativeObject;
-    */
-    public static native void internal_native_deleteNative(long this_addr);
-
     public static void DrawBoundingBox(float x1, float y1, float x2, float y2, int r, int g, int b, int a, boolean clipping) {
-        internal_native_DrawBoundingBox__1(x1, y1, x2, y2, r, g, b, a, clipping);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::DrawBoundingBox_1((float)x1, (float)y1, (float)x2, (float)y2, (int)r, (int)g, (int)b, (int)a, clipping);
-    */
-    public static native void internal_native_DrawBoundingBox__1(float x1, float y1, float x2, float y2, int r, int g, int b, int a, boolean clipping);
 
     public static void DrawBoundingBox(float x1, float y1, float x2, float y2, int r, int g, int b, int a) {
-        internal_native_DrawBoundingBox__1(x1, y1, x2, y2, r, g, b, a);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::DrawBoundingBox_1((float)x1, (float)y1, (float)x2, (float)y2, (int)r, (int)g, (int)b, (int)a);
-    */
-    public static native void internal_native_DrawBoundingBox__1(float x1, float y1, float x2, float y2, int r, int g, int b, int a);
 
     public static void DrawBoundingBox(float x1, float y1, float x2, float y2, int r, int g, int b) {
-        internal_native_DrawBoundingBox__1(x1, y1, x2, y2, r, g, b);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::DrawBoundingBox_1((float)x1, (float)y1, (float)x2, (float)y2, (int)r, (int)g, (int)b);
-    */
-    public static native void internal_native_DrawBoundingBox__1(float x1, float y1, float x2, float y2, int r, int g, int b);
 
     public static void DrawBoundingBox(ImVec2 min, ImVec2 max, int r, int g, int b, int a, boolean clipping) {
-        internal_native_DrawBoundingBox__2(min.native_address, max.native_address, r, g, b, a, clipping);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::DrawBoundingBox_2(*((ImVec2* )min_addr), *((ImVec2* )max_addr), (int)r, (int)g, (int)b, (int)a, clipping);
-    */
-    public static native void internal_native_DrawBoundingBox__2(long min_addr, long max_addr, int r, int g, int b, int a, boolean clipping);
 
     public static void DrawBoundingBox(ImVec2 min, ImVec2 max, int r, int g, int b, int a) {
-        internal_native_DrawBoundingBox__2(min.native_address, max.native_address, r, g, b, a);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::DrawBoundingBox_2(*((ImVec2* )min_addr), *((ImVec2* )max_addr), (int)r, (int)g, (int)b, (int)a);
-    */
-    public static native void internal_native_DrawBoundingBox__2(long min_addr, long max_addr, int r, int g, int b, int a);
 
     public static void DrawBoundingBox(ImVec2 min, ImVec2 max, int r, int g, int b) {
-        internal_native_DrawBoundingBox__2(min.native_address, max.native_address, r, g, b);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::DrawBoundingBox_2(*((ImVec2* )min_addr), *((ImVec2* )max_addr), (int)r, (int)g, (int)b);
-    */
-    public static native void internal_native_DrawBoundingBox__2(long min_addr, long max_addr, int r, int g, int b);
 
     public static void DrawBoundingBox(ImRect rect, int r, int g, int b, int a, boolean clipping) {
-        internal_native_DrawBoundingBox__3(rect.native_address, r, g, b, a, clipping);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::DrawBoundingBox_3(*((ImRect* )rect_addr), (int)r, (int)g, (int)b, (int)a, clipping);
-    */
-    public static native void internal_native_DrawBoundingBox__3(long rect_addr, int r, int g, int b, int a, boolean clipping);
 
     public static void DrawBoundingBox(ImRect rect, int r, int g, int b, int a) {
-        internal_native_DrawBoundingBox__3(rect.native_address, r, g, b, a);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::DrawBoundingBox_3(*((ImRect* )rect_addr), (int)r, (int)g, (int)b, (int)a);
-    */
-    public static native void internal_native_DrawBoundingBox__3(long rect_addr, int r, int g, int b, int a);
 
     public static void DrawBoundingBox(ImRect rect, int r, int g, int b) {
-        internal_native_DrawBoundingBox__3(rect.native_address, r, g, b);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::DrawBoundingBox_3(*((ImRect* )rect_addr), (int)r, (int)g, (int)b);
-    */
-    public static native void internal_native_DrawBoundingBox__3(long rect_addr, int r, int g, int b);
 
     public static void ShowLayoutDebug() {
-        internal_native_ShowLayoutDebug();
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::ShowLayoutDebug();
-    */
-    public static native void internal_native_ShowLayoutDebug();
 
     public static void ShowLayoutDebugClipping() {
-        internal_native_ShowLayoutDebugClipping();
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::ShowLayoutDebugClipping();
-    */
-    public static native void internal_native_ShowLayoutDebugClipping();
 
     public static void BeginLayout(int id, float sizeX, float sizeY, ImGuiLayoutOptions options) {
-        internal_native_BeginLayout__1(id, sizeX, sizeY, options.native_address);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginLayout_1((int)id, (float)sizeX, (float)sizeY, *((ImGuiLayoutOptions* )options_addr));
-    */
-    public static native void internal_native_BeginLayout__1(int id, float sizeX, float sizeY, long options_addr);
 
     public static void BeginLayout(int id, float sizeX, float sizeY) {
-        internal_native_BeginLayout__1(id, sizeX, sizeY);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginLayout_1((int)id, (float)sizeX, (float)sizeY);
-    */
-    public static native void internal_native_BeginLayout__1(int id, float sizeX, float sizeY);
 
     public static void BeginLayout(String id, float sizeX, float sizeY, ImGuiLayoutOptions options) {
-        internal_native_BeginLayout__2(id, sizeX, sizeY, options.native_address);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginLayout_2(id, (float)sizeX, (float)sizeY, *((ImGuiLayoutOptions* )options_addr));
-    */
-    public static native void internal_native_BeginLayout__2(String id, float sizeX, float sizeY, long options_addr);
 
     public static void BeginLayout(String id, float sizeX, float sizeY) {
-        internal_native_BeginLayout__2(id, sizeX, sizeY);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginLayout_2(id, (float)sizeX, (float)sizeY);
-    */
-    public static native void internal_native_BeginLayout__2(String id, float sizeX, float sizeY);
 
     public static ImGuiLayout GetCurrentLayout() {
-        long addr = internal_native_GetCurrentLayout_addr();
-        if (addr == 0)
-            return ImGuiLayout.NULL;
-        if (ImGuiLayout_TEMP_STATIC_GEN_0 == null)
-            ImGuiLayout_TEMP_STATIC_GEN_0 = ImGuiLayout.native_new();
-        ImGuiLayout_TEMP_STATIC_GEN_0.internal_reset(addr, false);
-        return ImGuiLayout_TEMP_STATIC_GEN_0;
+        return null;
     }
-
-    /*
-      [-JNI;-NATIVE]
-      return (jlong)ImLayout::GetCurrentLayout();
-    */
-    public static native long internal_native_GetCurrentLayout_addr();
 
     public static void SetOrientation(ImOrientation ImOrientation) {
-        internal_native_SetOrientation(ImOrientation.getValue());
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::SetOrientation((::ImOrientation)ImOrientation);
-    */
-    public static native void internal_native_SetOrientation(int ImOrientation);
 
     public static void EndLayout() {
-        internal_native_EndLayout();
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::EndLayout();
-    */
-    public static native void internal_native_EndLayout();
 
     public static void BeginAlign(int id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY, ImGuiLayoutOptions options) {
-        internal_native_BeginAlign__1(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY, options.native_address);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginAlign_1((int)id, (float)sizeX, (float)sizeY, (float)alignX, (float)alignY, (float)offsetX, (float)offsetY, *((ImGuiLayoutOptions* )options_addr));
-    */
-    public static native void internal_native_BeginAlign__1(int id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY, long options_addr);
 
     public static void BeginAlign(int id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY) {
-        internal_native_BeginAlign__1(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginAlign_1((int)id, (float)sizeX, (float)sizeY, (float)alignX, (float)alignY, (float)offsetX, (float)offsetY);
-    */
-    public static native void internal_native_BeginAlign__1(int id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY);
 
     public static void BeginAlign(int id, float sizeX, float sizeY, float alignX, float alignY, float offsetX) {
-        internal_native_BeginAlign__1(id, sizeX, sizeY, alignX, alignY, offsetX);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginAlign_1((int)id, (float)sizeX, (float)sizeY, (float)alignX, (float)alignY, (float)offsetX);
-    */
-    public static native void internal_native_BeginAlign__1(int id, float sizeX, float sizeY, float alignX, float alignY, float offsetX);
 
     public static void BeginAlign(int id, float sizeX, float sizeY, float alignX, float alignY) {
-        internal_native_BeginAlign__1(id, sizeX, sizeY, alignX, alignY);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginAlign_1((int)id, (float)sizeX, (float)sizeY, (float)alignX, (float)alignY);
-    */
-    public static native void internal_native_BeginAlign__1(int id, float sizeX, float sizeY, float alignX, float alignY);
 
     public static void BeginAlign(int id, float sizeX, float sizeY, float alignX) {
-        internal_native_BeginAlign__1(id, sizeX, sizeY, alignX);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginAlign_1((int)id, (float)sizeX, (float)sizeY, (float)alignX);
-    */
-    public static native void internal_native_BeginAlign__1(int id, float sizeX, float sizeY, float alignX);
 
     public static void BeginAlign(int id, float sizeX, float sizeY) {
-        internal_native_BeginAlign__1(id, sizeX, sizeY);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginAlign_1((int)id, (float)sizeX, (float)sizeY);
-    */
-    public static native void internal_native_BeginAlign__1(int id, float sizeX, float sizeY);
 
     public static void BeginAlign(String id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY, ImGuiLayoutOptions options) {
-        internal_native_BeginAlign__2(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY, options.native_address);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginAlign_2(id, (float)sizeX, (float)sizeY, (float)alignX, (float)alignY, (float)offsetX, (float)offsetY, *((ImGuiLayoutOptions* )options_addr));
-    */
-    public static native void internal_native_BeginAlign__2(String id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY, long options_addr);
 
     public static void BeginAlign(String id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY) {
-        internal_native_BeginAlign__2(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginAlign_2(id, (float)sizeX, (float)sizeY, (float)alignX, (float)alignY, (float)offsetX, (float)offsetY);
-    */
-    public static native void internal_native_BeginAlign__2(String id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY);
 
     public static void BeginAlign(String id, float sizeX, float sizeY, float alignX, float alignY, float offsetX) {
-        internal_native_BeginAlign__2(id, sizeX, sizeY, alignX, alignY, offsetX);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginAlign_2(id, (float)sizeX, (float)sizeY, (float)alignX, (float)alignY, (float)offsetX);
-    */
-    public static native void internal_native_BeginAlign__2(String id, float sizeX, float sizeY, float alignX, float alignY, float offsetX);
 
     public static void BeginAlign(String id, float sizeX, float sizeY, float alignX, float alignY) {
-        internal_native_BeginAlign__2(id, sizeX, sizeY, alignX, alignY);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginAlign_2(id, (float)sizeX, (float)sizeY, (float)alignX, (float)alignY);
-    */
-    public static native void internal_native_BeginAlign__2(String id, float sizeX, float sizeY, float alignX, float alignY);
 
     public static void BeginAlign(String id, float sizeX, float sizeY, float alignX) {
-        internal_native_BeginAlign__2(id, sizeX, sizeY, alignX);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginAlign_2(id, (float)sizeX, (float)sizeY, (float)alignX);
-    */
-    public static native void internal_native_BeginAlign__2(String id, float sizeX, float sizeY, float alignX);
 
     public static void BeginAlign(String id, float sizeX, float sizeY) {
-        internal_native_BeginAlign__2(id, sizeX, sizeY);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginAlign_2(id, (float)sizeX, (float)sizeY);
-    */
-    public static native void internal_native_BeginAlign__2(String id, float sizeX, float sizeY);
 
     public static void AlignLayout(float alignX, float alignY, float offsetX, float offsetY) {
-        internal_native_AlignLayout(alignX, alignY, offsetX, offsetY);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::AlignLayout((float)alignX, (float)alignY, (float)offsetX, (float)offsetY);
-    */
-    public static native void internal_native_AlignLayout(float alignX, float alignY, float offsetX, float offsetY);
 
     public static void AlignLayout(float alignX, float alignY, float offsetX) {
-        internal_native_AlignLayout(alignX, alignY, offsetX);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::AlignLayout((float)alignX, (float)alignY, (float)offsetX);
-    */
-    public static native void internal_native_AlignLayout(float alignX, float alignY, float offsetX);
 
     public static void AlignLayout(float alignX, float alignY) {
-        internal_native_AlignLayout(alignX, alignY);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::AlignLayout((float)alignX, (float)alignY);
-    */
-    public static native void internal_native_AlignLayout(float alignX, float alignY);
 
     public static void EndAlign() {
-        internal_native_EndAlign();
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::EndAlign();
-    */
-    public static native void internal_native_EndAlign();
 
     public static boolean BeginCollapseLayout(String id, String title, float sizeX, float sizeY) {
-        return internal_native_BeginCollapseLayout(id, title, sizeX, sizeY);
+        return false;
     }
-
-    /*
-      [-JNI;-NATIVE]
-      return ImLayout::BeginCollapseLayout(id, title, (float)sizeX, (float)sizeY);
-    */
-    public static native boolean internal_native_BeginCollapseLayout(String id, String title, float sizeX, float sizeY);
 
     public static boolean BeginCollapseLayout(String id, String title, float sizeX, float sizeY, ImGuiCollapseLayoutOptions option) {
-        return internal_native_BeginCollapseLayout(id, title, sizeX, sizeY, option.native_address);
+        return false;
     }
 
-    /*
-      [-JNI;-NATIVE]
-      return ImLayout::BeginCollapseLayout(id, title, (float)sizeX, (float)sizeY, *((ImGuiCollapseLayoutOptions* )option_addr));
-    */
-    public static native boolean internal_native_BeginCollapseLayout(String id, String title, float sizeX, float sizeY, long option_addr);
-
-    public static void BeginCollapseLayout(String id, IDLBoolArray isOpen, String title, float sizeX, float sizeY) {
-        internal_native_BeginCollapseLayout__2(id, isOpen.native_void_address, title, sizeX, sizeY);
+    public static void BeginCollapseLayout(String id, NativeBoolArray isOpen, String title, float sizeX, float sizeY) {
     }
 
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginCollapseLayout_2(id, (bool*)isOpen_addr, title, (float)sizeX, (float)sizeY);
-    */
-    public static native void internal_native_BeginCollapseLayout__2(String id, long isOpen_addr, String title, float sizeX, float sizeY);
-
-    public static void BeginCollapseLayout(String id, IDLBoolArray isOpen, String title, float sizeX, float sizeY, ImGuiCollapseLayoutOptions option) {
-        internal_native_BeginCollapseLayout__2(id, isOpen.native_void_address, title, sizeX, sizeY, option.native_address);
+    public static void BeginCollapseLayout(String id, NativeBoolArray isOpen, String title, float sizeX, float sizeY, ImGuiCollapseLayoutOptions option) {
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginCollapseLayout_2(id, (bool*)isOpen_addr, title, (float)sizeX, (float)sizeY, *((ImGuiCollapseLayoutOptions* )option_addr));
-    */
-    public static native void internal_native_BeginCollapseLayout__2(String id, long isOpen_addr, String title, float sizeX, float sizeY, long option_addr);
 
     public static void EndCollapseFrameLayout() {
-        internal_native_EndCollapseFrameLayout();
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::EndCollapseFrameLayout();
-    */
-    public static native void internal_native_EndCollapseFrameLayout();
 
     public static void EndCollapseLayout() {
-        internal_native_EndCollapseLayout();
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::EndCollapseLayout();
-    */
-    public static native void internal_native_EndCollapseLayout();
 
     public static boolean BeginCollapseLayoutEx(String id, String title, float sizeX, float sizeY) {
-        return internal_native_BeginCollapseLayoutEx(id, title, sizeX, sizeY);
+        return false;
     }
-
-    /*
-      [-JNI;-NATIVE]
-      return ImLayout::BeginCollapseLayoutEx(id, title, (float)sizeX, (float)sizeY);
-    */
-    public static native boolean internal_native_BeginCollapseLayoutEx(String id, String title, float sizeX, float sizeY);
 
     public static boolean BeginCollapseLayoutEx(String id, String title, float sizeX, float sizeY, ImGuiCollapseLayoutOptions option) {
-        return internal_native_BeginCollapseLayoutEx(id, title, sizeX, sizeY, option.native_address);
+        return false;
     }
-
-    /*
-      [-JNI;-NATIVE]
-      return ImLayout::BeginCollapseLayoutEx(id, title, (float)sizeX, (float)sizeY, *((ImGuiCollapseLayoutOptions* )option_addr));
-    */
-    public static native boolean internal_native_BeginCollapseLayoutEx(String id, String title, float sizeX, float sizeY, long option_addr);
 
     public static boolean BeginCollapseLayoutEx(int id, String title, float sizeX, float sizeY) {
-        return internal_native_BeginCollapseLayoutEx__2(id, title, sizeX, sizeY);
+        return false;
     }
-
-    /*
-      [-JNI;-NATIVE]
-      return ImLayout::BeginCollapseLayoutEx_2((int)id, title, (float)sizeX, (float)sizeY);
-    */
-    public static native boolean internal_native_BeginCollapseLayoutEx__2(int id, String title, float sizeX, float sizeY);
 
     public static boolean BeginCollapseLayoutEx(int id, String title, float sizeX, float sizeY, ImGuiCollapseLayoutOptions option) {
-        return internal_native_BeginCollapseLayoutEx__2(id, title, sizeX, sizeY, option.native_address);
+        return false;
     }
 
-    /*
-      [-JNI;-NATIVE]
-      return ImLayout::BeginCollapseLayoutEx_2((int)id, title, (float)sizeX, (float)sizeY, *((ImGuiCollapseLayoutOptions* )option_addr));
-    */
-    public static native boolean internal_native_BeginCollapseLayoutEx__2(int id, String title, float sizeX, float sizeY, long option_addr);
-
-    public static void BeginCollapseLayoutEx(String id, IDLBoolArray isOpen, String title, float sizeX, float sizeY) {
-        internal_native_BeginCollapseLayoutEx__3(id, isOpen.native_void_address, title, sizeX, sizeY);
+    public static void BeginCollapseLayoutEx(String id, NativeBoolArray isOpen, String title, float sizeX, float sizeY) {
     }
 
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginCollapseLayoutEx_3(id, (bool*)isOpen_addr, title, (float)sizeX, (float)sizeY);
-    */
-    public static native void internal_native_BeginCollapseLayoutEx__3(String id, long isOpen_addr, String title, float sizeX, float sizeY);
-
-    public static void BeginCollapseLayoutEx(String id, IDLBoolArray isOpen, String title, float sizeX, float sizeY, ImGuiCollapseLayoutOptions option) {
-        internal_native_BeginCollapseLayoutEx__3(id, isOpen.native_void_address, title, sizeX, sizeY, option.native_address);
+    public static void BeginCollapseLayoutEx(String id, NativeBoolArray isOpen, String title, float sizeX, float sizeY, ImGuiCollapseLayoutOptions option) {
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginCollapseLayoutEx_3(id, (bool*)isOpen_addr, title, (float)sizeX, (float)sizeY, *((ImGuiCollapseLayoutOptions* )option_addr));
-    */
-    public static native void internal_native_BeginCollapseLayoutEx__3(String id, long isOpen_addr, String title, float sizeX, float sizeY, long option_addr);
 
     public static void BeginBoundingBox() {
-        internal_native_BeginBoundingBox();
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginBoundingBox();
-    */
-    public static native void internal_native_BeginBoundingBox();
 
     public static ImRect EndBoundingBox() {
-        long addr = internal_native_EndBoundingBox_addr();
-        if (addr == 0)
-            return ImRect.NULL;
-        if (ImRect_TEMP_STATIC_GEN_0 == null)
-            ImRect_TEMP_STATIC_GEN_0 = ImRect.native_new();
-        ImRect_TEMP_STATIC_GEN_0.internal_reset(addr, false);
-        return ImRect_TEMP_STATIC_GEN_0;
+        return null;
     }
-
-    /*
-      [-JNI;-NATIVE]
-      return (jlong)&ImLayout::EndBoundingBox();
-    */
-    public static native long internal_native_EndBoundingBox_addr();
 
     public static float GetTableContentHeight() {
-        return internal_native_GetTableContentHeight();
+        return 0;
     }
-
-    /*
-      [-JNI;-NATIVE]
-      return ImLayout::GetTableContentHeight();
-    */
-    public static native float internal_native_GetTableContentHeight();
 
     public static void BeginGlobalTree() {
-        internal_native_BeginGlobalTree();
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginGlobalTree();
-    */
-    public static native void internal_native_BeginGlobalTree();
 
     public static void EndGlobalTree() {
-        internal_native_EndGlobalTree();
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::EndGlobalTree();
-    */
-    public static native void internal_native_EndGlobalTree();
 
     public static void BeginTree(String treeIdStr) {
-        internal_native_BeginTree__1(treeIdStr);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginTree_1(treeIdStr);
-    */
-    public static native void internal_native_BeginTree__1(String treeIdStr);
 
     public static void BeginTree(int id) {
-        internal_native_BeginTree__2(id);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginTree_2((int)id);
-    */
-    public static native void internal_native_BeginTree__2(int id);
 
     public static void EndTree() {
-        internal_native_EndTree();
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::EndTree();
-    */
-    public static native void internal_native_EndTree();
 
     public static void BeginTreeLayout(float height, boolean isLeaf, boolean isSelected) {
-        internal_native_BeginTreeLayout(height, isLeaf, isSelected);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginTreeLayout((float)height, isLeaf, isSelected);
-    */
-    public static native void internal_native_BeginTreeLayout(float height, boolean isLeaf, boolean isSelected);
 
     public static void BeginTreeLayout(float height, boolean isLeaf, boolean isSelected, boolean isOpen) {
-        internal_native_BeginTreeLayout(height, isLeaf, isSelected, isOpen);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::BeginTreeLayout((float)height, isLeaf, isSelected, isOpen);
-    */
-    public static native void internal_native_BeginTreeLayout(float height, boolean isLeaf, boolean isSelected, boolean isOpen);
 
     public static boolean EndTreeLayout() {
-        return internal_native_EndTreeLayout();
+        return false;
     }
-
-    /*
-      [-JNI;-NATIVE]
-      return ImLayout::EndTreeLayout();
-    */
-    public static native boolean internal_native_EndTreeLayout();
 
     public static boolean IsTreeOpen() {
-        return internal_native_IsTreeOpen();
+        return false;
     }
-
-    /*
-      [-JNI;-NATIVE]
-      return ImLayout::IsTreeOpen();
-    */
-    public static native boolean internal_native_IsTreeOpen();
 
     public static float GetTreeHeight(float padding) {
-        return internal_native_GetTreeHeight(padding);
+        return 0;
     }
-
-    /*
-      [-JNI;-NATIVE]
-      return ImLayout::GetTreeHeight((float)padding);
-    */
-    public static native float internal_native_GetTreeHeight(float padding);
 
     public static int ButtonBehavior(int id, ImRect bb, boolean isSelected, int selectedColor, int hoveredColor, int hoveredStrokeColor, ImGuiButtonFlags ImGuiButtonFlags, float clickDelay) {
-        return internal_native_ButtonBehavior(id, bb.native_address, isSelected, selectedColor, hoveredColor, hoveredStrokeColor, ImGuiButtonFlags.getValue(), clickDelay);
+        return 0;
     }
-
-    /*
-      [-JNI;-NATIVE]
-      return ImLayout::ButtonBehavior((int)id, *((ImRect* )bb_addr), isSelected, (int)selectedColor, (int)hoveredColor, (int)hoveredStrokeColor, ImGuiButtonFlags, (float)clickDelay);
-    */
-    public static native int internal_native_ButtonBehavior(int id, long bb_addr, boolean isSelected, int selectedColor, int hoveredColor, int hoveredStrokeColor, int ImGuiButtonFlags, float clickDelay);
 
     public static int ButtonBehavior(int id, ImRect bb, boolean isSelected, int selectedColor, int hoveredColor, int hoveredStrokeColor, ImGuiButtonFlags ImGuiButtonFlags) {
-        return internal_native_ButtonBehavior(id, bb.native_address, isSelected, selectedColor, hoveredColor, hoveredStrokeColor, ImGuiButtonFlags.getValue());
+        return 0;
     }
-
-    /*
-      [-JNI;-NATIVE]
-      return ImLayout::ButtonBehavior((int)id, *((ImRect* )bb_addr), isSelected, (int)selectedColor, (int)hoveredColor, (int)hoveredStrokeColor, ImGuiButtonFlags);
-    */
-    public static native int internal_native_ButtonBehavior(int id, long bb_addr, boolean isSelected, int selectedColor, int hoveredColor, int hoveredStrokeColor, int ImGuiButtonFlags);
 
     public static int ButtonBehavior(int id, ImRect bb, boolean isSelected, int selectedColor, int hoveredColor, int hoveredStrokeColor) {
-        return internal_native_ButtonBehavior(id, bb.native_address, isSelected, selectedColor, hoveredColor, hoveredStrokeColor);
+        return 0;
     }
-
-    /*
-      [-JNI;-NATIVE]
-      return ImLayout::ButtonBehavior((int)id, *((ImRect* )bb_addr), isSelected, (int)selectedColor, (int)hoveredColor, (int)hoveredStrokeColor);
-    */
-    public static native int internal_native_ButtonBehavior(int id, long bb_addr, boolean isSelected, int selectedColor, int hoveredColor, int hoveredStrokeColor);
 
     public static int ButtonBehavior(int id, ImRect bb, boolean isSelected, int selectedColor, int hoveredColor) {
-        return internal_native_ButtonBehavior(id, bb.native_address, isSelected, selectedColor, hoveredColor);
+        return 0;
     }
-
-    /*
-      [-JNI;-NATIVE]
-      return ImLayout::ButtonBehavior((int)id, *((ImRect* )bb_addr), isSelected, (int)selectedColor, (int)hoveredColor);
-    */
-    public static native int internal_native_ButtonBehavior(int id, long bb_addr, boolean isSelected, int selectedColor, int hoveredColor);
 
     public static int ButtonBehavior(int id, ImRect bb, boolean isSelected, int selectedColor) {
-        return internal_native_ButtonBehavior(id, bb.native_address, isSelected, selectedColor);
+        return 0;
     }
-
-    /*
-      [-JNI;-NATIVE]
-      return ImLayout::ButtonBehavior((int)id, *((ImRect* )bb_addr), isSelected, (int)selectedColor);
-    */
-    public static native int internal_native_ButtonBehavior(int id, long bb_addr, boolean isSelected, int selectedColor);
 
     public static int ButtonBehavior(int id, ImRect bb, boolean isSelected) {
-        return internal_native_ButtonBehavior(id, bb.native_address, isSelected);
+        return 0;
     }
-
-    /*
-      [-JNI;-NATIVE]
-      return ImLayout::ButtonBehavior((int)id, *((ImRect* )bb_addr), isSelected);
-    */
-    public static native int internal_native_ButtonBehavior(int id, long bb_addr, boolean isSelected);
 
     public static void ScaleAllSizes(float scale_factor) {
-        internal_native_ScaleAllSizes(scale_factor);
     }
-
-    /*
-      [-JNI;-NATIVE]
-      ImLayout::ScaleAllSizes((float)scale_factor);
-    */
-    public static native void internal_native_ScaleAllSizes(float scale_factor);
 
     public static float GetDPIScale() {
-        return internal_native_GetDPIScale();
+        return 0;
     }
-
-    /*
-      [-JNI;-NATIVE]
-      return ImLayout::GetDPIScale();
-    */
-    public static native float internal_native_GetDPIScale();
 
     public static int get_WRAP_PARENT() {
-        return internal_native_get_WRAP_PARENT();
+        return 0;
     }
-
-    /*
-      [-JNI;-NATIVE]
-      return ImLayout::WRAP_PARENT;
-    */
-    public static native int internal_native_get_WRAP_PARENT();
 
     public static int get_MATCH_PARENT() {
-        return internal_native_get_MATCH_PARENT();
+        return 0;
     }
-
-    /*
-      [-JNI;-NATIVE]
-      return ImLayout::MATCH_PARENT;
-    */
-    public static native int internal_native_get_MATCH_PARENT();
 
     public static int get_MATCH_WRAP_PARENT() {
-        return internal_native_get_MATCH_WRAP_PARENT();
+        return 0;
     }
-
-    /*
-      [-JNI;-NATIVE]
-      return ImLayout::MATCH_WRAP_PARENT;
-    */
-    public static native int internal_native_get_MATCH_WRAP_PARENT();
 }

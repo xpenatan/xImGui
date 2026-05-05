@@ -1,7 +1,7 @@
 package imgui.example.basic.renderer;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
-import com.github.xpenatan.jparser.idl.helper.IDLFloatArray;
+import com.github.xpenatan.jParser.api.NativeObject;
+import com.github.xpenatan.jparser.runtime.helper.NativeFloatArray;
 import imgui.ImGui;
 import imgui.enums.ImGuiDataType;
 import imgui.enums.ImGuiInputTextFlags;
@@ -13,10 +13,10 @@ import imgui.ImGuiWindow;
 
 public class EditTextRenderer implements UIRenderer {
 
-    private final IDLFloatArray imguiFloat1 = new IDLFloatArray(1);
-    private final IDLFloatArray imguiFloat2 = new IDLFloatArray(2);
-    private final IDLFloatArray imguiFloat3 = new IDLFloatArray(3);
-    private final IDLFloatArray imguiFloat4 = new IDLFloatArray(4);
+    private final NativeFloatArray imguiFloat1 = new NativeFloatArray(1);
+    private final NativeFloatArray imguiFloat2 = new NativeFloatArray(2);
+    private final NativeFloatArray imguiFloat3 = new NativeFloatArray(3);
+    private final NativeFloatArray imguiFloat4 = new NativeFloatArray(4);
 
     private final ImGuiString imguiString1 = new ImGuiString();
     private final ImGuiString imguiString2 = new ImGuiString();
@@ -48,7 +48,7 @@ public class EditTextRenderer implements UIRenderer {
             ImGuiInternal.SetActiveID(id, window);
         }
         ImGuiSliderFlags flags = ImGuiSliderFlags.None;
-        if(ImGuiInternal.DragBehavior(id, ImGuiDataType.Float, imguiFloat1, 0.1f, IDLBase.NULL, IDLBase.NULL, format, flags)) {
+        if(ImGuiInternal.DragBehavior(id, ImGuiDataType.Float, imguiFloat1, 0.1f, NativeObject.NULL, NativeObject.NULL, format, flags)) {
             System.out.println("Dragging");
         }
 

@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiConfigFlags implements IDLEnum<ImGuiConfigFlags> {
+public enum ImGuiConfigFlags implements NativeEnum<ImGuiConfigFlags> {
 
     CUSTOM(0),
     None(ImGuiConfigFlags_None_NATIVE()),
@@ -44,53 +44,23 @@ public enum ImGuiConfigFlags implements IDLEnum<ImGuiConfigFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiConfigFlags_None;
-*/
     private static native int ImGuiConfigFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiConfigFlags_NavEnableKeyboard;
-*/
     private static native int ImGuiConfigFlags_NavEnableKeyboard_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiConfigFlags_NavEnableGamepad;
-*/
     private static native int ImGuiConfigFlags_NavEnableGamepad_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiConfigFlags_NoMouse;
-*/
     private static native int ImGuiConfigFlags_NoMouse_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiConfigFlags_NoMouseCursorChange;
-*/
     private static native int ImGuiConfigFlags_NoMouseCursorChange_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiConfigFlags_NoKeyboard;
-*/
     private static native int ImGuiConfigFlags_NoKeyboard_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiConfigFlags_DockingEnable;
-*/
     private static native int ImGuiConfigFlags_DockingEnable_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiConfigFlags_ViewportsEnable;
-*/
     private static native int ImGuiConfigFlags_ViewportsEnable_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiConfigFlags_IsSRGB;
-*/
     private static native int ImGuiConfigFlags_IsSRGB_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiConfigFlags_IsTouchScreen;
-*/
     private static native int ImGuiConfigFlags_IsTouchScreen_NATIVE();
 }

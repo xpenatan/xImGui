@@ -6,9 +6,9 @@
 
 package imgui.extension.nodeeditor;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum SaveReasonFlags implements IDLEnum<SaveReasonFlags> {
+public enum SaveReasonFlags implements NativeEnum<SaveReasonFlags> {
 
     CUSTOM(0),
     None(None_NATIVE()),
@@ -42,43 +42,19 @@ public enum SaveReasonFlags implements IDLEnum<SaveReasonFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)SaveReasonFlags::None;
-*/
     private static native int None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)SaveReasonFlags::Navigation;
-*/
     private static native int Navigation_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)SaveReasonFlags::Position;
-*/
     private static native int Position_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)SaveReasonFlags::Size;
-*/
     private static native int Size_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)SaveReasonFlags::Selection;
-*/
     private static native int Selection_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)SaveReasonFlags::AddNode;
-*/
     private static native int AddNode_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)SaveReasonFlags::RemoveNode;
-*/
     private static native int RemoveNode_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)SaveReasonFlags::User;
-*/
     private static native int User_NATIVE();
 }

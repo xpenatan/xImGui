@@ -6,9 +6,9 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 
-public class ImFont extends IDLBase {
+public class ImFont extends NativeObject {
 
     static public final ImFont NULL = ImFont.native_new();
 
@@ -25,14 +25,4 @@ public class ImFont extends IDLBase {
     public static ImFont native_new() {
         return new ImFont((byte) 0, (char) 0);
     }
-
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImFont* nativeObject = (ImFont*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
 }

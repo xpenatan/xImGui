@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiInputTextFlags implements IDLEnum<ImGuiInputTextFlags> {
+public enum ImGuiInputTextFlags implements NativeEnum<ImGuiInputTextFlags> {
 
     CUSTOM(0),
     None(ImGuiInputTextFlags_None_NATIVE()),
@@ -60,133 +60,55 @@ public enum ImGuiInputTextFlags implements IDLEnum<ImGuiInputTextFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_None;
-*/
     private static native int ImGuiInputTextFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_CharsDecimal;
-*/
     private static native int ImGuiInputTextFlags_CharsDecimal_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_CharsHexadecimal;
-*/
     private static native int ImGuiInputTextFlags_CharsHexadecimal_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_CharsScientific;
-*/
     private static native int ImGuiInputTextFlags_CharsScientific_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_CharsUppercase;
-*/
     private static native int ImGuiInputTextFlags_CharsUppercase_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_CharsNoBlank;
-*/
     private static native int ImGuiInputTextFlags_CharsNoBlank_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_AllowTabInput;
-*/
     private static native int ImGuiInputTextFlags_AllowTabInput_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_EnterReturnsTrue;
-*/
     private static native int ImGuiInputTextFlags_EnterReturnsTrue_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_EscapeClearsAll;
-*/
     private static native int ImGuiInputTextFlags_EscapeClearsAll_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_CtrlEnterForNewLine;
-*/
     private static native int ImGuiInputTextFlags_CtrlEnterForNewLine_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_ReadOnly;
-*/
     private static native int ImGuiInputTextFlags_ReadOnly_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_Password;
-*/
     private static native int ImGuiInputTextFlags_Password_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_AlwaysOverwrite;
-*/
     private static native int ImGuiInputTextFlags_AlwaysOverwrite_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_AutoSelectAll;
-*/
     private static native int ImGuiInputTextFlags_AutoSelectAll_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_ParseEmptyRefVal;
-*/
     private static native int ImGuiInputTextFlags_ParseEmptyRefVal_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_DisplayEmptyRefVal;
-*/
     private static native int ImGuiInputTextFlags_DisplayEmptyRefVal_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_NoHorizontalScroll;
-*/
     private static native int ImGuiInputTextFlags_NoHorizontalScroll_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_NoUndoRedo;
-*/
     private static native int ImGuiInputTextFlags_NoUndoRedo_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_ElideLeft;
-*/
     private static native int ImGuiInputTextFlags_ElideLeft_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_CallbackCompletion;
-*/
     private static native int ImGuiInputTextFlags_CallbackCompletion_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_CallbackHistory;
-*/
     private static native int ImGuiInputTextFlags_CallbackHistory_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_CallbackAlways;
-*/
     private static native int ImGuiInputTextFlags_CallbackAlways_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_CallbackCharFilter;
-*/
     private static native int ImGuiInputTextFlags_CallbackCharFilter_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_CallbackResize;
-*/
     private static native int ImGuiInputTextFlags_CallbackResize_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_CallbackEdit;
-*/
     private static native int ImGuiInputTextFlags_CallbackEdit_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_WordWrap;
-*/
     private static native int ImGuiInputTextFlags_WordWrap_NATIVE();
 }

@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiMouseCursor implements IDLEnum<ImGuiMouseCursor> {
+public enum ImGuiMouseCursor implements NativeEnum<ImGuiMouseCursor> {
 
     CUSTOM(0),
     None(ImGuiMouseCursor_None_NATIVE()),
@@ -46,63 +46,27 @@ public enum ImGuiMouseCursor implements IDLEnum<ImGuiMouseCursor> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseCursor_None;
-*/
     private static native int ImGuiMouseCursor_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseCursor_Arrow;
-*/
     private static native int ImGuiMouseCursor_Arrow_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseCursor_TextInput;
-*/
     private static native int ImGuiMouseCursor_TextInput_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseCursor_ResizeAll;
-*/
     private static native int ImGuiMouseCursor_ResizeAll_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseCursor_ResizeNS;
-*/
     private static native int ImGuiMouseCursor_ResizeNS_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseCursor_ResizeEW;
-*/
     private static native int ImGuiMouseCursor_ResizeEW_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseCursor_ResizeNESW;
-*/
     private static native int ImGuiMouseCursor_ResizeNESW_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseCursor_ResizeNWSE;
-*/
     private static native int ImGuiMouseCursor_ResizeNWSE_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseCursor_Hand;
-*/
     private static native int ImGuiMouseCursor_Hand_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseCursor_Wait;
-*/
     private static native int ImGuiMouseCursor_Wait_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseCursor_Progress;
-*/
     private static native int ImGuiMouseCursor_Progress_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseCursor_NotAllowed;
-*/
     private static native int ImGuiMouseCursor_NotAllowed_NATIVE();
 }

@@ -76,24 +76,28 @@ dependencies {
 ### Desktop module
 ```groovy
 dependencies {
-    implementation("com.github.xpenatan.xImGui:imgui-desktop:$project.xImGuiVersion")
+    implementation("com.github.xpenatan.xImGui:imgui-jni:$project.xImGuiVersion")
+    implementation("com.github.xpenatan.xImGui:imgui-ffm:$project.xImGuiVersion")
 
     // Extensions
-    implementation "com.github.xpenatan.xImGui:imlayout-desktop:$project.xImGuiVersion"
-    implementation "com.github.xpenatan.xImGui:textedit-desktop:$project.xImGuiVersion"
-    implementation "com.github.xpenatan.xImGui:nodeeditor-desktop:$project.xImGuiVersion"
+    implementation "com.github.xpenatan.xImGui:imlayout-jni:$project.xImGuiVersion"
+    implementation "com.github.xpenatan.xImGui:imlayout-ffm:$project.xImGuiVersion"
+    implementation "com.github.xpenatan.xImGui:textedit-jni:$project.xImGuiVersion"
+    implementation "com.github.xpenatan.xImGui:textedit-ffm:$project.xImGuiVersion"
+    implementation "com.github.xpenatan.xImGui:nodeeditor-jni:$project.xImGuiVersion"
+    implementation "com.github.xpenatan.xImGui:nodeeditor-ffm:$project.xImGuiVersion"
 }
 ```
 
 ### TeaVM module
 ```groovy
 dependencies {
-    implementation("com.github.xpenatan.xImGui:imgui-teavm:$project.xImGuiVersion")
+    implementation("com.github.xpenatan.xImGui:imgui-web:$project.xImGuiVersion")
 
     // Extensions
-    implementation "com.github.xpenatan.xImGui:imlayout-teavm:$project.xImGuiVersion"
-    implementation "com.github.xpenatan.xImGui:textedit-teavm:$project.xImGuiVersion"
-    implementation "com.github.xpenatan.xImGui:nodeeditor-teavm:$project.xImGuiVersion"
+    implementation "com.github.xpenatan.xImGui:imlayout-web:$project.xImGuiVersion"
+    implementation "com.github.xpenatan.xImGui:textedit-web:$project.xImGuiVersion"
+    implementation "com.github.xpenatan.xImGui:nodeeditor-web:$project.xImGuiVersion"
 }
 ```
 

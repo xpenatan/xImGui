@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiInputFlags implements IDLEnum<ImGuiInputFlags> {
+public enum ImGuiInputFlags implements NativeEnum<ImGuiInputFlags> {
 
     CUSTOM(0),
     None(ImGuiInputFlags_None_NATIVE()),
@@ -45,58 +45,25 @@ public enum ImGuiInputFlags implements IDLEnum<ImGuiInputFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_None;
-*/
     private static native int ImGuiInputFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_Repeat;
-*/
     private static native int ImGuiInputFlags_Repeat_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RouteActive;
-*/
     private static native int ImGuiInputFlags_RouteActive_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RouteFocused;
-*/
     private static native int ImGuiInputFlags_RouteFocused_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RouteGlobal;
-*/
     private static native int ImGuiInputFlags_RouteGlobal_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RouteAlways;
-*/
     private static native int ImGuiInputFlags_RouteAlways_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RouteOverFocused;
-*/
     private static native int ImGuiInputFlags_RouteOverFocused_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RouteOverActive;
-*/
     private static native int ImGuiInputFlags_RouteOverActive_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RouteUnlessBgFocused;
-*/
     private static native int ImGuiInputFlags_RouteUnlessBgFocused_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RouteFromRootWindow;
-*/
     private static native int ImGuiInputFlags_RouteFromRootWindow_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_Tooltip;
-*/
     private static native int ImGuiInputFlags_Tooltip_NATIVE();
 }

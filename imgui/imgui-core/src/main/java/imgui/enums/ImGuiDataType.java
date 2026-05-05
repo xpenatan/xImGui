@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiDataType implements IDLEnum<ImGuiDataType> {
+public enum ImGuiDataType implements NativeEnum<ImGuiDataType> {
 
     CUSTOM(0),
     S8(ImGuiDataType_S8_NATIVE()),
@@ -46,63 +46,27 @@ public enum ImGuiDataType implements IDLEnum<ImGuiDataType> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_S8;
-*/
     private static native int ImGuiDataType_S8_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_U8;
-*/
     private static native int ImGuiDataType_U8_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_S16;
-*/
     private static native int ImGuiDataType_S16_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_U16;
-*/
     private static native int ImGuiDataType_U16_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_S32;
-*/
     private static native int ImGuiDataType_S32_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_U32;
-*/
     private static native int ImGuiDataType_U32_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_S64;
-*/
     private static native int ImGuiDataType_S64_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_U64;
-*/
     private static native int ImGuiDataType_U64_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_Float;
-*/
     private static native int ImGuiDataType_Float_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_Double;
-*/
     private static native int ImGuiDataType_Double_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_Bool;
-*/
     private static native int ImGuiDataType_Bool_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_String;
-*/
     private static native int ImGuiDataType_String_NATIVE();
 }

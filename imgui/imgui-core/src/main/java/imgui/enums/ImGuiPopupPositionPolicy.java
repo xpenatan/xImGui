@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiPopupPositionPolicy implements IDLEnum<ImGuiPopupPositionPolicy> {
+public enum ImGuiPopupPositionPolicy implements NativeEnum<ImGuiPopupPositionPolicy> {
 
     CUSTOM(0), Default(ImGuiPopupPositionPolicy_Default_NATIVE()), ComboBox(ImGuiPopupPositionPolicy_ComboBox_NATIVE()), Tooltip(ImGuiPopupPositionPolicy_Tooltip_NATIVE());
 
@@ -34,18 +34,9 @@ public enum ImGuiPopupPositionPolicy implements IDLEnum<ImGuiPopupPositionPolicy
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiPopupPositionPolicy_Default;
-*/
     private static native int ImGuiPopupPositionPolicy_Default_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiPopupPositionPolicy_ComboBox;
-*/
     private static native int ImGuiPopupPositionPolicy_ComboBox_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiPopupPositionPolicy_Tooltip;
-*/
     private static native int ImGuiPopupPositionPolicy_Tooltip_NATIVE();
 }

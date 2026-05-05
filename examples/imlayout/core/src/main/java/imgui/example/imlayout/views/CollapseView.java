@@ -2,9 +2,9 @@ package imgui.example.imlayout.views;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
-import com.github.xpenatan.jparser.idl.helper.IDLBoolArray;
-import com.github.xpenatan.jparser.idl.helper.IDLFloatArray;
-import com.github.xpenatan.jparser.idl.helper.IDLIntArray;
+import com.github.xpenatan.jparser.runtime.helper.NativeBoolArray;
+import com.github.xpenatan.jparser.runtime.helper.NativeFloatArray;
+import com.github.xpenatan.jparser.runtime.helper.NativeIntArray;
 import imgui.ImGui;
 import imgui.ImGuiContext;
 import imgui.ImTemp;
@@ -17,19 +17,19 @@ public class CollapseView {
 
     private Texture buttonTexture;
 
-    private IDLBoolArray isDebug = new IDLBoolArray(1);
+    private NativeBoolArray isDebug = new NativeBoolArray(1);
 
-    private IDLBoolArray dummyCheckbox = new IDLBoolArray(1);
+    private NativeBoolArray dummyCheckbox = new NativeBoolArray(1);
 
-    private IDLBoolArray isCollapseOpen = new IDLBoolArray(1);
-    private IDLBoolArray isCollapseOpen2 = new IDLBoolArray(1);
+    private NativeBoolArray isCollapseOpen = new NativeBoolArray(1);
+    private NativeBoolArray isCollapseOpen2 = new NativeBoolArray(1);
 
-    private IDLFloatArray alignX = new IDLFloatArray(1);
-    private IDLFloatArray offsetX = new IDLFloatArray(1);
-    private IDLFloatArray alignY = new IDLFloatArray(1);
-    private IDLFloatArray offsetY = new IDLFloatArray(1);
+    private NativeFloatArray alignX = new NativeFloatArray(1);
+    private NativeFloatArray offsetX = new NativeFloatArray(1);
+    private NativeFloatArray alignY = new NativeFloatArray(1);
+    private NativeFloatArray offsetY = new NativeFloatArray(1);
 
-    private IDLIntArray guiInt = new IDLIntArray(1);
+    private NativeIntArray guiInt = new NativeIntArray(1);
 
     public void init() {
         alignX.setValue(0, 0.5f);

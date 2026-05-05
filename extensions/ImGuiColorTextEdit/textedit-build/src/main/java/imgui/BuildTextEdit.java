@@ -9,7 +9,6 @@ import com.github.xpenatan.jParser.builder.targets.WindowsMSVCTarget;
 import com.github.xpenatan.jParser.builder.tool.BuildToolListener;
 import com.github.xpenatan.jParser.builder.tool.BuildToolOptions;
 import com.github.xpenatan.jParser.builder.tool.BuilderTool;
-import com.github.xpenatan.jParser.core.JParser;
 import com.github.xpenatan.jParser.idl.IDLReader;
 import java.io.File;
 import java.util.ArrayList;
@@ -33,39 +32,51 @@ public class BuildTextEdit {
         data.modulePrefix = modulePrefix;
         BuildToolOptions op = new BuildToolOptions(data, args);
 
-        JParser.CREATE_IDL_HELPER = false;
         String imguiPath = new File("./../../../imgui/").getCanonicalPath().replace("\\", "/");
         op.addAdditionalIDLRefPath(IDLReader.parseFile(imguiPath + "/imgui-build/src/main/cpp/imgui.idl"));
-        op.addAdditionalIDLRefPath(IDLReader.getIDLHelperFile());
+        op.addAdditionalIDLRefPath(IDLReader.getRuntimeHelperFile());
         BuilderTool.build(op, new BuildToolListener() {
             @Override
             public void onAddTarget(BuildToolOptions op, IDLReader idlReader, ArrayList<BuildMultiTarget> targets) {
-                if(op.containsArg("teavm")) {
+                if(op.containsArg("web_wasm")) {
                     targets.add(getTeaVMTarget(op, idlReader, imguiPath));
                 }
-                if(op.containsArg("windows64")) {
-                    targets.add(getWindowTarget(op, imguiPath));
+                if(op.containsArg("windows64_jni")) {
+                    targets.add(getWindowTarget(op, imguiPath, false));
                 }
-                if(op.containsArg("linux64")) {
-                    targets.add(getLinuxTarget(op, imguiPath));
+                if(op.containsArg("linux64_jni")) {
+                    targets.add(getLinuxTarget(op, imguiPath, false));
                 }
-                if(op.containsArg("mac64")) {
-                    targets.add(getMacTarget(op, false, imguiPath));
+                if(op.containsArg("mac64_jni")) {
+                    targets.add(getMacTarget(op, false, imguiPath, false));
                 }
-                if(op.containsArg("macArm")) {
-                    targets.add(getMacTarget(op, true, imguiPath));
+                if(op.containsArg("macArm_jni")) {
+                    targets.add(getMacTarget(op, true, imguiPath, false));
                 }
-//                if(op.containsArg("android")) {
+//                if(op.containsArg("android_jni")) {
 //                    targets.add(getAndroidTarget(op, imguiPath));
 //                }
-//                if(op.containsArg("iOS")) {
+//                if(op.containsArg("ios_jni")) {
 //                    targets.add(getIOSTarget(op, imguiPath));
 //                }
+
+                if(op.containsArg("windows64_ffm")) {
+                    targets.add(getWindowTarget(op, imguiPath, true));
+                }
+                if(op.containsArg("linux64_ffm")) {
+                    targets.add(getLinuxTarget(op, imguiPath, true));
+                }
+                if(op.containsArg("mac64_ffm")) {
+                    targets.add(getMacTarget(op, false, imguiPath, true));
+                }
+                if(op.containsArg("macArm_ffm")) {
+                    targets.add(getMacTarget(op, true, imguiPath, true));
+                }
             }
         });
     }
 
-    private static BuildMultiTarget getWindowTarget(BuildToolOptions op, String imguiPath) {
+    private static BuildMultiTarget getWindowTarget(BuildToolOptions op, String imguiPath, boolean isFFM) {
         String imguiRootBuildPath = imguiPath + "/imgui-build";
         String imguiCustomSourcePath = imguiRootBuildPath + "/src/main/cpp/custom";
         String imguiBuildPath = imguiRootBuildPath + "/build";
@@ -74,9 +85,12 @@ public class BuildTextEdit {
         String libBuildCPPPath = op.getModuleBuildCPPPath();
         String sourceDir = op.getSourceDir();
 
+        String api = isFFM ? "ffm" : "jni";
+
         BuildMultiTarget multiTarget = new BuildMultiTarget();
 
         WindowsMSVCTarget compileStaticTarget = new WindowsMSVCTarget();
+        compileStaticTarget.libDirSuffix += api;
         compileStaticTarget.isStatic = true;
         compileStaticTarget.cppFlags.add("-std:c++17");
         compileStaticTarget.headerDirs.add("-I" + imguiSourcePath);
@@ -91,23 +105,27 @@ public class BuildTextEdit {
 
         // Compile glue code and link
         WindowsMSVCTarget linkTarget = new WindowsMSVCTarget();
-        linkTarget.addJNIHeaders();
+        linkTarget.libDirSuffix += api;
+        if(isFFM) {
+            linkTarget.setupFFMGlueCode(libBuildCPPPath);
+        }
+        else {
+            linkTarget.setupJNIGlueCode(libBuildCPPPath);
+        }
         linkTarget.cppFlags.add("-std:c++17");
         linkTarget.headerDirs.add("-I" + imguiSourcePath);
         linkTarget.headerDirs.add("-I" + sourceDir);
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
-        linkTarget.headerDirs.add("-I" + libBuildCPPPath + "/src/jniglue");
         linkTarget.headerDirs.add("-I" + imguiCustomSourcePath);
-        linkTarget.linkerFlags.add("/WHOLEARCHIVE:" + imguiCppPath + "/libs/windows/vc/imgui64.lib");
-        linkTarget.linkerFlags.add("/WHOLEARCHIVE:" + libBuildCPPPath + "/libs/windows/vc/textedit64_.lib");
-        linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");
+        linkTarget.linkerFlags.add("/WHOLEARCHIVE:" + imguiCppPath + "/libs/windows/vc/" + api + "/imgui64.lib");
+        linkTarget.linkerFlags.add("/WHOLEARCHIVE:" + libBuildCPPPath + "/libs/windows/vc/" + api + "/textedit64_.lib");
         linkTarget.linkerFlags.add("-DLL");
         multiTarget.add(linkTarget);
 
         return multiTarget;
     }
 
-    private static BuildMultiTarget getLinuxTarget(BuildToolOptions op, String imguiPath) {
+    private static BuildMultiTarget getLinuxTarget(BuildToolOptions op, String imguiPath, boolean isFFM) {
         String imguiRootBuildPath = imguiPath + "/imgui-build";
         String imguiCustomSourcePath = imguiRootBuildPath + "/src/main/cpp/custom";
         String imguiBuildPath = imguiRootBuildPath + "/build";
@@ -116,9 +134,12 @@ public class BuildTextEdit {
         String libBuildCPPPath = op.getModuleBuildCPPPath();
         String sourceDir = op.getSourceDir();
 
+        String api = isFFM ? "ffm" : "jni";
+
         BuildMultiTarget multiTarget = new BuildMultiTarget();
 
         LinuxTarget compileStaticTarget = new LinuxTarget();
+        compileStaticTarget.libDirSuffix += api;
         compileStaticTarget.isStatic = true;
         compileStaticTarget.cppFlags.add("-std=c++17");
         compileStaticTarget.cppFlags.add("-fPIC");
@@ -134,27 +155,31 @@ public class BuildTextEdit {
 
         // Compile glue code and link
         LinuxTarget linkTarget = new LinuxTarget();
-        linkTarget.addJNIHeaders();
+        linkTarget.libDirSuffix += api;
+        if(isFFM) {
+            linkTarget.setupFFMGlueCode(libBuildCPPPath);
+        }
+        else {
+            linkTarget.setupJNIGlueCode(libBuildCPPPath);
+        }
         linkTarget.cppFlags.add("-std=c++17");
         linkTarget.cppFlags.add("-fPIC");
         linkTarget.headerDirs.add("-I" + imguiSourcePath);
         linkTarget.headerDirs.add("-I" + sourceDir);
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
-        linkTarget.headerDirs.add("-I" + libBuildCPPPath + "/src/jniglue");
         linkTarget.headerDirs.add("-I" + imguiCustomSourcePath);
-        linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/linux/libtextedit64_.a");
+        linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/linux/" + api + "/libtextedit64_.a");
 
         linkTarget.linkerFlags.add("-Wl,-rpath,$ORIGIN");
         linkTarget.linkerFlags.add("-L" + imguiCppPath + "/libs/linux");
         linkTarget.linkerFlags.add("-limgui64");
 
         multiTarget.add(linkTarget);
-        linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");
 
         return multiTarget;
     }
 
-    private static BuildMultiTarget getMacTarget(BuildToolOptions op, boolean isArm, String imguiPath) {
+    private static BuildMultiTarget getMacTarget(BuildToolOptions op, boolean isArm, String imguiPath, boolean isFFM) {
         String imguiRootBuildPath = imguiPath + "/imgui-build";
         String imguiCustomSourcePath = imguiRootBuildPath + "/src/main/cpp/custom";
         String imguiBuildPath = imguiRootBuildPath + "/build";
@@ -162,9 +187,12 @@ public class BuildTextEdit {
         String libBuildCPPPath = op.getModuleBuildCPPPath();
         String sourceDir = op.getSourceDir();
 
+        String api = isFFM ? "ffm" : "jni";
+
         BuildMultiTarget multiTarget = new BuildMultiTarget();
 
         MacTarget compileStaticTarget = new MacTarget(isArm);
+        compileStaticTarget.libDirSuffix += api;
         compileStaticTarget.isStatic = true;
         compileStaticTarget.cppFlags.add("-std=c++17");
         compileStaticTarget.cppFlags.add("-fPIC");
@@ -181,20 +209,25 @@ public class BuildTextEdit {
 
         // Compile glue code and link
         MacTarget linkTarget = new MacTarget(isArm);
-        linkTarget.addJNIHeaders();
+        linkTarget.libDirSuffix += api;
+        if(isFFM) {
+            linkTarget.setupFFMGlueCode(libBuildCPPPath);
+        }
+        else {
+            linkTarget.setupJNIGlueCode(libBuildCPPPath);
+        }
         linkTarget.cppFlags.add("-std=c++17");
         linkTarget.cppFlags.add("-fPIC");
         linkTarget.cppFlags.add("-DIMGUI_USER_CONFIG=\"ImGuiCustomConfig.h\"");
         linkTarget.headerDirs.add("-I" + imguiSourcePath);
         linkTarget.headerDirs.add("-I" + sourceDir);
         linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
-        linkTarget.headerDirs.add("-I" + libBuildCPPPath + "/src/jniglue");
         linkTarget.headerDirs.add("-I" + imguiCustomSourcePath);
         if(isArm) {
-            linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/mac/arm/libtextedit64_.a");
+            linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/mac/arm/" + api + "/libtextedit64_.a");
         }
         else {
-            linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/mac/libtextedit64_.a");
+            linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/mac/" + api + "/libtextedit64_.a");
         }
 
         // Use -undefined dynamic_lookup so symbols from imgui can be resolved at runtime
@@ -202,7 +235,6 @@ public class BuildTextEdit {
         linkTarget.linkerFlags.add("-undefined");
         linkTarget.linkerFlags.add("dynamic_lookup");
 
-        linkTarget.cppInclude.add(libBuildCPPPath + "/src/jniglue/JNIGlue.cpp");
         multiTarget.add(linkTarget);
 
         return multiTarget;
@@ -243,7 +275,7 @@ public class BuildTextEdit {
 
         // Compile glue code and link
         EmscriptenTarget linkTarget = new EmscriptenTarget();
-        linkTarget.mainModuleName = "idl";
+        linkTarget.mainModuleName = "runtime";
         linkTarget.idlReader = idlReader;
         linkTarget.cppFlags.add("-std=c++17");
         linkTarget.headerDirs.add("-I" + imguiSourcePath);

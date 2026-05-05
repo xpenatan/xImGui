@@ -6,9 +6,9 @@
 
 package imgui.extension.nodeeditor;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum StyleColor implements IDLEnum<StyleColor> {
+public enum StyleColor implements NativeEnum<StyleColor> {
 
     CUSTOM(0),
     StyleColor_Bg(StyleColor_Bg_NATIVE()),
@@ -54,103 +54,43 @@ public enum StyleColor implements IDLEnum<StyleColor> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_Bg;
-*/
     private static native int StyleColor_Bg_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_Grid;
-*/
     private static native int StyleColor_Grid_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_NodeBg;
-*/
     private static native int StyleColor_NodeBg_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_NodeBorder;
-*/
     private static native int StyleColor_NodeBorder_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_HovNodeBorder;
-*/
     private static native int StyleColor_HovNodeBorder_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_SelNodeBorder;
-*/
     private static native int StyleColor_SelNodeBorder_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_NodeSelRect;
-*/
     private static native int StyleColor_NodeSelRect_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_NodeSelRectBorder;
-*/
     private static native int StyleColor_NodeSelRectBorder_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_HovLinkBorder;
-*/
     private static native int StyleColor_HovLinkBorder_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_SelLinkBorder;
-*/
     private static native int StyleColor_SelLinkBorder_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_HighlightLinkBorder;
-*/
     private static native int StyleColor_HighlightLinkBorder_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_LinkSelRect;
-*/
     private static native int StyleColor_LinkSelRect_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_LinkSelRectBorder;
-*/
     private static native int StyleColor_LinkSelRectBorder_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_PinRect;
-*/
     private static native int StyleColor_PinRect_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_PinRectBorder;
-*/
     private static native int StyleColor_PinRectBorder_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_Flow;
-*/
     private static native int StyleColor_Flow_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_FlowMarker;
-*/
     private static native int StyleColor_FlowMarker_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_GroupBg;
-*/
     private static native int StyleColor_GroupBg_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_GroupBorder;
-*/
     private static native int StyleColor_GroupBorder_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_Count;
-*/
     private static native int StyleColor_Count_NATIVE();
 }

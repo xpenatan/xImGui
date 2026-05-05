@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiLayoutType implements IDLEnum<ImGuiLayoutType> {
+public enum ImGuiLayoutType implements NativeEnum<ImGuiLayoutType> {
 
     CUSTOM(0), Horizontal(ImGuiLayoutType_Horizontal_NATIVE()), Vertical(ImGuiLayoutType_Vertical_NATIVE());
 
@@ -34,13 +34,7 @@ public enum ImGuiLayoutType implements IDLEnum<ImGuiLayoutType> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLayoutType_Horizontal;
-*/
     private static native int ImGuiLayoutType_Horizontal_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLayoutType_Vertical;
-*/
     private static native int ImGuiLayoutType_Vertical_NATIVE();
 }

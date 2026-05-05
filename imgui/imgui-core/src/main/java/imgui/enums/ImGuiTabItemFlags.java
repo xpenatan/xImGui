@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiTabItemFlags implements IDLEnum<ImGuiTabItemFlags> {
+public enum ImGuiTabItemFlags implements NativeEnum<ImGuiTabItemFlags> {
 
     CUSTOM(0),
     None(ImGuiTabItemFlags_None_NATIVE()),
@@ -44,53 +44,23 @@ public enum ImGuiTabItemFlags implements IDLEnum<ImGuiTabItemFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_None;
-*/
     private static native int ImGuiTabItemFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_UnsavedDocument;
-*/
     private static native int ImGuiTabItemFlags_UnsavedDocument_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_SetSelected;
-*/
     private static native int ImGuiTabItemFlags_SetSelected_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_NoCloseWithMiddleMouseButton;
-*/
     private static native int ImGuiTabItemFlags_NoCloseWithMiddleMouseButton_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_NoPushId;
-*/
     private static native int ImGuiTabItemFlags_NoPushId_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_NoTooltip;
-*/
     private static native int ImGuiTabItemFlags_NoTooltip_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_NoReorder;
-*/
     private static native int ImGuiTabItemFlags_NoReorder_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_Leading;
-*/
     private static native int ImGuiTabItemFlags_Leading_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_Trailing;
-*/
     private static native int ImGuiTabItemFlags_Trailing_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_NoAssumedClosure;
-*/
     private static native int ImGuiTabItemFlags_NoAssumedClosure_NATIVE();
 }

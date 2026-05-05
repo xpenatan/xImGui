@@ -4,10 +4,10 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.utils.BufferUtils;
 import com.badlogic.gdx.utils.IntMap;
-import com.github.xpenatan.jParser.idl.IDLBase;
-import com.github.xpenatan.jparser.idl.helper.IDLString;
-import com.github.xpenatan.jparser.idl.helper.IDLTemp;
-import com.github.xpenatan.jparser.idl.helper.IDLUtils;
+import com.github.xpenatan.jParser.api.NativeObject;
+import com.github.xpenatan.jparser.runtime.helper.NativeString;
+import com.github.xpenatan.jparser.runtime.helper.NativeTemp;
+import com.github.xpenatan.jparser.runtime.helper.NativeUtils;
 import com.github.xpenatan.webgpu.WGPUAddressMode;
 import com.github.xpenatan.webgpu.WGPUBindGroup;
 import com.github.xpenatan.webgpu.WGPUBindGroupDescriptor;
@@ -141,7 +141,7 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
     private ByteBuffer gammaBuffer;
     private FloatBuffer gammaFloatBuffer;
     private boolean init = true;
-    private final IDLBase empty_01 = IDLBase.native_new();
+    private final NativeObject empty_01 = NativeObject.native_new();
     private ByteBuffer vertexByteBuffer;
     private ByteBuffer indexByteBuffer;
     private FileHandle imgui;
@@ -531,7 +531,7 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
 
     public void saveImGuiData(FileHandle path) {
         if(path != null) {
-            IDLString idlString = ImGui.SaveIniSettingsToMemory();
+            NativeString idlString = ImGui.SaveIniSettingsToMemory();
             String s = idlString.c_str();
             path.writeString(s, false);
         }
@@ -630,10 +630,10 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
                 int vtxByteSize = vtxBuffer.size() * VTX_BUFFER_SIZE;
                 int idxByteSize = idxBuffer.size() * IDX_BUFFER_SIZE;
 
-                IDLBase vtxData = vtxBuffer.get_Data();
-                IDLBase idxData = idxBuffer.get_Data();
-                IDLUtils.copyToByteBuffer(vtxData, vertexByteBuffer, vtxOffset, vtxByteSize);
-                IDLUtils.copyToByteBuffer(idxData, indexByteBuffer, idxOffset, idxByteSize);
+                NativeObject vtxData = vtxBuffer.get_Data();
+                NativeObject idxData = idxBuffer.get_Data();
+                NativeUtils.copyToByteBuffer(vtxData, vertexByteBuffer, vtxOffset, vtxByteSize);
+                NativeUtils.copyToByteBuffer(idxData, indexByteBuffer, idxOffset, idxByteSize);
 
                 vtxOffset += vtxByteSize;
                 idxOffset += idxByteSize;
@@ -729,7 +729,7 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
                 if(get == 0) {
                     continue;
                 }
-                int tex_id_hash = ImGuiInternal.ImHashData(IDLTemp.Long_1(get), Long.BYTES, 0); // Pass ImGui long memory to create hash
+                int tex_id_hash = ImGuiInternal.ImHashData(NativeTemp.Long_1(get), Long.BYTES, 0); // Pass ImGui long memory to create hash
                 WGPUBindGroup bindGroup = textureBindGroups.get(tex_id_hash);
                 if(bindGroup == null) {
                     tmp_textureView.native_setAddress(get);
@@ -817,7 +817,7 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
             int width = tex.get_Width();
             int height = tex.get_Height();
             int bytesPerPixel = tex.get_BytesPerPixel();
-            IDLBase textureIdl = tex.get_BackendUserData();
+            NativeObject textureIdl = tex.get_BackendUserData();
             tmp_texture.native_copy(textureIdl);
 
             int upload_x;
@@ -857,8 +857,8 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
             int bufferSize = width * upload_h * bytesPerPixel;
             ByteBuffer buffer = BufferUtils.newUnsafeByteBuffer(bufferSize);
             buffer.order(ByteOrder.LITTLE_ENDIAN);
-            IDLBase pixels = tex.GetPixelsAt(upload_x, upload_y);
-            IDLUtils.copyToByteBuffer(pixels, buffer,0 , bufferSize);
+            NativeObject pixels = tex.GetPixelsAt(upload_x, upload_y);
+            NativeUtils.copyToByteBuffer(pixels, buffer,0 , bufferSize);
             device.getQueue().writeTexture(dst_view, buffer, bufferSize, layout, write_size);
             tex.SetStatus(ImTextureStatus.OK);
         }
@@ -876,14 +876,14 @@ public class ImGuiGdxWGPUImpl extends ImGuiGdxImpl {
         }
         tmp_textureView.native_takeOwnership();
         tmp_textureView.dispose();
-        IDLBase backendUserData = tex.get_BackendUserData();
+        NativeObject backendUserData = tex.get_BackendUserData();
         tmp_texture.native_copy(backendUserData);
         tmp_texture.release();
         tmp_texture.native_takeOwnership();
         tmp_texture.dispose();
         tex.SetTexID(ImTemp.ImTextureIDRef_1(0));
         tex.SetStatus(ImTextureStatus.Destroyed);
-        tex.set_BackendUserData(IDLBase.NULL);
+        tex.set_BackendUserData(NativeObject.NULL);
     }
 
     private void setupRenderState(float displayX, float displayY, float displaySizeX, float displaySizeY, float frameScaleX, float frameScaleY) {

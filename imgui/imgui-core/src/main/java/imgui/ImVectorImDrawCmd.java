@@ -6,11 +6,9 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 
-public class ImVectorImDrawCmd extends IDLBase {
-
-    private ImDrawCmd ImDrawCmd_TEMP_GEN_0;
+public class ImVectorImDrawCmd extends NativeObject {
 
     static public final ImVectorImDrawCmd NULL = ImVectorImDrawCmd.native_new();
 
@@ -28,39 +26,11 @@ public class ImVectorImDrawCmd extends IDLBase {
         return new ImVectorImDrawCmd((byte) 0, (char) 0);
     }
 
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImVectorImDrawCmd* nativeObject = (ImVectorImDrawCmd*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
-
     public ImDrawCmd getData(int index) {
-        long addr = internal_native_getData_addr(native_address, index);
-        if (addr == 0)
-            return ImDrawCmd.NULL;
-        if (ImDrawCmd_TEMP_GEN_0 == null)
-            ImDrawCmd_TEMP_GEN_0 = ImDrawCmd.native_new();
-        ImDrawCmd_TEMP_GEN_0.internal_reset(addr, false);
-        return ImDrawCmd_TEMP_GEN_0;
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImVectorImDrawCmd* nativeObject = (ImVectorImDrawCmd*)this_addr;
-return (jlong)&(*nativeObject)[(int)index];
-*/
-    public static native long internal_native_getData_addr(long this_addr, int index);
 
     public int size() {
-        return internal_native_size(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImVectorImDrawCmd* nativeObject = (ImVectorImDrawCmd*)this_addr;
-return nativeObject->size();
-*/
-    public static native int internal_native_size(long this_addr);
 }

@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiAxis implements IDLEnum<ImGuiAxis> {
+public enum ImGuiAxis implements NativeEnum<ImGuiAxis> {
 
     CUSTOM(0), None(ImGuiAxis_None_NATIVE()), X(ImGuiAxis_X_NATIVE()), Y(ImGuiAxis_Y_NATIVE());
 
@@ -34,18 +34,9 @@ public enum ImGuiAxis implements IDLEnum<ImGuiAxis> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiAxis_None;
-*/
     private static native int ImGuiAxis_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiAxis_X;
-*/
     private static native int ImGuiAxis_X_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiAxis_Y;
-*/
     private static native int ImGuiAxis_Y_NATIVE();
 }

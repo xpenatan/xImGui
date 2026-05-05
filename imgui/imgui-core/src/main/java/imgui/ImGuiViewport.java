@@ -6,20 +6,10 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 import imgui.enums.ImGuiViewportFlags;
 
-public class ImGuiViewport extends IDLBase {
-
-    private ImVec2 ImVec2_TEMP_GEN_0;
-
-    private ImVec2 ImVec2_TEMP_GEN_1;
-
-    private ImVec2 ImVec2_TEMP_GEN_2;
-
-    private ImVec2 ImVec2_TEMP_GEN_3;
-
-    private ImDrawData ImDrawData_TEMP_GEN_0;
+public class ImGuiViewport extends NativeObject {
 
     static public final ImGuiViewport NULL = ImGuiViewport.native_new();
 
@@ -37,231 +27,66 @@ public class ImGuiViewport extends IDLBase {
         return new ImGuiViewport((byte) 0, (char) 0);
     }
 
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiViewport* nativeObject = (ImGuiViewport*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
-
     public int get_ID() {
-        return internal_native_get_ID(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiViewport* nativeObject = (ImGuiViewport*)this_addr;
-return nativeObject->ID;
-*/
-    public static native int internal_native_get_ID(long this_addr);
 
     public void set_ID(int ID) {
-        internal_native_set_ID(native_address, ID);
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiViewport* nativeObject = (ImGuiViewport*)this_addr;
-nativeObject->ID = ID;
-*/
-    public static native void internal_native_set_ID(long this_addr, int ID);
 
     public ImGuiViewportFlags get_Flags() {
-        int value = internal_native_get_Flags(native_address);
-        ImGuiViewportFlags[] values = ImGuiViewportFlags.values();
-        for (int i = 0; i < values.length; i++) {
-            ImGuiViewportFlags enumVal = values[i];
-            if (enumVal != ImGuiViewportFlags.CUSTOM && enumVal.getValue() == value)
-                return enumVal;
-        }
-        return ImGuiViewportFlags.CUSTOM.setValue(value);
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiViewport* nativeObject = (ImGuiViewport*)this_addr;
-return (jint)nativeObject->Flags;
-*/
-    public static native int internal_native_get_Flags(long this_addr);
 
     public void set_Flags(ImGuiViewportFlags Flags) {
-        internal_native_set_Flags(native_address, Flags.getValue());
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiViewport* nativeObject = (ImGuiViewport*)this_addr;
-nativeObject->Flags = (::ImGuiViewportFlags)Flags;
-*/
-    public static native void internal_native_set_Flags(long this_addr, int Flags);
 
     public ImVec2 get_Pos() {
-        long addr = internal_native_get_Pos_addr(native_address);
-        if (addr == 0)
-            return ImVec2.NULL;
-        if (ImVec2_TEMP_GEN_0 == null)
-            ImVec2_TEMP_GEN_0 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_0.internal_reset(addr, false);
-        return ImVec2_TEMP_GEN_0;
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiViewport* nativeObject = (ImGuiViewport*)this_addr;
-return (jlong)&nativeObject->Pos;
-*/
-    public static native long internal_native_get_Pos_addr(long this_addr);
 
     public void set_Pos(ImVec2 Pos) {
-        internal_native_set_Pos(native_address, Pos.native_address);
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiViewport* nativeObject = (ImGuiViewport*)this_addr;
-nativeObject->Pos = *((ImVec2*)Pos_addr);
-*/
-    public static native void internal_native_set_Pos(long this_addr, long Pos_addr);
 
     public ImVec2 get_Size() {
-        long addr = internal_native_get_Size_addr(native_address);
-        if (addr == 0)
-            return ImVec2.NULL;
-        if (ImVec2_TEMP_GEN_1 == null)
-            ImVec2_TEMP_GEN_1 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_1.internal_reset(addr, false);
-        return ImVec2_TEMP_GEN_1;
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiViewport* nativeObject = (ImGuiViewport*)this_addr;
-return (jlong)&nativeObject->Size;
-*/
-    public static native long internal_native_get_Size_addr(long this_addr);
 
     public void set_Size(ImVec2 Size) {
-        internal_native_set_Size(native_address, Size.native_address);
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiViewport* nativeObject = (ImGuiViewport*)this_addr;
-nativeObject->Size = *((ImVec2*)Size_addr);
-*/
-    public static native void internal_native_set_Size(long this_addr, long Size_addr);
 
     public ImVec2 get_WorkPos() {
-        long addr = internal_native_get_WorkPos_addr(native_address);
-        if (addr == 0)
-            return ImVec2.NULL;
-        if (ImVec2_TEMP_GEN_2 == null)
-            ImVec2_TEMP_GEN_2 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_2.internal_reset(addr, false);
-        return ImVec2_TEMP_GEN_2;
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiViewport* nativeObject = (ImGuiViewport*)this_addr;
-return (jlong)&nativeObject->WorkPos;
-*/
-    public static native long internal_native_get_WorkPos_addr(long this_addr);
 
     public void set_WorkPos(ImVec2 WorkPos) {
-        internal_native_set_WorkPos(native_address, WorkPos.native_address);
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiViewport* nativeObject = (ImGuiViewport*)this_addr;
-nativeObject->WorkPos = *((ImVec2*)WorkPos_addr);
-*/
-    public static native void internal_native_set_WorkPos(long this_addr, long WorkPos_addr);
 
     public ImVec2 get_WorkSize() {
-        long addr = internal_native_get_WorkSize_addr(native_address);
-        if (addr == 0)
-            return ImVec2.NULL;
-        if (ImVec2_TEMP_GEN_3 == null)
-            ImVec2_TEMP_GEN_3 = ImVec2.native_new();
-        ImVec2_TEMP_GEN_3.internal_reset(addr, false);
-        return ImVec2_TEMP_GEN_3;
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiViewport* nativeObject = (ImGuiViewport*)this_addr;
-return (jlong)&nativeObject->WorkSize;
-*/
-    public static native long internal_native_get_WorkSize_addr(long this_addr);
 
     public void set_WorkSize(ImVec2 WorkSize) {
-        internal_native_set_WorkSize(native_address, WorkSize.native_address);
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiViewport* nativeObject = (ImGuiViewport*)this_addr;
-nativeObject->WorkSize = *((ImVec2*)WorkSize_addr);
-*/
-    public static native void internal_native_set_WorkSize(long this_addr, long WorkSize_addr);
 
     public float get_DpiScale() {
-        return internal_native_get_DpiScale(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiViewport* nativeObject = (ImGuiViewport*)this_addr;
-return nativeObject->DpiScale;
-*/
-    public static native float internal_native_get_DpiScale(long this_addr);
 
     public void set_DpiScale(float DpiScale) {
-        internal_native_set_DpiScale(native_address, DpiScale);
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiViewport* nativeObject = (ImGuiViewport*)this_addr;
-nativeObject->DpiScale = DpiScale;
-*/
-    public static native void internal_native_set_DpiScale(long this_addr, float DpiScale);
 
     public int get_ParentViewportId() {
-        return internal_native_get_ParentViewportId(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiViewport* nativeObject = (ImGuiViewport*)this_addr;
-return nativeObject->ParentViewportId;
-*/
-    public static native int internal_native_get_ParentViewportId(long this_addr);
 
     public void set_ParentViewportId(int ParentViewportId) {
-        internal_native_set_ParentViewportId(native_address, ParentViewportId);
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiViewport* nativeObject = (ImGuiViewport*)this_addr;
-nativeObject->ParentViewportId = ParentViewportId;
-*/
-    public static native void internal_native_set_ParentViewportId(long this_addr, int ParentViewportId);
 
     public ImDrawData get_DrawData() {
-        long addr = internal_native_get_DrawData_addr(native_address);
-        if (addr == 0)
-            return ImDrawData.NULL;
-        if (ImDrawData_TEMP_GEN_0 == null)
-            ImDrawData_TEMP_GEN_0 = ImDrawData.native_new();
-        ImDrawData_TEMP_GEN_0.internal_reset(addr, false);
-        return ImDrawData_TEMP_GEN_0;
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiViewport* nativeObject = (ImGuiViewport*)this_addr;
-ImDrawData* attr = nativeObject->DrawData;
-return (jlong)attr;
-*/
-    public static native long internal_native_get_DrawData_addr(long this_addr);
 
     public void set_DrawData(ImDrawData DrawData) {
-        internal_native_set_DrawData(native_address, DrawData.native_address);
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiViewport* nativeObject = (ImGuiViewport*)this_addr;
-nativeObject->DrawData = (ImDrawData*)DrawData_addr;
-*/
-    public static native void internal_native_set_DrawData(long this_addr, long DrawData_addr);
 }

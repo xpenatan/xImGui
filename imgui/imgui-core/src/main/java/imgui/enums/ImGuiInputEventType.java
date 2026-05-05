@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiInputEventType implements IDLEnum<ImGuiInputEventType> {
+public enum ImGuiInputEventType implements NativeEnum<ImGuiInputEventType> {
 
     CUSTOM(0),
     None(ImGuiInputEventType_None_NATIVE()),
@@ -43,48 +43,21 @@ public enum ImGuiInputEventType implements IDLEnum<ImGuiInputEventType> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputEventType_None;
-*/
     private static native int ImGuiInputEventType_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputEventType_MousePos;
-*/
     private static native int ImGuiInputEventType_MousePos_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputEventType_MouseWheel;
-*/
     private static native int ImGuiInputEventType_MouseWheel_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputEventType_MouseButton;
-*/
     private static native int ImGuiInputEventType_MouseButton_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputEventType_MouseViewport;
-*/
     private static native int ImGuiInputEventType_MouseViewport_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputEventType_Key;
-*/
     private static native int ImGuiInputEventType_Key_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputEventType_Text;
-*/
     private static native int ImGuiInputEventType_Text_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputEventType_Focus;
-*/
     private static native int ImGuiInputEventType_Focus_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputEventType_COUNT;
-*/
     private static native int ImGuiInputEventType_COUNT_NATIVE();
 }

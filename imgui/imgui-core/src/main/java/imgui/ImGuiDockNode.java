@@ -6,11 +6,9 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 
-public class ImGuiDockNode extends IDLBase {
-
-    private ImGuiTabBar ImGuiTabBar_TEMP_GEN_0;
+public class ImGuiDockNode extends NativeObject {
 
     static public final ImGuiDockNode NULL = ImGuiDockNode.native_new();
 
@@ -28,80 +26,24 @@ public class ImGuiDockNode extends IDLBase {
         return new ImGuiDockNode((byte) 0, (char) 0);
     }
 
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImGuiDockNode* nativeObject = (ImGuiDockNode*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
-
     public int get_LocalFlags() {
-        return internal_native_get_LocalFlags(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiDockNode* nativeObject = (ImGuiDockNode*)this_addr;
-return nativeObject->LocalFlags;
-*/
-    public static native int internal_native_get_LocalFlags(long this_addr);
 
     public void set_LocalFlags(int LocalFlags) {
-        internal_native_set_LocalFlags(native_address, LocalFlags);
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiDockNode* nativeObject = (ImGuiDockNode*)this_addr;
-nativeObject->LocalFlags = LocalFlags;
-*/
-    public static native void internal_native_set_LocalFlags(long this_addr, int LocalFlags);
 
     public int get_SelectedTabId() {
-        return internal_native_get_SelectedTabId(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiDockNode* nativeObject = (ImGuiDockNode*)this_addr;
-return nativeObject->SelectedTabId;
-*/
-    public static native int internal_native_get_SelectedTabId(long this_addr);
 
     public void set_SelectedTabId(int SelectedTabId) {
-        internal_native_set_SelectedTabId(native_address, SelectedTabId);
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiDockNode* nativeObject = (ImGuiDockNode*)this_addr;
-nativeObject->SelectedTabId = SelectedTabId;
-*/
-    public static native void internal_native_set_SelectedTabId(long this_addr, int SelectedTabId);
 
     public ImGuiTabBar get_TabBar() {
-        long addr = internal_native_get_TabBar_addr(native_address);
-        if (addr == 0)
-            return ImGuiTabBar.NULL;
-        if (ImGuiTabBar_TEMP_GEN_0 == null)
-            ImGuiTabBar_TEMP_GEN_0 = ImGuiTabBar.native_new();
-        ImGuiTabBar_TEMP_GEN_0.internal_reset(addr, false);
-        return ImGuiTabBar_TEMP_GEN_0;
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiDockNode* nativeObject = (ImGuiDockNode*)this_addr;
-ImGuiTabBar* attr = nativeObject->TabBar;
-return (jlong)attr;
-*/
-    public static native long internal_native_get_TabBar_addr(long this_addr);
 
     public void set_TabBar(ImGuiTabBar TabBar) {
-        internal_native_set_TabBar(native_address, TabBar.native_address);
     }
-
-    /*[-JNI;-NATIVE]
-ImGuiDockNode* nativeObject = (ImGuiDockNode*)this_addr;
-nativeObject->TabBar = (ImGuiTabBar*)TabBar_addr;
-*/
-    public static native void internal_native_set_TabBar(long this_addr, long TabBar_addr);
 }

@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiTableFlags implements IDLEnum<ImGuiTableFlags> {
+public enum ImGuiTableFlags implements NativeEnum<ImGuiTableFlags> {
 
     CUSTOM(0),
     None(ImGuiTableFlags_None_NATIVE()),
@@ -71,188 +71,77 @@ public enum ImGuiTableFlags implements IDLEnum<ImGuiTableFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_None;
-*/
     private static native int ImGuiTableFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_Resizable;
-*/
     private static native int ImGuiTableFlags_Resizable_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_Reorderable;
-*/
     private static native int ImGuiTableFlags_Reorderable_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_Hideable;
-*/
     private static native int ImGuiTableFlags_Hideable_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_Sortable;
-*/
     private static native int ImGuiTableFlags_Sortable_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_NoSavedSettings;
-*/
     private static native int ImGuiTableFlags_NoSavedSettings_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_ContextMenuInBody;
-*/
     private static native int ImGuiTableFlags_ContextMenuInBody_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_RowBg;
-*/
     private static native int ImGuiTableFlags_RowBg_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_BordersInnerH;
-*/
     private static native int ImGuiTableFlags_BordersInnerH_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_BordersOuterH;
-*/
     private static native int ImGuiTableFlags_BordersOuterH_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_BordersInnerV;
-*/
     private static native int ImGuiTableFlags_BordersInnerV_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_BordersOuterV;
-*/
     private static native int ImGuiTableFlags_BordersOuterV_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_BordersH;
-*/
     private static native int ImGuiTableFlags_BordersH_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_BordersV;
-*/
     private static native int ImGuiTableFlags_BordersV_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_BordersInner;
-*/
     private static native int ImGuiTableFlags_BordersInner_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_BordersOuter;
-*/
     private static native int ImGuiTableFlags_BordersOuter_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_Borders;
-*/
     private static native int ImGuiTableFlags_Borders_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_NoBordersInBody;
-*/
     private static native int ImGuiTableFlags_NoBordersInBody_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_NoBordersInBodyUntilResize;
-*/
     private static native int ImGuiTableFlags_NoBordersInBodyUntilResize_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_SizingFixedFit;
-*/
     private static native int ImGuiTableFlags_SizingFixedFit_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_SizingFixedSame;
-*/
     private static native int ImGuiTableFlags_SizingFixedSame_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_SizingStretchProp;
-*/
     private static native int ImGuiTableFlags_SizingStretchProp_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_SizingStretchSame;
-*/
     private static native int ImGuiTableFlags_SizingStretchSame_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_NoHostExtendX;
-*/
     private static native int ImGuiTableFlags_NoHostExtendX_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_NoHostExtendY;
-*/
     private static native int ImGuiTableFlags_NoHostExtendY_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_NoKeepColumnsVisible;
-*/
     private static native int ImGuiTableFlags_NoKeepColumnsVisible_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_PreciseWidths;
-*/
     private static native int ImGuiTableFlags_PreciseWidths_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_NoClip;
-*/
     private static native int ImGuiTableFlags_NoClip_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_PadOuterX;
-*/
     private static native int ImGuiTableFlags_PadOuterX_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_NoPadOuterX;
-*/
     private static native int ImGuiTableFlags_NoPadOuterX_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_NoPadInnerX;
-*/
     private static native int ImGuiTableFlags_NoPadInnerX_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_ScrollX;
-*/
     private static native int ImGuiTableFlags_ScrollX_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_ScrollY;
-*/
     private static native int ImGuiTableFlags_ScrollY_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_SortMulti;
-*/
     private static native int ImGuiTableFlags_SortMulti_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_SortTristate;
-*/
     private static native int ImGuiTableFlags_SortTristate_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_HighlightHoveredColumn;
-*/
     private static native int ImGuiTableFlags_HighlightHoveredColumn_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableFlags_SizingMask_;
-*/
     private static native int ImGuiTableFlags_SizingMask__NATIVE();
 }

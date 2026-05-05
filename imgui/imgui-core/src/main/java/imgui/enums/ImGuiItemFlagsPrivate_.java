@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiItemFlagsPrivate_ implements IDLEnum<ImGuiItemFlagsPrivate_> {
+public enum ImGuiItemFlagsPrivate_ implements NativeEnum<ImGuiItemFlagsPrivate_> {
 
     CUSTOM(0),
     Disabled(ImGuiItemFlags_Disabled_NATIVE()),
@@ -46,63 +46,27 @@ public enum ImGuiItemFlagsPrivate_ implements IDLEnum<ImGuiItemFlagsPrivate_> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_Disabled;
-*/
     private static native int ImGuiItemFlags_Disabled_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_ReadOnly;
-*/
     private static native int ImGuiItemFlags_ReadOnly_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_MixedValue;
-*/
     private static native int ImGuiItemFlags_MixedValue_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_NoWindowHoverableCheck;
-*/
     private static native int ImGuiItemFlags_NoWindowHoverableCheck_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_AllowOverlap;
-*/
     private static native int ImGuiItemFlags_AllowOverlap_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_NoNavDisableMouseHover;
-*/
     private static native int ImGuiItemFlags_NoNavDisableMouseHover_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_NoMarkEdited;
-*/
     private static native int ImGuiItemFlags_NoMarkEdited_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_NoFocus;
-*/
     private static native int ImGuiItemFlags_NoFocus_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_Inputable;
-*/
     private static native int ImGuiItemFlags_Inputable_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_HasSelectionUserData;
-*/
     private static native int ImGuiItemFlags_HasSelectionUserData_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_IsMultiSelect;
-*/
     private static native int ImGuiItemFlags_IsMultiSelect_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_Default_;
-*/
     private static native int ImGuiItemFlags_Default__NATIVE();
 }

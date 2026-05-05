@@ -6,13 +6,9 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 
-public class ImVectorImGuiWindowPtr extends IDLBase {
-
-    private ImGuiWindow ImGuiWindow_TEMP_GEN_0;
-
-    private IDLBase IDLBase_TEMP_GEN_0;
+public class ImVectorImGuiWindowPtr extends NativeObject {
 
     static public final ImVectorImGuiWindowPtr NULL = ImVectorImGuiWindowPtr.native_new();
 
@@ -30,56 +26,15 @@ public class ImVectorImGuiWindowPtr extends IDLBase {
         return new ImVectorImGuiWindowPtr((byte) 0, (char) 0);
     }
 
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImVectorImGuiWindowPtr* nativeObject = (ImVectorImGuiWindowPtr*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
-
     public int size() {
-        return internal_native_size(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImVectorImGuiWindowPtr* nativeObject = (ImVectorImGuiWindowPtr*)this_addr;
-return nativeObject->size();
-*/
-    public static native int internal_native_size(long this_addr);
 
     public ImGuiWindow getData(int index) {
-        long addr = internal_native_getData_addr(native_address, index);
-        if (addr == 0)
-            return ImGuiWindow.NULL;
-        if (ImGuiWindow_TEMP_GEN_0 == null)
-            ImGuiWindow_TEMP_GEN_0 = ImGuiWindow.native_new();
-        ImGuiWindow_TEMP_GEN_0.internal_reset(addr, false);
-        return ImGuiWindow_TEMP_GEN_0;
+        return null;
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorImGuiWindowPtr* nativeObject = (ImVectorImGuiWindowPtr*)this_addr;
-ImGuiWindow* obj = (*nativeObject)[(int)index];
-return (jlong)obj;
-*/
-    public static native long internal_native_getData_addr(long this_addr, int index);
-
-    public IDLBase get_Data() {
-        long addr = internal_native_get_Data_addr(native_address);
-        if (addr == 0)
-            return IDLBase.NULL;
-        if (IDLBase_TEMP_GEN_0 == null)
-            IDLBase_TEMP_GEN_0 = IDLBase.native_new();
-        IDLBase_TEMP_GEN_0.internal_reset(addr, false);
-        return IDLBase_TEMP_GEN_0;
+    public NativeObject get_Data() {
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImVectorImGuiWindowPtr* nativeObject = (ImVectorImGuiWindowPtr*)this_addr;
-return (jlong)nativeObject->Data;
-*/
-    public static native long internal_native_get_Data_addr(long this_addr);
 }

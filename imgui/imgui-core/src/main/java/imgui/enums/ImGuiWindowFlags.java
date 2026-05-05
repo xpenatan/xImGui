@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiWindowFlags implements IDLEnum<ImGuiWindowFlags> {
+public enum ImGuiWindowFlags implements NativeEnum<ImGuiWindowFlags> {
 
     CUSTOM(0),
     None(ImGuiWindowFlags_None_NATIVE()),
@@ -64,153 +64,63 @@ public enum ImGuiWindowFlags implements IDLEnum<ImGuiWindowFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_None;
-*/
     private static native int ImGuiWindowFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_NoTitleBar;
-*/
     private static native int ImGuiWindowFlags_NoTitleBar_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_NoResize;
-*/
     private static native int ImGuiWindowFlags_NoResize_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_NoMove;
-*/
     private static native int ImGuiWindowFlags_NoMove_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_NoScrollbar;
-*/
     private static native int ImGuiWindowFlags_NoScrollbar_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_NoScrollWithMouse;
-*/
     private static native int ImGuiWindowFlags_NoScrollWithMouse_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_NoCollapse;
-*/
     private static native int ImGuiWindowFlags_NoCollapse_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_AlwaysAutoResize;
-*/
     private static native int ImGuiWindowFlags_AlwaysAutoResize_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_NoBackground;
-*/
     private static native int ImGuiWindowFlags_NoBackground_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_NoSavedSettings;
-*/
     private static native int ImGuiWindowFlags_NoSavedSettings_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_NoMouseInputs;
-*/
     private static native int ImGuiWindowFlags_NoMouseInputs_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_MenuBar;
-*/
     private static native int ImGuiWindowFlags_MenuBar_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_HorizontalScrollbar;
-*/
     private static native int ImGuiWindowFlags_HorizontalScrollbar_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_NoFocusOnAppearing;
-*/
     private static native int ImGuiWindowFlags_NoFocusOnAppearing_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_NoBringToFrontOnFocus;
-*/
     private static native int ImGuiWindowFlags_NoBringToFrontOnFocus_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_AlwaysVerticalScrollbar;
-*/
     private static native int ImGuiWindowFlags_AlwaysVerticalScrollbar_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_AlwaysHorizontalScrollbar;
-*/
     private static native int ImGuiWindowFlags_AlwaysHorizontalScrollbar_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_NoNavInputs;
-*/
     private static native int ImGuiWindowFlags_NoNavInputs_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_NoNavFocus;
-*/
     private static native int ImGuiWindowFlags_NoNavFocus_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_UnsavedDocument;
-*/
     private static native int ImGuiWindowFlags_UnsavedDocument_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_NoDocking;
-*/
     private static native int ImGuiWindowFlags_NoDocking_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_NoNav;
-*/
     private static native int ImGuiWindowFlags_NoNav_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_NoDecoration;
-*/
     private static native int ImGuiWindowFlags_NoDecoration_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_NoInputs;
-*/
     private static native int ImGuiWindowFlags_NoInputs_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_DockNodeHost;
-*/
     private static native int ImGuiWindowFlags_DockNodeHost_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_ChildWindow;
-*/
     private static native int ImGuiWindowFlags_ChildWindow_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_Tooltip;
-*/
     private static native int ImGuiWindowFlags_Tooltip_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_Popup;
-*/
     private static native int ImGuiWindowFlags_Popup_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_Modal;
-*/
     private static native int ImGuiWindowFlags_Modal_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowFlags_ChildMenu;
-*/
     private static native int ImGuiWindowFlags_ChildMenu_NATIVE();
 }

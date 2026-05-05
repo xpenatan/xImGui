@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiDockNodeFlagsPrivate_ implements IDLEnum<ImGuiDockNodeFlagsPrivate_> {
+public enum ImGuiDockNodeFlagsPrivate_ implements NativeEnum<ImGuiDockNodeFlagsPrivate_> {
 
     CUSTOM(0),
     DockSpace(ImGuiDockNodeFlags_DockSpace_NATIVE()),
@@ -52,93 +52,39 @@ public enum ImGuiDockNodeFlagsPrivate_ implements IDLEnum<ImGuiDockNodeFlagsPriv
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_DockSpace;
-*/
     private static native int ImGuiDockNodeFlags_DockSpace_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_CentralNode;
-*/
     private static native int ImGuiDockNodeFlags_CentralNode_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoTabBar;
-*/
     private static native int ImGuiDockNodeFlags_NoTabBar_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_HiddenTabBar;
-*/
     private static native int ImGuiDockNodeFlags_HiddenTabBar_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoWindowMenuButton;
-*/
     private static native int ImGuiDockNodeFlags_NoWindowMenuButton_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoCloseButton;
-*/
     private static native int ImGuiDockNodeFlags_NoCloseButton_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoResizeX;
-*/
     private static native int ImGuiDockNodeFlags_NoResizeX_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoResizeY;
-*/
     private static native int ImGuiDockNodeFlags_NoResizeY_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_DockedWindowsInFocusRoute;
-*/
     private static native int ImGuiDockNodeFlags_DockedWindowsInFocusRoute_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoDockingSplitOther;
-*/
     private static native int ImGuiDockNodeFlags_NoDockingSplitOther_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoDockingOverMe;
-*/
     private static native int ImGuiDockNodeFlags_NoDockingOverMe_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoDockingOverOther;
-*/
     private static native int ImGuiDockNodeFlags_NoDockingOverOther_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoDockingOverEmpty;
-*/
     private static native int ImGuiDockNodeFlags_NoDockingOverEmpty_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoDocking;
-*/
     private static native int ImGuiDockNodeFlags_NoDocking_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_SharedFlagsInheritMask_;
-*/
     private static native int ImGuiDockNodeFlags_SharedFlagsInheritMask__NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoResizeFlagsMask_;
-*/
     private static native int ImGuiDockNodeFlags_NoResizeFlagsMask__NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_LocalFlagsTransferMask_;
-*/
     private static native int ImGuiDockNodeFlags_LocalFlagsTransferMask__NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_SavedFlagsMask_;
-*/
     private static native int ImGuiDockNodeFlags_SavedFlagsMask__NATIVE();
 }

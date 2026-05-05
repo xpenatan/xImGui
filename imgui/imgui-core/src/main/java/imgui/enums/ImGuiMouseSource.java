@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiMouseSource implements IDLEnum<ImGuiMouseSource> {
+public enum ImGuiMouseSource implements NativeEnum<ImGuiMouseSource> {
 
     CUSTOM(0), Mouse(ImGuiMouseSource_Mouse_NATIVE()), TouchScreen(ImGuiMouseSource_TouchScreen_NATIVE()), Pen(ImGuiMouseSource_Pen_NATIVE());
 
@@ -34,18 +34,9 @@ public enum ImGuiMouseSource implements IDLEnum<ImGuiMouseSource> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseSource_Mouse;
-*/
     private static native int ImGuiMouseSource_Mouse_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseSource_TouchScreen;
-*/
     private static native int ImGuiMouseSource_TouchScreen_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseSource_Pen;
-*/
     private static native int ImGuiMouseSource_Pen_NATIVE();
 }

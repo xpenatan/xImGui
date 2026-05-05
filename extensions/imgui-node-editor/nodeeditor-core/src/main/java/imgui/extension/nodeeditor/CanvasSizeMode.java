@@ -6,9 +6,9 @@
 
 package imgui.extension.nodeeditor;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum CanvasSizeMode implements IDLEnum<CanvasSizeMode> {
+public enum CanvasSizeMode implements NativeEnum<CanvasSizeMode> {
 
     CUSTOM(0), FitVerticalView(FitVerticalView_NATIVE()), FitHorizontalView(FitHorizontalView_NATIVE()), CenterOnly(CenterOnly_NATIVE());
 
@@ -34,18 +34,9 @@ public enum CanvasSizeMode implements IDLEnum<CanvasSizeMode> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)CanvasSizeMode::FitVerticalView;
-*/
     private static native int FitVerticalView_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)CanvasSizeMode::FitHorizontalView;
-*/
     private static native int FitHorizontalView_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)CanvasSizeMode::CenterOnly;
-*/
     private static native int CenterOnly_NATIVE();
 }

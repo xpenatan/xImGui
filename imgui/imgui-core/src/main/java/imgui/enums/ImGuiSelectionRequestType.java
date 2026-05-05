@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiSelectionRequestType implements IDLEnum<ImGuiSelectionRequestType> {
+public enum ImGuiSelectionRequestType implements NativeEnum<ImGuiSelectionRequestType> {
 
     CUSTOM(0), None(ImGuiSelectionRequestType_None_NATIVE()), SetAll(ImGuiSelectionRequestType_SetAll_NATIVE()), SetRange(ImGuiSelectionRequestType_SetRange_NATIVE());
 
@@ -34,18 +34,9 @@ public enum ImGuiSelectionRequestType implements IDLEnum<ImGuiSelectionRequestTy
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectionRequestType_None;
-*/
     private static native int ImGuiSelectionRequestType_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectionRequestType_SetAll;
-*/
     private static native int ImGuiSelectionRequestType_SetAll_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectionRequestType_SetRange;
-*/
     private static native int ImGuiSelectionRequestType_SetRange_NATIVE();
 }

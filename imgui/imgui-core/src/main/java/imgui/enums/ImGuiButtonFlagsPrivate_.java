@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiButtonFlagsPrivate_ implements IDLEnum<ImGuiButtonFlagsPrivate_> {
+public enum ImGuiButtonFlagsPrivate_ implements NativeEnum<ImGuiButtonFlagsPrivate_> {
 
     CUSTOM(0),
     PressedOnClick(ImGuiButtonFlags_PressedOnClick_NATIVE()),
@@ -52,93 +52,39 @@ public enum ImGuiButtonFlagsPrivate_ implements IDLEnum<ImGuiButtonFlagsPrivate_
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_PressedOnClick;
-*/
     private static native int ImGuiButtonFlags_PressedOnClick_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_PressedOnClickRelease;
-*/
     private static native int ImGuiButtonFlags_PressedOnClickRelease_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_PressedOnClickReleaseAnywhere;
-*/
     private static native int ImGuiButtonFlags_PressedOnClickReleaseAnywhere_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_PressedOnRelease;
-*/
     private static native int ImGuiButtonFlags_PressedOnRelease_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_PressedOnDoubleClick;
-*/
     private static native int ImGuiButtonFlags_PressedOnDoubleClick_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_PressedOnDragDropHold;
-*/
     private static native int ImGuiButtonFlags_PressedOnDragDropHold_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_FlattenChildren;
-*/
     private static native int ImGuiButtonFlags_FlattenChildren_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_AllowOverlap;
-*/
     private static native int ImGuiButtonFlags_AllowOverlap_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_AlignTextBaseLine;
-*/
     private static native int ImGuiButtonFlags_AlignTextBaseLine_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_NoKeyModsAllowed;
-*/
     private static native int ImGuiButtonFlags_NoKeyModsAllowed_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_NoHoldingActiveId;
-*/
     private static native int ImGuiButtonFlags_NoHoldingActiveId_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_NoNavFocus;
-*/
     private static native int ImGuiButtonFlags_NoNavFocus_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_NoHoveredOnFocus;
-*/
     private static native int ImGuiButtonFlags_NoHoveredOnFocus_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_NoSetKeyOwner;
-*/
     private static native int ImGuiButtonFlags_NoSetKeyOwner_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_NoTestKeyOwner;
-*/
     private static native int ImGuiButtonFlags_NoTestKeyOwner_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_NoFocus;
-*/
     private static native int ImGuiButtonFlags_NoFocus_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_PressedOnMask_;
-*/
     private static native int ImGuiButtonFlags_PressedOnMask__NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_PressedOnDefault_;
-*/
     private static native int ImGuiButtonFlags_PressedOnDefault__NATIVE();
 }

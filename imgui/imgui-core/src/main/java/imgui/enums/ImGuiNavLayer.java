@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiNavLayer implements IDLEnum<ImGuiNavLayer> {
+public enum ImGuiNavLayer implements NativeEnum<ImGuiNavLayer> {
 
     CUSTOM(0), Main(ImGuiNavLayer_Main_NATIVE()), Menu(ImGuiNavLayer_Menu_NATIVE()), COUNT(ImGuiNavLayer_COUNT_NATIVE());
 
@@ -34,18 +34,9 @@ public enum ImGuiNavLayer implements IDLEnum<ImGuiNavLayer> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavLayer_Main;
-*/
     private static native int ImGuiNavLayer_Main_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavLayer_Menu;
-*/
     private static native int ImGuiNavLayer_Menu_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavLayer_COUNT;
-*/
     private static native int ImGuiNavLayer_COUNT_NATIVE();
 }

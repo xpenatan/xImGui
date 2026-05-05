@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiInputSource implements IDLEnum<ImGuiInputSource> {
+public enum ImGuiInputSource implements NativeEnum<ImGuiInputSource> {
 
     CUSTOM(0),
     None(ImGuiInputSource_None_NATIVE()),
@@ -39,28 +39,13 @@ public enum ImGuiInputSource implements IDLEnum<ImGuiInputSource> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputSource_None;
-*/
     private static native int ImGuiInputSource_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputSource_Mouse;
-*/
     private static native int ImGuiInputSource_Mouse_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputSource_Keyboard;
-*/
     private static native int ImGuiInputSource_Keyboard_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputSource_Gamepad;
-*/
     private static native int ImGuiInputSource_Gamepad_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputSource_COUNT;
-*/
     private static native int ImGuiInputSource_COUNT_NATIVE();
 }

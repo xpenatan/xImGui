@@ -10,8 +10,8 @@ interface ImTextureIDRef {
 //    void setClipboardTextFunction(ImGuiIO io, ClipboardTextFunction clipboardFunction);
 //    void memcpyIdx(any destination, ImDrawList drawList, long num);
 //    void memcpyVtx(any destination, ImDrawList drawList, long num);
-//    void memcpyFont32(ImFontAtlas fontAtlas, IDLByteArray pixelBuffer, long[] widthData, long[] heightData);
-//    void memcpyFont8(ImFontAtlas fontAtlas, IDLByteArray pixelBuffer, long[] widthData, long[] heightData);
+//    void memcpyFont32(ImFontAtlas fontAtlas, NativeByteArray pixelBuffer, long[] widthData, long[] heightData);
+//    void memcpyFont8(ImFontAtlas fontAtlas, NativeByteArray pixelBuffer, long[] widthData, long[] heightData);
 //    void updateFontName(ImFont font, [Const] DOMString name, float size_pixels);
 //    long long getTextureId(ImDrawCmd imDrawCmd);
 //    void setIniFilename(ImGuiIO io, byte[] fileName);
@@ -682,7 +682,7 @@ interface ImGui {
     static void                      ShowStyleSelector([Const] DOMString label);
     static void                      ShowFontSelector([Const] DOMString label);
     static void                      ShowUserGuide();
-    [Const, Value] static IDLString  GetVersion();
+    [Const, Value] static NativeString  GetVersion();
 
     // Styles
     static void                    StyleColorsDark(optional ImGuiStyle dst);
@@ -1005,7 +1005,7 @@ interface ImGui {
     static long                      TableGetColumnCount();
     static long                      TableGetColumnIndex();
     static long                      TableGetRowIndex();
-    [Const, Value] static IDLString  TableGetColumnName(optional long column_n);
+    [Const, Value] static NativeString  TableGetColumnName(optional long column_n);
     static long                      TableGetColumnFlags(optional long column_n);
     static void                      TableSetColumnEnabled(long column_n, boolean v);
     static long                      TableGetHoveredColumn();
@@ -1092,7 +1092,7 @@ interface ImGui {
     static double                    GetTime();
     static long                      GetFrameCount();
     static ImDrawListSharedData      GetDrawListSharedData();
-    [Const, Value] static IDLString  GetStyleColorName(long idx);
+    [Const, Value] static NativeString  GetStyleColorName(long idx);
     static void                      SetStateStorage(ImGuiStorage storage);
     static ImGuiStorage              GetStateStorage();
 
@@ -1111,7 +1111,7 @@ interface ImGui {
     static boolean                   IsKeyReleased(ImGuiKey ImGuiKey);
     static boolean                   IsKeyChordPressed(long key_chord);
     static long                      GetKeyPressedAmount(ImGuiKey ImGuiKey, float repeat_delay, float rate);
-    [Const, Value] static IDLString  GetKeyName(ImGuiKey key);
+    [Const, Value] static NativeString  GetKeyName(ImGuiKey key);
     static void                      SetNextFrameWantCaptureKeyboard(boolean want_capture_keyboard);
 
     // Inputs Utilities: Shortcut Testing & Routing [BETA]
@@ -1141,14 +1141,14 @@ interface ImGui {
     static void                    SetNextFrameWantCaptureMouse(boolean want_capture_mouse);
 
     // Clipboard Utilities
-    [Const, Value] static IDLString  GetClipboardText();
+    [Const, Value] static NativeString  GetClipboardText();
     static void                      SetClipboardText([Const] DOMString text);
 
     // Settings/.Ini Utilities
     static void                     LoadIniSettingsFromDisk([Const] DOMString ini_filename);
     static void                     LoadIniSettingsFromMemory([Const] DOMString ini_data, optional long long ini_size);
     static void                     SaveIniSettingsToDisk([Const] DOMString ini_filename);
-    [Const, Value] static IDLString SaveIniSettingsToMemory();
+    [Const, Value] static NativeString SaveIniSettingsToMemory();
 
     // Debug Utilities
     static void                    DebugTextEncoding([Const] DOMString text);
@@ -1267,7 +1267,7 @@ interface ImVectorDOMString {
     readonly attribute any Data;
     void ImVectorDOMString();
     long size();
-    [Operator="[]", Const, Value] IDLString getData(long index);
+    [Operator="[]", Const, Value] NativeString getData(long index);
     void push_back([Const] DOMString v);
     void reserve(long new_capacity);
     void resize(long new_size);
@@ -1875,8 +1875,8 @@ interface ClipboardTextFunction {
 [JSImplementation="ClipboardTextFunction"]
 interface ClipboardTextFunctionImpl {
     void ClipboardTextFunctionImpl();
-    void onGetClipboardText(IDLString strOut);
-    void onSetClipboardText(IDLString text);
+    void onGetClipboardText(NativeString strOut);
+    void onSetClipboardText(NativeString text);
 };
 
 interface ImGuiMultiSelectIO {

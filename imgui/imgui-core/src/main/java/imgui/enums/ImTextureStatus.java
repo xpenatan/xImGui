@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImTextureStatus implements IDLEnum<ImTextureStatus> {
+public enum ImTextureStatus implements NativeEnum<ImTextureStatus> {
 
     CUSTOM(0),
     OK(ImTextureStatus_OK_NATIVE()),
@@ -39,28 +39,13 @@ public enum ImTextureStatus implements IDLEnum<ImTextureStatus> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTextureStatus_OK;
-*/
     private static native int ImTextureStatus_OK_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTextureStatus_Destroyed;
-*/
     private static native int ImTextureStatus_Destroyed_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTextureStatus_WantCreate;
-*/
     private static native int ImTextureStatus_WantCreate_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTextureStatus_WantUpdates;
-*/
     private static native int ImTextureStatus_WantUpdates_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTextureStatus_WantDestroy;
-*/
     private static native int ImTextureStatus_WantDestroy_NATIVE();
 }

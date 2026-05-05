@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiTooltipFlags implements IDLEnum<ImGuiTooltipFlags> {
+public enum ImGuiTooltipFlags implements NativeEnum<ImGuiTooltipFlags> {
 
     CUSTOM(0), None(ImGuiTooltipFlags_None_NATIVE()), OverridePrevious(ImGuiTooltipFlags_OverridePrevious_NATIVE());
 
@@ -34,13 +34,7 @@ public enum ImGuiTooltipFlags implements IDLEnum<ImGuiTooltipFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTooltipFlags_None;
-*/
     private static native int ImGuiTooltipFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTooltipFlags_OverridePrevious;
-*/
     private static native int ImGuiTooltipFlags_OverridePrevious_NATIVE();
 }

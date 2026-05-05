@@ -6,9 +6,9 @@
 
 package imgui.extension.nodeeditor;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum PinKind implements IDLEnum<PinKind> {
+public enum PinKind implements NativeEnum<PinKind> {
 
     CUSTOM(0), Input(Input_NATIVE()), Output(Output_NATIVE());
 
@@ -34,13 +34,7 @@ public enum PinKind implements IDLEnum<PinKind> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)PinKind::Input;
-*/
     private static native int Input_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)PinKind::Output;
-*/
     private static native int Output_NATIVE();
 }

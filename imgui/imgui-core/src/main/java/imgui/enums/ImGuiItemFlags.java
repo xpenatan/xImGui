@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiItemFlags implements IDLEnum<ImGuiItemFlags> {
+public enum ImGuiItemFlags implements NativeEnum<ImGuiItemFlags> {
 
     CUSTOM(0),
     None(ImGuiItemFlags_None_NATIVE()),
@@ -41,38 +41,17 @@ public enum ImGuiItemFlags implements IDLEnum<ImGuiItemFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_None;
-*/
     private static native int ImGuiItemFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_NoTabStop;
-*/
     private static native int ImGuiItemFlags_NoTabStop_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_NoNav;
-*/
     private static native int ImGuiItemFlags_NoNav_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_NoNavDefaultFocus;
-*/
     private static native int ImGuiItemFlags_NoNavDefaultFocus_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_ButtonRepeat;
-*/
     private static native int ImGuiItemFlags_ButtonRepeat_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_AutoClosePopups;
-*/
     private static native int ImGuiItemFlags_AutoClosePopups_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_AllowDuplicateId;
-*/
     private static native int ImGuiItemFlags_AllowDuplicateId_NATIVE();
 }

@@ -11,16 +11,14 @@ import com.badlogic.gdx.graphics.glutils.GLVersion;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.badlogic.gdx.math.Matrix4;
 import com.badlogic.gdx.utils.BufferUtils;
-import com.github.xpenatan.jParser.idl.IDLBase;
-import com.github.xpenatan.jparser.idl.helper.IDLString;
-import com.github.xpenatan.jparser.idl.helper.IDLUtils;
-import imgui.ClipboardTextFunction;
+import com.github.xpenatan.jParser.api.NativeObject;
+import com.github.xpenatan.jparser.runtime.helper.NativeString;
+import com.github.xpenatan.jparser.runtime.helper.NativeUtils;
 import imgui.ImDrawCmd;
 import imgui.ImDrawData;
 import imgui.ImDrawList;
 import imgui.ImGui;
 import imgui.ImGuiIO;
-import imgui.ImGuiImpl;
 import imgui.ImGuiPlatformIO;
 import imgui.ImTemp;
 import imgui.ImTextureData;
@@ -140,8 +138,8 @@ public class ImGuiGdxGLImpl extends ImGuiGdxImpl {
             int bytesPerPixel = tex.get_BytesPerPixel();
             ByteBuffer pixels = BufferUtils.newUnsafeByteBuffer(sizeBytes);
             pixels.order(ByteOrder.LITTLE_ENDIAN);
-            IDLBase pixelsBuff = tex.GetPixels();
-            IDLUtils.copyToByteBuffer(pixelsBuff, pixels,0 , sizeBytes);
+            NativeObject pixelsBuff = tex.GetPixels();
+            NativeUtils.copyToByteBuffer(pixelsBuff, pixels,0 , sizeBytes);
             int width = tex.get_Width();
             int height = tex.get_Height();
             tempTextureBuffer.put(0, 0);
@@ -180,10 +178,10 @@ public class ImGuiGdxGLImpl extends ImGuiGdxImpl {
                     short r_w = r.get_w();
                     short r_h = r.get_h();
                     int bufferSize = width * r_h * bytesPerPixel;
-                    IDLBase pixels = tex.GetPixelsAt(r_x, r_y);
+                    NativeObject pixels = tex.GetPixelsAt(r_x, r_y);
                     ByteBuffer byteBuffer = BufferUtils.newUnsafeByteBuffer(bufferSize);
                     byteBuffer.order(ByteOrder.LITTLE_ENDIAN);
-                    IDLUtils.copyToByteBuffer(pixels, byteBuffer, 0, bufferSize);
+                    NativeUtils.copyToByteBuffer(pixels, byteBuffer, 0, bufferSize);
                     Gdx.gl.glTexSubImage2D(GL20.GL_TEXTURE_2D, 0, r_x, r_y, r_w, r_h, GL20.GL_RGBA, GL20.GL_UNSIGNED_BYTE, byteBuffer);
                     BufferUtils.disposeUnsafeByteBuffer(byteBuffer);
                 }
@@ -203,8 +201,8 @@ public class ImGuiGdxGLImpl extends ImGuiGdxImpl {
 
                         int offset = 0;
                         for (int y = 0; y < r_h; y++) {
-                            IDLBase src_row = tex.GetPixelsAt(r_x, r_y + y);
-                            IDLUtils.copyToByteBuffer(src_row, byteBuffer, offset, src_pitch);
+                            NativeObject src_row = tex.GetPixelsAt(r_x, r_y + y);
+                            NativeUtils.copyToByteBuffer(src_row, byteBuffer, offset, src_pitch);
                             offset += src_pitch;
                         }
                         Gdx.gl.glTexSubImage2D(GL20.GL_TEXTURE_2D, 0, r_x, r_y, r_w, r_h, GL20.GL_RGBA, GL20.GL_UNSIGNED_BYTE, byteBuffer);
@@ -215,8 +213,8 @@ public class ImGuiGdxGLImpl extends ImGuiGdxImpl {
                         ByteBuffer byteBuffer = BufferUtils.newUnsafeByteBuffer(bufferSize);
                         byteBuffer.order(ByteOrder.LITTLE_ENDIAN);
                         for (int y = 0; y < r_h; y++) {
-                            IDLBase row_pixels = tex.GetPixelsAt(r_x, r_y + y);
-                            IDLUtils.copyToByteBuffer(row_pixels, byteBuffer, 0, bufferSize);
+                            NativeObject row_pixels = tex.GetPixelsAt(r_x, r_y + y);
+                            NativeUtils.copyToByteBuffer(row_pixels, byteBuffer, 0, bufferSize);
                             Gdx.gl.glTexSubImage2D(GL20.GL_TEXTURE_2D, 0, r_x, r_y + y, r_w, r_h, GL20.GL_RGBA, GL20.GL_UNSIGNED_BYTE, byteBuffer);
                         }
                         BufferUtils.disposeUnsafeByteBuffer(byteBuffer);
@@ -353,10 +351,10 @@ public class ImGuiGdxGLImpl extends ImGuiGdxImpl {
                 indexByteBuffer.order(ByteOrder.LITTLE_ENDIAN);
             }
 
-            IDLBase vtxData = vtxBuffer.get_Data();
-            IDLBase idxData = idxBuffer.get_Data();
-            IDLUtils.copyToByteBuffer(vtxData, vertexByteBuffer, 0, vtxByteSize);
-            IDLUtils.copyToByteBuffer(idxData, indexByteBuffer, 0, idxByteSize);
+            NativeObject vtxData = vtxBuffer.get_Data();
+            NativeObject idxData = idxBuffer.get_Data();
+            NativeUtils.copyToByteBuffer(vtxData, vertexByteBuffer, 0, vtxByteSize);
+            NativeUtils.copyToByteBuffer(idxData, indexByteBuffer, 0, idxByteSize);
 
             Gdx.gl.glBufferData(GL20.GL_ARRAY_BUFFER, vtxByteSize, vertexByteBuffer, GL20.GL_STREAM_DRAW);
             Gdx.gl.glBufferData(GL20.GL_ELEMENT_ARRAY_BUFFER, idxByteSize, indexByteBuffer, GL20.GL_STREAM_DRAW);
@@ -541,7 +539,7 @@ public class ImGuiGdxGLImpl extends ImGuiGdxImpl {
 
     public void saveImGuiData(FileHandle path) {
         if(path != null) {
-            IDLString idlString = ImGui.SaveIniSettingsToMemory();
+            NativeString idlString = ImGui.SaveIniSettingsToMemory();
             String s = idlString.c_str();
             path.writeString(s, false);
         }

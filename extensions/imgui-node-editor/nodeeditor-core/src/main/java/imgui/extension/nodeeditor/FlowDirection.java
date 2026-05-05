@@ -6,9 +6,9 @@
 
 package imgui.extension.nodeeditor;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum FlowDirection implements IDLEnum<FlowDirection> {
+public enum FlowDirection implements NativeEnum<FlowDirection> {
 
     CUSTOM(0), Forward(Forward_NATIVE()), Backward(Backward_NATIVE());
 
@@ -34,13 +34,7 @@ public enum FlowDirection implements IDLEnum<FlowDirection> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)FlowDirection::Forward;
-*/
     private static native int Forward_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)FlowDirection::Backward;
-*/
     private static native int Backward_NATIVE();
 }

@@ -4,7 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.files.FileHandle;
-import com.github.xpenatan.jparser.idl.helper.IDLByteArray;
+import com.github.xpenatan.jparser.runtime.helper.NativeByteArray;
 import imgui.ImFontAtlas;
 import imgui.ImFontConfig;
 import imgui.ImGuiContext;
@@ -41,7 +41,7 @@ public abstract class ImGuiRenderer extends ScreenAdapter {
 
     private void addFont(FileHandle fontFile, String name) {
         byte[] bytes = fontFile.readBytes();
-        IDLByteArray byteArray = new IDLByteArray(bytes.length);
+        NativeByteArray byteArray = new NativeByteArray(bytes.length);
         for(int i = 0; i < bytes.length; i++) {
             byteArray.setValue(i, bytes[i]);
         }

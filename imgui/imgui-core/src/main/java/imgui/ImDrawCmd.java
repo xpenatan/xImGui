@@ -6,13 +6,9 @@
 
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 
-public class ImDrawCmd extends IDLBase {
-
-    private ImTextureIDRef ImTextureIDRef_TEMP_GEN_0;
-
-    private ImVec4 ImVec4_TEMP_GEN_0;
+public class ImDrawCmd extends NativeObject {
 
     static public final ImDrawCmd NULL = ImDrawCmd.native_new();
 
@@ -30,116 +26,35 @@ public class ImDrawCmd extends IDLBase {
         return new ImDrawCmd((byte) 0, (char) 0);
     }
 
-    protected void deleteNative() {
-        internal_native_deleteNative(native_address);
-    }
-
-    /*[-JNI;-NATIVE]
-ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
-
     public ImTextureIDRef GetTexID() {
-        long addr = internal_native_GetTexID_addr(native_address);
-        if (addr == 0)
-            return ImTextureIDRef.NULL;
-        if (ImTextureIDRef_TEMP_GEN_0 == null)
-            ImTextureIDRef_TEMP_GEN_0 = ImTextureIDRef.native_new();
-        ImTextureIDRef_TEMP_GEN_0.internal_reset(addr, false);
-        return ImTextureIDRef_TEMP_GEN_0;
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
-static ImTextureIDRef copy_addr;
-copy_addr = nativeObject->GetTexID();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetTexID_addr(long this_addr);
 
     public ImVec4 get_ClipRect() {
-        long addr = internal_native_get_ClipRect_addr(native_address);
-        if (addr == 0)
-            return ImVec4.NULL;
-        if (ImVec4_TEMP_GEN_0 == null)
-            ImVec4_TEMP_GEN_0 = ImVec4.native_new();
-        ImVec4_TEMP_GEN_0.internal_reset(addr, false);
-        return ImVec4_TEMP_GEN_0;
+        return null;
     }
-
-    /*[-JNI;-NATIVE]
-ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
-return (jlong)&nativeObject->ClipRect;
-*/
-    public static native long internal_native_get_ClipRect_addr(long this_addr);
 
     public void set_ClipRect(ImVec4 ClipRect) {
-        internal_native_set_ClipRect(native_address, ClipRect.native_address);
     }
-
-    /*[-JNI;-NATIVE]
-ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
-nativeObject->ClipRect = *((ImVec4*)ClipRect_addr);
-*/
-    public static native void internal_native_set_ClipRect(long this_addr, long ClipRect_addr);
 
     public int get_VtxOffset() {
-        return internal_native_get_VtxOffset(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
-return nativeObject->VtxOffset;
-*/
-    public static native int internal_native_get_VtxOffset(long this_addr);
 
     public void set_VtxOffset(int VtxOffset) {
-        internal_native_set_VtxOffset(native_address, VtxOffset);
     }
-
-    /*[-JNI;-NATIVE]
-ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
-nativeObject->VtxOffset = VtxOffset;
-*/
-    public static native void internal_native_set_VtxOffset(long this_addr, int VtxOffset);
 
     public int get_IdxOffset() {
-        return internal_native_get_IdxOffset(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
-return nativeObject->IdxOffset;
-*/
-    public static native int internal_native_get_IdxOffset(long this_addr);
 
     public void set_IdxOffset(int IdxOffset) {
-        internal_native_set_IdxOffset(native_address, IdxOffset);
     }
-
-    /*[-JNI;-NATIVE]
-ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
-nativeObject->IdxOffset = IdxOffset;
-*/
-    public static native void internal_native_set_IdxOffset(long this_addr, int IdxOffset);
 
     public int get_ElemCount() {
-        return internal_native_get_ElemCount(native_address);
+        return 0;
     }
-
-    /*[-JNI;-NATIVE]
-ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
-return nativeObject->ElemCount;
-*/
-    public static native int internal_native_get_ElemCount(long this_addr);
 
     public void set_ElemCount(int ElemCount) {
-        internal_native_set_ElemCount(native_address, ElemCount);
     }
-
-    /*[-JNI;-NATIVE]
-ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
-nativeObject->ElemCount = ElemCount;
-*/
-    public static native void internal_native_set_ElemCount(long this_addr, int ElemCount);
 }

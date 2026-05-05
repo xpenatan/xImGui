@@ -1,8 +1,8 @@
 package imgui;
 
-import com.github.xpenatan.jParser.idl.IDLBase;
+import com.github.xpenatan.jParser.api.NativeObject;
 
-public final class ImDrawData extends IDLBase {
+public final class ImDrawData extends NativeObject {
 
     public final static ImDrawData NULL = native_new();
 

@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiTextFlags implements IDLEnum<ImGuiTextFlags> {
+public enum ImGuiTextFlags implements NativeEnum<ImGuiTextFlags> {
 
     CUSTOM(0), None(ImGuiTextFlags_None_NATIVE()), NoWidthForLargeClippedText(ImGuiTextFlags_NoWidthForLargeClippedText_NATIVE());
 
@@ -34,13 +34,7 @@ public enum ImGuiTextFlags implements IDLEnum<ImGuiTextFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTextFlags_None;
-*/
     private static native int ImGuiTextFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTextFlags_NoWidthForLargeClippedText;
-*/
     private static native int ImGuiTextFlags_NoWidthForLargeClippedText_NATIVE();
 }

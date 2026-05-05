@@ -6,9 +6,9 @@
 
 package imgui.extension.textedit;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum SetViewAtLineMode implements IDLEnum<SetViewAtLineMode> {
+public enum SetViewAtLineMode implements NativeEnum<SetViewAtLineMode> {
 
     CUSTOM(0), FirstVisibleLine(FirstVisibleLine_NATIVE()), Centered(Centered_NATIVE()), LastVisibleLine(LastVisibleLine_NATIVE());
 
@@ -34,18 +34,9 @@ public enum SetViewAtLineMode implements IDLEnum<SetViewAtLineMode> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)SetViewAtLineMode::FirstVisibleLine;
-*/
     private static native int FirstVisibleLine_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)SetViewAtLineMode::Centered;
-*/
     private static native int Centered_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)SetViewAtLineMode::LastVisibleLine;
-*/
     private static native int LastVisibleLine_NATIVE();
 }

@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiNavRenderCursorFlags implements IDLEnum<ImGuiNavRenderCursorFlags> {
+public enum ImGuiNavRenderCursorFlags implements NativeEnum<ImGuiNavRenderCursorFlags> {
 
     CUSTOM(0), None(ImGuiNavRenderCursorFlags_None_NATIVE()), Compact(ImGuiNavRenderCursorFlags_Compact_NATIVE()), AlwaysDraw(ImGuiNavRenderCursorFlags_AlwaysDraw_NATIVE()), NoRounding(ImGuiNavRenderCursorFlags_NoRounding_NATIVE());
 
@@ -34,23 +34,11 @@ public enum ImGuiNavRenderCursorFlags implements IDLEnum<ImGuiNavRenderCursorFla
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavRenderCursorFlags_None;
-*/
     private static native int ImGuiNavRenderCursorFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavRenderCursorFlags_Compact;
-*/
     private static native int ImGuiNavRenderCursorFlags_Compact_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavRenderCursorFlags_AlwaysDraw;
-*/
     private static native int ImGuiNavRenderCursorFlags_AlwaysDraw_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavRenderCursorFlags_NoRounding;
-*/
     private static native int ImGuiNavRenderCursorFlags_NoRounding_NATIVE();
 }

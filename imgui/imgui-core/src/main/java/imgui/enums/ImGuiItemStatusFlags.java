@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiItemStatusFlags implements IDLEnum<ImGuiItemStatusFlags> {
+public enum ImGuiItemStatusFlags implements NativeEnum<ImGuiItemStatusFlags> {
 
     CUSTOM(0),
     None(ImGuiItemStatusFlags_None_NATIVE()),
@@ -46,63 +46,27 @@ public enum ImGuiItemStatusFlags implements IDLEnum<ImGuiItemStatusFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemStatusFlags_None;
-*/
     private static native int ImGuiItemStatusFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemStatusFlags_HoveredRect;
-*/
     private static native int ImGuiItemStatusFlags_HoveredRect_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemStatusFlags_HasDisplayRect;
-*/
     private static native int ImGuiItemStatusFlags_HasDisplayRect_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemStatusFlags_Edited;
-*/
     private static native int ImGuiItemStatusFlags_Edited_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemStatusFlags_ToggledSelection;
-*/
     private static native int ImGuiItemStatusFlags_ToggledSelection_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemStatusFlags_ToggledOpen;
-*/
     private static native int ImGuiItemStatusFlags_ToggledOpen_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemStatusFlags_HasDeactivated;
-*/
     private static native int ImGuiItemStatusFlags_HasDeactivated_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemStatusFlags_Deactivated;
-*/
     private static native int ImGuiItemStatusFlags_Deactivated_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemStatusFlags_HoveredWindow;
-*/
     private static native int ImGuiItemStatusFlags_HoveredWindow_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemStatusFlags_Visible;
-*/
     private static native int ImGuiItemStatusFlags_Visible_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemStatusFlags_HasClipRect;
-*/
     private static native int ImGuiItemStatusFlags_HasClipRect_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemStatusFlags_HasShortcut;
-*/
     private static native int ImGuiItemStatusFlags_HasShortcut_NATIVE();
 }

@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiDockNodeState implements IDLEnum<ImGuiDockNodeState> {
+public enum ImGuiDockNodeState implements NativeEnum<ImGuiDockNodeState> {
 
     CUSTOM(0), Unknown(ImGuiDockNodeState_Unknown_NATIVE()), HostWindowHiddenBecauseSingleWindow(ImGuiDockNodeState_HostWindowHiddenBecauseSingleWindow_NATIVE()), HostWindowHiddenBecauseWindowsAreResizing(ImGuiDockNodeState_HostWindowHiddenBecauseWindowsAreResizing_NATIVE()), HostWindowVisible(ImGuiDockNodeState_HostWindowVisible_NATIVE());
 
@@ -34,23 +34,11 @@ public enum ImGuiDockNodeState implements IDLEnum<ImGuiDockNodeState> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeState_Unknown;
-*/
     private static native int ImGuiDockNodeState_Unknown_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeState_HostWindowHiddenBecauseSingleWindow;
-*/
     private static native int ImGuiDockNodeState_HostWindowHiddenBecauseSingleWindow_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeState_HostWindowHiddenBecauseWindowsAreResizing;
-*/
     private static native int ImGuiDockNodeState_HostWindowHiddenBecauseWindowsAreResizing_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeState_HostWindowVisible;
-*/
     private static native int ImGuiDockNodeState_HostWindowVisible_NATIVE();
 }

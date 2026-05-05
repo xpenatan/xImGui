@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiDir implements IDLEnum<ImGuiDir> {
+public enum ImGuiDir implements NativeEnum<ImGuiDir> {
 
     CUSTOM(0),
     None(ImGuiDir_None_NATIVE()),
@@ -39,28 +39,13 @@ public enum ImGuiDir implements IDLEnum<ImGuiDir> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDir_None;
-*/
     private static native int ImGuiDir_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDir_Left;
-*/
     private static native int ImGuiDir_Left_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDir_Right;
-*/
     private static native int ImGuiDir_Right_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDir_Up;
-*/
     private static native int ImGuiDir_Up_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDir_Down;
-*/
     private static native int ImGuiDir_Down_NATIVE();
 }

@@ -1,6 +1,6 @@
 package imgui.example.textedit;
 
-import com.github.xpenatan.jparser.idl.helper.IDLInt;
+import com.github.xpenatan.jparser.runtime.helper.NativeInt;
 import imgui.ImGui;
 import imgui.example.renderer.ImGuiRenderer;
 import imgui.extension.textedit.LanguageDefinitionId;
@@ -10,15 +10,15 @@ public class TextEditExample extends ImGuiRenderer {
 
     private TextEditor editor;
 
-    private IDLInt outLine;
-    private IDLInt outColumn;
+    private NativeInt outLine;
+    private NativeInt outColumn;
 
     @Override
     public void show() {
         super.show();
 
-        outLine = new IDLInt();
-        outColumn = new IDLInt();
+        outLine = new NativeInt();
+        outColumn = new NativeInt();
 
         editor = new TextEditor();
 

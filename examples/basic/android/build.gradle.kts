@@ -30,11 +30,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.toVersion(LibExt.java11Target)
-        targetCompatibility = JavaVersion.toVersion(LibExt.java11Target)
+        sourceCompatibility = JavaVersion.toVersion(LibExt.javaMainTarget)
+        targetCompatibility = JavaVersion.toVersion(LibExt.javaMainTarget)
     }
     kotlinOptions {
-        jvmTarget = LibExt.java11Target
+        jvmTarget = LibExt.javaMainTarget
     }
 }
 val natives: Configuration by configurations.creating

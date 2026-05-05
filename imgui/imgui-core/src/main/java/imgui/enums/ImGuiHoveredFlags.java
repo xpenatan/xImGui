@@ -6,9 +6,9 @@
 
 package imgui.enums;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum ImGuiHoveredFlags implements IDLEnum<ImGuiHoveredFlags> {
+public enum ImGuiHoveredFlags implements NativeEnum<ImGuiHoveredFlags> {
 
     CUSTOM(0),
     None(ImGuiHoveredFlags_None_NATIVE()),
@@ -55,108 +55,45 @@ public enum ImGuiHoveredFlags implements IDLEnum<ImGuiHoveredFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_None;
-*/
     private static native int ImGuiHoveredFlags_None_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_ChildWindows;
-*/
     private static native int ImGuiHoveredFlags_ChildWindows_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_RootWindow;
-*/
     private static native int ImGuiHoveredFlags_RootWindow_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_AnyWindow;
-*/
     private static native int ImGuiHoveredFlags_AnyWindow_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_NoPopupHierarchy;
-*/
     private static native int ImGuiHoveredFlags_NoPopupHierarchy_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_DockHierarchy;
-*/
     private static native int ImGuiHoveredFlags_DockHierarchy_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_AllowWhenBlockedByPopup;
-*/
     private static native int ImGuiHoveredFlags_AllowWhenBlockedByPopup_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_AllowWhenBlockedByActiveItem;
-*/
     private static native int ImGuiHoveredFlags_AllowWhenBlockedByActiveItem_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_AllowWhenOverlappedByItem;
-*/
     private static native int ImGuiHoveredFlags_AllowWhenOverlappedByItem_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_AllowWhenOverlappedByWindow;
-*/
     private static native int ImGuiHoveredFlags_AllowWhenOverlappedByWindow_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_AllowWhenDisabled;
-*/
     private static native int ImGuiHoveredFlags_AllowWhenDisabled_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_NoNavOverride;
-*/
     private static native int ImGuiHoveredFlags_NoNavOverride_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_AllowWhenOverlapped;
-*/
     private static native int ImGuiHoveredFlags_AllowWhenOverlapped_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_RectOnly;
-*/
     private static native int ImGuiHoveredFlags_RectOnly_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_RootAndChildWindows;
-*/
     private static native int ImGuiHoveredFlags_RootAndChildWindows_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_ForTooltip;
-*/
     private static native int ImGuiHoveredFlags_ForTooltip_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_Stationary;
-*/
     private static native int ImGuiHoveredFlags_Stationary_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_DelayNone;
-*/
     private static native int ImGuiHoveredFlags_DelayNone_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_DelayShort;
-*/
     private static native int ImGuiHoveredFlags_DelayShort_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_DelayNormal;
-*/
     private static native int ImGuiHoveredFlags_DelayNormal_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_NoSharedDelay;
-*/
     private static native int ImGuiHoveredFlags_NoSharedDelay_NATIVE();
 }

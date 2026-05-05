@@ -6,9 +6,9 @@
 
 package imgui.extension.textedit;
 
-import com.github.xpenatan.jParser.idl.IDLEnum;
+import com.github.xpenatan.jParser.api.NativeEnum;
 
-public enum PaletteId implements IDLEnum<PaletteId> {
+public enum PaletteId implements NativeEnum<PaletteId> {
 
     CUSTOM(0), Dark(Dark_NATIVE()), Light(Light_NATIVE()), Mariana(Mariana_NATIVE()), RetroBlue(RetroBlue_NATIVE());
 
@@ -34,23 +34,11 @@ public enum PaletteId implements IDLEnum<PaletteId> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)PaletteId::Dark;
-*/
     private static native int Dark_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)PaletteId::Light;
-*/
     private static native int Light_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)PaletteId::Mariana;
-*/
     private static native int Mariana_NATIVE();
 
-    /*[-JNI;-NATIVE]
-return (jlong)PaletteId::RetroBlue;
-*/
     private static native int RetroBlue_NATIVE();
 }
