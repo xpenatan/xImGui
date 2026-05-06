@@ -552,7 +552,7 @@ jobs:
         if: ${{ inputs.shouldUpload && inputs.isRelease }}
         with:
           max_attempts: 3
-          timeout_minutes: 10
+          timeout_minutes: 30
           retry_on: error
           command: ./gradlew publishRelease
 
@@ -561,7 +561,7 @@ jobs:
         if: ${{ inputs.shouldUpload && !inputs.isRelease }}
         with:
           max_attempts: 3
-          timeout_minutes: 10
+          timeout_minutes: 30
           retry_on: error
           command: ./gradlew publishSnapshot
 
