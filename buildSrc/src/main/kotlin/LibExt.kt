@@ -21,7 +21,7 @@ object LibExt {
     const val gdxWebGPUGroup = "com.github.xpenatan.gdx-webgpu"
     const val gdxWebGPUVersion = "ffm-jni-SNAPSHOT"
 
-    const val jParserVersion = "-SNAPSHOT"
+    const val jParserVersion = "1.1.0"
     const val jUnitVersion = "4.12"
 
     const val useRepoLibs = false

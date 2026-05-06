@@ -77,7 +77,6 @@ include(":examples:imgui-node-editor:teavm")
 
 //includeBuild("E:\\Dev\\Projects\\java\\jParser") {
 //    dependencySubstitution {
-//        substitute(module("com.github.xpenatan.jParser:gen-base")).using(project(":jParser:gen:gen-base"))
 //        substitute(module("com.github.xpenatan.jParser:gen-build")).using(project(":jParser:gen:gen-build"))
 //        substitute(module("com.github.xpenatan.jParser:gen-build-tool")).using(project(":jParser:gen:gen-build-tool"))
 //        substitute(module("com.github.xpenatan.jParser:gen-core")).using(project(":jParser:gen:gen-core"))
@@ -89,13 +88,25 @@ include(":examples:imgui-node-editor:teavm")
 //        substitute(module("com.github.xpenatan.jParser:api-web")).using(project(":jParser:api:api-web"))
 //        substitute(module("com.github.xpenatan.jParser:loader-core")).using(project(":jParser:loader:loader-core"))
 //        substitute(module("com.github.xpenatan.jParser:loader-web")).using(project(":jParser:loader:loader-web"))
+//        substitute(module("com.github.xpenatan.jParser:runtime-base")).using(project(":jParser:runtime:runtime-base"))
 //        substitute(module("com.github.xpenatan.jParser:runtime-core")).using(project(":jParser:runtime:runtime-core"))
 //        substitute(module("com.github.xpenatan.jParser:runtime-web")).using(project(":jParser:runtime:runtime-web"))
 //        substitute(module("com.github.xpenatan.jParser:runtime-jni")).using(project(":jParser:runtime:runtime-jni"))
 //        substitute(module("com.github.xpenatan.jParser:runtime-ffm")).using(project(":jParser:runtime:runtime-ffm"))
-//        substitute(module("com.github.xpenatan.jParser:runtime-android")).using(project(":jParser:runtime:runtime-android"))
+////        substitute(module("com.github.xpenatan.jParser:runtime-android")).using(project(":jParser:runtime:runtime-android"))
 //    }
 //}
+
+//includeBuild("E:\\Dev\\Projects\\java\\jWebGPU") {
+//    dependencySubstitution {
+////        substitute(module("com.github.xpenatan.jWebGPU:webgpu-android")).using(project(":webgpu:webgpu-android"))
+//        substitute(module("com.github.xpenatan.jWebGPU:webgpu-web")).using(project(":webgpu:webgpu-web"))
+//        substitute(module("com.github.xpenatan.jWebGPU:webgpu-core")).using(project(":webgpu:webgpu-core"))
+//        substitute(module("com.github.xpenatan.jWebGPU:webgpu-ffm")).using(project(":webgpu:webgpu-ffm"))
+//        substitute(module("com.github.xpenatan.jWebGPU:webgpu-jni")).using(project(":webgpu:webgpu-jni"))
+//    }
+//}
+
 
 //includeBuild("E:\\Dev\\Projects\\java\\gdx-webgpu") {
 //    dependencySubstitution {
