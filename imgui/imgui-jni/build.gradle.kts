@@ -34,11 +34,20 @@ if(file(macArmFile).exists()) {
     platforms["mac-arm64"] = { from(macArmFile) }
 }
 
-val nativeJars = platforms.map { (classifier, config) ->
-    tasks.register<Jar>("nativeJar${classifier}") {
+val nativeJars = platforms.map { (platformName, config) ->
+    val taskSuffix = platformName
+        .split("-")
+        .joinToString("") { token -> token.replaceFirstChar(Char::uppercaseChar) }
+
+    platformName to tasks.register<Jar>("nativeJar$taskSuffix") {
         config()
-        archiveClassifier.set(classifier)
+        archiveClassifier.set(platformName)
     }
+}
+
+val desktopNativeJar = tasks.register<Jar>("nativeJarDesktop") {
+    archiveClassifier.set("desktop")
+    platforms.values.forEach { config -> config() }
 }
 
 val nativeRuntime by configurations.creating {
@@ -57,7 +66,8 @@ tasks.jar {
 }
 
 artifacts {
-    nativeJars.forEach { add(nativeRuntime.name, it) }
+    nativeJars.forEach { (_, nativeJar) -> add(nativeRuntime.name, nativeJar) }
+    add(nativeRuntime.name, desktopNativeJar)
 }
 
 tasks.named("clean") {
@@ -84,7 +94,27 @@ publishing {
             group = LibExt.groupId
             version = LibExt.libVersion
             from(components["java"])
-            nativeJars.forEach { artifact(it) }
+        }
+
+        nativeJars.forEach { (platformName, nativeJar) ->
+            val platformArtifact = platformName.replace("-", "_")
+            create<MavenPublication>("mavenNative$platformArtifact") {
+                artifactId = "${moduleName}_${platformArtifact}"
+                group = LibExt.groupId
+                version = LibExt.libVersion
+                artifact(nativeJar) {
+                    classifier = null
+                }
+            }
+        }
+
+        create<MavenPublication>("mavenNativeDesktop") {
+            artifactId = "${moduleName}_desktop"
+            group = LibExt.groupId
+            version = LibExt.libVersion
+            artifact(desktopNativeJar) {
+                classifier = null
+            }
         }
     }
 }

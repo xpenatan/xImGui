@@ -7,8 +7,18 @@ val moduleName = "nodeeditor-web"
 val emscriptenJS = "$projectDir/../nodeeditor-build/build/c++/libs/emscripten/nodeeditor.js"
 val emscriptenWASM = "$projectDir/../nodeeditor-build/build/c++/libs/emscripten/nodeeditor.wasm"
 
-tasks.jar {
+val wasmJar = tasks.register<Jar>("wasmJar") {
     from(emscriptenJS, emscriptenWASM)
+    archiveBaseName.set("${moduleName}_wasm")
+    archiveClassifier.set("")
+}
+
+val isPublishingTask = gradle.startParameter.taskNames.any { it.contains("publish", ignoreCase = true) }
+
+tasks.named<Jar>("jar") {
+    if(!isPublishingTask) {
+        from(emscriptenJS, emscriptenWASM)
+    }
 }
 
 java {
@@ -44,6 +54,13 @@ publishing {
             group = LibExt.groupId
             version = LibExt.libVersion
             from(components["java"])
+        }
+
+        create<MavenPublication>("mavenWasm") {
+            artifactId = "${moduleName}_wasm"
+            group = LibExt.groupId
+            version = LibExt.libVersion
+            artifact(wasmJar)
         }
     }
 }

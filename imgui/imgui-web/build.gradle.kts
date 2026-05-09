@@ -7,12 +7,18 @@ val moduleName = "imgui-web"
 val emscriptenJS = "$projectDir/../imgui-build/build/c++/libs/emscripten/imgui.js"
 val emscriptenWASM = "$projectDir/../imgui-build/build/c++/libs/emscripten/imgui.wasm"
 
-tasks.jar {
+val wasmJar = tasks.register<Jar>("wasmJar") {
     from(emscriptenJS, emscriptenWASM)
+    archiveBaseName.set("${moduleName}_wasm")
+    archiveClassifier.set("")
 }
 
-tasks.jar {
-    from(emscriptenJS, emscriptenWASM)
+val isPublishingTask = gradle.startParameter.taskNames.any { it.contains("publish", ignoreCase = true) }
+
+tasks.named<Jar>("jar") {
+    if(!isPublishingTask) {
+        from(emscriptenJS, emscriptenWASM)
+    }
 }
 
 
@@ -53,6 +59,13 @@ publishing {
             group = LibExt.groupId
             version = LibExt.libVersion
             from(components["java"])
+        }
+
+        create<MavenPublication>("mavenWasm") {
+            artifactId = "${moduleName}_wasm"
+            group = LibExt.groupId
+            version = LibExt.libVersion
+            artifact(wasmJar)
         }
     }
 }

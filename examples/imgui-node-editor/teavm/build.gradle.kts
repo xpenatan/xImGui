@@ -16,7 +16,9 @@ dependencies {
 
     if(LibExt.useRepoLibs) {
         implementation("com.github.xpenatan.xImGui:imgui-web:-SNAPSHOT")
+        implementation("com.github.xpenatan.xImGui:imgui-web_wasm:-SNAPSHOT")
         implementation("com.github.xpenatan.xImGui:nodeeditor-web:-SNAPSHOT")
+        implementation("com.github.xpenatan.xImGui:nodeeditor-web_wasm:-SNAPSHOT")
     }
     else {
         implementation(project(":imgui:imgui-web"))

@@ -25,7 +25,17 @@ var libProjects = mutableSetOf(
     project(":extensions:imgui-node-editor:nodeeditor-web"),
 )
 
-LibExt.isRelease = gradle.startParameter.taskNames.any { it == "publishRelease" }
+val taskNames = gradle.startParameter.taskNames
+fun isTaskRequested(taskName: String): Boolean {
+    return taskNames.any { it == taskName || it.endsWith(":$taskName") }
+}
+
+val isPrepareSnapshotDeploy = isTaskRequested("prepareSnapshotDeploy")
+val isReleasePublish = isTaskRequested("publishRelease")
+val isPrepareReleaseDeploy = isTaskRequested("prepareReleaseDeploy")
+val isUploadToMavenCentral = isTaskRequested("uploadToMavenCentral")
+val isReleaseIntent = isReleasePublish || isPrepareReleaseDeploy || isUploadToMavenCentral
+LibExt.isRelease = isReleaseIntent
 
 configure(libProjects) {
     apply(plugin = "signing")
@@ -39,12 +49,13 @@ configure(libProjects) {
         repositories {
             maven {
                 val isSnapshot = LibExt.libVersion.endsWith("-SNAPSHOT")
-                url = if (isSnapshot) {
-                    uri("https://central.sonatype.com/repository/maven-snapshots/")
-                } else {
-                    uri(rootProject.layout.buildDirectory.dir("staging-deploy"))
+                val snapshotLocalRepo = rootProject.layout.buildDirectory.dir("snapshot-deploy").get().asFile
+                url = when {
+                    !isSnapshot -> uri(rootProject.layout.buildDirectory.dir("staging-deploy"))
+                    isPrepareSnapshotDeploy -> uri(snapshotLocalRepo)
+                    else -> uri("https://central.sonatype.com/repository/maven-snapshots/")
                 }
-                if(isSnapshot) {
+                if(isSnapshot && !isPrepareSnapshotDeploy) {
                     val user = System.getenv("CENTRAL_PORTAL_USERNAME")
                     val pass = System.getenv("CENTRAL_PORTAL_PASSWORD")
                     credentials {
@@ -97,70 +108,74 @@ configure(libProjects) {
     }
 }
 
-if(!LibExt.libVersion.endsWith("-SNAPSHOT")) {
-    tasks.register<Zip>("zipStagingDeploy") {
-        dependsOn(libProjects.map { it.tasks.named("publish") })
-        from(rootProject.layout.buildDirectory.dir("staging-deploy"))
-        archiveFileName.set("staging-deploy.zip")
-        destinationDirectory.set(rootProject.layout.buildDirectory)
-        onlyIf { !project.version.toString().endsWith("-SNAPSHOT") }
-    }
+tasks.register<Zip>("zipStagingDeploy") {
+    dependsOn(libProjects.map { it.tasks.named("publish") })
+    from(rootProject.layout.buildDirectory.dir("staging-deploy"))
+    archiveFileName.set("staging-deploy.zip")
+    destinationDirectory.set(rootProject.layout.buildDirectory)
+    onlyIf { !LibExt.libVersion.endsWith("-SNAPSHOT") }
+}
 
-    tasks.register("uploadToMavenCentral") {
-        dependsOn("zipStagingDeploy")
-        doLast {
-            if (!project.version.toString().endsWith("-SNAPSHOT")) {
-                // Define paths
-                val stagingDir = rootProject.layout.buildDirectory.dir("staging-deploy").get().asFile
-                val zipFile = rootProject.layout.buildDirectory.file("staging-deploy.zip").get().asFile
+tasks.register("uploadToMavenCentral") {
+    dependsOn("zipStagingDeploy")
+    onlyIf { !LibExt.libVersion.endsWith("-SNAPSHOT") }
+    doLast {
+        // Define paths
+        val stagingDir = rootProject.layout.buildDirectory.dir("staging-deploy").get().asFile
+        val zipFile = rootProject.layout.buildDirectory.file("staging-deploy.zip").get().asFile
 
-                if (!stagingDir.exists()) {
-                    throw GradleException("Staging directory $stagingDir does not exist. Ensure the publish task ran successfully.")
-                }
-
-                if (!zipFile.exists()) {
-                    throw GradleException("Zip file ${zipFile.absolutePath} was not created. Check the zip command output.")
-                }
-
-                if (!Files.isReadable(Paths.get(zipFile.absolutePath))) {
-                    throw GradleException("Zip file ${zipFile.absolutePath} is not readable. Check file permissions.")
-                }
-
-                val username = System.getenv("CENTRAL_PORTAL_USERNAME") ?: throw GradleException("CENTRAL_PORTAL_USERNAME environment variable not set")
-                val password = System.getenv("CENTRAL_PORTAL_PASSWORD") ?: throw GradleException("CENTRAL_PORTAL_PASSWORD environment variable not set")
-
-                val rawBundleName = "${LibExt.libName}-${LibExt.libVersion}"
-                val encodedBundleName = URLEncoder.encode(rawBundleName, "UTF-8")
-
-                providers.exec {
-                    commandLine = listOf(
-                        "curl",
-                        "-u",
-                        "$username:$password",
-                        "--request",
-                        "POST",
-                        "--form",
-                        "bundle=@${zipFile.absolutePath}",
-                        "https://central.sonatype.com/api/v1/publisher/upload?name=${encodedBundleName}"
-                    )
-                }.result.get()
-            }
+        if (!stagingDir.exists()) {
+            throw GradleException("Staging directory $stagingDir does not exist. Ensure the publish task ran successfully.")
         }
-    }
 
-    libProjects.forEach { project ->
-        project.tasks.withType<PublishToMavenRepository>().configureEach {
-            finalizedBy(rootProject.tasks.named("uploadToMavenCentral"))
+        if (!zipFile.exists()) {
+            throw GradleException("Zip file ${zipFile.absolutePath} was not created. Check the zip command output.")
         }
+
+        if (!Files.isReadable(Paths.get(zipFile.absolutePath))) {
+            throw GradleException("Zip file ${zipFile.absolutePath} is not readable. Check file permissions.")
+        }
+
+        val username = System.getenv("CENTRAL_PORTAL_USERNAME") ?: throw GradleException("CENTRAL_PORTAL_USERNAME environment variable not set")
+        val password = System.getenv("CENTRAL_PORTAL_PASSWORD") ?: throw GradleException("CENTRAL_PORTAL_PASSWORD environment variable not set")
+
+        val rawBundleName = "${LibExt.libName}-${LibExt.libVersion}"
+        val encodedBundleName = URLEncoder.encode(rawBundleName, "UTF-8")
+
+        providers.exec {
+            commandLine = listOf(
+                "curl",
+                "-u",
+                "$username:$password",
+                "--request",
+                "POST",
+                "--form",
+                "bundle=@${zipFile.absolutePath}",
+                "https://central.sonatype.com/api/v1/publisher/upload?name=${encodedBundleName}"
+            )
+        }.result.get()
     }
+}
+
+tasks.register("prepareReleaseDeploy") {
+    group = "publishing"
+    dependsOn("zipStagingDeploy")
+    onlyIf { !LibExt.libVersion.endsWith("-SNAPSHOT") }
 }
 
 tasks.register("publishRelease") {
     group = "publishing"
-    dependsOn(libProjects.map { it.tasks.withType<PublishToMavenRepository>() })
+    dependsOn("prepareReleaseDeploy")
+    finalizedBy("uploadToMavenCentral")
 }
 
 tasks.register("publishSnapshot") {
     group = "publishing"
     dependsOn(libProjects.map { it.tasks.withType<PublishToMavenRepository>() })
+}
+
+tasks.register("prepareSnapshotDeploy") {
+    group = "publishing"
+    dependsOn(libProjects.map { it.tasks.withType<PublishToMavenRepository>() })
+    onlyIf { LibExt.libVersion.endsWith("-SNAPSHOT") }
 }
