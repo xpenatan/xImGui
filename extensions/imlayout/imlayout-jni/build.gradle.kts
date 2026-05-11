@@ -19,16 +19,16 @@ dependencies {
 
 val platforms: MutableMap<String, Jar.() -> Unit> = mutableMapOf()
 if(file(windowsFile).exists()) {
-    platforms["windows-64"] = { from(windowsFile) }
+    platforms["windows_x64"] = { from(windowsFile) }
 }
 if(file(linuxFile).exists()) {
-    platforms["linux-x64"] = { from(linuxFile) }
+    platforms["linux_x64"] = { from(linuxFile) }
 }
 if(file(macFile).exists()) {
-    platforms["mac-x64"] = { from(macFile) }
+    platforms["mac_x64"] = { from(macFile) }
 }
 if(file(macArmFile).exists()) {
-    platforms["mac-arm64"] = { from(macArmFile) }
+    platforms["mac_arm64"] = { from(macArmFile) }
 }
 
 val nativeJars = platforms.map { (platformName, config) ->

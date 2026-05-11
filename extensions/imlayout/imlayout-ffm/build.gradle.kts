@@ -4,7 +4,7 @@ plugins {
 
 val moduleName = "imlayout-ffm"
 
-val libDir = "${project.projectDir}/../imlayout-build/build/c++/ffm/libs"
+val libDir = "${project.projectDir}/../imlayout-build/build/c++/libs"
 val windowsFile = "$libDir/windows/vc/ffm/imlayout64.dll"
 val linuxFile = "$libDir/linux/ffm/libimlayout64.so"
 val macArmFile = "$libDir/mac/arm/ffm/libimlayoutarm64.dylib"
@@ -25,7 +25,7 @@ if(file(linuxFile).exists()) {
     platforms["linux_x64"] = { from(linuxFile) }
 }
 if(file(macFile).exists()) {
-    platforms["ma_x64"] = { from(macFile) }
+    platforms["mac_x64"] = { from(macFile) }
 }
 if(file(macArmFile).exists()) {
     platforms["mac_arm64"] = { from(macArmFile) }
