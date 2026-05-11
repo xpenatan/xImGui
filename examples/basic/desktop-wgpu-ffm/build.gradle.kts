@@ -11,10 +11,10 @@ dependencies {
 
     if(LibExt.useRepoLibs) {
         implementation("com.github.xpenatan.xImGui:imgui-ffm:-SNAPSHOT")
-        implementation("com.github.xpenatan.xImGui:imgui-ffm:-SNAPSHOT:windows_x64")
-        implementation("com.github.xpenatan.xImGui:imgui-ffm:-SNAPSHOT:linux_x64")
-        implementation("com.github.xpenatan.xImGui:imgui-ffm:-SNAPSHOT:mac_x64")
-        implementation("com.github.xpenatan.xImGui:imgui-ffm:-SNAPSHOT:mac_arm64")
+        implementation("com.github.xpenatan.xImGui:imgui-ffm_windows_x64:-SNAPSHOT")
+        implementation("com.github.xpenatan.xImGui:imgui-ffm_linux_x64:-SNAPSHOT")
+        implementation("com.github.xpenatan.xImGui:imgui-ffm_mac_x64:-SNAPSHOT")
+        implementation("com.github.xpenatan.xImGui:imgui-ffm_mac_arm64:-SNAPSHOT")
     }
     else {
         implementation(project(":imgui:imgui-ffm"))

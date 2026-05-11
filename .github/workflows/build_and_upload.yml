@@ -208,7 +208,7 @@ jobs:
         run: ./gradlew :imgui:imgui-build:build_project_mac64_jni :imgui:imgui-build:build_project_macArm_jni
 
       - name: Build FFM project
-        run: ./gradlew :imgui:imgui-build:build_project_mac64_jni :imgui:imgui-build:build_project_macArm_ffm
+        run: ./gradlew :imgui:imgui-build:build_project_mac64_ffm :imgui:imgui-build:build_project_macArm_ffm
 
       - name: Build JNI ImLayout library
         run: ./gradlew :extensions:imlayout:imlayout-build:build_project_mac64_jni :extensions:imlayout:imlayout-build:build_project_macArm_jni

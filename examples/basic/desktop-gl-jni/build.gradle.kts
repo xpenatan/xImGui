@@ -11,10 +11,10 @@ dependencies {
 
     if(LibExt.useRepoLibs) {
         implementation("com.github.xpenatan.xImGui:imgui-jni:-SNAPSHOT")
-        implementation("com.github.xpenatan.xImGui:imgui-jni:-SNAPSHOT:windows_x64")
-        implementation("com.github.xpenatan.xImGui:imgui-jni:-SNAPSHOT:linux_x64")
-        implementation("com.github.xpenatan.xImGui:imgui-jni:-SNAPSHOT:mac_x64")
-        implementation("com.github.xpenatan.xImGui:imgui-jni:-SNAPSHOT:mac_arm64")
+        implementation("com.github.xpenatan.xImGui:imgui-jni_windows_x64:-SNAPSHOT")
+        implementation("com.github.xpenatan.xImGui:imgui-jni_linux_x64:-SNAPSHOT")
+        implementation("com.github.xpenatan.xImGui:imgui-jni_mac_x64:-SNAPSHOT")
+        implementation("com.github.xpenatan.xImGui:imgui-jni_mac_arm64:-SNAPSHOT")
     }
     else {
         implementation(project(":imgui:imgui-jni"))
