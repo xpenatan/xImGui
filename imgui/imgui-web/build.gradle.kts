@@ -13,19 +13,11 @@ val wasmJar = tasks.register<Jar>("wasmJar") {
     archiveClassifier.set("")
 }
 
-val isPublishingTask = gradle.startParameter.taskNames.any { it.contains("publish", ignoreCase = true) }
-
-tasks.named<Jar>("jar") {
-    if(!isPublishingTask) {
-        from(emscriptenJS, emscriptenWASM)
-    }
-}
-
 
 dependencies {
     api("com.github.xpenatan.jParser:runtime-core:${LibExt.jParserVersion}")
     api("com.github.xpenatan.jParser:runtime-web:${LibExt.jParserVersion}")
-    api("com.github.xpenatan.jParser:runtime-web-wasm:${LibExt.jParserVersion}")
+    api("com.github.xpenatan.jParser:runtime-web_wasm:${LibExt.jParserVersion}")
 
     implementation("com.badlogicgames.gdx:gdx:${LibExt.gdxVersion}")
     implementation("com.github.xpenatan.jParser:loader-core:${LibExt.jParserVersion}")

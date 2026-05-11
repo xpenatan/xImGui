@@ -37,7 +37,7 @@ jobs:
           java-version: 25
 
       - name: Set up Developer Command Prompt
-        uses: TheMrMilchmann/setup-msvc-dev@v3
+        uses: TheMrMilchmann/setup-msvc-dev@v4
         with:
           arch: x64
 
@@ -559,7 +559,7 @@ jobs:
           path: ./build/staging-deploy/
 
       - name: Upload Release to repository
-        uses: nick-fields/retry@v3
+        uses: nick-fields/retry@v4
         if: ${{ inputs.shouldUpload && inputs.isRelease }}
         with:
           max_attempts: 3
@@ -579,7 +579,7 @@ jobs:
           path: ./build/snapshot-deploy/
 
       - name: Upload Snapshot to repository
-        uses: nick-fields/retry@v3
+        uses: nick-fields/retry@v4
         if: ${{ inputs.shouldUpload && !inputs.isRelease }}
         with:
           max_attempts: 3

@@ -13,14 +13,6 @@ val wasmJar = tasks.register<Jar>("wasmJar") {
     archiveClassifier.set("")
 }
 
-val isPublishingTask = gradle.startParameter.taskNames.any { it.contains("publish", ignoreCase = true) }
-
-tasks.named<Jar>("jar") {
-    if(!isPublishingTask) {
-        from(emscriptenJS, emscriptenWASM)
-    }
-}
-
 java {
     sourceCompatibility = JavaVersion.toVersion(LibExt.javaWebTarget)
     targetCompatibility = JavaVersion.toVersion(LibExt.javaWebTarget)

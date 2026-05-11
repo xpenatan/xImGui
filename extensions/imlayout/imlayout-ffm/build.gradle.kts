@@ -19,16 +19,16 @@ dependencies {
 
 val platforms: MutableMap<String, Jar.() -> Unit> = mutableMapOf()
 if(file(windowsFile).exists()) {
-    platforms["windows-64"] = { from(windowsFile) }
+    platforms["windows_x64"] = { from(windowsFile) }
 }
 if(file(linuxFile).exists()) {
-    platforms["linux-x64"] = { from(linuxFile) }
+    platforms["linux_x64"] = { from(linuxFile) }
 }
 if(file(macFile).exists()) {
-    platforms["mac-x64"] = { from(macFile) }
+    platforms["ma_x64"] = { from(macFile) }
 }
 if(file(macArmFile).exists()) {
-    platforms["mac-arm64"] = { from(macArmFile) }
+    platforms["mac_arm64"] = { from(macArmFile) }
 }
 
 val nativeJars = platforms.map { (platformName, config) ->
@@ -52,7 +52,13 @@ val nativeRuntime by configurations.creating {
     isCanBeResolved = false
 }
 
-val includeNativesInMainJar = !gradle.startParameter.taskNames.any { it.contains("publish", ignoreCase = true) }
+val taskNames = gradle.startParameter.taskNames
+fun isTaskRequested(taskName: String): Boolean {
+    return taskNames.any { it == taskName || it.endsWith(":$taskName") }
+}
+val isPrepareDeployTask = isTaskRequested("prepareReleaseDeploy") || isTaskRequested("prepareSnapshotDeploy")
+val isPublishTask = taskNames.any { it.contains("publish", ignoreCase = true) }
+val includeNativesInMainJar = !(isPrepareDeployTask || isPublishTask)
 tasks.jar {
     if(includeNativesInMainJar) {
         if(file(windowsFile).exists()) from(windowsFile)
@@ -94,9 +100,8 @@ publishing {
         }
 
         nativeJars.forEach { (platformName, nativeJar) ->
-            val platformArtifact = platformName.replace("-", "_")
-            create<MavenPublication>("mavenNative$platformArtifact") {
-                artifactId = "${moduleName}_${platformArtifact}"
+            create<MavenPublication>("mavenNative$platformName") {
+                artifactId = "${moduleName}_${platformName}"
                 group = LibExt.groupId
                 version = LibExt.libVersion
                 artifact(nativeJar) {

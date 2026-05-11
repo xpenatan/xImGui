@@ -15,8 +15,8 @@ object LibExt {
     const val javaFFMTarget = "25"
 
     const val gdxVersion = "1.14.0"
-    const val gdxTeaVMVersion = "1.5.5"
-    const val jParserVersion = "1.1.0"
+    const val gdxTeaVMVersion = "1.5.6"
+    const val jParserVersion = "1.1.3"
 
     const val gdxWebGPUGroup = "io.github.monstroussoftware.gdx-webgpu"
 //    const val gdxWebGPUGroup = "com.github.xpenatan.gdx-webgpu"
@@ -24,7 +24,7 @@ object LibExt {
 
     const val jUnitVersion = "4.12"
 
-    const val useRepoLibs = false
+    const val useRepoLibs = true
 }
 
 private fun getVersion(): String {

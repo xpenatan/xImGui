@@ -52,7 +52,13 @@ val nativeRuntime by configurations.creating {
     isCanBeResolved = false
 }
 
-val includeNativesInMainJar = !gradle.startParameter.taskNames.any { it.contains("publish", ignoreCase = true) }
+val taskNames = gradle.startParameter.taskNames
+fun isTaskRequested(taskName: String): Boolean {
+    return taskNames.any { it == taskName || it.endsWith(":$taskName") }
+}
+val isPrepareDeployTask = isTaskRequested("prepareReleaseDeploy") || isTaskRequested("prepareSnapshotDeploy")
+val isPublishTask = taskNames.any { it.contains("publish", ignoreCase = true) }
+val includeNativesInMainJar = !(isPrepareDeployTask || isPublishTask)
 tasks.jar {
     if(includeNativesInMainJar) {
         if(file(windowsFile).exists()) from(windowsFile)
