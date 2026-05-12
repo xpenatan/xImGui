@@ -16,7 +16,9 @@ dependencies {
 
     if(LibExt.useRepoLibs) {
         implementation("com.github.xpenatan.xImGui:imgui-jni:-SNAPSHOT")
+        implementation("com.github.xpenatan.xImGui:imgui-jni_desktop:-SNAPSHOT")
         implementation("com.github.xpenatan.xImGui:nodeeditor-jni:-SNAPSHOT")
+        implementation("com.github.xpenatan.xImGui:nodeeditor-jni_desktop:-SNAPSHOT")
     }
     else {
         implementation(project(":imgui:imgui-jni"))
