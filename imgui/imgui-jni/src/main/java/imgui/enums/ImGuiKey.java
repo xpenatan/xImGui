@@ -198,823 +198,659 @@ public enum ImGuiKey implements NativeEnum<ImGuiKey> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_None;
-*/
-    private static native int ImGuiKey_None_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_NamedKey_BEGIN;
-*/
-    private static native int ImGuiKey_NamedKey_BEGIN_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Tab;
-*/
-    private static native int ImGuiKey_Tab_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_LeftArrow;
-*/
-    private static native int ImGuiKey_LeftArrow_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_RightArrow;
-*/
-    private static native int ImGuiKey_RightArrow_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_UpArrow;
-*/
-    private static native int ImGuiKey_UpArrow_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_DownArrow;
-*/
-    private static native int ImGuiKey_DownArrow_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_PageUp;
-*/
-    private static native int ImGuiKey_PageUp_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_PageDown;
-*/
-    private static native int ImGuiKey_PageDown_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Home;
-*/
-    private static native int ImGuiKey_Home_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_End;
-*/
-    private static native int ImGuiKey_End_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Insert;
-*/
-    private static native int ImGuiKey_Insert_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Delete;
-*/
-    private static native int ImGuiKey_Delete_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Backspace;
-*/
-    private static native int ImGuiKey_Backspace_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Space;
-*/
-    private static native int ImGuiKey_Space_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Enter;
-*/
-    private static native int ImGuiKey_Enter_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Escape;
-*/
-    private static native int ImGuiKey_Escape_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_LeftCtrl;
-*/
-    private static native int ImGuiKey_LeftCtrl_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_LeftShift;
-*/
-    private static native int ImGuiKey_LeftShift_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_LeftAlt;
-*/
-    private static native int ImGuiKey_LeftAlt_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_LeftSuper;
-*/
-    private static native int ImGuiKey_LeftSuper_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_RightCtrl;
-*/
-    private static native int ImGuiKey_RightCtrl_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_RightShift;
-*/
-    private static native int ImGuiKey_RightShift_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_RightAlt;
-*/
-    private static native int ImGuiKey_RightAlt_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_RightSuper;
-*/
-    private static native int ImGuiKey_RightSuper_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Menu;
-*/
-    private static native int ImGuiKey_Menu_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_0;
-*/
-    private static native int ImGuiKey_0_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_1;
-*/
-    private static native int ImGuiKey_1_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_2;
-*/
-    private static native int ImGuiKey_2_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_3;
-*/
-    private static native int ImGuiKey_3_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_4;
-*/
-    private static native int ImGuiKey_4_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_5;
-*/
-    private static native int ImGuiKey_5_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_6;
-*/
-    private static native int ImGuiKey_6_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_7;
-*/
-    private static native int ImGuiKey_7_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_8;
-*/
-    private static native int ImGuiKey_8_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_9;
-*/
-    private static native int ImGuiKey_9_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_A;
-*/
-    private static native int ImGuiKey_A_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_B;
-*/
-    private static native int ImGuiKey_B_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_C;
-*/
-    private static native int ImGuiKey_C_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_D;
-*/
-    private static native int ImGuiKey_D_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_E;
-*/
-    private static native int ImGuiKey_E_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F;
-*/
-    private static native int ImGuiKey_F_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_G;
-*/
-    private static native int ImGuiKey_G_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_H;
-*/
-    private static native int ImGuiKey_H_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_I;
-*/
-    private static native int ImGuiKey_I_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_J;
-*/
-    private static native int ImGuiKey_J_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_K;
-*/
-    private static native int ImGuiKey_K_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_L;
-*/
-    private static native int ImGuiKey_L_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_M;
-*/
-    private static native int ImGuiKey_M_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_N;
-*/
-    private static native int ImGuiKey_N_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_O;
-*/
-    private static native int ImGuiKey_O_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_P;
-*/
-    private static native int ImGuiKey_P_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Q;
-*/
-    private static native int ImGuiKey_Q_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_R;
-*/
-    private static native int ImGuiKey_R_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_S;
-*/
-    private static native int ImGuiKey_S_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_T;
-*/
-    private static native int ImGuiKey_T_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_U;
-*/
-    private static native int ImGuiKey_U_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_V;
-*/
-    private static native int ImGuiKey_V_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_W;
-*/
-    private static native int ImGuiKey_W_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_X;
-*/
-    private static native int ImGuiKey_X_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Y;
-*/
-    private static native int ImGuiKey_Y_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Z;
-*/
-    private static native int ImGuiKey_Z_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F1;
-*/
-    private static native int ImGuiKey_F1_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F2;
-*/
-    private static native int ImGuiKey_F2_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F3;
-*/
-    private static native int ImGuiKey_F3_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F4;
-*/
-    private static native int ImGuiKey_F4_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F5;
-*/
-    private static native int ImGuiKey_F5_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F6;
-*/
-    private static native int ImGuiKey_F6_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F7;
-*/
-    private static native int ImGuiKey_F7_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F8;
-*/
-    private static native int ImGuiKey_F8_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F9;
-*/
-    private static native int ImGuiKey_F9_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F10;
-*/
-    private static native int ImGuiKey_F10_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F11;
-*/
-    private static native int ImGuiKey_F11_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F12;
-*/
-    private static native int ImGuiKey_F12_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F13;
-*/
-    private static native int ImGuiKey_F13_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F14;
-*/
-    private static native int ImGuiKey_F14_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F15;
-*/
-    private static native int ImGuiKey_F15_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F16;
-*/
-    private static native int ImGuiKey_F16_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F17;
-*/
-    private static native int ImGuiKey_F17_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F18;
-*/
-    private static native int ImGuiKey_F18_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F19;
-*/
-    private static native int ImGuiKey_F19_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F20;
-*/
-    private static native int ImGuiKey_F20_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F21;
-*/
-    private static native int ImGuiKey_F21_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F22;
-*/
-    private static native int ImGuiKey_F22_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F23;
-*/
-    private static native int ImGuiKey_F23_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_F24;
-*/
-    private static native int ImGuiKey_F24_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Apostrophe;
-*/
-    private static native int ImGuiKey_Apostrophe_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Comma;
-*/
-    private static native int ImGuiKey_Comma_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Minus;
-*/
-    private static native int ImGuiKey_Minus_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Period;
-*/
-    private static native int ImGuiKey_Period_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Slash;
-*/
-    private static native int ImGuiKey_Slash_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Semicolon;
-*/
-    private static native int ImGuiKey_Semicolon_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Equal;
-*/
-    private static native int ImGuiKey_Equal_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_LeftBracket;
-*/
-    private static native int ImGuiKey_LeftBracket_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Backslash;
-*/
-    private static native int ImGuiKey_Backslash_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_RightBracket;
-*/
-    private static native int ImGuiKey_RightBracket_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GraveAccent;
-*/
-    private static native int ImGuiKey_GraveAccent_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_CapsLock;
-*/
-    private static native int ImGuiKey_CapsLock_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_ScrollLock;
-*/
-    private static native int ImGuiKey_ScrollLock_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_NumLock;
-*/
-    private static native int ImGuiKey_NumLock_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_PrintScreen;
-*/
-    private static native int ImGuiKey_PrintScreen_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Pause;
-*/
-    private static native int ImGuiKey_Pause_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Keypad0;
-*/
-    private static native int ImGuiKey_Keypad0_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Keypad1;
-*/
-    private static native int ImGuiKey_Keypad1_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Keypad2;
-*/
-    private static native int ImGuiKey_Keypad2_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Keypad3;
-*/
-    private static native int ImGuiKey_Keypad3_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Keypad4;
-*/
-    private static native int ImGuiKey_Keypad4_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Keypad5;
-*/
-    private static native int ImGuiKey_Keypad5_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Keypad6;
-*/
-    private static native int ImGuiKey_Keypad6_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Keypad7;
-*/
-    private static native int ImGuiKey_Keypad7_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Keypad8;
-*/
-    private static native int ImGuiKey_Keypad8_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Keypad9;
-*/
-    private static native int ImGuiKey_Keypad9_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_KeypadDecimal;
-*/
-    private static native int ImGuiKey_KeypadDecimal_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_KeypadDivide;
-*/
-    private static native int ImGuiKey_KeypadDivide_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_KeypadMultiply;
-*/
-    private static native int ImGuiKey_KeypadMultiply_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_KeypadSubtract;
-*/
-    private static native int ImGuiKey_KeypadSubtract_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_KeypadAdd;
-*/
-    private static native int ImGuiKey_KeypadAdd_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_KeypadEnter;
-*/
-    private static native int ImGuiKey_KeypadEnter_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_KeypadEqual;
-*/
-    private static native int ImGuiKey_KeypadEqual_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_AppBack;
-*/
-    private static native int ImGuiKey_AppBack_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_AppForward;
-*/
-    private static native int ImGuiKey_AppForward_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_Oem102;
-*/
-    private static native int ImGuiKey_Oem102_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GamepadStart;
-*/
-    private static native int ImGuiKey_GamepadStart_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GamepadBack;
-*/
-    private static native int ImGuiKey_GamepadBack_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GamepadFaceLeft;
-*/
-    private static native int ImGuiKey_GamepadFaceLeft_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GamepadFaceRight;
-*/
-    private static native int ImGuiKey_GamepadFaceRight_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GamepadFaceUp;
-*/
-    private static native int ImGuiKey_GamepadFaceUp_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GamepadFaceDown;
-*/
-    private static native int ImGuiKey_GamepadFaceDown_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GamepadDpadLeft;
-*/
-    private static native int ImGuiKey_GamepadDpadLeft_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GamepadDpadRight;
-*/
-    private static native int ImGuiKey_GamepadDpadRight_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GamepadDpadUp;
-*/
-    private static native int ImGuiKey_GamepadDpadUp_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GamepadDpadDown;
-*/
-    private static native int ImGuiKey_GamepadDpadDown_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GamepadL1;
-*/
-    private static native int ImGuiKey_GamepadL1_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GamepadR1;
-*/
-    private static native int ImGuiKey_GamepadR1_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GamepadL2;
-*/
-    private static native int ImGuiKey_GamepadL2_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GamepadR2;
-*/
-    private static native int ImGuiKey_GamepadR2_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GamepadL3;
-*/
-    private static native int ImGuiKey_GamepadL3_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GamepadR3;
-*/
-    private static native int ImGuiKey_GamepadR3_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GamepadLStickLeft;
-*/
-    private static native int ImGuiKey_GamepadLStickLeft_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GamepadLStickRight;
-*/
-    private static native int ImGuiKey_GamepadLStickRight_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GamepadLStickUp;
-*/
-    private static native int ImGuiKey_GamepadLStickUp_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GamepadLStickDown;
-*/
-    private static native int ImGuiKey_GamepadLStickDown_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GamepadRStickLeft;
-*/
-    private static native int ImGuiKey_GamepadRStickLeft_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GamepadRStickRight;
-*/
-    private static native int ImGuiKey_GamepadRStickRight_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GamepadRStickUp;
-*/
-    private static native int ImGuiKey_GamepadRStickUp_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_GamepadRStickDown;
-*/
-    private static native int ImGuiKey_GamepadRStickDown_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_MouseLeft;
-*/
-    private static native int ImGuiKey_MouseLeft_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_MouseRight;
-*/
-    private static native int ImGuiKey_MouseRight_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_MouseMiddle;
-*/
-    private static native int ImGuiKey_MouseMiddle_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_MouseX1;
-*/
-    private static native int ImGuiKey_MouseX1_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_MouseX2;
-*/
-    private static native int ImGuiKey_MouseX2_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_MouseWheelX;
-*/
-    private static native int ImGuiKey_MouseWheelX_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_MouseWheelY;
-*/
-    private static native int ImGuiKey_MouseWheelY_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_ReservedForModCtrl;
-*/
-    private static native int ImGuiKey_ReservedForModCtrl_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_ReservedForModShift;
-*/
-    private static native int ImGuiKey_ReservedForModShift_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_ReservedForModAlt;
-*/
-    private static native int ImGuiKey_ReservedForModAlt_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_ReservedForModSuper;
-*/
-    private static native int ImGuiKey_ReservedForModSuper_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiKey_NamedKey_END;
-*/
-    private static native int ImGuiKey_NamedKey_END_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMod_None;
-*/
-    private static native int ImGuiMod_None_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMod_Ctrl;
-*/
-    private static native int ImGuiMod_Ctrl_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMod_Shift;
-*/
-    private static native int ImGuiMod_Shift_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMod_Alt;
-*/
-    private static native int ImGuiMod_Alt_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMod_Super;
-*/
-    private static native int ImGuiMod_Super_NATIVE();
-
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMod_Mask_;
-*/
-    private static native int ImGuiMod_Mask__NATIVE();
+    private static int ImGuiKey_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_None_NATIVE();
+    }
+
+    private static int ImGuiKey_NamedKey_BEGIN_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_NamedKey_BEGIN_NATIVE();
+    }
+
+    private static int ImGuiKey_Tab_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Tab_NATIVE();
+    }
+
+    private static int ImGuiKey_LeftArrow_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_LeftArrow_NATIVE();
+    }
+
+    private static int ImGuiKey_RightArrow_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_RightArrow_NATIVE();
+    }
+
+    private static int ImGuiKey_UpArrow_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_UpArrow_NATIVE();
+    }
+
+    private static int ImGuiKey_DownArrow_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_DownArrow_NATIVE();
+    }
+
+    private static int ImGuiKey_PageUp_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_PageUp_NATIVE();
+    }
+
+    private static int ImGuiKey_PageDown_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_PageDown_NATIVE();
+    }
+
+    private static int ImGuiKey_Home_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Home_NATIVE();
+    }
+
+    private static int ImGuiKey_End_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_End_NATIVE();
+    }
+
+    private static int ImGuiKey_Insert_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Insert_NATIVE();
+    }
+
+    private static int ImGuiKey_Delete_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Delete_NATIVE();
+    }
+
+    private static int ImGuiKey_Backspace_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Backspace_NATIVE();
+    }
+
+    private static int ImGuiKey_Space_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Space_NATIVE();
+    }
+
+    private static int ImGuiKey_Enter_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Enter_NATIVE();
+    }
+
+    private static int ImGuiKey_Escape_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Escape_NATIVE();
+    }
+
+    private static int ImGuiKey_LeftCtrl_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_LeftCtrl_NATIVE();
+    }
+
+    private static int ImGuiKey_LeftShift_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_LeftShift_NATIVE();
+    }
+
+    private static int ImGuiKey_LeftAlt_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_LeftAlt_NATIVE();
+    }
+
+    private static int ImGuiKey_LeftSuper_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_LeftSuper_NATIVE();
+    }
+
+    private static int ImGuiKey_RightCtrl_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_RightCtrl_NATIVE();
+    }
+
+    private static int ImGuiKey_RightShift_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_RightShift_NATIVE();
+    }
+
+    private static int ImGuiKey_RightAlt_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_RightAlt_NATIVE();
+    }
+
+    private static int ImGuiKey_RightSuper_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_RightSuper_NATIVE();
+    }
+
+    private static int ImGuiKey_Menu_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Menu_NATIVE();
+    }
+
+    private static int ImGuiKey_0_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_0_NATIVE();
+    }
+
+    private static int ImGuiKey_1_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_1_NATIVE();
+    }
+
+    private static int ImGuiKey_2_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_2_NATIVE();
+    }
+
+    private static int ImGuiKey_3_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_3_NATIVE();
+    }
+
+    private static int ImGuiKey_4_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_4_NATIVE();
+    }
+
+    private static int ImGuiKey_5_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_5_NATIVE();
+    }
+
+    private static int ImGuiKey_6_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_6_NATIVE();
+    }
+
+    private static int ImGuiKey_7_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_7_NATIVE();
+    }
+
+    private static int ImGuiKey_8_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_8_NATIVE();
+    }
+
+    private static int ImGuiKey_9_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_9_NATIVE();
+    }
+
+    private static int ImGuiKey_A_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_A_NATIVE();
+    }
+
+    private static int ImGuiKey_B_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_B_NATIVE();
+    }
+
+    private static int ImGuiKey_C_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_C_NATIVE();
+    }
+
+    private static int ImGuiKey_D_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_D_NATIVE();
+    }
+
+    private static int ImGuiKey_E_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_E_NATIVE();
+    }
+
+    private static int ImGuiKey_F_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F_NATIVE();
+    }
+
+    private static int ImGuiKey_G_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_G_NATIVE();
+    }
+
+    private static int ImGuiKey_H_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_H_NATIVE();
+    }
+
+    private static int ImGuiKey_I_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_I_NATIVE();
+    }
+
+    private static int ImGuiKey_J_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_J_NATIVE();
+    }
+
+    private static int ImGuiKey_K_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_K_NATIVE();
+    }
+
+    private static int ImGuiKey_L_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_L_NATIVE();
+    }
+
+    private static int ImGuiKey_M_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_M_NATIVE();
+    }
+
+    private static int ImGuiKey_N_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_N_NATIVE();
+    }
+
+    private static int ImGuiKey_O_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_O_NATIVE();
+    }
+
+    private static int ImGuiKey_P_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_P_NATIVE();
+    }
+
+    private static int ImGuiKey_Q_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Q_NATIVE();
+    }
+
+    private static int ImGuiKey_R_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_R_NATIVE();
+    }
+
+    private static int ImGuiKey_S_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_S_NATIVE();
+    }
+
+    private static int ImGuiKey_T_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_T_NATIVE();
+    }
+
+    private static int ImGuiKey_U_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_U_NATIVE();
+    }
+
+    private static int ImGuiKey_V_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_V_NATIVE();
+    }
+
+    private static int ImGuiKey_W_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_W_NATIVE();
+    }
+
+    private static int ImGuiKey_X_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_X_NATIVE();
+    }
+
+    private static int ImGuiKey_Y_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Y_NATIVE();
+    }
+
+    private static int ImGuiKey_Z_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Z_NATIVE();
+    }
+
+    private static int ImGuiKey_F1_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F1_NATIVE();
+    }
+
+    private static int ImGuiKey_F2_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F2_NATIVE();
+    }
+
+    private static int ImGuiKey_F3_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F3_NATIVE();
+    }
+
+    private static int ImGuiKey_F4_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F4_NATIVE();
+    }
+
+    private static int ImGuiKey_F5_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F5_NATIVE();
+    }
+
+    private static int ImGuiKey_F6_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F6_NATIVE();
+    }
+
+    private static int ImGuiKey_F7_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F7_NATIVE();
+    }
+
+    private static int ImGuiKey_F8_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F8_NATIVE();
+    }
+
+    private static int ImGuiKey_F9_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F9_NATIVE();
+    }
+
+    private static int ImGuiKey_F10_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F10_NATIVE();
+    }
+
+    private static int ImGuiKey_F11_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F11_NATIVE();
+    }
+
+    private static int ImGuiKey_F12_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F12_NATIVE();
+    }
+
+    private static int ImGuiKey_F13_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F13_NATIVE();
+    }
+
+    private static int ImGuiKey_F14_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F14_NATIVE();
+    }
+
+    private static int ImGuiKey_F15_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F15_NATIVE();
+    }
+
+    private static int ImGuiKey_F16_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F16_NATIVE();
+    }
+
+    private static int ImGuiKey_F17_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F17_NATIVE();
+    }
+
+    private static int ImGuiKey_F18_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F18_NATIVE();
+    }
+
+    private static int ImGuiKey_F19_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F19_NATIVE();
+    }
+
+    private static int ImGuiKey_F20_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F20_NATIVE();
+    }
+
+    private static int ImGuiKey_F21_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F21_NATIVE();
+    }
+
+    private static int ImGuiKey_F22_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F22_NATIVE();
+    }
+
+    private static int ImGuiKey_F23_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F23_NATIVE();
+    }
+
+    private static int ImGuiKey_F24_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_F24_NATIVE();
+    }
+
+    private static int ImGuiKey_Apostrophe_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Apostrophe_NATIVE();
+    }
+
+    private static int ImGuiKey_Comma_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Comma_NATIVE();
+    }
+
+    private static int ImGuiKey_Minus_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Minus_NATIVE();
+    }
+
+    private static int ImGuiKey_Period_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Period_NATIVE();
+    }
+
+    private static int ImGuiKey_Slash_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Slash_NATIVE();
+    }
+
+    private static int ImGuiKey_Semicolon_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Semicolon_NATIVE();
+    }
+
+    private static int ImGuiKey_Equal_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Equal_NATIVE();
+    }
+
+    private static int ImGuiKey_LeftBracket_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_LeftBracket_NATIVE();
+    }
+
+    private static int ImGuiKey_Backslash_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Backslash_NATIVE();
+    }
+
+    private static int ImGuiKey_RightBracket_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_RightBracket_NATIVE();
+    }
+
+    private static int ImGuiKey_GraveAccent_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GraveAccent_NATIVE();
+    }
+
+    private static int ImGuiKey_CapsLock_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_CapsLock_NATIVE();
+    }
+
+    private static int ImGuiKey_ScrollLock_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_ScrollLock_NATIVE();
+    }
+
+    private static int ImGuiKey_NumLock_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_NumLock_NATIVE();
+    }
+
+    private static int ImGuiKey_PrintScreen_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_PrintScreen_NATIVE();
+    }
+
+    private static int ImGuiKey_Pause_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Pause_NATIVE();
+    }
+
+    private static int ImGuiKey_Keypad0_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Keypad0_NATIVE();
+    }
+
+    private static int ImGuiKey_Keypad1_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Keypad1_NATIVE();
+    }
+
+    private static int ImGuiKey_Keypad2_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Keypad2_NATIVE();
+    }
+
+    private static int ImGuiKey_Keypad3_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Keypad3_NATIVE();
+    }
+
+    private static int ImGuiKey_Keypad4_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Keypad4_NATIVE();
+    }
+
+    private static int ImGuiKey_Keypad5_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Keypad5_NATIVE();
+    }
+
+    private static int ImGuiKey_Keypad6_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Keypad6_NATIVE();
+    }
+
+    private static int ImGuiKey_Keypad7_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Keypad7_NATIVE();
+    }
+
+    private static int ImGuiKey_Keypad8_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Keypad8_NATIVE();
+    }
+
+    private static int ImGuiKey_Keypad9_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Keypad9_NATIVE();
+    }
+
+    private static int ImGuiKey_KeypadDecimal_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_KeypadDecimal_NATIVE();
+    }
+
+    private static int ImGuiKey_KeypadDivide_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_KeypadDivide_NATIVE();
+    }
+
+    private static int ImGuiKey_KeypadMultiply_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_KeypadMultiply_NATIVE();
+    }
+
+    private static int ImGuiKey_KeypadSubtract_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_KeypadSubtract_NATIVE();
+    }
+
+    private static int ImGuiKey_KeypadAdd_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_KeypadAdd_NATIVE();
+    }
+
+    private static int ImGuiKey_KeypadEnter_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_KeypadEnter_NATIVE();
+    }
+
+    private static int ImGuiKey_KeypadEqual_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_KeypadEqual_NATIVE();
+    }
+
+    private static int ImGuiKey_AppBack_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_AppBack_NATIVE();
+    }
+
+    private static int ImGuiKey_AppForward_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_AppForward_NATIVE();
+    }
+
+    private static int ImGuiKey_Oem102_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_Oem102_NATIVE();
+    }
+
+    private static int ImGuiKey_GamepadStart_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GamepadStart_NATIVE();
+    }
+
+    private static int ImGuiKey_GamepadBack_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GamepadBack_NATIVE();
+    }
+
+    private static int ImGuiKey_GamepadFaceLeft_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GamepadFaceLeft_NATIVE();
+    }
+
+    private static int ImGuiKey_GamepadFaceRight_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GamepadFaceRight_NATIVE();
+    }
+
+    private static int ImGuiKey_GamepadFaceUp_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GamepadFaceUp_NATIVE();
+    }
+
+    private static int ImGuiKey_GamepadFaceDown_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GamepadFaceDown_NATIVE();
+    }
+
+    private static int ImGuiKey_GamepadDpadLeft_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GamepadDpadLeft_NATIVE();
+    }
+
+    private static int ImGuiKey_GamepadDpadRight_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GamepadDpadRight_NATIVE();
+    }
+
+    private static int ImGuiKey_GamepadDpadUp_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GamepadDpadUp_NATIVE();
+    }
+
+    private static int ImGuiKey_GamepadDpadDown_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GamepadDpadDown_NATIVE();
+    }
+
+    private static int ImGuiKey_GamepadL1_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GamepadL1_NATIVE();
+    }
+
+    private static int ImGuiKey_GamepadR1_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GamepadR1_NATIVE();
+    }
+
+    private static int ImGuiKey_GamepadL2_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GamepadL2_NATIVE();
+    }
+
+    private static int ImGuiKey_GamepadR2_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GamepadR2_NATIVE();
+    }
+
+    private static int ImGuiKey_GamepadL3_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GamepadL3_NATIVE();
+    }
+
+    private static int ImGuiKey_GamepadR3_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GamepadR3_NATIVE();
+    }
+
+    private static int ImGuiKey_GamepadLStickLeft_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GamepadLStickLeft_NATIVE();
+    }
+
+    private static int ImGuiKey_GamepadLStickRight_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GamepadLStickRight_NATIVE();
+    }
+
+    private static int ImGuiKey_GamepadLStickUp_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GamepadLStickUp_NATIVE();
+    }
+
+    private static int ImGuiKey_GamepadLStickDown_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GamepadLStickDown_NATIVE();
+    }
+
+    private static int ImGuiKey_GamepadRStickLeft_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GamepadRStickLeft_NATIVE();
+    }
+
+    private static int ImGuiKey_GamepadRStickRight_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GamepadRStickRight_NATIVE();
+    }
+
+    private static int ImGuiKey_GamepadRStickUp_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GamepadRStickUp_NATIVE();
+    }
+
+    private static int ImGuiKey_GamepadRStickDown_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_GamepadRStickDown_NATIVE();
+    }
+
+    private static int ImGuiKey_MouseLeft_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_MouseLeft_NATIVE();
+    }
+
+    private static int ImGuiKey_MouseRight_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_MouseRight_NATIVE();
+    }
+
+    private static int ImGuiKey_MouseMiddle_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_MouseMiddle_NATIVE();
+    }
+
+    private static int ImGuiKey_MouseX1_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_MouseX1_NATIVE();
+    }
+
+    private static int ImGuiKey_MouseX2_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_MouseX2_NATIVE();
+    }
+
+    private static int ImGuiKey_MouseWheelX_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_MouseWheelX_NATIVE();
+    }
+
+    private static int ImGuiKey_MouseWheelY_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_MouseWheelY_NATIVE();
+    }
+
+    private static int ImGuiKey_ReservedForModCtrl_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_ReservedForModCtrl_NATIVE();
+    }
+
+    private static int ImGuiKey_ReservedForModShift_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_ReservedForModShift_NATIVE();
+    }
+
+    private static int ImGuiKey_ReservedForModAlt_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_ReservedForModAlt_NATIVE();
+    }
+
+    private static int ImGuiKey_ReservedForModSuper_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_ReservedForModSuper_NATIVE();
+    }
+
+    private static int ImGuiKey_NamedKey_END_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiKey_NamedKey_END_NATIVE();
+    }
+
+    private static int ImGuiMod_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiMod_None_NATIVE();
+    }
+
+    private static int ImGuiMod_Ctrl_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiMod_Ctrl_NATIVE();
+    }
+
+    private static int ImGuiMod_Shift_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiMod_Shift_NATIVE();
+    }
+
+    private static int ImGuiMod_Alt_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiMod_Alt_NATIVE();
+    }
+
+    private static int ImGuiMod_Super_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiMod_Super_NATIVE();
+    }
+
+    private static int ImGuiMod_Mask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiKey.ImGuiMod_Mask__NATIVE();
+    }
 }

@@ -46,101 +46,56 @@ public enum ImTextureStatus implements NativeEnum<ImTextureStatus> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImTextureStatus_OK;
-*/
     private static int ImTextureStatus_OK_NATIVE() {
         try {
             return (int) FFMHandles.ImTextureStatus_OK_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImTextureStatus_Destroyed;
-*/
     private static int ImTextureStatus_Destroyed_NATIVE() {
         try {
             return (int) FFMHandles.ImTextureStatus_Destroyed_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImTextureStatus_WantCreate;
-*/
     private static int ImTextureStatus_WantCreate_NATIVE() {
         try {
             return (int) FFMHandles.ImTextureStatus_WantCreate_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImTextureStatus_WantUpdates;
-*/
     private static int ImTextureStatus_WantUpdates_NATIVE() {
         try {
             return (int) FFMHandles.ImTextureStatus_WantUpdates_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImTextureStatus_WantDestroy;
-*/
     private static int ImTextureStatus_WantDestroy_NATIVE() {
         try {
             return (int) FFMHandles.ImTextureStatus_WantDestroy_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImTextureStatus_OK_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imtexturestatus_imtexturestatus_ok_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImTextureStatus_Destroyed_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imtexturestatus_imtexturestatus_destroyed_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImTextureStatus_WantCreate_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imtexturestatus_imtexturestatus_wantcreate_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImTextureStatus_WantUpdates_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imtexturestatus_imtexturestatus_wantupdates_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
-
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
-
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
-
-        static final java.lang.invoke.MethodHandle ImTextureStatus_OK_NATIVE__ = downcallDefault("jparser_imgui_enums_ImTextureStatus_ImTextureStatus_1OK_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImTextureStatus_Destroyed_NATIVE__ = downcallDefault("jparser_imgui_enums_ImTextureStatus_ImTextureStatus_1Destroyed_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImTextureStatus_WantCreate_NATIVE__ = downcallDefault("jparser_imgui_enums_ImTextureStatus_ImTextureStatus_1WantCreate_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImTextureStatus_WantUpdates_NATIVE__ = downcallDefault("jparser_imgui_enums_ImTextureStatus_ImTextureStatus_1WantUpdates_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImTextureStatus_WantDestroy_NATIVE__ = downcallDefault("jparser_imgui_enums_ImTextureStatus_ImTextureStatus_1WantDestroy_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImTextureStatus_WantDestroy_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imtexturestatus_imtexturestatus_wantdestroy_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

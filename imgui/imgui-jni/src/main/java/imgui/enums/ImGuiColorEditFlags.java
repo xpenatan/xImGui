@@ -65,158 +65,127 @@ public enum ImGuiColorEditFlags implements NativeEnum<ImGuiColorEditFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_None;
-*/
-    private static native int ImGuiColorEditFlags_None_NATIVE();
+    private static int ImGuiColorEditFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_NoAlpha;
-*/
-    private static native int ImGuiColorEditFlags_NoAlpha_NATIVE();
+    private static int ImGuiColorEditFlags_NoAlpha_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_NoAlpha_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_NoPicker;
-*/
-    private static native int ImGuiColorEditFlags_NoPicker_NATIVE();
+    private static int ImGuiColorEditFlags_NoPicker_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_NoPicker_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_NoOptions;
-*/
-    private static native int ImGuiColorEditFlags_NoOptions_NATIVE();
+    private static int ImGuiColorEditFlags_NoOptions_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_NoOptions_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_NoSmallPreview;
-*/
-    private static native int ImGuiColorEditFlags_NoSmallPreview_NATIVE();
+    private static int ImGuiColorEditFlags_NoSmallPreview_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_NoSmallPreview_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_NoInputs;
-*/
-    private static native int ImGuiColorEditFlags_NoInputs_NATIVE();
+    private static int ImGuiColorEditFlags_NoInputs_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_NoInputs_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_NoTooltip;
-*/
-    private static native int ImGuiColorEditFlags_NoTooltip_NATIVE();
+    private static int ImGuiColorEditFlags_NoTooltip_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_NoTooltip_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_NoLabel;
-*/
-    private static native int ImGuiColorEditFlags_NoLabel_NATIVE();
+    private static int ImGuiColorEditFlags_NoLabel_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_NoLabel_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_NoSidePreview;
-*/
-    private static native int ImGuiColorEditFlags_NoSidePreview_NATIVE();
+    private static int ImGuiColorEditFlags_NoSidePreview_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_NoSidePreview_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_NoDragDrop;
-*/
-    private static native int ImGuiColorEditFlags_NoDragDrop_NATIVE();
+    private static int ImGuiColorEditFlags_NoDragDrop_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_NoDragDrop_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_NoBorder;
-*/
-    private static native int ImGuiColorEditFlags_NoBorder_NATIVE();
+    private static int ImGuiColorEditFlags_NoBorder_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_NoBorder_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_AlphaOpaque;
-*/
-    private static native int ImGuiColorEditFlags_AlphaOpaque_NATIVE();
+    private static int ImGuiColorEditFlags_AlphaOpaque_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_AlphaOpaque_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_AlphaNoBg;
-*/
-    private static native int ImGuiColorEditFlags_AlphaNoBg_NATIVE();
+    private static int ImGuiColorEditFlags_AlphaNoBg_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_AlphaNoBg_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_AlphaPreviewHalf;
-*/
-    private static native int ImGuiColorEditFlags_AlphaPreviewHalf_NATIVE();
+    private static int ImGuiColorEditFlags_AlphaPreviewHalf_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_AlphaPreviewHalf_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_AlphaBar;
-*/
-    private static native int ImGuiColorEditFlags_AlphaBar_NATIVE();
+    private static int ImGuiColorEditFlags_AlphaBar_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_AlphaBar_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_HDR;
-*/
-    private static native int ImGuiColorEditFlags_HDR_NATIVE();
+    private static int ImGuiColorEditFlags_HDR_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_HDR_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_DisplayRGB;
-*/
-    private static native int ImGuiColorEditFlags_DisplayRGB_NATIVE();
+    private static int ImGuiColorEditFlags_DisplayRGB_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_DisplayRGB_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_DisplayHSV;
-*/
-    private static native int ImGuiColorEditFlags_DisplayHSV_NATIVE();
+    private static int ImGuiColorEditFlags_DisplayHSV_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_DisplayHSV_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_DisplayHex;
-*/
-    private static native int ImGuiColorEditFlags_DisplayHex_NATIVE();
+    private static int ImGuiColorEditFlags_DisplayHex_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_DisplayHex_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_Uint8;
-*/
-    private static native int ImGuiColorEditFlags_Uint8_NATIVE();
+    private static int ImGuiColorEditFlags_Uint8_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_Uint8_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_Float;
-*/
-    private static native int ImGuiColorEditFlags_Float_NATIVE();
+    private static int ImGuiColorEditFlags_Float_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_Float_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_PickerHueBar;
-*/
-    private static native int ImGuiColorEditFlags_PickerHueBar_NATIVE();
+    private static int ImGuiColorEditFlags_PickerHueBar_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_PickerHueBar_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_PickerHueWheel;
-*/
-    private static native int ImGuiColorEditFlags_PickerHueWheel_NATIVE();
+    private static int ImGuiColorEditFlags_PickerHueWheel_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_PickerHueWheel_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_InputRGB;
-*/
-    private static native int ImGuiColorEditFlags_InputRGB_NATIVE();
+    private static int ImGuiColorEditFlags_InputRGB_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_InputRGB_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_InputHSV;
-*/
-    private static native int ImGuiColorEditFlags_InputHSV_NATIVE();
+    private static int ImGuiColorEditFlags_InputHSV_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_InputHSV_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_DefaultOptions_;
-*/
-    private static native int ImGuiColorEditFlags_DefaultOptions__NATIVE();
+    private static int ImGuiColorEditFlags_DefaultOptions__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_DefaultOptions__NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_AlphaMask_;
-*/
-    private static native int ImGuiColorEditFlags_AlphaMask__NATIVE();
+    private static int ImGuiColorEditFlags_AlphaMask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_AlphaMask__NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_DisplayMask_;
-*/
-    private static native int ImGuiColorEditFlags_DisplayMask__NATIVE();
+    private static int ImGuiColorEditFlags_DisplayMask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_DisplayMask__NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_DataTypeMask_;
-*/
-    private static native int ImGuiColorEditFlags_DataTypeMask__NATIVE();
+    private static int ImGuiColorEditFlags_DataTypeMask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_DataTypeMask__NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_PickerMask_;
-*/
-    private static native int ImGuiColorEditFlags_PickerMask__NATIVE();
+    private static int ImGuiColorEditFlags_PickerMask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_PickerMask__NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiColorEditFlags_InputMask_;
-*/
-    private static native int ImGuiColorEditFlags_InputMask__NATIVE();
+    private static int ImGuiColorEditFlags_InputMask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiColorEditFlags.ImGuiColorEditFlags_InputMask__NATIVE();
+    }
 }

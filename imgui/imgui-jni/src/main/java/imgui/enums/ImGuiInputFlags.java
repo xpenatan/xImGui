@@ -45,58 +45,47 @@ public enum ImGuiInputFlags implements NativeEnum<ImGuiInputFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_None;
-*/
-    private static native int ImGuiInputFlags_None_NATIVE();
+    private static int ImGuiInputFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputFlags.ImGuiInputFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_Repeat;
-*/
-    private static native int ImGuiInputFlags_Repeat_NATIVE();
+    private static int ImGuiInputFlags_Repeat_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputFlags.ImGuiInputFlags_Repeat_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RouteActive;
-*/
-    private static native int ImGuiInputFlags_RouteActive_NATIVE();
+    private static int ImGuiInputFlags_RouteActive_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputFlags.ImGuiInputFlags_RouteActive_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RouteFocused;
-*/
-    private static native int ImGuiInputFlags_RouteFocused_NATIVE();
+    private static int ImGuiInputFlags_RouteFocused_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputFlags.ImGuiInputFlags_RouteFocused_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RouteGlobal;
-*/
-    private static native int ImGuiInputFlags_RouteGlobal_NATIVE();
+    private static int ImGuiInputFlags_RouteGlobal_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputFlags.ImGuiInputFlags_RouteGlobal_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RouteAlways;
-*/
-    private static native int ImGuiInputFlags_RouteAlways_NATIVE();
+    private static int ImGuiInputFlags_RouteAlways_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputFlags.ImGuiInputFlags_RouteAlways_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RouteOverFocused;
-*/
-    private static native int ImGuiInputFlags_RouteOverFocused_NATIVE();
+    private static int ImGuiInputFlags_RouteOverFocused_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputFlags.ImGuiInputFlags_RouteOverFocused_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RouteOverActive;
-*/
-    private static native int ImGuiInputFlags_RouteOverActive_NATIVE();
+    private static int ImGuiInputFlags_RouteOverActive_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputFlags.ImGuiInputFlags_RouteOverActive_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RouteUnlessBgFocused;
-*/
-    private static native int ImGuiInputFlags_RouteUnlessBgFocused_NATIVE();
+    private static int ImGuiInputFlags_RouteUnlessBgFocused_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputFlags.ImGuiInputFlags_RouteUnlessBgFocused_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_RouteFromRootWindow;
-*/
-    private static native int ImGuiInputFlags_RouteFromRootWindow_NATIVE();
+    private static int ImGuiInputFlags_RouteFromRootWindow_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputFlags.ImGuiInputFlags_RouteFromRootWindow_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputFlags_Tooltip;
-*/
-    private static native int ImGuiInputFlags_Tooltip_NATIVE();
+    private static int ImGuiInputFlags_Tooltip_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputFlags.ImGuiInputFlags_Tooltip_NATIVE();
+    }
 }

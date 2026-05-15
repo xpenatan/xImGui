@@ -76,15 +76,11 @@ public class NodeEditor extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor* nativeObject = (NodeEditor*)this_addr;
-delete nativeObject;
-*/
     public static void internal_native_deleteNative(long this_addr) {
         try {
             FFMHandles.internal_native_deleteNative__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -92,14 +88,11 @@ delete nativeObject;
         internal_native_SetCurrentEditor(ctx.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::SetCurrentEditor((EditorContext* )ctx_addr);
-*/
     public static void internal_native_SetCurrentEditor(long ctx_addr) {
         try {
             FFMHandles.internal_native_SetCurrentEditor__J.invokeExact(ctx_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -113,14 +106,11 @@ NodeEditor::SetCurrentEditor((EditorContext* )ctx_addr);
         return EditorContext_TEMP_STATIC_GEN_0;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)NodeEditor::GetCurrentEditor();
-*/
     public static long internal_native_GetCurrentEditor_addr() {
         try {
             return (long) FFMHandles.internal_native_GetCurrentEditor_addr__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -134,14 +124,11 @@ return (int64_t)NodeEditor::GetCurrentEditor();
         return EditorContext_TEMP_STATIC_GEN_1;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)NodeEditor::CreateEditor((LoadSaveSettingsListener* )listener_addr);
-*/
     public static long internal_native_CreateEditor_addr(long listener_addr) {
         try {
             return (long) FFMHandles.internal_native_CreateEditor_addr__J.invokeExact(listener_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -155,14 +142,11 @@ return (int64_t)NodeEditor::CreateEditor((LoadSaveSettingsListener* )listener_ad
         return EditorContext_TEMP_STATIC_GEN_2;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)NodeEditor::CreateEditor();
-*/
     public static long internal_native_CreateEditor_addr() {
         try {
             return (long) FFMHandles.internal_native_CreateEditor_addr__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -170,14 +154,11 @@ return (int64_t)NodeEditor::CreateEditor();
         internal_native_DestroyEditor(ctx.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::DestroyEditor((EditorContext* )ctx_addr);
-*/
     public static void internal_native_DestroyEditor(long ctx_addr) {
         try {
             FFMHandles.internal_native_DestroyEditor__J.invokeExact(ctx_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -191,14 +172,11 @@ NodeEditor::DestroyEditor((EditorContext* )ctx_addr);
         return Config_TEMP_STATIC_GEN_0;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)&NodeEditor::GetConfig((EditorContext* )ctx_addr);
-*/
     public static long internal_native_GetConfig_addr(long ctx_addr) {
         try {
             return (long) FFMHandles.internal_native_GetConfig_addr__J.invokeExact(ctx_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -212,14 +190,11 @@ return (int64_t)&NodeEditor::GetConfig((EditorContext* )ctx_addr);
         return Config_TEMP_STATIC_GEN_1;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)&NodeEditor::GetConfig();
-*/
     public static long internal_native_GetConfig_addr() {
         try {
             return (long) FFMHandles.internal_native_GetConfig_addr__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -233,14 +208,11 @@ return (int64_t)&NodeEditor::GetConfig();
         return Style_TEMP_STATIC_GEN_0;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)&NodeEditor::GetStyle();
-*/
     public static long internal_native_GetStyle_addr() {
         try {
             return (long) FFMHandles.internal_native_GetStyle_addr__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -254,15 +226,11 @@ return (int64_t)&NodeEditor::GetStyle();
         return NativeString_TEMP_STATIC_GEN_0;
     }
 
-    /*[-FFM;-NATIVE]
-static NativeString copy_addr;
-copy_addr = NodeEditor::GetStyleColorName((::StyleColor)colorIndex);
-return (int64_t)&copy_addr;*/
     public static long internal_native_GetStyleColorName_addr(int colorIndex) {
         try {
             return (long) FFMHandles.internal_native_GetStyleColorName_addr__I.invokeExact(colorIndex);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -270,14 +238,11 @@ return (int64_t)&copy_addr;*/
         internal_native_PushStyleColor(colorIndex.getValue(), color.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::PushStyleColor((::StyleColor)colorIndex, *((ImVec4* )color_addr));
-*/
     public static void internal_native_PushStyleColor(int colorIndex, long color_addr) {
         try {
             FFMHandles.internal_native_PushStyleColor__IJ.invokeExact(colorIndex, color_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -285,14 +250,11 @@ NodeEditor::PushStyleColor((::StyleColor)colorIndex, *((ImVec4* )color_addr));
         internal_native_PopStyleColor(count);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::PopStyleColor((int)count);
-*/
     public static void internal_native_PopStyleColor(int count) {
         try {
             FFMHandles.internal_native_PopStyleColor__I.invokeExact(count);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -300,14 +262,11 @@ NodeEditor::PopStyleColor((int)count);
         internal_native_PopStyleColor();
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::PopStyleColor();
-*/
     public static void internal_native_PopStyleColor() {
         try {
             FFMHandles.internal_native_PopStyleColor__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -315,14 +274,11 @@ NodeEditor::PopStyleColor();
         internal_native_PushStyleVar__0(varIndex.getValue(), value);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::PushStyleVar((::StyleVar)varIndex, (float)value);
-*/
     public static void internal_native_PushStyleVar__0(int varIndex, float value) {
         try {
             FFMHandles.internal_native_PushStyleVar__0__IF.invokeExact(varIndex, value);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -330,14 +286,11 @@ NodeEditor::PushStyleVar((::StyleVar)varIndex, (float)value);
         internal_native_PushStyleVar__1(varIndex.getValue(), value.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::PushStyleVar((::StyleVar)varIndex, *((ImVec2* )value_addr));
-*/
     public static void internal_native_PushStyleVar__1(int varIndex, long value_addr) {
         try {
             FFMHandles.internal_native_PushStyleVar__1__IJ.invokeExact(varIndex, value_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -345,14 +298,11 @@ NodeEditor::PushStyleVar((::StyleVar)varIndex, *((ImVec2* )value_addr));
         internal_native_PushStyleVar__2(varIndex.getValue(), value.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::PushStyleVar((::StyleVar)varIndex, *((ImVec4* )value_addr));
-*/
     public static void internal_native_PushStyleVar__2(int varIndex, long value_addr) {
         try {
             FFMHandles.internal_native_PushStyleVar__2__IJ.invokeExact(varIndex, value_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -360,14 +310,11 @@ NodeEditor::PushStyleVar((::StyleVar)varIndex, *((ImVec4* )value_addr));
         internal_native_PopStyleVar(count);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::PopStyleVar((int)count);
-*/
     public static void internal_native_PopStyleVar(int count) {
         try {
             FFMHandles.internal_native_PopStyleVar__I.invokeExact(count);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -375,14 +322,11 @@ NodeEditor::PopStyleVar((int)count);
         internal_native_PopStyleVar();
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::PopStyleVar();
-*/
     public static void internal_native_PopStyleVar() {
         try {
             FFMHandles.internal_native_PopStyleVar__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -390,14 +334,11 @@ NodeEditor::PopStyleVar();
         internal_native_Begin(id, size.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::Begin(id, *((ImVec2* )size_addr));
-*/
     public static void internal_native_Begin(String id, long size_addr) {
         try {
             FFMHandles.internal_native_Begin__Ljava_lang_String_2J.invokeExact(com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(id), size_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -405,14 +346,11 @@ NodeEditor::Begin(id, *((ImVec2* )size_addr));
         internal_native_Begin(id);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::Begin(id);
-*/
     public static void internal_native_Begin(String id) {
         try {
             FFMHandles.internal_native_Begin__Ljava_lang_String_2.invokeExact(com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(id));
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -420,14 +358,11 @@ NodeEditor::Begin(id);
         internal_native_End();
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::End();
-*/
     public static void internal_native_End() {
         try {
             FFMHandles.internal_native_End__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -435,14 +370,11 @@ NodeEditor::End();
         internal_native_BeginNode(id);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::BeginNode((int)id);
-*/
     public static void internal_native_BeginNode(int id) {
         try {
             FFMHandles.internal_native_BeginNode__I.invokeExact(id);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -450,14 +382,11 @@ NodeEditor::BeginNode((int)id);
         internal_native_BeginPin(id, kind.getValue());
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::BeginPin((int)id, (PinKind)kind);
-*/
     public static void internal_native_BeginPin(int id, int kind) {
         try {
             FFMHandles.internal_native_BeginPin__II.invokeExact(id, kind);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -465,14 +394,11 @@ NodeEditor::BeginPin((int)id, (PinKind)kind);
         internal_native_PinRect(a.native_address, b.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::PinRect(*((ImVec2* )a_addr), *((ImVec2* )b_addr));
-*/
     public static void internal_native_PinRect(long a_addr, long b_addr) {
         try {
             FFMHandles.internal_native_PinRect__JJ.invokeExact(a_addr, b_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -480,14 +406,11 @@ NodeEditor::PinRect(*((ImVec2* )a_addr), *((ImVec2* )b_addr));
         internal_native_PinPivotRect(a.native_address, b.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::PinPivotRect(*((ImVec2* )a_addr), *((ImVec2* )b_addr));
-*/
     public static void internal_native_PinPivotRect(long a_addr, long b_addr) {
         try {
             FFMHandles.internal_native_PinPivotRect__JJ.invokeExact(a_addr, b_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -495,14 +418,11 @@ NodeEditor::PinPivotRect(*((ImVec2* )a_addr), *((ImVec2* )b_addr));
         internal_native_PinPivotSize(size.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::PinPivotSize(*((ImVec2* )size_addr));
-*/
     public static void internal_native_PinPivotSize(long size_addr) {
         try {
             FFMHandles.internal_native_PinPivotSize__J.invokeExact(size_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -510,14 +430,11 @@ NodeEditor::PinPivotSize(*((ImVec2* )size_addr));
         internal_native_PinPivotScale(scale.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::PinPivotScale(*((ImVec2* )scale_addr));
-*/
     public static void internal_native_PinPivotScale(long scale_addr) {
         try {
             FFMHandles.internal_native_PinPivotScale__J.invokeExact(scale_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -525,14 +442,11 @@ NodeEditor::PinPivotScale(*((ImVec2* )scale_addr));
         internal_native_PinPivotAlignment(alignment.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::PinPivotAlignment(*((ImVec2* )alignment_addr));
-*/
     public static void internal_native_PinPivotAlignment(long alignment_addr) {
         try {
             FFMHandles.internal_native_PinPivotAlignment__J.invokeExact(alignment_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -540,14 +454,11 @@ NodeEditor::PinPivotAlignment(*((ImVec2* )alignment_addr));
         internal_native_EndPin();
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::EndPin();
-*/
     public static void internal_native_EndPin() {
         try {
             FFMHandles.internal_native_EndPin__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -555,14 +466,11 @@ NodeEditor::EndPin();
         internal_native_Group(size.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::Group(*((ImVec2* )size_addr));
-*/
     public static void internal_native_Group(long size_addr) {
         try {
             FFMHandles.internal_native_Group__J.invokeExact(size_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -570,14 +478,11 @@ NodeEditor::Group(*((ImVec2* )size_addr));
         internal_native_EndNode();
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::EndNode();
-*/
     public static void internal_native_EndNode() {
         try {
             FFMHandles.internal_native_EndNode__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -585,14 +490,11 @@ NodeEditor::EndNode();
         return internal_native_BeginGroupHint(nodeId);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::BeginGroupHint((int)nodeId);
-*/
     public static boolean internal_native_BeginGroupHint(int nodeId) {
         try {
             return (boolean) FFMHandles.internal_native_BeginGroupHint__I.invokeExact(nodeId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -606,15 +508,11 @@ return NodeEditor::BeginGroupHint((int)nodeId);
         return ImVec2_TEMP_STATIC_GEN_0;
     }
 
-    /*[-FFM;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = NodeEditor::GetGroupMin();
-return (int64_t)&copy_addr;*/
     public static long internal_native_GetGroupMin_addr() {
         try {
             return (long) FFMHandles.internal_native_GetGroupMin_addr__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -628,15 +526,11 @@ return (int64_t)&copy_addr;*/
         return ImVec2_TEMP_STATIC_GEN_1;
     }
 
-    /*[-FFM;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = NodeEditor::GetGroupMax();
-return (int64_t)&copy_addr;*/
     public static long internal_native_GetGroupMax_addr() {
         try {
             return (long) FFMHandles.internal_native_GetGroupMax_addr__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -650,14 +544,11 @@ return (int64_t)&copy_addr;*/
         return ImDrawList_TEMP_STATIC_GEN_0;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)NodeEditor::GetHintForegroundDrawList();
-*/
     public static long internal_native_GetHintForegroundDrawList_addr() {
         try {
             return (long) FFMHandles.internal_native_GetHintForegroundDrawList_addr__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -671,14 +562,11 @@ return (int64_t)NodeEditor::GetHintForegroundDrawList();
         return ImDrawList_TEMP_STATIC_GEN_1;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)NodeEditor::GetHintBackgroundDrawList();
-*/
     public static long internal_native_GetHintBackgroundDrawList_addr() {
         try {
             return (long) FFMHandles.internal_native_GetHintBackgroundDrawList_addr__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -686,14 +574,11 @@ return (int64_t)NodeEditor::GetHintBackgroundDrawList();
         internal_native_EndGroupHint();
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::EndGroupHint();
-*/
     public static void internal_native_EndGroupHint() {
         try {
             FFMHandles.internal_native_EndGroupHint__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -707,14 +592,11 @@ NodeEditor::EndGroupHint();
         return ImDrawList_TEMP_STATIC_GEN_2;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)NodeEditor::GetNodeBackgroundDrawList((int)nodeId);
-*/
     public static long internal_native_GetNodeBackgroundDrawList_addr(int nodeId) {
         try {
             return (long) FFMHandles.internal_native_GetNodeBackgroundDrawList_addr__I.invokeExact(nodeId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -722,14 +604,11 @@ return (int64_t)NodeEditor::GetNodeBackgroundDrawList((int)nodeId);
         return internal_native_Link(id, startPinId, endPinId, color.native_address, thickness);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::Link((int)id, (int)startPinId, (int)endPinId, *((ImVec4* )color_addr), (float)thickness);
-*/
     public static boolean internal_native_Link(int id, int startPinId, int endPinId, long color_addr, float thickness) {
         try {
             return (boolean) FFMHandles.internal_native_Link__IIIJF.invokeExact(id, startPinId, endPinId, color_addr, thickness);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -737,14 +616,11 @@ return NodeEditor::Link((int)id, (int)startPinId, (int)endPinId, *((ImVec4* )col
         return internal_native_Link(id, startPinId, endPinId, color.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::Link((int)id, (int)startPinId, (int)endPinId, *((ImVec4* )color_addr));
-*/
     public static boolean internal_native_Link(int id, int startPinId, int endPinId, long color_addr) {
         try {
             return (boolean) FFMHandles.internal_native_Link__IIIJ.invokeExact(id, startPinId, endPinId, color_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -752,14 +628,11 @@ return NodeEditor::Link((int)id, (int)startPinId, (int)endPinId, *((ImVec4* )col
         return internal_native_Link(id, startPinId, endPinId);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::Link((int)id, (int)startPinId, (int)endPinId);
-*/
     public static boolean internal_native_Link(int id, int startPinId, int endPinId) {
         try {
             return (boolean) FFMHandles.internal_native_Link__III.invokeExact(id, startPinId, endPinId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -767,14 +640,11 @@ return NodeEditor::Link((int)id, (int)startPinId, (int)endPinId);
         internal_native_Flow(linkId, direction.getValue());
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::Flow((int)linkId, (FlowDirection)direction);
-*/
     public static void internal_native_Flow(int linkId, int direction) {
         try {
             FFMHandles.internal_native_Flow__II.invokeExact(linkId, direction);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -782,14 +652,11 @@ NodeEditor::Flow((int)linkId, (FlowDirection)direction);
         internal_native_Flow(linkId);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::Flow((int)linkId);
-*/
     public static void internal_native_Flow(int linkId) {
         try {
             FFMHandles.internal_native_Flow__I.invokeExact(linkId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -797,14 +664,11 @@ NodeEditor::Flow((int)linkId);
         return internal_native_BeginCreate(color.native_address, thickness);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::BeginCreate(*((ImVec4* )color_addr), (float)thickness);
-*/
     public static boolean internal_native_BeginCreate(long color_addr, float thickness) {
         try {
             return (boolean) FFMHandles.internal_native_BeginCreate__JF.invokeExact(color_addr, thickness);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -812,14 +676,11 @@ return NodeEditor::BeginCreate(*((ImVec4* )color_addr), (float)thickness);
         return internal_native_BeginCreate(color.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::BeginCreate(*((ImVec4* )color_addr));
-*/
     public static boolean internal_native_BeginCreate(long color_addr) {
         try {
             return (boolean) FFMHandles.internal_native_BeginCreate__J.invokeExact(color_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -827,14 +688,11 @@ return NodeEditor::BeginCreate(*((ImVec4* )color_addr));
         return internal_native_BeginCreate();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::BeginCreate();
-*/
     public static boolean internal_native_BeginCreate() {
         try {
             return (boolean) FFMHandles.internal_native_BeginCreate__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -842,14 +700,11 @@ return NodeEditor::BeginCreate();
         return internal_native_QueryNewLink(startId.native_void_address, endId.native_void_address);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::QueryNewLink((long long*)startId_addr, (long long*)endId_addr);
-*/
     public static boolean internal_native_QueryNewLink(long startId_addr, long endId_addr) {
         try {
             return (boolean) FFMHandles.internal_native_QueryNewLink__JJ.invokeExact(startId_addr, endId_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -857,14 +712,11 @@ return NodeEditor::QueryNewLink((long long*)startId_addr, (long long*)endId_addr
         return internal_native_QueryNewLink(startId.native_void_address, endId.native_void_address, color.native_address, thickness);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::QueryNewLink((long long*)startId_addr, (long long*)endId_addr, *((ImVec4* )color_addr), (float)thickness);
-*/
     public static boolean internal_native_QueryNewLink(long startId_addr, long endId_addr, long color_addr, float thickness) {
         try {
             return (boolean) FFMHandles.internal_native_QueryNewLink__JJJF.invokeExact(startId_addr, endId_addr, color_addr, thickness);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -872,14 +724,11 @@ return NodeEditor::QueryNewLink((long long*)startId_addr, (long long*)endId_addr
         return internal_native_QueryNewLink(startId.native_void_address, endId.native_void_address, color.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::QueryNewLink((long long*)startId_addr, (long long*)endId_addr, *((ImVec4* )color_addr));
-*/
     public static boolean internal_native_QueryNewLink(long startId_addr, long endId_addr, long color_addr) {
         try {
             return (boolean) FFMHandles.internal_native_QueryNewLink__JJJ.invokeExact(startId_addr, endId_addr, color_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -887,14 +736,11 @@ return NodeEditor::QueryNewLink((long long*)startId_addr, (long long*)endId_addr
         return internal_native_QueryNewNode(pinId.native_void_address);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::QueryNewNode((long long*)pinId_addr);
-*/
     public static boolean internal_native_QueryNewNode(long pinId_addr) {
         try {
             return (boolean) FFMHandles.internal_native_QueryNewNode__J.invokeExact(pinId_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -902,14 +748,11 @@ return NodeEditor::QueryNewNode((long long*)pinId_addr);
         return internal_native_QueryNewNode(pinId.native_void_address, color.native_address, thickness);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::QueryNewNode((long long*)pinId_addr, *((ImVec4* )color_addr), (float)thickness);
-*/
     public static boolean internal_native_QueryNewNode(long pinId_addr, long color_addr, float thickness) {
         try {
             return (boolean) FFMHandles.internal_native_QueryNewNode__JJF.invokeExact(pinId_addr, color_addr, thickness);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -917,14 +760,11 @@ return NodeEditor::QueryNewNode((long long*)pinId_addr, *((ImVec4* )color_addr),
         return internal_native_QueryNewNode(pinId.native_void_address, color.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::QueryNewNode((long long*)pinId_addr, *((ImVec4* )color_addr));
-*/
     public static boolean internal_native_QueryNewNode(long pinId_addr, long color_addr) {
         try {
             return (boolean) FFMHandles.internal_native_QueryNewNode__JJ.invokeExact(pinId_addr, color_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -932,14 +772,11 @@ return NodeEditor::QueryNewNode((long long*)pinId_addr, *((ImVec4* )color_addr))
         return internal_native_AcceptNewItem();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::AcceptNewItem();
-*/
     public static boolean internal_native_AcceptNewItem() {
         try {
             return (boolean) FFMHandles.internal_native_AcceptNewItem__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -947,14 +784,11 @@ return NodeEditor::AcceptNewItem();
         return internal_native_AcceptNewItem(color.native_address, thickness);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::AcceptNewItem(*((ImVec4* )color_addr), (float)thickness);
-*/
     public static boolean internal_native_AcceptNewItem(long color_addr, float thickness) {
         try {
             return (boolean) FFMHandles.internal_native_AcceptNewItem__JF.invokeExact(color_addr, thickness);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -962,14 +796,11 @@ return NodeEditor::AcceptNewItem(*((ImVec4* )color_addr), (float)thickness);
         return internal_native_AcceptNewItem(color.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::AcceptNewItem(*((ImVec4* )color_addr));
-*/
     public static boolean internal_native_AcceptNewItem(long color_addr) {
         try {
             return (boolean) FFMHandles.internal_native_AcceptNewItem__J.invokeExact(color_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -977,14 +808,11 @@ return NodeEditor::AcceptNewItem(*((ImVec4* )color_addr));
         internal_native_RejectNewItem();
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::RejectNewItem();
-*/
     public static void internal_native_RejectNewItem() {
         try {
             FFMHandles.internal_native_RejectNewItem__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -992,14 +820,11 @@ NodeEditor::RejectNewItem();
         internal_native_RejectNewItem(color.native_address, thickness);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::RejectNewItem(*((ImVec4* )color_addr), (float)thickness);
-*/
     public static void internal_native_RejectNewItem(long color_addr, float thickness) {
         try {
             FFMHandles.internal_native_RejectNewItem__JF.invokeExact(color_addr, thickness);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1007,14 +832,11 @@ NodeEditor::RejectNewItem(*((ImVec4* )color_addr), (float)thickness);
         internal_native_RejectNewItem(color.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::RejectNewItem(*((ImVec4* )color_addr));
-*/
     public static void internal_native_RejectNewItem(long color_addr) {
         try {
             FFMHandles.internal_native_RejectNewItem__J.invokeExact(color_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1022,14 +844,11 @@ NodeEditor::RejectNewItem(*((ImVec4* )color_addr));
         internal_native_EndCreate();
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::EndCreate();
-*/
     public static void internal_native_EndCreate() {
         try {
             FFMHandles.internal_native_EndCreate__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1037,14 +856,11 @@ NodeEditor::EndCreate();
         return internal_native_BeginDelete();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::BeginDelete();
-*/
     public static boolean internal_native_BeginDelete() {
         try {
             return (boolean) FFMHandles.internal_native_BeginDelete__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1052,14 +868,11 @@ return NodeEditor::BeginDelete();
         return internal_native_QueryDeletedLink(linkId.native_void_address, startId.native_void_address, endId.native_void_address);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::QueryDeletedLink((long long*)linkId_addr, (long long*)startId_addr, (long long*)endId_addr);
-*/
     public static boolean internal_native_QueryDeletedLink(long linkId_addr, long startId_addr, long endId_addr) {
         try {
             return (boolean) FFMHandles.internal_native_QueryDeletedLink__JJJ.invokeExact(linkId_addr, startId_addr, endId_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1067,14 +880,11 @@ return NodeEditor::QueryDeletedLink((long long*)linkId_addr, (long long*)startId
         return internal_native_QueryDeletedLink(linkId.native_void_address, startId.native_void_address);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::QueryDeletedLink((long long*)linkId_addr, (long long*)startId_addr);
-*/
     public static boolean internal_native_QueryDeletedLink(long linkId_addr, long startId_addr) {
         try {
             return (boolean) FFMHandles.internal_native_QueryDeletedLink__JJ.invokeExact(linkId_addr, startId_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1082,14 +892,11 @@ return NodeEditor::QueryDeletedLink((long long*)linkId_addr, (long long*)startId
         return internal_native_QueryDeletedLink(linkId.native_void_address);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::QueryDeletedLink((long long*)linkId_addr);
-*/
     public static boolean internal_native_QueryDeletedLink(long linkId_addr) {
         try {
             return (boolean) FFMHandles.internal_native_QueryDeletedLink__J.invokeExact(linkId_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1097,14 +904,11 @@ return NodeEditor::QueryDeletedLink((long long*)linkId_addr);
         return internal_native_QueryDeletedNode(nodeId.native_void_address);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::QueryDeletedNode((long long*)nodeId_addr);
-*/
     public static boolean internal_native_QueryDeletedNode(long nodeId_addr) {
         try {
             return (boolean) FFMHandles.internal_native_QueryDeletedNode__J.invokeExact(nodeId_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1112,14 +916,11 @@ return NodeEditor::QueryDeletedNode((long long*)nodeId_addr);
         return internal_native_AcceptDeletedItem(deleteDependencies);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::AcceptDeletedItem(deleteDependencies);
-*/
     public static boolean internal_native_AcceptDeletedItem(boolean deleteDependencies) {
         try {
             return (boolean) FFMHandles.internal_native_AcceptDeletedItem__Z.invokeExact(deleteDependencies);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1127,14 +928,11 @@ return NodeEditor::AcceptDeletedItem(deleteDependencies);
         return internal_native_AcceptDeletedItem();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::AcceptDeletedItem();
-*/
     public static boolean internal_native_AcceptDeletedItem() {
         try {
             return (boolean) FFMHandles.internal_native_AcceptDeletedItem__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1142,14 +940,11 @@ return NodeEditor::AcceptDeletedItem();
         internal_native_RejectDeletedItem();
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::RejectDeletedItem();
-*/
     public static void internal_native_RejectDeletedItem() {
         try {
             FFMHandles.internal_native_RejectDeletedItem__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1157,14 +952,11 @@ NodeEditor::RejectDeletedItem();
         internal_native_EndDelete();
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::EndDelete();
-*/
     public static void internal_native_EndDelete() {
         try {
             FFMHandles.internal_native_EndDelete__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1172,14 +964,11 @@ NodeEditor::EndDelete();
         internal_native_SetNodePosition(nodeId, editorPosition.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::SetNodePosition((int)nodeId, *((ImVec2* )editorPosition_addr));
-*/
     public static void internal_native_SetNodePosition(int nodeId, long editorPosition_addr) {
         try {
             FFMHandles.internal_native_SetNodePosition__IJ.invokeExact(nodeId, editorPosition_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1187,14 +976,11 @@ NodeEditor::SetNodePosition((int)nodeId, *((ImVec2* )editorPosition_addr));
         internal_native_SetGroupSize(nodeId, size.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::SetGroupSize((int)nodeId, *((ImVec2* )size_addr));
-*/
     public static void internal_native_SetGroupSize(int nodeId, long size_addr) {
         try {
             FFMHandles.internal_native_SetGroupSize__IJ.invokeExact(nodeId, size_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1208,15 +994,11 @@ NodeEditor::SetGroupSize((int)nodeId, *((ImVec2* )size_addr));
         return ImVec2_TEMP_STATIC_GEN_2;
     }
 
-    /*[-FFM;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = NodeEditor::GetNodePosition((int)nodeId);
-return (int64_t)&copy_addr;*/
     public static long internal_native_GetNodePosition_addr(int nodeId) {
         try {
             return (long) FFMHandles.internal_native_GetNodePosition_addr__I.invokeExact(nodeId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1230,15 +1012,11 @@ return (int64_t)&copy_addr;*/
         return ImVec2_TEMP_STATIC_GEN_3;
     }
 
-    /*[-FFM;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = NodeEditor::GetNodeSize((int)nodeId);
-return (int64_t)&copy_addr;*/
     public static long internal_native_GetNodeSize_addr(int nodeId) {
         try {
             return (long) FFMHandles.internal_native_GetNodeSize_addr__I.invokeExact(nodeId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1246,14 +1024,11 @@ return (int64_t)&copy_addr;*/
         internal_native_CenterNodeOnScreen(nodeId);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::CenterNodeOnScreen((int)nodeId);
-*/
     public static void internal_native_CenterNodeOnScreen(int nodeId) {
         try {
             FFMHandles.internal_native_CenterNodeOnScreen__I.invokeExact(nodeId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1261,14 +1036,11 @@ NodeEditor::CenterNodeOnScreen((int)nodeId);
         internal_native_SetNodeZPosition(nodeId, z);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::SetNodeZPosition((int)nodeId, (float)z);
-*/
     public static void internal_native_SetNodeZPosition(int nodeId, float z) {
         try {
             FFMHandles.internal_native_SetNodeZPosition__IF.invokeExact(nodeId, z);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1276,14 +1048,11 @@ NodeEditor::SetNodeZPosition((int)nodeId, (float)z);
         return internal_native_GetNodeZPosition(nodeId);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::GetNodeZPosition((int)nodeId);
-*/
     public static float internal_native_GetNodeZPosition(int nodeId) {
         try {
             return (float) FFMHandles.internal_native_GetNodeZPosition__I.invokeExact(nodeId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1291,14 +1060,11 @@ return NodeEditor::GetNodeZPosition((int)nodeId);
         internal_native_RestoreNodeState(nodeId);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::RestoreNodeState((int)nodeId);
-*/
     public static void internal_native_RestoreNodeState(int nodeId) {
         try {
             FFMHandles.internal_native_RestoreNodeState__I.invokeExact(nodeId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1306,14 +1072,11 @@ NodeEditor::RestoreNodeState((int)nodeId);
         internal_native_Suspend();
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::Suspend();
-*/
     public static void internal_native_Suspend() {
         try {
             FFMHandles.internal_native_Suspend__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1321,14 +1084,11 @@ NodeEditor::Suspend();
         internal_native_Resume();
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::Resume();
-*/
     public static void internal_native_Resume() {
         try {
             FFMHandles.internal_native_Resume__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1336,14 +1096,11 @@ NodeEditor::Resume();
         return internal_native_IsSuspended();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::IsSuspended();
-*/
     public static boolean internal_native_IsSuspended() {
         try {
             return (boolean) FFMHandles.internal_native_IsSuspended__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1351,14 +1108,11 @@ return NodeEditor::IsSuspended();
         return internal_native_IsActive();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::IsActive();
-*/
     public static boolean internal_native_IsActive() {
         try {
             return (boolean) FFMHandles.internal_native_IsActive__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1366,14 +1120,11 @@ return NodeEditor::IsActive();
         return internal_native_HasSelectionChanged();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::HasSelectionChanged();
-*/
     public static boolean internal_native_HasSelectionChanged() {
         try {
             return (boolean) FFMHandles.internal_native_HasSelectionChanged__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1381,14 +1132,11 @@ return NodeEditor::HasSelectionChanged();
         return internal_native_GetSelectedObjectCount();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::GetSelectedObjectCount();
-*/
     public static int internal_native_GetSelectedObjectCount() {
         try {
             return (int) FFMHandles.internal_native_GetSelectedObjectCount__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1396,14 +1144,11 @@ return NodeEditor::GetSelectedObjectCount();
         return internal_native_GetSelectedNodes(nodes.native_void_address, size);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::GetSelectedNodes((long long*)nodes_addr, (int)size);
-*/
     public static int internal_native_GetSelectedNodes(long nodes_addr, int size) {
         try {
             return (int) FFMHandles.internal_native_GetSelectedNodes__JI.invokeExact(nodes_addr, size);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1411,14 +1156,11 @@ return NodeEditor::GetSelectedNodes((long long*)nodes_addr, (int)size);
         return internal_native_GetSelectedLinks(links.native_void_address, size);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::GetSelectedLinks((long long*)links_addr, (int)size);
-*/
     public static int internal_native_GetSelectedLinks(long links_addr, int size) {
         try {
             return (int) FFMHandles.internal_native_GetSelectedLinks__JI.invokeExact(links_addr, size);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1426,14 +1168,11 @@ return NodeEditor::GetSelectedLinks((long long*)links_addr, (int)size);
         return internal_native_IsNodeSelected(nodeId);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::IsNodeSelected((int)nodeId);
-*/
     public static boolean internal_native_IsNodeSelected(int nodeId) {
         try {
             return (boolean) FFMHandles.internal_native_IsNodeSelected__I.invokeExact(nodeId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1441,14 +1180,11 @@ return NodeEditor::IsNodeSelected((int)nodeId);
         return internal_native_IsLinkSelected(linkId);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::IsLinkSelected((int)linkId);
-*/
     public static boolean internal_native_IsLinkSelected(int linkId) {
         try {
             return (boolean) FFMHandles.internal_native_IsLinkSelected__I.invokeExact(linkId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1456,14 +1192,11 @@ return NodeEditor::IsLinkSelected((int)linkId);
         internal_native_ClearSelection();
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::ClearSelection();
-*/
     public static void internal_native_ClearSelection() {
         try {
             FFMHandles.internal_native_ClearSelection__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1471,14 +1204,11 @@ NodeEditor::ClearSelection();
         internal_native_SelectNode(nodeId, append);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::SelectNode((int)nodeId, append);
-*/
     public static void internal_native_SelectNode(int nodeId, boolean append) {
         try {
             FFMHandles.internal_native_SelectNode__IZ.invokeExact(nodeId, append);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1486,14 +1216,11 @@ NodeEditor::SelectNode((int)nodeId, append);
         internal_native_SelectNode(nodeId);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::SelectNode((int)nodeId);
-*/
     public static void internal_native_SelectNode(int nodeId) {
         try {
             FFMHandles.internal_native_SelectNode__I.invokeExact(nodeId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1501,14 +1228,11 @@ NodeEditor::SelectNode((int)nodeId);
         internal_native_SelectLink(linkId, append);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::SelectLink((int)linkId, append);
-*/
     public static void internal_native_SelectLink(int linkId, boolean append) {
         try {
             FFMHandles.internal_native_SelectLink__IZ.invokeExact(linkId, append);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1516,14 +1240,11 @@ NodeEditor::SelectLink((int)linkId, append);
         internal_native_SelectLink(linkId);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::SelectLink((int)linkId);
-*/
     public static void internal_native_SelectLink(int linkId) {
         try {
             FFMHandles.internal_native_SelectLink__I.invokeExact(linkId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1531,14 +1252,11 @@ NodeEditor::SelectLink((int)linkId);
         internal_native_DeselectNode(nodeId);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::DeselectNode((int)nodeId);
-*/
     public static void internal_native_DeselectNode(int nodeId) {
         try {
             FFMHandles.internal_native_DeselectNode__I.invokeExact(nodeId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1546,14 +1264,11 @@ NodeEditor::DeselectNode((int)nodeId);
         internal_native_DeselectLink(linkId);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::DeselectLink((int)linkId);
-*/
     public static void internal_native_DeselectLink(int linkId) {
         try {
             FFMHandles.internal_native_DeselectLink__I.invokeExact(linkId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1561,14 +1276,11 @@ NodeEditor::DeselectLink((int)linkId);
         return internal_native_DeleteNode(nodeId);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::DeleteNode((int)nodeId);
-*/
     public static boolean internal_native_DeleteNode(int nodeId) {
         try {
             return (boolean) FFMHandles.internal_native_DeleteNode__I.invokeExact(nodeId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1576,14 +1288,11 @@ return NodeEditor::DeleteNode((int)nodeId);
         return internal_native_DeleteLink(linkId);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::DeleteLink((int)linkId);
-*/
     public static boolean internal_native_DeleteLink(int linkId) {
         try {
             return (boolean) FFMHandles.internal_native_DeleteLink__I.invokeExact(linkId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1591,14 +1300,11 @@ return NodeEditor::DeleteLink((int)linkId);
         return internal_native_HasAnyLinksNode(nodeId);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::HasAnyLinksNode((int)nodeId);
-*/
     public static boolean internal_native_HasAnyLinksNode(int nodeId) {
         try {
             return (boolean) FFMHandles.internal_native_HasAnyLinksNode__I.invokeExact(nodeId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1606,14 +1312,11 @@ return NodeEditor::HasAnyLinksNode((int)nodeId);
         return internal_native_HasAnyLinksPin(pinId);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::HasAnyLinksPin((int)pinId);
-*/
     public static boolean internal_native_HasAnyLinksPin(int pinId) {
         try {
             return (boolean) FFMHandles.internal_native_HasAnyLinksPin__I.invokeExact(pinId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1621,14 +1324,11 @@ return NodeEditor::HasAnyLinksPin((int)pinId);
         return internal_native_BreakLinksNode(nodeId);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::BreakLinksNode((int)nodeId);
-*/
     public static int internal_native_BreakLinksNode(int nodeId) {
         try {
             return (int) FFMHandles.internal_native_BreakLinksNode__I.invokeExact(nodeId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1636,14 +1336,11 @@ return NodeEditor::BreakLinksNode((int)nodeId);
         return internal_native_BreakLinksPin(pinId);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::BreakLinksPin((int)pinId);
-*/
     public static int internal_native_BreakLinksPin(int pinId) {
         try {
             return (int) FFMHandles.internal_native_BreakLinksPin__I.invokeExact(pinId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1651,14 +1348,11 @@ return NodeEditor::BreakLinksPin((int)pinId);
         internal_native_NavigateToContent(duration);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::NavigateToContent((float)duration);
-*/
     public static void internal_native_NavigateToContent(float duration) {
         try {
             FFMHandles.internal_native_NavigateToContent__F.invokeExact(duration);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1666,14 +1360,11 @@ NodeEditor::NavigateToContent((float)duration);
         internal_native_NavigateToContent();
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::NavigateToContent();
-*/
     public static void internal_native_NavigateToContent() {
         try {
             FFMHandles.internal_native_NavigateToContent__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1681,14 +1372,11 @@ NodeEditor::NavigateToContent();
         internal_native_NavigateToSelection(zoomIn, duration);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::NavigateToSelection(zoomIn, (float)duration);
-*/
     public static void internal_native_NavigateToSelection(boolean zoomIn, float duration) {
         try {
             FFMHandles.internal_native_NavigateToSelection__ZF.invokeExact(zoomIn, duration);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1696,14 +1384,11 @@ NodeEditor::NavigateToSelection(zoomIn, (float)duration);
         internal_native_NavigateToSelection(zoomIn);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::NavigateToSelection(zoomIn);
-*/
     public static void internal_native_NavigateToSelection(boolean zoomIn) {
         try {
             FFMHandles.internal_native_NavigateToSelection__Z.invokeExact(zoomIn);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1711,14 +1396,11 @@ NodeEditor::NavigateToSelection(zoomIn);
         internal_native_NavigateToSelection();
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::NavigateToSelection();
-*/
     public static void internal_native_NavigateToSelection() {
         try {
             FFMHandles.internal_native_NavigateToSelection__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1726,14 +1408,11 @@ NodeEditor::NavigateToSelection();
         return internal_native_ShowNodeContextMenu(nodeId.native_void_address);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::ShowNodeContextMenu((long long*)nodeId_addr);
-*/
     public static boolean internal_native_ShowNodeContextMenu(long nodeId_addr) {
         try {
             return (boolean) FFMHandles.internal_native_ShowNodeContextMenu__J.invokeExact(nodeId_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1741,14 +1420,11 @@ return NodeEditor::ShowNodeContextMenu((long long*)nodeId_addr);
         return internal_native_ShowPinContextMenu(pinId.native_void_address);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::ShowPinContextMenu((long long*)pinId_addr);
-*/
     public static boolean internal_native_ShowPinContextMenu(long pinId_addr) {
         try {
             return (boolean) FFMHandles.internal_native_ShowPinContextMenu__J.invokeExact(pinId_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1756,14 +1432,11 @@ return NodeEditor::ShowPinContextMenu((long long*)pinId_addr);
         return internal_native_ShowLinkContextMenu(linkId.native_void_address);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::ShowLinkContextMenu((long long*)linkId_addr);
-*/
     public static boolean internal_native_ShowLinkContextMenu(long linkId_addr) {
         try {
             return (boolean) FFMHandles.internal_native_ShowLinkContextMenu__J.invokeExact(linkId_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1771,14 +1444,11 @@ return NodeEditor::ShowLinkContextMenu((long long*)linkId_addr);
         return internal_native_ShowBackgroundContextMenu();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::ShowBackgroundContextMenu();
-*/
     public static boolean internal_native_ShowBackgroundContextMenu() {
         try {
             return (boolean) FFMHandles.internal_native_ShowBackgroundContextMenu__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1786,14 +1456,11 @@ return NodeEditor::ShowBackgroundContextMenu();
         internal_native_EnableShortcuts(enable);
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::EnableShortcuts(enable);
-*/
     public static void internal_native_EnableShortcuts(boolean enable) {
         try {
             FFMHandles.internal_native_EnableShortcuts__Z.invokeExact(enable);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1801,14 +1468,11 @@ NodeEditor::EnableShortcuts(enable);
         return internal_native_AreShortcutsEnabled();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::AreShortcutsEnabled();
-*/
     public static boolean internal_native_AreShortcutsEnabled() {
         try {
             return (boolean) FFMHandles.internal_native_AreShortcutsEnabled__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1816,14 +1480,11 @@ return NodeEditor::AreShortcutsEnabled();
         return internal_native_BeginShortcut();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::BeginShortcut();
-*/
     public static boolean internal_native_BeginShortcut() {
         try {
             return (boolean) FFMHandles.internal_native_BeginShortcut__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1831,14 +1492,11 @@ return NodeEditor::BeginShortcut();
         return internal_native_AcceptCut();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::AcceptCut();
-*/
     public static boolean internal_native_AcceptCut() {
         try {
             return (boolean) FFMHandles.internal_native_AcceptCut__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1846,14 +1504,11 @@ return NodeEditor::AcceptCut();
         return internal_native_AcceptCopy();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::AcceptCopy();
-*/
     public static boolean internal_native_AcceptCopy() {
         try {
             return (boolean) FFMHandles.internal_native_AcceptCopy__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1861,14 +1516,11 @@ return NodeEditor::AcceptCopy();
         return internal_native_AcceptPaste();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::AcceptPaste();
-*/
     public static boolean internal_native_AcceptPaste() {
         try {
             return (boolean) FFMHandles.internal_native_AcceptPaste__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1876,14 +1528,11 @@ return NodeEditor::AcceptPaste();
         return internal_native_AcceptDuplicate();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::AcceptDuplicate();
-*/
     public static boolean internal_native_AcceptDuplicate() {
         try {
             return (boolean) FFMHandles.internal_native_AcceptDuplicate__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1891,14 +1540,11 @@ return NodeEditor::AcceptDuplicate();
         return internal_native_AcceptCreateNode();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::AcceptCreateNode();
-*/
     public static boolean internal_native_AcceptCreateNode() {
         try {
             return (boolean) FFMHandles.internal_native_AcceptCreateNode__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1906,14 +1552,11 @@ return NodeEditor::AcceptCreateNode();
         return internal_native_GetActionContextSize();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::GetActionContextSize();
-*/
     public static int internal_native_GetActionContextSize() {
         try {
             return (int) FFMHandles.internal_native_GetActionContextSize__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1921,14 +1564,11 @@ return NodeEditor::GetActionContextSize();
         return internal_native_GetActionContextNodes(nodes.native_void_address, size);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::GetActionContextNodes((long long*)nodes_addr, (int)size);
-*/
     public static int internal_native_GetActionContextNodes(long nodes_addr, int size) {
         try {
             return (int) FFMHandles.internal_native_GetActionContextNodes__JI.invokeExact(nodes_addr, size);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1936,14 +1576,11 @@ return NodeEditor::GetActionContextNodes((long long*)nodes_addr, (int)size);
         return internal_native_GetActionContextLinks(links.native_void_address, size);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::GetActionContextLinks((long long*)links_addr, (int)size);
-*/
     public static int internal_native_GetActionContextLinks(long links_addr, int size) {
         try {
             return (int) FFMHandles.internal_native_GetActionContextLinks__JI.invokeExact(links_addr, size);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1951,14 +1588,11 @@ return NodeEditor::GetActionContextLinks((long long*)links_addr, (int)size);
         internal_native_EndShortcut();
     }
 
-    /*[-FFM;-NATIVE]
-NodeEditor::EndShortcut();
-*/
     public static void internal_native_EndShortcut() {
         try {
             FFMHandles.internal_native_EndShortcut__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1966,14 +1600,11 @@ NodeEditor::EndShortcut();
         return internal_native_GetCurrentZoom();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::GetCurrentZoom();
-*/
     public static float internal_native_GetCurrentZoom() {
         try {
             return (float) FFMHandles.internal_native_GetCurrentZoom__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1981,14 +1612,11 @@ return NodeEditor::GetCurrentZoom();
         return internal_native_GetHoveredNode();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::GetHoveredNode();
-*/
     public static int internal_native_GetHoveredNode() {
         try {
             return (int) FFMHandles.internal_native_GetHoveredNode__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1996,14 +1624,11 @@ return NodeEditor::GetHoveredNode();
         return internal_native_GetHoveredPin();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::GetHoveredPin();
-*/
     public static int internal_native_GetHoveredPin() {
         try {
             return (int) FFMHandles.internal_native_GetHoveredPin__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -2011,14 +1636,11 @@ return NodeEditor::GetHoveredPin();
         return internal_native_GetHoveredLink();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::GetHoveredLink();
-*/
     public static int internal_native_GetHoveredLink() {
         try {
             return (int) FFMHandles.internal_native_GetHoveredLink__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -2026,14 +1648,11 @@ return NodeEditor::GetHoveredLink();
         return internal_native_GetDoubleClickedNode();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::GetDoubleClickedNode();
-*/
     public static int internal_native_GetDoubleClickedNode() {
         try {
             return (int) FFMHandles.internal_native_GetDoubleClickedNode__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -2041,14 +1660,11 @@ return NodeEditor::GetDoubleClickedNode();
         return internal_native_GetDoubleClickedPin();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::GetDoubleClickedPin();
-*/
     public static int internal_native_GetDoubleClickedPin() {
         try {
             return (int) FFMHandles.internal_native_GetDoubleClickedPin__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -2056,14 +1672,11 @@ return NodeEditor::GetDoubleClickedPin();
         return internal_native_GetDoubleClickedLink();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::GetDoubleClickedLink();
-*/
     public static int internal_native_GetDoubleClickedLink() {
         try {
             return (int) FFMHandles.internal_native_GetDoubleClickedLink__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -2071,14 +1684,11 @@ return NodeEditor::GetDoubleClickedLink();
         return internal_native_IsBackgroundClicked();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::IsBackgroundClicked();
-*/
     public static boolean internal_native_IsBackgroundClicked() {
         try {
             return (boolean) FFMHandles.internal_native_IsBackgroundClicked__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -2086,14 +1696,11 @@ return NodeEditor::IsBackgroundClicked();
         return internal_native_IsBackgroundDoubleClicked();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::IsBackgroundDoubleClicked();
-*/
     public static boolean internal_native_IsBackgroundDoubleClicked() {
         try {
             return (boolean) FFMHandles.internal_native_IsBackgroundDoubleClicked__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -2101,14 +1708,11 @@ return NodeEditor::IsBackgroundDoubleClicked();
         return internal_native_GetBackgroundClickButtonIndex();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::GetBackgroundClickButtonIndex();
-*/
     public static int internal_native_GetBackgroundClickButtonIndex() {
         try {
             return (int) FFMHandles.internal_native_GetBackgroundClickButtonIndex__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -2116,14 +1720,11 @@ return NodeEditor::GetBackgroundClickButtonIndex();
         return internal_native_GetBackgroundDoubleClickButtonIndex();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::GetBackgroundDoubleClickButtonIndex();
-*/
     public static int internal_native_GetBackgroundDoubleClickButtonIndex() {
         try {
             return (int) FFMHandles.internal_native_GetBackgroundDoubleClickButtonIndex__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -2131,14 +1732,11 @@ return NodeEditor::GetBackgroundDoubleClickButtonIndex();
         return internal_native_GetLinkPins(linkId, startPinId.native_void_address, endPinId.native_void_address);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::GetLinkPins((int)linkId, (long long*)startPinId_addr, (long long*)endPinId_addr);
-*/
     public static boolean internal_native_GetLinkPins(int linkId, long startPinId_addr, long endPinId_addr) {
         try {
             return (boolean) FFMHandles.internal_native_GetLinkPins__IJJ.invokeExact(linkId, startPinId_addr, endPinId_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -2146,14 +1744,11 @@ return NodeEditor::GetLinkPins((int)linkId, (long long*)startPinId_addr, (long l
         return internal_native_PinHadAnyLinks(pinId);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::PinHadAnyLinks((int)pinId);
-*/
     public static boolean internal_native_PinHadAnyLinks(int pinId) {
         try {
             return (boolean) FFMHandles.internal_native_PinHadAnyLinks__I.invokeExact(pinId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -2167,15 +1762,11 @@ return NodeEditor::PinHadAnyLinks((int)pinId);
         return ImVec2_TEMP_STATIC_GEN_4;
     }
 
-    /*[-FFM;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = NodeEditor::GetScreenSize();
-return (int64_t)&copy_addr;*/
     public static long internal_native_GetScreenSize_addr() {
         try {
             return (long) FFMHandles.internal_native_GetScreenSize_addr__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -2189,15 +1780,11 @@ return (int64_t)&copy_addr;*/
         return ImVec2_TEMP_STATIC_GEN_5;
     }
 
-    /*[-FFM;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = NodeEditor::ScreenToCanvas(*((ImVec2* )pos_addr));
-return (int64_t)&copy_addr;*/
     public static long internal_native_ScreenToCanvas_addr(long pos_addr) {
         try {
             return (long) FFMHandles.internal_native_ScreenToCanvas_addr__J.invokeExact(pos_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -2211,15 +1798,11 @@ return (int64_t)&copy_addr;*/
         return ImVec2_TEMP_STATIC_GEN_6;
     }
 
-    /*[-FFM;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = NodeEditor::CanvasToScreen(*((ImVec2* )pos_addr));
-return (int64_t)&copy_addr;*/
     public static long internal_native_CanvasToScreen_addr(long pos_addr) {
         try {
             return (long) FFMHandles.internal_native_CanvasToScreen_addr__J.invokeExact(pos_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -2227,14 +1810,11 @@ return (int64_t)&copy_addr;*/
         return internal_native_GetNodeCount();
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::GetNodeCount();
-*/
     public static int internal_native_GetNodeCount() {
         try {
             return (int) FFMHandles.internal_native_GetNodeCount__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -2242,323 +1822,290 @@ return NodeEditor::GetNodeCount();
         return internal_native_GetOrderedNodeIds(nodes.native_void_address, size);
     }
 
-    /*[-FFM;-NATIVE]
-return NodeEditor::GetOrderedNodeIds((long long*)nodes_addr, (int)size);
-*/
     public static int internal_native_GetOrderedNodeIds(long nodes_addr, int size) {
         try {
             return (int) FFMHandles.internal_native_GetOrderedNodeIds__JI.invokeExact(nodes_addr, size);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_deletenative", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle internal_native_SetCurrentEditor__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_setcurrenteditor", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle internal_native_GetCurrentEditor_addr__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_nodeeditor_getcurrenteditor_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle internal_native_CreateEditor_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_nodeeditor_createeditor_addr_l", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_CreateEditor_addr__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_nodeeditor_createeditor_addr_v", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_DestroyEditor__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_destroyeditor", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle internal_native_GetConfig_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_nodeeditor_getconfig_addr_l", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1deleteNative__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_GetConfig_addr__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_nodeeditor_getconfig_addr_v", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_SetCurrentEditor__J = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1SetCurrentEditor__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_GetStyle_addr__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_nodeeditor_getstyle_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetCurrentEditor_addr__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetCurrentEditor_1addr__", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_GetStyleColorName_addr__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_nodeeditor_getstylecolorname_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_CreateEditor_addr__J = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1CreateEditor_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_PushStyleColor__IJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_pushstylecolor", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_CreateEditor_addr__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1CreateEditor_1addr__", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_PopStyleColor__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_popstylecolor_i", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_DestroyEditor__J = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1DestroyEditor__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_PopStyleColor__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_popstylecolor_v", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_GetConfig_addr__J = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetConfig_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_PushStyleVar__0__IF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_pushstylevar__0", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetConfig_addr__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetConfig_1addr__", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_PushStyleVar__1__IJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_pushstylevar__1", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetStyle_addr__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetStyle_1addr__", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_PushStyleVar__2__IJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_pushstylevar__2", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetStyleColorName_addr__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetStyleColorName_1addr__I", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_PopStyleVar__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_popstylevar_i", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_PushStyleColor__IJ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1PushStyleColor__IJ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_PopStyleVar__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_popstylevar_v", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_PopStyleColor__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1PopStyleColor__I", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_Begin__Ljava_lang_String_2J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_begin_str_l", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_PopStyleColor__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1PopStyleColor__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_Begin__Ljava_lang_String_2 = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_begin_str", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS));
 
-        static final java.lang.invoke.MethodHandle internal_native_PushStyleVar__0__IF = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1PushStyleVar_1_10__IF", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_End__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_end", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_PushStyleVar__1__IJ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1PushStyleVar_1_11__IJ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_BeginNode__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_beginnode", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_PushStyleVar__2__IJ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1PushStyleVar_1_12__IJ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_BeginPin__II = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_beginpin", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_PopStyleVar__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1PopStyleVar__I", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_PinRect__JJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_pinrect", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_PopStyleVar__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1PopStyleVar__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_PinPivotRect__JJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_pinpivotrect", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_Begin__Ljava_lang_String_2J = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1Begin__Ljava_lang_String_2J", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_PinPivotSize__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_pinpivotsize", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_Begin__Ljava_lang_String_2 = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1Begin__Ljava_lang_String_2", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS));
+        static final java.lang.invoke.MethodHandle internal_native_PinPivotScale__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_pinpivotscale", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_End__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1End__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_PinPivotAlignment__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_pinpivotalignment", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginNode__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1BeginNode__I", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_EndPin__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_endpin", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginPin__II = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1BeginPin__II", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_Group__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_group", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_PinRect__JJ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1PinRect__JJ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_EndNode__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_endnode", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_PinPivotRect__JJ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1PinPivotRect__JJ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_BeginGroupHint__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_begingrouphint", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_PinPivotSize__J = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1PinPivotSize__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_GetGroupMin_addr__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_nodeeditor_getgroupmin_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_PinPivotScale__J = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1PinPivotScale__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_GetGroupMax_addr__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_nodeeditor_getgroupmax_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_PinPivotAlignment__J = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1PinPivotAlignment__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_GetHintForegroundDrawList_addr__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_nodeeditor_gethintforegrounddrawlist_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_EndPin__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1EndPin__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_GetHintBackgroundDrawList_addr__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_nodeeditor_gethintbackgrounddrawlist_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_Group__J = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1Group__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_EndGroupHint__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_endgrouphint", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_EndNode__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1EndNode__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_GetNodeBackgroundDrawList_addr__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_nodeeditor_getnodebackgrounddrawlist_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginGroupHint__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1BeginGroupHint__I", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_Link__IIIJF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_link_i_i_i_l_f", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetGroupMin_addr__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetGroupMin_1addr__", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_Link__IIIJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_link_i_i_i_l", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetGroupMax_addr__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetGroupMax_1addr__", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_Link__III = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_link_i_i_i", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetHintForegroundDrawList_addr__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetHintForegroundDrawList_1addr__", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_Flow__II = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_flow_i_i", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetHintBackgroundDrawList_addr__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetHintBackgroundDrawList_1addr__", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_Flow__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_flow_i", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_EndGroupHint__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1EndGroupHint__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_BeginCreate__JF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_begincreate_l_f", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetNodeBackgroundDrawList_addr__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetNodeBackgroundDrawList_1addr__I", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_BeginCreate__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_begincreate_l", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_Link__IIIJF = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1Link__IIIJF", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_BeginCreate__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_begincreate_v", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_Link__IIIJ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1Link__IIIJ", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_QueryNewLink__JJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_querynewlink_l_l", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_Link__III = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1Link__III", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_QueryNewLink__JJJF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_querynewlink_l_l_l_f", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_Flow__II = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1Flow__II", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_QueryNewLink__JJJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_querynewlink_l_l_l", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_Flow__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1Flow__I", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_QueryNewNode__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_querynewnode_l", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginCreate__JF = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1BeginCreate__JF", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_QueryNewNode__JJF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_querynewnode_l_l_f", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginCreate__J = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1BeginCreate__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_QueryNewNode__JJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_querynewnode_l_l", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginCreate__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1BeginCreate__", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_AcceptNewItem__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_acceptnewitem_v", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_QueryNewLink__JJ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1QueryNewLink__JJ", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_AcceptNewItem__JF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_acceptnewitem_l_f", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_QueryNewLink__JJJF = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1QueryNewLink__JJJF", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_AcceptNewItem__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_acceptnewitem_l", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_QueryNewLink__JJJ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1QueryNewLink__JJJ", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_RejectNewItem__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_rejectnewitem_v", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_QueryNewNode__J = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1QueryNewNode__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_RejectNewItem__JF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_rejectnewitem_l_f", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_QueryNewNode__JJF = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1QueryNewNode__JJF", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_RejectNewItem__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_rejectnewitem_l", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_QueryNewNode__JJ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1QueryNewNode__JJ", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_EndCreate__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_endcreate", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_AcceptNewItem__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1AcceptNewItem__", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_BeginDelete__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_begindelete", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_AcceptNewItem__JF = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1AcceptNewItem__JF", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_QueryDeletedLink__JJJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_querydeletedlink_l_l_l", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_AcceptNewItem__J = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1AcceptNewItem__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_QueryDeletedLink__JJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_querydeletedlink_l_l", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_RejectNewItem__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1RejectNewItem__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_QueryDeletedLink__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_querydeletedlink_l", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_RejectNewItem__JF = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1RejectNewItem__JF", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_QueryDeletedNode__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_querydeletednode", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_RejectNewItem__J = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1RejectNewItem__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_AcceptDeletedItem__Z = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_acceptdeleteditem_z", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_EndCreate__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1EndCreate__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_AcceptDeletedItem__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_acceptdeleteditem_v", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginDelete__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1BeginDelete__", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_RejectDeletedItem__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_rejectdeleteditem", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_QueryDeletedLink__JJJ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1QueryDeletedLink__JJJ", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_EndDelete__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_enddelete", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_QueryDeletedLink__JJ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1QueryDeletedLink__JJ", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_SetNodePosition__IJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_setnodeposition", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_QueryDeletedLink__J = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1QueryDeletedLink__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_SetGroupSize__IJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_setgroupsize", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_QueryDeletedNode__J = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1QueryDeletedNode__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_GetNodePosition_addr__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_nodeeditor_getnodeposition_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_AcceptDeletedItem__Z = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1AcceptDeletedItem__Z", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_GetNodeSize_addr__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_nodeeditor_getnodesize_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_AcceptDeletedItem__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1AcceptDeletedItem__", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_CenterNodeOnScreen__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_centernodeonscreen", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_RejectDeletedItem__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1RejectDeletedItem__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_SetNodeZPosition__IF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_setnodezposition", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_EndDelete__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1EndDelete__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_GetNodeZPosition__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_getnodezposition", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_SetNodePosition__IJ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1SetNodePosition__IJ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_RestoreNodeState__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_restorenodestate", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_SetGroupSize__IJ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1SetGroupSize__IJ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_Suspend__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_suspend", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_GetNodePosition_addr__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetNodePosition_1addr__I", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_Resume__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_resume", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_GetNodeSize_addr__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetNodeSize_1addr__I", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_IsSuspended__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_issuspended", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_CenterNodeOnScreen__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1CenterNodeOnScreen__I", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_IsActive__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_isactive", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_SetNodeZPosition__IF = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1SetNodeZPosition__IF", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_HasSelectionChanged__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_hasselectionchanged", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetNodeZPosition__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetNodeZPosition__I", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_GetSelectedObjectCount__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_getselectedobjectcount", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_RestoreNodeState__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1RestoreNodeState__I", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_GetSelectedNodes__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_getselectednodes", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_Suspend__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1Suspend__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_GetSelectedLinks__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_getselectedlinks", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_Resume__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1Resume__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_IsNodeSelected__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_isnodeselected", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_IsSuspended__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1IsSuspended__", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_IsLinkSelected__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_islinkselected", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_IsActive__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1IsActive__", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_ClearSelection__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_clearselection", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_HasSelectionChanged__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1HasSelectionChanged__", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_SelectNode__IZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_selectnode_i_z", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetSelectedObjectCount__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetSelectedObjectCount__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_SelectNode__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_selectnode_i", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetSelectedNodes__JI = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetSelectedNodes__JI", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_SelectLink__IZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_selectlink_i_z", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetSelectedLinks__JI = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetSelectedLinks__JI", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_SelectLink__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_selectlink_i", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_IsNodeSelected__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1IsNodeSelected__I", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_DeselectNode__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_deselectnode", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_IsLinkSelected__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1IsLinkSelected__I", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_DeselectLink__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_deselectlink", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_ClearSelection__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1ClearSelection__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_DeleteNode__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_deletenode", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_SelectNode__IZ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1SelectNode__IZ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_DeleteLink__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_deletelink", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_SelectNode__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1SelectNode__I", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_HasAnyLinksNode__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_hasanylinksnode", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_SelectLink__IZ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1SelectLink__IZ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_HasAnyLinksPin__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_hasanylinkspin", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_SelectLink__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1SelectLink__I", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_BreakLinksNode__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_breaklinksnode", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_DeselectNode__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1DeselectNode__I", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_BreakLinksPin__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_breaklinkspin", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_DeselectLink__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1DeselectLink__I", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_NavigateToContent__F = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_navigatetocontent_f", FunctionDescriptor.ofVoid(ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_DeleteNode__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1DeleteNode__I", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_NavigateToContent__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_navigatetocontent_v", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_DeleteLink__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1DeleteLink__I", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_NavigateToSelection__ZF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_navigatetoselection_z_f", FunctionDescriptor.ofVoid(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_HasAnyLinksNode__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1HasAnyLinksNode__I", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_NavigateToSelection__Z = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_navigatetoselection_z", FunctionDescriptor.ofVoid(ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_HasAnyLinksPin__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1HasAnyLinksPin__I", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_NavigateToSelection__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_navigatetoselection_v", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_BreakLinksNode__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1BreakLinksNode__I", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_ShowNodeContextMenu__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_shownodecontextmenu", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_BreakLinksPin__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1BreakLinksPin__I", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_ShowPinContextMenu__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_showpincontextmenu", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_NavigateToContent__F = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1NavigateToContent__F", FunctionDescriptor.ofVoid(ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_ShowLinkContextMenu__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_showlinkcontextmenu", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_NavigateToContent__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1NavigateToContent__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_ShowBackgroundContextMenu__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_showbackgroundcontextmenu", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_NavigateToSelection__ZF = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1NavigateToSelection__ZF", FunctionDescriptor.ofVoid(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_EnableShortcuts__Z = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_enableshortcuts", FunctionDescriptor.ofVoid(ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_NavigateToSelection__Z = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1NavigateToSelection__Z", FunctionDescriptor.ofVoid(ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_AreShortcutsEnabled__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_areshortcutsenabled", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_NavigateToSelection__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1NavigateToSelection__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_BeginShortcut__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_beginshortcut", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_ShowNodeContextMenu__J = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1ShowNodeContextMenu__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_AcceptCut__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_acceptcut", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_ShowPinContextMenu__J = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1ShowPinContextMenu__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_AcceptCopy__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_acceptcopy", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_ShowLinkContextMenu__J = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1ShowLinkContextMenu__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_AcceptPaste__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_acceptpaste", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_ShowBackgroundContextMenu__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1ShowBackgroundContextMenu__", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_AcceptDuplicate__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_acceptduplicate", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_EnableShortcuts__Z = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1EnableShortcuts__Z", FunctionDescriptor.ofVoid(ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_AcceptCreateNode__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_acceptcreatenode", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_AreShortcutsEnabled__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1AreShortcutsEnabled__", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_GetActionContextSize__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_getactioncontextsize", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginShortcut__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1BeginShortcut__", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_GetActionContextNodes__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_getactioncontextnodes", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_AcceptCut__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1AcceptCut__", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_GetActionContextLinks__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_getactioncontextlinks", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_AcceptCopy__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1AcceptCopy__", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_EndShortcut__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_endshortcut", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_AcceptPaste__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1AcceptPaste__", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_GetCurrentZoom__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_getcurrentzoom", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_AcceptDuplicate__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1AcceptDuplicate__", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_GetHoveredNode__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_gethoverednode", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_AcceptCreateNode__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1AcceptCreateNode__", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_GetHoveredPin__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_gethoveredpin", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetActionContextSize__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetActionContextSize__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_GetHoveredLink__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_gethoveredlink", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetActionContextNodes__JI = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetActionContextNodes__JI", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_GetDoubleClickedNode__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_getdoubleclickednode", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetActionContextLinks__JI = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetActionContextLinks__JI", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_GetDoubleClickedPin__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_getdoubleclickedpin", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_EndShortcut__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1EndShortcut__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_GetDoubleClickedLink__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_getdoubleclickedlink", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetCurrentZoom__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetCurrentZoom__", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_IsBackgroundClicked__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_isbackgroundclicked", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetHoveredNode__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetHoveredNode__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_IsBackgroundDoubleClicked__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_isbackgrounddoubleclicked", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetHoveredPin__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetHoveredPin__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_GetBackgroundClickButtonIndex__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_getbackgroundclickbuttonindex", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetHoveredLink__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetHoveredLink__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_GetBackgroundDoubleClickButtonIndex__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_getbackgrounddoubleclickbuttonindex", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetDoubleClickedNode__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetDoubleClickedNode__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_GetLinkPins__IJJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_getlinkpins", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetDoubleClickedPin__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetDoubleClickedPin__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_PinHadAnyLinks__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_pinhadanylinks", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetDoubleClickedLink__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetDoubleClickedLink__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_GetScreenSize_addr__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_nodeeditor_getscreensize_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_IsBackgroundClicked__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1IsBackgroundClicked__", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_ScreenToCanvas_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_nodeeditor_screentocanvas_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_IsBackgroundDoubleClicked__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1IsBackgroundDoubleClicked__", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_CanvasToScreen_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_nodeeditor_canvastoscreen_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetBackgroundClickButtonIndex__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetBackgroundClickButtonIndex__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_GetNodeCount__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_getnodecount", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetBackgroundDoubleClickButtonIndex__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetBackgroundDoubleClickButtonIndex__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle internal_native_GetLinkPins__IJJ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetLinkPins__IJJ", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_PinHadAnyLinks__I = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1PinHadAnyLinks__I", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle internal_native_GetScreenSize_addr__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetScreenSize_1addr__", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_ScreenToCanvas_addr__J = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1ScreenToCanvas_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_CanvasToScreen_addr__J = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1CanvasToScreen_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_GetNodeCount__ = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetNodeCount__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle internal_native_GetOrderedNodeIds__JI = downcallDefault("jparser_imgui_extension_nodeeditor_NodeEditor_internal_1native_1GetOrderedNodeIds__JI", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_GetOrderedNodeIds__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_nodeeditor_getorderednodeids", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
     }
 }

@@ -30,69 +30,55 @@ public class ImGuiShrinkWidthItem extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiShrinkWidthItem* nativeObject = (ImGuiShrinkWidthItem*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ImGuiShrinkWidthItem.internal_native_deleteNative(this_addr);
+    }
 
     public int get_Index() {
         return internal_native_get_Index(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiShrinkWidthItem* nativeObject = (ImGuiShrinkWidthItem*)this_addr;
-return nativeObject->Index;
-*/
-    public static native int internal_native_get_Index(long this_addr);
+    public static int internal_native_get_Index(long this_addr) {
+        return imgui.natives.JNI_ImGuiShrinkWidthItem.internal_native_get_Index(this_addr);
+    }
 
     public void set_Index(int Index) {
         internal_native_set_Index(native_address, Index);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiShrinkWidthItem* nativeObject = (ImGuiShrinkWidthItem*)this_addr;
-nativeObject->Index = Index;
-*/
-    public static native void internal_native_set_Index(long this_addr, int Index);
+    public static void internal_native_set_Index(long this_addr, int Index) {
+        imgui.natives.JNI_ImGuiShrinkWidthItem.internal_native_set_Index(this_addr, Index);
+    }
 
     public float get_Width() {
         return internal_native_get_Width(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiShrinkWidthItem* nativeObject = (ImGuiShrinkWidthItem*)this_addr;
-return nativeObject->Width;
-*/
-    public static native float internal_native_get_Width(long this_addr);
+    public static float internal_native_get_Width(long this_addr) {
+        return imgui.natives.JNI_ImGuiShrinkWidthItem.internal_native_get_Width(this_addr);
+    }
 
     public void set_Width(float Width) {
         internal_native_set_Width(native_address, Width);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiShrinkWidthItem* nativeObject = (ImGuiShrinkWidthItem*)this_addr;
-nativeObject->Width = Width;
-*/
-    public static native void internal_native_set_Width(long this_addr, float Width);
+    public static void internal_native_set_Width(long this_addr, float Width) {
+        imgui.natives.JNI_ImGuiShrinkWidthItem.internal_native_set_Width(this_addr, Width);
+    }
 
     public float get_InitialWidth() {
         return internal_native_get_InitialWidth(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiShrinkWidthItem* nativeObject = (ImGuiShrinkWidthItem*)this_addr;
-return nativeObject->InitialWidth;
-*/
-    public static native float internal_native_get_InitialWidth(long this_addr);
+    public static float internal_native_get_InitialWidth(long this_addr) {
+        return imgui.natives.JNI_ImGuiShrinkWidthItem.internal_native_get_InitialWidth(this_addr);
+    }
 
     public void set_InitialWidth(float InitialWidth) {
         internal_native_set_InitialWidth(native_address, InitialWidth);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiShrinkWidthItem* nativeObject = (ImGuiShrinkWidthItem*)this_addr;
-nativeObject->InitialWidth = InitialWidth;
-*/
-    public static native void internal_native_set_InitialWidth(long this_addr, float InitialWidth);
+    public static void internal_native_set_InitialWidth(long this_addr, float InitialWidth) {
+        imgui.natives.JNI_ImGuiShrinkWidthItem.internal_native_set_InitialWidth(this_addr, InitialWidth);
+    }
 }

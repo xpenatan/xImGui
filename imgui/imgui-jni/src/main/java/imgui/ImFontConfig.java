@@ -21,10 +21,9 @@ public class ImFontConfig extends NativeObject {
         internal_reset(addr, true);
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)new ImFontConfig();
-*/
-    public static native long internal_native_create_addr();
+    public static long internal_native_create_addr() {
+        return imgui.natives.JNI_ImFontConfig.internal_native_create_addr();
+    }
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -44,31 +43,25 @@ return (jlong)new ImFontConfig();
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ImFontConfig.internal_native_deleteNative(this_addr);
+    }
 
     public byte get_Name(int index) {
         return internal_native_get_Name(native_address, index);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-return nativeObject->Name[index];
-*/
-    public static native byte internal_native_get_Name(long this_addr, int index);
+    public static byte internal_native_get_Name(long this_addr, int index) {
+        return imgui.natives.JNI_ImFontConfig.internal_native_get_Name(this_addr, index);
+    }
 
     public void set_Name(int index, byte Name) {
         internal_native_set_Name(native_address, index, Name);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-nativeObject->Name[index] = Name;
-*/
-    public static native void internal_native_set_Name(long this_addr, int index, byte Name);
+    public static void internal_native_set_Name(long this_addr, int index, byte Name) {
+        imgui.natives.JNI_ImFontConfig.internal_native_set_Name(this_addr, index, Name);
+    }
 
     public NativeObject get_FontData() {
         long addr = internal_native_get_FontData_addr(native_address);
@@ -80,201 +73,161 @@ nativeObject->Name[index] = Name;
         return NativeObject_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-return (jlong)nativeObject->FontData;
-*/
-    public static native long internal_native_get_FontData_addr(long this_addr);
+    public static long internal_native_get_FontData_addr(long this_addr) {
+        return imgui.natives.JNI_ImFontConfig.internal_native_get_FontData_addr(this_addr);
+    }
 
     public void set_FontData(NativeObject FontData) {
         internal_native_set_FontData(native_address, FontData.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-nativeObject->FontData = (void**)FontData_addr;
-*/
-    public static native void internal_native_set_FontData(long this_addr, long FontData_addr);
+    public static void internal_native_set_FontData(long this_addr, long FontData_addr) {
+        imgui.natives.JNI_ImFontConfig.internal_native_set_FontData(this_addr, FontData_addr);
+    }
 
     public int get_FontDataSize() {
         return internal_native_get_FontDataSize(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-return nativeObject->FontDataSize;
-*/
-    public static native int internal_native_get_FontDataSize(long this_addr);
+    public static int internal_native_get_FontDataSize(long this_addr) {
+        return imgui.natives.JNI_ImFontConfig.internal_native_get_FontDataSize(this_addr);
+    }
 
     public void set_FontDataSize(int FontDataSize) {
         internal_native_set_FontDataSize(native_address, FontDataSize);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-nativeObject->FontDataSize = FontDataSize;
-*/
-    public static native void internal_native_set_FontDataSize(long this_addr, int FontDataSize);
+    public static void internal_native_set_FontDataSize(long this_addr, int FontDataSize) {
+        imgui.natives.JNI_ImFontConfig.internal_native_set_FontDataSize(this_addr, FontDataSize);
+    }
 
     public boolean get_FontDataOwnedByAtlas() {
         return internal_native_get_FontDataOwnedByAtlas(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-return nativeObject->FontDataOwnedByAtlas;
-*/
-    public static native boolean internal_native_get_FontDataOwnedByAtlas(long this_addr);
+    public static boolean internal_native_get_FontDataOwnedByAtlas(long this_addr) {
+        return imgui.natives.JNI_ImFontConfig.internal_native_get_FontDataOwnedByAtlas(this_addr);
+    }
 
     public void set_FontDataOwnedByAtlas(boolean FontDataOwnedByAtlas) {
         internal_native_set_FontDataOwnedByAtlas(native_address, FontDataOwnedByAtlas);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-nativeObject->FontDataOwnedByAtlas = FontDataOwnedByAtlas;
-*/
-    public static native void internal_native_set_FontDataOwnedByAtlas(long this_addr, boolean FontDataOwnedByAtlas);
+    public static void internal_native_set_FontDataOwnedByAtlas(long this_addr, boolean FontDataOwnedByAtlas) {
+        imgui.natives.JNI_ImFontConfig.internal_native_set_FontDataOwnedByAtlas(this_addr, FontDataOwnedByAtlas);
+    }
 
     public boolean get_MergeMode() {
         return internal_native_get_MergeMode(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-return nativeObject->MergeMode;
-*/
-    public static native boolean internal_native_get_MergeMode(long this_addr);
+    public static boolean internal_native_get_MergeMode(long this_addr) {
+        return imgui.natives.JNI_ImFontConfig.internal_native_get_MergeMode(this_addr);
+    }
 
     public void set_MergeMode(boolean MergeMode) {
         internal_native_set_MergeMode(native_address, MergeMode);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-nativeObject->MergeMode = MergeMode;
-*/
-    public static native void internal_native_set_MergeMode(long this_addr, boolean MergeMode);
+    public static void internal_native_set_MergeMode(long this_addr, boolean MergeMode) {
+        imgui.natives.JNI_ImFontConfig.internal_native_set_MergeMode(this_addr, MergeMode);
+    }
 
     public boolean get_PixelSnapH() {
         return internal_native_get_PixelSnapH(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-return nativeObject->PixelSnapH;
-*/
-    public static native boolean internal_native_get_PixelSnapH(long this_addr);
+    public static boolean internal_native_get_PixelSnapH(long this_addr) {
+        return imgui.natives.JNI_ImFontConfig.internal_native_get_PixelSnapH(this_addr);
+    }
 
     public void set_PixelSnapH(boolean PixelSnapH) {
         internal_native_set_PixelSnapH(native_address, PixelSnapH);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-nativeObject->PixelSnapH = PixelSnapH;
-*/
-    public static native void internal_native_set_PixelSnapH(long this_addr, boolean PixelSnapH);
+    public static void internal_native_set_PixelSnapH(long this_addr, boolean PixelSnapH) {
+        imgui.natives.JNI_ImFontConfig.internal_native_set_PixelSnapH(this_addr, PixelSnapH);
+    }
 
     public boolean get_PixelSnapV() {
         return internal_native_get_PixelSnapV(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-return nativeObject->PixelSnapV;
-*/
-    public static native boolean internal_native_get_PixelSnapV(long this_addr);
+    public static boolean internal_native_get_PixelSnapV(long this_addr) {
+        return imgui.natives.JNI_ImFontConfig.internal_native_get_PixelSnapV(this_addr);
+    }
 
     public void set_PixelSnapV(boolean PixelSnapV) {
         internal_native_set_PixelSnapV(native_address, PixelSnapV);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-nativeObject->PixelSnapV = PixelSnapV;
-*/
-    public static native void internal_native_set_PixelSnapV(long this_addr, boolean PixelSnapV);
+    public static void internal_native_set_PixelSnapV(long this_addr, boolean PixelSnapV) {
+        imgui.natives.JNI_ImFontConfig.internal_native_set_PixelSnapV(this_addr, PixelSnapV);
+    }
 
     public int get_OversampleH() {
         return internal_native_get_OversampleH(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-return nativeObject->OversampleH;
-*/
-    public static native int internal_native_get_OversampleH(long this_addr);
+    public static int internal_native_get_OversampleH(long this_addr) {
+        return imgui.natives.JNI_ImFontConfig.internal_native_get_OversampleH(this_addr);
+    }
 
     public void set_OversampleH(int OversampleH) {
         internal_native_set_OversampleH(native_address, OversampleH);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-nativeObject->OversampleH = OversampleH;
-*/
-    public static native void internal_native_set_OversampleH(long this_addr, int OversampleH);
+    public static void internal_native_set_OversampleH(long this_addr, int OversampleH) {
+        imgui.natives.JNI_ImFontConfig.internal_native_set_OversampleH(this_addr, OversampleH);
+    }
 
     public int get_OversampleV() {
         return internal_native_get_OversampleV(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-return nativeObject->OversampleV;
-*/
-    public static native int internal_native_get_OversampleV(long this_addr);
+    public static int internal_native_get_OversampleV(long this_addr) {
+        return imgui.natives.JNI_ImFontConfig.internal_native_get_OversampleV(this_addr);
+    }
 
     public void set_OversampleV(int OversampleV) {
         internal_native_set_OversampleV(native_address, OversampleV);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-nativeObject->OversampleV = OversampleV;
-*/
-    public static native void internal_native_set_OversampleV(long this_addr, int OversampleV);
+    public static void internal_native_set_OversampleV(long this_addr, int OversampleV) {
+        imgui.natives.JNI_ImFontConfig.internal_native_set_OversampleV(this_addr, OversampleV);
+    }
 
     public short get_EllipsisChar() {
         return internal_native_get_EllipsisChar(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-return nativeObject->EllipsisChar;
-*/
-    public static native short internal_native_get_EllipsisChar(long this_addr);
+    public static short internal_native_get_EllipsisChar(long this_addr) {
+        return imgui.natives.JNI_ImFontConfig.internal_native_get_EllipsisChar(this_addr);
+    }
 
     public void set_EllipsisChar(short EllipsisChar) {
         internal_native_set_EllipsisChar(native_address, EllipsisChar);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-nativeObject->EllipsisChar = EllipsisChar;
-*/
-    public static native void internal_native_set_EllipsisChar(long this_addr, short EllipsisChar);
+    public static void internal_native_set_EllipsisChar(long this_addr, short EllipsisChar) {
+        imgui.natives.JNI_ImFontConfig.internal_native_set_EllipsisChar(this_addr, EllipsisChar);
+    }
 
     public float get_SizePixels() {
         return internal_native_get_SizePixels(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-return nativeObject->SizePixels;
-*/
-    public static native float internal_native_get_SizePixels(long this_addr);
+    public static float internal_native_get_SizePixels(long this_addr) {
+        return imgui.natives.JNI_ImFontConfig.internal_native_get_SizePixels(this_addr);
+    }
 
     public void set_SizePixels(float SizePixels) {
         internal_native_set_SizePixels(native_address, SizePixels);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-nativeObject->SizePixels = SizePixels;
-*/
-    public static native void internal_native_set_SizePixels(long this_addr, float SizePixels);
+    public static void internal_native_set_SizePixels(long this_addr, float SizePixels) {
+        imgui.natives.JNI_ImFontConfig.internal_native_set_SizePixels(this_addr, SizePixels);
+    }
 
     public ImVec2 get_GlyphOffset() {
         long addr = internal_native_get_GlyphOffset_addr(native_address);
@@ -286,159 +239,127 @@ nativeObject->SizePixels = SizePixels;
         return ImVec2_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-return (jlong)&nativeObject->GlyphOffset;
-*/
-    public static native long internal_native_get_GlyphOffset_addr(long this_addr);
+    public static long internal_native_get_GlyphOffset_addr(long this_addr) {
+        return imgui.natives.JNI_ImFontConfig.internal_native_get_GlyphOffset_addr(this_addr);
+    }
 
     public void set_GlyphOffset(ImVec2 GlyphOffset) {
         internal_native_set_GlyphOffset(native_address, GlyphOffset.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-nativeObject->GlyphOffset = *((ImVec2*)GlyphOffset_addr);
-*/
-    public static native void internal_native_set_GlyphOffset(long this_addr, long GlyphOffset_addr);
+    public static void internal_native_set_GlyphOffset(long this_addr, long GlyphOffset_addr) {
+        imgui.natives.JNI_ImFontConfig.internal_native_set_GlyphOffset(this_addr, GlyphOffset_addr);
+    }
 
     public float get_GlyphMinAdvanceX() {
         return internal_native_get_GlyphMinAdvanceX(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-return nativeObject->GlyphMinAdvanceX;
-*/
-    public static native float internal_native_get_GlyphMinAdvanceX(long this_addr);
+    public static float internal_native_get_GlyphMinAdvanceX(long this_addr) {
+        return imgui.natives.JNI_ImFontConfig.internal_native_get_GlyphMinAdvanceX(this_addr);
+    }
 
     public void set_GlyphMinAdvanceX(float GlyphMinAdvanceX) {
         internal_native_set_GlyphMinAdvanceX(native_address, GlyphMinAdvanceX);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-nativeObject->GlyphMinAdvanceX = GlyphMinAdvanceX;
-*/
-    public static native void internal_native_set_GlyphMinAdvanceX(long this_addr, float GlyphMinAdvanceX);
+    public static void internal_native_set_GlyphMinAdvanceX(long this_addr, float GlyphMinAdvanceX) {
+        imgui.natives.JNI_ImFontConfig.internal_native_set_GlyphMinAdvanceX(this_addr, GlyphMinAdvanceX);
+    }
 
     public float get_GlyphMaxAdvanceX() {
         return internal_native_get_GlyphMaxAdvanceX(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-return nativeObject->GlyphMaxAdvanceX;
-*/
-    public static native float internal_native_get_GlyphMaxAdvanceX(long this_addr);
+    public static float internal_native_get_GlyphMaxAdvanceX(long this_addr) {
+        return imgui.natives.JNI_ImFontConfig.internal_native_get_GlyphMaxAdvanceX(this_addr);
+    }
 
     public void set_GlyphMaxAdvanceX(float GlyphMaxAdvanceX) {
         internal_native_set_GlyphMaxAdvanceX(native_address, GlyphMaxAdvanceX);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-nativeObject->GlyphMaxAdvanceX = GlyphMaxAdvanceX;
-*/
-    public static native void internal_native_set_GlyphMaxAdvanceX(long this_addr, float GlyphMaxAdvanceX);
+    public static void internal_native_set_GlyphMaxAdvanceX(long this_addr, float GlyphMaxAdvanceX) {
+        imgui.natives.JNI_ImFontConfig.internal_native_set_GlyphMaxAdvanceX(this_addr, GlyphMaxAdvanceX);
+    }
 
     public float get_GlyphExtraAdvanceX() {
         return internal_native_get_GlyphExtraAdvanceX(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-return nativeObject->GlyphExtraAdvanceX;
-*/
-    public static native float internal_native_get_GlyphExtraAdvanceX(long this_addr);
+    public static float internal_native_get_GlyphExtraAdvanceX(long this_addr) {
+        return imgui.natives.JNI_ImFontConfig.internal_native_get_GlyphExtraAdvanceX(this_addr);
+    }
 
     public void set_GlyphExtraAdvanceX(float GlyphExtraAdvanceX) {
         internal_native_set_GlyphExtraAdvanceX(native_address, GlyphExtraAdvanceX);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-nativeObject->GlyphExtraAdvanceX = GlyphExtraAdvanceX;
-*/
-    public static native void internal_native_set_GlyphExtraAdvanceX(long this_addr, float GlyphExtraAdvanceX);
+    public static void internal_native_set_GlyphExtraAdvanceX(long this_addr, float GlyphExtraAdvanceX) {
+        imgui.natives.JNI_ImFontConfig.internal_native_set_GlyphExtraAdvanceX(this_addr, GlyphExtraAdvanceX);
+    }
 
     public int get_FontNo() {
         return internal_native_get_FontNo(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-return nativeObject->FontNo;
-*/
-    public static native int internal_native_get_FontNo(long this_addr);
+    public static int internal_native_get_FontNo(long this_addr) {
+        return imgui.natives.JNI_ImFontConfig.internal_native_get_FontNo(this_addr);
+    }
 
     public void set_FontNo(int FontNo) {
         internal_native_set_FontNo(native_address, FontNo);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-nativeObject->FontNo = FontNo;
-*/
-    public static native void internal_native_set_FontNo(long this_addr, int FontNo);
+    public static void internal_native_set_FontNo(long this_addr, int FontNo) {
+        imgui.natives.JNI_ImFontConfig.internal_native_set_FontNo(this_addr, FontNo);
+    }
 
     public int get_FontLoaderFlags() {
         return internal_native_get_FontLoaderFlags(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-return nativeObject->FontLoaderFlags;
-*/
-    public static native int internal_native_get_FontLoaderFlags(long this_addr);
+    public static int internal_native_get_FontLoaderFlags(long this_addr) {
+        return imgui.natives.JNI_ImFontConfig.internal_native_get_FontLoaderFlags(this_addr);
+    }
 
     public void set_FontLoaderFlags(int FontLoaderFlags) {
         internal_native_set_FontLoaderFlags(native_address, FontLoaderFlags);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-nativeObject->FontLoaderFlags = FontLoaderFlags;
-*/
-    public static native void internal_native_set_FontLoaderFlags(long this_addr, int FontLoaderFlags);
+    public static void internal_native_set_FontLoaderFlags(long this_addr, int FontLoaderFlags) {
+        imgui.natives.JNI_ImFontConfig.internal_native_set_FontLoaderFlags(this_addr, FontLoaderFlags);
+    }
 
     public float get_RasterizerMultiply() {
         return internal_native_get_RasterizerMultiply(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-return nativeObject->RasterizerMultiply;
-*/
-    public static native float internal_native_get_RasterizerMultiply(long this_addr);
+    public static float internal_native_get_RasterizerMultiply(long this_addr) {
+        return imgui.natives.JNI_ImFontConfig.internal_native_get_RasterizerMultiply(this_addr);
+    }
 
     public void set_RasterizerMultiply(float RasterizerMultiply) {
         internal_native_set_RasterizerMultiply(native_address, RasterizerMultiply);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-nativeObject->RasterizerMultiply = RasterizerMultiply;
-*/
-    public static native void internal_native_set_RasterizerMultiply(long this_addr, float RasterizerMultiply);
+    public static void internal_native_set_RasterizerMultiply(long this_addr, float RasterizerMultiply) {
+        imgui.natives.JNI_ImFontConfig.internal_native_set_RasterizerMultiply(this_addr, RasterizerMultiply);
+    }
 
     public float get_RasterizerDensity() {
         return internal_native_get_RasterizerDensity(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-return nativeObject->RasterizerDensity;
-*/
-    public static native float internal_native_get_RasterizerDensity(long this_addr);
+    public static float internal_native_get_RasterizerDensity(long this_addr) {
+        return imgui.natives.JNI_ImFontConfig.internal_native_get_RasterizerDensity(this_addr);
+    }
 
     public void set_RasterizerDensity(float RasterizerDensity) {
         internal_native_set_RasterizerDensity(native_address, RasterizerDensity);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontConfig* nativeObject = (ImFontConfig*)this_addr;
-nativeObject->RasterizerDensity = RasterizerDensity;
-*/
-    public static native void internal_native_set_RasterizerDensity(long this_addr, float RasterizerDensity);
+    public static void internal_native_set_RasterizerDensity(long this_addr, float RasterizerDensity) {
+        imgui.natives.JNI_ImFontConfig.internal_native_set_RasterizerDensity(this_addr, RasterizerDensity);
+    }
 }

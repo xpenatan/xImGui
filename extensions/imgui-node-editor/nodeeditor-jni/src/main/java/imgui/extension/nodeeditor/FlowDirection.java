@@ -34,13 +34,11 @@ public enum FlowDirection implements NativeEnum<FlowDirection> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)FlowDirection::Forward;
-*/
-    private static native int Forward_NATIVE();
+    private static int Forward_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_FlowDirection.Forward_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)FlowDirection::Backward;
-*/
-    private static native int Backward_NATIVE();
+    private static int Backward_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_FlowDirection.Backward_NATIVE();
+    }
 }

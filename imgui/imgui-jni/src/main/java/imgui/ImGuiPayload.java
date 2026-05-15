@@ -32,51 +32,41 @@ public class ImGuiPayload extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiPayload* nativeObject = (ImGuiPayload*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ImGuiPayload.internal_native_deleteNative(this_addr);
+    }
 
     public void Clear() {
         internal_native_Clear(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiPayload* nativeObject = (ImGuiPayload*)this_addr;
-nativeObject->Clear();
-*/
-    public static native void internal_native_Clear(long this_addr);
+    public static void internal_native_Clear(long this_addr) {
+        imgui.natives.JNI_ImGuiPayload.internal_native_Clear(this_addr);
+    }
 
     public boolean IsDataType(String type) {
         return internal_native_IsDataType(native_address, type);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiPayload* nativeObject = (ImGuiPayload*)this_addr;
-return nativeObject->IsDataType(type);
-*/
-    public static native boolean internal_native_IsDataType(long this_addr, String type);
+    public static boolean internal_native_IsDataType(long this_addr, String type) {
+        return imgui.natives.JNI_ImGuiPayload.internal_native_IsDataType(this_addr, type);
+    }
 
     public boolean IsPreview() {
         return internal_native_IsPreview(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiPayload* nativeObject = (ImGuiPayload*)this_addr;
-return nativeObject->IsPreview();
-*/
-    public static native boolean internal_native_IsPreview(long this_addr);
+    public static boolean internal_native_IsPreview(long this_addr) {
+        return imgui.natives.JNI_ImGuiPayload.internal_native_IsPreview(this_addr);
+    }
 
     public boolean IsDelivery() {
         return internal_native_IsDelivery(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiPayload* nativeObject = (ImGuiPayload*)this_addr;
-return nativeObject->IsDelivery();
-*/
-    public static native boolean internal_native_IsDelivery(long this_addr);
+    public static boolean internal_native_IsDelivery(long this_addr) {
+        return imgui.natives.JNI_ImGuiPayload.internal_native_IsDelivery(this_addr);
+    }
 
     public NativeObject get_Data() {
         long addr = internal_native_get_Data_addr(native_address);
@@ -88,19 +78,15 @@ return nativeObject->IsDelivery();
         return NativeObject_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiPayload* nativeObject = (ImGuiPayload*)this_addr;
-return (jlong)nativeObject->Data;
-*/
-    public static native long internal_native_get_Data_addr(long this_addr);
+    public static long internal_native_get_Data_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiPayload.internal_native_get_Data_addr(this_addr);
+    }
 
     public int get_DataSize() {
         return internal_native_get_DataSize(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiPayload* nativeObject = (ImGuiPayload*)this_addr;
-return nativeObject->DataSize;
-*/
-    public static native int internal_native_get_DataSize(long this_addr);
+    public static int internal_native_get_DataSize(long this_addr) {
+        return imgui.natives.JNI_ImGuiPayload.internal_native_get_DataSize(this_addr);
+    }
 }

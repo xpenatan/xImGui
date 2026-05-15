@@ -31,71 +31,57 @@ public class ImGuiInputTextCallbackData extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ImGuiInputTextCallbackData.internal_native_deleteNative(this_addr);
+    }
 
     public int get_BufSize() {
         return internal_native_get_BufSize(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-return nativeObject->BufSize;
-*/
-    public static native int internal_native_get_BufSize(long this_addr);
+    public static int internal_native_get_BufSize(long this_addr) {
+        return imgui.natives.JNI_ImGuiInputTextCallbackData.internal_native_get_BufSize(this_addr);
+    }
 
     public void set_BufSize(int BufSize) {
         internal_native_set_BufSize(native_address, BufSize);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-nativeObject->BufSize = BufSize;
-*/
-    public static native void internal_native_set_BufSize(long this_addr, int BufSize);
+    public static void internal_native_set_BufSize(long this_addr, int BufSize) {
+        imgui.natives.JNI_ImGuiInputTextCallbackData.internal_native_set_BufSize(this_addr, BufSize);
+    }
 
     public boolean get_BufDirty() {
         return internal_native_get_BufDirty(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-return nativeObject->BufDirty;
-*/
-    public static native boolean internal_native_get_BufDirty(long this_addr);
+    public static boolean internal_native_get_BufDirty(long this_addr) {
+        return imgui.natives.JNI_ImGuiInputTextCallbackData.internal_native_get_BufDirty(this_addr);
+    }
 
     public void set_BufDirty(boolean BufDirty) {
         internal_native_set_BufDirty(native_address, BufDirty);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-nativeObject->BufDirty = BufDirty;
-*/
-    public static native void internal_native_set_BufDirty(long this_addr, boolean BufDirty);
+    public static void internal_native_set_BufDirty(long this_addr, boolean BufDirty) {
+        imgui.natives.JNI_ImGuiInputTextCallbackData.internal_native_set_BufDirty(this_addr, BufDirty);
+    }
 
     public int get_BufTextLen() {
         return internal_native_get_BufTextLen(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-return nativeObject->BufTextLen;
-*/
-    public static native int internal_native_get_BufTextLen(long this_addr);
+    public static int internal_native_get_BufTextLen(long this_addr) {
+        return imgui.natives.JNI_ImGuiInputTextCallbackData.internal_native_get_BufTextLen(this_addr);
+    }
 
     public void set_BufTextLen(int BufTextLen) {
         internal_native_set_BufTextLen(native_address, BufTextLen);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-nativeObject->BufTextLen = BufTextLen;
-*/
-    public static native void internal_native_set_BufTextLen(long this_addr, int BufTextLen);
+    public static void internal_native_set_BufTextLen(long this_addr, int BufTextLen) {
+        imgui.natives.JNI_ImGuiInputTextCallbackData.internal_native_set_BufTextLen(this_addr, BufTextLen);
+    }
 
     public ImGuiInputTextFlags get_Flags() {
         int value = internal_native_get_Flags(native_address);
@@ -108,19 +94,15 @@ nativeObject->BufTextLen = BufTextLen;
         return ImGuiInputTextFlags.CUSTOM.setValue(value);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-return (jint)nativeObject->Flags;
-*/
-    public static native int internal_native_get_Flags(long this_addr);
+    public static int internal_native_get_Flags(long this_addr) {
+        return imgui.natives.JNI_ImGuiInputTextCallbackData.internal_native_get_Flags(this_addr);
+    }
 
     public void set_Flags(ImGuiInputTextFlags Flags) {
         internal_native_set_Flags(native_address, Flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-nativeObject->Flags = (::ImGuiInputTextFlags)Flags;
-*/
-    public static native void internal_native_set_Flags(long this_addr, int Flags);
+    public static void internal_native_set_Flags(long this_addr, int Flags) {
+        imgui.natives.JNI_ImGuiInputTextCallbackData.internal_native_set_Flags(this_addr, Flags);
+    }
 }

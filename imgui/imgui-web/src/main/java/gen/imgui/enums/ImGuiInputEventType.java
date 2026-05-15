@@ -43,57 +43,30 @@ public enum ImGuiInputEventType implements NativeEnum<ImGuiInputEventType> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputEventType_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputEventType_None;")
     private static native int ImGuiInputEventType_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputEventType_MousePos;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputEventType_MousePos;")
     private static native int ImGuiInputEventType_MousePos_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputEventType_MouseWheel;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputEventType_MouseWheel;")
     private static native int ImGuiInputEventType_MouseWheel_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputEventType_MouseButton;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputEventType_MouseButton;")
     private static native int ImGuiInputEventType_MouseButton_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputEventType_MouseViewport;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputEventType_MouseViewport;")
     private static native int ImGuiInputEventType_MouseViewport_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputEventType_Key;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputEventType_Key;")
     private static native int ImGuiInputEventType_Key_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputEventType_Text;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputEventType_Text;")
     private static native int ImGuiInputEventType_Text_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputEventType_Focus;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputEventType_Focus;")
     private static native int ImGuiInputEventType_Focus_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputEventType_COUNT;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputEventType_COUNT;")
     private static native int ImGuiInputEventType_COUNT_NATIVE();
 }

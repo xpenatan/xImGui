@@ -34,13 +34,11 @@ public enum ImGuiPlotType implements NativeEnum<ImGuiPlotType> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiPlotType_Lines;
-*/
-    private static native int ImGuiPlotType_Lines_NATIVE();
+    private static int ImGuiPlotType_Lines_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiPlotType.ImGuiPlotType_Lines_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiPlotType_Histogram;
-*/
-    private static native int ImGuiPlotType_Histogram_NATIVE();
+    private static int ImGuiPlotType_Histogram_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiPlotType.ImGuiPlotType_Histogram_NATIVE();
+    }
 }

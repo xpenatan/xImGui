@@ -51,166 +51,106 @@ public enum ImGuiChildFlags implements NativeEnum<ImGuiChildFlags> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiChildFlags_None;
-*/
     private static int ImGuiChildFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiChildFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiChildFlags_Borders;
-*/
     private static int ImGuiChildFlags_Borders_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiChildFlags_Borders_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiChildFlags_AlwaysUseWindowPadding;
-*/
     private static int ImGuiChildFlags_AlwaysUseWindowPadding_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiChildFlags_AlwaysUseWindowPadding_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiChildFlags_ResizeX;
-*/
     private static int ImGuiChildFlags_ResizeX_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiChildFlags_ResizeX_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiChildFlags_ResizeY;
-*/
     private static int ImGuiChildFlags_ResizeY_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiChildFlags_ResizeY_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiChildFlags_AutoResizeX;
-*/
     private static int ImGuiChildFlags_AutoResizeX_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiChildFlags_AutoResizeX_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiChildFlags_AutoResizeY;
-*/
     private static int ImGuiChildFlags_AutoResizeY_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiChildFlags_AutoResizeY_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiChildFlags_AlwaysAutoResize;
-*/
     private static int ImGuiChildFlags_AlwaysAutoResize_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiChildFlags_AlwaysAutoResize_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiChildFlags_FrameStyle;
-*/
     private static int ImGuiChildFlags_FrameStyle_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiChildFlags_FrameStyle_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiChildFlags_NavFlattened;
-*/
     private static int ImGuiChildFlags_NavFlattened_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiChildFlags_NavFlattened_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiChildFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguichildflags_imguichildflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiChildFlags_Borders_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguichildflags_imguichildflags_borders_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiChildFlags_AlwaysUseWindowPadding_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguichildflags_imguichildflags_alwaysusewindowpadding_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiChildFlags_ResizeX_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguichildflags_imguichildflags_resizex_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiChildFlags_ResizeY_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguichildflags_imguichildflags_resizey_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiChildFlags_AutoResizeX_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguichildflags_imguichildflags_autoresizex_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiChildFlags_AutoResizeY_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguichildflags_imguichildflags_autoresizey_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiChildFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiChildFlags_ImGuiChildFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiChildFlags_AlwaysAutoResize_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguichildflags_imguichildflags_alwaysautoresize_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiChildFlags_Borders_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiChildFlags_ImGuiChildFlags_1Borders_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiChildFlags_FrameStyle_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguichildflags_imguichildflags_framestyle_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiChildFlags_AlwaysUseWindowPadding_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiChildFlags_ImGuiChildFlags_1AlwaysUseWindowPadding_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiChildFlags_ResizeX_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiChildFlags_ImGuiChildFlags_1ResizeX_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiChildFlags_ResizeY_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiChildFlags_ImGuiChildFlags_1ResizeY_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiChildFlags_AutoResizeX_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiChildFlags_ImGuiChildFlags_1AutoResizeX_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiChildFlags_AutoResizeY_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiChildFlags_ImGuiChildFlags_1AutoResizeY_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiChildFlags_AlwaysAutoResize_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiChildFlags_ImGuiChildFlags_1AlwaysAutoResize_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiChildFlags_FrameStyle_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiChildFlags_ImGuiChildFlags_1FrameStyle_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiChildFlags_NavFlattened_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiChildFlags_ImGuiChildFlags_1NavFlattened_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiChildFlags_NavFlattened_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguichildflags_imguichildflags_navflattened_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

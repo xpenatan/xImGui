@@ -39,28 +39,23 @@ public enum ImGuiDir implements NativeEnum<ImGuiDir> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDir_None;
-*/
-    private static native int ImGuiDir_None_NATIVE();
+    private static int ImGuiDir_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDir.ImGuiDir_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDir_Left;
-*/
-    private static native int ImGuiDir_Left_NATIVE();
+    private static int ImGuiDir_Left_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDir.ImGuiDir_Left_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDir_Right;
-*/
-    private static native int ImGuiDir_Right_NATIVE();
+    private static int ImGuiDir_Right_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDir.ImGuiDir_Right_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDir_Up;
-*/
-    private static native int ImGuiDir_Up_NATIVE();
+    private static int ImGuiDir_Up_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDir.ImGuiDir_Up_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDir_Down;
-*/
-    private static native int ImGuiDir_Down_NATIVE();
+    private static int ImGuiDir_Down_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDir.ImGuiDir_Down_NATIVE();
+    }
 }

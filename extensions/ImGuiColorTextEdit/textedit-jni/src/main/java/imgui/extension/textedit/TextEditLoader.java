@@ -14,10 +14,6 @@ import com.github.xpenatan.jParser.loader.JParserLibraryLoaderListener;
  */
 public class TextEditLoader {
 
-    /*
-      [-JNI;-NATIVE]
-              #include "TextEditCustom.h"
-    */
     public static void init(JParserLibraryLoaderListener listener) {
         JParserLibraryLoader.load("textedit", listener);
     }

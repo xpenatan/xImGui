@@ -59,270 +59,186 @@ public enum ImGuiButtonFlagsPrivate_ implements NativeEnum<ImGuiButtonFlagsPriva
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiButtonFlags_PressedOnClick;
-*/
     private static int ImGuiButtonFlags_PressedOnClick_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiButtonFlags_PressedOnClick_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiButtonFlags_PressedOnClickRelease;
-*/
     private static int ImGuiButtonFlags_PressedOnClickRelease_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiButtonFlags_PressedOnClickRelease_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiButtonFlags_PressedOnClickReleaseAnywhere;
-*/
     private static int ImGuiButtonFlags_PressedOnClickReleaseAnywhere_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiButtonFlags_PressedOnClickReleaseAnywhere_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiButtonFlags_PressedOnRelease;
-*/
     private static int ImGuiButtonFlags_PressedOnRelease_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiButtonFlags_PressedOnRelease_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiButtonFlags_PressedOnDoubleClick;
-*/
     private static int ImGuiButtonFlags_PressedOnDoubleClick_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiButtonFlags_PressedOnDoubleClick_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiButtonFlags_PressedOnDragDropHold;
-*/
     private static int ImGuiButtonFlags_PressedOnDragDropHold_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiButtonFlags_PressedOnDragDropHold_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiButtonFlags_FlattenChildren;
-*/
     private static int ImGuiButtonFlags_FlattenChildren_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiButtonFlags_FlattenChildren_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiButtonFlags_AllowOverlap;
-*/
     private static int ImGuiButtonFlags_AllowOverlap_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiButtonFlags_AllowOverlap_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiButtonFlags_AlignTextBaseLine;
-*/
     private static int ImGuiButtonFlags_AlignTextBaseLine_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiButtonFlags_AlignTextBaseLine_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiButtonFlags_NoKeyModsAllowed;
-*/
     private static int ImGuiButtonFlags_NoKeyModsAllowed_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiButtonFlags_NoKeyModsAllowed_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiButtonFlags_NoHoldingActiveId;
-*/
     private static int ImGuiButtonFlags_NoHoldingActiveId_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiButtonFlags_NoHoldingActiveId_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiButtonFlags_NoNavFocus;
-*/
     private static int ImGuiButtonFlags_NoNavFocus_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiButtonFlags_NoNavFocus_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiButtonFlags_NoHoveredOnFocus;
-*/
     private static int ImGuiButtonFlags_NoHoveredOnFocus_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiButtonFlags_NoHoveredOnFocus_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiButtonFlags_NoSetKeyOwner;
-*/
     private static int ImGuiButtonFlags_NoSetKeyOwner_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiButtonFlags_NoSetKeyOwner_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiButtonFlags_NoTestKeyOwner;
-*/
     private static int ImGuiButtonFlags_NoTestKeyOwner_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiButtonFlags_NoTestKeyOwner_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiButtonFlags_NoFocus;
-*/
     private static int ImGuiButtonFlags_NoFocus_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiButtonFlags_NoFocus_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiButtonFlags_PressedOnMask_;
-*/
     private static int ImGuiButtonFlags_PressedOnMask__NATIVE() {
         try {
             return (int) FFMHandles.ImGuiButtonFlags_PressedOnMask__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiButtonFlags_PressedOnDefault_;
-*/
     private static int ImGuiButtonFlags_PressedOnDefault__NATIVE() {
         try {
             return (int) FFMHandles.ImGuiButtonFlags_PressedOnDefault__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_PressedOnClick_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibuttonflagsprivate__imguibuttonflags_pressedonclick_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_PressedOnClickRelease_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibuttonflagsprivate__imguibuttonflags_pressedonclickrelease_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_PressedOnClickReleaseAnywhere_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibuttonflagsprivate__imguibuttonflags_pressedonclickreleaseanywhere_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_PressedOnRelease_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibuttonflagsprivate__imguibuttonflags_pressedonrelease_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_PressedOnDoubleClick_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibuttonflagsprivate__imguibuttonflags_pressedondoubleclick_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_PressedOnDragDropHold_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibuttonflagsprivate__imguibuttonflags_pressedondragdrophold_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_FlattenChildren_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibuttonflagsprivate__imguibuttonflags_flattenchildren_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_PressedOnClick_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiButtonFlagsPrivate_1_ImGuiButtonFlags_1PressedOnClick_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_AllowOverlap_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibuttonflagsprivate__imguibuttonflags_allowoverlap_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_PressedOnClickRelease_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiButtonFlagsPrivate_1_ImGuiButtonFlags_1PressedOnClickRelease_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_AlignTextBaseLine_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibuttonflagsprivate__imguibuttonflags_aligntextbaseline_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_PressedOnClickReleaseAnywhere_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiButtonFlagsPrivate_1_ImGuiButtonFlags_1PressedOnClickReleaseAnywhere_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_NoKeyModsAllowed_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibuttonflagsprivate__imguibuttonflags_nokeymodsallowed_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_PressedOnRelease_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiButtonFlagsPrivate_1_ImGuiButtonFlags_1PressedOnRelease_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_NoHoldingActiveId_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibuttonflagsprivate__imguibuttonflags_noholdingactiveid_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_PressedOnDoubleClick_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiButtonFlagsPrivate_1_ImGuiButtonFlags_1PressedOnDoubleClick_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_NoNavFocus_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibuttonflagsprivate__imguibuttonflags_nonavfocus_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_PressedOnDragDropHold_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiButtonFlagsPrivate_1_ImGuiButtonFlags_1PressedOnDragDropHold_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_NoHoveredOnFocus_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibuttonflagsprivate__imguibuttonflags_nohoveredonfocus_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_FlattenChildren_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiButtonFlagsPrivate_1_ImGuiButtonFlags_1FlattenChildren_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_NoSetKeyOwner_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibuttonflagsprivate__imguibuttonflags_nosetkeyowner_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_AllowOverlap_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiButtonFlagsPrivate_1_ImGuiButtonFlags_1AllowOverlap_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_NoTestKeyOwner_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibuttonflagsprivate__imguibuttonflags_notestkeyowner_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_AlignTextBaseLine_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiButtonFlagsPrivate_1_ImGuiButtonFlags_1AlignTextBaseLine_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_NoFocus_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibuttonflagsprivate__imguibuttonflags_nofocus_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_NoKeyModsAllowed_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiButtonFlagsPrivate_1_ImGuiButtonFlags_1NoKeyModsAllowed_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_PressedOnMask__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibuttonflagsprivate__imguibuttonflags_pressedonmask__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_NoHoldingActiveId_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiButtonFlagsPrivate_1_ImGuiButtonFlags_1NoHoldingActiveId_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_NoNavFocus_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiButtonFlagsPrivate_1_ImGuiButtonFlags_1NoNavFocus_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_NoHoveredOnFocus_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiButtonFlagsPrivate_1_ImGuiButtonFlags_1NoHoveredOnFocus_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_NoSetKeyOwner_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiButtonFlagsPrivate_1_ImGuiButtonFlags_1NoSetKeyOwner_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_NoTestKeyOwner_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiButtonFlagsPrivate_1_ImGuiButtonFlags_1NoTestKeyOwner_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_NoFocus_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiButtonFlagsPrivate_1_ImGuiButtonFlags_1NoFocus_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_PressedOnMask__NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiButtonFlagsPrivate_1_ImGuiButtonFlags_1PressedOnMask_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_PressedOnDefault__NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiButtonFlagsPrivate_1_ImGuiButtonFlags_1PressedOnDefault_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_PressedOnDefault__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibuttonflagsprivate__imguibuttonflags_pressedondefault__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

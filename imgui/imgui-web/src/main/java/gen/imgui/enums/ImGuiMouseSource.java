@@ -34,21 +34,12 @@ public enum ImGuiMouseSource implements NativeEnum<ImGuiMouseSource> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiMouseSource_Mouse;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiMouseSource_Mouse;")
     private static native int ImGuiMouseSource_Mouse_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiMouseSource_TouchScreen;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiMouseSource_TouchScreen;")
     private static native int ImGuiMouseSource_TouchScreen_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiMouseSource_Pen;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiMouseSource_Pen;")
     private static native int ImGuiMouseSource_Pen_NATIVE();
 }

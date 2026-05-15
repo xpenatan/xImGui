@@ -34,23 +34,19 @@ public enum PaletteId implements NativeEnum<PaletteId> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)PaletteId::Dark;
-*/
-    private static native int Dark_NATIVE();
+    private static int Dark_NATIVE() {
+        return imgui.extension.textedit.natives.JNI_PaletteId.Dark_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)PaletteId::Light;
-*/
-    private static native int Light_NATIVE();
+    private static int Light_NATIVE() {
+        return imgui.extension.textedit.natives.JNI_PaletteId.Light_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)PaletteId::Mariana;
-*/
-    private static native int Mariana_NATIVE();
+    private static int Mariana_NATIVE() {
+        return imgui.extension.textedit.natives.JNI_PaletteId.Mariana_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)PaletteId::RetroBlue;
-*/
-    private static native int RetroBlue_NATIVE();
+    private static int RetroBlue_NATIVE() {
+        return imgui.extension.textedit.natives.JNI_PaletteId.RetroBlue_NATIVE();
+    }
 }

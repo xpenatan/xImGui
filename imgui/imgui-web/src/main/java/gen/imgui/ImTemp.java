@@ -116,11 +116,6 @@ public class ImTemp extends NativeObject {
         return ImTextureIDRef_TEMP_STATIC_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImTextureIDRef_1__0(textureId);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"textureId"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImTextureIDRef_1__0(textureId);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImTextureIDRef_1__0_addr(long textureId);
 
@@ -134,11 +129,6 @@ return imgui.getPointer(returnedJSObj);
         return ImTextureRef_TEMP_STATIC_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImTextureRef_1__0(textureId);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"textureId"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImTextureRef_1__0(textureId);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImTextureRef_1__0_addr(long textureId);
 
@@ -152,11 +142,6 @@ return imgui.getPointer(returnedJSObj);
         return ImTextureRef_TEMP_STATIC_GEN_1;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImTextureRef_2__0(textureId);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"textureId"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImTextureRef_2__0(textureId);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImTextureRef_2__0_addr(long textureId);
 
@@ -170,11 +155,6 @@ return imgui.getPointer(returnedJSObj);
         return ImTextureRef_TEMP_STATIC_GEN_2;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImTextureRef_3__0(textureId);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"textureId"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImTextureRef_3__0(textureId);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImTextureRef_3__0_addr(long textureId);
 
@@ -188,11 +168,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec2_TEMP_STATIC_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImVec2_1__0();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImTemp.prototype.ImVec2_1__0();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImVec2_1__0_addr();
 
@@ -206,11 +181,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec2_TEMP_STATIC_GEN_1;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImVec2_1__1(x, y);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"x", "y"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImVec2_1__1(x, y);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImVec2_1__1_addr(float x, float y);
 
@@ -224,11 +194,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec2_TEMP_STATIC_GEN_2;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImVec2_1__2(other_addr);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"other_addr"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImVec2_1__2(other_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImVec2_1__2_addr(int other_addr);
 
@@ -242,11 +207,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec2_TEMP_STATIC_GEN_3;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImVec2_2__0();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImTemp.prototype.ImVec2_2__0();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImVec2_2__0_addr();
 
@@ -260,11 +220,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec2_TEMP_STATIC_GEN_4;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImVec2_2__1(x, y);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"x", "y"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImVec2_2__1(x, y);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImVec2_2__1_addr(float x, float y);
 
@@ -278,11 +233,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec2_TEMP_STATIC_GEN_5;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImVec2_2__2(other_addr);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"other_addr"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImVec2_2__2(other_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImVec2_2__2_addr(int other_addr);
 
@@ -296,11 +246,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec2_TEMP_STATIC_GEN_6;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImVec2_3__0();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImTemp.prototype.ImVec2_3__0();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImVec2_3__0_addr();
 
@@ -314,11 +259,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec2_TEMP_STATIC_GEN_7;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImVec2_3__1(x, y);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"x", "y"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImVec2_3__1(x, y);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImVec2_3__1_addr(float x, float y);
 
@@ -332,11 +272,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec2_TEMP_STATIC_GEN_8;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImVec2_3__2(other_addr);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"other_addr"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImVec2_3__2(other_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImVec2_3__2_addr(int other_addr);
 
@@ -350,11 +285,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec2_TEMP_STATIC_GEN_9;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImVec2_4__0();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImTemp.prototype.ImVec2_4__0();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImVec2_4__0_addr();
 
@@ -368,11 +298,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec2_TEMP_STATIC_GEN_10;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImVec2_4__1(x, y);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"x", "y"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImVec2_4__1(x, y);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImVec2_4__1_addr(float x, float y);
 
@@ -386,11 +311,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec2_TEMP_STATIC_GEN_11;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImVec2_4__2(other_addr);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"other_addr"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImVec2_4__2(other_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImVec2_4__2_addr(int other_addr);
 
@@ -404,11 +324,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec4_TEMP_STATIC_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImVec4_1__0();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImTemp.prototype.ImVec4_1__0();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImVec4_1__0_addr();
 
@@ -422,11 +337,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec4_TEMP_STATIC_GEN_1;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImVec4_1__1(x, y, z, w);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"x", "y", "z", "w"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImVec4_1__1(x, y, z, w);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImVec4_1__1_addr(float x, float y, float z, float w);
 
@@ -440,11 +350,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec4_TEMP_STATIC_GEN_2;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImVec4_1__2(other_addr);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"other_addr"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImVec4_1__2(other_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImVec4_1__2_addr(int other_addr);
 
@@ -458,11 +363,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec4_TEMP_STATIC_GEN_3;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImVec4_2__0();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImTemp.prototype.ImVec4_2__0();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImVec4_2__0_addr();
 
@@ -476,11 +376,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec4_TEMP_STATIC_GEN_4;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImVec4_2__1(x, y, z, w);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"x", "y", "z", "w"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImVec4_2__1(x, y, z, w);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImVec4_2__1_addr(float x, float y, float z, float w);
 
@@ -494,11 +389,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec4_TEMP_STATIC_GEN_5;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImVec4_2__2(other_addr);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"other_addr"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImVec4_2__2(other_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImVec4_2__2_addr(int other_addr);
 
@@ -512,11 +402,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec4_TEMP_STATIC_GEN_6;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImVec4_3__0();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImTemp.prototype.ImVec4_3__0();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImVec4_3__0_addr();
 
@@ -530,11 +415,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec4_TEMP_STATIC_GEN_7;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImVec4_3__1(x, y, z, w);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"x", "y", "z", "w"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImVec4_3__1(x, y, z, w);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImVec4_3__1_addr(float x, float y, float z, float w);
 
@@ -548,11 +428,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec4_TEMP_STATIC_GEN_8;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImVec4_3__2(other_addr);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"other_addr"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImVec4_3__2(other_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImVec4_3__2_addr(int other_addr);
 
@@ -566,11 +441,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec4_TEMP_STATIC_GEN_9;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImVec4_4__0();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImTemp.prototype.ImVec4_4__0();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImVec4_4__0_addr();
 
@@ -584,11 +454,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec4_TEMP_STATIC_GEN_10;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImVec4_4__1(x, y, z, w);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"x", "y", "z", "w"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImVec4_4__1(x, y, z, w);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImVec4_4__1_addr(float x, float y, float z, float w);
 
@@ -602,11 +467,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec4_TEMP_STATIC_GEN_11;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImVec4_4__2(other_addr);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"other_addr"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImVec4_4__2(other_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImVec4_4__2_addr(int other_addr);
 
@@ -620,11 +480,6 @@ return imgui.getPointer(returnedJSObj);
         return ImRect_TEMP_STATIC_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImRect_1__0();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImTemp.prototype.ImRect_1__0();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImRect_1__0_addr();
 
@@ -638,11 +493,6 @@ return imgui.getPointer(returnedJSObj);
         return ImRect_TEMP_STATIC_GEN_1;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImRect_1__1(minX, minY, maxX, maxY);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"minX", "minY", "maxX", "maxY"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImRect_1__1(minX, minY, maxX, maxY);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImRect_1__1_addr(float minX, float minY, float maxX, float maxY);
 
@@ -656,11 +506,6 @@ return imgui.getPointer(returnedJSObj);
         return ImRect_TEMP_STATIC_GEN_2;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImRect_1__2(min_addr, max_addr);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"min_addr", "max_addr"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImRect_1__2(min_addr, max_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImRect_1__2_addr(int min_addr, int max_addr);
 
@@ -674,11 +519,6 @@ return imgui.getPointer(returnedJSObj);
         return ImRect_TEMP_STATIC_GEN_3;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImRect_2__0();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImTemp.prototype.ImRect_2__0();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImRect_2__0_addr();
 
@@ -692,11 +532,6 @@ return imgui.getPointer(returnedJSObj);
         return ImRect_TEMP_STATIC_GEN_4;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImRect_2__1(minX, minY, maxX, maxY);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"minX", "minY", "maxX", "maxY"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImRect_2__1(minX, minY, maxX, maxY);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImRect_2__1_addr(float minX, float minY, float maxX, float maxY);
 
@@ -710,11 +545,6 @@ return imgui.getPointer(returnedJSObj);
         return ImRect_TEMP_STATIC_GEN_5;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImRect_2__2(min_addr, max_addr);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"min_addr", "max_addr"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImRect_2__2(min_addr, max_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImRect_2__2_addr(int min_addr, int max_addr);
 
@@ -728,11 +558,6 @@ return imgui.getPointer(returnedJSObj);
         return ImRect_TEMP_STATIC_GEN_6;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImRect_3__0();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImTemp.prototype.ImRect_3__0();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImRect_3__0_addr();
 
@@ -746,11 +571,6 @@ return imgui.getPointer(returnedJSObj);
         return ImRect_TEMP_STATIC_GEN_7;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImRect_3__1(minX, minY, maxX, maxY);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"minX", "minY", "maxX", "maxY"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImRect_3__1(minX, minY, maxX, maxY);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImRect_3__1_addr(float minX, float minY, float maxX, float maxY);
 
@@ -764,11 +584,6 @@ return imgui.getPointer(returnedJSObj);
         return ImRect_TEMP_STATIC_GEN_8;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImRect_3__2(min_addr, max_addr);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"min_addr", "max_addr"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImRect_3__2(min_addr, max_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImRect_3__2_addr(int min_addr, int max_addr);
 
@@ -782,11 +597,6 @@ return imgui.getPointer(returnedJSObj);
         return ImRect_TEMP_STATIC_GEN_9;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImRect_4__0();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imgui.ImTemp.prototype.ImRect_4__0();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImRect_4__0_addr();
 
@@ -800,11 +610,6 @@ return imgui.getPointer(returnedJSObj);
         return ImRect_TEMP_STATIC_GEN_10;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImRect_4__1(minX, minY, maxX, maxY);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"minX", "minY", "maxX", "maxY"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImRect_4__1(minX, minY, maxX, maxY);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImRect_4__1_addr(float minX, float minY, float maxX, float maxY);
 
@@ -818,11 +623,6 @@ return imgui.getPointer(returnedJSObj);
         return ImRect_TEMP_STATIC_GEN_11;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = imgui.ImTemp.prototype.ImRect_4__2(min_addr, max_addr);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"min_addr", "max_addr"}, script = "var returnedJSObj = imgui.ImTemp.prototype.ImRect_4__2(min_addr, max_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_ImRect_4__2_addr(int min_addr, int max_addr);
 }

@@ -34,21 +34,12 @@ public enum SetViewAtLineMode implements NativeEnum<SetViewAtLineMode> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return textedit.FirstVisibleLine;
-*/
     @org.teavm.jso.JSBody(script = "return textedit.FirstVisibleLine;")
     private static native int FirstVisibleLine_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return textedit.Centered;
-*/
     @org.teavm.jso.JSBody(script = "return textedit.Centered;")
     private static native int Centered_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return textedit.LastVisibleLine;
-*/
     @org.teavm.jso.JSBody(script = "return textedit.LastVisibleLine;")
     private static native int LastVisibleLine_NATIVE();
 }

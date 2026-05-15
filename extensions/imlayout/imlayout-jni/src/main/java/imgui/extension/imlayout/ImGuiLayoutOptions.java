@@ -17,10 +17,9 @@ public class ImGuiLayoutOptions extends NativeObject {
         internal_reset(addr, true);
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)new ImGuiLayoutOptions();
-*/
-    public static native long internal_native_create_addr();
+    public static long internal_native_create_addr() {
+        return imgui.extension.imlayout.natives.JNI_ImGuiLayoutOptions.internal_native_create_addr();
+    }
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -40,109 +39,87 @@ return (jlong)new ImGuiLayoutOptions();
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiLayoutOptions* nativeObject = (ImGuiLayoutOptions*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.extension.imlayout.natives.JNI_ImGuiLayoutOptions.internal_native_deleteNative(this_addr);
+    }
 
     public boolean get_clipping() {
         return internal_native_get_clipping(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiLayoutOptions* nativeObject = (ImGuiLayoutOptions*)this_addr;
-return nativeObject->clipping;
-*/
-    public static native boolean internal_native_get_clipping(long this_addr);
+    public static boolean internal_native_get_clipping(long this_addr) {
+        return imgui.extension.imlayout.natives.JNI_ImGuiLayoutOptions.internal_native_get_clipping(this_addr);
+    }
 
     public void set_clipping(boolean clipping) {
         internal_native_set_clipping(native_address, clipping);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiLayoutOptions* nativeObject = (ImGuiLayoutOptions*)this_addr;
-nativeObject->clipping = clipping;
-*/
-    public static native void internal_native_set_clipping(long this_addr, boolean clipping);
+    public static void internal_native_set_clipping(long this_addr, boolean clipping) {
+        imgui.extension.imlayout.natives.JNI_ImGuiLayoutOptions.internal_native_set_clipping(this_addr, clipping);
+    }
 
     public float get_paddingLeft() {
         return internal_native_get_paddingLeft(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiLayoutOptions* nativeObject = (ImGuiLayoutOptions*)this_addr;
-return nativeObject->paddingLeft;
-*/
-    public static native float internal_native_get_paddingLeft(long this_addr);
+    public static float internal_native_get_paddingLeft(long this_addr) {
+        return imgui.extension.imlayout.natives.JNI_ImGuiLayoutOptions.internal_native_get_paddingLeft(this_addr);
+    }
 
     public void set_paddingLeft(float paddingLeft) {
         internal_native_set_paddingLeft(native_address, paddingLeft);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiLayoutOptions* nativeObject = (ImGuiLayoutOptions*)this_addr;
-nativeObject->paddingLeft = paddingLeft;
-*/
-    public static native void internal_native_set_paddingLeft(long this_addr, float paddingLeft);
+    public static void internal_native_set_paddingLeft(long this_addr, float paddingLeft) {
+        imgui.extension.imlayout.natives.JNI_ImGuiLayoutOptions.internal_native_set_paddingLeft(this_addr, paddingLeft);
+    }
 
     public float get_paddingRight() {
         return internal_native_get_paddingRight(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiLayoutOptions* nativeObject = (ImGuiLayoutOptions*)this_addr;
-return nativeObject->paddingRight;
-*/
-    public static native float internal_native_get_paddingRight(long this_addr);
+    public static float internal_native_get_paddingRight(long this_addr) {
+        return imgui.extension.imlayout.natives.JNI_ImGuiLayoutOptions.internal_native_get_paddingRight(this_addr);
+    }
 
     public void set_paddingRight(float paddingRight) {
         internal_native_set_paddingRight(native_address, paddingRight);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiLayoutOptions* nativeObject = (ImGuiLayoutOptions*)this_addr;
-nativeObject->paddingRight = paddingRight;
-*/
-    public static native void internal_native_set_paddingRight(long this_addr, float paddingRight);
+    public static void internal_native_set_paddingRight(long this_addr, float paddingRight) {
+        imgui.extension.imlayout.natives.JNI_ImGuiLayoutOptions.internal_native_set_paddingRight(this_addr, paddingRight);
+    }
 
     public float get_paddingTop() {
         return internal_native_get_paddingTop(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiLayoutOptions* nativeObject = (ImGuiLayoutOptions*)this_addr;
-return nativeObject->paddingTop;
-*/
-    public static native float internal_native_get_paddingTop(long this_addr);
+    public static float internal_native_get_paddingTop(long this_addr) {
+        return imgui.extension.imlayout.natives.JNI_ImGuiLayoutOptions.internal_native_get_paddingTop(this_addr);
+    }
 
     public void set_paddingTop(float paddingTop) {
         internal_native_set_paddingTop(native_address, paddingTop);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiLayoutOptions* nativeObject = (ImGuiLayoutOptions*)this_addr;
-nativeObject->paddingTop = paddingTop;
-*/
-    public static native void internal_native_set_paddingTop(long this_addr, float paddingTop);
+    public static void internal_native_set_paddingTop(long this_addr, float paddingTop) {
+        imgui.extension.imlayout.natives.JNI_ImGuiLayoutOptions.internal_native_set_paddingTop(this_addr, paddingTop);
+    }
 
     public float get_paddingBottom() {
         return internal_native_get_paddingBottom(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiLayoutOptions* nativeObject = (ImGuiLayoutOptions*)this_addr;
-return nativeObject->paddingBottom;
-*/
-    public static native float internal_native_get_paddingBottom(long this_addr);
+    public static float internal_native_get_paddingBottom(long this_addr) {
+        return imgui.extension.imlayout.natives.JNI_ImGuiLayoutOptions.internal_native_get_paddingBottom(this_addr);
+    }
 
     public void set_paddingBottom(float paddingBottom) {
         internal_native_set_paddingBottom(native_address, paddingBottom);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiLayoutOptions* nativeObject = (ImGuiLayoutOptions*)this_addr;
-nativeObject->paddingBottom = paddingBottom;
-*/
-    public static native void internal_native_set_paddingBottom(long this_addr, float paddingBottom);
+    public static void internal_native_set_paddingBottom(long this_addr, float paddingBottom) {
+        imgui.extension.imlayout.natives.JNI_ImGuiLayoutOptions.internal_native_set_paddingBottom(this_addr, paddingBottom);
+    }
 }

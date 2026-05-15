@@ -45,58 +45,47 @@ public enum LanguageDefinitionId implements NativeEnum<LanguageDefinitionId> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)LanguageDefinitionId::None;
-*/
-    private static native int None_NATIVE();
+    private static int None_NATIVE() {
+        return imgui.extension.textedit.natives.JNI_LanguageDefinitionId.None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)LanguageDefinitionId::Cpp;
-*/
-    private static native int Cpp_NATIVE();
+    private static int Cpp_NATIVE() {
+        return imgui.extension.textedit.natives.JNI_LanguageDefinitionId.Cpp_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)LanguageDefinitionId::C;
-*/
-    private static native int C_NATIVE();
+    private static int C_NATIVE() {
+        return imgui.extension.textedit.natives.JNI_LanguageDefinitionId.C_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)LanguageDefinitionId::Cs;
-*/
-    private static native int Cs_NATIVE();
+    private static int Cs_NATIVE() {
+        return imgui.extension.textedit.natives.JNI_LanguageDefinitionId.Cs_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)LanguageDefinitionId::Python;
-*/
-    private static native int Python_NATIVE();
+    private static int Python_NATIVE() {
+        return imgui.extension.textedit.natives.JNI_LanguageDefinitionId.Python_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)LanguageDefinitionId::Lua;
-*/
-    private static native int Lua_NATIVE();
+    private static int Lua_NATIVE() {
+        return imgui.extension.textedit.natives.JNI_LanguageDefinitionId.Lua_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)LanguageDefinitionId::Json;
-*/
-    private static native int Json_NATIVE();
+    private static int Json_NATIVE() {
+        return imgui.extension.textedit.natives.JNI_LanguageDefinitionId.Json_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)LanguageDefinitionId::Sql;
-*/
-    private static native int Sql_NATIVE();
+    private static int Sql_NATIVE() {
+        return imgui.extension.textedit.natives.JNI_LanguageDefinitionId.Sql_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)LanguageDefinitionId::AngelScript;
-*/
-    private static native int AngelScript_NATIVE();
+    private static int AngelScript_NATIVE() {
+        return imgui.extension.textedit.natives.JNI_LanguageDefinitionId.AngelScript_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)LanguageDefinitionId::Glsl;
-*/
-    private static native int Glsl_NATIVE();
+    private static int Glsl_NATIVE() {
+        return imgui.extension.textedit.natives.JNI_LanguageDefinitionId.Glsl_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)LanguageDefinitionId::Hlsl;
-*/
-    private static native int Hlsl_NATIVE();
+    private static int Hlsl_NATIVE() {
+        return imgui.extension.textedit.natives.JNI_LanguageDefinitionId.Hlsl_NATIVE();
+    }
 }

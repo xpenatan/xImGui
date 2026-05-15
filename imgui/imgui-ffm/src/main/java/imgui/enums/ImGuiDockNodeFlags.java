@@ -49,140 +49,86 @@ public enum ImGuiDockNodeFlags implements NativeEnum<ImGuiDockNodeFlags> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDockNodeFlags_None;
-*/
     private static int ImGuiDockNodeFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDockNodeFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDockNodeFlags_KeepAliveOnly;
-*/
     private static int ImGuiDockNodeFlags_KeepAliveOnly_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDockNodeFlags_KeepAliveOnly_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDockNodeFlags_NoDockingOverCentralNode;
-*/
     private static int ImGuiDockNodeFlags_NoDockingOverCentralNode_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDockNodeFlags_NoDockingOverCentralNode_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDockNodeFlags_PassthruCentralNode;
-*/
     private static int ImGuiDockNodeFlags_PassthruCentralNode_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDockNodeFlags_PassthruCentralNode_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDockNodeFlags_NoDockingSplit;
-*/
     private static int ImGuiDockNodeFlags_NoDockingSplit_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDockNodeFlags_NoDockingSplit_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDockNodeFlags_NoResize;
-*/
     private static int ImGuiDockNodeFlags_NoResize_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDockNodeFlags_NoResize_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDockNodeFlags_AutoHideTabBar;
-*/
     private static int ImGuiDockNodeFlags_AutoHideTabBar_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDockNodeFlags_AutoHideTabBar_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDockNodeFlags_NoUndocking;
-*/
     private static int ImGuiDockNodeFlags_NoUndocking_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDockNodeFlags_NoUndocking_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiDockNodeFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidocknodeflags_imguidocknodeflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiDockNodeFlags_KeepAliveOnly_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidocknodeflags_imguidocknodeflags_keepaliveonly_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiDockNodeFlags_NoDockingOverCentralNode_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidocknodeflags_imguidocknodeflags_nodockingovercentralnode_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiDockNodeFlags_PassthruCentralNode_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidocknodeflags_imguidocknodeflags_passthrucentralnode_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiDockNodeFlags_NoDockingSplit_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidocknodeflags_imguidocknodeflags_nodockingsplit_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiDockNodeFlags_NoResize_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidocknodeflags_imguidocknodeflags_noresize_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiDockNodeFlags_AutoHideTabBar_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidocknodeflags_imguidocknodeflags_autohidetabbar_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiDockNodeFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDockNodeFlags_ImGuiDockNodeFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiDockNodeFlags_KeepAliveOnly_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDockNodeFlags_ImGuiDockNodeFlags_1KeepAliveOnly_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiDockNodeFlags_NoDockingOverCentralNode_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDockNodeFlags_ImGuiDockNodeFlags_1NoDockingOverCentralNode_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiDockNodeFlags_PassthruCentralNode_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDockNodeFlags_ImGuiDockNodeFlags_1PassthruCentralNode_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiDockNodeFlags_NoDockingSplit_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDockNodeFlags_ImGuiDockNodeFlags_1NoDockingSplit_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiDockNodeFlags_NoResize_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDockNodeFlags_ImGuiDockNodeFlags_1NoResize_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiDockNodeFlags_AutoHideTabBar_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDockNodeFlags_ImGuiDockNodeFlags_1AutoHideTabBar_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiDockNodeFlags_NoUndocking_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDockNodeFlags_ImGuiDockNodeFlags_1NoUndocking_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiDockNodeFlags_NoUndocking_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidocknodeflags_imguidocknodeflags_noundocking_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

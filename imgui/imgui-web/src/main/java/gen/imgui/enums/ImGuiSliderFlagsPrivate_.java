@@ -34,15 +34,9 @@ public enum ImGuiSliderFlagsPrivate_ implements NativeEnum<ImGuiSliderFlagsPriva
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSliderFlags_Vertical;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSliderFlags_Vertical;")
     private static native int ImGuiSliderFlags_Vertical_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSliderFlags_ReadOnly;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSliderFlags_ReadOnly;")
     private static native int ImGuiSliderFlags_ReadOnly_NATIVE();
 }

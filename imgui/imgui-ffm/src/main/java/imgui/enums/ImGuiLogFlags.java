@@ -47,114 +47,66 @@ public enum ImGuiLogFlags implements NativeEnum<ImGuiLogFlags> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiLogFlags_None;
-*/
     private static int ImGuiLogFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiLogFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiLogFlags_OutputTTY;
-*/
     private static int ImGuiLogFlags_OutputTTY_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiLogFlags_OutputTTY_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiLogFlags_OutputFile;
-*/
     private static int ImGuiLogFlags_OutputFile_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiLogFlags_OutputFile_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiLogFlags_OutputBuffer;
-*/
     private static int ImGuiLogFlags_OutputBuffer_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiLogFlags_OutputBuffer_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiLogFlags_OutputClipboard;
-*/
     private static int ImGuiLogFlags_OutputClipboard_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiLogFlags_OutputClipboard_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiLogFlags_OutputMask_;
-*/
     private static int ImGuiLogFlags_OutputMask__NATIVE() {
         try {
             return (int) FFMHandles.ImGuiLogFlags_OutputMask__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiLogFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguilogflags_imguilogflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiLogFlags_OutputTTY_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguilogflags_imguilogflags_outputtty_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiLogFlags_OutputFile_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguilogflags_imguilogflags_outputfile_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiLogFlags_OutputBuffer_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguilogflags_imguilogflags_outputbuffer_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiLogFlags_OutputClipboard_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguilogflags_imguilogflags_outputclipboard_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
-
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
-
-        static final java.lang.invoke.MethodHandle ImGuiLogFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiLogFlags_ImGuiLogFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiLogFlags_OutputTTY_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiLogFlags_ImGuiLogFlags_1OutputTTY_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiLogFlags_OutputFile_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiLogFlags_ImGuiLogFlags_1OutputFile_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiLogFlags_OutputBuffer_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiLogFlags_ImGuiLogFlags_1OutputBuffer_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiLogFlags_OutputClipboard_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiLogFlags_ImGuiLogFlags_1OutputClipboard_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiLogFlags_OutputMask__NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiLogFlags_ImGuiLogFlags_1OutputMask_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiLogFlags_OutputMask__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguilogflags_imguilogflags_outputmask__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

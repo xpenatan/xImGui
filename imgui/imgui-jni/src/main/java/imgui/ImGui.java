@@ -184,10 +184,9 @@ public class ImGui extends NativeObject {
         return ImGuiContext_TEMP_STATIC_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::CreateContext((ImFontAtlas* )shared_font_atlas_addr);
-*/
-    public static native long internal_native_CreateContext_addr(long shared_font_atlas_addr);
+    public static long internal_native_CreateContext_addr(long shared_font_atlas_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_CreateContext_addr(shared_font_atlas_addr);
+    }
 
     public static ImGuiContext CreateContext() {
         long addr = internal_native_CreateContext_addr();
@@ -199,28 +198,25 @@ return (jlong)ImGuiWrapper::ImGui::CreateContext((ImFontAtlas* )shared_font_atla
         return ImGuiContext_TEMP_STATIC_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::CreateContext();
-*/
-    public static native long internal_native_CreateContext_addr();
+    public static long internal_native_CreateContext_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_CreateContext_addr();
+    }
 
     public static void DestroyContext(ImGuiContext ctx) {
         internal_native_DestroyContext(ctx.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::DestroyContext((ImGuiContext* )ctx_addr);
-*/
-    public static native void internal_native_DestroyContext(long ctx_addr);
+    public static void internal_native_DestroyContext(long ctx_addr) {
+        imgui.natives.JNI_ImGui.internal_native_DestroyContext(ctx_addr);
+    }
 
     public static void DestroyContext() {
         internal_native_DestroyContext();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::DestroyContext();
-*/
-    public static native void internal_native_DestroyContext();
+    public static void internal_native_DestroyContext() {
+        imgui.natives.JNI_ImGui.internal_native_DestroyContext();
+    }
 
     public static ImGuiContext GetCurrentContext() {
         long addr = internal_native_GetCurrentContext_addr();
@@ -232,19 +228,17 @@ ImGuiWrapper::ImGui::DestroyContext();
         return ImGuiContext_TEMP_STATIC_GEN_2;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::GetCurrentContext();
-*/
-    public static native long internal_native_GetCurrentContext_addr();
+    public static long internal_native_GetCurrentContext_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetCurrentContext_addr();
+    }
 
     public static void SetCurrentContext(ImGuiContext ctx) {
         internal_native_SetCurrentContext(ctx.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetCurrentContext((ImGuiContext* )ctx_addr);
-*/
-    public static native void internal_native_SetCurrentContext(long ctx_addr);
+    public static void internal_native_SetCurrentContext(long ctx_addr) {
+        imgui.natives.JNI_ImGui.internal_native_SetCurrentContext(ctx_addr);
+    }
 
     public static ImGuiIO GetIO() {
         long addr = internal_native_GetIO_addr();
@@ -256,10 +250,9 @@ ImGuiWrapper::ImGui::SetCurrentContext((ImGuiContext* )ctx_addr);
         return ImGuiIO_TEMP_STATIC_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)&ImGuiWrapper::ImGui::GetIO();
-*/
-    public static native long internal_native_GetIO_addr();
+    public static long internal_native_GetIO_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetIO_addr();
+    }
 
     public static ImGuiPlatformIO GetPlatformIO() {
         long addr = internal_native_GetPlatformIO_addr();
@@ -271,10 +264,9 @@ return (jlong)&ImGuiWrapper::ImGui::GetIO();
         return ImGuiPlatformIO_TEMP_STATIC_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)&ImGuiWrapper::ImGui::GetPlatformIO();
-*/
-    public static native long internal_native_GetPlatformIO_addr();
+    public static long internal_native_GetPlatformIO_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetPlatformIO_addr();
+    }
 
     public static ImGuiStyle GetStyle() {
         long addr = internal_native_GetStyle_addr();
@@ -286,37 +278,33 @@ return (jlong)&ImGuiWrapper::ImGui::GetPlatformIO();
         return ImGuiStyle_TEMP_STATIC_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)&ImGuiWrapper::ImGui::GetStyle();
-*/
-    public static native long internal_native_GetStyle_addr();
+    public static long internal_native_GetStyle_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetStyle_addr();
+    }
 
     public static void NewFrame() {
         internal_native_NewFrame();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::NewFrame();
-*/
-    public static native void internal_native_NewFrame();
+    public static void internal_native_NewFrame() {
+        imgui.natives.JNI_ImGui.internal_native_NewFrame();
+    }
 
     public static void EndFrame() {
         internal_native_EndFrame();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::EndFrame();
-*/
-    public static native void internal_native_EndFrame();
+    public static void internal_native_EndFrame() {
+        imgui.natives.JNI_ImGui.internal_native_EndFrame();
+    }
 
     public static void Render() {
         internal_native_Render();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::Render();
-*/
-    public static native void internal_native_Render();
+    public static void internal_native_Render() {
+        imgui.natives.JNI_ImGui.internal_native_Render();
+    }
 
     public static ImDrawData GetDrawData() {
         long addr = internal_native_GetDrawData_addr();
@@ -328,145 +316,129 @@ ImGuiWrapper::ImGui::Render();
         return ImDrawData_TEMP_STATIC_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::GetDrawData();
-*/
-    public static native long internal_native_GetDrawData_addr();
+    public static long internal_native_GetDrawData_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetDrawData_addr();
+    }
 
     public static void ShowDemoWindow(NativeBoolArray p_open) {
         internal_native_ShowDemoWindow(p_open.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ShowDemoWindow((bool*)p_open_addr);
-*/
-    public static native void internal_native_ShowDemoWindow(long p_open_addr);
+    public static void internal_native_ShowDemoWindow(long p_open_addr) {
+        imgui.natives.JNI_ImGui.internal_native_ShowDemoWindow(p_open_addr);
+    }
 
     public static void ShowDemoWindow() {
         internal_native_ShowDemoWindow();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ShowDemoWindow();
-*/
-    public static native void internal_native_ShowDemoWindow();
+    public static void internal_native_ShowDemoWindow() {
+        imgui.natives.JNI_ImGui.internal_native_ShowDemoWindow();
+    }
 
     public static void ShowMetricsWindow(NativeBoolArray p_open) {
         internal_native_ShowMetricsWindow(p_open.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ShowMetricsWindow((bool*)p_open_addr);
-*/
-    public static native void internal_native_ShowMetricsWindow(long p_open_addr);
+    public static void internal_native_ShowMetricsWindow(long p_open_addr) {
+        imgui.natives.JNI_ImGui.internal_native_ShowMetricsWindow(p_open_addr);
+    }
 
     public static void ShowMetricsWindow() {
         internal_native_ShowMetricsWindow();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ShowMetricsWindow();
-*/
-    public static native void internal_native_ShowMetricsWindow();
+    public static void internal_native_ShowMetricsWindow() {
+        imgui.natives.JNI_ImGui.internal_native_ShowMetricsWindow();
+    }
 
     public static void ShowDebugLogWindow(NativeBoolArray p_open) {
         internal_native_ShowDebugLogWindow(p_open.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ShowDebugLogWindow((bool*)p_open_addr);
-*/
-    public static native void internal_native_ShowDebugLogWindow(long p_open_addr);
+    public static void internal_native_ShowDebugLogWindow(long p_open_addr) {
+        imgui.natives.JNI_ImGui.internal_native_ShowDebugLogWindow(p_open_addr);
+    }
 
     public static void ShowDebugLogWindow() {
         internal_native_ShowDebugLogWindow();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ShowDebugLogWindow();
-*/
-    public static native void internal_native_ShowDebugLogWindow();
+    public static void internal_native_ShowDebugLogWindow() {
+        imgui.natives.JNI_ImGui.internal_native_ShowDebugLogWindow();
+    }
 
     public static void ShowIDStackToolWindow(NativeBoolArray p_open) {
         internal_native_ShowIDStackToolWindow(p_open.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ShowIDStackToolWindow((bool*)p_open_addr);
-*/
-    public static native void internal_native_ShowIDStackToolWindow(long p_open_addr);
+    public static void internal_native_ShowIDStackToolWindow(long p_open_addr) {
+        imgui.natives.JNI_ImGui.internal_native_ShowIDStackToolWindow(p_open_addr);
+    }
 
     public static void ShowIDStackToolWindow() {
         internal_native_ShowIDStackToolWindow();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ShowIDStackToolWindow();
-*/
-    public static native void internal_native_ShowIDStackToolWindow();
+    public static void internal_native_ShowIDStackToolWindow() {
+        imgui.natives.JNI_ImGui.internal_native_ShowIDStackToolWindow();
+    }
 
     public static void ShowAboutWindow(NativeBoolArray p_open) {
         internal_native_ShowAboutWindow(p_open.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ShowAboutWindow((bool*)p_open_addr);
-*/
-    public static native void internal_native_ShowAboutWindow(long p_open_addr);
+    public static void internal_native_ShowAboutWindow(long p_open_addr) {
+        imgui.natives.JNI_ImGui.internal_native_ShowAboutWindow(p_open_addr);
+    }
 
     public static void ShowAboutWindow() {
         internal_native_ShowAboutWindow();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ShowAboutWindow();
-*/
-    public static native void internal_native_ShowAboutWindow();
+    public static void internal_native_ShowAboutWindow() {
+        imgui.natives.JNI_ImGui.internal_native_ShowAboutWindow();
+    }
 
     public static void ShowStyleEditor(ImGuiStyle ref) {
         internal_native_ShowStyleEditor(ref.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ShowStyleEditor((ImGuiStyle* )ref_addr);
-*/
-    public static native void internal_native_ShowStyleEditor(long ref_addr);
+    public static void internal_native_ShowStyleEditor(long ref_addr) {
+        imgui.natives.JNI_ImGui.internal_native_ShowStyleEditor(ref_addr);
+    }
 
     public static void ShowStyleEditor() {
         internal_native_ShowStyleEditor();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ShowStyleEditor();
-*/
-    public static native void internal_native_ShowStyleEditor();
+    public static void internal_native_ShowStyleEditor() {
+        imgui.natives.JNI_ImGui.internal_native_ShowStyleEditor();
+    }
 
     public static void ShowStyleSelector(String label) {
         internal_native_ShowStyleSelector(label);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ShowStyleSelector(label);
-*/
-    public static native void internal_native_ShowStyleSelector(String label);
+    public static void internal_native_ShowStyleSelector(String label) {
+        imgui.natives.JNI_ImGui.internal_native_ShowStyleSelector(label);
+    }
 
     public static void ShowFontSelector(String label) {
         internal_native_ShowFontSelector(label);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ShowFontSelector(label);
-*/
-    public static native void internal_native_ShowFontSelector(String label);
+    public static void internal_native_ShowFontSelector(String label) {
+        imgui.natives.JNI_ImGui.internal_native_ShowFontSelector(label);
+    }
 
     public static void ShowUserGuide() {
         internal_native_ShowUserGuide();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ShowUserGuide();
-*/
-    public static native void internal_native_ShowUserGuide();
+    public static void internal_native_ShowUserGuide() {
+        imgui.natives.JNI_ImGui.internal_native_ShowUserGuide();
+    }
 
     public static NativeString GetVersion() {
         long addr = internal_native_GetVersion_addr();
@@ -478,236 +450,209 @@ ImGuiWrapper::ImGui::ShowUserGuide();
         return NativeString_TEMP_STATIC_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-static NativeString copy_addr;
-copy_addr = ImGuiWrapper::ImGui::GetVersion();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetVersion_addr();
+    public static long internal_native_GetVersion_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetVersion_addr();
+    }
 
     public static void StyleColorsDark(ImGuiStyle dst) {
         internal_native_StyleColorsDark(dst.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::StyleColorsDark((ImGuiStyle* )dst_addr);
-*/
-    public static native void internal_native_StyleColorsDark(long dst_addr);
+    public static void internal_native_StyleColorsDark(long dst_addr) {
+        imgui.natives.JNI_ImGui.internal_native_StyleColorsDark(dst_addr);
+    }
 
     public static void StyleColorsDark() {
         internal_native_StyleColorsDark();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::StyleColorsDark();
-*/
-    public static native void internal_native_StyleColorsDark();
+    public static void internal_native_StyleColorsDark() {
+        imgui.natives.JNI_ImGui.internal_native_StyleColorsDark();
+    }
 
     public static void StyleColorsLight(ImGuiStyle dst) {
         internal_native_StyleColorsLight(dst.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::StyleColorsLight((ImGuiStyle* )dst_addr);
-*/
-    public static native void internal_native_StyleColorsLight(long dst_addr);
+    public static void internal_native_StyleColorsLight(long dst_addr) {
+        imgui.natives.JNI_ImGui.internal_native_StyleColorsLight(dst_addr);
+    }
 
     public static void StyleColorsLight() {
         internal_native_StyleColorsLight();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::StyleColorsLight();
-*/
-    public static native void internal_native_StyleColorsLight();
+    public static void internal_native_StyleColorsLight() {
+        imgui.natives.JNI_ImGui.internal_native_StyleColorsLight();
+    }
 
     public static void StyleColorsClassic(ImGuiStyle dst) {
         internal_native_StyleColorsClassic(dst.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::StyleColorsClassic((ImGuiStyle* )dst_addr);
-*/
-    public static native void internal_native_StyleColorsClassic(long dst_addr);
+    public static void internal_native_StyleColorsClassic(long dst_addr) {
+        imgui.natives.JNI_ImGui.internal_native_StyleColorsClassic(dst_addr);
+    }
 
     public static void StyleColorsClassic() {
         internal_native_StyleColorsClassic();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::StyleColorsClassic();
-*/
-    public static native void internal_native_StyleColorsClassic();
+    public static void internal_native_StyleColorsClassic() {
+        imgui.natives.JNI_ImGui.internal_native_StyleColorsClassic();
+    }
 
     public static boolean Begin(String name, NativeBoolArray p_open, ImGuiWindowFlags flags) {
         return internal_native_Begin(name, p_open.native_void_address, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::Begin(name, (bool*)p_open_addr, (::ImGuiWindowFlags)flags);
-*/
-    public static native boolean internal_native_Begin(String name, long p_open_addr, int flags);
+    public static boolean internal_native_Begin(String name, long p_open_addr, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_Begin(name, p_open_addr, flags);
+    }
 
     public static boolean Begin(String name, NativeBoolArray p_open) {
         return internal_native_Begin(name, p_open.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::Begin(name, (bool*)p_open_addr);
-*/
-    public static native boolean internal_native_Begin(String name, long p_open_addr);
+    public static boolean internal_native_Begin(String name, long p_open_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_Begin(name, p_open_addr);
+    }
 
     public static boolean Begin(String name) {
         return internal_native_Begin(name);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::Begin(name);
-*/
-    public static native boolean internal_native_Begin(String name);
+    public static boolean internal_native_Begin(String name) {
+        return imgui.natives.JNI_ImGui.internal_native_Begin(name);
+    }
 
     public static void End() {
         internal_native_End();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::End();
-*/
-    public static native void internal_native_End();
+    public static void internal_native_End() {
+        imgui.natives.JNI_ImGui.internal_native_End();
+    }
 
     public static boolean BeginChild(String str_id, ImVec2 size, ImGuiChildFlags child_flags, ImGuiWindowFlags window_flags) {
         return internal_native_BeginChild__0(str_id, size.native_address, child_flags.getValue(), window_flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginChild(str_id, *((ImVec2* )size_addr), (::ImGuiChildFlags)child_flags, (::ImGuiWindowFlags)window_flags);
-*/
-    public static native boolean internal_native_BeginChild__0(String str_id, long size_addr, int child_flags, int window_flags);
+    public static boolean internal_native_BeginChild__0(String str_id, long size_addr, int child_flags, int window_flags) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginChild__0(str_id, size_addr, child_flags, window_flags);
+    }
 
     public static boolean BeginChild(String str_id, ImVec2 size, ImGuiChildFlags child_flags) {
         return internal_native_BeginChild__0(str_id, size.native_address, child_flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginChild(str_id, *((ImVec2* )size_addr), (::ImGuiChildFlags)child_flags);
-*/
-    public static native boolean internal_native_BeginChild__0(String str_id, long size_addr, int child_flags);
+    public static boolean internal_native_BeginChild__0(String str_id, long size_addr, int child_flags) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginChild__0(str_id, size_addr, child_flags);
+    }
 
     public static boolean BeginChild(String str_id, ImVec2 size) {
         return internal_native_BeginChild__0(str_id, size.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginChild(str_id, *((ImVec2* )size_addr));
-*/
-    public static native boolean internal_native_BeginChild__0(String str_id, long size_addr);
+    public static boolean internal_native_BeginChild__0(String str_id, long size_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginChild__0(str_id, size_addr);
+    }
 
     public static boolean BeginChild(String str_id) {
         return internal_native_BeginChild__0(str_id);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginChild(str_id);
-*/
-    public static native boolean internal_native_BeginChild__0(String str_id);
+    public static boolean internal_native_BeginChild__0(String str_id) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginChild__0(str_id);
+    }
 
     public static boolean BeginChild(int id, ImVec2 size, ImGuiChildFlags child_flags, ImGuiWindowFlags window_flags) {
         return internal_native_BeginChild__1(id, size.native_address, child_flags.getValue(), window_flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginChild((int)id, *((ImVec2* )size_addr), (::ImGuiChildFlags)child_flags, (::ImGuiWindowFlags)window_flags);
-*/
-    public static native boolean internal_native_BeginChild__1(int id, long size_addr, int child_flags, int window_flags);
+    public static boolean internal_native_BeginChild__1(int id, long size_addr, int child_flags, int window_flags) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginChild__1(id, size_addr, child_flags, window_flags);
+    }
 
     public static boolean BeginChild(int id, ImVec2 size, ImGuiChildFlags child_flags) {
         return internal_native_BeginChild__1(id, size.native_address, child_flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginChild((int)id, *((ImVec2* )size_addr), (::ImGuiChildFlags)child_flags);
-*/
-    public static native boolean internal_native_BeginChild__1(int id, long size_addr, int child_flags);
+    public static boolean internal_native_BeginChild__1(int id, long size_addr, int child_flags) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginChild__1(id, size_addr, child_flags);
+    }
 
     public static boolean BeginChild(int id, ImVec2 size) {
         return internal_native_BeginChild__1(id, size.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginChild((int)id, *((ImVec2* )size_addr));
-*/
-    public static native boolean internal_native_BeginChild__1(int id, long size_addr);
+    public static boolean internal_native_BeginChild__1(int id, long size_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginChild__1(id, size_addr);
+    }
 
     public static boolean BeginChild(int id) {
         return internal_native_BeginChild__1(id);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginChild((int)id);
-*/
-    public static native boolean internal_native_BeginChild__1(int id);
+    public static boolean internal_native_BeginChild__1(int id) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginChild__1(id);
+    }
 
     public static void EndChild() {
         internal_native_EndChild();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::EndChild();
-*/
-    public static native void internal_native_EndChild();
+    public static void internal_native_EndChild() {
+        imgui.natives.JNI_ImGui.internal_native_EndChild();
+    }
 
     public static boolean IsWindowAppearing() {
         return internal_native_IsWindowAppearing();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsWindowAppearing();
-*/
-    public static native boolean internal_native_IsWindowAppearing();
+    public static boolean internal_native_IsWindowAppearing() {
+        return imgui.natives.JNI_ImGui.internal_native_IsWindowAppearing();
+    }
 
     public static boolean IsWindowCollapsed() {
         return internal_native_IsWindowCollapsed();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsWindowCollapsed();
-*/
-    public static native boolean internal_native_IsWindowCollapsed();
+    public static boolean internal_native_IsWindowCollapsed() {
+        return imgui.natives.JNI_ImGui.internal_native_IsWindowCollapsed();
+    }
 
     public static boolean IsWindowFocused(ImGuiFocusedFlags flags) {
         return internal_native_IsWindowFocused(flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsWindowFocused((::ImGuiFocusedFlags)flags);
-*/
-    public static native boolean internal_native_IsWindowFocused(int flags);
+    public static boolean internal_native_IsWindowFocused(int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_IsWindowFocused(flags);
+    }
 
     public static boolean IsWindowFocused() {
         return internal_native_IsWindowFocused();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsWindowFocused();
-*/
-    public static native boolean internal_native_IsWindowFocused();
+    public static boolean internal_native_IsWindowFocused() {
+        return imgui.natives.JNI_ImGui.internal_native_IsWindowFocused();
+    }
 
     public static boolean IsWindowHovered(ImGuiHoveredFlags flags) {
         return internal_native_IsWindowHovered(flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsWindowHovered((::ImGuiHoveredFlags)flags);
-*/
-    public static native boolean internal_native_IsWindowHovered(int flags);
+    public static boolean internal_native_IsWindowHovered(int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_IsWindowHovered(flags);
+    }
 
     public static boolean IsWindowHovered() {
         return internal_native_IsWindowHovered();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsWindowHovered();
-*/
-    public static native boolean internal_native_IsWindowHovered();
+    public static boolean internal_native_IsWindowHovered() {
+        return imgui.natives.JNI_ImGui.internal_native_IsWindowHovered();
+    }
 
     public static ImDrawList GetWindowDrawList() {
         long addr = internal_native_GetWindowDrawList_addr();
@@ -719,19 +664,17 @@ return ImGuiWrapper::ImGui::IsWindowHovered();
         return ImDrawList_TEMP_STATIC_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::GetWindowDrawList();
-*/
-    public static native long internal_native_GetWindowDrawList_addr();
+    public static long internal_native_GetWindowDrawList_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetWindowDrawList_addr();
+    }
 
     public static float GetWindowDpiScale() {
         return internal_native_GetWindowDpiScale();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetWindowDpiScale();
-*/
-    public static native float internal_native_GetWindowDpiScale();
+    public static float internal_native_GetWindowDpiScale() {
+        return imgui.natives.JNI_ImGui.internal_native_GetWindowDpiScale();
+    }
 
     public static ImVec2 GetWindowPos() {
         long addr = internal_native_GetWindowPos_addr();
@@ -743,11 +686,9 @@ return ImGuiWrapper::ImGui::GetWindowDpiScale();
         return ImVec2_TEMP_STATIC_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = ImGuiWrapper::ImGui::GetWindowPos();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetWindowPos_addr();
+    public static long internal_native_GetWindowPos_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetWindowPos_addr();
+    }
 
     public static ImVec2 GetWindowSize() {
         long addr = internal_native_GetWindowSize_addr();
@@ -759,29 +700,25 @@ return (jlong)&copy_addr;*/
         return ImVec2_TEMP_STATIC_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = ImGuiWrapper::ImGui::GetWindowSize();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetWindowSize_addr();
+    public static long internal_native_GetWindowSize_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetWindowSize_addr();
+    }
 
     public static float GetWindowWidth() {
         return internal_native_GetWindowWidth();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetWindowWidth();
-*/
-    public static native float internal_native_GetWindowWidth();
+    public static float internal_native_GetWindowWidth() {
+        return imgui.natives.JNI_ImGui.internal_native_GetWindowWidth();
+    }
 
     public static float GetWindowHeight() {
         return internal_native_GetWindowHeight();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetWindowHeight();
-*/
-    public static native float internal_native_GetWindowHeight();
+    public static float internal_native_GetWindowHeight() {
+        return imgui.natives.JNI_ImGui.internal_native_GetWindowHeight();
+    }
 
     public static ImGuiViewport GetWindowViewport() {
         long addr = internal_native_GetWindowViewport_addr();
@@ -793,397 +730,353 @@ return ImGuiWrapper::ImGui::GetWindowHeight();
         return ImGuiViewport_TEMP_STATIC_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::GetWindowViewport();
-*/
-    public static native long internal_native_GetWindowViewport_addr();
+    public static long internal_native_GetWindowViewport_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetWindowViewport_addr();
+    }
 
     public static void SetNextWindowPos(ImVec2 pos, ImGuiCond ImGuiCond, ImVec2 pivot) {
         internal_native_SetNextWindowPos(pos.native_address, ImGuiCond.getValue(), pivot.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextWindowPos(*((ImVec2* )pos_addr), (::ImGuiCond)ImGuiCond, *((ImVec2* )pivot_addr));
-*/
-    public static native void internal_native_SetNextWindowPos(long pos_addr, int ImGuiCond, long pivot_addr);
+    public static void internal_native_SetNextWindowPos(long pos_addr, int ImGuiCond, long pivot_addr) {
+        imgui.natives.JNI_ImGui.internal_native_SetNextWindowPos(pos_addr, ImGuiCond, pivot_addr);
+    }
 
     public static void SetNextWindowPos(ImVec2 pos, ImGuiCond ImGuiCond) {
         internal_native_SetNextWindowPos(pos.native_address, ImGuiCond.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextWindowPos(*((ImVec2* )pos_addr), (::ImGuiCond)ImGuiCond);
-*/
-    public static native void internal_native_SetNextWindowPos(long pos_addr, int ImGuiCond);
+    public static void internal_native_SetNextWindowPos(long pos_addr, int ImGuiCond) {
+        imgui.natives.JNI_ImGui.internal_native_SetNextWindowPos(pos_addr, ImGuiCond);
+    }
 
     public static void SetNextWindowPos(ImVec2 pos) {
         internal_native_SetNextWindowPos(pos.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextWindowPos(*((ImVec2* )pos_addr));
-*/
-    public static native void internal_native_SetNextWindowPos(long pos_addr);
+    public static void internal_native_SetNextWindowPos(long pos_addr) {
+        imgui.natives.JNI_ImGui.internal_native_SetNextWindowPos(pos_addr);
+    }
 
     public static void SetNextWindowSize(ImVec2 size, ImGuiCond ImGuiCond) {
         internal_native_SetNextWindowSize(size.native_address, ImGuiCond.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextWindowSize(*((ImVec2* )size_addr), (::ImGuiCond)ImGuiCond);
-*/
-    public static native void internal_native_SetNextWindowSize(long size_addr, int ImGuiCond);
+    public static void internal_native_SetNextWindowSize(long size_addr, int ImGuiCond) {
+        imgui.natives.JNI_ImGui.internal_native_SetNextWindowSize(size_addr, ImGuiCond);
+    }
 
     public static void SetNextWindowSize(ImVec2 size) {
         internal_native_SetNextWindowSize(size.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextWindowSize(*((ImVec2* )size_addr));
-*/
-    public static native void internal_native_SetNextWindowSize(long size_addr);
+    public static void internal_native_SetNextWindowSize(long size_addr) {
+        imgui.natives.JNI_ImGui.internal_native_SetNextWindowSize(size_addr);
+    }
 
     public static void SetNextWindowSizeConstraints(ImVec2 size_min, ImVec2 size_max) {
         internal_native_SetNextWindowSizeConstraints(size_min.native_address, size_max.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextWindowSizeConstraints(*((ImVec2* )size_min_addr), *((ImVec2* )size_max_addr));
-*/
-    public static native void internal_native_SetNextWindowSizeConstraints(long size_min_addr, long size_max_addr);
+    public static void internal_native_SetNextWindowSizeConstraints(long size_min_addr, long size_max_addr) {
+        imgui.natives.JNI_ImGui.internal_native_SetNextWindowSizeConstraints(size_min_addr, size_max_addr);
+    }
 
     public static void SetNextWindowContentSize(ImVec2 size) {
         internal_native_SetNextWindowContentSize(size.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextWindowContentSize(*((ImVec2* )size_addr));
-*/
-    public static native void internal_native_SetNextWindowContentSize(long size_addr);
+    public static void internal_native_SetNextWindowContentSize(long size_addr) {
+        imgui.natives.JNI_ImGui.internal_native_SetNextWindowContentSize(size_addr);
+    }
 
     public static void SetNextWindowCollapsed(boolean collapsed, ImGuiCond ImGuiCond) {
         internal_native_SetNextWindowCollapsed(collapsed, ImGuiCond.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextWindowCollapsed(collapsed, (::ImGuiCond)ImGuiCond);
-*/
-    public static native void internal_native_SetNextWindowCollapsed(boolean collapsed, int ImGuiCond);
+    public static void internal_native_SetNextWindowCollapsed(boolean collapsed, int ImGuiCond) {
+        imgui.natives.JNI_ImGui.internal_native_SetNextWindowCollapsed(collapsed, ImGuiCond);
+    }
 
     public static void SetNextWindowCollapsed(boolean collapsed) {
         internal_native_SetNextWindowCollapsed(collapsed);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextWindowCollapsed(collapsed);
-*/
-    public static native void internal_native_SetNextWindowCollapsed(boolean collapsed);
+    public static void internal_native_SetNextWindowCollapsed(boolean collapsed) {
+        imgui.natives.JNI_ImGui.internal_native_SetNextWindowCollapsed(collapsed);
+    }
 
     public static void SetNextWindowFocus() {
         internal_native_SetNextWindowFocus();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextWindowFocus();
-*/
-    public static native void internal_native_SetNextWindowFocus();
+    public static void internal_native_SetNextWindowFocus() {
+        imgui.natives.JNI_ImGui.internal_native_SetNextWindowFocus();
+    }
 
     public static void SetNextWindowScroll(ImVec2 scroll) {
         internal_native_SetNextWindowScroll(scroll.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextWindowScroll(*((ImVec2* )scroll_addr));
-*/
-    public static native void internal_native_SetNextWindowScroll(long scroll_addr);
+    public static void internal_native_SetNextWindowScroll(long scroll_addr) {
+        imgui.natives.JNI_ImGui.internal_native_SetNextWindowScroll(scroll_addr);
+    }
 
     public static void SetNextWindowBgAlpha(float alpha) {
         internal_native_SetNextWindowBgAlpha(alpha);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextWindowBgAlpha((float)alpha);
-*/
-    public static native void internal_native_SetNextWindowBgAlpha(float alpha);
+    public static void internal_native_SetNextWindowBgAlpha(float alpha) {
+        imgui.natives.JNI_ImGui.internal_native_SetNextWindowBgAlpha(alpha);
+    }
 
     public static void SetNextWindowViewport(int viewport_id) {
         internal_native_SetNextWindowViewport(viewport_id);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextWindowViewport((int)viewport_id);
-*/
-    public static native void internal_native_SetNextWindowViewport(int viewport_id);
+    public static void internal_native_SetNextWindowViewport(int viewport_id) {
+        imgui.natives.JNI_ImGui.internal_native_SetNextWindowViewport(viewport_id);
+    }
 
     public static void SetWindowPos(ImVec2 pos, ImGuiCond ImGuiCond) {
         internal_native_SetWindowPos__0(pos.native_address, ImGuiCond.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetWindowPos(*((ImVec2* )pos_addr), (::ImGuiCond)ImGuiCond);
-*/
-    public static native void internal_native_SetWindowPos__0(long pos_addr, int ImGuiCond);
+    public static void internal_native_SetWindowPos__0(long pos_addr, int ImGuiCond) {
+        imgui.natives.JNI_ImGui.internal_native_SetWindowPos__0(pos_addr, ImGuiCond);
+    }
 
     public static void SetWindowPos(ImVec2 pos) {
         internal_native_SetWindowPos__0(pos.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetWindowPos(*((ImVec2* )pos_addr));
-*/
-    public static native void internal_native_SetWindowPos__0(long pos_addr);
+    public static void internal_native_SetWindowPos__0(long pos_addr) {
+        imgui.natives.JNI_ImGui.internal_native_SetWindowPos__0(pos_addr);
+    }
 
     public static void SetWindowPos(String name, ImVec2 pos, ImGuiCond ImGuiCond) {
         internal_native_SetWindowPos__1(name, pos.native_address, ImGuiCond.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetWindowPos(name, *((ImVec2* )pos_addr), (::ImGuiCond)ImGuiCond);
-*/
-    public static native void internal_native_SetWindowPos__1(String name, long pos_addr, int ImGuiCond);
+    public static void internal_native_SetWindowPos__1(String name, long pos_addr, int ImGuiCond) {
+        imgui.natives.JNI_ImGui.internal_native_SetWindowPos__1(name, pos_addr, ImGuiCond);
+    }
 
     public static void SetWindowPos(String name, ImVec2 pos) {
         internal_native_SetWindowPos__1(name, pos.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetWindowPos(name, *((ImVec2* )pos_addr));
-*/
-    public static native void internal_native_SetWindowPos__1(String name, long pos_addr);
+    public static void internal_native_SetWindowPos__1(String name, long pos_addr) {
+        imgui.natives.JNI_ImGui.internal_native_SetWindowPos__1(name, pos_addr);
+    }
 
     public static void SetWindowSize(ImVec2 size, ImGuiCond ImGuiCond) {
         internal_native_SetWindowSize__0(size.native_address, ImGuiCond.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetWindowSize(*((ImVec2* )size_addr), (::ImGuiCond)ImGuiCond);
-*/
-    public static native void internal_native_SetWindowSize__0(long size_addr, int ImGuiCond);
+    public static void internal_native_SetWindowSize__0(long size_addr, int ImGuiCond) {
+        imgui.natives.JNI_ImGui.internal_native_SetWindowSize__0(size_addr, ImGuiCond);
+    }
 
     public static void SetWindowSize(ImVec2 size) {
         internal_native_SetWindowSize__0(size.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetWindowSize(*((ImVec2* )size_addr));
-*/
-    public static native void internal_native_SetWindowSize__0(long size_addr);
+    public static void internal_native_SetWindowSize__0(long size_addr) {
+        imgui.natives.JNI_ImGui.internal_native_SetWindowSize__0(size_addr);
+    }
 
     public static void SetWindowSize(String name, ImVec2 size, ImGuiCond ImGuiCond) {
         internal_native_SetWindowSize__1(name, size.native_address, ImGuiCond.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetWindowSize(name, *((ImVec2* )size_addr), (::ImGuiCond)ImGuiCond);
-*/
-    public static native void internal_native_SetWindowSize__1(String name, long size_addr, int ImGuiCond);
+    public static void internal_native_SetWindowSize__1(String name, long size_addr, int ImGuiCond) {
+        imgui.natives.JNI_ImGui.internal_native_SetWindowSize__1(name, size_addr, ImGuiCond);
+    }
 
     public static void SetWindowSize(String name, ImVec2 size) {
         internal_native_SetWindowSize__1(name, size.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetWindowSize(name, *((ImVec2* )size_addr));
-*/
-    public static native void internal_native_SetWindowSize__1(String name, long size_addr);
+    public static void internal_native_SetWindowSize__1(String name, long size_addr) {
+        imgui.natives.JNI_ImGui.internal_native_SetWindowSize__1(name, size_addr);
+    }
 
     public static void SetWindowCollapsed(boolean collapsed, ImGuiCond ImGuiCond) {
         internal_native_SetWindowCollapsed__0(collapsed, ImGuiCond.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetWindowCollapsed(collapsed, (::ImGuiCond)ImGuiCond);
-*/
-    public static native void internal_native_SetWindowCollapsed__0(boolean collapsed, int ImGuiCond);
+    public static void internal_native_SetWindowCollapsed__0(boolean collapsed, int ImGuiCond) {
+        imgui.natives.JNI_ImGui.internal_native_SetWindowCollapsed__0(collapsed, ImGuiCond);
+    }
 
     public static void SetWindowCollapsed(boolean collapsed) {
         internal_native_SetWindowCollapsed__0(collapsed);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetWindowCollapsed(collapsed);
-*/
-    public static native void internal_native_SetWindowCollapsed__0(boolean collapsed);
+    public static void internal_native_SetWindowCollapsed__0(boolean collapsed) {
+        imgui.natives.JNI_ImGui.internal_native_SetWindowCollapsed__0(collapsed);
+    }
 
     public static void SetWindowCollapsed(String name, boolean collapsed, ImGuiCond ImGuiCond) {
         internal_native_SetWindowCollapsed__1(name, collapsed, ImGuiCond.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetWindowCollapsed_1(name, collapsed, (::ImGuiCond)ImGuiCond);
-*/
-    public static native void internal_native_SetWindowCollapsed__1(String name, boolean collapsed, int ImGuiCond);
+    public static void internal_native_SetWindowCollapsed__1(String name, boolean collapsed, int ImGuiCond) {
+        imgui.natives.JNI_ImGui.internal_native_SetWindowCollapsed__1(name, collapsed, ImGuiCond);
+    }
 
     public static void SetWindowCollapsed(String name, boolean collapsed) {
         internal_native_SetWindowCollapsed__1(name, collapsed);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetWindowCollapsed_1(name, collapsed);
-*/
-    public static native void internal_native_SetWindowCollapsed__1(String name, boolean collapsed);
+    public static void internal_native_SetWindowCollapsed__1(String name, boolean collapsed) {
+        imgui.natives.JNI_ImGui.internal_native_SetWindowCollapsed__1(name, collapsed);
+    }
 
     public static void SetWindowFocus() {
         internal_native_SetWindowFocus();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetWindowFocus();
-*/
-    public static native void internal_native_SetWindowFocus();
+    public static void internal_native_SetWindowFocus() {
+        imgui.natives.JNI_ImGui.internal_native_SetWindowFocus();
+    }
 
     public static void SetWindowFocus(String name) {
         internal_native_SetWindowFocus(name);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetWindowFocus(name);
-*/
-    public static native void internal_native_SetWindowFocus(String name);
+    public static void internal_native_SetWindowFocus(String name) {
+        imgui.natives.JNI_ImGui.internal_native_SetWindowFocus(name);
+    }
 
     public static float GetScrollX() {
         return internal_native_GetScrollX();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetScrollX();
-*/
-    public static native float internal_native_GetScrollX();
+    public static float internal_native_GetScrollX() {
+        return imgui.natives.JNI_ImGui.internal_native_GetScrollX();
+    }
 
     public static float GetScrollY() {
         return internal_native_GetScrollY();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetScrollY();
-*/
-    public static native float internal_native_GetScrollY();
+    public static float internal_native_GetScrollY() {
+        return imgui.natives.JNI_ImGui.internal_native_GetScrollY();
+    }
 
     public static void SetScrollX(float scroll_x) {
         internal_native_SetScrollX(scroll_x);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetScrollX((float)scroll_x);
-*/
-    public static native void internal_native_SetScrollX(float scroll_x);
+    public static void internal_native_SetScrollX(float scroll_x) {
+        imgui.natives.JNI_ImGui.internal_native_SetScrollX(scroll_x);
+    }
 
     public static void SetScrollY(float scroll_y) {
         internal_native_SetScrollY(scroll_y);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetScrollY((float)scroll_y);
-*/
-    public static native void internal_native_SetScrollY(float scroll_y);
+    public static void internal_native_SetScrollY(float scroll_y) {
+        imgui.natives.JNI_ImGui.internal_native_SetScrollY(scroll_y);
+    }
 
     public static float GetScrollMaxX() {
         return internal_native_GetScrollMaxX();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetScrollMaxX();
-*/
-    public static native float internal_native_GetScrollMaxX();
+    public static float internal_native_GetScrollMaxX() {
+        return imgui.natives.JNI_ImGui.internal_native_GetScrollMaxX();
+    }
 
     public static float GetScrollMaxY() {
         return internal_native_GetScrollMaxY();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetScrollMaxY();
-*/
-    public static native float internal_native_GetScrollMaxY();
+    public static float internal_native_GetScrollMaxY() {
+        return imgui.natives.JNI_ImGui.internal_native_GetScrollMaxY();
+    }
 
     public static void SetScrollHereX(float center_x_ratio) {
         internal_native_SetScrollHereX(center_x_ratio);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetScrollHereX((float)center_x_ratio);
-*/
-    public static native void internal_native_SetScrollHereX(float center_x_ratio);
+    public static void internal_native_SetScrollHereX(float center_x_ratio) {
+        imgui.natives.JNI_ImGui.internal_native_SetScrollHereX(center_x_ratio);
+    }
 
     public static void SetScrollHereX() {
         internal_native_SetScrollHereX();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetScrollHereX();
-*/
-    public static native void internal_native_SetScrollHereX();
+    public static void internal_native_SetScrollHereX() {
+        imgui.natives.JNI_ImGui.internal_native_SetScrollHereX();
+    }
 
     public static void SetScrollHereY(float center_y_ratio) {
         internal_native_SetScrollHereY(center_y_ratio);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetScrollHereY((float)center_y_ratio);
-*/
-    public static native void internal_native_SetScrollHereY(float center_y_ratio);
+    public static void internal_native_SetScrollHereY(float center_y_ratio) {
+        imgui.natives.JNI_ImGui.internal_native_SetScrollHereY(center_y_ratio);
+    }
 
     public static void SetScrollHereY() {
         internal_native_SetScrollHereY();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetScrollHereY();
-*/
-    public static native void internal_native_SetScrollHereY();
+    public static void internal_native_SetScrollHereY() {
+        imgui.natives.JNI_ImGui.internal_native_SetScrollHereY();
+    }
 
     public static void SetScrollFromPosX(float local_x, float center_x_ratio) {
         internal_native_SetScrollFromPosX(local_x, center_x_ratio);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetScrollFromPosX((float)local_x, (float)center_x_ratio);
-*/
-    public static native void internal_native_SetScrollFromPosX(float local_x, float center_x_ratio);
+    public static void internal_native_SetScrollFromPosX(float local_x, float center_x_ratio) {
+        imgui.natives.JNI_ImGui.internal_native_SetScrollFromPosX(local_x, center_x_ratio);
+    }
 
     public static void SetScrollFromPosX(float local_x) {
         internal_native_SetScrollFromPosX(local_x);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetScrollFromPosX((float)local_x);
-*/
-    public static native void internal_native_SetScrollFromPosX(float local_x);
+    public static void internal_native_SetScrollFromPosX(float local_x) {
+        imgui.natives.JNI_ImGui.internal_native_SetScrollFromPosX(local_x);
+    }
 
     public static void SetScrollFromPosY(float local_y, float center_y_ratio) {
         internal_native_SetScrollFromPosY(local_y, center_y_ratio);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetScrollFromPosY((float)local_y, (float)center_y_ratio);
-*/
-    public static native void internal_native_SetScrollFromPosY(float local_y, float center_y_ratio);
+    public static void internal_native_SetScrollFromPosY(float local_y, float center_y_ratio) {
+        imgui.natives.JNI_ImGui.internal_native_SetScrollFromPosY(local_y, center_y_ratio);
+    }
 
     public static void SetScrollFromPosY(float local_y) {
         internal_native_SetScrollFromPosY(local_y);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetScrollFromPosY((float)local_y);
-*/
-    public static native void internal_native_SetScrollFromPosY(float local_y);
+    public static void internal_native_SetScrollFromPosY(float local_y) {
+        imgui.natives.JNI_ImGui.internal_native_SetScrollFromPosY(local_y);
+    }
 
     public static void PushFont(ImFont font, float font_size_base_unscaled) {
         internal_native_PushFont(font.native_address, font_size_base_unscaled);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PushFont((ImFont* )font_addr, (float)font_size_base_unscaled);
-*/
-    public static native void internal_native_PushFont(long font_addr, float font_size_base_unscaled);
+    public static void internal_native_PushFont(long font_addr, float font_size_base_unscaled) {
+        imgui.natives.JNI_ImGui.internal_native_PushFont(font_addr, font_size_base_unscaled);
+    }
 
     public static void PopFont() {
         internal_native_PopFont();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PopFont();
-*/
-    public static native void internal_native_PopFont();
+    public static void internal_native_PopFont() {
+        imgui.natives.JNI_ImGui.internal_native_PopFont();
+    }
 
     public static ImFont GetFont() {
         long addr = internal_native_GetFont_addr();
@@ -1195,19 +1088,17 @@ ImGuiWrapper::ImGui::PopFont();
         return ImFont_TEMP_STATIC_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::GetFont();
-*/
-    public static native long internal_native_GetFont_addr();
+    public static long internal_native_GetFont_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetFont_addr();
+    }
 
     public static float GetFontSize() {
         return internal_native_GetFontSize();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetFontSize();
-*/
-    public static native float internal_native_GetFontSize();
+    public static float internal_native_GetFontSize() {
+        return imgui.natives.JNI_ImGui.internal_native_GetFontSize();
+    }
 
     public static ImFontBaked GetFontBaked() {
         long addr = internal_native_GetFontBaked_addr();
@@ -1219,181 +1110,161 @@ return ImGuiWrapper::ImGui::GetFontSize();
         return ImFontBaked_TEMP_STATIC_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::GetFontBaked();
-*/
-    public static native long internal_native_GetFontBaked_addr();
+    public static long internal_native_GetFontBaked_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetFontBaked_addr();
+    }
 
     public static void PushStyleColor(ImGuiCol idx, int col) {
         internal_native_PushStyleColor__0(idx.getValue(), col);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PushStyleColor((::ImGuiCol)idx, col);
-*/
-    public static native void internal_native_PushStyleColor__0(int idx, int col);
+    public static void internal_native_PushStyleColor__0(int idx, int col) {
+        imgui.natives.JNI_ImGui.internal_native_PushStyleColor__0(idx, col);
+    }
 
     public static void PushStyleColor(ImGuiCol idx, ImVec4 col) {
         internal_native_PushStyleColor__1(idx.getValue(), col.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PushStyleColor((::ImGuiCol)idx, *((ImVec4* )col_addr));
-*/
-    public static native void internal_native_PushStyleColor__1(int idx, long col_addr);
+    public static void internal_native_PushStyleColor__1(int idx, long col_addr) {
+        imgui.natives.JNI_ImGui.internal_native_PushStyleColor__1(idx, col_addr);
+    }
 
     public static void PopStyleColor(int count) {
         internal_native_PopStyleColor(count);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PopStyleColor((int)count);
-*/
-    public static native void internal_native_PopStyleColor(int count);
+    public static void internal_native_PopStyleColor(int count) {
+        imgui.natives.JNI_ImGui.internal_native_PopStyleColor(count);
+    }
 
     public static void PopStyleColor() {
         internal_native_PopStyleColor();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PopStyleColor();
-*/
-    public static native void internal_native_PopStyleColor();
+    public static void internal_native_PopStyleColor() {
+        imgui.natives.JNI_ImGui.internal_native_PopStyleColor();
+    }
 
     public static void PushStyleVar(ImGuiStyleVar idx, float val) {
         internal_native_PushStyleVar__0(idx.getValue(), val);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PushStyleVar((::ImGuiStyleVar)idx, (float)val);
-*/
-    public static native void internal_native_PushStyleVar__0(int idx, float val);
+    public static void internal_native_PushStyleVar__0(int idx, float val) {
+        imgui.natives.JNI_ImGui.internal_native_PushStyleVar__0(idx, val);
+    }
 
     public static void PushStyleVar(ImGuiStyleVar idx, ImVec2 val) {
         internal_native_PushStyleVar__1(idx.getValue(), val.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PushStyleVar((::ImGuiStyleVar)idx, *((ImVec2* )val_addr));
-*/
-    public static native void internal_native_PushStyleVar__1(int idx, long val_addr);
+    public static void internal_native_PushStyleVar__1(int idx, long val_addr) {
+        imgui.natives.JNI_ImGui.internal_native_PushStyleVar__1(idx, val_addr);
+    }
 
     public static void PushStyleVarX(ImGuiStyleVar idx, float val_x) {
         internal_native_PushStyleVarX(idx.getValue(), val_x);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PushStyleVarX((::ImGuiStyleVar)idx, (float)val_x);
-*/
-    public static native void internal_native_PushStyleVarX(int idx, float val_x);
+    public static void internal_native_PushStyleVarX(int idx, float val_x) {
+        imgui.natives.JNI_ImGui.internal_native_PushStyleVarX(idx, val_x);
+    }
 
     public static void PushStyleVarY(ImGuiStyleVar idx, float val_y) {
         internal_native_PushStyleVarY(idx.getValue(), val_y);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PushStyleVarY((::ImGuiStyleVar)idx, (float)val_y);
-*/
-    public static native void internal_native_PushStyleVarY(int idx, float val_y);
+    public static void internal_native_PushStyleVarY(int idx, float val_y) {
+        imgui.natives.JNI_ImGui.internal_native_PushStyleVarY(idx, val_y);
+    }
 
     public static void PopStyleVar(int count) {
         internal_native_PopStyleVar(count);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PopStyleVar((int)count);
-*/
-    public static native void internal_native_PopStyleVar(int count);
+    public static void internal_native_PopStyleVar(int count) {
+        imgui.natives.JNI_ImGui.internal_native_PopStyleVar(count);
+    }
 
     public static void PopStyleVar() {
         internal_native_PopStyleVar();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PopStyleVar();
-*/
-    public static native void internal_native_PopStyleVar();
+    public static void internal_native_PopStyleVar() {
+        imgui.natives.JNI_ImGui.internal_native_PopStyleVar();
+    }
 
     public static void PushItemFlag(ImGuiItemFlags option, boolean enabled) {
         internal_native_PushItemFlag(option.getValue(), enabled);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PushItemFlag((::ImGuiItemFlags)option, enabled);
-*/
-    public static native void internal_native_PushItemFlag(int option, boolean enabled);
+    public static void internal_native_PushItemFlag(int option, boolean enabled) {
+        imgui.natives.JNI_ImGui.internal_native_PushItemFlag(option, enabled);
+    }
 
     public static void PopItemFlag() {
         internal_native_PopItemFlag();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PopItemFlag();
-*/
-    public static native void internal_native_PopItemFlag();
+    public static void internal_native_PopItemFlag() {
+        imgui.natives.JNI_ImGui.internal_native_PopItemFlag();
+    }
 
     public static void PushItemWidth(float item_width) {
         internal_native_PushItemWidth(item_width);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PushItemWidth((float)item_width);
-*/
-    public static native void internal_native_PushItemWidth(float item_width);
+    public static void internal_native_PushItemWidth(float item_width) {
+        imgui.natives.JNI_ImGui.internal_native_PushItemWidth(item_width);
+    }
 
     public static void PopItemWidth() {
         internal_native_PopItemWidth();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PopItemWidth();
-*/
-    public static native void internal_native_PopItemWidth();
+    public static void internal_native_PopItemWidth() {
+        imgui.natives.JNI_ImGui.internal_native_PopItemWidth();
+    }
 
     public static void SetNextItemWidth(float item_width) {
         internal_native_SetNextItemWidth(item_width);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextItemWidth((float)item_width);
-*/
-    public static native void internal_native_SetNextItemWidth(float item_width);
+    public static void internal_native_SetNextItemWidth(float item_width) {
+        imgui.natives.JNI_ImGui.internal_native_SetNextItemWidth(item_width);
+    }
 
     public static float CalcItemWidth() {
         return internal_native_CalcItemWidth();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::CalcItemWidth();
-*/
-    public static native float internal_native_CalcItemWidth();
+    public static float internal_native_CalcItemWidth() {
+        return imgui.natives.JNI_ImGui.internal_native_CalcItemWidth();
+    }
 
     public static void PushTextWrapPos(float wrap_local_pos_x) {
         internal_native_PushTextWrapPos(wrap_local_pos_x);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PushTextWrapPos((float)wrap_local_pos_x);
-*/
-    public static native void internal_native_PushTextWrapPos(float wrap_local_pos_x);
+    public static void internal_native_PushTextWrapPos(float wrap_local_pos_x) {
+        imgui.natives.JNI_ImGui.internal_native_PushTextWrapPos(wrap_local_pos_x);
+    }
 
     public static void PushTextWrapPos() {
         internal_native_PushTextWrapPos();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PushTextWrapPos();
-*/
-    public static native void internal_native_PushTextWrapPos();
+    public static void internal_native_PushTextWrapPos() {
+        imgui.natives.JNI_ImGui.internal_native_PushTextWrapPos();
+    }
 
     public static void PopTextWrapPos() {
         internal_native_PopTextWrapPos();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PopTextWrapPos();
-*/
-    public static native void internal_native_PopTextWrapPos();
+    public static void internal_native_PopTextWrapPos() {
+        imgui.natives.JNI_ImGui.internal_native_PopTextWrapPos();
+    }
 
     public static ImVec2 GetFontTexUvWhitePixel() {
         long addr = internal_native_GetFontTexUvWhitePixel_addr();
@@ -1405,56 +1276,49 @@ ImGuiWrapper::ImGui::PopTextWrapPos();
         return ImVec2_TEMP_STATIC_GEN_2;
     }
 
-    /*[-JNI;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = ImGuiWrapper::ImGui::GetFontTexUvWhitePixel();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetFontTexUvWhitePixel_addr();
+    public static long internal_native_GetFontTexUvWhitePixel_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetFontTexUvWhitePixel_addr();
+    }
 
     public static int GetColorU32(ImGuiCol idx, float alpha_mul) {
         return internal_native_GetColorU32__0(idx.getValue(), alpha_mul);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetColorU32((::ImGuiCol)idx, (float)alpha_mul);
-*/
-    public static native int internal_native_GetColorU32__0(int idx, float alpha_mul);
+    public static int internal_native_GetColorU32__0(int idx, float alpha_mul) {
+        return imgui.natives.JNI_ImGui.internal_native_GetColorU32__0(idx, alpha_mul);
+    }
 
     public static int GetColorU32(ImGuiCol idx) {
         return internal_native_GetColorU32__0(idx.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetColorU32((::ImGuiCol)idx);
-*/
-    public static native int internal_native_GetColorU32__0(int idx);
+    public static int internal_native_GetColorU32__0(int idx) {
+        return imgui.natives.JNI_ImGui.internal_native_GetColorU32__0(idx);
+    }
 
     public static int GetColorU32(ImVec4 col) {
         return internal_native_GetColorU32__1(col.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetColorU32(*((ImVec4* )col_addr));
-*/
-    public static native int internal_native_GetColorU32__1(long col_addr);
+    public static int internal_native_GetColorU32__1(long col_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_GetColorU32__1(col_addr);
+    }
 
     public static int GetColorU32(int col, float alpha_mul) {
         return internal_native_GetColorU32__2(col, alpha_mul);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetColorU32(col, (float)alpha_mul);
-*/
-    public static native int internal_native_GetColorU32__2(int col, float alpha_mul);
+    public static int internal_native_GetColorU32__2(int col, float alpha_mul) {
+        return imgui.natives.JNI_ImGui.internal_native_GetColorU32__2(col, alpha_mul);
+    }
 
     public static int GetColorU32(int col) {
         return internal_native_GetColorU32__2(col);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetColorU32(col);
-*/
-    public static native int internal_native_GetColorU32__2(int col);
+    public static int internal_native_GetColorU32__2(int col) {
+        return imgui.natives.JNI_ImGui.internal_native_GetColorU32__2(col);
+    }
 
     public static ImVec4 GetStyleColorVec4(int idx) {
         long addr = internal_native_GetStyleColorVec4_addr(idx);
@@ -1466,10 +1330,9 @@ return ImGuiWrapper::ImGui::GetColorU32(col);
         return ImVec4_TEMP_STATIC_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)&ImGuiWrapper::ImGui::GetStyleColorVec4((int)idx);
-*/
-    public static native long internal_native_GetStyleColorVec4_addr(int idx);
+    public static long internal_native_GetStyleColorVec4_addr(int idx) {
+        return imgui.natives.JNI_ImGui.internal_native_GetStyleColorVec4_addr(idx);
+    }
 
     public static ImVec2 GetCursorScreenPos() {
         long addr = internal_native_GetCursorScreenPos_addr();
@@ -1481,20 +1344,17 @@ return (jlong)&ImGuiWrapper::ImGui::GetStyleColorVec4((int)idx);
         return ImVec2_TEMP_STATIC_GEN_3;
     }
 
-    /*[-JNI;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = ImGuiWrapper::ImGui::GetCursorScreenPos();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetCursorScreenPos_addr();
+    public static long internal_native_GetCursorScreenPos_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetCursorScreenPos_addr();
+    }
 
     public static void SetCursorScreenPos(ImVec2 pos) {
         internal_native_SetCursorScreenPos(pos.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetCursorScreenPos(*((ImVec2* )pos_addr));
-*/
-    public static native void internal_native_SetCursorScreenPos(long pos_addr);
+    public static void internal_native_SetCursorScreenPos(long pos_addr) {
+        imgui.natives.JNI_ImGui.internal_native_SetCursorScreenPos(pos_addr);
+    }
 
     public static ImVec2 GetContentRegionAvail() {
         long addr = internal_native_GetContentRegionAvail_addr();
@@ -1506,11 +1366,9 @@ ImGuiWrapper::ImGui::SetCursorScreenPos(*((ImVec2* )pos_addr));
         return ImVec2_TEMP_STATIC_GEN_4;
     }
 
-    /*[-JNI;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = ImGuiWrapper::ImGui::GetContentRegionAvail();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetContentRegionAvail_addr();
+    public static long internal_native_GetContentRegionAvail_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetContentRegionAvail_addr();
+    }
 
     public static ImVec2 GetCursorPos() {
         long addr = internal_native_GetCursorPos_addr();
@@ -1522,56 +1380,49 @@ return (jlong)&copy_addr;*/
         return ImVec2_TEMP_STATIC_GEN_5;
     }
 
-    /*[-JNI;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = ImGuiWrapper::ImGui::GetCursorPos();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetCursorPos_addr();
+    public static long internal_native_GetCursorPos_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetCursorPos_addr();
+    }
 
     public static float GetCursorPosX() {
         return internal_native_GetCursorPosX();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetCursorPosX();
-*/
-    public static native float internal_native_GetCursorPosX();
+    public static float internal_native_GetCursorPosX() {
+        return imgui.natives.JNI_ImGui.internal_native_GetCursorPosX();
+    }
 
     public static float GetCursorPosY() {
         return internal_native_GetCursorPosY();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetCursorPosY();
-*/
-    public static native float internal_native_GetCursorPosY();
+    public static float internal_native_GetCursorPosY() {
+        return imgui.natives.JNI_ImGui.internal_native_GetCursorPosY();
+    }
 
     public static void SetCursorPos(ImVec2 local_pos) {
         internal_native_SetCursorPos(local_pos.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetCursorPos(*((ImVec2* )local_pos_addr));
-*/
-    public static native void internal_native_SetCursorPos(long local_pos_addr);
+    public static void internal_native_SetCursorPos(long local_pos_addr) {
+        imgui.natives.JNI_ImGui.internal_native_SetCursorPos(local_pos_addr);
+    }
 
     public static void SetCursorPosX(float local_x) {
         internal_native_SetCursorPosX(local_x);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetCursorPosX((float)local_x);
-*/
-    public static native void internal_native_SetCursorPosX(float local_x);
+    public static void internal_native_SetCursorPosX(float local_x) {
+        imgui.natives.JNI_ImGui.internal_native_SetCursorPosX(local_x);
+    }
 
     public static void SetCursorPosY(float local_y) {
         internal_native_SetCursorPosY(local_y);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetCursorPosY((float)local_y);
-*/
-    public static native void internal_native_SetCursorPosY(float local_y);
+    public static void internal_native_SetCursorPosY(float local_y) {
+        imgui.natives.JNI_ImGui.internal_native_SetCursorPosY(local_y);
+    }
 
     public static ImVec2 GetCursorStartPos() {
         long addr = internal_native_GetCursorStartPos_addr();
@@ -1583,2468 +1434,2193 @@ ImGuiWrapper::ImGui::SetCursorPosY((float)local_y);
         return ImVec2_TEMP_STATIC_GEN_6;
     }
 
-    /*[-JNI;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = ImGuiWrapper::ImGui::GetCursorStartPos();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetCursorStartPos_addr();
+    public static long internal_native_GetCursorStartPos_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetCursorStartPos_addr();
+    }
 
     public static void Separator() {
         internal_native_Separator();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::Separator();
-*/
-    public static native void internal_native_Separator();
+    public static void internal_native_Separator() {
+        imgui.natives.JNI_ImGui.internal_native_Separator();
+    }
 
     public static void SameLine(float offset_from_start_x, float spacing) {
         internal_native_SameLine(offset_from_start_x, spacing);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SameLine((float)offset_from_start_x, (float)spacing);
-*/
-    public static native void internal_native_SameLine(float offset_from_start_x, float spacing);
+    public static void internal_native_SameLine(float offset_from_start_x, float spacing) {
+        imgui.natives.JNI_ImGui.internal_native_SameLine(offset_from_start_x, spacing);
+    }
 
     public static void SameLine(float offset_from_start_x) {
         internal_native_SameLine(offset_from_start_x);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SameLine((float)offset_from_start_x);
-*/
-    public static native void internal_native_SameLine(float offset_from_start_x);
+    public static void internal_native_SameLine(float offset_from_start_x) {
+        imgui.natives.JNI_ImGui.internal_native_SameLine(offset_from_start_x);
+    }
 
     public static void SameLine() {
         internal_native_SameLine();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SameLine();
-*/
-    public static native void internal_native_SameLine();
+    public static void internal_native_SameLine() {
+        imgui.natives.JNI_ImGui.internal_native_SameLine();
+    }
 
     public static void NewLine() {
         internal_native_NewLine();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::NewLine();
-*/
-    public static native void internal_native_NewLine();
+    public static void internal_native_NewLine() {
+        imgui.natives.JNI_ImGui.internal_native_NewLine();
+    }
 
     public static void Spacing() {
         internal_native_Spacing();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::Spacing();
-*/
-    public static native void internal_native_Spacing();
+    public static void internal_native_Spacing() {
+        imgui.natives.JNI_ImGui.internal_native_Spacing();
+    }
 
     public static void Dummy(ImVec2 size) {
         internal_native_Dummy(size.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::Dummy(*((ImVec2* )size_addr));
-*/
-    public static native void internal_native_Dummy(long size_addr);
+    public static void internal_native_Dummy(long size_addr) {
+        imgui.natives.JNI_ImGui.internal_native_Dummy(size_addr);
+    }
 
     public static void Indent(float indent_w) {
         internal_native_Indent(indent_w);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::Indent((float)indent_w);
-*/
-    public static native void internal_native_Indent(float indent_w);
+    public static void internal_native_Indent(float indent_w) {
+        imgui.natives.JNI_ImGui.internal_native_Indent(indent_w);
+    }
 
     public static void Indent() {
         internal_native_Indent();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::Indent();
-*/
-    public static native void internal_native_Indent();
+    public static void internal_native_Indent() {
+        imgui.natives.JNI_ImGui.internal_native_Indent();
+    }
 
     public static void Unindent(float indent_w) {
         internal_native_Unindent(indent_w);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::Unindent((float)indent_w);
-*/
-    public static native void internal_native_Unindent(float indent_w);
+    public static void internal_native_Unindent(float indent_w) {
+        imgui.natives.JNI_ImGui.internal_native_Unindent(indent_w);
+    }
 
     public static void Unindent() {
         internal_native_Unindent();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::Unindent();
-*/
-    public static native void internal_native_Unindent();
+    public static void internal_native_Unindent() {
+        imgui.natives.JNI_ImGui.internal_native_Unindent();
+    }
 
     public static void BeginGroup() {
         internal_native_BeginGroup();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::BeginGroup();
-*/
-    public static native void internal_native_BeginGroup();
+    public static void internal_native_BeginGroup() {
+        imgui.natives.JNI_ImGui.internal_native_BeginGroup();
+    }
 
     public static void EndGroup() {
         internal_native_EndGroup();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::EndGroup();
-*/
-    public static native void internal_native_EndGroup();
+    public static void internal_native_EndGroup() {
+        imgui.natives.JNI_ImGui.internal_native_EndGroup();
+    }
 
     public static void AlignTextToFramePadding() {
         internal_native_AlignTextToFramePadding();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::AlignTextToFramePadding();
-*/
-    public static native void internal_native_AlignTextToFramePadding();
+    public static void internal_native_AlignTextToFramePadding() {
+        imgui.natives.JNI_ImGui.internal_native_AlignTextToFramePadding();
+    }
 
     public static float GetTextLineHeight() {
         return internal_native_GetTextLineHeight();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetTextLineHeight();
-*/
-    public static native float internal_native_GetTextLineHeight();
+    public static float internal_native_GetTextLineHeight() {
+        return imgui.natives.JNI_ImGui.internal_native_GetTextLineHeight();
+    }
 
     public static float GetTextLineHeightWithSpacing() {
         return internal_native_GetTextLineHeightWithSpacing();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetTextLineHeightWithSpacing();
-*/
-    public static native float internal_native_GetTextLineHeightWithSpacing();
+    public static float internal_native_GetTextLineHeightWithSpacing() {
+        return imgui.natives.JNI_ImGui.internal_native_GetTextLineHeightWithSpacing();
+    }
 
     public static float GetFrameHeight() {
         return internal_native_GetFrameHeight();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetFrameHeight();
-*/
-    public static native float internal_native_GetFrameHeight();
+    public static float internal_native_GetFrameHeight() {
+        return imgui.natives.JNI_ImGui.internal_native_GetFrameHeight();
+    }
 
     public static float GetFrameHeightWithSpacing() {
         return internal_native_GetFrameHeightWithSpacing();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetFrameHeightWithSpacing();
-*/
-    public static native float internal_native_GetFrameHeightWithSpacing();
+    public static float internal_native_GetFrameHeightWithSpacing() {
+        return imgui.natives.JNI_ImGui.internal_native_GetFrameHeightWithSpacing();
+    }
 
     public static void PushID(String str_id) {
         internal_native_PushID__0(str_id);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PushID(str_id);
-*/
-    public static native void internal_native_PushID__0(String str_id);
+    public static void internal_native_PushID__0(String str_id) {
+        imgui.natives.JNI_ImGui.internal_native_PushID__0(str_id);
+    }
 
     public static void PushID(String str_id_begin, String str_id_end) {
         internal_native_PushID__1(str_id_begin, str_id_end);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PushID(str_id_begin, str_id_end);
-*/
-    public static native void internal_native_PushID__1(String str_id_begin, String str_id_end);
+    public static void internal_native_PushID__1(String str_id_begin, String str_id_end) {
+        imgui.natives.JNI_ImGui.internal_native_PushID__1(str_id_begin, str_id_end);
+    }
 
     public static void PushID(NativeObject int_id) {
         internal_native_PushID__2(int_id.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PushID((void*)int_id_addr);
-*/
-    public static native void internal_native_PushID__2(long int_id_addr);
+    public static void internal_native_PushID__2(long int_id_addr) {
+        imgui.natives.JNI_ImGui.internal_native_PushID__2(int_id_addr);
+    }
 
     public static void PushID(int int_id) {
         internal_native_PushID__3(int_id);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PushID((int)int_id);
-*/
-    public static native void internal_native_PushID__3(int int_id);
+    public static void internal_native_PushID__3(int int_id) {
+        imgui.natives.JNI_ImGui.internal_native_PushID__3(int_id);
+    }
 
     public static void PopID() {
         internal_native_PopID();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PopID();
-*/
-    public static native void internal_native_PopID();
+    public static void internal_native_PopID() {
+        imgui.natives.JNI_ImGui.internal_native_PopID();
+    }
 
     public static int GetID(String str_id) {
         return internal_native_GetID__0(str_id);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetID(str_id);
-*/
-    public static native int internal_native_GetID__0(String str_id);
+    public static int internal_native_GetID__0(String str_id) {
+        return imgui.natives.JNI_ImGui.internal_native_GetID__0(str_id);
+    }
 
     public static int GetID(String str_id_begin, String str_id_end) {
         return internal_native_GetID__1(str_id_begin, str_id_end);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetID(str_id_begin, str_id_end);
-*/
-    public static native int internal_native_GetID__1(String str_id_begin, String str_id_end);
+    public static int internal_native_GetID__1(String str_id_begin, String str_id_end) {
+        return imgui.natives.JNI_ImGui.internal_native_GetID__1(str_id_begin, str_id_end);
+    }
 
     public static int GetID(NativeObject ptr_id) {
         return internal_native_GetID__2(ptr_id.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetID((void*)ptr_id_addr);
-*/
-    public static native int internal_native_GetID__2(long ptr_id_addr);
+    public static int internal_native_GetID__2(long ptr_id_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_GetID__2(ptr_id_addr);
+    }
 
     public static int GetID(int int_id) {
         return internal_native_GetID__3(int_id);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetID((int)int_id);
-*/
-    public static native int internal_native_GetID__3(int int_id);
+    public static int internal_native_GetID__3(int int_id) {
+        return imgui.natives.JNI_ImGui.internal_native_GetID__3(int_id);
+    }
 
     public static void TextUnformatted(String text, String text_end) {
         internal_native_TextUnformatted(text, text_end);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::TextUnformatted(text, text_end);
-*/
-    public static native void internal_native_TextUnformatted(String text, String text_end);
+    public static void internal_native_TextUnformatted(String text, String text_end) {
+        imgui.natives.JNI_ImGui.internal_native_TextUnformatted(text, text_end);
+    }
 
     public static void TextUnformatted(String text) {
         internal_native_TextUnformatted(text);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::TextUnformatted(text);
-*/
-    public static native void internal_native_TextUnformatted(String text);
+    public static void internal_native_TextUnformatted(String text) {
+        imgui.natives.JNI_ImGui.internal_native_TextUnformatted(text);
+    }
 
     public static void Text(String fmt) {
         internal_native_Text(fmt);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::Text(fmt);
-*/
-    public static native void internal_native_Text(String fmt);
+    public static void internal_native_Text(String fmt) {
+        imgui.natives.JNI_ImGui.internal_native_Text(fmt);
+    }
 
     public static void TextColored(ImVec4 col, String fmt) {
         internal_native_TextColored(col.native_address, fmt);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::TextColored(*((ImVec4* )col_addr), fmt);
-*/
-    public static native void internal_native_TextColored(long col_addr, String fmt);
+    public static void internal_native_TextColored(long col_addr, String fmt) {
+        imgui.natives.JNI_ImGui.internal_native_TextColored(col_addr, fmt);
+    }
 
     public static void TextDisabled(String fmt) {
         internal_native_TextDisabled(fmt);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::TextDisabled(fmt);
-*/
-    public static native void internal_native_TextDisabled(String fmt);
+    public static void internal_native_TextDisabled(String fmt) {
+        imgui.natives.JNI_ImGui.internal_native_TextDisabled(fmt);
+    }
 
     public static void TextWrapped(String fmt) {
         internal_native_TextWrapped(fmt);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::TextWrapped(fmt);
-*/
-    public static native void internal_native_TextWrapped(String fmt);
+    public static void internal_native_TextWrapped(String fmt) {
+        imgui.natives.JNI_ImGui.internal_native_TextWrapped(fmt);
+    }
 
     public static void LabelText(String label, String fmt) {
         internal_native_LabelText(label, fmt);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::LabelText(label, fmt);
-*/
-    public static native void internal_native_LabelText(String label, String fmt);
+    public static void internal_native_LabelText(String label, String fmt) {
+        imgui.natives.JNI_ImGui.internal_native_LabelText(label, fmt);
+    }
 
     public static void BulletText(String fmt) {
         internal_native_BulletText(fmt);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::BulletText(fmt);
-*/
-    public static native void internal_native_BulletText(String fmt);
+    public static void internal_native_BulletText(String fmt) {
+        imgui.natives.JNI_ImGui.internal_native_BulletText(fmt);
+    }
 
     public static void SeparatorText(String label) {
         internal_native_SeparatorText(label);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SeparatorText(label);
-*/
-    public static native void internal_native_SeparatorText(String label);
+    public static void internal_native_SeparatorText(String label) {
+        imgui.natives.JNI_ImGui.internal_native_SeparatorText(label);
+    }
 
     public static boolean Button(String label, ImVec2 size) {
         return internal_native_Button(label, size.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::Button(label, *((ImVec2* )size_addr));
-*/
-    public static native boolean internal_native_Button(String label, long size_addr);
+    public static boolean internal_native_Button(String label, long size_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_Button(label, size_addr);
+    }
 
     public static boolean Button(String label) {
         return internal_native_Button(label);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::Button(label);
-*/
-    public static native boolean internal_native_Button(String label);
+    public static boolean internal_native_Button(String label) {
+        return imgui.natives.JNI_ImGui.internal_native_Button(label);
+    }
 
     public static boolean SmallButton(String label) {
         return internal_native_SmallButton(label);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SmallButton(label);
-*/
-    public static native boolean internal_native_SmallButton(String label);
+    public static boolean internal_native_SmallButton(String label) {
+        return imgui.natives.JNI_ImGui.internal_native_SmallButton(label);
+    }
 
     public static boolean InvisibleButton(String str_id, ImVec2 size, ImGuiButtonFlags flags) {
         return internal_native_InvisibleButton(str_id, size.native_address, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InvisibleButton(str_id, *((ImVec2* )size_addr), (::ImGuiButtonFlags)flags);
-*/
-    public static native boolean internal_native_InvisibleButton(String str_id, long size_addr, int flags);
+    public static boolean internal_native_InvisibleButton(String str_id, long size_addr, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_InvisibleButton(str_id, size_addr, flags);
+    }
 
     public static boolean InvisibleButton(String str_id, ImVec2 size) {
         return internal_native_InvisibleButton(str_id, size.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InvisibleButton(str_id, *((ImVec2* )size_addr));
-*/
-    public static native boolean internal_native_InvisibleButton(String str_id, long size_addr);
+    public static boolean internal_native_InvisibleButton(String str_id, long size_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_InvisibleButton(str_id, size_addr);
+    }
 
     public static boolean ArrowButton(String str_id, ImGuiDir dir) {
         return internal_native_ArrowButton(str_id, dir.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::ArrowButton(str_id, (::ImGuiDir)dir);
-*/
-    public static native boolean internal_native_ArrowButton(String str_id, int dir);
+    public static boolean internal_native_ArrowButton(String str_id, int dir) {
+        return imgui.natives.JNI_ImGui.internal_native_ArrowButton(str_id, dir);
+    }
 
     public static boolean Checkbox(String label, NativeBoolArray v) {
         return internal_native_Checkbox(label, v.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::Checkbox(label, (bool*)v_addr);
-*/
-    public static native boolean internal_native_Checkbox(String label, long v_addr);
+    public static boolean internal_native_Checkbox(String label, long v_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_Checkbox(label, v_addr);
+    }
 
     public static boolean CheckboxFlags(String label, NativeIntArray flags, int flags_value) {
         return internal_native_CheckboxFlags(label, flags.native_void_address, flags_value);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::CheckboxFlags(label, (int*)flags_addr, (int)flags_value);
-*/
-    public static native boolean internal_native_CheckboxFlags(String label, long flags_addr, int flags_value);
+    public static boolean internal_native_CheckboxFlags(String label, long flags_addr, int flags_value) {
+        return imgui.natives.JNI_ImGui.internal_native_CheckboxFlags(label, flags_addr, flags_value);
+    }
 
     public static boolean RadioButton(String label, boolean active) {
         return internal_native_RadioButton__0(label, active);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::RadioButton(label, active);
-*/
-    public static native boolean internal_native_RadioButton__0(String label, boolean active);
+    public static boolean internal_native_RadioButton__0(String label, boolean active) {
+        return imgui.natives.JNI_ImGui.internal_native_RadioButton__0(label, active);
+    }
 
     public static boolean RadioButton(String label, NativeIntArray v, int v_button) {
         return internal_native_RadioButton__1(label, v.native_void_address, v_button);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::RadioButton(label, (int*)v_addr, (int)v_button);
-*/
-    public static native boolean internal_native_RadioButton__1(String label, long v_addr, int v_button);
+    public static boolean internal_native_RadioButton__1(String label, long v_addr, int v_button) {
+        return imgui.natives.JNI_ImGui.internal_native_RadioButton__1(label, v_addr, v_button);
+    }
 
     public static void ProgressBar(float fraction, ImVec2 size_arg, String overlay) {
         internal_native_ProgressBar(fraction, size_arg.native_address, overlay);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ProgressBar((float)fraction, *((ImVec2* )size_arg_addr), overlay);
-*/
-    public static native void internal_native_ProgressBar(float fraction, long size_arg_addr, String overlay);
+    public static void internal_native_ProgressBar(float fraction, long size_arg_addr, String overlay) {
+        imgui.natives.JNI_ImGui.internal_native_ProgressBar(fraction, size_arg_addr, overlay);
+    }
 
     public static void ProgressBar(float fraction, ImVec2 size_arg) {
         internal_native_ProgressBar(fraction, size_arg.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ProgressBar((float)fraction, *((ImVec2* )size_arg_addr));
-*/
-    public static native void internal_native_ProgressBar(float fraction, long size_arg_addr);
+    public static void internal_native_ProgressBar(float fraction, long size_arg_addr) {
+        imgui.natives.JNI_ImGui.internal_native_ProgressBar(fraction, size_arg_addr);
+    }
 
     public static void ProgressBar(float fraction) {
         internal_native_ProgressBar(fraction);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ProgressBar((float)fraction);
-*/
-    public static native void internal_native_ProgressBar(float fraction);
+    public static void internal_native_ProgressBar(float fraction) {
+        imgui.natives.JNI_ImGui.internal_native_ProgressBar(fraction);
+    }
 
     public static void Bullet() {
         internal_native_Bullet();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::Bullet();
-*/
-    public static native void internal_native_Bullet();
+    public static void internal_native_Bullet() {
+        imgui.natives.JNI_ImGui.internal_native_Bullet();
+    }
 
     public static boolean TextLink(String label) {
         return internal_native_TextLink(label);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::TextLink(label);
-*/
-    public static native boolean internal_native_TextLink(String label);
+    public static boolean internal_native_TextLink(String label) {
+        return imgui.natives.JNI_ImGui.internal_native_TextLink(label);
+    }
 
     public static void TextLinkOpenURL(String label, String url) {
         internal_native_TextLinkOpenURL(label, url);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::TextLinkOpenURL(label, url);
-*/
-    public static native void internal_native_TextLinkOpenURL(String label, String url);
+    public static void internal_native_TextLinkOpenURL(String label, String url) {
+        imgui.natives.JNI_ImGui.internal_native_TextLinkOpenURL(label, url);
+    }
 
     public static void TextLinkOpenURL(String label) {
         internal_native_TextLinkOpenURL(label);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::TextLinkOpenURL(label);
-*/
-    public static native void internal_native_TextLinkOpenURL(String label);
+    public static void internal_native_TextLinkOpenURL(String label) {
+        imgui.natives.JNI_ImGui.internal_native_TextLinkOpenURL(label);
+    }
 
     public static void Image(ImTextureRef tex_ref, ImVec2 image_size, ImVec2 uv0, ImVec2 uv1) {
         internal_native_Image(tex_ref.native_address, image_size.native_address, uv0.native_address, uv1.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::Image(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )image_size_addr), *((ImVec2* )uv0_addr), *((ImVec2* )uv1_addr));
-*/
-    public static native void internal_native_Image(long tex_ref_addr, long image_size_addr, long uv0_addr, long uv1_addr);
+    public static void internal_native_Image(long tex_ref_addr, long image_size_addr, long uv0_addr, long uv1_addr) {
+        imgui.natives.JNI_ImGui.internal_native_Image(tex_ref_addr, image_size_addr, uv0_addr, uv1_addr);
+    }
 
     public static void Image(ImTextureRef tex_ref, ImVec2 image_size, ImVec2 uv0) {
         internal_native_Image(tex_ref.native_address, image_size.native_address, uv0.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::Image(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )image_size_addr), *((ImVec2* )uv0_addr));
-*/
-    public static native void internal_native_Image(long tex_ref_addr, long image_size_addr, long uv0_addr);
+    public static void internal_native_Image(long tex_ref_addr, long image_size_addr, long uv0_addr) {
+        imgui.natives.JNI_ImGui.internal_native_Image(tex_ref_addr, image_size_addr, uv0_addr);
+    }
 
     public static void Image(ImTextureRef tex_ref, ImVec2 image_size) {
         internal_native_Image(tex_ref.native_address, image_size.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::Image(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )image_size_addr));
-*/
-    public static native void internal_native_Image(long tex_ref_addr, long image_size_addr);
+    public static void internal_native_Image(long tex_ref_addr, long image_size_addr) {
+        imgui.natives.JNI_ImGui.internal_native_Image(tex_ref_addr, image_size_addr);
+    }
 
     public static void ImageWithBg(ImTextureRef tex_ref, ImVec2 image_size, ImVec2 uv0, ImVec2 uv1, ImVec4 bg_col, ImVec4 tint_col) {
         internal_native_ImageWithBg(tex_ref.native_address, image_size.native_address, uv0.native_address, uv1.native_address, bg_col.native_address, tint_col.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ImageWithBg(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )image_size_addr), *((ImVec2* )uv0_addr), *((ImVec2* )uv1_addr), *((ImVec4* )bg_col_addr), *((ImVec4* )tint_col_addr));
-*/
-    public static native void internal_native_ImageWithBg(long tex_ref_addr, long image_size_addr, long uv0_addr, long uv1_addr, long bg_col_addr, long tint_col_addr);
+    public static void internal_native_ImageWithBg(long tex_ref_addr, long image_size_addr, long uv0_addr, long uv1_addr, long bg_col_addr, long tint_col_addr) {
+        imgui.natives.JNI_ImGui.internal_native_ImageWithBg(tex_ref_addr, image_size_addr, uv0_addr, uv1_addr, bg_col_addr, tint_col_addr);
+    }
 
     public static void ImageWithBg(ImTextureRef tex_ref, ImVec2 image_size, ImVec2 uv0, ImVec2 uv1, ImVec4 bg_col) {
         internal_native_ImageWithBg(tex_ref.native_address, image_size.native_address, uv0.native_address, uv1.native_address, bg_col.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ImageWithBg(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )image_size_addr), *((ImVec2* )uv0_addr), *((ImVec2* )uv1_addr), *((ImVec4* )bg_col_addr));
-*/
-    public static native void internal_native_ImageWithBg(long tex_ref_addr, long image_size_addr, long uv0_addr, long uv1_addr, long bg_col_addr);
+    public static void internal_native_ImageWithBg(long tex_ref_addr, long image_size_addr, long uv0_addr, long uv1_addr, long bg_col_addr) {
+        imgui.natives.JNI_ImGui.internal_native_ImageWithBg(tex_ref_addr, image_size_addr, uv0_addr, uv1_addr, bg_col_addr);
+    }
 
     public static void ImageWithBg(ImTextureRef tex_ref, ImVec2 image_size, ImVec2 uv0, ImVec2 uv1) {
         internal_native_ImageWithBg(tex_ref.native_address, image_size.native_address, uv0.native_address, uv1.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ImageWithBg(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )image_size_addr), *((ImVec2* )uv0_addr), *((ImVec2* )uv1_addr));
-*/
-    public static native void internal_native_ImageWithBg(long tex_ref_addr, long image_size_addr, long uv0_addr, long uv1_addr);
+    public static void internal_native_ImageWithBg(long tex_ref_addr, long image_size_addr, long uv0_addr, long uv1_addr) {
+        imgui.natives.JNI_ImGui.internal_native_ImageWithBg(tex_ref_addr, image_size_addr, uv0_addr, uv1_addr);
+    }
 
     public static void ImageWithBg(ImTextureRef tex_ref, ImVec2 image_size, ImVec2 uv0) {
         internal_native_ImageWithBg(tex_ref.native_address, image_size.native_address, uv0.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ImageWithBg(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )image_size_addr), *((ImVec2* )uv0_addr));
-*/
-    public static native void internal_native_ImageWithBg(long tex_ref_addr, long image_size_addr, long uv0_addr);
+    public static void internal_native_ImageWithBg(long tex_ref_addr, long image_size_addr, long uv0_addr) {
+        imgui.natives.JNI_ImGui.internal_native_ImageWithBg(tex_ref_addr, image_size_addr, uv0_addr);
+    }
 
     public static void ImageWithBg(ImTextureRef tex_ref, ImVec2 image_size) {
         internal_native_ImageWithBg(tex_ref.native_address, image_size.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ImageWithBg(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )image_size_addr));
-*/
-    public static native void internal_native_ImageWithBg(long tex_ref_addr, long image_size_addr);
+    public static void internal_native_ImageWithBg(long tex_ref_addr, long image_size_addr) {
+        imgui.natives.JNI_ImGui.internal_native_ImageWithBg(tex_ref_addr, image_size_addr);
+    }
 
     public static boolean ImageButton(String str_id, ImTextureRef tex_ref, ImVec2 image_size, ImVec2 uv0, ImVec2 uv1, ImVec4 bg_col, ImVec4 tint_col) {
         return internal_native_ImageButton(str_id, tex_ref.native_address, image_size.native_address, uv0.native_address, uv1.native_address, bg_col.native_address, tint_col.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::ImageButton(str_id, *((ImTextureRef* )tex_ref_addr), *((ImVec2* )image_size_addr), *((ImVec2* )uv0_addr), *((ImVec2* )uv1_addr), *((ImVec4* )bg_col_addr), *((ImVec4* )tint_col_addr));
-*/
-    public static native boolean internal_native_ImageButton(String str_id, long tex_ref_addr, long image_size_addr, long uv0_addr, long uv1_addr, long bg_col_addr, long tint_col_addr);
+    public static boolean internal_native_ImageButton(String str_id, long tex_ref_addr, long image_size_addr, long uv0_addr, long uv1_addr, long bg_col_addr, long tint_col_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_ImageButton(str_id, tex_ref_addr, image_size_addr, uv0_addr, uv1_addr, bg_col_addr, tint_col_addr);
+    }
 
     public static boolean ImageButton(String str_id, ImTextureRef tex_ref, ImVec2 image_size, ImVec2 uv0, ImVec2 uv1, ImVec4 bg_col) {
         return internal_native_ImageButton(str_id, tex_ref.native_address, image_size.native_address, uv0.native_address, uv1.native_address, bg_col.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::ImageButton(str_id, *((ImTextureRef* )tex_ref_addr), *((ImVec2* )image_size_addr), *((ImVec2* )uv0_addr), *((ImVec2* )uv1_addr), *((ImVec4* )bg_col_addr));
-*/
-    public static native boolean internal_native_ImageButton(String str_id, long tex_ref_addr, long image_size_addr, long uv0_addr, long uv1_addr, long bg_col_addr);
+    public static boolean internal_native_ImageButton(String str_id, long tex_ref_addr, long image_size_addr, long uv0_addr, long uv1_addr, long bg_col_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_ImageButton(str_id, tex_ref_addr, image_size_addr, uv0_addr, uv1_addr, bg_col_addr);
+    }
 
     public static boolean ImageButton(String str_id, ImTextureRef tex_ref, ImVec2 image_size, ImVec2 uv0, ImVec2 uv1) {
         return internal_native_ImageButton(str_id, tex_ref.native_address, image_size.native_address, uv0.native_address, uv1.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::ImageButton(str_id, *((ImTextureRef* )tex_ref_addr), *((ImVec2* )image_size_addr), *((ImVec2* )uv0_addr), *((ImVec2* )uv1_addr));
-*/
-    public static native boolean internal_native_ImageButton(String str_id, long tex_ref_addr, long image_size_addr, long uv0_addr, long uv1_addr);
+    public static boolean internal_native_ImageButton(String str_id, long tex_ref_addr, long image_size_addr, long uv0_addr, long uv1_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_ImageButton(str_id, tex_ref_addr, image_size_addr, uv0_addr, uv1_addr);
+    }
 
     public static boolean ImageButton(String str_id, ImTextureRef tex_ref, ImVec2 image_size, ImVec2 uv0) {
         return internal_native_ImageButton(str_id, tex_ref.native_address, image_size.native_address, uv0.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::ImageButton(str_id, *((ImTextureRef* )tex_ref_addr), *((ImVec2* )image_size_addr), *((ImVec2* )uv0_addr));
-*/
-    public static native boolean internal_native_ImageButton(String str_id, long tex_ref_addr, long image_size_addr, long uv0_addr);
+    public static boolean internal_native_ImageButton(String str_id, long tex_ref_addr, long image_size_addr, long uv0_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_ImageButton(str_id, tex_ref_addr, image_size_addr, uv0_addr);
+    }
 
     public static boolean ImageButton(String str_id, ImTextureRef tex_ref, ImVec2 image_size) {
         return internal_native_ImageButton(str_id, tex_ref.native_address, image_size.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::ImageButton(str_id, *((ImTextureRef* )tex_ref_addr), *((ImVec2* )image_size_addr));
-*/
-    public static native boolean internal_native_ImageButton(String str_id, long tex_ref_addr, long image_size_addr);
+    public static boolean internal_native_ImageButton(String str_id, long tex_ref_addr, long image_size_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_ImageButton(str_id, tex_ref_addr, image_size_addr);
+    }
 
     public static boolean BeginCombo(String label, String preview_value, ImGuiComboFlags flags) {
         return internal_native_BeginCombo(label, preview_value, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginCombo(label, preview_value, (::ImGuiComboFlags)flags);
-*/
-    public static native boolean internal_native_BeginCombo(String label, String preview_value, int flags);
+    public static boolean internal_native_BeginCombo(String label, String preview_value, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginCombo(label, preview_value, flags);
+    }
 
     public static boolean BeginCombo(String label, String preview_value) {
         return internal_native_BeginCombo(label, preview_value);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginCombo(label, preview_value);
-*/
-    public static native boolean internal_native_BeginCombo(String label, String preview_value);
+    public static boolean internal_native_BeginCombo(String label, String preview_value) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginCombo(label, preview_value);
+    }
 
     public static void EndCombo() {
         internal_native_EndCombo();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::EndCombo();
-*/
-    public static native void internal_native_EndCombo();
+    public static void internal_native_EndCombo() {
+        imgui.natives.JNI_ImGui.internal_native_EndCombo();
+    }
 
     public static boolean Combo(String label, NativeIntArray current_item, String items_separated_by_zeros, int popup_max_height_in_items) {
         return internal_native_Combo(label, current_item.native_void_address, items_separated_by_zeros, popup_max_height_in_items);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::Combo(label, (int*)current_item_addr, items_separated_by_zeros, (int)popup_max_height_in_items);
-*/
-    public static native boolean internal_native_Combo(String label, long current_item_addr, String items_separated_by_zeros, int popup_max_height_in_items);
+    public static boolean internal_native_Combo(String label, long current_item_addr, String items_separated_by_zeros, int popup_max_height_in_items) {
+        return imgui.natives.JNI_ImGui.internal_native_Combo(label, current_item_addr, items_separated_by_zeros, popup_max_height_in_items);
+    }
 
     public static boolean Combo(String label, NativeIntArray current_item, String items_separated_by_zeros) {
         return internal_native_Combo(label, current_item.native_void_address, items_separated_by_zeros);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::Combo(label, (int*)current_item_addr, items_separated_by_zeros);
-*/
-    public static native boolean internal_native_Combo(String label, long current_item_addr, String items_separated_by_zeros);
+    public static boolean internal_native_Combo(String label, long current_item_addr, String items_separated_by_zeros) {
+        return imgui.natives.JNI_ImGui.internal_native_Combo(label, current_item_addr, items_separated_by_zeros);
+    }
 
     public static boolean DragFloat(String label, NativeFloatArray v, float v_speed, float v_min, float v_max, String format, ImGuiSliderFlags flags) {
         return internal_native_DragFloat(label, v.native_void_address, v_speed, v_min, v_max, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloat(label, (float*)v_addr, (float)v_speed, (float)v_min, (float)v_max, format, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_DragFloat(String label, long v_addr, float v_speed, float v_min, float v_max, String format, int flags);
+    public static boolean internal_native_DragFloat(String label, long v_addr, float v_speed, float v_min, float v_max, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloat(label, v_addr, v_speed, v_min, v_max, format, flags);
+    }
 
     public static boolean DragFloat(String label, NativeFloatArray v, float v_speed, float v_min, float v_max, String format) {
         return internal_native_DragFloat(label, v.native_void_address, v_speed, v_min, v_max, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloat(label, (float*)v_addr, (float)v_speed, (float)v_min, (float)v_max, format);
-*/
-    public static native boolean internal_native_DragFloat(String label, long v_addr, float v_speed, float v_min, float v_max, String format);
+    public static boolean internal_native_DragFloat(String label, long v_addr, float v_speed, float v_min, float v_max, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloat(label, v_addr, v_speed, v_min, v_max, format);
+    }
 
     public static boolean DragFloat(String label, NativeFloatArray v, float v_speed, float v_min, float v_max) {
         return internal_native_DragFloat(label, v.native_void_address, v_speed, v_min, v_max);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloat(label, (float*)v_addr, (float)v_speed, (float)v_min, (float)v_max);
-*/
-    public static native boolean internal_native_DragFloat(String label, long v_addr, float v_speed, float v_min, float v_max);
+    public static boolean internal_native_DragFloat(String label, long v_addr, float v_speed, float v_min, float v_max) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloat(label, v_addr, v_speed, v_min, v_max);
+    }
 
     public static boolean DragFloat(String label, NativeFloatArray v, float v_speed, float v_min) {
         return internal_native_DragFloat(label, v.native_void_address, v_speed, v_min);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloat(label, (float*)v_addr, (float)v_speed, (float)v_min);
-*/
-    public static native boolean internal_native_DragFloat(String label, long v_addr, float v_speed, float v_min);
+    public static boolean internal_native_DragFloat(String label, long v_addr, float v_speed, float v_min) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloat(label, v_addr, v_speed, v_min);
+    }
 
     public static boolean DragFloat(String label, NativeFloatArray v, float v_speed) {
         return internal_native_DragFloat(label, v.native_void_address, v_speed);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloat(label, (float*)v_addr, (float)v_speed);
-*/
-    public static native boolean internal_native_DragFloat(String label, long v_addr, float v_speed);
+    public static boolean internal_native_DragFloat(String label, long v_addr, float v_speed) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloat(label, v_addr, v_speed);
+    }
 
     public static boolean DragFloat(String label, NativeFloatArray v) {
         return internal_native_DragFloat(label, v.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloat(label, (float*)v_addr);
-*/
-    public static native boolean internal_native_DragFloat(String label, long v_addr);
+    public static boolean internal_native_DragFloat(String label, long v_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloat(label, v_addr);
+    }
 
     public static boolean DragFloat2(String label, NativeFloatArray v, float v_speed, float v_min, float v_max, String format, ImGuiSliderFlags flags) {
         return internal_native_DragFloat2(label, v.native_void_address, v_speed, v_min, v_max, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloat2(label, (float*)v_addr, (float)v_speed, (float)v_min, (float)v_max, format, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_DragFloat2(String label, long v_addr, float v_speed, float v_min, float v_max, String format, int flags);
+    public static boolean internal_native_DragFloat2(String label, long v_addr, float v_speed, float v_min, float v_max, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloat2(label, v_addr, v_speed, v_min, v_max, format, flags);
+    }
 
     public static boolean DragFloat2(String label, NativeFloatArray v, float v_speed, float v_min, float v_max, String format) {
         return internal_native_DragFloat2(label, v.native_void_address, v_speed, v_min, v_max, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloat2(label, (float*)v_addr, (float)v_speed, (float)v_min, (float)v_max, format);
-*/
-    public static native boolean internal_native_DragFloat2(String label, long v_addr, float v_speed, float v_min, float v_max, String format);
+    public static boolean internal_native_DragFloat2(String label, long v_addr, float v_speed, float v_min, float v_max, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloat2(label, v_addr, v_speed, v_min, v_max, format);
+    }
 
     public static boolean DragFloat2(String label, NativeFloatArray v, float v_speed, float v_min, float v_max) {
         return internal_native_DragFloat2(label, v.native_void_address, v_speed, v_min, v_max);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloat2(label, (float*)v_addr, (float)v_speed, (float)v_min, (float)v_max);
-*/
-    public static native boolean internal_native_DragFloat2(String label, long v_addr, float v_speed, float v_min, float v_max);
+    public static boolean internal_native_DragFloat2(String label, long v_addr, float v_speed, float v_min, float v_max) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloat2(label, v_addr, v_speed, v_min, v_max);
+    }
 
     public static boolean DragFloat2(String label, NativeFloatArray v, float v_speed, float v_min) {
         return internal_native_DragFloat2(label, v.native_void_address, v_speed, v_min);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloat2(label, (float*)v_addr, (float)v_speed, (float)v_min);
-*/
-    public static native boolean internal_native_DragFloat2(String label, long v_addr, float v_speed, float v_min);
+    public static boolean internal_native_DragFloat2(String label, long v_addr, float v_speed, float v_min) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloat2(label, v_addr, v_speed, v_min);
+    }
 
     public static boolean DragFloat2(String label, NativeFloatArray v, float v_speed) {
         return internal_native_DragFloat2(label, v.native_void_address, v_speed);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloat2(label, (float*)v_addr, (float)v_speed);
-*/
-    public static native boolean internal_native_DragFloat2(String label, long v_addr, float v_speed);
+    public static boolean internal_native_DragFloat2(String label, long v_addr, float v_speed) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloat2(label, v_addr, v_speed);
+    }
 
     public static boolean DragFloat2(String label, NativeFloatArray v) {
         return internal_native_DragFloat2(label, v.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloat2(label, (float*)v_addr);
-*/
-    public static native boolean internal_native_DragFloat2(String label, long v_addr);
+    public static boolean internal_native_DragFloat2(String label, long v_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloat2(label, v_addr);
+    }
 
     public static boolean DragFloat3(String label, NativeFloatArray v, float v_speed, float v_min, float v_max, String format, ImGuiSliderFlags flags) {
         return internal_native_DragFloat3(label, v.native_void_address, v_speed, v_min, v_max, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloat3(label, (float*)v_addr, (float)v_speed, (float)v_min, (float)v_max, format, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_DragFloat3(String label, long v_addr, float v_speed, float v_min, float v_max, String format, int flags);
+    public static boolean internal_native_DragFloat3(String label, long v_addr, float v_speed, float v_min, float v_max, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloat3(label, v_addr, v_speed, v_min, v_max, format, flags);
+    }
 
     public static boolean DragFloat3(String label, NativeFloatArray v, float v_speed, float v_min, float v_max, String format) {
         return internal_native_DragFloat3(label, v.native_void_address, v_speed, v_min, v_max, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloat3(label, (float*)v_addr, (float)v_speed, (float)v_min, (float)v_max, format);
-*/
-    public static native boolean internal_native_DragFloat3(String label, long v_addr, float v_speed, float v_min, float v_max, String format);
+    public static boolean internal_native_DragFloat3(String label, long v_addr, float v_speed, float v_min, float v_max, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloat3(label, v_addr, v_speed, v_min, v_max, format);
+    }
 
     public static boolean DragFloat3(String label, NativeFloatArray v, float v_speed, float v_min, float v_max) {
         return internal_native_DragFloat3(label, v.native_void_address, v_speed, v_min, v_max);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloat3(label, (float*)v_addr, (float)v_speed, (float)v_min, (float)v_max);
-*/
-    public static native boolean internal_native_DragFloat3(String label, long v_addr, float v_speed, float v_min, float v_max);
+    public static boolean internal_native_DragFloat3(String label, long v_addr, float v_speed, float v_min, float v_max) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloat3(label, v_addr, v_speed, v_min, v_max);
+    }
 
     public static boolean DragFloat3(String label, NativeFloatArray v, float v_speed, float v_min) {
         return internal_native_DragFloat3(label, v.native_void_address, v_speed, v_min);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloat3(label, (float*)v_addr, (float)v_speed, (float)v_min);
-*/
-    public static native boolean internal_native_DragFloat3(String label, long v_addr, float v_speed, float v_min);
+    public static boolean internal_native_DragFloat3(String label, long v_addr, float v_speed, float v_min) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloat3(label, v_addr, v_speed, v_min);
+    }
 
     public static boolean DragFloat3(String label, NativeFloatArray v, float v_speed) {
         return internal_native_DragFloat3(label, v.native_void_address, v_speed);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloat3(label, (float*)v_addr, (float)v_speed);
-*/
-    public static native boolean internal_native_DragFloat3(String label, long v_addr, float v_speed);
+    public static boolean internal_native_DragFloat3(String label, long v_addr, float v_speed) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloat3(label, v_addr, v_speed);
+    }
 
     public static boolean DragFloat3(String label, NativeFloatArray v) {
         return internal_native_DragFloat3(label, v.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloat3(label, (float*)v_addr);
-*/
-    public static native boolean internal_native_DragFloat3(String label, long v_addr);
+    public static boolean internal_native_DragFloat3(String label, long v_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloat3(label, v_addr);
+    }
 
     public static boolean DragFloat4(String label, NativeFloatArray v, float v_speed, float v_min, float v_max, String format, ImGuiSliderFlags flags) {
         return internal_native_DragFloat4(label, v.native_void_address, v_speed, v_min, v_max, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloat4(label, (float*)v_addr, (float)v_speed, (float)v_min, (float)v_max, format, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_DragFloat4(String label, long v_addr, float v_speed, float v_min, float v_max, String format, int flags);
+    public static boolean internal_native_DragFloat4(String label, long v_addr, float v_speed, float v_min, float v_max, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloat4(label, v_addr, v_speed, v_min, v_max, format, flags);
+    }
 
     public static boolean DragFloat4(String label, NativeFloatArray v, float v_speed, float v_min, float v_max, String format) {
         return internal_native_DragFloat4(label, v.native_void_address, v_speed, v_min, v_max, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloat4(label, (float*)v_addr, (float)v_speed, (float)v_min, (float)v_max, format);
-*/
-    public static native boolean internal_native_DragFloat4(String label, long v_addr, float v_speed, float v_min, float v_max, String format);
+    public static boolean internal_native_DragFloat4(String label, long v_addr, float v_speed, float v_min, float v_max, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloat4(label, v_addr, v_speed, v_min, v_max, format);
+    }
 
     public static boolean DragFloat4(String label, NativeFloatArray v, float v_speed, float v_min, float v_max) {
         return internal_native_DragFloat4(label, v.native_void_address, v_speed, v_min, v_max);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloat4(label, (float*)v_addr, (float)v_speed, (float)v_min, (float)v_max);
-*/
-    public static native boolean internal_native_DragFloat4(String label, long v_addr, float v_speed, float v_min, float v_max);
+    public static boolean internal_native_DragFloat4(String label, long v_addr, float v_speed, float v_min, float v_max) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloat4(label, v_addr, v_speed, v_min, v_max);
+    }
 
     public static boolean DragFloat4(String label, NativeFloatArray v, float v_speed, float v_min) {
         return internal_native_DragFloat4(label, v.native_void_address, v_speed, v_min);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloat4(label, (float*)v_addr, (float)v_speed, (float)v_min);
-*/
-    public static native boolean internal_native_DragFloat4(String label, long v_addr, float v_speed, float v_min);
+    public static boolean internal_native_DragFloat4(String label, long v_addr, float v_speed, float v_min) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloat4(label, v_addr, v_speed, v_min);
+    }
 
     public static boolean DragFloat4(String label, NativeFloatArray v, float v_speed) {
         return internal_native_DragFloat4(label, v.native_void_address, v_speed);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloat4(label, (float*)v_addr, (float)v_speed);
-*/
-    public static native boolean internal_native_DragFloat4(String label, long v_addr, float v_speed);
+    public static boolean internal_native_DragFloat4(String label, long v_addr, float v_speed) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloat4(label, v_addr, v_speed);
+    }
 
     public static boolean DragFloat4(String label, NativeFloatArray v) {
         return internal_native_DragFloat4(label, v.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloat4(label, (float*)v_addr);
-*/
-    public static native boolean internal_native_DragFloat4(String label, long v_addr);
+    public static boolean internal_native_DragFloat4(String label, long v_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloat4(label, v_addr);
+    }
 
     public static boolean DragFloatRange2(String label, NativeFloatArray v_current_min, NativeFloatArray v_current_max, float v_speed, float v_min, float v_max, String format, String format_max, ImGuiSliderFlags flags) {
         return internal_native_DragFloatRange2(label, v_current_min.native_void_address, v_current_max.native_void_address, v_speed, v_min, v_max, format, format_max, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloatRange2(label, (float*)v_current_min_addr, (float*)v_current_max_addr, (float)v_speed, (float)v_min, (float)v_max, format, format_max, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_DragFloatRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed, float v_min, float v_max, String format, String format_max, int flags);
+    public static boolean internal_native_DragFloatRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed, float v_min, float v_max, String format, String format_max, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloatRange2(label, v_current_min_addr, v_current_max_addr, v_speed, v_min, v_max, format, format_max, flags);
+    }
 
     public static boolean DragFloatRange2(String label, NativeFloatArray v_current_min, NativeFloatArray v_current_max, float v_speed, float v_min, float v_max, String format, String format_max) {
         return internal_native_DragFloatRange2(label, v_current_min.native_void_address, v_current_max.native_void_address, v_speed, v_min, v_max, format, format_max);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloatRange2(label, (float*)v_current_min_addr, (float*)v_current_max_addr, (float)v_speed, (float)v_min, (float)v_max, format, format_max);
-*/
-    public static native boolean internal_native_DragFloatRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed, float v_min, float v_max, String format, String format_max);
+    public static boolean internal_native_DragFloatRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed, float v_min, float v_max, String format, String format_max) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloatRange2(label, v_current_min_addr, v_current_max_addr, v_speed, v_min, v_max, format, format_max);
+    }
 
     public static boolean DragFloatRange2(String label, NativeFloatArray v_current_min, NativeFloatArray v_current_max, float v_speed, float v_min, float v_max, String format) {
         return internal_native_DragFloatRange2(label, v_current_min.native_void_address, v_current_max.native_void_address, v_speed, v_min, v_max, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloatRange2(label, (float*)v_current_min_addr, (float*)v_current_max_addr, (float)v_speed, (float)v_min, (float)v_max, format);
-*/
-    public static native boolean internal_native_DragFloatRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed, float v_min, float v_max, String format);
+    public static boolean internal_native_DragFloatRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed, float v_min, float v_max, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloatRange2(label, v_current_min_addr, v_current_max_addr, v_speed, v_min, v_max, format);
+    }
 
     public static boolean DragFloatRange2(String label, NativeFloatArray v_current_min, NativeFloatArray v_current_max, float v_speed, float v_min, float v_max) {
         return internal_native_DragFloatRange2(label, v_current_min.native_void_address, v_current_max.native_void_address, v_speed, v_min, v_max);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloatRange2(label, (float*)v_current_min_addr, (float*)v_current_max_addr, (float)v_speed, (float)v_min, (float)v_max);
-*/
-    public static native boolean internal_native_DragFloatRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed, float v_min, float v_max);
+    public static boolean internal_native_DragFloatRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed, float v_min, float v_max) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloatRange2(label, v_current_min_addr, v_current_max_addr, v_speed, v_min, v_max);
+    }
 
     public static boolean DragFloatRange2(String label, NativeFloatArray v_current_min, NativeFloatArray v_current_max, float v_speed, float v_min) {
         return internal_native_DragFloatRange2(label, v_current_min.native_void_address, v_current_max.native_void_address, v_speed, v_min);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloatRange2(label, (float*)v_current_min_addr, (float*)v_current_max_addr, (float)v_speed, (float)v_min);
-*/
-    public static native boolean internal_native_DragFloatRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed, float v_min);
+    public static boolean internal_native_DragFloatRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed, float v_min) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloatRange2(label, v_current_min_addr, v_current_max_addr, v_speed, v_min);
+    }
 
     public static boolean DragFloatRange2(String label, NativeFloatArray v_current_min, NativeFloatArray v_current_max, float v_speed) {
         return internal_native_DragFloatRange2(label, v_current_min.native_void_address, v_current_max.native_void_address, v_speed);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloatRange2(label, (float*)v_current_min_addr, (float*)v_current_max_addr, (float)v_speed);
-*/
-    public static native boolean internal_native_DragFloatRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed);
+    public static boolean internal_native_DragFloatRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloatRange2(label, v_current_min_addr, v_current_max_addr, v_speed);
+    }
 
     public static boolean DragFloatRange2(String label, NativeFloatArray v_current_min, NativeFloatArray v_current_max) {
         return internal_native_DragFloatRange2(label, v_current_min.native_void_address, v_current_max.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragFloatRange2(label, (float*)v_current_min_addr, (float*)v_current_max_addr);
-*/
-    public static native boolean internal_native_DragFloatRange2(String label, long v_current_min_addr, long v_current_max_addr);
+    public static boolean internal_native_DragFloatRange2(String label, long v_current_min_addr, long v_current_max_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_DragFloatRange2(label, v_current_min_addr, v_current_max_addr);
+    }
 
     public static boolean DragInt(String label, NativeIntArray v, float v_speed, int v_min, int v_max, String format, ImGuiSliderFlags flags) {
         return internal_native_DragInt(label, v.native_void_address, v_speed, v_min, v_max, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragInt(label, (int*)v_addr, (float)v_speed, (int)v_min, (int)v_max, format, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_DragInt(String label, long v_addr, float v_speed, int v_min, int v_max, String format, int flags);
+    public static boolean internal_native_DragInt(String label, long v_addr, float v_speed, int v_min, int v_max, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_DragInt(label, v_addr, v_speed, v_min, v_max, format, flags);
+    }
 
     public static boolean DragInt(String label, NativeIntArray v, float v_speed, int v_min, int v_max, String format) {
         return internal_native_DragInt(label, v.native_void_address, v_speed, v_min, v_max, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragInt(label, (int*)v_addr, (float)v_speed, (int)v_min, (int)v_max, format);
-*/
-    public static native boolean internal_native_DragInt(String label, long v_addr, float v_speed, int v_min, int v_max, String format);
+    public static boolean internal_native_DragInt(String label, long v_addr, float v_speed, int v_min, int v_max, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_DragInt(label, v_addr, v_speed, v_min, v_max, format);
+    }
 
     public static boolean DragInt(String label, NativeIntArray v, float v_speed, int v_min, int v_max) {
         return internal_native_DragInt(label, v.native_void_address, v_speed, v_min, v_max);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragInt(label, (int*)v_addr, (float)v_speed, (int)v_min, (int)v_max);
-*/
-    public static native boolean internal_native_DragInt(String label, long v_addr, float v_speed, int v_min, int v_max);
+    public static boolean internal_native_DragInt(String label, long v_addr, float v_speed, int v_min, int v_max) {
+        return imgui.natives.JNI_ImGui.internal_native_DragInt(label, v_addr, v_speed, v_min, v_max);
+    }
 
     public static boolean DragInt(String label, NativeIntArray v, float v_speed, int v_min) {
         return internal_native_DragInt(label, v.native_void_address, v_speed, v_min);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragInt(label, (int*)v_addr, (float)v_speed, (int)v_min);
-*/
-    public static native boolean internal_native_DragInt(String label, long v_addr, float v_speed, int v_min);
+    public static boolean internal_native_DragInt(String label, long v_addr, float v_speed, int v_min) {
+        return imgui.natives.JNI_ImGui.internal_native_DragInt(label, v_addr, v_speed, v_min);
+    }
 
     public static boolean DragInt(String label, NativeIntArray v, float v_speed) {
         return internal_native_DragInt(label, v.native_void_address, v_speed);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragInt(label, (int*)v_addr, (float)v_speed);
-*/
-    public static native boolean internal_native_DragInt(String label, long v_addr, float v_speed);
+    public static boolean internal_native_DragInt(String label, long v_addr, float v_speed) {
+        return imgui.natives.JNI_ImGui.internal_native_DragInt(label, v_addr, v_speed);
+    }
 
     public static boolean DragInt(String label, NativeIntArray v) {
         return internal_native_DragInt(label, v.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragInt(label, (int*)v_addr);
-*/
-    public static native boolean internal_native_DragInt(String label, long v_addr);
+    public static boolean internal_native_DragInt(String label, long v_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_DragInt(label, v_addr);
+    }
 
     public static boolean DragInt2(String label, NativeIntArray v, float v_speed, int v_min, int v_max, String format, ImGuiSliderFlags flags) {
         return internal_native_DragInt2(label, v.native_void_address, v_speed, v_min, v_max, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragInt2(label, (int*)v_addr, (float)v_speed, (int)v_min, (int)v_max, format, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_DragInt2(String label, long v_addr, float v_speed, int v_min, int v_max, String format, int flags);
+    public static boolean internal_native_DragInt2(String label, long v_addr, float v_speed, int v_min, int v_max, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_DragInt2(label, v_addr, v_speed, v_min, v_max, format, flags);
+    }
 
     public static boolean DragInt2(String label, NativeIntArray v, float v_speed, int v_min, int v_max, String format) {
         return internal_native_DragInt2(label, v.native_void_address, v_speed, v_min, v_max, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragInt2(label, (int*)v_addr, (float)v_speed, (int)v_min, (int)v_max, format);
-*/
-    public static native boolean internal_native_DragInt2(String label, long v_addr, float v_speed, int v_min, int v_max, String format);
+    public static boolean internal_native_DragInt2(String label, long v_addr, float v_speed, int v_min, int v_max, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_DragInt2(label, v_addr, v_speed, v_min, v_max, format);
+    }
 
     public static boolean DragInt2(String label, NativeIntArray v, float v_speed, int v_min, int v_max) {
         return internal_native_DragInt2(label, v.native_void_address, v_speed, v_min, v_max);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragInt2(label, (int*)v_addr, (float)v_speed, (int)v_min, (int)v_max);
-*/
-    public static native boolean internal_native_DragInt2(String label, long v_addr, float v_speed, int v_min, int v_max);
+    public static boolean internal_native_DragInt2(String label, long v_addr, float v_speed, int v_min, int v_max) {
+        return imgui.natives.JNI_ImGui.internal_native_DragInt2(label, v_addr, v_speed, v_min, v_max);
+    }
 
     public static boolean DragInt2(String label, NativeIntArray v, float v_speed, int v_min) {
         return internal_native_DragInt2(label, v.native_void_address, v_speed, v_min);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragInt2(label, (int*)v_addr, (float)v_speed, (int)v_min);
-*/
-    public static native boolean internal_native_DragInt2(String label, long v_addr, float v_speed, int v_min);
+    public static boolean internal_native_DragInt2(String label, long v_addr, float v_speed, int v_min) {
+        return imgui.natives.JNI_ImGui.internal_native_DragInt2(label, v_addr, v_speed, v_min);
+    }
 
     public static boolean DragInt2(String label, NativeIntArray v, float v_speed) {
         return internal_native_DragInt2(label, v.native_void_address, v_speed);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragInt2(label, (int*)v_addr, (float)v_speed);
-*/
-    public static native boolean internal_native_DragInt2(String label, long v_addr, float v_speed);
+    public static boolean internal_native_DragInt2(String label, long v_addr, float v_speed) {
+        return imgui.natives.JNI_ImGui.internal_native_DragInt2(label, v_addr, v_speed);
+    }
 
     public static boolean DragInt2(String label, NativeIntArray v) {
         return internal_native_DragInt2(label, v.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragInt2(label, (int*)v_addr);
-*/
-    public static native boolean internal_native_DragInt2(String label, long v_addr);
+    public static boolean internal_native_DragInt2(String label, long v_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_DragInt2(label, v_addr);
+    }
 
     public static boolean DragInt3(String label, NativeIntArray v, float v_speed, int v_min, int v_max, String format, ImGuiSliderFlags flags) {
         return internal_native_DragInt3(label, v.native_void_address, v_speed, v_min, v_max, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragInt3(label, (int*)v_addr, (float)v_speed, (int)v_min, (int)v_max, format, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_DragInt3(String label, long v_addr, float v_speed, int v_min, int v_max, String format, int flags);
+    public static boolean internal_native_DragInt3(String label, long v_addr, float v_speed, int v_min, int v_max, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_DragInt3(label, v_addr, v_speed, v_min, v_max, format, flags);
+    }
 
     public static boolean DragInt3(String label, NativeIntArray v, float v_speed, int v_min, int v_max, String format) {
         return internal_native_DragInt3(label, v.native_void_address, v_speed, v_min, v_max, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragInt3(label, (int*)v_addr, (float)v_speed, (int)v_min, (int)v_max, format);
-*/
-    public static native boolean internal_native_DragInt3(String label, long v_addr, float v_speed, int v_min, int v_max, String format);
+    public static boolean internal_native_DragInt3(String label, long v_addr, float v_speed, int v_min, int v_max, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_DragInt3(label, v_addr, v_speed, v_min, v_max, format);
+    }
 
     public static boolean DragInt3(String label, NativeIntArray v, float v_speed, int v_min, int v_max) {
         return internal_native_DragInt3(label, v.native_void_address, v_speed, v_min, v_max);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragInt3(label, (int*)v_addr, (float)v_speed, (int)v_min, (int)v_max);
-*/
-    public static native boolean internal_native_DragInt3(String label, long v_addr, float v_speed, int v_min, int v_max);
+    public static boolean internal_native_DragInt3(String label, long v_addr, float v_speed, int v_min, int v_max) {
+        return imgui.natives.JNI_ImGui.internal_native_DragInt3(label, v_addr, v_speed, v_min, v_max);
+    }
 
     public static boolean DragInt3(String label, NativeIntArray v, float v_speed, int v_min) {
         return internal_native_DragInt3(label, v.native_void_address, v_speed, v_min);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragInt3(label, (int*)v_addr, (float)v_speed, (int)v_min);
-*/
-    public static native boolean internal_native_DragInt3(String label, long v_addr, float v_speed, int v_min);
+    public static boolean internal_native_DragInt3(String label, long v_addr, float v_speed, int v_min) {
+        return imgui.natives.JNI_ImGui.internal_native_DragInt3(label, v_addr, v_speed, v_min);
+    }
 
     public static boolean DragInt3(String label, NativeIntArray v, float v_speed) {
         return internal_native_DragInt3(label, v.native_void_address, v_speed);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragInt3(label, (int*)v_addr, (float)v_speed);
-*/
-    public static native boolean internal_native_DragInt3(String label, long v_addr, float v_speed);
+    public static boolean internal_native_DragInt3(String label, long v_addr, float v_speed) {
+        return imgui.natives.JNI_ImGui.internal_native_DragInt3(label, v_addr, v_speed);
+    }
 
     public static boolean DragInt3(String label, NativeIntArray v) {
         return internal_native_DragInt3(label, v.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragInt3(label, (int*)v_addr);
-*/
-    public static native boolean internal_native_DragInt3(String label, long v_addr);
+    public static boolean internal_native_DragInt3(String label, long v_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_DragInt3(label, v_addr);
+    }
 
     public static boolean DragInt4(String label, NativeIntArray v, float v_speed, int v_min, int v_max, String format, ImGuiSliderFlags flags) {
         return internal_native_DragInt4(label, v.native_void_address, v_speed, v_min, v_max, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragInt4(label, (int*)v_addr, (float)v_speed, (int)v_min, (int)v_max, format, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_DragInt4(String label, long v_addr, float v_speed, int v_min, int v_max, String format, int flags);
+    public static boolean internal_native_DragInt4(String label, long v_addr, float v_speed, int v_min, int v_max, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_DragInt4(label, v_addr, v_speed, v_min, v_max, format, flags);
+    }
 
     public static boolean DragInt4(String label, NativeIntArray v, float v_speed, int v_min, int v_max, String format) {
         return internal_native_DragInt4(label, v.native_void_address, v_speed, v_min, v_max, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragInt4(label, (int*)v_addr, (float)v_speed, (int)v_min, (int)v_max, format);
-*/
-    public static native boolean internal_native_DragInt4(String label, long v_addr, float v_speed, int v_min, int v_max, String format);
+    public static boolean internal_native_DragInt4(String label, long v_addr, float v_speed, int v_min, int v_max, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_DragInt4(label, v_addr, v_speed, v_min, v_max, format);
+    }
 
     public static boolean DragInt4(String label, NativeIntArray v, float v_speed, int v_min, int v_max) {
         return internal_native_DragInt4(label, v.native_void_address, v_speed, v_min, v_max);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragInt4(label, (int*)v_addr, (float)v_speed, (int)v_min, (int)v_max);
-*/
-    public static native boolean internal_native_DragInt4(String label, long v_addr, float v_speed, int v_min, int v_max);
+    public static boolean internal_native_DragInt4(String label, long v_addr, float v_speed, int v_min, int v_max) {
+        return imgui.natives.JNI_ImGui.internal_native_DragInt4(label, v_addr, v_speed, v_min, v_max);
+    }
 
     public static boolean DragInt4(String label, NativeIntArray v, float v_speed, int v_min) {
         return internal_native_DragInt4(label, v.native_void_address, v_speed, v_min);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragInt4(label, (int*)v_addr, (float)v_speed, (int)v_min);
-*/
-    public static native boolean internal_native_DragInt4(String label, long v_addr, float v_speed, int v_min);
+    public static boolean internal_native_DragInt4(String label, long v_addr, float v_speed, int v_min) {
+        return imgui.natives.JNI_ImGui.internal_native_DragInt4(label, v_addr, v_speed, v_min);
+    }
 
     public static boolean DragInt4(String label, NativeIntArray v, float v_speed) {
         return internal_native_DragInt4(label, v.native_void_address, v_speed);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragInt4(label, (int*)v_addr, (float)v_speed);
-*/
-    public static native boolean internal_native_DragInt4(String label, long v_addr, float v_speed);
+    public static boolean internal_native_DragInt4(String label, long v_addr, float v_speed) {
+        return imgui.natives.JNI_ImGui.internal_native_DragInt4(label, v_addr, v_speed);
+    }
 
     public static boolean DragInt4(String label, NativeIntArray v) {
         return internal_native_DragInt4(label, v.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragInt4(label, (int*)v_addr);
-*/
-    public static native boolean internal_native_DragInt4(String label, long v_addr);
+    public static boolean internal_native_DragInt4(String label, long v_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_DragInt4(label, v_addr);
+    }
 
     public static boolean DragIntRange2(String label, NativeIntArray v_current_min, NativeIntArray v_current_max, float v_speed, int v_min, int v_max, String format, String format_max, ImGuiSliderFlags flags) {
         return internal_native_DragIntRange2(label, v_current_min.native_void_address, v_current_max.native_void_address, v_speed, v_min, v_max, format, format_max, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragIntRange2(label, (int*)v_current_min_addr, (int*)v_current_max_addr, (float)v_speed, (int)v_min, (int)v_max, format, format_max, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_DragIntRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed, int v_min, int v_max, String format, String format_max, int flags);
+    public static boolean internal_native_DragIntRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed, int v_min, int v_max, String format, String format_max, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_DragIntRange2(label, v_current_min_addr, v_current_max_addr, v_speed, v_min, v_max, format, format_max, flags);
+    }
 
     public static boolean DragIntRange2(String label, NativeIntArray v_current_min, NativeIntArray v_current_max, float v_speed, int v_min, int v_max, String format, String format_max) {
         return internal_native_DragIntRange2(label, v_current_min.native_void_address, v_current_max.native_void_address, v_speed, v_min, v_max, format, format_max);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragIntRange2(label, (int*)v_current_min_addr, (int*)v_current_max_addr, (float)v_speed, (int)v_min, (int)v_max, format, format_max);
-*/
-    public static native boolean internal_native_DragIntRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed, int v_min, int v_max, String format, String format_max);
+    public static boolean internal_native_DragIntRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed, int v_min, int v_max, String format, String format_max) {
+        return imgui.natives.JNI_ImGui.internal_native_DragIntRange2(label, v_current_min_addr, v_current_max_addr, v_speed, v_min, v_max, format, format_max);
+    }
 
     public static boolean DragIntRange2(String label, NativeIntArray v_current_min, NativeIntArray v_current_max, float v_speed, int v_min, int v_max, String format) {
         return internal_native_DragIntRange2(label, v_current_min.native_void_address, v_current_max.native_void_address, v_speed, v_min, v_max, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragIntRange2(label, (int*)v_current_min_addr, (int*)v_current_max_addr, (float)v_speed, (int)v_min, (int)v_max, format);
-*/
-    public static native boolean internal_native_DragIntRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed, int v_min, int v_max, String format);
+    public static boolean internal_native_DragIntRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed, int v_min, int v_max, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_DragIntRange2(label, v_current_min_addr, v_current_max_addr, v_speed, v_min, v_max, format);
+    }
 
     public static boolean DragIntRange2(String label, NativeIntArray v_current_min, NativeIntArray v_current_max, float v_speed, int v_min, int v_max) {
         return internal_native_DragIntRange2(label, v_current_min.native_void_address, v_current_max.native_void_address, v_speed, v_min, v_max);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragIntRange2(label, (int*)v_current_min_addr, (int*)v_current_max_addr, (float)v_speed, (int)v_min, (int)v_max);
-*/
-    public static native boolean internal_native_DragIntRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed, int v_min, int v_max);
+    public static boolean internal_native_DragIntRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed, int v_min, int v_max) {
+        return imgui.natives.JNI_ImGui.internal_native_DragIntRange2(label, v_current_min_addr, v_current_max_addr, v_speed, v_min, v_max);
+    }
 
     public static boolean DragIntRange2(String label, NativeIntArray v_current_min, NativeIntArray v_current_max, float v_speed, int v_min) {
         return internal_native_DragIntRange2(label, v_current_min.native_void_address, v_current_max.native_void_address, v_speed, v_min);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragIntRange2(label, (int*)v_current_min_addr, (int*)v_current_max_addr, (float)v_speed, (int)v_min);
-*/
-    public static native boolean internal_native_DragIntRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed, int v_min);
+    public static boolean internal_native_DragIntRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed, int v_min) {
+        return imgui.natives.JNI_ImGui.internal_native_DragIntRange2(label, v_current_min_addr, v_current_max_addr, v_speed, v_min);
+    }
 
     public static boolean DragIntRange2(String label, NativeIntArray v_current_min, NativeIntArray v_current_max, float v_speed) {
         return internal_native_DragIntRange2(label, v_current_min.native_void_address, v_current_max.native_void_address, v_speed);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragIntRange2(label, (int*)v_current_min_addr, (int*)v_current_max_addr, (float)v_speed);
-*/
-    public static native boolean internal_native_DragIntRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed);
+    public static boolean internal_native_DragIntRange2(String label, long v_current_min_addr, long v_current_max_addr, float v_speed) {
+        return imgui.natives.JNI_ImGui.internal_native_DragIntRange2(label, v_current_min_addr, v_current_max_addr, v_speed);
+    }
 
     public static boolean DragIntRange2(String label, NativeIntArray v_current_min, NativeIntArray v_current_max) {
         return internal_native_DragIntRange2(label, v_current_min.native_void_address, v_current_max.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragIntRange2(label, (int*)v_current_min_addr, (int*)v_current_max_addr);
-*/
-    public static native boolean internal_native_DragIntRange2(String label, long v_current_min_addr, long v_current_max_addr);
+    public static boolean internal_native_DragIntRange2(String label, long v_current_min_addr, long v_current_max_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_DragIntRange2(label, v_current_min_addr, v_current_max_addr);
+    }
 
     public static boolean DragScalar(String label, ImGuiDataType data_type, NativeObject p_data, float v_speed, NativeObject p_min, NativeObject p_max, String format, ImGuiSliderFlags flags) {
         return internal_native_DragScalar(label, data_type.getValue(), p_data.native_void_address, v_speed, p_min.native_void_address, p_max.native_void_address, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragScalar(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (float)v_speed, (void*)p_min_addr, (void*)p_max_addr, format, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_DragScalar(String label, int data_type, long p_data_addr, float v_speed, long p_min_addr, long p_max_addr, String format, int flags);
+    public static boolean internal_native_DragScalar(String label, int data_type, long p_data_addr, float v_speed, long p_min_addr, long p_max_addr, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_DragScalar(label, data_type, p_data_addr, v_speed, p_min_addr, p_max_addr, format, flags);
+    }
 
     public static boolean DragScalar(String label, ImGuiDataType data_type, NativeObject p_data, float v_speed, NativeObject p_min, NativeObject p_max, String format) {
         return internal_native_DragScalar(label, data_type.getValue(), p_data.native_void_address, v_speed, p_min.native_void_address, p_max.native_void_address, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragScalar(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (float)v_speed, (void*)p_min_addr, (void*)p_max_addr, format);
-*/
-    public static native boolean internal_native_DragScalar(String label, int data_type, long p_data_addr, float v_speed, long p_min_addr, long p_max_addr, String format);
+    public static boolean internal_native_DragScalar(String label, int data_type, long p_data_addr, float v_speed, long p_min_addr, long p_max_addr, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_DragScalar(label, data_type, p_data_addr, v_speed, p_min_addr, p_max_addr, format);
+    }
 
     public static boolean DragScalar(String label, ImGuiDataType data_type, NativeObject p_data, float v_speed, NativeObject p_min, NativeObject p_max) {
         return internal_native_DragScalar(label, data_type.getValue(), p_data.native_void_address, v_speed, p_min.native_void_address, p_max.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragScalar(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (float)v_speed, (void*)p_min_addr, (void*)p_max_addr);
-*/
-    public static native boolean internal_native_DragScalar(String label, int data_type, long p_data_addr, float v_speed, long p_min_addr, long p_max_addr);
+    public static boolean internal_native_DragScalar(String label, int data_type, long p_data_addr, float v_speed, long p_min_addr, long p_max_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_DragScalar(label, data_type, p_data_addr, v_speed, p_min_addr, p_max_addr);
+    }
 
     public static boolean DragScalar(String label, ImGuiDataType data_type, NativeObject p_data, float v_speed, NativeObject p_min) {
         return internal_native_DragScalar(label, data_type.getValue(), p_data.native_void_address, v_speed, p_min.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragScalar(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (float)v_speed, (void*)p_min_addr);
-*/
-    public static native boolean internal_native_DragScalar(String label, int data_type, long p_data_addr, float v_speed, long p_min_addr);
+    public static boolean internal_native_DragScalar(String label, int data_type, long p_data_addr, float v_speed, long p_min_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_DragScalar(label, data_type, p_data_addr, v_speed, p_min_addr);
+    }
 
     public static boolean DragScalar(String label, ImGuiDataType data_type, NativeObject p_data, float v_speed) {
         return internal_native_DragScalar(label, data_type.getValue(), p_data.native_void_address, v_speed);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragScalar(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (float)v_speed);
-*/
-    public static native boolean internal_native_DragScalar(String label, int data_type, long p_data_addr, float v_speed);
+    public static boolean internal_native_DragScalar(String label, int data_type, long p_data_addr, float v_speed) {
+        return imgui.natives.JNI_ImGui.internal_native_DragScalar(label, data_type, p_data_addr, v_speed);
+    }
 
     public static boolean DragScalar(String label, ImGuiDataType data_type, NativeObject p_data) {
         return internal_native_DragScalar(label, data_type.getValue(), p_data.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragScalar(label, (::ImGuiDataType)data_type, (void*)p_data_addr);
-*/
-    public static native boolean internal_native_DragScalar(String label, int data_type, long p_data_addr);
+    public static boolean internal_native_DragScalar(String label, int data_type, long p_data_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_DragScalar(label, data_type, p_data_addr);
+    }
 
     public static boolean DragScalarN(String label, ImGuiDataType data_type, NativeObject p_data, int components, float v_speed, NativeObject p_min, NativeObject p_max, String format, ImGuiSliderFlags flags) {
         return internal_native_DragScalarN(label, data_type.getValue(), p_data.native_void_address, components, v_speed, p_min.native_void_address, p_max.native_void_address, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragScalarN(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (int)components, (float)v_speed, (void*)p_min_addr, (void*)p_max_addr, format, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_DragScalarN(String label, int data_type, long p_data_addr, int components, float v_speed, long p_min_addr, long p_max_addr, String format, int flags);
+    public static boolean internal_native_DragScalarN(String label, int data_type, long p_data_addr, int components, float v_speed, long p_min_addr, long p_max_addr, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_DragScalarN(label, data_type, p_data_addr, components, v_speed, p_min_addr, p_max_addr, format, flags);
+    }
 
     public static boolean DragScalarN(String label, ImGuiDataType data_type, NativeObject p_data, int components, float v_speed, NativeObject p_min, NativeObject p_max, String format) {
         return internal_native_DragScalarN(label, data_type.getValue(), p_data.native_void_address, components, v_speed, p_min.native_void_address, p_max.native_void_address, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragScalarN(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (int)components, (float)v_speed, (void*)p_min_addr, (void*)p_max_addr, format);
-*/
-    public static native boolean internal_native_DragScalarN(String label, int data_type, long p_data_addr, int components, float v_speed, long p_min_addr, long p_max_addr, String format);
+    public static boolean internal_native_DragScalarN(String label, int data_type, long p_data_addr, int components, float v_speed, long p_min_addr, long p_max_addr, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_DragScalarN(label, data_type, p_data_addr, components, v_speed, p_min_addr, p_max_addr, format);
+    }
 
     public static boolean DragScalarN(String label, ImGuiDataType data_type, NativeObject p_data, int components, float v_speed, NativeObject p_min, NativeObject p_max) {
         return internal_native_DragScalarN(label, data_type.getValue(), p_data.native_void_address, components, v_speed, p_min.native_void_address, p_max.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragScalarN(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (int)components, (float)v_speed, (void*)p_min_addr, (void*)p_max_addr);
-*/
-    public static native boolean internal_native_DragScalarN(String label, int data_type, long p_data_addr, int components, float v_speed, long p_min_addr, long p_max_addr);
+    public static boolean internal_native_DragScalarN(String label, int data_type, long p_data_addr, int components, float v_speed, long p_min_addr, long p_max_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_DragScalarN(label, data_type, p_data_addr, components, v_speed, p_min_addr, p_max_addr);
+    }
 
     public static boolean DragScalarN(String label, ImGuiDataType data_type, NativeObject p_data, int components, float v_speed, NativeObject p_min) {
         return internal_native_DragScalarN(label, data_type.getValue(), p_data.native_void_address, components, v_speed, p_min.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragScalarN(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (int)components, (float)v_speed, (void*)p_min_addr);
-*/
-    public static native boolean internal_native_DragScalarN(String label, int data_type, long p_data_addr, int components, float v_speed, long p_min_addr);
+    public static boolean internal_native_DragScalarN(String label, int data_type, long p_data_addr, int components, float v_speed, long p_min_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_DragScalarN(label, data_type, p_data_addr, components, v_speed, p_min_addr);
+    }
 
     public static boolean DragScalarN(String label, ImGuiDataType data_type, NativeObject p_data, int components, float v_speed) {
         return internal_native_DragScalarN(label, data_type.getValue(), p_data.native_void_address, components, v_speed);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragScalarN(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (int)components, (float)v_speed);
-*/
-    public static native boolean internal_native_DragScalarN(String label, int data_type, long p_data_addr, int components, float v_speed);
+    public static boolean internal_native_DragScalarN(String label, int data_type, long p_data_addr, int components, float v_speed) {
+        return imgui.natives.JNI_ImGui.internal_native_DragScalarN(label, data_type, p_data_addr, components, v_speed);
+    }
 
     public static boolean DragScalarN(String label, ImGuiDataType data_type, NativeObject p_data, int components) {
         return internal_native_DragScalarN(label, data_type.getValue(), p_data.native_void_address, components);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DragScalarN(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (int)components);
-*/
-    public static native boolean internal_native_DragScalarN(String label, int data_type, long p_data_addr, int components);
+    public static boolean internal_native_DragScalarN(String label, int data_type, long p_data_addr, int components) {
+        return imgui.natives.JNI_ImGui.internal_native_DragScalarN(label, data_type, p_data_addr, components);
+    }
 
     public static boolean SliderFloat(String label, NativeFloatArray v, float v_min, float v_max, String format, ImGuiSliderFlags flags) {
         return internal_native_SliderFloat(label, v.native_void_address, v_min, v_max, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderFloat(label, (float*)v_addr, (float)v_min, (float)v_max, format, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_SliderFloat(String label, long v_addr, float v_min, float v_max, String format, int flags);
+    public static boolean internal_native_SliderFloat(String label, long v_addr, float v_min, float v_max, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderFloat(label, v_addr, v_min, v_max, format, flags);
+    }
 
     public static boolean SliderFloat(String label, NativeFloatArray v, float v_min, float v_max, String format) {
         return internal_native_SliderFloat(label, v.native_void_address, v_min, v_max, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderFloat(label, (float*)v_addr, (float)v_min, (float)v_max, format);
-*/
-    public static native boolean internal_native_SliderFloat(String label, long v_addr, float v_min, float v_max, String format);
+    public static boolean internal_native_SliderFloat(String label, long v_addr, float v_min, float v_max, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderFloat(label, v_addr, v_min, v_max, format);
+    }
 
     public static boolean SliderFloat(String label, NativeFloatArray v, float v_min, float v_max) {
         return internal_native_SliderFloat(label, v.native_void_address, v_min, v_max);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderFloat(label, (float*)v_addr, (float)v_min, (float)v_max);
-*/
-    public static native boolean internal_native_SliderFloat(String label, long v_addr, float v_min, float v_max);
+    public static boolean internal_native_SliderFloat(String label, long v_addr, float v_min, float v_max) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderFloat(label, v_addr, v_min, v_max);
+    }
 
     public static boolean SliderFloat2(String label, NativeFloatArray v, float v_min, float v_max, String format, ImGuiSliderFlags flags) {
         return internal_native_SliderFloat2(label, v.native_void_address, v_min, v_max, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderFloat2(label, (float*)v_addr, (float)v_min, (float)v_max, format, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_SliderFloat2(String label, long v_addr, float v_min, float v_max, String format, int flags);
+    public static boolean internal_native_SliderFloat2(String label, long v_addr, float v_min, float v_max, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderFloat2(label, v_addr, v_min, v_max, format, flags);
+    }
 
     public static boolean SliderFloat2(String label, NativeFloatArray v, float v_min, float v_max, String format) {
         return internal_native_SliderFloat2(label, v.native_void_address, v_min, v_max, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderFloat2(label, (float*)v_addr, (float)v_min, (float)v_max, format);
-*/
-    public static native boolean internal_native_SliderFloat2(String label, long v_addr, float v_min, float v_max, String format);
+    public static boolean internal_native_SliderFloat2(String label, long v_addr, float v_min, float v_max, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderFloat2(label, v_addr, v_min, v_max, format);
+    }
 
     public static boolean SliderFloat2(String label, NativeFloatArray v, float v_min, float v_max) {
         return internal_native_SliderFloat2(label, v.native_void_address, v_min, v_max);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderFloat2(label, (float*)v_addr, (float)v_min, (float)v_max);
-*/
-    public static native boolean internal_native_SliderFloat2(String label, long v_addr, float v_min, float v_max);
+    public static boolean internal_native_SliderFloat2(String label, long v_addr, float v_min, float v_max) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderFloat2(label, v_addr, v_min, v_max);
+    }
 
     public static boolean SliderFloat3(String label, NativeFloatArray v, float v_min, float v_max, String format, ImGuiSliderFlags flags) {
         return internal_native_SliderFloat3(label, v.native_void_address, v_min, v_max, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderFloat3(label, (float*)v_addr, (float)v_min, (float)v_max, format, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_SliderFloat3(String label, long v_addr, float v_min, float v_max, String format, int flags);
+    public static boolean internal_native_SliderFloat3(String label, long v_addr, float v_min, float v_max, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderFloat3(label, v_addr, v_min, v_max, format, flags);
+    }
 
     public static boolean SliderFloat3(String label, NativeFloatArray v, float v_min, float v_max, String format) {
         return internal_native_SliderFloat3(label, v.native_void_address, v_min, v_max, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderFloat3(label, (float*)v_addr, (float)v_min, (float)v_max, format);
-*/
-    public static native boolean internal_native_SliderFloat3(String label, long v_addr, float v_min, float v_max, String format);
+    public static boolean internal_native_SliderFloat3(String label, long v_addr, float v_min, float v_max, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderFloat3(label, v_addr, v_min, v_max, format);
+    }
 
     public static boolean SliderFloat3(String label, NativeFloatArray v, float v_min, float v_max) {
         return internal_native_SliderFloat3(label, v.native_void_address, v_min, v_max);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderFloat3(label, (float*)v_addr, (float)v_min, (float)v_max);
-*/
-    public static native boolean internal_native_SliderFloat3(String label, long v_addr, float v_min, float v_max);
+    public static boolean internal_native_SliderFloat3(String label, long v_addr, float v_min, float v_max) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderFloat3(label, v_addr, v_min, v_max);
+    }
 
     public static boolean SliderFloat4(String label, NativeFloatArray v, float v_min, float v_max, String format, ImGuiSliderFlags flags) {
         return internal_native_SliderFloat4(label, v.native_void_address, v_min, v_max, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderFloat4(label, (float*)v_addr, (float)v_min, (float)v_max, format, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_SliderFloat4(String label, long v_addr, float v_min, float v_max, String format, int flags);
+    public static boolean internal_native_SliderFloat4(String label, long v_addr, float v_min, float v_max, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderFloat4(label, v_addr, v_min, v_max, format, flags);
+    }
 
     public static boolean SliderFloat4(String label, NativeFloatArray v, float v_min, float v_max, String format) {
         return internal_native_SliderFloat4(label, v.native_void_address, v_min, v_max, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderFloat4(label, (float*)v_addr, (float)v_min, (float)v_max, format);
-*/
-    public static native boolean internal_native_SliderFloat4(String label, long v_addr, float v_min, float v_max, String format);
+    public static boolean internal_native_SliderFloat4(String label, long v_addr, float v_min, float v_max, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderFloat4(label, v_addr, v_min, v_max, format);
+    }
 
     public static boolean SliderFloat4(String label, NativeFloatArray v, float v_min, float v_max) {
         return internal_native_SliderFloat4(label, v.native_void_address, v_min, v_max);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderFloat4(label, (float*)v_addr, (float)v_min, (float)v_max);
-*/
-    public static native boolean internal_native_SliderFloat4(String label, long v_addr, float v_min, float v_max);
+    public static boolean internal_native_SliderFloat4(String label, long v_addr, float v_min, float v_max) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderFloat4(label, v_addr, v_min, v_max);
+    }
 
     public static boolean SliderAngle(String label, NativeFloatArray v_rad, float v_degrees_min, float v_degrees_max, String format, ImGuiSliderFlags flags) {
         return internal_native_SliderAngle(label, v_rad.native_void_address, v_degrees_min, v_degrees_max, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderAngle(label, (float*)v_rad_addr, (float)v_degrees_min, (float)v_degrees_max, format, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_SliderAngle(String label, long v_rad_addr, float v_degrees_min, float v_degrees_max, String format, int flags);
+    public static boolean internal_native_SliderAngle(String label, long v_rad_addr, float v_degrees_min, float v_degrees_max, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderAngle(label, v_rad_addr, v_degrees_min, v_degrees_max, format, flags);
+    }
 
     public static boolean SliderAngle(String label, NativeFloatArray v_rad, float v_degrees_min, float v_degrees_max, String format) {
         return internal_native_SliderAngle(label, v_rad.native_void_address, v_degrees_min, v_degrees_max, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderAngle(label, (float*)v_rad_addr, (float)v_degrees_min, (float)v_degrees_max, format);
-*/
-    public static native boolean internal_native_SliderAngle(String label, long v_rad_addr, float v_degrees_min, float v_degrees_max, String format);
+    public static boolean internal_native_SliderAngle(String label, long v_rad_addr, float v_degrees_min, float v_degrees_max, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderAngle(label, v_rad_addr, v_degrees_min, v_degrees_max, format);
+    }
 
     public static boolean SliderAngle(String label, NativeFloatArray v_rad, float v_degrees_min, float v_degrees_max) {
         return internal_native_SliderAngle(label, v_rad.native_void_address, v_degrees_min, v_degrees_max);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderAngle(label, (float*)v_rad_addr, (float)v_degrees_min, (float)v_degrees_max);
-*/
-    public static native boolean internal_native_SliderAngle(String label, long v_rad_addr, float v_degrees_min, float v_degrees_max);
+    public static boolean internal_native_SliderAngle(String label, long v_rad_addr, float v_degrees_min, float v_degrees_max) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderAngle(label, v_rad_addr, v_degrees_min, v_degrees_max);
+    }
 
     public static boolean SliderAngle(String label, NativeFloatArray v_rad, float v_degrees_min) {
         return internal_native_SliderAngle(label, v_rad.native_void_address, v_degrees_min);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderAngle(label, (float*)v_rad_addr, (float)v_degrees_min);
-*/
-    public static native boolean internal_native_SliderAngle(String label, long v_rad_addr, float v_degrees_min);
+    public static boolean internal_native_SliderAngle(String label, long v_rad_addr, float v_degrees_min) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderAngle(label, v_rad_addr, v_degrees_min);
+    }
 
     public static boolean SliderAngle(String label, NativeFloatArray v_rad) {
         return internal_native_SliderAngle(label, v_rad.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderAngle(label, (float*)v_rad_addr);
-*/
-    public static native boolean internal_native_SliderAngle(String label, long v_rad_addr);
+    public static boolean internal_native_SliderAngle(String label, long v_rad_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderAngle(label, v_rad_addr);
+    }
 
     public static boolean SliderInt(String label, NativeIntArray v, int v_min, int v_max, String format, ImGuiSliderFlags flags) {
         return internal_native_SliderInt(label, v.native_void_address, v_min, v_max, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderInt(label, (int*)v_addr, (int)v_min, (int)v_max, format, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_SliderInt(String label, long v_addr, int v_min, int v_max, String format, int flags);
+    public static boolean internal_native_SliderInt(String label, long v_addr, int v_min, int v_max, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderInt(label, v_addr, v_min, v_max, format, flags);
+    }
 
     public static boolean SliderInt(String label, NativeIntArray v, int v_min, int v_max, String format) {
         return internal_native_SliderInt(label, v.native_void_address, v_min, v_max, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderInt(label, (int*)v_addr, (int)v_min, (int)v_max, format);
-*/
-    public static native boolean internal_native_SliderInt(String label, long v_addr, int v_min, int v_max, String format);
+    public static boolean internal_native_SliderInt(String label, long v_addr, int v_min, int v_max, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderInt(label, v_addr, v_min, v_max, format);
+    }
 
     public static boolean SliderInt(String label, NativeIntArray v, int v_min, int v_max) {
         return internal_native_SliderInt(label, v.native_void_address, v_min, v_max);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderInt(label, (int*)v_addr, (int)v_min, (int)v_max);
-*/
-    public static native boolean internal_native_SliderInt(String label, long v_addr, int v_min, int v_max);
+    public static boolean internal_native_SliderInt(String label, long v_addr, int v_min, int v_max) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderInt(label, v_addr, v_min, v_max);
+    }
 
     public static boolean SliderInt2(String label, NativeIntArray v, int v_min, int v_max, String format, ImGuiSliderFlags flags) {
         return internal_native_SliderInt2(label, v.native_void_address, v_min, v_max, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderInt2(label, (int*)v_addr, (int)v_min, (int)v_max, format, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_SliderInt2(String label, long v_addr, int v_min, int v_max, String format, int flags);
+    public static boolean internal_native_SliderInt2(String label, long v_addr, int v_min, int v_max, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderInt2(label, v_addr, v_min, v_max, format, flags);
+    }
 
     public static boolean SliderInt2(String label, NativeIntArray v, int v_min, int v_max, String format) {
         return internal_native_SliderInt2(label, v.native_void_address, v_min, v_max, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderInt2(label, (int*)v_addr, (int)v_min, (int)v_max, format);
-*/
-    public static native boolean internal_native_SliderInt2(String label, long v_addr, int v_min, int v_max, String format);
+    public static boolean internal_native_SliderInt2(String label, long v_addr, int v_min, int v_max, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderInt2(label, v_addr, v_min, v_max, format);
+    }
 
     public static boolean SliderInt2(String label, NativeIntArray v, int v_min, int v_max) {
         return internal_native_SliderInt2(label, v.native_void_address, v_min, v_max);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderInt2(label, (int*)v_addr, (int)v_min, (int)v_max);
-*/
-    public static native boolean internal_native_SliderInt2(String label, long v_addr, int v_min, int v_max);
+    public static boolean internal_native_SliderInt2(String label, long v_addr, int v_min, int v_max) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderInt2(label, v_addr, v_min, v_max);
+    }
 
     public static boolean SliderInt3(String label, NativeIntArray v, int v_min, int v_max, String format, ImGuiSliderFlags flags) {
         return internal_native_SliderInt3(label, v.native_void_address, v_min, v_max, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderInt3(label, (int*)v_addr, (int)v_min, (int)v_max, format, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_SliderInt3(String label, long v_addr, int v_min, int v_max, String format, int flags);
+    public static boolean internal_native_SliderInt3(String label, long v_addr, int v_min, int v_max, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderInt3(label, v_addr, v_min, v_max, format, flags);
+    }
 
     public static boolean SliderInt3(String label, NativeIntArray v, int v_min, int v_max, String format) {
         return internal_native_SliderInt3(label, v.native_void_address, v_min, v_max, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderInt3(label, (int*)v_addr, (int)v_min, (int)v_max, format);
-*/
-    public static native boolean internal_native_SliderInt3(String label, long v_addr, int v_min, int v_max, String format);
+    public static boolean internal_native_SliderInt3(String label, long v_addr, int v_min, int v_max, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderInt3(label, v_addr, v_min, v_max, format);
+    }
 
     public static boolean SliderInt3(String label, NativeIntArray v, int v_min, int v_max) {
         return internal_native_SliderInt3(label, v.native_void_address, v_min, v_max);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderInt3(label, (int*)v_addr, (int)v_min, (int)v_max);
-*/
-    public static native boolean internal_native_SliderInt3(String label, long v_addr, int v_min, int v_max);
+    public static boolean internal_native_SliderInt3(String label, long v_addr, int v_min, int v_max) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderInt3(label, v_addr, v_min, v_max);
+    }
 
     public static boolean SliderInt4(String label, NativeIntArray v, int v_min, int v_max, String format, ImGuiSliderFlags flags) {
         return internal_native_SliderInt4(label, v.native_void_address, v_min, v_max, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderInt4(label, (int*)v_addr, (int)v_min, (int)v_max, format, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_SliderInt4(String label, long v_addr, int v_min, int v_max, String format, int flags);
+    public static boolean internal_native_SliderInt4(String label, long v_addr, int v_min, int v_max, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderInt4(label, v_addr, v_min, v_max, format, flags);
+    }
 
     public static boolean SliderInt4(String label, NativeIntArray v, int v_min, int v_max, String format) {
         return internal_native_SliderInt4(label, v.native_void_address, v_min, v_max, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderInt4(label, (int*)v_addr, (int)v_min, (int)v_max, format);
-*/
-    public static native boolean internal_native_SliderInt4(String label, long v_addr, int v_min, int v_max, String format);
+    public static boolean internal_native_SliderInt4(String label, long v_addr, int v_min, int v_max, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderInt4(label, v_addr, v_min, v_max, format);
+    }
 
     public static boolean SliderInt4(String label, NativeIntArray v, int v_min, int v_max) {
         return internal_native_SliderInt4(label, v.native_void_address, v_min, v_max);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderInt4(label, (int*)v_addr, (int)v_min, (int)v_max);
-*/
-    public static native boolean internal_native_SliderInt4(String label, long v_addr, int v_min, int v_max);
+    public static boolean internal_native_SliderInt4(String label, long v_addr, int v_min, int v_max) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderInt4(label, v_addr, v_min, v_max);
+    }
 
     public static boolean SliderScalar(String label, ImGuiDataType data_type, NativeObject p_data, NativeObject p_min, NativeObject p_max, String format, ImGuiSliderFlags flags) {
         return internal_native_SliderScalar(label, data_type.getValue(), p_data.native_void_address, p_min.native_void_address, p_max.native_void_address, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderScalar(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (void*)p_min_addr, (void*)p_max_addr, format, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_SliderScalar(String label, int data_type, long p_data_addr, long p_min_addr, long p_max_addr, String format, int flags);
+    public static boolean internal_native_SliderScalar(String label, int data_type, long p_data_addr, long p_min_addr, long p_max_addr, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderScalar(label, data_type, p_data_addr, p_min_addr, p_max_addr, format, flags);
+    }
 
     public static boolean SliderScalar(String label, ImGuiDataType data_type, NativeObject p_data, NativeObject p_min, NativeObject p_max, String format) {
         return internal_native_SliderScalar(label, data_type.getValue(), p_data.native_void_address, p_min.native_void_address, p_max.native_void_address, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderScalar(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (void*)p_min_addr, (void*)p_max_addr, format);
-*/
-    public static native boolean internal_native_SliderScalar(String label, int data_type, long p_data_addr, long p_min_addr, long p_max_addr, String format);
+    public static boolean internal_native_SliderScalar(String label, int data_type, long p_data_addr, long p_min_addr, long p_max_addr, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderScalar(label, data_type, p_data_addr, p_min_addr, p_max_addr, format);
+    }
 
     public static boolean SliderScalar(String label, ImGuiDataType data_type, NativeObject p_data, NativeObject p_min, NativeObject p_max) {
         return internal_native_SliderScalar(label, data_type.getValue(), p_data.native_void_address, p_min.native_void_address, p_max.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderScalar(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (void*)p_min_addr, (void*)p_max_addr);
-*/
-    public static native boolean internal_native_SliderScalar(String label, int data_type, long p_data_addr, long p_min_addr, long p_max_addr);
+    public static boolean internal_native_SliderScalar(String label, int data_type, long p_data_addr, long p_min_addr, long p_max_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderScalar(label, data_type, p_data_addr, p_min_addr, p_max_addr);
+    }
 
     public static boolean SliderScalarN(String label, ImGuiDataType data_type, NativeObject p_data, int components, NativeObject p_min, NativeObject p_max, String format, ImGuiSliderFlags flags) {
         return internal_native_SliderScalarN(label, data_type.getValue(), p_data.native_void_address, components, p_min.native_void_address, p_max.native_void_address, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderScalarN(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (int)components, (void*)p_min_addr, (void*)p_max_addr, format, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_SliderScalarN(String label, int data_type, long p_data_addr, int components, long p_min_addr, long p_max_addr, String format, int flags);
+    public static boolean internal_native_SliderScalarN(String label, int data_type, long p_data_addr, int components, long p_min_addr, long p_max_addr, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderScalarN(label, data_type, p_data_addr, components, p_min_addr, p_max_addr, format, flags);
+    }
 
     public static boolean SliderScalarN(String label, ImGuiDataType data_type, NativeObject p_data, int components, NativeObject p_min, NativeObject p_max, String format) {
         return internal_native_SliderScalarN(label, data_type.getValue(), p_data.native_void_address, components, p_min.native_void_address, p_max.native_void_address, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderScalarN(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (int)components, (void*)p_min_addr, (void*)p_max_addr, format);
-*/
-    public static native boolean internal_native_SliderScalarN(String label, int data_type, long p_data_addr, int components, long p_min_addr, long p_max_addr, String format);
+    public static boolean internal_native_SliderScalarN(String label, int data_type, long p_data_addr, int components, long p_min_addr, long p_max_addr, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderScalarN(label, data_type, p_data_addr, components, p_min_addr, p_max_addr, format);
+    }
 
     public static boolean SliderScalarN(String label, ImGuiDataType data_type, NativeObject p_data, int components, NativeObject p_min, NativeObject p_max) {
         return internal_native_SliderScalarN(label, data_type.getValue(), p_data.native_void_address, components, p_min.native_void_address, p_max.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SliderScalarN(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (int)components, (void*)p_min_addr, (void*)p_max_addr);
-*/
-    public static native boolean internal_native_SliderScalarN(String label, int data_type, long p_data_addr, int components, long p_min_addr, long p_max_addr);
+    public static boolean internal_native_SliderScalarN(String label, int data_type, long p_data_addr, int components, long p_min_addr, long p_max_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_SliderScalarN(label, data_type, p_data_addr, components, p_min_addr, p_max_addr);
+    }
 
     public static boolean VSliderFloat(String label, ImVec2 size, NativeFloatArray v, float v_min, float v_max, String format, ImGuiSliderFlags flags) {
         return internal_native_VSliderFloat(label, size.native_address, v.native_void_address, v_min, v_max, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::VSliderFloat(label, *((ImVec2* )size_addr), (float*)v_addr, (float)v_min, (float)v_max, format, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_VSliderFloat(String label, long size_addr, long v_addr, float v_min, float v_max, String format, int flags);
+    public static boolean internal_native_VSliderFloat(String label, long size_addr, long v_addr, float v_min, float v_max, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_VSliderFloat(label, size_addr, v_addr, v_min, v_max, format, flags);
+    }
 
     public static boolean VSliderFloat(String label, ImVec2 size, NativeFloatArray v, float v_min, float v_max, String format) {
         return internal_native_VSliderFloat(label, size.native_address, v.native_void_address, v_min, v_max, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::VSliderFloat(label, *((ImVec2* )size_addr), (float*)v_addr, (float)v_min, (float)v_max, format);
-*/
-    public static native boolean internal_native_VSliderFloat(String label, long size_addr, long v_addr, float v_min, float v_max, String format);
+    public static boolean internal_native_VSliderFloat(String label, long size_addr, long v_addr, float v_min, float v_max, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_VSliderFloat(label, size_addr, v_addr, v_min, v_max, format);
+    }
 
     public static boolean VSliderFloat(String label, ImVec2 size, NativeFloatArray v, float v_min, float v_max) {
         return internal_native_VSliderFloat(label, size.native_address, v.native_void_address, v_min, v_max);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::VSliderFloat(label, *((ImVec2* )size_addr), (float*)v_addr, (float)v_min, (float)v_max);
-*/
-    public static native boolean internal_native_VSliderFloat(String label, long size_addr, long v_addr, float v_min, float v_max);
+    public static boolean internal_native_VSliderFloat(String label, long size_addr, long v_addr, float v_min, float v_max) {
+        return imgui.natives.JNI_ImGui.internal_native_VSliderFloat(label, size_addr, v_addr, v_min, v_max);
+    }
 
     public static boolean VSliderInt(String label, ImVec2 size, NativeIntArray v, int v_min, int v_max, String format, ImGuiSliderFlags flags) {
         return internal_native_VSliderInt(label, size.native_address, v.native_void_address, v_min, v_max, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::VSliderInt(label, *((ImVec2* )size_addr), (int*)v_addr, (int)v_min, (int)v_max, format, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_VSliderInt(String label, long size_addr, long v_addr, int v_min, int v_max, String format, int flags);
+    public static boolean internal_native_VSliderInt(String label, long size_addr, long v_addr, int v_min, int v_max, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_VSliderInt(label, size_addr, v_addr, v_min, v_max, format, flags);
+    }
 
     public static boolean VSliderInt(String label, ImVec2 size, NativeIntArray v, int v_min, int v_max, String format) {
         return internal_native_VSliderInt(label, size.native_address, v.native_void_address, v_min, v_max, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::VSliderInt(label, *((ImVec2* )size_addr), (int*)v_addr, (int)v_min, (int)v_max, format);
-*/
-    public static native boolean internal_native_VSliderInt(String label, long size_addr, long v_addr, int v_min, int v_max, String format);
+    public static boolean internal_native_VSliderInt(String label, long size_addr, long v_addr, int v_min, int v_max, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_VSliderInt(label, size_addr, v_addr, v_min, v_max, format);
+    }
 
     public static boolean VSliderInt(String label, ImVec2 size, NativeIntArray v, int v_min, int v_max) {
         return internal_native_VSliderInt(label, size.native_address, v.native_void_address, v_min, v_max);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::VSliderInt(label, *((ImVec2* )size_addr), (int*)v_addr, (int)v_min, (int)v_max);
-*/
-    public static native boolean internal_native_VSliderInt(String label, long size_addr, long v_addr, int v_min, int v_max);
+    public static boolean internal_native_VSliderInt(String label, long size_addr, long v_addr, int v_min, int v_max) {
+        return imgui.natives.JNI_ImGui.internal_native_VSliderInt(label, size_addr, v_addr, v_min, v_max);
+    }
 
     public static boolean VSliderScalar(String label, ImVec2 size, ImGuiDataType data_type, NativeObject p_data, NativeObject p_min, NativeObject p_max, String format, ImGuiSliderFlags flags) {
         return internal_native_VSliderScalar(label, size.native_address, data_type.getValue(), p_data.native_void_address, p_min.native_void_address, p_max.native_void_address, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::VSliderScalar(label, *((ImVec2* )size_addr), (::ImGuiDataType)data_type, (void*)p_data_addr, (void*)p_min_addr, (void*)p_max_addr, format, (::ImGuiSliderFlags)flags);
-*/
-    public static native boolean internal_native_VSliderScalar(String label, long size_addr, int data_type, long p_data_addr, long p_min_addr, long p_max_addr, String format, int flags);
+    public static boolean internal_native_VSliderScalar(String label, long size_addr, int data_type, long p_data_addr, long p_min_addr, long p_max_addr, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_VSliderScalar(label, size_addr, data_type, p_data_addr, p_min_addr, p_max_addr, format, flags);
+    }
 
     public static boolean VSliderScalar(String label, ImVec2 size, ImGuiDataType data_type, NativeObject p_data, NativeObject p_min, NativeObject p_max, String format) {
         return internal_native_VSliderScalar(label, size.native_address, data_type.getValue(), p_data.native_void_address, p_min.native_void_address, p_max.native_void_address, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::VSliderScalar(label, *((ImVec2* )size_addr), (::ImGuiDataType)data_type, (void*)p_data_addr, (void*)p_min_addr, (void*)p_max_addr, format);
-*/
-    public static native boolean internal_native_VSliderScalar(String label, long size_addr, int data_type, long p_data_addr, long p_min_addr, long p_max_addr, String format);
+    public static boolean internal_native_VSliderScalar(String label, long size_addr, int data_type, long p_data_addr, long p_min_addr, long p_max_addr, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_VSliderScalar(label, size_addr, data_type, p_data_addr, p_min_addr, p_max_addr, format);
+    }
 
     public static boolean VSliderScalar(String label, ImVec2 size, ImGuiDataType data_type, NativeObject p_data, NativeObject p_min, NativeObject p_max) {
         return internal_native_VSliderScalar(label, size.native_address, data_type.getValue(), p_data.native_void_address, p_min.native_void_address, p_max.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::VSliderScalar(label, *((ImVec2* )size_addr), (::ImGuiDataType)data_type, (void*)p_data_addr, (void*)p_min_addr, (void*)p_max_addr);
-*/
-    public static native boolean internal_native_VSliderScalar(String label, long size_addr, int data_type, long p_data_addr, long p_min_addr, long p_max_addr);
+    public static boolean internal_native_VSliderScalar(String label, long size_addr, int data_type, long p_data_addr, long p_min_addr, long p_max_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_VSliderScalar(label, size_addr, data_type, p_data_addr, p_min_addr, p_max_addr);
+    }
 
     public static boolean InputText(String label, NativeByteArray buf, int buf_size, ImGuiInputTextFlags flags) {
         return internal_native_InputText(label, buf.native_void_address, buf_size, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputText(label, (char*)buf_addr, (int)buf_size, (::ImGuiInputTextFlags)flags);
-*/
-    public static native boolean internal_native_InputText(String label, long buf_addr, int buf_size, int flags);
+    public static boolean internal_native_InputText(String label, long buf_addr, int buf_size, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_InputText(label, buf_addr, buf_size, flags);
+    }
 
     public static boolean InputText(String label, NativeByteArray buf, int buf_size) {
         return internal_native_InputText(label, buf.native_void_address, buf_size);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputText(label, (char*)buf_addr, (int)buf_size);
-*/
-    public static native boolean internal_native_InputText(String label, long buf_addr, int buf_size);
+    public static boolean internal_native_InputText(String label, long buf_addr, int buf_size) {
+        return imgui.natives.JNI_ImGui.internal_native_InputText(label, buf_addr, buf_size);
+    }
 
     public static boolean InputTextMultiline(String label, NativeByteArray buf, int buf_size, ImVec2 size, ImGuiInputTextFlags flags) {
         return internal_native_InputTextMultiline(label, buf.native_void_address, buf_size, size.native_address, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputTextMultiline(label, (char*)buf_addr, (int)buf_size, *((ImVec2* )size_addr), (::ImGuiInputTextFlags)flags);
-*/
-    public static native boolean internal_native_InputTextMultiline(String label, long buf_addr, int buf_size, long size_addr, int flags);
+    public static boolean internal_native_InputTextMultiline(String label, long buf_addr, int buf_size, long size_addr, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_InputTextMultiline(label, buf_addr, buf_size, size_addr, flags);
+    }
 
     public static boolean InputTextMultiline(String label, NativeByteArray buf, int buf_size, ImVec2 size) {
         return internal_native_InputTextMultiline(label, buf.native_void_address, buf_size, size.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputTextMultiline(label, (char*)buf_addr, (int)buf_size, *((ImVec2* )size_addr));
-*/
-    public static native boolean internal_native_InputTextMultiline(String label, long buf_addr, int buf_size, long size_addr);
+    public static boolean internal_native_InputTextMultiline(String label, long buf_addr, int buf_size, long size_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_InputTextMultiline(label, buf_addr, buf_size, size_addr);
+    }
 
     public static boolean InputTextMultiline(String label, NativeByteArray buf, int buf_size) {
         return internal_native_InputTextMultiline(label, buf.native_void_address, buf_size);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputTextMultiline(label, (char*)buf_addr, (int)buf_size);
-*/
-    public static native boolean internal_native_InputTextMultiline(String label, long buf_addr, int buf_size);
+    public static boolean internal_native_InputTextMultiline(String label, long buf_addr, int buf_size) {
+        return imgui.natives.JNI_ImGui.internal_native_InputTextMultiline(label, buf_addr, buf_size);
+    }
 
     public static boolean InputTextWithHint(String label, String hint, NativeByteArray buf, int buf_size, ImGuiInputTextFlags flags) {
         return internal_native_InputTextWithHint(label, hint, buf.native_void_address, buf_size, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputTextWithHint(label, hint, (char*)buf_addr, (int)buf_size, (::ImGuiInputTextFlags)flags);
-*/
-    public static native boolean internal_native_InputTextWithHint(String label, String hint, long buf_addr, int buf_size, int flags);
+    public static boolean internal_native_InputTextWithHint(String label, String hint, long buf_addr, int buf_size, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_InputTextWithHint(label, hint, buf_addr, buf_size, flags);
+    }
 
     public static boolean InputTextWithHint(String label, String hint, NativeByteArray buf, int buf_size) {
         return internal_native_InputTextWithHint(label, hint, buf.native_void_address, buf_size);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputTextWithHint(label, hint, (char*)buf_addr, (int)buf_size);
-*/
-    public static native boolean internal_native_InputTextWithHint(String label, String hint, long buf_addr, int buf_size);
+    public static boolean internal_native_InputTextWithHint(String label, String hint, long buf_addr, int buf_size) {
+        return imgui.natives.JNI_ImGui.internal_native_InputTextWithHint(label, hint, buf_addr, buf_size);
+    }
 
     public static boolean InputFloat(String label, NativeFloatArray v, float step, float step_fast, String format, ImGuiInputTextFlags flags) {
         return internal_native_InputFloat(label, v.native_void_address, step, step_fast, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputFloat(label, (float*)v_addr, (float)step, (float)step_fast, format, (::ImGuiInputTextFlags)flags);
-*/
-    public static native boolean internal_native_InputFloat(String label, long v_addr, float step, float step_fast, String format, int flags);
+    public static boolean internal_native_InputFloat(String label, long v_addr, float step, float step_fast, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_InputFloat(label, v_addr, step, step_fast, format, flags);
+    }
 
     public static boolean InputFloat(String label, NativeFloatArray v, float step, float step_fast, String format) {
         return internal_native_InputFloat(label, v.native_void_address, step, step_fast, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputFloat(label, (float*)v_addr, (float)step, (float)step_fast, format);
-*/
-    public static native boolean internal_native_InputFloat(String label, long v_addr, float step, float step_fast, String format);
+    public static boolean internal_native_InputFloat(String label, long v_addr, float step, float step_fast, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_InputFloat(label, v_addr, step, step_fast, format);
+    }
 
     public static boolean InputFloat(String label, NativeFloatArray v, float step, float step_fast) {
         return internal_native_InputFloat(label, v.native_void_address, step, step_fast);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputFloat(label, (float*)v_addr, (float)step, (float)step_fast);
-*/
-    public static native boolean internal_native_InputFloat(String label, long v_addr, float step, float step_fast);
+    public static boolean internal_native_InputFloat(String label, long v_addr, float step, float step_fast) {
+        return imgui.natives.JNI_ImGui.internal_native_InputFloat(label, v_addr, step, step_fast);
+    }
 
     public static boolean InputFloat(String label, NativeFloatArray v, float step) {
         return internal_native_InputFloat(label, v.native_void_address, step);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputFloat(label, (float*)v_addr, (float)step);
-*/
-    public static native boolean internal_native_InputFloat(String label, long v_addr, float step);
+    public static boolean internal_native_InputFloat(String label, long v_addr, float step) {
+        return imgui.natives.JNI_ImGui.internal_native_InputFloat(label, v_addr, step);
+    }
 
     public static boolean InputFloat(String label, NativeFloatArray v) {
         return internal_native_InputFloat(label, v.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputFloat(label, (float*)v_addr);
-*/
-    public static native boolean internal_native_InputFloat(String label, long v_addr);
+    public static boolean internal_native_InputFloat(String label, long v_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_InputFloat(label, v_addr);
+    }
 
     public static boolean InputFloat2(String label, NativeFloatArray v, String format, ImGuiInputTextFlags flags) {
         return internal_native_InputFloat2(label, v.native_void_address, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputFloat2(label, (float*)v_addr, format, (::ImGuiInputTextFlags)flags);
-*/
-    public static native boolean internal_native_InputFloat2(String label, long v_addr, String format, int flags);
+    public static boolean internal_native_InputFloat2(String label, long v_addr, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_InputFloat2(label, v_addr, format, flags);
+    }
 
     public static boolean InputFloat2(String label, NativeFloatArray v, String format) {
         return internal_native_InputFloat2(label, v.native_void_address, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputFloat2(label, (float*)v_addr, format);
-*/
-    public static native boolean internal_native_InputFloat2(String label, long v_addr, String format);
+    public static boolean internal_native_InputFloat2(String label, long v_addr, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_InputFloat2(label, v_addr, format);
+    }
 
     public static boolean InputFloat2(String label, NativeFloatArray v) {
         return internal_native_InputFloat2(label, v.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputFloat2(label, (float*)v_addr);
-*/
-    public static native boolean internal_native_InputFloat2(String label, long v_addr);
+    public static boolean internal_native_InputFloat2(String label, long v_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_InputFloat2(label, v_addr);
+    }
 
     public static boolean InputFloat3(String label, NativeFloatArray v, String format, ImGuiInputTextFlags flags) {
         return internal_native_InputFloat3(label, v.native_void_address, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputFloat3(label, (float*)v_addr, format, (::ImGuiInputTextFlags)flags);
-*/
-    public static native boolean internal_native_InputFloat3(String label, long v_addr, String format, int flags);
+    public static boolean internal_native_InputFloat3(String label, long v_addr, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_InputFloat3(label, v_addr, format, flags);
+    }
 
     public static boolean InputFloat3(String label, NativeFloatArray v, String format) {
         return internal_native_InputFloat3(label, v.native_void_address, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputFloat3(label, (float*)v_addr, format);
-*/
-    public static native boolean internal_native_InputFloat3(String label, long v_addr, String format);
+    public static boolean internal_native_InputFloat3(String label, long v_addr, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_InputFloat3(label, v_addr, format);
+    }
 
     public static boolean InputFloat3(String label, NativeFloatArray v) {
         return internal_native_InputFloat3(label, v.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputFloat3(label, (float*)v_addr);
-*/
-    public static native boolean internal_native_InputFloat3(String label, long v_addr);
+    public static boolean internal_native_InputFloat3(String label, long v_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_InputFloat3(label, v_addr);
+    }
 
     public static boolean InputFloat4(String label, NativeFloatArray v, String format, ImGuiInputTextFlags flags) {
         return internal_native_InputFloat4(label, v.native_void_address, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputFloat4(label, (float*)v_addr, format, (::ImGuiInputTextFlags)flags);
-*/
-    public static native boolean internal_native_InputFloat4(String label, long v_addr, String format, int flags);
+    public static boolean internal_native_InputFloat4(String label, long v_addr, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_InputFloat4(label, v_addr, format, flags);
+    }
 
     public static boolean InputFloat4(String label, NativeFloatArray v, String format) {
         return internal_native_InputFloat4(label, v.native_void_address, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputFloat4(label, (float*)v_addr, format);
-*/
-    public static native boolean internal_native_InputFloat4(String label, long v_addr, String format);
+    public static boolean internal_native_InputFloat4(String label, long v_addr, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_InputFloat4(label, v_addr, format);
+    }
 
     public static boolean InputFloat4(String label, NativeFloatArray v) {
         return internal_native_InputFloat4(label, v.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputFloat4(label, (float*)v_addr);
-*/
-    public static native boolean internal_native_InputFloat4(String label, long v_addr);
+    public static boolean internal_native_InputFloat4(String label, long v_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_InputFloat4(label, v_addr);
+    }
 
     public static boolean InputInt(String label, NativeIntArray v, int step, int step_fast, ImGuiInputTextFlags flags) {
         return internal_native_InputInt(label, v.native_void_address, step, step_fast, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputInt(label, (int*)v_addr, (int)step, (int)step_fast, (::ImGuiInputTextFlags)flags);
-*/
-    public static native boolean internal_native_InputInt(String label, long v_addr, int step, int step_fast, int flags);
+    public static boolean internal_native_InputInt(String label, long v_addr, int step, int step_fast, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_InputInt(label, v_addr, step, step_fast, flags);
+    }
 
     public static boolean InputInt(String label, NativeIntArray v, int step, int step_fast) {
         return internal_native_InputInt(label, v.native_void_address, step, step_fast);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputInt(label, (int*)v_addr, (int)step, (int)step_fast);
-*/
-    public static native boolean internal_native_InputInt(String label, long v_addr, int step, int step_fast);
+    public static boolean internal_native_InputInt(String label, long v_addr, int step, int step_fast) {
+        return imgui.natives.JNI_ImGui.internal_native_InputInt(label, v_addr, step, step_fast);
+    }
 
     public static boolean InputInt(String label, NativeIntArray v, int step) {
         return internal_native_InputInt(label, v.native_void_address, step);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputInt(label, (int*)v_addr, (int)step);
-*/
-    public static native boolean internal_native_InputInt(String label, long v_addr, int step);
+    public static boolean internal_native_InputInt(String label, long v_addr, int step) {
+        return imgui.natives.JNI_ImGui.internal_native_InputInt(label, v_addr, step);
+    }
 
     public static boolean InputInt(String label, NativeIntArray v) {
         return internal_native_InputInt(label, v.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputInt(label, (int*)v_addr);
-*/
-    public static native boolean internal_native_InputInt(String label, long v_addr);
+    public static boolean internal_native_InputInt(String label, long v_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_InputInt(label, v_addr);
+    }
 
     public static boolean InputInt2(String label, NativeIntArray v, ImGuiInputTextFlags flags) {
         return internal_native_InputInt2(label, v.native_void_address, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputInt2(label, (int*)v_addr, (::ImGuiInputTextFlags)flags);
-*/
-    public static native boolean internal_native_InputInt2(String label, long v_addr, int flags);
+    public static boolean internal_native_InputInt2(String label, long v_addr, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_InputInt2(label, v_addr, flags);
+    }
 
     public static boolean InputInt2(String label, NativeIntArray v) {
         return internal_native_InputInt2(label, v.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputInt2(label, (int*)v_addr);
-*/
-    public static native boolean internal_native_InputInt2(String label, long v_addr);
+    public static boolean internal_native_InputInt2(String label, long v_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_InputInt2(label, v_addr);
+    }
 
     public static boolean InputInt3(String label, NativeIntArray v, ImGuiInputTextFlags flags) {
         return internal_native_InputInt3(label, v.native_void_address, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputInt3(label, (int*)v_addr, (::ImGuiInputTextFlags)flags);
-*/
-    public static native boolean internal_native_InputInt3(String label, long v_addr, int flags);
+    public static boolean internal_native_InputInt3(String label, long v_addr, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_InputInt3(label, v_addr, flags);
+    }
 
     public static boolean InputInt3(String label, NativeIntArray v) {
         return internal_native_InputInt3(label, v.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputInt3(label, (int*)v_addr);
-*/
-    public static native boolean internal_native_InputInt3(String label, long v_addr);
+    public static boolean internal_native_InputInt3(String label, long v_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_InputInt3(label, v_addr);
+    }
 
     public static boolean InputInt4(String label, NativeIntArray v, ImGuiInputTextFlags flags) {
         return internal_native_InputInt4(label, v.native_void_address, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputInt4(label, (int*)v_addr, (::ImGuiInputTextFlags)flags);
-*/
-    public static native boolean internal_native_InputInt4(String label, long v_addr, int flags);
+    public static boolean internal_native_InputInt4(String label, long v_addr, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_InputInt4(label, v_addr, flags);
+    }
 
     public static boolean InputInt4(String label, NativeIntArray v) {
         return internal_native_InputInt4(label, v.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputInt4(label, (int*)v_addr);
-*/
-    public static native boolean internal_native_InputInt4(String label, long v_addr);
+    public static boolean internal_native_InputInt4(String label, long v_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_InputInt4(label, v_addr);
+    }
 
     public static boolean InputDouble(String label, NativeDoubleArray v, double step, double step_fast, String format, ImGuiInputTextFlags flags) {
         return internal_native_InputDouble(label, v.native_void_address, step, step_fast, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputDouble(label, (double*)v_addr, (double)step, (double)step_fast, format, (::ImGuiInputTextFlags)flags);
-*/
-    public static native boolean internal_native_InputDouble(String label, long v_addr, double step, double step_fast, String format, int flags);
+    public static boolean internal_native_InputDouble(String label, long v_addr, double step, double step_fast, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_InputDouble(label, v_addr, step, step_fast, format, flags);
+    }
 
     public static boolean InputDouble(String label, NativeDoubleArray v, double step, double step_fast, String format) {
         return internal_native_InputDouble(label, v.native_void_address, step, step_fast, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputDouble(label, (double*)v_addr, (double)step, (double)step_fast, format);
-*/
-    public static native boolean internal_native_InputDouble(String label, long v_addr, double step, double step_fast, String format);
+    public static boolean internal_native_InputDouble(String label, long v_addr, double step, double step_fast, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_InputDouble(label, v_addr, step, step_fast, format);
+    }
 
     public static boolean InputDouble(String label, NativeDoubleArray v, double step, double step_fast) {
         return internal_native_InputDouble(label, v.native_void_address, step, step_fast);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputDouble(label, (double*)v_addr, (double)step, (double)step_fast);
-*/
-    public static native boolean internal_native_InputDouble(String label, long v_addr, double step, double step_fast);
+    public static boolean internal_native_InputDouble(String label, long v_addr, double step, double step_fast) {
+        return imgui.natives.JNI_ImGui.internal_native_InputDouble(label, v_addr, step, step_fast);
+    }
 
     public static boolean InputDouble(String label, NativeDoubleArray v, double step) {
         return internal_native_InputDouble(label, v.native_void_address, step);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputDouble(label, (double*)v_addr, (double)step);
-*/
-    public static native boolean internal_native_InputDouble(String label, long v_addr, double step);
+    public static boolean internal_native_InputDouble(String label, long v_addr, double step) {
+        return imgui.natives.JNI_ImGui.internal_native_InputDouble(label, v_addr, step);
+    }
 
     public static boolean InputDouble(String label, NativeDoubleArray v) {
         return internal_native_InputDouble(label, v.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputDouble(label, (double*)v_addr);
-*/
-    public static native boolean internal_native_InputDouble(String label, long v_addr);
+    public static boolean internal_native_InputDouble(String label, long v_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_InputDouble(label, v_addr);
+    }
 
     public static boolean InputScalar(String label, ImGuiDataType data_type, NativeObject p_data, NativeObject p_step, NativeObject p_step_fast, String format, ImGuiInputTextFlags flags) {
         return internal_native_InputScalar(label, data_type.getValue(), p_data.native_void_address, p_step.native_void_address, p_step_fast.native_void_address, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputScalar(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (void*)p_step_addr, (void*)p_step_fast_addr, format, (::ImGuiInputTextFlags)flags);
-*/
-    public static native boolean internal_native_InputScalar(String label, int data_type, long p_data_addr, long p_step_addr, long p_step_fast_addr, String format, int flags);
+    public static boolean internal_native_InputScalar(String label, int data_type, long p_data_addr, long p_step_addr, long p_step_fast_addr, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_InputScalar(label, data_type, p_data_addr, p_step_addr, p_step_fast_addr, format, flags);
+    }
 
     public static boolean InputScalar(String label, ImGuiDataType data_type, NativeObject p_data, NativeObject p_step, NativeObject p_step_fast, String format) {
         return internal_native_InputScalar(label, data_type.getValue(), p_data.native_void_address, p_step.native_void_address, p_step_fast.native_void_address, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputScalar(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (void*)p_step_addr, (void*)p_step_fast_addr, format);
-*/
-    public static native boolean internal_native_InputScalar(String label, int data_type, long p_data_addr, long p_step_addr, long p_step_fast_addr, String format);
+    public static boolean internal_native_InputScalar(String label, int data_type, long p_data_addr, long p_step_addr, long p_step_fast_addr, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_InputScalar(label, data_type, p_data_addr, p_step_addr, p_step_fast_addr, format);
+    }
 
     public static boolean InputScalar(String label, ImGuiDataType data_type, NativeObject p_data, NativeObject p_step, NativeObject p_step_fast) {
         return internal_native_InputScalar(label, data_type.getValue(), p_data.native_void_address, p_step.native_void_address, p_step_fast.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputScalar(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (void*)p_step_addr, (void*)p_step_fast_addr);
-*/
-    public static native boolean internal_native_InputScalar(String label, int data_type, long p_data_addr, long p_step_addr, long p_step_fast_addr);
+    public static boolean internal_native_InputScalar(String label, int data_type, long p_data_addr, long p_step_addr, long p_step_fast_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_InputScalar(label, data_type, p_data_addr, p_step_addr, p_step_fast_addr);
+    }
 
     public static boolean InputScalar(String label, ImGuiDataType data_type, NativeObject p_data, NativeObject p_step) {
         return internal_native_InputScalar(label, data_type.getValue(), p_data.native_void_address, p_step.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputScalar(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (void*)p_step_addr);
-*/
-    public static native boolean internal_native_InputScalar(String label, int data_type, long p_data_addr, long p_step_addr);
+    public static boolean internal_native_InputScalar(String label, int data_type, long p_data_addr, long p_step_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_InputScalar(label, data_type, p_data_addr, p_step_addr);
+    }
 
     public static boolean InputScalar(String label, ImGuiDataType data_type, NativeObject p_data) {
         return internal_native_InputScalar(label, data_type.getValue(), p_data.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputScalar(label, (::ImGuiDataType)data_type, (void*)p_data_addr);
-*/
-    public static native boolean internal_native_InputScalar(String label, int data_type, long p_data_addr);
+    public static boolean internal_native_InputScalar(String label, int data_type, long p_data_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_InputScalar(label, data_type, p_data_addr);
+    }
 
     public static boolean InputScalarN(String label, ImGuiDataType data_type, NativeObject p_data, int components, NativeObject p_step, NativeObject p_step_fast, String format, ImGuiInputTextFlags flags) {
         return internal_native_InputScalarN(label, data_type.getValue(), p_data.native_void_address, components, p_step.native_void_address, p_step_fast.native_void_address, format, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputScalarN(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (int)components, (void*)p_step_addr, (void*)p_step_fast_addr, format, (::ImGuiInputTextFlags)flags);
-*/
-    public static native boolean internal_native_InputScalarN(String label, int data_type, long p_data_addr, int components, long p_step_addr, long p_step_fast_addr, String format, int flags);
+    public static boolean internal_native_InputScalarN(String label, int data_type, long p_data_addr, int components, long p_step_addr, long p_step_fast_addr, String format, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_InputScalarN(label, data_type, p_data_addr, components, p_step_addr, p_step_fast_addr, format, flags);
+    }
 
     public static boolean InputScalarN(String label, ImGuiDataType data_type, NativeObject p_data, int components, NativeObject p_step, NativeObject p_step_fast, String format) {
         return internal_native_InputScalarN(label, data_type.getValue(), p_data.native_void_address, components, p_step.native_void_address, p_step_fast.native_void_address, format);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputScalarN(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (int)components, (void*)p_step_addr, (void*)p_step_fast_addr, format);
-*/
-    public static native boolean internal_native_InputScalarN(String label, int data_type, long p_data_addr, int components, long p_step_addr, long p_step_fast_addr, String format);
+    public static boolean internal_native_InputScalarN(String label, int data_type, long p_data_addr, int components, long p_step_addr, long p_step_fast_addr, String format) {
+        return imgui.natives.JNI_ImGui.internal_native_InputScalarN(label, data_type, p_data_addr, components, p_step_addr, p_step_fast_addr, format);
+    }
 
     public static boolean InputScalarN(String label, ImGuiDataType data_type, NativeObject p_data, int components, NativeObject p_step, NativeObject p_step_fast) {
         return internal_native_InputScalarN(label, data_type.getValue(), p_data.native_void_address, components, p_step.native_void_address, p_step_fast.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputScalarN(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (int)components, (void*)p_step_addr, (void*)p_step_fast_addr);
-*/
-    public static native boolean internal_native_InputScalarN(String label, int data_type, long p_data_addr, int components, long p_step_addr, long p_step_fast_addr);
+    public static boolean internal_native_InputScalarN(String label, int data_type, long p_data_addr, int components, long p_step_addr, long p_step_fast_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_InputScalarN(label, data_type, p_data_addr, components, p_step_addr, p_step_fast_addr);
+    }
 
     public static boolean InputScalarN(String label, ImGuiDataType data_type, NativeObject p_data, int components, NativeObject p_step) {
         return internal_native_InputScalarN(label, data_type.getValue(), p_data.native_void_address, components, p_step.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputScalarN(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (int)components, (void*)p_step_addr);
-*/
-    public static native boolean internal_native_InputScalarN(String label, int data_type, long p_data_addr, int components, long p_step_addr);
+    public static boolean internal_native_InputScalarN(String label, int data_type, long p_data_addr, int components, long p_step_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_InputScalarN(label, data_type, p_data_addr, components, p_step_addr);
+    }
 
     public static boolean InputScalarN(String label, ImGuiDataType data_type, NativeObject p_data, int components) {
         return internal_native_InputScalarN(label, data_type.getValue(), p_data.native_void_address, components);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::InputScalarN(label, (::ImGuiDataType)data_type, (void*)p_data_addr, (int)components);
-*/
-    public static native boolean internal_native_InputScalarN(String label, int data_type, long p_data_addr, int components);
+    public static boolean internal_native_InputScalarN(String label, int data_type, long p_data_addr, int components) {
+        return imgui.natives.JNI_ImGui.internal_native_InputScalarN(label, data_type, p_data_addr, components);
+    }
 
     public static boolean ColorEdit3(String label, NativeFloatArray col, ImGuiColorEditFlags flags) {
         return internal_native_ColorEdit3(label, col.native_void_address, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::ColorEdit3(label, (float*)col_addr, (::ImGuiColorEditFlags)flags);
-*/
-    public static native boolean internal_native_ColorEdit3(String label, long col_addr, int flags);
+    public static boolean internal_native_ColorEdit3(String label, long col_addr, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_ColorEdit3(label, col_addr, flags);
+    }
 
     public static boolean ColorEdit3(String label, NativeFloatArray col) {
         return internal_native_ColorEdit3(label, col.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::ColorEdit3(label, (float*)col_addr);
-*/
-    public static native boolean internal_native_ColorEdit3(String label, long col_addr);
+    public static boolean internal_native_ColorEdit3(String label, long col_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_ColorEdit3(label, col_addr);
+    }
 
     public static boolean ColorEdit4(String label, NativeFloatArray col, ImGuiColorEditFlags flags) {
         return internal_native_ColorEdit4(label, col.native_void_address, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::ColorEdit4(label, (float*)col_addr, (::ImGuiColorEditFlags)flags);
-*/
-    public static native boolean internal_native_ColorEdit4(String label, long col_addr, int flags);
+    public static boolean internal_native_ColorEdit4(String label, long col_addr, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_ColorEdit4(label, col_addr, flags);
+    }
 
     public static boolean ColorEdit4(String label, NativeFloatArray col) {
         return internal_native_ColorEdit4(label, col.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::ColorEdit4(label, (float*)col_addr);
-*/
-    public static native boolean internal_native_ColorEdit4(String label, long col_addr);
+    public static boolean internal_native_ColorEdit4(String label, long col_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_ColorEdit4(label, col_addr);
+    }
 
     public static boolean ColorPicker3(String label, NativeFloatArray col, ImGuiColorEditFlags flags) {
         return internal_native_ColorPicker3(label, col.native_void_address, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::ColorPicker3(label, (float*)col_addr, (::ImGuiColorEditFlags)flags);
-*/
-    public static native boolean internal_native_ColorPicker3(String label, long col_addr, int flags);
+    public static boolean internal_native_ColorPicker3(String label, long col_addr, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_ColorPicker3(label, col_addr, flags);
+    }
 
     public static boolean ColorPicker3(String label, NativeFloatArray col) {
         return internal_native_ColorPicker3(label, col.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::ColorPicker3(label, (float*)col_addr);
-*/
-    public static native boolean internal_native_ColorPicker3(String label, long col_addr);
+    public static boolean internal_native_ColorPicker3(String label, long col_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_ColorPicker3(label, col_addr);
+    }
 
     public static boolean ColorPicker4(String label, NativeFloatArray col, ImGuiColorEditFlags flags, NativeFloatArray ref_col) {
         return internal_native_ColorPicker4(label, col.native_void_address, flags.getValue(), ref_col.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::ColorPicker4(label, (float*)col_addr, (::ImGuiColorEditFlags)flags, (float*)ref_col_addr);
-*/
-    public static native boolean internal_native_ColorPicker4(String label, long col_addr, int flags, long ref_col_addr);
+    public static boolean internal_native_ColorPicker4(String label, long col_addr, int flags, long ref_col_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_ColorPicker4(label, col_addr, flags, ref_col_addr);
+    }
 
     public static boolean ColorPicker4(String label, NativeFloatArray col, ImGuiColorEditFlags flags) {
         return internal_native_ColorPicker4(label, col.native_void_address, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::ColorPicker4(label, (float*)col_addr, (::ImGuiColorEditFlags)flags);
-*/
-    public static native boolean internal_native_ColorPicker4(String label, long col_addr, int flags);
+    public static boolean internal_native_ColorPicker4(String label, long col_addr, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_ColorPicker4(label, col_addr, flags);
+    }
 
     public static boolean ColorPicker4(String label, NativeFloatArray col) {
         return internal_native_ColorPicker4(label, col.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::ColorPicker4(label, (float*)col_addr);
-*/
-    public static native boolean internal_native_ColorPicker4(String label, long col_addr);
+    public static boolean internal_native_ColorPicker4(String label, long col_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_ColorPicker4(label, col_addr);
+    }
 
     public static boolean ColorButton(String desc_id, ImVec4 col, ImGuiColorEditFlags flags, ImVec2 size) {
         return internal_native_ColorButton(desc_id, col.native_address, flags.getValue(), size.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::ColorButton(desc_id, *((ImVec4* )col_addr), (::ImGuiColorEditFlags)flags, *((ImVec2* )size_addr));
-*/
-    public static native boolean internal_native_ColorButton(String desc_id, long col_addr, int flags, long size_addr);
+    public static boolean internal_native_ColorButton(String desc_id, long col_addr, int flags, long size_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_ColorButton(desc_id, col_addr, flags, size_addr);
+    }
 
     public static boolean ColorButton(String desc_id, ImVec4 col, ImGuiColorEditFlags flags) {
         return internal_native_ColorButton(desc_id, col.native_address, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::ColorButton(desc_id, *((ImVec4* )col_addr), (::ImGuiColorEditFlags)flags);
-*/
-    public static native boolean internal_native_ColorButton(String desc_id, long col_addr, int flags);
+    public static boolean internal_native_ColorButton(String desc_id, long col_addr, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_ColorButton(desc_id, col_addr, flags);
+    }
 
     public static boolean ColorButton(String desc_id, ImVec4 col) {
         return internal_native_ColorButton(desc_id, col.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::ColorButton(desc_id, *((ImVec4* )col_addr));
-*/
-    public static native boolean internal_native_ColorButton(String desc_id, long col_addr);
+    public static boolean internal_native_ColorButton(String desc_id, long col_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_ColorButton(desc_id, col_addr);
+    }
 
     public static void SetColorEditOptions(ImGuiColorEditFlags ImGuiColorEditFlags) {
         internal_native_SetColorEditOptions(ImGuiColorEditFlags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetColorEditOptions((::ImGuiColorEditFlags)ImGuiColorEditFlags);
-*/
-    public static native void internal_native_SetColorEditOptions(int ImGuiColorEditFlags);
+    public static void internal_native_SetColorEditOptions(int ImGuiColorEditFlags) {
+        imgui.natives.JNI_ImGui.internal_native_SetColorEditOptions(ImGuiColorEditFlags);
+    }
 
     public static boolean TreeNode(String label) {
         return internal_native_TreeNode__0(label);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::TreeNode(label);
-*/
-    public static native boolean internal_native_TreeNode__0(String label);
+    public static boolean internal_native_TreeNode__0(String label) {
+        return imgui.natives.JNI_ImGui.internal_native_TreeNode__0(label);
+    }
 
     public static boolean TreeNode(String str_id, String fmt) {
         return internal_native_TreeNode__1(str_id, fmt);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::TreeNode(str_id, fmt);
-*/
-    public static native boolean internal_native_TreeNode__1(String str_id, String fmt);
+    public static boolean internal_native_TreeNode__1(String str_id, String fmt) {
+        return imgui.natives.JNI_ImGui.internal_native_TreeNode__1(str_id, fmt);
+    }
 
     public static boolean TreeNode(NativeObject ptr_id, String fmt) {
         return internal_native_TreeNode__2(ptr_id.native_void_address, fmt);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::TreeNode((void*)ptr_id_addr, fmt);
-*/
-    public static native boolean internal_native_TreeNode__2(long ptr_id_addr, String fmt);
+    public static boolean internal_native_TreeNode__2(long ptr_id_addr, String fmt) {
+        return imgui.natives.JNI_ImGui.internal_native_TreeNode__2(ptr_id_addr, fmt);
+    }
 
     public static boolean TreeNodeEx(String label, ImGuiTreeNodeFlags flags) {
         return internal_native_TreeNodeEx__0(label, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::TreeNodeEx(label, (::ImGuiTreeNodeFlags)flags);
-*/
-    public static native boolean internal_native_TreeNodeEx__0(String label, int flags);
+    public static boolean internal_native_TreeNodeEx__0(String label, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_TreeNodeEx__0(label, flags);
+    }
 
     public static boolean TreeNodeEx(String label) {
         return internal_native_TreeNodeEx__0(label);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::TreeNodeEx(label);
-*/
-    public static native boolean internal_native_TreeNodeEx__0(String label);
+    public static boolean internal_native_TreeNodeEx__0(String label) {
+        return imgui.natives.JNI_ImGui.internal_native_TreeNodeEx__0(label);
+    }
 
     public static boolean TreeNodeEx(String str_id, ImGuiTreeNodeFlags flags, String fmt) {
         return internal_native_TreeNodeEx__1(str_id, flags.getValue(), fmt);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::TreeNodeEx(str_id, (::ImGuiTreeNodeFlags)flags, fmt);
-*/
-    public static native boolean internal_native_TreeNodeEx__1(String str_id, int flags, String fmt);
+    public static boolean internal_native_TreeNodeEx__1(String str_id, int flags, String fmt) {
+        return imgui.natives.JNI_ImGui.internal_native_TreeNodeEx__1(str_id, flags, fmt);
+    }
 
     public static boolean TreeNodeEx(NativeObject ptr_id, ImGuiTreeNodeFlags flags, String fmt) {
         return internal_native_TreeNodeEx__2(ptr_id.native_void_address, flags.getValue(), fmt);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::TreeNodeEx((void*)ptr_id_addr, (::ImGuiTreeNodeFlags)flags, fmt);
-*/
-    public static native boolean internal_native_TreeNodeEx__2(long ptr_id_addr, int flags, String fmt);
+    public static boolean internal_native_TreeNodeEx__2(long ptr_id_addr, int flags, String fmt) {
+        return imgui.natives.JNI_ImGui.internal_native_TreeNodeEx__2(ptr_id_addr, flags, fmt);
+    }
 
     public static void TreePush(String str_id) {
         internal_native_TreePush__0(str_id);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::TreePush(str_id);
-*/
-    public static native void internal_native_TreePush__0(String str_id);
+    public static void internal_native_TreePush__0(String str_id) {
+        imgui.natives.JNI_ImGui.internal_native_TreePush__0(str_id);
+    }
 
     public static void TreePush(NativeObject ptr_id) {
         internal_native_TreePush__1(ptr_id.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::TreePush((void*)ptr_id_addr);
-*/
-    public static native void internal_native_TreePush__1(long ptr_id_addr);
+    public static void internal_native_TreePush__1(long ptr_id_addr) {
+        imgui.natives.JNI_ImGui.internal_native_TreePush__1(ptr_id_addr);
+    }
 
     public static void TreePop() {
         internal_native_TreePop();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::TreePop();
-*/
-    public static native void internal_native_TreePop();
+    public static void internal_native_TreePop() {
+        imgui.natives.JNI_ImGui.internal_native_TreePop();
+    }
 
     public static float GetTreeNodeToLabelSpacing() {
         return internal_native_GetTreeNodeToLabelSpacing();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetTreeNodeToLabelSpacing();
-*/
-    public static native float internal_native_GetTreeNodeToLabelSpacing();
+    public static float internal_native_GetTreeNodeToLabelSpacing() {
+        return imgui.natives.JNI_ImGui.internal_native_GetTreeNodeToLabelSpacing();
+    }
 
     public static boolean CollapsingHeader(String label, ImGuiTreeNodeFlags flags) {
         return internal_native_CollapsingHeader__0(label, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::CollapsingHeader(label, (::ImGuiTreeNodeFlags)flags);
-*/
-    public static native boolean internal_native_CollapsingHeader__0(String label, int flags);
+    public static boolean internal_native_CollapsingHeader__0(String label, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_CollapsingHeader__0(label, flags);
+    }
 
     public static boolean CollapsingHeader(String label) {
         return internal_native_CollapsingHeader__0(label);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::CollapsingHeader(label);
-*/
-    public static native boolean internal_native_CollapsingHeader__0(String label);
+    public static boolean internal_native_CollapsingHeader__0(String label) {
+        return imgui.natives.JNI_ImGui.internal_native_CollapsingHeader__0(label);
+    }
 
     public static boolean CollapsingHeader(String label, NativeBoolArray p_visible, ImGuiTreeNodeFlags flags) {
         return internal_native_CollapsingHeader__1(label, p_visible.native_void_address, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::CollapsingHeader(label, (bool*)p_visible_addr, (::ImGuiTreeNodeFlags)flags);
-*/
-    public static native boolean internal_native_CollapsingHeader__1(String label, long p_visible_addr, int flags);
+    public static boolean internal_native_CollapsingHeader__1(String label, long p_visible_addr, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_CollapsingHeader__1(label, p_visible_addr, flags);
+    }
 
     public static boolean CollapsingHeader(String label, NativeBoolArray p_visible) {
         return internal_native_CollapsingHeader__1(label, p_visible.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::CollapsingHeader(label, (bool*)p_visible_addr);
-*/
-    public static native boolean internal_native_CollapsingHeader__1(String label, long p_visible_addr);
+    public static boolean internal_native_CollapsingHeader__1(String label, long p_visible_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_CollapsingHeader__1(label, p_visible_addr);
+    }
 
     public static void SetNextItemOpen(boolean is_open, ImGuiCond ImGuiCond) {
         internal_native_SetNextItemOpen(is_open, ImGuiCond.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextItemOpen(is_open, (::ImGuiCond)ImGuiCond);
-*/
-    public static native void internal_native_SetNextItemOpen(boolean is_open, int ImGuiCond);
+    public static void internal_native_SetNextItemOpen(boolean is_open, int ImGuiCond) {
+        imgui.natives.JNI_ImGui.internal_native_SetNextItemOpen(is_open, ImGuiCond);
+    }
 
     public static void SetNextItemOpen(boolean is_open) {
         internal_native_SetNextItemOpen(is_open);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextItemOpen(is_open);
-*/
-    public static native void internal_native_SetNextItemOpen(boolean is_open);
+    public static void internal_native_SetNextItemOpen(boolean is_open) {
+        imgui.natives.JNI_ImGui.internal_native_SetNextItemOpen(is_open);
+    }
 
     public static void SetNextItemStorageID(int storage_id) {
         internal_native_SetNextItemStorageID(storage_id);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextItemStorageID((int)storage_id);
-*/
-    public static native void internal_native_SetNextItemStorageID(int storage_id);
+    public static void internal_native_SetNextItemStorageID(int storage_id) {
+        imgui.natives.JNI_ImGui.internal_native_SetNextItemStorageID(storage_id);
+    }
 
     public static boolean Selectable(String label, boolean selected, ImGuiSelectableFlags flags, ImVec2 size) {
         return internal_native_Selectable__0(label, selected, flags.getValue(), size.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::Selectable(label, selected, (::ImGuiSelectableFlags)flags, *((ImVec2* )size_addr));
-*/
-    public static native boolean internal_native_Selectable__0(String label, boolean selected, int flags, long size_addr);
+    public static boolean internal_native_Selectable__0(String label, boolean selected, int flags, long size_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_Selectable__0(label, selected, flags, size_addr);
+    }
 
     public static boolean Selectable(String label, boolean selected, ImGuiSelectableFlags flags) {
         return internal_native_Selectable__0(label, selected, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::Selectable(label, selected, (::ImGuiSelectableFlags)flags);
-*/
-    public static native boolean internal_native_Selectable__0(String label, boolean selected, int flags);
+    public static boolean internal_native_Selectable__0(String label, boolean selected, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_Selectable__0(label, selected, flags);
+    }
 
     public static boolean Selectable(String label, boolean selected) {
         return internal_native_Selectable__0(label, selected);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::Selectable(label, selected);
-*/
-    public static native boolean internal_native_Selectable__0(String label, boolean selected);
+    public static boolean internal_native_Selectable__0(String label, boolean selected) {
+        return imgui.natives.JNI_ImGui.internal_native_Selectable__0(label, selected);
+    }
 
     public static boolean Selectable(String label) {
         return internal_native_Selectable__0(label);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::Selectable(label);
-*/
-    public static native boolean internal_native_Selectable__0(String label);
+    public static boolean internal_native_Selectable__0(String label) {
+        return imgui.natives.JNI_ImGui.internal_native_Selectable__0(label);
+    }
 
     public static boolean Selectable(String label, NativeBoolArray p_selected, ImGuiSelectableFlags flags, ImVec2 size) {
         return internal_native_Selectable__1(label, p_selected.native_void_address, flags.getValue(), size.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::Selectable(label, (bool*)p_selected_addr, (::ImGuiSelectableFlags)flags, *((ImVec2* )size_addr));
-*/
-    public static native boolean internal_native_Selectable__1(String label, long p_selected_addr, int flags, long size_addr);
+    public static boolean internal_native_Selectable__1(String label, long p_selected_addr, int flags, long size_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_Selectable__1(label, p_selected_addr, flags, size_addr);
+    }
 
     public static boolean Selectable(String label, NativeBoolArray p_selected, ImGuiSelectableFlags flags) {
         return internal_native_Selectable__1(label, p_selected.native_void_address, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::Selectable(label, (bool*)p_selected_addr, (::ImGuiSelectableFlags)flags);
-*/
-    public static native boolean internal_native_Selectable__1(String label, long p_selected_addr, int flags);
+    public static boolean internal_native_Selectable__1(String label, long p_selected_addr, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_Selectable__1(label, p_selected_addr, flags);
+    }
 
     public static boolean Selectable(String label, NativeBoolArray p_selected) {
         return internal_native_Selectable__1(label, p_selected.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::Selectable(label, (bool*)p_selected_addr);
-*/
-    public static native boolean internal_native_Selectable__1(String label, long p_selected_addr);
+    public static boolean internal_native_Selectable__1(String label, long p_selected_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_Selectable__1(label, p_selected_addr);
+    }
 
     public static ImGuiMultiSelectIO BeginMultiSelect(ImGuiMultiSelectFlags flags, int selection_size, int items_count) {
         long addr = internal_native_BeginMultiSelect_addr(flags.getValue(), selection_size, items_count);
@@ -4056,10 +3632,9 @@ return ImGuiWrapper::ImGui::Selectable(label, (bool*)p_selected_addr);
         return ImGuiMultiSelectIO_TEMP_STATIC_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::BeginMultiSelect((::ImGuiMultiSelectFlags)flags, (int)selection_size, (int)items_count);
-*/
-    public static native long internal_native_BeginMultiSelect_addr(int flags, int selection_size, int items_count);
+    public static long internal_native_BeginMultiSelect_addr(int flags, int selection_size, int items_count) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginMultiSelect_addr(flags, selection_size, items_count);
+    }
 
     public static ImGuiMultiSelectIO BeginMultiSelect(ImGuiMultiSelectFlags flags, int selection_size) {
         long addr = internal_native_BeginMultiSelect_addr(flags.getValue(), selection_size);
@@ -4071,10 +3646,9 @@ return (jlong)ImGuiWrapper::ImGui::BeginMultiSelect((::ImGuiMultiSelectFlags)fla
         return ImGuiMultiSelectIO_TEMP_STATIC_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::BeginMultiSelect((::ImGuiMultiSelectFlags)flags, (int)selection_size);
-*/
-    public static native long internal_native_BeginMultiSelect_addr(int flags, int selection_size);
+    public static long internal_native_BeginMultiSelect_addr(int flags, int selection_size) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginMultiSelect_addr(flags, selection_size);
+    }
 
     public static ImGuiMultiSelectIO BeginMultiSelect(ImGuiMultiSelectFlags flags) {
         long addr = internal_native_BeginMultiSelect_addr(flags.getValue());
@@ -4086,10 +3660,9 @@ return (jlong)ImGuiWrapper::ImGui::BeginMultiSelect((::ImGuiMultiSelectFlags)fla
         return ImGuiMultiSelectIO_TEMP_STATIC_GEN_2;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::BeginMultiSelect((::ImGuiMultiSelectFlags)flags);
-*/
-    public static native long internal_native_BeginMultiSelect_addr(int flags);
+    public static long internal_native_BeginMultiSelect_addr(int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginMultiSelect_addr(flags);
+    }
 
     public static ImGuiMultiSelectIO EndMultiSelect() {
         long addr = internal_native_EndMultiSelect_addr();
@@ -4101,766 +3674,681 @@ return (jlong)ImGuiWrapper::ImGui::BeginMultiSelect((::ImGuiMultiSelectFlags)fla
         return ImGuiMultiSelectIO_TEMP_STATIC_GEN_3;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::EndMultiSelect();
-*/
-    public static native long internal_native_EndMultiSelect_addr();
+    public static long internal_native_EndMultiSelect_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_EndMultiSelect_addr();
+    }
 
     public static void SetNextItemSelectionUserData(int selection_user_data) {
         internal_native_SetNextItemSelectionUserData(selection_user_data);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextItemSelectionUserData((int)selection_user_data);
-*/
-    public static native void internal_native_SetNextItemSelectionUserData(int selection_user_data);
+    public static void internal_native_SetNextItemSelectionUserData(int selection_user_data) {
+        imgui.natives.JNI_ImGui.internal_native_SetNextItemSelectionUserData(selection_user_data);
+    }
 
     public static boolean IsItemToggledSelection() {
         return internal_native_IsItemToggledSelection();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsItemToggledSelection();
-*/
-    public static native boolean internal_native_IsItemToggledSelection();
+    public static boolean internal_native_IsItemToggledSelection() {
+        return imgui.natives.JNI_ImGui.internal_native_IsItemToggledSelection();
+    }
 
     public static boolean BeginListBox(String label, ImVec2 size) {
         return internal_native_BeginListBox(label, size.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginListBox(label, *((ImVec2* )size_addr));
-*/
-    public static native boolean internal_native_BeginListBox(String label, long size_addr);
+    public static boolean internal_native_BeginListBox(String label, long size_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginListBox(label, size_addr);
+    }
 
     public static boolean BeginListBox(String label) {
         return internal_native_BeginListBox(label);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginListBox(label);
-*/
-    public static native boolean internal_native_BeginListBox(String label);
+    public static boolean internal_native_BeginListBox(String label) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginListBox(label);
+    }
 
     public static void EndListBox() {
         internal_native_EndListBox();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::EndListBox();
-*/
-    public static native void internal_native_EndListBox();
+    public static void internal_native_EndListBox() {
+        imgui.natives.JNI_ImGui.internal_native_EndListBox();
+    }
 
     public static void PlotLines(String label, NativeFloatArray values, int values_count, int values_offset, String overlay_text, float scale_min, float scale_max, ImVec2 graph_size, int stride) {
         internal_native_PlotLines(label, values.native_void_address, values_count, values_offset, overlay_text, scale_min, scale_max, graph_size.native_address, stride);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PlotLines(label, (float*)values_addr, (int)values_count, (int)values_offset, overlay_text, (float)scale_min, (float)scale_max, *((ImVec2* )graph_size_addr), (int)stride);
-*/
-    public static native void internal_native_PlotLines(String label, long values_addr, int values_count, int values_offset, String overlay_text, float scale_min, float scale_max, long graph_size_addr, int stride);
+    public static void internal_native_PlotLines(String label, long values_addr, int values_count, int values_offset, String overlay_text, float scale_min, float scale_max, long graph_size_addr, int stride) {
+        imgui.natives.JNI_ImGui.internal_native_PlotLines(label, values_addr, values_count, values_offset, overlay_text, scale_min, scale_max, graph_size_addr, stride);
+    }
 
     public static void PlotLines(String label, NativeFloatArray values, int values_count, int values_offset, String overlay_text, float scale_min, float scale_max, ImVec2 graph_size) {
         internal_native_PlotLines(label, values.native_void_address, values_count, values_offset, overlay_text, scale_min, scale_max, graph_size.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PlotLines(label, (float*)values_addr, (int)values_count, (int)values_offset, overlay_text, (float)scale_min, (float)scale_max, *((ImVec2* )graph_size_addr));
-*/
-    public static native void internal_native_PlotLines(String label, long values_addr, int values_count, int values_offset, String overlay_text, float scale_min, float scale_max, long graph_size_addr);
+    public static void internal_native_PlotLines(String label, long values_addr, int values_count, int values_offset, String overlay_text, float scale_min, float scale_max, long graph_size_addr) {
+        imgui.natives.JNI_ImGui.internal_native_PlotLines(label, values_addr, values_count, values_offset, overlay_text, scale_min, scale_max, graph_size_addr);
+    }
 
     public static void PlotLines(String label, NativeFloatArray values, int values_count, int values_offset, String overlay_text, float scale_min, float scale_max) {
         internal_native_PlotLines(label, values.native_void_address, values_count, values_offset, overlay_text, scale_min, scale_max);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PlotLines(label, (float*)values_addr, (int)values_count, (int)values_offset, overlay_text, (float)scale_min, (float)scale_max);
-*/
-    public static native void internal_native_PlotLines(String label, long values_addr, int values_count, int values_offset, String overlay_text, float scale_min, float scale_max);
+    public static void internal_native_PlotLines(String label, long values_addr, int values_count, int values_offset, String overlay_text, float scale_min, float scale_max) {
+        imgui.natives.JNI_ImGui.internal_native_PlotLines(label, values_addr, values_count, values_offset, overlay_text, scale_min, scale_max);
+    }
 
     public static void PlotLines(String label, NativeFloatArray values, int values_count, int values_offset, String overlay_text, float scale_min) {
         internal_native_PlotLines(label, values.native_void_address, values_count, values_offset, overlay_text, scale_min);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PlotLines(label, (float*)values_addr, (int)values_count, (int)values_offset, overlay_text, (float)scale_min);
-*/
-    public static native void internal_native_PlotLines(String label, long values_addr, int values_count, int values_offset, String overlay_text, float scale_min);
+    public static void internal_native_PlotLines(String label, long values_addr, int values_count, int values_offset, String overlay_text, float scale_min) {
+        imgui.natives.JNI_ImGui.internal_native_PlotLines(label, values_addr, values_count, values_offset, overlay_text, scale_min);
+    }
 
     public static void PlotLines(String label, NativeFloatArray values, int values_count, int values_offset, String overlay_text) {
         internal_native_PlotLines(label, values.native_void_address, values_count, values_offset, overlay_text);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PlotLines(label, (float*)values_addr, (int)values_count, (int)values_offset, overlay_text);
-*/
-    public static native void internal_native_PlotLines(String label, long values_addr, int values_count, int values_offset, String overlay_text);
+    public static void internal_native_PlotLines(String label, long values_addr, int values_count, int values_offset, String overlay_text) {
+        imgui.natives.JNI_ImGui.internal_native_PlotLines(label, values_addr, values_count, values_offset, overlay_text);
+    }
 
     public static void PlotLines(String label, NativeFloatArray values, int values_count, int values_offset) {
         internal_native_PlotLines(label, values.native_void_address, values_count, values_offset);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PlotLines(label, (float*)values_addr, (int)values_count, (int)values_offset);
-*/
-    public static native void internal_native_PlotLines(String label, long values_addr, int values_count, int values_offset);
+    public static void internal_native_PlotLines(String label, long values_addr, int values_count, int values_offset) {
+        imgui.natives.JNI_ImGui.internal_native_PlotLines(label, values_addr, values_count, values_offset);
+    }
 
     public static void PlotLines(String label, NativeFloatArray values, int values_count) {
         internal_native_PlotLines(label, values.native_void_address, values_count);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PlotLines(label, (float*)values_addr, (int)values_count);
-*/
-    public static native void internal_native_PlotLines(String label, long values_addr, int values_count);
+    public static void internal_native_PlotLines(String label, long values_addr, int values_count) {
+        imgui.natives.JNI_ImGui.internal_native_PlotLines(label, values_addr, values_count);
+    }
 
     public static void PlotHistogram(String label, NativeFloatArray values, int values_count, int values_offset, String overlay_text, float scale_min, float scale_max, ImVec2 graph_size, int stride) {
         internal_native_PlotHistogram(label, values.native_void_address, values_count, values_offset, overlay_text, scale_min, scale_max, graph_size.native_address, stride);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PlotHistogram(label, (float*)values_addr, (int)values_count, (int)values_offset, overlay_text, (float)scale_min, (float)scale_max, *((ImVec2* )graph_size_addr), (int)stride);
-*/
-    public static native void internal_native_PlotHistogram(String label, long values_addr, int values_count, int values_offset, String overlay_text, float scale_min, float scale_max, long graph_size_addr, int stride);
+    public static void internal_native_PlotHistogram(String label, long values_addr, int values_count, int values_offset, String overlay_text, float scale_min, float scale_max, long graph_size_addr, int stride) {
+        imgui.natives.JNI_ImGui.internal_native_PlotHistogram(label, values_addr, values_count, values_offset, overlay_text, scale_min, scale_max, graph_size_addr, stride);
+    }
 
     public static void PlotHistogram(String label, NativeFloatArray values, int values_count, int values_offset, String overlay_text, float scale_min, float scale_max, ImVec2 graph_size) {
         internal_native_PlotHistogram(label, values.native_void_address, values_count, values_offset, overlay_text, scale_min, scale_max, graph_size.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PlotHistogram(label, (float*)values_addr, (int)values_count, (int)values_offset, overlay_text, (float)scale_min, (float)scale_max, *((ImVec2* )graph_size_addr));
-*/
-    public static native void internal_native_PlotHistogram(String label, long values_addr, int values_count, int values_offset, String overlay_text, float scale_min, float scale_max, long graph_size_addr);
+    public static void internal_native_PlotHistogram(String label, long values_addr, int values_count, int values_offset, String overlay_text, float scale_min, float scale_max, long graph_size_addr) {
+        imgui.natives.JNI_ImGui.internal_native_PlotHistogram(label, values_addr, values_count, values_offset, overlay_text, scale_min, scale_max, graph_size_addr);
+    }
 
     public static void PlotHistogram(String label, NativeFloatArray values, int values_count, int values_offset, String overlay_text, float scale_min, float scale_max) {
         internal_native_PlotHistogram(label, values.native_void_address, values_count, values_offset, overlay_text, scale_min, scale_max);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PlotHistogram(label, (float*)values_addr, (int)values_count, (int)values_offset, overlay_text, (float)scale_min, (float)scale_max);
-*/
-    public static native void internal_native_PlotHistogram(String label, long values_addr, int values_count, int values_offset, String overlay_text, float scale_min, float scale_max);
+    public static void internal_native_PlotHistogram(String label, long values_addr, int values_count, int values_offset, String overlay_text, float scale_min, float scale_max) {
+        imgui.natives.JNI_ImGui.internal_native_PlotHistogram(label, values_addr, values_count, values_offset, overlay_text, scale_min, scale_max);
+    }
 
     public static void PlotHistogram(String label, NativeFloatArray values, int values_count, int values_offset, String overlay_text, float scale_min) {
         internal_native_PlotHistogram(label, values.native_void_address, values_count, values_offset, overlay_text, scale_min);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PlotHistogram(label, (float*)values_addr, (int)values_count, (int)values_offset, overlay_text, (float)scale_min);
-*/
-    public static native void internal_native_PlotHistogram(String label, long values_addr, int values_count, int values_offset, String overlay_text, float scale_min);
+    public static void internal_native_PlotHistogram(String label, long values_addr, int values_count, int values_offset, String overlay_text, float scale_min) {
+        imgui.natives.JNI_ImGui.internal_native_PlotHistogram(label, values_addr, values_count, values_offset, overlay_text, scale_min);
+    }
 
     public static void PlotHistogram(String label, NativeFloatArray values, int values_count, int values_offset, String overlay_text) {
         internal_native_PlotHistogram(label, values.native_void_address, values_count, values_offset, overlay_text);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PlotHistogram(label, (float*)values_addr, (int)values_count, (int)values_offset, overlay_text);
-*/
-    public static native void internal_native_PlotHistogram(String label, long values_addr, int values_count, int values_offset, String overlay_text);
+    public static void internal_native_PlotHistogram(String label, long values_addr, int values_count, int values_offset, String overlay_text) {
+        imgui.natives.JNI_ImGui.internal_native_PlotHistogram(label, values_addr, values_count, values_offset, overlay_text);
+    }
 
     public static void PlotHistogram(String label, NativeFloatArray values, int values_count, int values_offset) {
         internal_native_PlotHistogram(label, values.native_void_address, values_count, values_offset);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PlotHistogram(label, (float*)values_addr, (int)values_count, (int)values_offset);
-*/
-    public static native void internal_native_PlotHistogram(String label, long values_addr, int values_count, int values_offset);
+    public static void internal_native_PlotHistogram(String label, long values_addr, int values_count, int values_offset) {
+        imgui.natives.JNI_ImGui.internal_native_PlotHistogram(label, values_addr, values_count, values_offset);
+    }
 
     public static void PlotHistogram(String label, NativeFloatArray values, int values_count) {
         internal_native_PlotHistogram(label, values.native_void_address, values_count);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PlotHistogram(label, (float*)values_addr, (int)values_count);
-*/
-    public static native void internal_native_PlotHistogram(String label, long values_addr, int values_count);
+    public static void internal_native_PlotHistogram(String label, long values_addr, int values_count) {
+        imgui.natives.JNI_ImGui.internal_native_PlotHistogram(label, values_addr, values_count);
+    }
 
     public static void Value(String prefix, boolean b) {
         internal_native_Value__0(prefix, b);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::Value(prefix, b);
-*/
-    public static native void internal_native_Value__0(String prefix, boolean b);
+    public static void internal_native_Value__0(String prefix, boolean b) {
+        imgui.natives.JNI_ImGui.internal_native_Value__0(prefix, b);
+    }
 
     public static void Value(String prefix, int v) {
         internal_native_Value__1(prefix, v);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::Value(prefix, (int)v);
-*/
-    public static native void internal_native_Value__1(String prefix, int v);
+    public static void internal_native_Value__1(String prefix, int v) {
+        imgui.natives.JNI_ImGui.internal_native_Value__1(prefix, v);
+    }
 
     public static void Value(String prefix, float v, String float_format) {
         internal_native_Value__2(prefix, v, float_format);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::Value(prefix, (float)v, float_format);
-*/
-    public static native void internal_native_Value__2(String prefix, float v, String float_format);
+    public static void internal_native_Value__2(String prefix, float v, String float_format) {
+        imgui.natives.JNI_ImGui.internal_native_Value__2(prefix, v, float_format);
+    }
 
     public static void Value(String prefix, float v) {
         internal_native_Value__2(prefix, v);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::Value(prefix, (float)v);
-*/
-    public static native void internal_native_Value__2(String prefix, float v);
+    public static void internal_native_Value__2(String prefix, float v) {
+        imgui.natives.JNI_ImGui.internal_native_Value__2(prefix, v);
+    }
 
     public static boolean BeginMenuBar() {
         return internal_native_BeginMenuBar();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginMenuBar();
-*/
-    public static native boolean internal_native_BeginMenuBar();
+    public static boolean internal_native_BeginMenuBar() {
+        return imgui.natives.JNI_ImGui.internal_native_BeginMenuBar();
+    }
 
     public static void EndMenuBar() {
         internal_native_EndMenuBar();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::EndMenuBar();
-*/
-    public static native void internal_native_EndMenuBar();
+    public static void internal_native_EndMenuBar() {
+        imgui.natives.JNI_ImGui.internal_native_EndMenuBar();
+    }
 
     public static boolean BeginMainMenuBar() {
         return internal_native_BeginMainMenuBar();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginMainMenuBar();
-*/
-    public static native boolean internal_native_BeginMainMenuBar();
+    public static boolean internal_native_BeginMainMenuBar() {
+        return imgui.natives.JNI_ImGui.internal_native_BeginMainMenuBar();
+    }
 
     public static void EndMainMenuBar() {
         internal_native_EndMainMenuBar();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::EndMainMenuBar();
-*/
-    public static native void internal_native_EndMainMenuBar();
+    public static void internal_native_EndMainMenuBar() {
+        imgui.natives.JNI_ImGui.internal_native_EndMainMenuBar();
+    }
 
     public static boolean BeginMenu(String label, boolean enabled) {
         return internal_native_BeginMenu(label, enabled);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginMenu(label, enabled);
-*/
-    public static native boolean internal_native_BeginMenu(String label, boolean enabled);
+    public static boolean internal_native_BeginMenu(String label, boolean enabled) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginMenu(label, enabled);
+    }
 
     public static boolean BeginMenu(String label) {
         return internal_native_BeginMenu(label);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginMenu(label);
-*/
-    public static native boolean internal_native_BeginMenu(String label);
+    public static boolean internal_native_BeginMenu(String label) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginMenu(label);
+    }
 
     public static void EndMenu() {
         internal_native_EndMenu();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::EndMenu();
-*/
-    public static native void internal_native_EndMenu();
+    public static void internal_native_EndMenu() {
+        imgui.natives.JNI_ImGui.internal_native_EndMenu();
+    }
 
     public static boolean MenuItem(String label, String shortcut, boolean selected, boolean enabled) {
         return internal_native_MenuItem__0(label, shortcut, selected, enabled);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::MenuItem(label, shortcut, selected, enabled);
-*/
-    public static native boolean internal_native_MenuItem__0(String label, String shortcut, boolean selected, boolean enabled);
+    public static boolean internal_native_MenuItem__0(String label, String shortcut, boolean selected, boolean enabled) {
+        return imgui.natives.JNI_ImGui.internal_native_MenuItem__0(label, shortcut, selected, enabled);
+    }
 
     public static boolean MenuItem(String label, String shortcut, boolean selected) {
         return internal_native_MenuItem__0(label, shortcut, selected);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::MenuItem(label, shortcut, selected);
-*/
-    public static native boolean internal_native_MenuItem__0(String label, String shortcut, boolean selected);
+    public static boolean internal_native_MenuItem__0(String label, String shortcut, boolean selected) {
+        return imgui.natives.JNI_ImGui.internal_native_MenuItem__0(label, shortcut, selected);
+    }
 
     public static boolean MenuItem(String label, String shortcut) {
         return internal_native_MenuItem__0(label, shortcut);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::MenuItem(label, shortcut);
-*/
-    public static native boolean internal_native_MenuItem__0(String label, String shortcut);
+    public static boolean internal_native_MenuItem__0(String label, String shortcut) {
+        return imgui.natives.JNI_ImGui.internal_native_MenuItem__0(label, shortcut);
+    }
 
     public static boolean MenuItem(String label) {
         return internal_native_MenuItem__0(label);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::MenuItem(label);
-*/
-    public static native boolean internal_native_MenuItem__0(String label);
+    public static boolean internal_native_MenuItem__0(String label) {
+        return imgui.natives.JNI_ImGui.internal_native_MenuItem__0(label);
+    }
 
     public static boolean MenuItem(String label, String shortcut, NativeBoolArray p_selected, boolean enabled) {
         return internal_native_MenuItem__1(label, shortcut, p_selected.native_void_address, enabled);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::MenuItem(label, shortcut, (bool*)p_selected_addr, enabled);
-*/
-    public static native boolean internal_native_MenuItem__1(String label, String shortcut, long p_selected_addr, boolean enabled);
+    public static boolean internal_native_MenuItem__1(String label, String shortcut, long p_selected_addr, boolean enabled) {
+        return imgui.natives.JNI_ImGui.internal_native_MenuItem__1(label, shortcut, p_selected_addr, enabled);
+    }
 
     public static boolean MenuItem(String label, String shortcut, NativeBoolArray p_selected) {
         return internal_native_MenuItem__1(label, shortcut, p_selected.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::MenuItem(label, shortcut, (bool*)p_selected_addr);
-*/
-    public static native boolean internal_native_MenuItem__1(String label, String shortcut, long p_selected_addr);
+    public static boolean internal_native_MenuItem__1(String label, String shortcut, long p_selected_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_MenuItem__1(label, shortcut, p_selected_addr);
+    }
 
     public static boolean BeginTooltip() {
         return internal_native_BeginTooltip();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginTooltip();
-*/
-    public static native boolean internal_native_BeginTooltip();
+    public static boolean internal_native_BeginTooltip() {
+        return imgui.natives.JNI_ImGui.internal_native_BeginTooltip();
+    }
 
     public static void EndTooltip() {
         internal_native_EndTooltip();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::EndTooltip();
-*/
-    public static native void internal_native_EndTooltip();
+    public static void internal_native_EndTooltip() {
+        imgui.natives.JNI_ImGui.internal_native_EndTooltip();
+    }
 
     public static void SetTooltip(String fmt) {
         internal_native_SetTooltip(fmt);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetTooltip(fmt);
-*/
-    public static native void internal_native_SetTooltip(String fmt);
+    public static void internal_native_SetTooltip(String fmt) {
+        imgui.natives.JNI_ImGui.internal_native_SetTooltip(fmt);
+    }
 
     public static boolean BeginItemTooltip() {
         return internal_native_BeginItemTooltip();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginItemTooltip();
-*/
-    public static native boolean internal_native_BeginItemTooltip();
+    public static boolean internal_native_BeginItemTooltip() {
+        return imgui.natives.JNI_ImGui.internal_native_BeginItemTooltip();
+    }
 
     public static void SetItemTooltip(String fmt) {
         internal_native_SetItemTooltip(fmt);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetItemTooltip(fmt);
-*/
-    public static native void internal_native_SetItemTooltip(String fmt);
+    public static void internal_native_SetItemTooltip(String fmt) {
+        imgui.natives.JNI_ImGui.internal_native_SetItemTooltip(fmt);
+    }
 
     public static boolean BeginPopup(String str_id, ImGuiWindowFlags flags) {
         return internal_native_BeginPopup(str_id, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginPopup(str_id, (::ImGuiWindowFlags)flags);
-*/
-    public static native boolean internal_native_BeginPopup(String str_id, int flags);
+    public static boolean internal_native_BeginPopup(String str_id, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginPopup(str_id, flags);
+    }
 
     public static boolean BeginPopup(String str_id) {
         return internal_native_BeginPopup(str_id);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginPopup(str_id);
-*/
-    public static native boolean internal_native_BeginPopup(String str_id);
+    public static boolean internal_native_BeginPopup(String str_id) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginPopup(str_id);
+    }
 
     public static boolean BeginPopupModal(String name, NativeBoolArray p_open, ImGuiWindowFlags flags) {
         return internal_native_BeginPopupModal(name, p_open.native_void_address, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginPopupModal(name, (bool*)p_open_addr, (::ImGuiWindowFlags)flags);
-*/
-    public static native boolean internal_native_BeginPopupModal(String name, long p_open_addr, int flags);
+    public static boolean internal_native_BeginPopupModal(String name, long p_open_addr, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginPopupModal(name, p_open_addr, flags);
+    }
 
     public static boolean BeginPopupModal(String name, NativeBoolArray p_open) {
         return internal_native_BeginPopupModal(name, p_open.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginPopupModal(name, (bool*)p_open_addr);
-*/
-    public static native boolean internal_native_BeginPopupModal(String name, long p_open_addr);
+    public static boolean internal_native_BeginPopupModal(String name, long p_open_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginPopupModal(name, p_open_addr);
+    }
 
     public static boolean BeginPopupModal(String name) {
         return internal_native_BeginPopupModal(name);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginPopupModal(name);
-*/
-    public static native boolean internal_native_BeginPopupModal(String name);
+    public static boolean internal_native_BeginPopupModal(String name) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginPopupModal(name);
+    }
 
     public static void EndPopup() {
         internal_native_EndPopup();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::EndPopup();
-*/
-    public static native void internal_native_EndPopup();
+    public static void internal_native_EndPopup() {
+        imgui.natives.JNI_ImGui.internal_native_EndPopup();
+    }
 
     public static void OpenPopup(String str_id, ImGuiPopupFlags flags) {
         internal_native_OpenPopup__0(str_id, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::OpenPopup(str_id, (::ImGuiPopupFlags)flags);
-*/
-    public static native void internal_native_OpenPopup__0(String str_id, int flags);
+    public static void internal_native_OpenPopup__0(String str_id, int flags) {
+        imgui.natives.JNI_ImGui.internal_native_OpenPopup__0(str_id, flags);
+    }
 
     public static void OpenPopup(String str_id) {
         internal_native_OpenPopup__0(str_id);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::OpenPopup(str_id);
-*/
-    public static native void internal_native_OpenPopup__0(String str_id);
+    public static void internal_native_OpenPopup__0(String str_id) {
+        imgui.natives.JNI_ImGui.internal_native_OpenPopup__0(str_id);
+    }
 
     public static void OpenPopup(int id, ImGuiPopupFlags flags) {
         internal_native_OpenPopup__1(id, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::OpenPopup((int)id, (::ImGuiPopupFlags)flags);
-*/
-    public static native void internal_native_OpenPopup__1(int id, int flags);
+    public static void internal_native_OpenPopup__1(int id, int flags) {
+        imgui.natives.JNI_ImGui.internal_native_OpenPopup__1(id, flags);
+    }
 
     public static void OpenPopup(int id) {
         internal_native_OpenPopup__1(id);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::OpenPopup((int)id);
-*/
-    public static native void internal_native_OpenPopup__1(int id);
+    public static void internal_native_OpenPopup__1(int id) {
+        imgui.natives.JNI_ImGui.internal_native_OpenPopup__1(id);
+    }
 
     public static void OpenPopupOnItemClick(String str_id, ImGuiPopupFlags flags) {
         internal_native_OpenPopupOnItemClick(str_id, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::OpenPopupOnItemClick(str_id, (::ImGuiPopupFlags)flags);
-*/
-    public static native void internal_native_OpenPopupOnItemClick(String str_id, int flags);
+    public static void internal_native_OpenPopupOnItemClick(String str_id, int flags) {
+        imgui.natives.JNI_ImGui.internal_native_OpenPopupOnItemClick(str_id, flags);
+    }
 
     public static void OpenPopupOnItemClick(String str_id) {
         internal_native_OpenPopupOnItemClick(str_id);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::OpenPopupOnItemClick(str_id);
-*/
-    public static native void internal_native_OpenPopupOnItemClick(String str_id);
+    public static void internal_native_OpenPopupOnItemClick(String str_id) {
+        imgui.natives.JNI_ImGui.internal_native_OpenPopupOnItemClick(str_id);
+    }
 
     public static void OpenPopupOnItemClick() {
         internal_native_OpenPopupOnItemClick();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::OpenPopupOnItemClick();
-*/
-    public static native void internal_native_OpenPopupOnItemClick();
+    public static void internal_native_OpenPopupOnItemClick() {
+        imgui.natives.JNI_ImGui.internal_native_OpenPopupOnItemClick();
+    }
 
     public static void CloseCurrentPopup() {
         internal_native_CloseCurrentPopup();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::CloseCurrentPopup();
-*/
-    public static native void internal_native_CloseCurrentPopup();
+    public static void internal_native_CloseCurrentPopup() {
+        imgui.natives.JNI_ImGui.internal_native_CloseCurrentPopup();
+    }
 
     public static boolean BeginPopupContextItem(String str_id, ImGuiPopupFlags flags) {
         return internal_native_BeginPopupContextItem(str_id, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginPopupContextItem(str_id, (::ImGuiPopupFlags)flags);
-*/
-    public static native boolean internal_native_BeginPopupContextItem(String str_id, int flags);
+    public static boolean internal_native_BeginPopupContextItem(String str_id, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginPopupContextItem(str_id, flags);
+    }
 
     public static boolean BeginPopupContextItem(String str_id) {
         return internal_native_BeginPopupContextItem(str_id);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginPopupContextItem(str_id);
-*/
-    public static native boolean internal_native_BeginPopupContextItem(String str_id);
+    public static boolean internal_native_BeginPopupContextItem(String str_id) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginPopupContextItem(str_id);
+    }
 
     public static boolean BeginPopupContextItem() {
         return internal_native_BeginPopupContextItem();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginPopupContextItem();
-*/
-    public static native boolean internal_native_BeginPopupContextItem();
+    public static boolean internal_native_BeginPopupContextItem() {
+        return imgui.natives.JNI_ImGui.internal_native_BeginPopupContextItem();
+    }
 
     public static boolean BeginPopupContextWindow(String str_id, ImGuiPopupFlags flags) {
         return internal_native_BeginPopupContextWindow(str_id, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginPopupContextWindow(str_id, (::ImGuiPopupFlags)flags);
-*/
-    public static native boolean internal_native_BeginPopupContextWindow(String str_id, int flags);
+    public static boolean internal_native_BeginPopupContextWindow(String str_id, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginPopupContextWindow(str_id, flags);
+    }
 
     public static boolean BeginPopupContextWindow(String str_id) {
         return internal_native_BeginPopupContextWindow(str_id);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginPopupContextWindow(str_id);
-*/
-    public static native boolean internal_native_BeginPopupContextWindow(String str_id);
+    public static boolean internal_native_BeginPopupContextWindow(String str_id) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginPopupContextWindow(str_id);
+    }
 
     public static boolean BeginPopupContextWindow() {
         return internal_native_BeginPopupContextWindow();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginPopupContextWindow();
-*/
-    public static native boolean internal_native_BeginPopupContextWindow();
+    public static boolean internal_native_BeginPopupContextWindow() {
+        return imgui.natives.JNI_ImGui.internal_native_BeginPopupContextWindow();
+    }
 
     public static boolean BeginPopupContextVoid(String str_id, ImGuiPopupFlags flags) {
         return internal_native_BeginPopupContextVoid(str_id, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginPopupContextVoid(str_id, (::ImGuiPopupFlags)flags);
-*/
-    public static native boolean internal_native_BeginPopupContextVoid(String str_id, int flags);
+    public static boolean internal_native_BeginPopupContextVoid(String str_id, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginPopupContextVoid(str_id, flags);
+    }
 
     public static boolean BeginPopupContextVoid(String str_id) {
         return internal_native_BeginPopupContextVoid(str_id);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginPopupContextVoid(str_id);
-*/
-    public static native boolean internal_native_BeginPopupContextVoid(String str_id);
+    public static boolean internal_native_BeginPopupContextVoid(String str_id) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginPopupContextVoid(str_id);
+    }
 
     public static boolean BeginPopupContextVoid() {
         return internal_native_BeginPopupContextVoid();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginPopupContextVoid();
-*/
-    public static native boolean internal_native_BeginPopupContextVoid();
+    public static boolean internal_native_BeginPopupContextVoid() {
+        return imgui.natives.JNI_ImGui.internal_native_BeginPopupContextVoid();
+    }
 
     public static boolean IsPopupOpen(String str_id, ImGuiPopupFlags flags) {
         return internal_native_IsPopupOpen(str_id, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsPopupOpen(str_id, (::ImGuiPopupFlags)flags);
-*/
-    public static native boolean internal_native_IsPopupOpen(String str_id, int flags);
+    public static boolean internal_native_IsPopupOpen(String str_id, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_IsPopupOpen(str_id, flags);
+    }
 
     public static boolean IsPopupOpen(String str_id) {
         return internal_native_IsPopupOpen(str_id);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsPopupOpen(str_id);
-*/
-    public static native boolean internal_native_IsPopupOpen(String str_id);
+    public static boolean internal_native_IsPopupOpen(String str_id) {
+        return imgui.natives.JNI_ImGui.internal_native_IsPopupOpen(str_id);
+    }
 
     public static boolean BeginTable(String str_id, int column, ImGuiTableFlags flags, ImVec2 outer_size, float inner_width) {
         return internal_native_BeginTable(str_id, column, flags.getValue(), outer_size.native_address, inner_width);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginTable(str_id, (int)column, (::ImGuiTableFlags)flags, *((ImVec2* )outer_size_addr), (float)inner_width);
-*/
-    public static native boolean internal_native_BeginTable(String str_id, int column, int flags, long outer_size_addr, float inner_width);
+    public static boolean internal_native_BeginTable(String str_id, int column, int flags, long outer_size_addr, float inner_width) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginTable(str_id, column, flags, outer_size_addr, inner_width);
+    }
 
     public static boolean BeginTable(String str_id, int column, ImGuiTableFlags flags, ImVec2 outer_size) {
         return internal_native_BeginTable(str_id, column, flags.getValue(), outer_size.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginTable(str_id, (int)column, (::ImGuiTableFlags)flags, *((ImVec2* )outer_size_addr));
-*/
-    public static native boolean internal_native_BeginTable(String str_id, int column, int flags, long outer_size_addr);
+    public static boolean internal_native_BeginTable(String str_id, int column, int flags, long outer_size_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginTable(str_id, column, flags, outer_size_addr);
+    }
 
     public static boolean BeginTable(String str_id, int column, ImGuiTableFlags flags) {
         return internal_native_BeginTable(str_id, column, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginTable(str_id, (int)column, (::ImGuiTableFlags)flags);
-*/
-    public static native boolean internal_native_BeginTable(String str_id, int column, int flags);
+    public static boolean internal_native_BeginTable(String str_id, int column, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginTable(str_id, column, flags);
+    }
 
     public static boolean BeginTable(String str_id, int column) {
         return internal_native_BeginTable(str_id, column);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginTable(str_id, (int)column);
-*/
-    public static native boolean internal_native_BeginTable(String str_id, int column);
+    public static boolean internal_native_BeginTable(String str_id, int column) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginTable(str_id, column);
+    }
 
     public static void EndTable() {
         internal_native_EndTable();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::EndTable();
-*/
-    public static native void internal_native_EndTable();
+    public static void internal_native_EndTable() {
+        imgui.natives.JNI_ImGui.internal_native_EndTable();
+    }
 
     public static void TableNextRow(int row_flags, float min_row_height) {
         internal_native_TableNextRow(row_flags, min_row_height);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::TableNextRow((int)row_flags, (float)min_row_height);
-*/
-    public static native void internal_native_TableNextRow(int row_flags, float min_row_height);
+    public static void internal_native_TableNextRow(int row_flags, float min_row_height) {
+        imgui.natives.JNI_ImGui.internal_native_TableNextRow(row_flags, min_row_height);
+    }
 
     public static void TableNextRow(int row_flags) {
         internal_native_TableNextRow(row_flags);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::TableNextRow((int)row_flags);
-*/
-    public static native void internal_native_TableNextRow(int row_flags);
+    public static void internal_native_TableNextRow(int row_flags) {
+        imgui.natives.JNI_ImGui.internal_native_TableNextRow(row_flags);
+    }
 
     public static void TableNextRow() {
         internal_native_TableNextRow();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::TableNextRow();
-*/
-    public static native void internal_native_TableNextRow();
+    public static void internal_native_TableNextRow() {
+        imgui.natives.JNI_ImGui.internal_native_TableNextRow();
+    }
 
     public static boolean TableNextColumn() {
         return internal_native_TableNextColumn();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::TableNextColumn();
-*/
-    public static native boolean internal_native_TableNextColumn();
+    public static boolean internal_native_TableNextColumn() {
+        return imgui.natives.JNI_ImGui.internal_native_TableNextColumn();
+    }
 
     public static boolean TableSetColumnIndex(int column_n) {
         return internal_native_TableSetColumnIndex(column_n);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::TableSetColumnIndex((int)column_n);
-*/
-    public static native boolean internal_native_TableSetColumnIndex(int column_n);
+    public static boolean internal_native_TableSetColumnIndex(int column_n) {
+        return imgui.natives.JNI_ImGui.internal_native_TableSetColumnIndex(column_n);
+    }
 
     public static void TableSetupColumn(String label, ImGuiTableColumnFlags flags, float init_width_or_weight, int user_id) {
         internal_native_TableSetupColumn(label, flags.getValue(), init_width_or_weight, user_id);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::TableSetupColumn(label, (::ImGuiTableColumnFlags)flags, (float)init_width_or_weight, (int)user_id);
-*/
-    public static native void internal_native_TableSetupColumn(String label, int flags, float init_width_or_weight, int user_id);
+    public static void internal_native_TableSetupColumn(String label, int flags, float init_width_or_weight, int user_id) {
+        imgui.natives.JNI_ImGui.internal_native_TableSetupColumn(label, flags, init_width_or_weight, user_id);
+    }
 
     public static void TableSetupColumn(String label, ImGuiTableColumnFlags flags, float init_width_or_weight) {
         internal_native_TableSetupColumn(label, flags.getValue(), init_width_or_weight);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::TableSetupColumn(label, (::ImGuiTableColumnFlags)flags, (float)init_width_or_weight);
-*/
-    public static native void internal_native_TableSetupColumn(String label, int flags, float init_width_or_weight);
+    public static void internal_native_TableSetupColumn(String label, int flags, float init_width_or_weight) {
+        imgui.natives.JNI_ImGui.internal_native_TableSetupColumn(label, flags, init_width_or_weight);
+    }
 
     public static void TableSetupColumn(String label, ImGuiTableColumnFlags flags) {
         internal_native_TableSetupColumn(label, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::TableSetupColumn(label, (::ImGuiTableColumnFlags)flags);
-*/
-    public static native void internal_native_TableSetupColumn(String label, int flags);
+    public static void internal_native_TableSetupColumn(String label, int flags) {
+        imgui.natives.JNI_ImGui.internal_native_TableSetupColumn(label, flags);
+    }
 
     public static void TableSetupColumn(String label) {
         internal_native_TableSetupColumn(label);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::TableSetupColumn(label);
-*/
-    public static native void internal_native_TableSetupColumn(String label);
+    public static void internal_native_TableSetupColumn(String label) {
+        imgui.natives.JNI_ImGui.internal_native_TableSetupColumn(label);
+    }
 
     public static void TableSetupScrollFreeze(int cols, int rows) {
         internal_native_TableSetupScrollFreeze(cols, rows);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::TableSetupScrollFreeze((int)cols, (int)rows);
-*/
-    public static native void internal_native_TableSetupScrollFreeze(int cols, int rows);
+    public static void internal_native_TableSetupScrollFreeze(int cols, int rows) {
+        imgui.natives.JNI_ImGui.internal_native_TableSetupScrollFreeze(cols, rows);
+    }
 
     public static void TableHeader(String label) {
         internal_native_TableHeader(label);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::TableHeader(label);
-*/
-    public static native void internal_native_TableHeader(String label);
+    public static void internal_native_TableHeader(String label) {
+        imgui.natives.JNI_ImGui.internal_native_TableHeader(label);
+    }
 
     public static void TableHeadersRow() {
         internal_native_TableHeadersRow();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::TableHeadersRow();
-*/
-    public static native void internal_native_TableHeadersRow();
+    public static void internal_native_TableHeadersRow() {
+        imgui.natives.JNI_ImGui.internal_native_TableHeadersRow();
+    }
 
     public static void TableAngledHeadersRow() {
         internal_native_TableAngledHeadersRow();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::TableAngledHeadersRow();
-*/
-    public static native void internal_native_TableAngledHeadersRow();
+    public static void internal_native_TableAngledHeadersRow() {
+        imgui.natives.JNI_ImGui.internal_native_TableAngledHeadersRow();
+    }
 
     public static ImGuiTableSortSpecs TableGetSortSpecs() {
         long addr = internal_native_TableGetSortSpecs_addr();
@@ -4872,37 +4360,33 @@ ImGuiWrapper::ImGui::TableAngledHeadersRow();
         return ImGuiTableSortSpecs_TEMP_STATIC_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::TableGetSortSpecs();
-*/
-    public static native long internal_native_TableGetSortSpecs_addr();
+    public static long internal_native_TableGetSortSpecs_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_TableGetSortSpecs_addr();
+    }
 
     public static int TableGetColumnCount() {
         return internal_native_TableGetColumnCount();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::TableGetColumnCount();
-*/
-    public static native int internal_native_TableGetColumnCount();
+    public static int internal_native_TableGetColumnCount() {
+        return imgui.natives.JNI_ImGui.internal_native_TableGetColumnCount();
+    }
 
     public static int TableGetColumnIndex() {
         return internal_native_TableGetColumnIndex();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::TableGetColumnIndex();
-*/
-    public static native int internal_native_TableGetColumnIndex();
+    public static int internal_native_TableGetColumnIndex() {
+        return imgui.natives.JNI_ImGui.internal_native_TableGetColumnIndex();
+    }
 
     public static int TableGetRowIndex() {
         return internal_native_TableGetRowIndex();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::TableGetRowIndex();
-*/
-    public static native int internal_native_TableGetRowIndex();
+    public static int internal_native_TableGetRowIndex() {
+        return imgui.natives.JNI_ImGui.internal_native_TableGetRowIndex();
+    }
 
     public static NativeString TableGetColumnName(int column_n) {
         long addr = internal_native_TableGetColumnName_addr(column_n);
@@ -4914,11 +4398,9 @@ return ImGuiWrapper::ImGui::TableGetRowIndex();
         return NativeString_TEMP_STATIC_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-static NativeString copy_addr;
-copy_addr = ImGuiWrapper::ImGui::TableGetColumnName((int)column_n);
-return (jlong)&copy_addr;*/
-    public static native long internal_native_TableGetColumnName_addr(int column_n);
+    public static long internal_native_TableGetColumnName_addr(int column_n) {
+        return imgui.natives.JNI_ImGui.internal_native_TableGetColumnName_addr(column_n);
+    }
 
     public static NativeString TableGetColumnName() {
         long addr = internal_native_TableGetColumnName_addr();
@@ -4930,416 +4412,369 @@ return (jlong)&copy_addr;*/
         return NativeString_TEMP_STATIC_GEN_2;
     }
 
-    /*[-JNI;-NATIVE]
-static NativeString copy_addr;
-copy_addr = ImGuiWrapper::ImGui::TableGetColumnName();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_TableGetColumnName_addr();
+    public static long internal_native_TableGetColumnName_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_TableGetColumnName_addr();
+    }
 
     public static int TableGetColumnFlags(int column_n) {
         return internal_native_TableGetColumnFlags(column_n);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::TableGetColumnFlags((int)column_n);
-*/
-    public static native int internal_native_TableGetColumnFlags(int column_n);
+    public static int internal_native_TableGetColumnFlags(int column_n) {
+        return imgui.natives.JNI_ImGui.internal_native_TableGetColumnFlags(column_n);
+    }
 
     public static int TableGetColumnFlags() {
         return internal_native_TableGetColumnFlags();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::TableGetColumnFlags();
-*/
-    public static native int internal_native_TableGetColumnFlags();
+    public static int internal_native_TableGetColumnFlags() {
+        return imgui.natives.JNI_ImGui.internal_native_TableGetColumnFlags();
+    }
 
     public static void TableSetColumnEnabled(int column_n, boolean v) {
         internal_native_TableSetColumnEnabled(column_n, v);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::TableSetColumnEnabled((int)column_n, v);
-*/
-    public static native void internal_native_TableSetColumnEnabled(int column_n, boolean v);
+    public static void internal_native_TableSetColumnEnabled(int column_n, boolean v) {
+        imgui.natives.JNI_ImGui.internal_native_TableSetColumnEnabled(column_n, v);
+    }
 
     public static int TableGetHoveredColumn() {
         return internal_native_TableGetHoveredColumn();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::TableGetHoveredColumn();
-*/
-    public static native int internal_native_TableGetHoveredColumn();
+    public static int internal_native_TableGetHoveredColumn() {
+        return imgui.natives.JNI_ImGui.internal_native_TableGetHoveredColumn();
+    }
 
     public static void TableSetBgColor(int target, int color, int column_n) {
         internal_native_TableSetBgColor(target, color, column_n);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::TableSetBgColor((int)target, color, (int)column_n);
-*/
-    public static native void internal_native_TableSetBgColor(int target, int color, int column_n);
+    public static void internal_native_TableSetBgColor(int target, int color, int column_n) {
+        imgui.natives.JNI_ImGui.internal_native_TableSetBgColor(target, color, column_n);
+    }
 
     public static void TableSetBgColor(int target, int color) {
         internal_native_TableSetBgColor(target, color);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::TableSetBgColor((int)target, color);
-*/
-    public static native void internal_native_TableSetBgColor(int target, int color);
+    public static void internal_native_TableSetBgColor(int target, int color) {
+        imgui.natives.JNI_ImGui.internal_native_TableSetBgColor(target, color);
+    }
 
     public static boolean BeginTabBar(String str_id, ImGuiTabBarFlags flags) {
         return internal_native_BeginTabBar(str_id, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginTabBar(str_id, (::ImGuiTabBarFlags)flags);
-*/
-    public static native boolean internal_native_BeginTabBar(String str_id, int flags);
+    public static boolean internal_native_BeginTabBar(String str_id, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginTabBar(str_id, flags);
+    }
 
     public static boolean BeginTabBar(String str_id) {
         return internal_native_BeginTabBar(str_id);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginTabBar(str_id);
-*/
-    public static native boolean internal_native_BeginTabBar(String str_id);
+    public static boolean internal_native_BeginTabBar(String str_id) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginTabBar(str_id);
+    }
 
     public static void EndTabBar() {
         internal_native_EndTabBar();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::EndTabBar();
-*/
-    public static native void internal_native_EndTabBar();
+    public static void internal_native_EndTabBar() {
+        imgui.natives.JNI_ImGui.internal_native_EndTabBar();
+    }
 
     public static boolean BeginTabItem(String label, NativeBoolArray p_open, ImGuiTabItemFlags flags) {
         return internal_native_BeginTabItem(label, p_open.native_void_address, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginTabItem(label, (bool*)p_open_addr, (::ImGuiTabItemFlags)flags);
-*/
-    public static native boolean internal_native_BeginTabItem(String label, long p_open_addr, int flags);
+    public static boolean internal_native_BeginTabItem(String label, long p_open_addr, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginTabItem(label, p_open_addr, flags);
+    }
 
     public static boolean BeginTabItem(String label, NativeBoolArray p_open) {
         return internal_native_BeginTabItem(label, p_open.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginTabItem(label, (bool*)p_open_addr);
-*/
-    public static native boolean internal_native_BeginTabItem(String label, long p_open_addr);
+    public static boolean internal_native_BeginTabItem(String label, long p_open_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginTabItem(label, p_open_addr);
+    }
 
     public static boolean BeginTabItem(String label) {
         return internal_native_BeginTabItem(label);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginTabItem(label);
-*/
-    public static native boolean internal_native_BeginTabItem(String label);
+    public static boolean internal_native_BeginTabItem(String label) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginTabItem(label);
+    }
 
     public static void EndTabItem() {
         internal_native_EndTabItem();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::EndTabItem();
-*/
-    public static native void internal_native_EndTabItem();
+    public static void internal_native_EndTabItem() {
+        imgui.natives.JNI_ImGui.internal_native_EndTabItem();
+    }
 
     public static boolean TabItemButton(String label, ImGuiTabItemFlags flags) {
         return internal_native_TabItemButton(label, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::TabItemButton(label, (::ImGuiTabItemFlags)flags);
-*/
-    public static native boolean internal_native_TabItemButton(String label, int flags);
+    public static boolean internal_native_TabItemButton(String label, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_TabItemButton(label, flags);
+    }
 
     public static void SetTabItemClosed(String tab_or_docked_window_label) {
         internal_native_SetTabItemClosed(tab_or_docked_window_label);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetTabItemClosed(tab_or_docked_window_label);
-*/
-    public static native void internal_native_SetTabItemClosed(String tab_or_docked_window_label);
+    public static void internal_native_SetTabItemClosed(String tab_or_docked_window_label) {
+        imgui.natives.JNI_ImGui.internal_native_SetTabItemClosed(tab_or_docked_window_label);
+    }
 
     public static int DockSpace(int id, ImVec2 size, ImGuiDockNodeFlags flags, ImGuiWindowClass window_class) {
         return internal_native_DockSpace(id, size.native_address, flags.getValue(), window_class.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DockSpace((int)id, *((ImVec2* )size_addr), (::ImGuiDockNodeFlags)flags, (ImGuiWindowClass* )window_class_addr);
-*/
-    public static native int internal_native_DockSpace(int id, long size_addr, int flags, long window_class_addr);
+    public static int internal_native_DockSpace(int id, long size_addr, int flags, long window_class_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_DockSpace(id, size_addr, flags, window_class_addr);
+    }
 
     public static int DockSpace(int id, ImVec2 size, ImGuiDockNodeFlags flags) {
         return internal_native_DockSpace(id, size.native_address, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DockSpace((int)id, *((ImVec2* )size_addr), (::ImGuiDockNodeFlags)flags);
-*/
-    public static native int internal_native_DockSpace(int id, long size_addr, int flags);
+    public static int internal_native_DockSpace(int id, long size_addr, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_DockSpace(id, size_addr, flags);
+    }
 
     public static int DockSpace(int id, ImVec2 size) {
         return internal_native_DockSpace(id, size.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DockSpace((int)id, *((ImVec2* )size_addr));
-*/
-    public static native int internal_native_DockSpace(int id, long size_addr);
+    public static int internal_native_DockSpace(int id, long size_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_DockSpace(id, size_addr);
+    }
 
     public static int DockSpace(int id) {
         return internal_native_DockSpace(id);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DockSpace((int)id);
-*/
-    public static native int internal_native_DockSpace(int id);
+    public static int internal_native_DockSpace(int id) {
+        return imgui.natives.JNI_ImGui.internal_native_DockSpace(id);
+    }
 
     public static int DockSpaceOverViewport(int dockspace_id, ImGuiViewport viewport, ImGuiDockNodeFlags flags, ImGuiWindowClass window_class) {
         return internal_native_DockSpaceOverViewport(dockspace_id, viewport.native_address, flags.getValue(), window_class.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DockSpaceOverViewport((int)dockspace_id, (ImGuiViewport* )viewport_addr, (::ImGuiDockNodeFlags)flags, (ImGuiWindowClass* )window_class_addr);
-*/
-    public static native int internal_native_DockSpaceOverViewport(int dockspace_id, long viewport_addr, int flags, long window_class_addr);
+    public static int internal_native_DockSpaceOverViewport(int dockspace_id, long viewport_addr, int flags, long window_class_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_DockSpaceOverViewport(dockspace_id, viewport_addr, flags, window_class_addr);
+    }
 
     public static int DockSpaceOverViewport(int dockspace_id, ImGuiViewport viewport, ImGuiDockNodeFlags flags) {
         return internal_native_DockSpaceOverViewport(dockspace_id, viewport.native_address, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DockSpaceOverViewport((int)dockspace_id, (ImGuiViewport* )viewport_addr, (::ImGuiDockNodeFlags)flags);
-*/
-    public static native int internal_native_DockSpaceOverViewport(int dockspace_id, long viewport_addr, int flags);
+    public static int internal_native_DockSpaceOverViewport(int dockspace_id, long viewport_addr, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_DockSpaceOverViewport(dockspace_id, viewport_addr, flags);
+    }
 
     public static int DockSpaceOverViewport(int dockspace_id, ImGuiViewport viewport) {
         return internal_native_DockSpaceOverViewport(dockspace_id, viewport.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DockSpaceOverViewport((int)dockspace_id, (ImGuiViewport* )viewport_addr);
-*/
-    public static native int internal_native_DockSpaceOverViewport(int dockspace_id, long viewport_addr);
+    public static int internal_native_DockSpaceOverViewport(int dockspace_id, long viewport_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_DockSpaceOverViewport(dockspace_id, viewport_addr);
+    }
 
     public static int DockSpaceOverViewport(int dockspace_id) {
         return internal_native_DockSpaceOverViewport(dockspace_id);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DockSpaceOverViewport((int)dockspace_id);
-*/
-    public static native int internal_native_DockSpaceOverViewport(int dockspace_id);
+    public static int internal_native_DockSpaceOverViewport(int dockspace_id) {
+        return imgui.natives.JNI_ImGui.internal_native_DockSpaceOverViewport(dockspace_id);
+    }
 
     public static int DockSpaceOverViewport() {
         return internal_native_DockSpaceOverViewport();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DockSpaceOverViewport();
-*/
-    public static native int internal_native_DockSpaceOverViewport();
+    public static int internal_native_DockSpaceOverViewport() {
+        return imgui.natives.JNI_ImGui.internal_native_DockSpaceOverViewport();
+    }
 
     public static void SetNextWindowDockID(int dock_id, ImGuiCond ImGuiCond) {
         internal_native_SetNextWindowDockID(dock_id, ImGuiCond.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextWindowDockID((int)dock_id, (::ImGuiCond)ImGuiCond);
-*/
-    public static native void internal_native_SetNextWindowDockID(int dock_id, int ImGuiCond);
+    public static void internal_native_SetNextWindowDockID(int dock_id, int ImGuiCond) {
+        imgui.natives.JNI_ImGui.internal_native_SetNextWindowDockID(dock_id, ImGuiCond);
+    }
 
     public static void SetNextWindowDockID(int dock_id) {
         internal_native_SetNextWindowDockID(dock_id);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextWindowDockID((int)dock_id);
-*/
-    public static native void internal_native_SetNextWindowDockID(int dock_id);
+    public static void internal_native_SetNextWindowDockID(int dock_id) {
+        imgui.natives.JNI_ImGui.internal_native_SetNextWindowDockID(dock_id);
+    }
 
     public static void SetNextWindowClass(ImGuiWindowClass window_class) {
         internal_native_SetNextWindowClass(window_class.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextWindowClass((ImGuiWindowClass* )window_class_addr);
-*/
-    public static native void internal_native_SetNextWindowClass(long window_class_addr);
+    public static void internal_native_SetNextWindowClass(long window_class_addr) {
+        imgui.natives.JNI_ImGui.internal_native_SetNextWindowClass(window_class_addr);
+    }
 
     public static int GetWindowDockID() {
         return internal_native_GetWindowDockID();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetWindowDockID();
-*/
-    public static native int internal_native_GetWindowDockID();
+    public static int internal_native_GetWindowDockID() {
+        return imgui.natives.JNI_ImGui.internal_native_GetWindowDockID();
+    }
 
     public static boolean IsWindowDocked() {
         return internal_native_IsWindowDocked();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsWindowDocked();
-*/
-    public static native boolean internal_native_IsWindowDocked();
+    public static boolean internal_native_IsWindowDocked() {
+        return imgui.natives.JNI_ImGui.internal_native_IsWindowDocked();
+    }
 
     public static void LogToTTY(int auto_open_depth) {
         internal_native_LogToTTY(auto_open_depth);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::LogToTTY((int)auto_open_depth);
-*/
-    public static native void internal_native_LogToTTY(int auto_open_depth);
+    public static void internal_native_LogToTTY(int auto_open_depth) {
+        imgui.natives.JNI_ImGui.internal_native_LogToTTY(auto_open_depth);
+    }
 
     public static void LogToTTY() {
         internal_native_LogToTTY();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::LogToTTY();
-*/
-    public static native void internal_native_LogToTTY();
+    public static void internal_native_LogToTTY() {
+        imgui.natives.JNI_ImGui.internal_native_LogToTTY();
+    }
 
     public static void LogToFile(int auto_open_depth, String filename) {
         internal_native_LogToFile(auto_open_depth, filename);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::LogToFile((int)auto_open_depth, filename);
-*/
-    public static native void internal_native_LogToFile(int auto_open_depth, String filename);
+    public static void internal_native_LogToFile(int auto_open_depth, String filename) {
+        imgui.natives.JNI_ImGui.internal_native_LogToFile(auto_open_depth, filename);
+    }
 
     public static void LogToFile(int auto_open_depth) {
         internal_native_LogToFile(auto_open_depth);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::LogToFile((int)auto_open_depth);
-*/
-    public static native void internal_native_LogToFile(int auto_open_depth);
+    public static void internal_native_LogToFile(int auto_open_depth) {
+        imgui.natives.JNI_ImGui.internal_native_LogToFile(auto_open_depth);
+    }
 
     public static void LogToFile() {
         internal_native_LogToFile();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::LogToFile();
-*/
-    public static native void internal_native_LogToFile();
+    public static void internal_native_LogToFile() {
+        imgui.natives.JNI_ImGui.internal_native_LogToFile();
+    }
 
     public static void LogToClipboard(int auto_open_depth) {
         internal_native_LogToClipboard(auto_open_depth);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::LogToClipboard((int)auto_open_depth);
-*/
-    public static native void internal_native_LogToClipboard(int auto_open_depth);
+    public static void internal_native_LogToClipboard(int auto_open_depth) {
+        imgui.natives.JNI_ImGui.internal_native_LogToClipboard(auto_open_depth);
+    }
 
     public static void LogToClipboard() {
         internal_native_LogToClipboard();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::LogToClipboard();
-*/
-    public static native void internal_native_LogToClipboard();
+    public static void internal_native_LogToClipboard() {
+        imgui.natives.JNI_ImGui.internal_native_LogToClipboard();
+    }
 
     public static void LogFinish() {
         internal_native_LogFinish();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::LogFinish();
-*/
-    public static native void internal_native_LogFinish();
+    public static void internal_native_LogFinish() {
+        imgui.natives.JNI_ImGui.internal_native_LogFinish();
+    }
 
     public static void LogButtons() {
         internal_native_LogButtons();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::LogButtons();
-*/
-    public static native void internal_native_LogButtons();
+    public static void internal_native_LogButtons() {
+        imgui.natives.JNI_ImGui.internal_native_LogButtons();
+    }
 
     public static void LogText(String fmt) {
         internal_native_LogText(fmt);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::LogText(fmt);
-*/
-    public static native void internal_native_LogText(String fmt);
+    public static void internal_native_LogText(String fmt) {
+        imgui.natives.JNI_ImGui.internal_native_LogText(fmt);
+    }
 
     public static boolean BeginDragDropSource(ImGuiDragDropFlags flags) {
         return internal_native_BeginDragDropSource(flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginDragDropSource((::ImGuiDragDropFlags)flags);
-*/
-    public static native boolean internal_native_BeginDragDropSource(int flags);
+    public static boolean internal_native_BeginDragDropSource(int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_BeginDragDropSource(flags);
+    }
 
     public static boolean BeginDragDropSource() {
         return internal_native_BeginDragDropSource();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginDragDropSource();
-*/
-    public static native boolean internal_native_BeginDragDropSource();
+    public static boolean internal_native_BeginDragDropSource() {
+        return imgui.natives.JNI_ImGui.internal_native_BeginDragDropSource();
+    }
 
     public static boolean SetDragDropPayload(String type, NativeObject data, int size_t, ImGuiCond ImGuiCond) {
         return internal_native_SetDragDropPayload(type, data.native_void_address, size_t, ImGuiCond.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SetDragDropPayload(type, (void*)data_addr, (int)size_t, (::ImGuiCond)ImGuiCond);
-*/
-    public static native boolean internal_native_SetDragDropPayload(String type, long data_addr, int size_t, int ImGuiCond);
+    public static boolean internal_native_SetDragDropPayload(String type, long data_addr, int size_t, int ImGuiCond) {
+        return imgui.natives.JNI_ImGui.internal_native_SetDragDropPayload(type, data_addr, size_t, ImGuiCond);
+    }
 
     public static boolean SetDragDropPayload(String type, NativeObject data, int size_t) {
         return internal_native_SetDragDropPayload(type, data.native_void_address, size_t);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::SetDragDropPayload(type, (void*)data_addr, (int)size_t);
-*/
-    public static native boolean internal_native_SetDragDropPayload(String type, long data_addr, int size_t);
+    public static boolean internal_native_SetDragDropPayload(String type, long data_addr, int size_t) {
+        return imgui.natives.JNI_ImGui.internal_native_SetDragDropPayload(type, data_addr, size_t);
+    }
 
     public static void EndDragDropSource() {
         internal_native_EndDragDropSource();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::EndDragDropSource();
-*/
-    public static native void internal_native_EndDragDropSource();
+    public static void internal_native_EndDragDropSource() {
+        imgui.natives.JNI_ImGui.internal_native_EndDragDropSource();
+    }
 
     public static boolean BeginDragDropTarget() {
         return internal_native_BeginDragDropTarget();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::BeginDragDropTarget();
-*/
-    public static native boolean internal_native_BeginDragDropTarget();
+    public static boolean internal_native_BeginDragDropTarget() {
+        return imgui.natives.JNI_ImGui.internal_native_BeginDragDropTarget();
+    }
 
     public static ImGuiPayload AcceptDragDropPayload(String type, ImGuiDragDropFlags flags) {
         long addr = internal_native_AcceptDragDropPayload_addr(type, flags.getValue());
@@ -5351,10 +4786,9 @@ return ImGuiWrapper::ImGui::BeginDragDropTarget();
         return ImGuiPayload_TEMP_STATIC_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::AcceptDragDropPayload(type, (::ImGuiDragDropFlags)flags);
-*/
-    public static native long internal_native_AcceptDragDropPayload_addr(String type, int flags);
+    public static long internal_native_AcceptDragDropPayload_addr(String type, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_AcceptDragDropPayload_addr(type, flags);
+    }
 
     public static ImGuiPayload AcceptDragDropPayload(String type) {
         long addr = internal_native_AcceptDragDropPayload_addr(type);
@@ -5366,19 +4800,17 @@ return (jlong)ImGuiWrapper::ImGui::AcceptDragDropPayload(type, (::ImGuiDragDropF
         return ImGuiPayload_TEMP_STATIC_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::AcceptDragDropPayload(type);
-*/
-    public static native long internal_native_AcceptDragDropPayload_addr(String type);
+    public static long internal_native_AcceptDragDropPayload_addr(String type) {
+        return imgui.natives.JNI_ImGui.internal_native_AcceptDragDropPayload_addr(type);
+    }
 
     public static void EndDragDropTarget() {
         internal_native_EndDragDropTarget();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::EndDragDropTarget();
-*/
-    public static native void internal_native_EndDragDropTarget();
+    public static void internal_native_EndDragDropTarget() {
+        imgui.natives.JNI_ImGui.internal_native_EndDragDropTarget();
+    }
 
     public static ImGuiPayload GetDragDropPayload() {
         long addr = internal_native_GetDragDropPayload_addr();
@@ -5390,235 +4822,209 @@ ImGuiWrapper::ImGui::EndDragDropTarget();
         return ImGuiPayload_TEMP_STATIC_GEN_2;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::GetDragDropPayload();
-*/
-    public static native long internal_native_GetDragDropPayload_addr();
+    public static long internal_native_GetDragDropPayload_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetDragDropPayload_addr();
+    }
 
     public static void BeginDisabled(boolean disabled) {
         internal_native_BeginDisabled(disabled);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::BeginDisabled(disabled);
-*/
-    public static native void internal_native_BeginDisabled(boolean disabled);
+    public static void internal_native_BeginDisabled(boolean disabled) {
+        imgui.natives.JNI_ImGui.internal_native_BeginDisabled(disabled);
+    }
 
     public static void BeginDisabled() {
         internal_native_BeginDisabled();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::BeginDisabled();
-*/
-    public static native void internal_native_BeginDisabled();
+    public static void internal_native_BeginDisabled() {
+        imgui.natives.JNI_ImGui.internal_native_BeginDisabled();
+    }
 
     public static void EndDisabled() {
         internal_native_EndDisabled();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::EndDisabled();
-*/
-    public static native void internal_native_EndDisabled();
+    public static void internal_native_EndDisabled() {
+        imgui.natives.JNI_ImGui.internal_native_EndDisabled();
+    }
 
     public static void PushClipRect(ImVec2 clip_rect_min, ImVec2 clip_rect_max, boolean intersect_with_current_clip_rect) {
         internal_native_PushClipRect(clip_rect_min.native_address, clip_rect_max.native_address, intersect_with_current_clip_rect);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PushClipRect(*((ImVec2* )clip_rect_min_addr), *((ImVec2* )clip_rect_max_addr), intersect_with_current_clip_rect);
-*/
-    public static native void internal_native_PushClipRect(long clip_rect_min_addr, long clip_rect_max_addr, boolean intersect_with_current_clip_rect);
+    public static void internal_native_PushClipRect(long clip_rect_min_addr, long clip_rect_max_addr, boolean intersect_with_current_clip_rect) {
+        imgui.natives.JNI_ImGui.internal_native_PushClipRect(clip_rect_min_addr, clip_rect_max_addr, intersect_with_current_clip_rect);
+    }
 
     public static void PopClipRect() {
         internal_native_PopClipRect();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::PopClipRect();
-*/
-    public static native void internal_native_PopClipRect();
+    public static void internal_native_PopClipRect() {
+        imgui.natives.JNI_ImGui.internal_native_PopClipRect();
+    }
 
     public static void SetItemDefaultFocus() {
         internal_native_SetItemDefaultFocus();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetItemDefaultFocus();
-*/
-    public static native void internal_native_SetItemDefaultFocus();
+    public static void internal_native_SetItemDefaultFocus() {
+        imgui.natives.JNI_ImGui.internal_native_SetItemDefaultFocus();
+    }
 
     public static void SetKeyboardFocusHere(int offset) {
         internal_native_SetKeyboardFocusHere(offset);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetKeyboardFocusHere((int)offset);
-*/
-    public static native void internal_native_SetKeyboardFocusHere(int offset);
+    public static void internal_native_SetKeyboardFocusHere(int offset) {
+        imgui.natives.JNI_ImGui.internal_native_SetKeyboardFocusHere(offset);
+    }
 
     public static void SetKeyboardFocusHere() {
         internal_native_SetKeyboardFocusHere();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetKeyboardFocusHere();
-*/
-    public static native void internal_native_SetKeyboardFocusHere();
+    public static void internal_native_SetKeyboardFocusHere() {
+        imgui.natives.JNI_ImGui.internal_native_SetKeyboardFocusHere();
+    }
 
     public static void SetNextItemAllowOverlap() {
         internal_native_SetNextItemAllowOverlap();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextItemAllowOverlap();
-*/
-    public static native void internal_native_SetNextItemAllowOverlap();
+    public static void internal_native_SetNextItemAllowOverlap() {
+        imgui.natives.JNI_ImGui.internal_native_SetNextItemAllowOverlap();
+    }
 
     public static boolean IsItemHovered(ImGuiHoveredFlags flags) {
         return internal_native_IsItemHovered(flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsItemHovered((::ImGuiHoveredFlags)flags);
-*/
-    public static native boolean internal_native_IsItemHovered(int flags);
+    public static boolean internal_native_IsItemHovered(int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_IsItemHovered(flags);
+    }
 
     public static boolean IsItemHovered() {
         return internal_native_IsItemHovered();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsItemHovered();
-*/
-    public static native boolean internal_native_IsItemHovered();
+    public static boolean internal_native_IsItemHovered() {
+        return imgui.natives.JNI_ImGui.internal_native_IsItemHovered();
+    }
 
     public static boolean IsItemActive() {
         return internal_native_IsItemActive();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsItemActive();
-*/
-    public static native boolean internal_native_IsItemActive();
+    public static boolean internal_native_IsItemActive() {
+        return imgui.natives.JNI_ImGui.internal_native_IsItemActive();
+    }
 
     public static boolean IsItemFocused() {
         return internal_native_IsItemFocused();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsItemFocused();
-*/
-    public static native boolean internal_native_IsItemFocused();
+    public static boolean internal_native_IsItemFocused() {
+        return imgui.natives.JNI_ImGui.internal_native_IsItemFocused();
+    }
 
     public static boolean IsItemClicked(ImGuiMouseButton ImGuiMouseButton) {
         return internal_native_IsItemClicked(ImGuiMouseButton.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsItemClicked((::ImGuiMouseButton)ImGuiMouseButton);
-*/
-    public static native boolean internal_native_IsItemClicked(int ImGuiMouseButton);
+    public static boolean internal_native_IsItemClicked(int ImGuiMouseButton) {
+        return imgui.natives.JNI_ImGui.internal_native_IsItemClicked(ImGuiMouseButton);
+    }
 
     public static boolean IsItemClicked() {
         return internal_native_IsItemClicked();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsItemClicked();
-*/
-    public static native boolean internal_native_IsItemClicked();
+    public static boolean internal_native_IsItemClicked() {
+        return imgui.natives.JNI_ImGui.internal_native_IsItemClicked();
+    }
 
     public static boolean IsItemVisible() {
         return internal_native_IsItemVisible();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsItemVisible();
-*/
-    public static native boolean internal_native_IsItemVisible();
+    public static boolean internal_native_IsItemVisible() {
+        return imgui.natives.JNI_ImGui.internal_native_IsItemVisible();
+    }
 
     public static boolean IsItemEdited() {
         return internal_native_IsItemEdited();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsItemEdited();
-*/
-    public static native boolean internal_native_IsItemEdited();
+    public static boolean internal_native_IsItemEdited() {
+        return imgui.natives.JNI_ImGui.internal_native_IsItemEdited();
+    }
 
     public static boolean IsItemActivated() {
         return internal_native_IsItemActivated();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsItemActivated();
-*/
-    public static native boolean internal_native_IsItemActivated();
+    public static boolean internal_native_IsItemActivated() {
+        return imgui.natives.JNI_ImGui.internal_native_IsItemActivated();
+    }
 
     public static boolean IsItemDeactivated() {
         return internal_native_IsItemDeactivated();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsItemDeactivated();
-*/
-    public static native boolean internal_native_IsItemDeactivated();
+    public static boolean internal_native_IsItemDeactivated() {
+        return imgui.natives.JNI_ImGui.internal_native_IsItemDeactivated();
+    }
 
     public static boolean IsItemDeactivatedAfterEdit() {
         return internal_native_IsItemDeactivatedAfterEdit();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsItemDeactivatedAfterEdit();
-*/
-    public static native boolean internal_native_IsItemDeactivatedAfterEdit();
+    public static boolean internal_native_IsItemDeactivatedAfterEdit() {
+        return imgui.natives.JNI_ImGui.internal_native_IsItemDeactivatedAfterEdit();
+    }
 
     public static boolean IsItemToggledOpen() {
         return internal_native_IsItemToggledOpen();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsItemToggledOpen();
-*/
-    public static native boolean internal_native_IsItemToggledOpen();
+    public static boolean internal_native_IsItemToggledOpen() {
+        return imgui.natives.JNI_ImGui.internal_native_IsItemToggledOpen();
+    }
 
     public static boolean IsAnyItemHovered() {
         return internal_native_IsAnyItemHovered();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsAnyItemHovered();
-*/
-    public static native boolean internal_native_IsAnyItemHovered();
+    public static boolean internal_native_IsAnyItemHovered() {
+        return imgui.natives.JNI_ImGui.internal_native_IsAnyItemHovered();
+    }
 
     public static boolean IsAnyItemActive() {
         return internal_native_IsAnyItemActive();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsAnyItemActive();
-*/
-    public static native boolean internal_native_IsAnyItemActive();
+    public static boolean internal_native_IsAnyItemActive() {
+        return imgui.natives.JNI_ImGui.internal_native_IsAnyItemActive();
+    }
 
     public static boolean IsAnyItemFocused() {
         return internal_native_IsAnyItemFocused();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsAnyItemFocused();
-*/
-    public static native boolean internal_native_IsAnyItemFocused();
+    public static boolean internal_native_IsAnyItemFocused() {
+        return imgui.natives.JNI_ImGui.internal_native_IsAnyItemFocused();
+    }
 
     public static int GetItemID() {
         return internal_native_GetItemID();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetItemID();
-*/
-    public static native int internal_native_GetItemID();
+    public static int internal_native_GetItemID() {
+        return imgui.natives.JNI_ImGui.internal_native_GetItemID();
+    }
 
     public static ImVec2 GetItemRectMin() {
         long addr = internal_native_GetItemRectMin_addr();
@@ -5630,11 +5036,9 @@ return ImGuiWrapper::ImGui::GetItemID();
         return ImVec2_TEMP_STATIC_GEN_7;
     }
 
-    /*[-JNI;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = ImGuiWrapper::ImGui::GetItemRectMin();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetItemRectMin_addr();
+    public static long internal_native_GetItemRectMin_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetItemRectMin_addr();
+    }
 
     public static ImVec2 GetItemRectMax() {
         long addr = internal_native_GetItemRectMax_addr();
@@ -5646,11 +5050,9 @@ return (jlong)&copy_addr;*/
         return ImVec2_TEMP_STATIC_GEN_8;
     }
 
-    /*[-JNI;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = ImGuiWrapper::ImGui::GetItemRectMax();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetItemRectMax_addr();
+    public static long internal_native_GetItemRectMax_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetItemRectMax_addr();
+    }
 
     public static ImVec2 GetItemRectSize() {
         long addr = internal_native_GetItemRectSize_addr();
@@ -5662,11 +5064,9 @@ return (jlong)&copy_addr;*/
         return ImVec2_TEMP_STATIC_GEN_9;
     }
 
-    /*[-JNI;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = ImGuiWrapper::ImGui::GetItemRectSize();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetItemRectSize_addr();
+    public static long internal_native_GetItemRectSize_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetItemRectSize_addr();
+    }
 
     public static ImGuiViewport GetMainViewport() {
         long addr = internal_native_GetMainViewport_addr();
@@ -5678,10 +5078,9 @@ return (jlong)&copy_addr;*/
         return ImGuiViewport_TEMP_STATIC_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::GetMainViewport();
-*/
-    public static native long internal_native_GetMainViewport_addr();
+    public static long internal_native_GetMainViewport_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetMainViewport_addr();
+    }
 
     public static ImDrawList GetBackgroundDrawList(ImGuiViewport viewport) {
         long addr = internal_native_GetBackgroundDrawList_addr(viewport.native_address);
@@ -5693,10 +5092,9 @@ return (jlong)ImGuiWrapper::ImGui::GetMainViewport();
         return ImDrawList_TEMP_STATIC_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::GetBackgroundDrawList((ImGuiViewport* )viewport_addr);
-*/
-    public static native long internal_native_GetBackgroundDrawList_addr(long viewport_addr);
+    public static long internal_native_GetBackgroundDrawList_addr(long viewport_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_GetBackgroundDrawList_addr(viewport_addr);
+    }
 
     public static ImDrawList GetBackgroundDrawList() {
         long addr = internal_native_GetBackgroundDrawList_addr();
@@ -5708,10 +5106,9 @@ return (jlong)ImGuiWrapper::ImGui::GetBackgroundDrawList((ImGuiViewport* )viewpo
         return ImDrawList_TEMP_STATIC_GEN_2;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::GetBackgroundDrawList();
-*/
-    public static native long internal_native_GetBackgroundDrawList_addr();
+    public static long internal_native_GetBackgroundDrawList_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetBackgroundDrawList_addr();
+    }
 
     public static ImDrawList GetForegroundDrawList(ImGuiViewport viewport) {
         long addr = internal_native_GetForegroundDrawList_addr(viewport.native_address);
@@ -5723,10 +5120,9 @@ return (jlong)ImGuiWrapper::ImGui::GetBackgroundDrawList();
         return ImDrawList_TEMP_STATIC_GEN_3;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::GetForegroundDrawList((ImGuiViewport* )viewport_addr);
-*/
-    public static native long internal_native_GetForegroundDrawList_addr(long viewport_addr);
+    public static long internal_native_GetForegroundDrawList_addr(long viewport_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_GetForegroundDrawList_addr(viewport_addr);
+    }
 
     public static ImDrawList GetForegroundDrawList() {
         long addr = internal_native_GetForegroundDrawList_addr();
@@ -5738,46 +5134,41 @@ return (jlong)ImGuiWrapper::ImGui::GetForegroundDrawList((ImGuiViewport* )viewpo
         return ImDrawList_TEMP_STATIC_GEN_4;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::GetForegroundDrawList();
-*/
-    public static native long internal_native_GetForegroundDrawList_addr();
+    public static long internal_native_GetForegroundDrawList_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetForegroundDrawList_addr();
+    }
 
     public static boolean IsRectVisible(ImVec2 size) {
         return internal_native_IsRectVisible__0(size.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsRectVisible(*((ImVec2* )size_addr));
-*/
-    public static native boolean internal_native_IsRectVisible__0(long size_addr);
+    public static boolean internal_native_IsRectVisible__0(long size_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_IsRectVisible__0(size_addr);
+    }
 
     public static boolean IsRectVisible(ImVec2 rect_min, ImVec2 rect_max) {
         return internal_native_IsRectVisible__1(rect_min.native_address, rect_max.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsRectVisible(*((ImVec2* )rect_min_addr), *((ImVec2* )rect_max_addr));
-*/
-    public static native boolean internal_native_IsRectVisible__1(long rect_min_addr, long rect_max_addr);
+    public static boolean internal_native_IsRectVisible__1(long rect_min_addr, long rect_max_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_IsRectVisible__1(rect_min_addr, rect_max_addr);
+    }
 
     public static double GetTime() {
         return internal_native_GetTime();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetTime();
-*/
-    public static native double internal_native_GetTime();
+    public static double internal_native_GetTime() {
+        return imgui.natives.JNI_ImGui.internal_native_GetTime();
+    }
 
     public static int GetFrameCount() {
         return internal_native_GetFrameCount();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetFrameCount();
-*/
-    public static native int internal_native_GetFrameCount();
+    public static int internal_native_GetFrameCount() {
+        return imgui.natives.JNI_ImGui.internal_native_GetFrameCount();
+    }
 
     public static ImDrawListSharedData GetDrawListSharedData() {
         long addr = internal_native_GetDrawListSharedData_addr();
@@ -5789,10 +5180,9 @@ return ImGuiWrapper::ImGui::GetFrameCount();
         return ImDrawListSharedData_TEMP_STATIC_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::GetDrawListSharedData();
-*/
-    public static native long internal_native_GetDrawListSharedData_addr();
+    public static long internal_native_GetDrawListSharedData_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetDrawListSharedData_addr();
+    }
 
     public static NativeString GetStyleColorName(int idx) {
         long addr = internal_native_GetStyleColorName_addr(idx);
@@ -5804,20 +5194,17 @@ return (jlong)ImGuiWrapper::ImGui::GetDrawListSharedData();
         return NativeString_TEMP_STATIC_GEN_3;
     }
 
-    /*[-JNI;-NATIVE]
-static NativeString copy_addr;
-copy_addr = ImGuiWrapper::ImGui::GetStyleColorName((int)idx);
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetStyleColorName_addr(int idx);
+    public static long internal_native_GetStyleColorName_addr(int idx) {
+        return imgui.natives.JNI_ImGui.internal_native_GetStyleColorName_addr(idx);
+    }
 
     public static void SetStateStorage(ImGuiStorage storage) {
         internal_native_SetStateStorage(storage.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetStateStorage((ImGuiStorage* )storage_addr);
-*/
-    public static native void internal_native_SetStateStorage(long storage_addr);
+    public static void internal_native_SetStateStorage(long storage_addr) {
+        imgui.natives.JNI_ImGui.internal_native_SetStateStorage(storage_addr);
+    }
 
     public static ImGuiStorage GetStateStorage() {
         long addr = internal_native_GetStateStorage_addr();
@@ -5829,10 +5216,9 @@ ImGuiWrapper::ImGui::SetStateStorage((ImGuiStorage* )storage_addr);
         return ImGuiStorage_TEMP_STATIC_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::GetStateStorage();
-*/
-    public static native long internal_native_GetStateStorage_addr();
+    public static long internal_native_GetStateStorage_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetStateStorage_addr();
+    }
 
     public static ImVec2 CalcTextSize(String text, String text_end, boolean hide_text_after_double_hash, float wrap_width) {
         long addr = internal_native_CalcTextSize_addr(text, text_end, hide_text_after_double_hash, wrap_width);
@@ -5844,11 +5230,9 @@ return (jlong)ImGuiWrapper::ImGui::GetStateStorage();
         return ImVec2_TEMP_STATIC_GEN_10;
     }
 
-    /*[-JNI;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = ImGuiWrapper::ImGui::CalcTextSize(text, text_end, hide_text_after_double_hash, (float)wrap_width);
-return (jlong)&copy_addr;*/
-    public static native long internal_native_CalcTextSize_addr(String text, String text_end, boolean hide_text_after_double_hash, float wrap_width);
+    public static long internal_native_CalcTextSize_addr(String text, String text_end, boolean hide_text_after_double_hash, float wrap_width) {
+        return imgui.natives.JNI_ImGui.internal_native_CalcTextSize_addr(text, text_end, hide_text_after_double_hash, wrap_width);
+    }
 
     public static ImVec2 CalcTextSize(String text, String text_end, boolean hide_text_after_double_hash) {
         long addr = internal_native_CalcTextSize_addr(text, text_end, hide_text_after_double_hash);
@@ -5860,11 +5244,9 @@ return (jlong)&copy_addr;*/
         return ImVec2_TEMP_STATIC_GEN_11;
     }
 
-    /*[-JNI;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = ImGuiWrapper::ImGui::CalcTextSize(text, text_end, hide_text_after_double_hash);
-return (jlong)&copy_addr;*/
-    public static native long internal_native_CalcTextSize_addr(String text, String text_end, boolean hide_text_after_double_hash);
+    public static long internal_native_CalcTextSize_addr(String text, String text_end, boolean hide_text_after_double_hash) {
+        return imgui.natives.JNI_ImGui.internal_native_CalcTextSize_addr(text, text_end, hide_text_after_double_hash);
+    }
 
     public static ImVec2 CalcTextSize(String text, String text_end) {
         long addr = internal_native_CalcTextSize_addr(text, text_end);
@@ -5876,11 +5258,9 @@ return (jlong)&copy_addr;*/
         return ImVec2_TEMP_STATIC_GEN_12;
     }
 
-    /*[-JNI;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = ImGuiWrapper::ImGui::CalcTextSize(text, text_end);
-return (jlong)&copy_addr;*/
-    public static native long internal_native_CalcTextSize_addr(String text, String text_end);
+    public static long internal_native_CalcTextSize_addr(String text, String text_end) {
+        return imgui.natives.JNI_ImGui.internal_native_CalcTextSize_addr(text, text_end);
+    }
 
     public static ImVec2 CalcTextSize(String text) {
         long addr = internal_native_CalcTextSize_addr(text);
@@ -5892,11 +5272,9 @@ return (jlong)&copy_addr;*/
         return ImVec2_TEMP_STATIC_GEN_13;
     }
 
-    /*[-JNI;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = ImGuiWrapper::ImGui::CalcTextSize(text);
-return (jlong)&copy_addr;*/
-    public static native long internal_native_CalcTextSize_addr(String text);
+    public static long internal_native_CalcTextSize_addr(String text) {
+        return imgui.natives.JNI_ImGui.internal_native_CalcTextSize_addr(text);
+    }
 
     public static ImVec4 ColorConvertU32ToFloat4(int col) {
         long addr = internal_native_ColorConvertU32ToFloat4_addr(col);
@@ -5908,92 +5286,81 @@ return (jlong)&copy_addr;*/
         return ImVec4_TEMP_STATIC_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-static ImVec4 copy_addr;
-copy_addr = ImGuiWrapper::ImGui::ColorConvertU32ToFloat4(col);
-return (jlong)&copy_addr;*/
-    public static native long internal_native_ColorConvertU32ToFloat4_addr(int col);
+    public static long internal_native_ColorConvertU32ToFloat4_addr(int col) {
+        return imgui.natives.JNI_ImGui.internal_native_ColorConvertU32ToFloat4_addr(col);
+    }
 
     public static int ColorConvertFloat4ToU32(ImVec4 col) {
         return internal_native_ColorConvertFloat4ToU32(col.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::ColorConvertFloat4ToU32(*((ImVec4* )col_addr));
-*/
-    public static native int internal_native_ColorConvertFloat4ToU32(long col_addr);
+    public static int internal_native_ColorConvertFloat4ToU32(long col_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_ColorConvertFloat4ToU32(col_addr);
+    }
 
     public static void ColorConvertRGBtoHSV(float r, float g, float b, NativeFloatArray out_h, NativeFloatArray out_s, NativeFloatArray out_v) {
         internal_native_ColorConvertRGBtoHSV(r, g, b, out_h.native_void_address, out_s.native_void_address, out_v.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ColorConvertRGBtoHSV((float)r, (float)g, (float)b, (float*)out_h_addr, (float*)out_s_addr, (float*)out_v_addr);
-*/
-    public static native void internal_native_ColorConvertRGBtoHSV(float r, float g, float b, long out_h_addr, long out_s_addr, long out_v_addr);
+    public static void internal_native_ColorConvertRGBtoHSV(float r, float g, float b, long out_h_addr, long out_s_addr, long out_v_addr) {
+        imgui.natives.JNI_ImGui.internal_native_ColorConvertRGBtoHSV(r, g, b, out_h_addr, out_s_addr, out_v_addr);
+    }
 
     public static void ColorConvertHSVtoRGB(float h, float s, float v, NativeFloatArray out_r, NativeFloatArray out_g, NativeFloatArray out_b) {
         internal_native_ColorConvertHSVtoRGB(h, s, v, out_r.native_void_address, out_g.native_void_address, out_b.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ColorConvertHSVtoRGB((float)h, (float)s, (float)v, (float*)out_r_addr, (float*)out_g_addr, (float*)out_b_addr);
-*/
-    public static native void internal_native_ColorConvertHSVtoRGB(float h, float s, float v, long out_r_addr, long out_g_addr, long out_b_addr);
+    public static void internal_native_ColorConvertHSVtoRGB(float h, float s, float v, long out_r_addr, long out_g_addr, long out_b_addr) {
+        imgui.natives.JNI_ImGui.internal_native_ColorConvertHSVtoRGB(h, s, v, out_r_addr, out_g_addr, out_b_addr);
+    }
 
     public static boolean IsKeyDown(ImGuiKey ImGuiKey) {
         return internal_native_IsKeyDown(ImGuiKey.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsKeyDown((::ImGuiKey)ImGuiKey);
-*/
-    public static native boolean internal_native_IsKeyDown(int ImGuiKey);
+    public static boolean internal_native_IsKeyDown(int ImGuiKey) {
+        return imgui.natives.JNI_ImGui.internal_native_IsKeyDown(ImGuiKey);
+    }
 
     public static boolean IsKeyPressed(ImGuiKey ImGuiKey, boolean repeat) {
         return internal_native_IsKeyPressed(ImGuiKey.getValue(), repeat);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsKeyPressed((::ImGuiKey)ImGuiKey, repeat);
-*/
-    public static native boolean internal_native_IsKeyPressed(int ImGuiKey, boolean repeat);
+    public static boolean internal_native_IsKeyPressed(int ImGuiKey, boolean repeat) {
+        return imgui.natives.JNI_ImGui.internal_native_IsKeyPressed(ImGuiKey, repeat);
+    }
 
     public static boolean IsKeyPressed(ImGuiKey ImGuiKey) {
         return internal_native_IsKeyPressed(ImGuiKey.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsKeyPressed((::ImGuiKey)ImGuiKey);
-*/
-    public static native boolean internal_native_IsKeyPressed(int ImGuiKey);
+    public static boolean internal_native_IsKeyPressed(int ImGuiKey) {
+        return imgui.natives.JNI_ImGui.internal_native_IsKeyPressed(ImGuiKey);
+    }
 
     public static boolean IsKeyReleased(ImGuiKey ImGuiKey) {
         return internal_native_IsKeyReleased(ImGuiKey.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsKeyReleased((::ImGuiKey)ImGuiKey);
-*/
-    public static native boolean internal_native_IsKeyReleased(int ImGuiKey);
+    public static boolean internal_native_IsKeyReleased(int ImGuiKey) {
+        return imgui.natives.JNI_ImGui.internal_native_IsKeyReleased(ImGuiKey);
+    }
 
     public static boolean IsKeyChordPressed(int key_chord) {
         return internal_native_IsKeyChordPressed(key_chord);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsKeyChordPressed((int)key_chord);
-*/
-    public static native boolean internal_native_IsKeyChordPressed(int key_chord);
+    public static boolean internal_native_IsKeyChordPressed(int key_chord) {
+        return imgui.natives.JNI_ImGui.internal_native_IsKeyChordPressed(key_chord);
+    }
 
     public static int GetKeyPressedAmount(ImGuiKey ImGuiKey, float repeat_delay, float rate) {
         return internal_native_GetKeyPressedAmount(ImGuiKey.getValue(), repeat_delay, rate);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetKeyPressedAmount((::ImGuiKey)ImGuiKey, (float)repeat_delay, (float)rate);
-*/
-    public static native int internal_native_GetKeyPressedAmount(int ImGuiKey, float repeat_delay, float rate);
+    public static int internal_native_GetKeyPressedAmount(int ImGuiKey, float repeat_delay, float rate) {
+        return imgui.natives.JNI_ImGui.internal_native_GetKeyPressedAmount(ImGuiKey, repeat_delay, rate);
+    }
 
     public static NativeString GetKeyName(ImGuiKey key) {
         long addr = internal_native_GetKeyName_addr(key.getValue());
@@ -6005,173 +5372,153 @@ return ImGuiWrapper::ImGui::GetKeyPressedAmount((::ImGuiKey)ImGuiKey, (float)rep
         return NativeString_TEMP_STATIC_GEN_4;
     }
 
-    /*[-JNI;-NATIVE]
-static NativeString copy_addr;
-copy_addr = ImGuiWrapper::ImGui::GetKeyName((::ImGuiKey)key);
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetKeyName_addr(int key);
+    public static long internal_native_GetKeyName_addr(int key) {
+        return imgui.natives.JNI_ImGui.internal_native_GetKeyName_addr(key);
+    }
 
     public static void SetNextFrameWantCaptureKeyboard(boolean want_capture_keyboard) {
         internal_native_SetNextFrameWantCaptureKeyboard(want_capture_keyboard);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextFrameWantCaptureKeyboard(want_capture_keyboard);
-*/
-    public static native void internal_native_SetNextFrameWantCaptureKeyboard(boolean want_capture_keyboard);
+    public static void internal_native_SetNextFrameWantCaptureKeyboard(boolean want_capture_keyboard) {
+        imgui.natives.JNI_ImGui.internal_native_SetNextFrameWantCaptureKeyboard(want_capture_keyboard);
+    }
 
     public static boolean Shortcut(int key_chord, ImGuiInputFlags flags) {
         return internal_native_Shortcut(key_chord, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::Shortcut((int)key_chord, (::ImGuiInputFlags)flags);
-*/
-    public static native boolean internal_native_Shortcut(int key_chord, int flags);
+    public static boolean internal_native_Shortcut(int key_chord, int flags) {
+        return imgui.natives.JNI_ImGui.internal_native_Shortcut(key_chord, flags);
+    }
 
     public static boolean Shortcut(int key_chord) {
         return internal_native_Shortcut(key_chord);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::Shortcut((int)key_chord);
-*/
-    public static native boolean internal_native_Shortcut(int key_chord);
+    public static boolean internal_native_Shortcut(int key_chord) {
+        return imgui.natives.JNI_ImGui.internal_native_Shortcut(key_chord);
+    }
 
     public static void SetNextItemShortcut(int key_chord, ImGuiInputFlags flags) {
         internal_native_SetNextItemShortcut(key_chord, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextItemShortcut((int)key_chord, (::ImGuiInputFlags)flags);
-*/
-    public static native void internal_native_SetNextItemShortcut(int key_chord, int flags);
+    public static void internal_native_SetNextItemShortcut(int key_chord, int flags) {
+        imgui.natives.JNI_ImGui.internal_native_SetNextItemShortcut(key_chord, flags);
+    }
 
     public static void SetNextItemShortcut(int key_chord) {
         internal_native_SetNextItemShortcut(key_chord);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextItemShortcut((int)key_chord);
-*/
-    public static native void internal_native_SetNextItemShortcut(int key_chord);
+    public static void internal_native_SetNextItemShortcut(int key_chord) {
+        imgui.natives.JNI_ImGui.internal_native_SetNextItemShortcut(key_chord);
+    }
 
     public static void SetItemKeyOwner(ImGuiKey key) {
         internal_native_SetItemKeyOwner(key.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetItemKeyOwner((::ImGuiKey)key);
-*/
-    public static native void internal_native_SetItemKeyOwner(int key);
+    public static void internal_native_SetItemKeyOwner(int key) {
+        imgui.natives.JNI_ImGui.internal_native_SetItemKeyOwner(key);
+    }
 
     public static boolean IsMouseDown(ImGuiMouseButton ImGuiMouseButton) {
         return internal_native_IsMouseDown(ImGuiMouseButton.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsMouseDown((::ImGuiMouseButton)ImGuiMouseButton);
-*/
-    public static native boolean internal_native_IsMouseDown(int ImGuiMouseButton);
+    public static boolean internal_native_IsMouseDown(int ImGuiMouseButton) {
+        return imgui.natives.JNI_ImGui.internal_native_IsMouseDown(ImGuiMouseButton);
+    }
 
     public static boolean IsMouseClicked(ImGuiMouseButton ImGuiMouseButton, boolean repeat) {
         return internal_native_IsMouseClicked(ImGuiMouseButton.getValue(), repeat);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsMouseClicked((::ImGuiMouseButton)ImGuiMouseButton, repeat);
-*/
-    public static native boolean internal_native_IsMouseClicked(int ImGuiMouseButton, boolean repeat);
+    public static boolean internal_native_IsMouseClicked(int ImGuiMouseButton, boolean repeat) {
+        return imgui.natives.JNI_ImGui.internal_native_IsMouseClicked(ImGuiMouseButton, repeat);
+    }
 
     public static boolean IsMouseClicked(ImGuiMouseButton ImGuiMouseButton) {
         return internal_native_IsMouseClicked(ImGuiMouseButton.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsMouseClicked((::ImGuiMouseButton)ImGuiMouseButton);
-*/
-    public static native boolean internal_native_IsMouseClicked(int ImGuiMouseButton);
+    public static boolean internal_native_IsMouseClicked(int ImGuiMouseButton) {
+        return imgui.natives.JNI_ImGui.internal_native_IsMouseClicked(ImGuiMouseButton);
+    }
 
     public static boolean IsMouseReleased(ImGuiMouseButton ImGuiMouseButton) {
         return internal_native_IsMouseReleased(ImGuiMouseButton.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsMouseReleased((::ImGuiMouseButton)ImGuiMouseButton);
-*/
-    public static native boolean internal_native_IsMouseReleased(int ImGuiMouseButton);
+    public static boolean internal_native_IsMouseReleased(int ImGuiMouseButton) {
+        return imgui.natives.JNI_ImGui.internal_native_IsMouseReleased(ImGuiMouseButton);
+    }
 
     public static boolean IsMouseDoubleClicked(ImGuiMouseButton ImGuiMouseButton) {
         return internal_native_IsMouseDoubleClicked(ImGuiMouseButton.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsMouseDoubleClicked((::ImGuiMouseButton)ImGuiMouseButton);
-*/
-    public static native boolean internal_native_IsMouseDoubleClicked(int ImGuiMouseButton);
+    public static boolean internal_native_IsMouseDoubleClicked(int ImGuiMouseButton) {
+        return imgui.natives.JNI_ImGui.internal_native_IsMouseDoubleClicked(ImGuiMouseButton);
+    }
 
     public static boolean IsMouseReleasedWithDelay(ImGuiMouseButton ImGuiMouseButton, float delay) {
         return internal_native_IsMouseReleasedWithDelay(ImGuiMouseButton.getValue(), delay);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsMouseReleasedWithDelay((::ImGuiMouseButton)ImGuiMouseButton, (float)delay);
-*/
-    public static native boolean internal_native_IsMouseReleasedWithDelay(int ImGuiMouseButton, float delay);
+    public static boolean internal_native_IsMouseReleasedWithDelay(int ImGuiMouseButton, float delay) {
+        return imgui.natives.JNI_ImGui.internal_native_IsMouseReleasedWithDelay(ImGuiMouseButton, delay);
+    }
 
     public static int GetMouseClickedCount(ImGuiMouseButton ImGuiMouseButton) {
         return internal_native_GetMouseClickedCount(ImGuiMouseButton.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetMouseClickedCount((::ImGuiMouseButton)ImGuiMouseButton);
-*/
-    public static native int internal_native_GetMouseClickedCount(int ImGuiMouseButton);
+    public static int internal_native_GetMouseClickedCount(int ImGuiMouseButton) {
+        return imgui.natives.JNI_ImGui.internal_native_GetMouseClickedCount(ImGuiMouseButton);
+    }
 
     public static boolean IsMouseHoveringRect(ImVec2 r_min, ImVec2 r_max, boolean clip) {
         return internal_native_IsMouseHoveringRect(r_min.native_address, r_max.native_address, clip);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsMouseHoveringRect(*((ImVec2* )r_min_addr), *((ImVec2* )r_max_addr), clip);
-*/
-    public static native boolean internal_native_IsMouseHoveringRect(long r_min_addr, long r_max_addr, boolean clip);
+    public static boolean internal_native_IsMouseHoveringRect(long r_min_addr, long r_max_addr, boolean clip) {
+        return imgui.natives.JNI_ImGui.internal_native_IsMouseHoveringRect(r_min_addr, r_max_addr, clip);
+    }
 
     public static boolean IsMouseHoveringRect(ImVec2 r_min, ImVec2 r_max) {
         return internal_native_IsMouseHoveringRect(r_min.native_address, r_max.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsMouseHoveringRect(*((ImVec2* )r_min_addr), *((ImVec2* )r_max_addr));
-*/
-    public static native boolean internal_native_IsMouseHoveringRect(long r_min_addr, long r_max_addr);
+    public static boolean internal_native_IsMouseHoveringRect(long r_min_addr, long r_max_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_IsMouseHoveringRect(r_min_addr, r_max_addr);
+    }
 
     public static boolean IsMousePosValid(ImVec2 mouse_pos) {
         return internal_native_IsMousePosValid(mouse_pos.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsMousePosValid((ImVec2* )mouse_pos_addr);
-*/
-    public static native boolean internal_native_IsMousePosValid(long mouse_pos_addr);
+    public static boolean internal_native_IsMousePosValid(long mouse_pos_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_IsMousePosValid(mouse_pos_addr);
+    }
 
     public static boolean IsMousePosValid() {
         return internal_native_IsMousePosValid();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsMousePosValid();
-*/
-    public static native boolean internal_native_IsMousePosValid();
+    public static boolean internal_native_IsMousePosValid() {
+        return imgui.natives.JNI_ImGui.internal_native_IsMousePosValid();
+    }
 
     public static boolean IsAnyMouseDown() {
         return internal_native_IsAnyMouseDown();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsAnyMouseDown();
-*/
-    public static native boolean internal_native_IsAnyMouseDown();
+    public static boolean internal_native_IsAnyMouseDown() {
+        return imgui.natives.JNI_ImGui.internal_native_IsAnyMouseDown();
+    }
 
     public static ImVec2 GetMousePos() {
         long addr = internal_native_GetMousePos_addr();
@@ -6183,11 +5530,9 @@ return ImGuiWrapper::ImGui::IsAnyMouseDown();
         return ImVec2_TEMP_STATIC_GEN_14;
     }
 
-    /*[-JNI;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = ImGuiWrapper::ImGui::GetMousePos();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetMousePos_addr();
+    public static long internal_native_GetMousePos_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetMousePos_addr();
+    }
 
     public static ImVec2 GetMousePosOnOpeningCurrentPopup() {
         long addr = internal_native_GetMousePosOnOpeningCurrentPopup_addr();
@@ -6199,29 +5544,25 @@ return (jlong)&copy_addr;*/
         return ImVec2_TEMP_STATIC_GEN_15;
     }
 
-    /*[-JNI;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = ImGuiWrapper::ImGui::GetMousePosOnOpeningCurrentPopup();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetMousePosOnOpeningCurrentPopup_addr();
+    public static long internal_native_GetMousePosOnOpeningCurrentPopup_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetMousePosOnOpeningCurrentPopup_addr();
+    }
 
     public static boolean IsMouseDragging(ImGuiMouseButton ImGuiMouseButton, float lock_threshold) {
         return internal_native_IsMouseDragging(ImGuiMouseButton.getValue(), lock_threshold);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsMouseDragging((::ImGuiMouseButton)ImGuiMouseButton, (float)lock_threshold);
-*/
-    public static native boolean internal_native_IsMouseDragging(int ImGuiMouseButton, float lock_threshold);
+    public static boolean internal_native_IsMouseDragging(int ImGuiMouseButton, float lock_threshold) {
+        return imgui.natives.JNI_ImGui.internal_native_IsMouseDragging(ImGuiMouseButton, lock_threshold);
+    }
 
     public static boolean IsMouseDragging(ImGuiMouseButton ImGuiMouseButton) {
         return internal_native_IsMouseDragging(ImGuiMouseButton.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::IsMouseDragging((::ImGuiMouseButton)ImGuiMouseButton);
-*/
-    public static native boolean internal_native_IsMouseDragging(int ImGuiMouseButton);
+    public static boolean internal_native_IsMouseDragging(int ImGuiMouseButton) {
+        return imgui.natives.JNI_ImGui.internal_native_IsMouseDragging(ImGuiMouseButton);
+    }
 
     public static ImVec2 GetMouseDragDelta(ImGuiMouseButton ImGuiMouseButton, float lock_threshold) {
         long addr = internal_native_GetMouseDragDelta_addr(ImGuiMouseButton.getValue(), lock_threshold);
@@ -6233,11 +5574,9 @@ return ImGuiWrapper::ImGui::IsMouseDragging((::ImGuiMouseButton)ImGuiMouseButton
         return ImVec2_TEMP_STATIC_GEN_16;
     }
 
-    /*[-JNI;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = ImGuiWrapper::ImGui::GetMouseDragDelta((::ImGuiMouseButton)ImGuiMouseButton, (float)lock_threshold);
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetMouseDragDelta_addr(int ImGuiMouseButton, float lock_threshold);
+    public static long internal_native_GetMouseDragDelta_addr(int ImGuiMouseButton, float lock_threshold) {
+        return imgui.natives.JNI_ImGui.internal_native_GetMouseDragDelta_addr(ImGuiMouseButton, lock_threshold);
+    }
 
     public static ImVec2 GetMouseDragDelta(ImGuiMouseButton ImGuiMouseButton) {
         long addr = internal_native_GetMouseDragDelta_addr(ImGuiMouseButton.getValue());
@@ -6249,11 +5588,9 @@ return (jlong)&copy_addr;*/
         return ImVec2_TEMP_STATIC_GEN_17;
     }
 
-    /*[-JNI;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = ImGuiWrapper::ImGui::GetMouseDragDelta((::ImGuiMouseButton)ImGuiMouseButton);
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetMouseDragDelta_addr(int ImGuiMouseButton);
+    public static long internal_native_GetMouseDragDelta_addr(int ImGuiMouseButton) {
+        return imgui.natives.JNI_ImGui.internal_native_GetMouseDragDelta_addr(ImGuiMouseButton);
+    }
 
     public static ImVec2 GetMouseDragDelta() {
         long addr = internal_native_GetMouseDragDelta_addr();
@@ -6265,56 +5602,49 @@ return (jlong)&copy_addr;*/
         return ImVec2_TEMP_STATIC_GEN_18;
     }
 
-    /*[-JNI;-NATIVE]
-static ImVec2 copy_addr;
-copy_addr = ImGuiWrapper::ImGui::GetMouseDragDelta();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetMouseDragDelta_addr();
+    public static long internal_native_GetMouseDragDelta_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetMouseDragDelta_addr();
+    }
 
     public static void ResetMouseDragDelta(ImGuiMouseButton ImGuiMouseButton) {
         internal_native_ResetMouseDragDelta(ImGuiMouseButton.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ResetMouseDragDelta((::ImGuiMouseButton)ImGuiMouseButton);
-*/
-    public static native void internal_native_ResetMouseDragDelta(int ImGuiMouseButton);
+    public static void internal_native_ResetMouseDragDelta(int ImGuiMouseButton) {
+        imgui.natives.JNI_ImGui.internal_native_ResetMouseDragDelta(ImGuiMouseButton);
+    }
 
     public static void ResetMouseDragDelta() {
         internal_native_ResetMouseDragDelta();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::ResetMouseDragDelta();
-*/
-    public static native void internal_native_ResetMouseDragDelta();
+    public static void internal_native_ResetMouseDragDelta() {
+        imgui.natives.JNI_ImGui.internal_native_ResetMouseDragDelta();
+    }
 
     public static int GetMouseCursor() {
         return internal_native_GetMouseCursor();
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::GetMouseCursor();
-*/
-    public static native int internal_native_GetMouseCursor();
+    public static int internal_native_GetMouseCursor() {
+        return imgui.natives.JNI_ImGui.internal_native_GetMouseCursor();
+    }
 
     public static void SetMouseCursor(int cursor_type) {
         internal_native_SetMouseCursor(cursor_type);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetMouseCursor((int)cursor_type);
-*/
-    public static native void internal_native_SetMouseCursor(int cursor_type);
+    public static void internal_native_SetMouseCursor(int cursor_type) {
+        imgui.natives.JNI_ImGui.internal_native_SetMouseCursor(cursor_type);
+    }
 
     public static void SetNextFrameWantCaptureMouse(boolean want_capture_mouse) {
         internal_native_SetNextFrameWantCaptureMouse(want_capture_mouse);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetNextFrameWantCaptureMouse(want_capture_mouse);
-*/
-    public static native void internal_native_SetNextFrameWantCaptureMouse(boolean want_capture_mouse);
+    public static void internal_native_SetNextFrameWantCaptureMouse(boolean want_capture_mouse) {
+        imgui.natives.JNI_ImGui.internal_native_SetNextFrameWantCaptureMouse(want_capture_mouse);
+    }
 
     public static NativeString GetClipboardText() {
         long addr = internal_native_GetClipboardText_addr();
@@ -6326,56 +5656,49 @@ ImGuiWrapper::ImGui::SetNextFrameWantCaptureMouse(want_capture_mouse);
         return NativeString_TEMP_STATIC_GEN_5;
     }
 
-    /*[-JNI;-NATIVE]
-static NativeString copy_addr;
-copy_addr = ImGuiWrapper::ImGui::GetClipboardText();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetClipboardText_addr();
+    public static long internal_native_GetClipboardText_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_GetClipboardText_addr();
+    }
 
     public static void SetClipboardText(String text) {
         internal_native_SetClipboardText(text);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SetClipboardText(text);
-*/
-    public static native void internal_native_SetClipboardText(String text);
+    public static void internal_native_SetClipboardText(String text) {
+        imgui.natives.JNI_ImGui.internal_native_SetClipboardText(text);
+    }
 
     public static void LoadIniSettingsFromDisk(String ini_filename) {
         internal_native_LoadIniSettingsFromDisk(ini_filename);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::LoadIniSettingsFromDisk(ini_filename);
-*/
-    public static native void internal_native_LoadIniSettingsFromDisk(String ini_filename);
+    public static void internal_native_LoadIniSettingsFromDisk(String ini_filename) {
+        imgui.natives.JNI_ImGui.internal_native_LoadIniSettingsFromDisk(ini_filename);
+    }
 
     public static void LoadIniSettingsFromMemory(String ini_data, long ini_size) {
         internal_native_LoadIniSettingsFromMemory(ini_data, ini_size);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::LoadIniSettingsFromMemory(ini_data, ini_size);
-*/
-    public static native void internal_native_LoadIniSettingsFromMemory(String ini_data, long ini_size);
+    public static void internal_native_LoadIniSettingsFromMemory(String ini_data, long ini_size) {
+        imgui.natives.JNI_ImGui.internal_native_LoadIniSettingsFromMemory(ini_data, ini_size);
+    }
 
     public static void LoadIniSettingsFromMemory(String ini_data) {
         internal_native_LoadIniSettingsFromMemory(ini_data);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::LoadIniSettingsFromMemory(ini_data);
-*/
-    public static native void internal_native_LoadIniSettingsFromMemory(String ini_data);
+    public static void internal_native_LoadIniSettingsFromMemory(String ini_data) {
+        imgui.natives.JNI_ImGui.internal_native_LoadIniSettingsFromMemory(ini_data);
+    }
 
     public static void SaveIniSettingsToDisk(String ini_filename) {
         internal_native_SaveIniSettingsToDisk(ini_filename);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::SaveIniSettingsToDisk(ini_filename);
-*/
-    public static native void internal_native_SaveIniSettingsToDisk(String ini_filename);
+    public static void internal_native_SaveIniSettingsToDisk(String ini_filename) {
+        imgui.natives.JNI_ImGui.internal_native_SaveIniSettingsToDisk(ini_filename);
+    }
 
     public static NativeString SaveIniSettingsToMemory() {
         long addr = internal_native_SaveIniSettingsToMemory_addr();
@@ -6387,47 +5710,41 @@ ImGuiWrapper::ImGui::SaveIniSettingsToDisk(ini_filename);
         return NativeString_TEMP_STATIC_GEN_6;
     }
 
-    /*[-JNI;-NATIVE]
-static NativeString copy_addr;
-copy_addr = ImGuiWrapper::ImGui::SaveIniSettingsToMemory();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_SaveIniSettingsToMemory_addr();
+    public static long internal_native_SaveIniSettingsToMemory_addr() {
+        return imgui.natives.JNI_ImGui.internal_native_SaveIniSettingsToMemory_addr();
+    }
 
     public static void DebugTextEncoding(String text) {
         internal_native_DebugTextEncoding(text);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::DebugTextEncoding(text);
-*/
-    public static native void internal_native_DebugTextEncoding(String text);
+    public static void internal_native_DebugTextEncoding(String text) {
+        imgui.natives.JNI_ImGui.internal_native_DebugTextEncoding(text);
+    }
 
     public static void DebugFlashStyleColor(int idx) {
         internal_native_DebugFlashStyleColor(idx);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::DebugFlashStyleColor((int)idx);
-*/
-    public static native void internal_native_DebugFlashStyleColor(int idx);
+    public static void internal_native_DebugFlashStyleColor(int idx) {
+        imgui.natives.JNI_ImGui.internal_native_DebugFlashStyleColor(idx);
+    }
 
     public static void DebugStartItemPicker() {
         internal_native_DebugStartItemPicker();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::DebugStartItemPicker();
-*/
-    public static native void internal_native_DebugStartItemPicker();
+    public static void internal_native_DebugStartItemPicker() {
+        imgui.natives.JNI_ImGui.internal_native_DebugStartItemPicker();
+    }
 
     public static boolean DebugCheckVersionAndDataLayout(String version_str, long sz_io, long sz_style, long sz_vec2, long sz_vec4, long sz_drawvert, long sz_drawidx) {
         return internal_native_DebugCheckVersionAndDataLayout(version_str, sz_io, sz_style, sz_vec2, sz_vec4, sz_drawvert, sz_drawidx);
     }
 
-    /*[-JNI;-NATIVE]
-return ImGuiWrapper::ImGui::DebugCheckVersionAndDataLayout(version_str, sz_io, sz_style, sz_vec2, sz_vec4, sz_drawvert, sz_drawidx);
-*/
-    public static native boolean internal_native_DebugCheckVersionAndDataLayout(String version_str, long sz_io, long sz_style, long sz_vec2, long sz_vec4, long sz_drawvert, long sz_drawidx);
+    public static boolean internal_native_DebugCheckVersionAndDataLayout(String version_str, long sz_io, long sz_style, long sz_vec2, long sz_vec4, long sz_drawvert, long sz_drawidx) {
+        return imgui.natives.JNI_ImGui.internal_native_DebugCheckVersionAndDataLayout(version_str, sz_io, sz_style, sz_vec2, sz_vec4, sz_drawvert, sz_drawidx);
+    }
 
     public static NativeObject MemAlloc(long size) {
         long addr = internal_native_MemAlloc_addr(size);
@@ -6439,64 +5756,57 @@ return ImGuiWrapper::ImGui::DebugCheckVersionAndDataLayout(version_str, sz_io, s
         return NativeObject_TEMP_STATIC_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::MemAlloc(size);
-*/
-    public static native long internal_native_MemAlloc_addr(long size);
+    public static long internal_native_MemAlloc_addr(long size) {
+        return imgui.natives.JNI_ImGui.internal_native_MemAlloc_addr(size);
+    }
 
     public static void MemFree(NativeObject ptr) {
         internal_native_MemFree(ptr.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::MemFree((void*)ptr_addr);
-*/
-    public static native void internal_native_MemFree(long ptr_addr);
+    public static void internal_native_MemFree(long ptr_addr) {
+        imgui.natives.JNI_ImGui.internal_native_MemFree(ptr_addr);
+    }
 
     public static void UpdatePlatformWindows() {
         internal_native_UpdatePlatformWindows();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::UpdatePlatformWindows();
-*/
-    public static native void internal_native_UpdatePlatformWindows();
+    public static void internal_native_UpdatePlatformWindows() {
+        imgui.natives.JNI_ImGui.internal_native_UpdatePlatformWindows();
+    }
 
     public static void RenderPlatformWindowsDefault(NativeObject platform_render_arg, NativeObject renderer_render_arg) {
         internal_native_RenderPlatformWindowsDefault(platform_render_arg.native_void_address, renderer_render_arg.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::RenderPlatformWindowsDefault((void*)platform_render_arg_addr, (void*)renderer_render_arg_addr);
-*/
-    public static native void internal_native_RenderPlatformWindowsDefault(long platform_render_arg_addr, long renderer_render_arg_addr);
+    public static void internal_native_RenderPlatformWindowsDefault(long platform_render_arg_addr, long renderer_render_arg_addr) {
+        imgui.natives.JNI_ImGui.internal_native_RenderPlatformWindowsDefault(platform_render_arg_addr, renderer_render_arg_addr);
+    }
 
     public static void RenderPlatformWindowsDefault(NativeObject platform_render_arg) {
         internal_native_RenderPlatformWindowsDefault(platform_render_arg.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::RenderPlatformWindowsDefault((void*)platform_render_arg_addr);
-*/
-    public static native void internal_native_RenderPlatformWindowsDefault(long platform_render_arg_addr);
+    public static void internal_native_RenderPlatformWindowsDefault(long platform_render_arg_addr) {
+        imgui.natives.JNI_ImGui.internal_native_RenderPlatformWindowsDefault(platform_render_arg_addr);
+    }
 
     public static void RenderPlatformWindowsDefault() {
         internal_native_RenderPlatformWindowsDefault();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::RenderPlatformWindowsDefault();
-*/
-    public static native void internal_native_RenderPlatformWindowsDefault();
+    public static void internal_native_RenderPlatformWindowsDefault() {
+        imgui.natives.JNI_ImGui.internal_native_RenderPlatformWindowsDefault();
+    }
 
     public static void DestroyPlatformWindows() {
         internal_native_DestroyPlatformWindows();
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWrapper::ImGui::DestroyPlatformWindows();
-*/
-    public static native void internal_native_DestroyPlatformWindows();
+    public static void internal_native_DestroyPlatformWindows() {
+        imgui.natives.JNI_ImGui.internal_native_DestroyPlatformWindows();
+    }
 
     public static ImGuiViewport FindViewportByID(int id) {
         long addr = internal_native_FindViewportByID_addr(id);
@@ -6508,10 +5818,9 @@ ImGuiWrapper::ImGui::DestroyPlatformWindows();
         return ImGuiViewport_TEMP_STATIC_GEN_2;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::FindViewportByID((int)id);
-*/
-    public static native long internal_native_FindViewportByID_addr(int id);
+    public static long internal_native_FindViewportByID_addr(int id) {
+        return imgui.natives.JNI_ImGui.internal_native_FindViewportByID_addr(id);
+    }
 
     public static ImGuiViewport FindViewportByPlatformHandle(NativeObject platform_handle) {
         long addr = internal_native_FindViewportByPlatformHandle_addr(platform_handle.native_void_address);
@@ -6523,8 +5832,7 @@ return (jlong)ImGuiWrapper::ImGui::FindViewportByID((int)id);
         return ImGuiViewport_TEMP_STATIC_GEN_3;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWrapper::ImGui::FindViewportByPlatformHandle((void*)platform_handle_addr);
-*/
-    public static native long internal_native_FindViewportByPlatformHandle_addr(long platform_handle_addr);
+    public static long internal_native_FindViewportByPlatformHandle_addr(long platform_handle_addr) {
+        return imgui.natives.JNI_ImGui.internal_native_FindViewportByPlatformHandle_addr(platform_handle_addr);
+    }
 }

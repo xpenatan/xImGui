@@ -41,38 +41,31 @@ public enum ImGuiFocusedFlags implements NativeEnum<ImGuiFocusedFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiFocusedFlags_None;
-*/
-    private static native int ImGuiFocusedFlags_None_NATIVE();
+    private static int ImGuiFocusedFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiFocusedFlags.ImGuiFocusedFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiFocusedFlags_ChildWindows;
-*/
-    private static native int ImGuiFocusedFlags_ChildWindows_NATIVE();
+    private static int ImGuiFocusedFlags_ChildWindows_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiFocusedFlags.ImGuiFocusedFlags_ChildWindows_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiFocusedFlags_RootWindow;
-*/
-    private static native int ImGuiFocusedFlags_RootWindow_NATIVE();
+    private static int ImGuiFocusedFlags_RootWindow_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiFocusedFlags.ImGuiFocusedFlags_RootWindow_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiFocusedFlags_AnyWindow;
-*/
-    private static native int ImGuiFocusedFlags_AnyWindow_NATIVE();
+    private static int ImGuiFocusedFlags_AnyWindow_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiFocusedFlags.ImGuiFocusedFlags_AnyWindow_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiFocusedFlags_NoPopupHierarchy;
-*/
-    private static native int ImGuiFocusedFlags_NoPopupHierarchy_NATIVE();
+    private static int ImGuiFocusedFlags_NoPopupHierarchy_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiFocusedFlags.ImGuiFocusedFlags_NoPopupHierarchy_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiFocusedFlags_DockHierarchy;
-*/
-    private static native int ImGuiFocusedFlags_DockHierarchy_NATIVE();
+    private static int ImGuiFocusedFlags_DockHierarchy_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiFocusedFlags.ImGuiFocusedFlags_DockHierarchy_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiFocusedFlags_RootAndChildWindows;
-*/
-    private static native int ImGuiFocusedFlags_RootAndChildWindows_NATIVE();
+    private static int ImGuiFocusedFlags_RootAndChildWindows_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiFocusedFlags.ImGuiFocusedFlags_RootAndChildWindows_NATIVE();
+    }
 }

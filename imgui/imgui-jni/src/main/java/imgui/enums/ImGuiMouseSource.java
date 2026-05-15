@@ -34,18 +34,15 @@ public enum ImGuiMouseSource implements NativeEnum<ImGuiMouseSource> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseSource_Mouse;
-*/
-    private static native int ImGuiMouseSource_Mouse_NATIVE();
+    private static int ImGuiMouseSource_Mouse_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMouseSource.ImGuiMouseSource_Mouse_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseSource_TouchScreen;
-*/
-    private static native int ImGuiMouseSource_TouchScreen_NATIVE();
+    private static int ImGuiMouseSource_TouchScreen_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMouseSource.ImGuiMouseSource_TouchScreen_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseSource_Pen;
-*/
-    private static native int ImGuiMouseSource_Pen_NATIVE();
+    private static int ImGuiMouseSource_Pen_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMouseSource.ImGuiMouseSource_Pen_NATIVE();
+    }
 }

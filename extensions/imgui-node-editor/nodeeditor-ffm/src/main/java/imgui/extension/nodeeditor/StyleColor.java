@@ -61,296 +61,206 @@ public enum StyleColor implements NativeEnum<StyleColor> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleColor_Bg;
-*/
     private static int StyleColor_Bg_NATIVE() {
         try {
             return (int) FFMHandles.StyleColor_Bg_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleColor_Grid;
-*/
     private static int StyleColor_Grid_NATIVE() {
         try {
             return (int) FFMHandles.StyleColor_Grid_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleColor_NodeBg;
-*/
     private static int StyleColor_NodeBg_NATIVE() {
         try {
             return (int) FFMHandles.StyleColor_NodeBg_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleColor_NodeBorder;
-*/
     private static int StyleColor_NodeBorder_NATIVE() {
         try {
             return (int) FFMHandles.StyleColor_NodeBorder_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleColor_HovNodeBorder;
-*/
     private static int StyleColor_HovNodeBorder_NATIVE() {
         try {
             return (int) FFMHandles.StyleColor_HovNodeBorder_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleColor_SelNodeBorder;
-*/
     private static int StyleColor_SelNodeBorder_NATIVE() {
         try {
             return (int) FFMHandles.StyleColor_SelNodeBorder_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleColor_NodeSelRect;
-*/
     private static int StyleColor_NodeSelRect_NATIVE() {
         try {
             return (int) FFMHandles.StyleColor_NodeSelRect_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleColor_NodeSelRectBorder;
-*/
     private static int StyleColor_NodeSelRectBorder_NATIVE() {
         try {
             return (int) FFMHandles.StyleColor_NodeSelRectBorder_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleColor_HovLinkBorder;
-*/
     private static int StyleColor_HovLinkBorder_NATIVE() {
         try {
             return (int) FFMHandles.StyleColor_HovLinkBorder_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleColor_SelLinkBorder;
-*/
     private static int StyleColor_SelLinkBorder_NATIVE() {
         try {
             return (int) FFMHandles.StyleColor_SelLinkBorder_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleColor_HighlightLinkBorder;
-*/
     private static int StyleColor_HighlightLinkBorder_NATIVE() {
         try {
             return (int) FFMHandles.StyleColor_HighlightLinkBorder_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleColor_LinkSelRect;
-*/
     private static int StyleColor_LinkSelRect_NATIVE() {
         try {
             return (int) FFMHandles.StyleColor_LinkSelRect_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleColor_LinkSelRectBorder;
-*/
     private static int StyleColor_LinkSelRectBorder_NATIVE() {
         try {
             return (int) FFMHandles.StyleColor_LinkSelRectBorder_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleColor_PinRect;
-*/
     private static int StyleColor_PinRect_NATIVE() {
         try {
             return (int) FFMHandles.StyleColor_PinRect_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleColor_PinRectBorder;
-*/
     private static int StyleColor_PinRectBorder_NATIVE() {
         try {
             return (int) FFMHandles.StyleColor_PinRectBorder_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleColor_Flow;
-*/
     private static int StyleColor_Flow_NATIVE() {
         try {
             return (int) FFMHandles.StyleColor_Flow_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleColor_FlowMarker;
-*/
     private static int StyleColor_FlowMarker_NATIVE() {
         try {
             return (int) FFMHandles.StyleColor_FlowMarker_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleColor_GroupBg;
-*/
     private static int StyleColor_GroupBg_NATIVE() {
         try {
             return (int) FFMHandles.StyleColor_GroupBg_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleColor_GroupBorder;
-*/
     private static int StyleColor_GroupBorder_NATIVE() {
         try {
             return (int) FFMHandles.StyleColor_GroupBorder_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleColor_Count;
-*/
     private static int StyleColor_Count_NATIVE() {
         try {
             return (int) FFMHandles.StyleColor_Count_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle StyleColor_Bg_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylecolor_stylecolor_bg_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle StyleColor_Grid_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylecolor_stylecolor_grid_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle StyleColor_NodeBg_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylecolor_stylecolor_nodebg_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle StyleColor_NodeBorder_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylecolor_stylecolor_nodeborder_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle StyleColor_HovNodeBorder_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylecolor_stylecolor_hovnodeborder_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle StyleColor_SelNodeBorder_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylecolor_stylecolor_selnodeborder_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle StyleColor_NodeSelRect_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylecolor_stylecolor_nodeselrect_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleColor_Bg_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleColor_StyleColor_1Bg_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleColor_NodeSelRectBorder_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylecolor_stylecolor_nodeselrectborder_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleColor_Grid_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleColor_StyleColor_1Grid_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleColor_HovLinkBorder_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylecolor_stylecolor_hovlinkborder_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleColor_NodeBg_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleColor_StyleColor_1NodeBg_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleColor_SelLinkBorder_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylecolor_stylecolor_sellinkborder_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleColor_NodeBorder_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleColor_StyleColor_1NodeBorder_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleColor_HighlightLinkBorder_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylecolor_stylecolor_highlightlinkborder_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleColor_HovNodeBorder_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleColor_StyleColor_1HovNodeBorder_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleColor_LinkSelRect_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylecolor_stylecolor_linkselrect_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleColor_SelNodeBorder_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleColor_StyleColor_1SelNodeBorder_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleColor_LinkSelRectBorder_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylecolor_stylecolor_linkselrectborder_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleColor_NodeSelRect_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleColor_StyleColor_1NodeSelRect_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleColor_PinRect_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylecolor_stylecolor_pinrect_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleColor_NodeSelRectBorder_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleColor_StyleColor_1NodeSelRectBorder_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleColor_PinRectBorder_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylecolor_stylecolor_pinrectborder_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleColor_HovLinkBorder_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleColor_StyleColor_1HovLinkBorder_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleColor_Flow_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylecolor_stylecolor_flow_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleColor_SelLinkBorder_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleColor_StyleColor_1SelLinkBorder_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleColor_FlowMarker_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylecolor_stylecolor_flowmarker_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleColor_HighlightLinkBorder_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleColor_StyleColor_1HighlightLinkBorder_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleColor_GroupBg_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylecolor_stylecolor_groupbg_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleColor_LinkSelRect_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleColor_StyleColor_1LinkSelRect_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleColor_GroupBorder_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylecolor_stylecolor_groupborder_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleColor_LinkSelRectBorder_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleColor_StyleColor_1LinkSelRectBorder_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle StyleColor_PinRect_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleColor_StyleColor_1PinRect_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle StyleColor_PinRectBorder_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleColor_StyleColor_1PinRectBorder_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle StyleColor_Flow_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleColor_StyleColor_1Flow_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle StyleColor_FlowMarker_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleColor_StyleColor_1FlowMarker_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle StyleColor_GroupBg_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleColor_StyleColor_1GroupBg_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle StyleColor_GroupBorder_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleColor_StyleColor_1GroupBorder_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle StyleColor_Count_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleColor_StyleColor_1Count_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleColor_Count_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylecolor_stylecolor_count_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

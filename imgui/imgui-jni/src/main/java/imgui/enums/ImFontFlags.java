@@ -34,23 +34,19 @@ public enum ImFontFlags implements NativeEnum<ImFontFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImFontFlags_None;
-*/
-    private static native int ImFontFlags_None_NATIVE();
+    private static int ImFontFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImFontFlags.ImFontFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImFontFlags_NoLoadError;
-*/
-    private static native int ImFontFlags_NoLoadError_NATIVE();
+    private static int ImFontFlags_NoLoadError_NATIVE() {
+        return imgui.enums.natives.JNI_ImFontFlags.ImFontFlags_NoLoadError_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImFontFlags_NoLoadGlyphs;
-*/
-    private static native int ImFontFlags_NoLoadGlyphs_NATIVE();
+    private static int ImFontFlags_NoLoadGlyphs_NATIVE() {
+        return imgui.enums.natives.JNI_ImFontFlags.ImFontFlags_NoLoadGlyphs_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImFontFlags_LockBakedSizes;
-*/
-    private static native int ImFontFlags_LockBakedSizes_NATIVE();
+    private static int ImFontFlags_LockBakedSizes_NATIVE() {
+        return imgui.enums.natives.JNI_ImFontFlags.ImFontFlags_LockBakedSizes_NATIVE();
+    }
 }

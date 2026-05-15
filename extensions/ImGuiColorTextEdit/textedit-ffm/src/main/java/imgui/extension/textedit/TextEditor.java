@@ -31,14 +31,11 @@ public class TextEditor extends NativeObject {
         internal_reset(addr, true);
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)new TextEditorWrapper::TextEditor();
-*/
     public static long internal_native_create_addr() {
         try {
             return (long) FFMHandles.internal_native_create_addr__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -60,15 +57,11 @@ return (int64_t)new TextEditorWrapper::TextEditor();
         internal_native_deleteNative(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-delete nativeObject;
-*/
     public static void internal_native_deleteNative(long this_addr) {
         try {
             FFMHandles.internal_native_deleteNative__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -76,15 +69,11 @@ delete nativeObject;
         internal_native_SetReadOnlyEnabled(native_address, aValue);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SetReadOnlyEnabled(aValue);
-*/
     public static void internal_native_SetReadOnlyEnabled(long this_addr, boolean aValue) {
         try {
             FFMHandles.internal_native_SetReadOnlyEnabled__JZ.invokeExact(this_addr, aValue);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -92,15 +81,11 @@ nativeObject->SetReadOnlyEnabled(aValue);
         return internal_native_IsReadOnlyEnabled(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->IsReadOnlyEnabled();
-*/
     public static boolean internal_native_IsReadOnlyEnabled(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_IsReadOnlyEnabled__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -108,15 +93,11 @@ return nativeObject->IsReadOnlyEnabled();
         internal_native_SetAutoIndentEnabled(native_address, aValue);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SetAutoIndentEnabled(aValue);
-*/
     public static void internal_native_SetAutoIndentEnabled(long this_addr, boolean aValue) {
         try {
             FFMHandles.internal_native_SetAutoIndentEnabled__JZ.invokeExact(this_addr, aValue);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -124,15 +105,11 @@ nativeObject->SetAutoIndentEnabled(aValue);
         return internal_native_IsAutoIndentEnabled(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->IsAutoIndentEnabled();
-*/
     public static boolean internal_native_IsAutoIndentEnabled(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_IsAutoIndentEnabled__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -140,15 +117,11 @@ return nativeObject->IsAutoIndentEnabled();
         internal_native_SetShowWhitespacesEnabled(native_address, aValue);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SetShowWhitespacesEnabled(aValue);
-*/
     public static void internal_native_SetShowWhitespacesEnabled(long this_addr, boolean aValue) {
         try {
             FFMHandles.internal_native_SetShowWhitespacesEnabled__JZ.invokeExact(this_addr, aValue);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -156,15 +129,11 @@ nativeObject->SetShowWhitespacesEnabled(aValue);
         return internal_native_IsShowWhitespacesEnabled(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->IsShowWhitespacesEnabled();
-*/
     public static boolean internal_native_IsShowWhitespacesEnabled(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_IsShowWhitespacesEnabled__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -172,15 +141,11 @@ return nativeObject->IsShowWhitespacesEnabled();
         internal_native_SetShowLineNumbersEnabled(native_address, aValue);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SetShowLineNumbersEnabled(aValue);
-*/
     public static void internal_native_SetShowLineNumbersEnabled(long this_addr, boolean aValue) {
         try {
             FFMHandles.internal_native_SetShowLineNumbersEnabled__JZ.invokeExact(this_addr, aValue);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -188,15 +153,11 @@ nativeObject->SetShowLineNumbersEnabled(aValue);
         return internal_native_IsShowLineNumbersEnabled(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->IsShowLineNumbersEnabled();
-*/
     public static boolean internal_native_IsShowLineNumbersEnabled(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_IsShowLineNumbersEnabled__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -204,15 +165,11 @@ return nativeObject->IsShowLineNumbersEnabled();
         internal_native_SetShortTabsEnabled(native_address, aValue);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SetShortTabsEnabled(aValue);
-*/
     public static void internal_native_SetShortTabsEnabled(long this_addr, boolean aValue) {
         try {
             FFMHandles.internal_native_SetShortTabsEnabled__JZ.invokeExact(this_addr, aValue);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -220,15 +177,11 @@ nativeObject->SetShortTabsEnabled(aValue);
         return internal_native_IsShortTabsEnabled(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->IsShortTabsEnabled();
-*/
     public static boolean internal_native_IsShortTabsEnabled(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_IsShortTabsEnabled__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -236,15 +189,11 @@ return nativeObject->IsShortTabsEnabled();
         return internal_native_GetLineCount(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->GetLineCount();
-*/
     public static int internal_native_GetLineCount(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_GetLineCount__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -252,15 +201,11 @@ return nativeObject->GetLineCount();
         internal_native_SetPalette(native_address, aValue.getValue());
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SetPalette((PaletteId)aValue);
-*/
     public static void internal_native_SetPalette(long this_addr, int aValue) {
         try {
             FFMHandles.internal_native_SetPalette__JI.invokeExact(this_addr, aValue);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -275,15 +220,11 @@ nativeObject->SetPalette((PaletteId)aValue);
         return PaletteId.CUSTOM.setValue(value);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return (int)nativeObject->GetPalette();
-*/
     public static int internal_native_GetPalette(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_GetPalette__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -291,15 +232,11 @@ return (int)nativeObject->GetPalette();
         internal_native_SetLanguageDefinition(native_address, aValue.getValue());
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SetLanguageDefinition((LanguageDefinitionId)aValue);
-*/
     public static void internal_native_SetLanguageDefinition(long this_addr, int aValue) {
         try {
             FFMHandles.internal_native_SetLanguageDefinition__JI.invokeExact(this_addr, aValue);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -314,15 +251,11 @@ nativeObject->SetLanguageDefinition((LanguageDefinitionId)aValue);
         return LanguageDefinitionId.CUSTOM.setValue(value);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return (int)nativeObject->GetLanguageDefinition();
-*/
     public static int internal_native_GetLanguageDefinition(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_GetLanguageDefinition__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -336,16 +269,11 @@ return (int)nativeObject->GetLanguageDefinition();
         return NativeString_TEMP_GEN_0;
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-static NativeString copy_addr;
-copy_addr = nativeObject->GetLanguageDefinitionName();
-return (int64_t)&copy_addr;*/
     public static long internal_native_GetLanguageDefinitionName_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_GetLanguageDefinitionName_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -353,15 +281,11 @@ return (int64_t)&copy_addr;*/
         internal_native_SetTabSize(native_address, aValue);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SetTabSize((int)aValue);
-*/
     public static void internal_native_SetTabSize(long this_addr, int aValue) {
         try {
             FFMHandles.internal_native_SetTabSize__JI.invokeExact(this_addr, aValue);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -369,15 +293,11 @@ nativeObject->SetTabSize((int)aValue);
         return internal_native_GetTabSize(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->GetTabSize();
-*/
     public static int internal_native_GetTabSize(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_GetTabSize__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -385,15 +305,11 @@ return nativeObject->GetTabSize();
         internal_native_SetLineSpacing(native_address, aValue);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SetLineSpacing((float)aValue);
-*/
     public static void internal_native_SetLineSpacing(long this_addr, float aValue) {
         try {
             FFMHandles.internal_native_SetLineSpacing__JF.invokeExact(this_addr, aValue);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -401,15 +317,11 @@ nativeObject->SetLineSpacing((float)aValue);
         return internal_native_GetLineSpacing(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->GetLineSpacing();
-*/
     public static float internal_native_GetLineSpacing(long this_addr) {
         try {
             return (float) FFMHandles.internal_native_GetLineSpacing__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -417,14 +329,11 @@ return nativeObject->GetLineSpacing();
         internal_native_SetDefaultPalette(aValue.getValue());
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor::SetDefaultPalette((PaletteId)aValue);
-*/
     public static void internal_native_SetDefaultPalette(int aValue) {
         try {
             FFMHandles.internal_native_SetDefaultPalette__I.invokeExact(aValue);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -439,14 +348,11 @@ TextEditorWrapper::TextEditor::SetDefaultPalette((PaletteId)aValue);
         return PaletteId.CUSTOM.setValue(value);
     }
 
-    /*[-FFM;-NATIVE]
-return (int)TextEditorWrapper::TextEditor::GetDefaultPalette();
-*/
     public static int internal_native_GetDefaultPalette() {
         try {
             return (int) FFMHandles.internal_native_GetDefaultPalette__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -454,15 +360,11 @@ return (int)TextEditorWrapper::TextEditor::GetDefaultPalette();
         internal_native_SelectAll(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SelectAll();
-*/
     public static void internal_native_SelectAll(long this_addr) {
         try {
             FFMHandles.internal_native_SelectAll__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -470,15 +372,11 @@ nativeObject->SelectAll();
         internal_native_SelectLine(native_address, aLine);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SelectLine((int)aLine);
-*/
     public static void internal_native_SelectLine(long this_addr, int aLine) {
         try {
             FFMHandles.internal_native_SelectLine__JI.invokeExact(this_addr, aLine);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -486,15 +384,11 @@ nativeObject->SelectLine((int)aLine);
         internal_native_SelectRegion(native_address, aStartLine, aStartChar, aEndLine, aEndChar);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SelectRegion((int)aStartLine, (int)aStartChar, (int)aEndLine, (int)aEndChar);
-*/
     public static void internal_native_SelectRegion(long this_addr, int aStartLine, int aStartChar, int aEndLine, int aEndChar) {
         try {
             FFMHandles.internal_native_SelectRegion__JIIII.invokeExact(this_addr, aStartLine, aStartChar, aEndLine, aEndChar);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -502,15 +396,11 @@ nativeObject->SelectRegion((int)aStartLine, (int)aStartChar, (int)aEndLine, (int
         internal_native_SelectNextOccurrenceOf(native_address, aText, aTextSize, aCaseSensitive);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SelectNextOccurrenceOf(aText, (int)aTextSize, aCaseSensitive);
-*/
     public static void internal_native_SelectNextOccurrenceOf(long this_addr, String aText, int aTextSize, boolean aCaseSensitive) {
         try {
             FFMHandles.internal_native_SelectNextOccurrenceOf__JLjava_lang_String_2IZ.invokeExact(this_addr, com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(aText), aTextSize, aCaseSensitive);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -518,15 +408,11 @@ nativeObject->SelectNextOccurrenceOf(aText, (int)aTextSize, aCaseSensitive);
         internal_native_SelectNextOccurrenceOf(native_address, aText, aTextSize);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SelectNextOccurrenceOf(aText, (int)aTextSize);
-*/
     public static void internal_native_SelectNextOccurrenceOf(long this_addr, String aText, int aTextSize) {
         try {
             FFMHandles.internal_native_SelectNextOccurrenceOf__JLjava_lang_String_2I.invokeExact(this_addr, com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(aText), aTextSize);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -534,15 +420,11 @@ nativeObject->SelectNextOccurrenceOf(aText, (int)aTextSize);
         internal_native_SelectAllOccurrencesOf(native_address, aText, aTextSize, aCaseSensitive);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SelectAllOccurrencesOf(aText, (int)aTextSize, aCaseSensitive);
-*/
     public static void internal_native_SelectAllOccurrencesOf(long this_addr, String aText, int aTextSize, boolean aCaseSensitive) {
         try {
             FFMHandles.internal_native_SelectAllOccurrencesOf__JLjava_lang_String_2IZ.invokeExact(this_addr, com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(aText), aTextSize, aCaseSensitive);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -550,15 +432,11 @@ nativeObject->SelectAllOccurrencesOf(aText, (int)aTextSize, aCaseSensitive);
         internal_native_SelectAllOccurrencesOf(native_address, aText, aTextSize);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SelectAllOccurrencesOf(aText, (int)aTextSize);
-*/
     public static void internal_native_SelectAllOccurrencesOf(long this_addr, String aText, int aTextSize) {
         try {
             FFMHandles.internal_native_SelectAllOccurrencesOf__JLjava_lang_String_2I.invokeExact(this_addr, com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(aText), aTextSize);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -566,15 +444,11 @@ nativeObject->SelectAllOccurrencesOf(aText, (int)aTextSize);
         return internal_native_AnyCursorHasSelection(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->AnyCursorHasSelection();
-*/
     public static boolean internal_native_AnyCursorHasSelection(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_AnyCursorHasSelection__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -582,15 +456,11 @@ return nativeObject->AnyCursorHasSelection();
         return internal_native_AllCursorsHaveSelection(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->AllCursorsHaveSelection();
-*/
     public static boolean internal_native_AllCursorsHaveSelection(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_AllCursorsHaveSelection__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -598,15 +468,11 @@ return nativeObject->AllCursorsHaveSelection();
         internal_native_ClearExtraCursors(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->ClearExtraCursors();
-*/
     public static void internal_native_ClearExtraCursors(long this_addr) {
         try {
             FFMHandles.internal_native_ClearExtraCursors__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -614,15 +480,11 @@ nativeObject->ClearExtraCursors();
         internal_native_ClearSelections(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->ClearSelections();
-*/
     public static void internal_native_ClearSelections(long this_addr) {
         try {
             FFMHandles.internal_native_ClearSelections__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -630,15 +492,11 @@ nativeObject->ClearSelections();
         internal_native_SetCursorPosition(native_address, aLine, aCharIndex);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SetCursorPosition((int)aLine, (int)aCharIndex);
-*/
     public static void internal_native_SetCursorPosition(long this_addr, int aLine, int aCharIndex) {
         try {
             FFMHandles.internal_native_SetCursorPosition__JII.invokeExact(this_addr, aLine, aCharIndex);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -646,15 +504,11 @@ nativeObject->SetCursorPosition((int)aLine, (int)aCharIndex);
         internal_native_GetCursorPosition(native_address, outLine.native_void_address, outColumn.native_void_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->GetCursorPosition((int*)outLine_addr, (int*)outColumn_addr);
-*/
     public static void internal_native_GetCursorPosition(long this_addr, long outLine_addr, long outColumn_addr) {
         try {
             FFMHandles.internal_native_GetCursorPosition__JJJ.invokeExact(this_addr, outLine_addr, outColumn_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -662,15 +516,11 @@ nativeObject->GetCursorPosition((int*)outLine_addr, (int*)outColumn_addr);
         return internal_native_GetFirstVisibleLine(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->GetFirstVisibleLine();
-*/
     public static int internal_native_GetFirstVisibleLine(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_GetFirstVisibleLine__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -678,15 +528,11 @@ return nativeObject->GetFirstVisibleLine();
         return internal_native_GetLastVisibleLine(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->GetLastVisibleLine();
-*/
     public static int internal_native_GetLastVisibleLine(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_GetLastVisibleLine__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -694,15 +540,11 @@ return nativeObject->GetLastVisibleLine();
         internal_native_SetViewAtLine(native_address, aLine, aMode.getValue());
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SetViewAtLine((int)aLine, (SetViewAtLineMode)aMode);
-*/
     public static void internal_native_SetViewAtLine(long this_addr, int aLine, int aMode) {
         try {
             FFMHandles.internal_native_SetViewAtLine__JII.invokeExact(this_addr, aLine, aMode);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -710,15 +552,11 @@ nativeObject->SetViewAtLine((int)aLine, (SetViewAtLineMode)aMode);
         internal_native_Copy(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->Copy();
-*/
     public static void internal_native_Copy(long this_addr) {
         try {
             FFMHandles.internal_native_Copy__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -726,15 +564,11 @@ nativeObject->Copy();
         internal_native_Cut(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->Cut();
-*/
     public static void internal_native_Cut(long this_addr) {
         try {
             FFMHandles.internal_native_Cut__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -742,15 +576,11 @@ nativeObject->Cut();
         internal_native_Paste(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->Paste();
-*/
     public static void internal_native_Paste(long this_addr) {
         try {
             FFMHandles.internal_native_Paste__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -758,15 +588,11 @@ nativeObject->Paste();
         internal_native_Undo(native_address, aSteps);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->Undo((int)aSteps);
-*/
     public static void internal_native_Undo(long this_addr, int aSteps) {
         try {
             FFMHandles.internal_native_Undo__JI.invokeExact(this_addr, aSteps);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -774,15 +600,11 @@ nativeObject->Undo((int)aSteps);
         internal_native_Undo(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->Undo();
-*/
     public static void internal_native_Undo(long this_addr) {
         try {
             FFMHandles.internal_native_Undo__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -790,15 +612,11 @@ nativeObject->Undo();
         internal_native_Redo(native_address, aSteps);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->Redo((int)aSteps);
-*/
     public static void internal_native_Redo(long this_addr, int aSteps) {
         try {
             FFMHandles.internal_native_Redo__JI.invokeExact(this_addr, aSteps);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -806,15 +624,11 @@ nativeObject->Redo((int)aSteps);
         internal_native_Redo(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->Redo();
-*/
     public static void internal_native_Redo(long this_addr) {
         try {
             FFMHandles.internal_native_Redo__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -822,15 +636,11 @@ nativeObject->Redo();
         return internal_native_CanUndo(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->CanUndo();
-*/
     public static boolean internal_native_CanUndo(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_CanUndo__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -838,15 +648,11 @@ return nativeObject->CanUndo();
         return internal_native_CanRedo(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->CanRedo();
-*/
     public static boolean internal_native_CanRedo(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_CanRedo__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -854,15 +660,11 @@ return nativeObject->CanRedo();
         return internal_native_GetUndoIndex(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->GetUndoIndex();
-*/
     public static int internal_native_GetUndoIndex(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_GetUndoIndex__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -870,15 +672,11 @@ return nativeObject->GetUndoIndex();
         internal_native_SetText(native_address, aText);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SetText(aText);
-*/
     public static void internal_native_SetText(long this_addr, String aText) {
         try {
             FFMHandles.internal_native_SetText__JLjava_lang_String_2.invokeExact(this_addr, com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(aText));
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -892,16 +690,11 @@ nativeObject->SetText(aText);
         return NativeString_TEMP_GEN_1;
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-static NativeString copy_addr;
-copy_addr = nativeObject->GetText();
-return (int64_t)&copy_addr;*/
     public static long internal_native_GetText_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_GetText_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -909,15 +702,11 @@ return (int64_t)&copy_addr;*/
         internal_native_Render(native_address, aTitle, aParentIsFocused, aSize.native_address, aBorder);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->Render(aTitle, aParentIsFocused, *((ImVec2* )aSize_addr), aBorder);
-*/
     public static void internal_native_Render(long this_addr, String aTitle, boolean aParentIsFocused, long aSize_addr, boolean aBorder) {
         try {
             FFMHandles.internal_native_Render__JLjava_lang_String_2ZJZ.invokeExact(this_addr, com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(aTitle), aParentIsFocused, aSize_addr, aBorder);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -925,15 +714,11 @@ nativeObject->Render(aTitle, aParentIsFocused, *((ImVec2* )aSize_addr), aBorder)
         internal_native_Render(native_address, aTitle, aParentIsFocused, aSize.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->Render(aTitle, aParentIsFocused, *((ImVec2* )aSize_addr));
-*/
     public static void internal_native_Render(long this_addr, String aTitle, boolean aParentIsFocused, long aSize_addr) {
         try {
             FFMHandles.internal_native_Render__JLjava_lang_String_2ZJ.invokeExact(this_addr, com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(aTitle), aParentIsFocused, aSize_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -941,15 +726,11 @@ nativeObject->Render(aTitle, aParentIsFocused, *((ImVec2* )aSize_addr));
         internal_native_Render(native_address, aTitle, aParentIsFocused);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->Render(aTitle, aParentIsFocused);
-*/
     public static void internal_native_Render(long this_addr, String aTitle, boolean aParentIsFocused) {
         try {
             FFMHandles.internal_native_Render__JLjava_lang_String_2Z.invokeExact(this_addr, com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(aTitle), aParentIsFocused);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -957,160 +738,126 @@ nativeObject->Render(aTitle, aParentIsFocused);
         internal_native_Render(native_address, aTitle);
     }
 
-    /*[-FFM;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->Render(aTitle);
-*/
     public static void internal_native_Render(long this_addr, String aTitle) {
         try {
             FFMHandles.internal_native_Render__JLjava_lang_String_2.invokeExact(this_addr, com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(aTitle));
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle internal_native_create_addr__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_textedit_texteditor_create_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_deletenative", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle internal_native_SetReadOnlyEnabled__JZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_setreadonlyenabled", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle internal_native_IsReadOnlyEnabled__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_isreadonlyenabled", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_SetAutoIndentEnabled__JZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_setautoindentenabled", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_IsAutoIndentEnabled__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_isautoindentenabled", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle internal_native_SetShowWhitespacesEnabled__JZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_setshowwhitespacesenabled", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_create_addr__ = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1create_1addr__", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_IsShowWhitespacesEnabled__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_isshowwhitespacesenabled", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1deleteNative__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_SetShowLineNumbersEnabled__JZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_setshowlinenumbersenabled", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_SetReadOnlyEnabled__JZ = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1SetReadOnlyEnabled__JZ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_IsShowLineNumbersEnabled__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_isshowlinenumbersenabled", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_IsReadOnlyEnabled__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1IsReadOnlyEnabled__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_SetShortTabsEnabled__JZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_setshorttabsenabled", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_SetAutoIndentEnabled__JZ = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1SetAutoIndentEnabled__JZ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_IsShortTabsEnabled__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_isshorttabsenabled", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_IsAutoIndentEnabled__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1IsAutoIndentEnabled__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_GetLineCount__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_getlinecount", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_SetShowWhitespacesEnabled__JZ = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1SetShowWhitespacesEnabled__JZ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_SetPalette__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_setpalette", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_IsShowWhitespacesEnabled__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1IsShowWhitespacesEnabled__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_GetPalette__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_getpalette", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_SetShowLineNumbersEnabled__JZ = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1SetShowLineNumbersEnabled__JZ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_SetLanguageDefinition__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_setlanguagedefinition", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_IsShowLineNumbersEnabled__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1IsShowLineNumbersEnabled__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_GetLanguageDefinition__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_getlanguagedefinition", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_SetShortTabsEnabled__JZ = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1SetShortTabsEnabled__JZ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_GetLanguageDefinitionName_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_textedit_texteditor_getlanguagedefinitionname_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_IsShortTabsEnabled__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1IsShortTabsEnabled__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_SetTabSize__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_settabsize", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetLineCount__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1GetLineCount__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_GetTabSize__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_gettabsize", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_SetPalette__JI = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1SetPalette__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_SetLineSpacing__JF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_setlinespacing", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetPalette__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1GetPalette__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_GetLineSpacing__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_getlinespacing", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_SetLanguageDefinition__JI = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1SetLanguageDefinition__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_SetDefaultPalette__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_setdefaultpalette", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetLanguageDefinition__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1GetLanguageDefinition__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_GetDefaultPalette__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_getdefaultpalette", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetLanguageDefinitionName_addr__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1GetLanguageDefinitionName_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_SelectAll__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_selectall", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_SetTabSize__JI = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1SetTabSize__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_SelectLine__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_selectline", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetTabSize__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1GetTabSize__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_SelectRegion__JIIII = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_selectregion", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_SetLineSpacing__JF = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1SetLineSpacing__JF", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_SelectNextOccurrenceOf__JLjava_lang_String_2IZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_selectnextoccurrenceof_l_str_i_z", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.ADDRESS, ValueLayout.JAVA_INT, ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetLineSpacing__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1GetLineSpacing__J", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_SelectNextOccurrenceOf__JLjava_lang_String_2I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_selectnextoccurrenceof_l_str_i", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.ADDRESS, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_SetDefaultPalette__I = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1SetDefaultPalette__I", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_SelectAllOccurrencesOf__JLjava_lang_String_2IZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_selectalloccurrencesof_l_str_i_z", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.ADDRESS, ValueLayout.JAVA_INT, ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetDefaultPalette__ = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1GetDefaultPalette__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_SelectAllOccurrencesOf__JLjava_lang_String_2I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_selectalloccurrencesof_l_str_i", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.ADDRESS, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_SelectAll__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1SelectAll__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_AnyCursorHasSelection__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_anycursorhasselection", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_SelectLine__JI = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1SelectLine__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_AllCursorsHaveSelection__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_allcursorshaveselection", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_SelectRegion__JIIII = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1SelectRegion__JIIII", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_ClearExtraCursors__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_clearextracursors", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_SelectNextOccurrenceOf__JLjava_lang_String_2IZ = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1SelectNextOccurrenceOf__JLjava_lang_String_2IZ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.ADDRESS, ValueLayout.JAVA_INT, ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_ClearSelections__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_clearselections", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_SelectNextOccurrenceOf__JLjava_lang_String_2I = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1SelectNextOccurrenceOf__JLjava_lang_String_2I", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.ADDRESS, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_SetCursorPosition__JII = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_setcursorposition", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_SelectAllOccurrencesOf__JLjava_lang_String_2IZ = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1SelectAllOccurrencesOf__JLjava_lang_String_2IZ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.ADDRESS, ValueLayout.JAVA_INT, ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_GetCursorPosition__JJJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_getcursorposition", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_SelectAllOccurrencesOf__JLjava_lang_String_2I = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1SelectAllOccurrencesOf__JLjava_lang_String_2I", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.ADDRESS, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_GetFirstVisibleLine__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_getfirstvisibleline", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_AnyCursorHasSelection__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1AnyCursorHasSelection__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_GetLastVisibleLine__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_getlastvisibleline", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_AllCursorsHaveSelection__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1AllCursorsHaveSelection__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_SetViewAtLine__JII = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_setviewatline", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_ClearExtraCursors__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1ClearExtraCursors__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_Copy__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_copy", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_ClearSelections__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1ClearSelections__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_Cut__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_cut", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_SetCursorPosition__JII = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1SetCursorPosition__JII", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_Paste__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_paste", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetCursorPosition__JJJ = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1GetCursorPosition__JJJ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_Undo__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_undo_l_i", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetFirstVisibleLine__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1GetFirstVisibleLine__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_Undo__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_undo_l", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetLastVisibleLine__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1GetLastVisibleLine__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_Redo__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_redo_l_i", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_SetViewAtLine__JII = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1SetViewAtLine__JII", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_Redo__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_redo_l", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_Copy__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1Copy__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_CanUndo__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_canundo", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_Cut__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1Cut__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_CanRedo__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_canredo", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_Paste__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1Paste__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_GetUndoIndex__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_getundoindex", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_Undo__JI = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1Undo__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_SetText__JLjava_lang_String_2 = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_settext", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.ADDRESS));
 
-        static final java.lang.invoke.MethodHandle internal_native_Undo__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1Undo__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_GetText_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_textedit_texteditor_gettext_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_Redo__JI = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1Redo__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_Render__JLjava_lang_String_2ZJZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_render_l_str_z_l_z", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.ADDRESS, ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_Redo__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1Redo__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_Render__JLjava_lang_String_2ZJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_render_l_str_z_l", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.ADDRESS, ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_CanUndo__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1CanUndo__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_Render__JLjava_lang_String_2Z = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_render_l_str_z", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.ADDRESS, ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_CanRedo__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1CanRedo__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_GetUndoIndex__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1GetUndoIndex__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_SetText__JLjava_lang_String_2 = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1SetText__JLjava_lang_String_2", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.ADDRESS));
-
-        static final java.lang.invoke.MethodHandle internal_native_GetText_addr__J = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1GetText_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_Render__JLjava_lang_String_2ZJZ = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1Render__JLjava_lang_String_2ZJZ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.ADDRESS, ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
-
-        static final java.lang.invoke.MethodHandle internal_native_Render__JLjava_lang_String_2ZJ = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1Render__JLjava_lang_String_2ZJ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.ADDRESS, ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_Render__JLjava_lang_String_2Z = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1Render__JLjava_lang_String_2Z", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.ADDRESS, ValueLayout.JAVA_BOOLEAN));
-
-        static final java.lang.invoke.MethodHandle internal_native_Render__JLjava_lang_String_2 = downcallDefault("jparser_imgui_extension_textedit_TextEditor_internal_1native_1Render__JLjava_lang_String_2", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.ADDRESS));
+        static final java.lang.invoke.MethodHandle internal_native_Render__JLjava_lang_String_2 = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_textedit_texteditor_render_l_str", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.ADDRESS));
     }
 }

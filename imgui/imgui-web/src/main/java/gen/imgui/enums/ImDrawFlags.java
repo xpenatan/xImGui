@@ -48,87 +48,45 @@ public enum ImDrawFlags implements NativeEnum<ImDrawFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImDrawFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImDrawFlags_None;")
     private static native int ImDrawFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImDrawFlags_Closed;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImDrawFlags_Closed;")
     private static native int ImDrawFlags_Closed_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImDrawFlags_RoundCornersTopLeft;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImDrawFlags_RoundCornersTopLeft;")
     private static native int ImDrawFlags_RoundCornersTopLeft_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImDrawFlags_RoundCornersTopRight;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImDrawFlags_RoundCornersTopRight;")
     private static native int ImDrawFlags_RoundCornersTopRight_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImDrawFlags_RoundCornersBottomLeft;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImDrawFlags_RoundCornersBottomLeft;")
     private static native int ImDrawFlags_RoundCornersBottomLeft_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImDrawFlags_RoundCornersBottomRight;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImDrawFlags_RoundCornersBottomRight;")
     private static native int ImDrawFlags_RoundCornersBottomRight_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImDrawFlags_RoundCornersNone;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImDrawFlags_RoundCornersNone;")
     private static native int ImDrawFlags_RoundCornersNone_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImDrawFlags_RoundCornersTop;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImDrawFlags_RoundCornersTop;")
     private static native int ImDrawFlags_RoundCornersTop_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImDrawFlags_RoundCornersBottom;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImDrawFlags_RoundCornersBottom;")
     private static native int ImDrawFlags_RoundCornersBottom_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImDrawFlags_RoundCornersLeft;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImDrawFlags_RoundCornersLeft;")
     private static native int ImDrawFlags_RoundCornersLeft_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImDrawFlags_RoundCornersRight;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImDrawFlags_RoundCornersRight;")
     private static native int ImDrawFlags_RoundCornersRight_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImDrawFlags_RoundCornersAll;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImDrawFlags_RoundCornersAll;")
     private static native int ImDrawFlags_RoundCornersAll_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImDrawFlags_RoundCornersDefault_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImDrawFlags_RoundCornersDefault_;")
     private static native int ImDrawFlags_RoundCornersDefault__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImDrawFlags_RoundCornersMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImDrawFlags_RoundCornersMask_;")
     private static native int ImDrawFlags_RoundCornersMask__NATIVE();
 }

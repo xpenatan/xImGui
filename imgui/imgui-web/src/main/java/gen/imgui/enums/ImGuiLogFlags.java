@@ -40,39 +40,21 @@ public enum ImGuiLogFlags implements NativeEnum<ImGuiLogFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiLogFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiLogFlags_None;")
     private static native int ImGuiLogFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiLogFlags_OutputTTY;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiLogFlags_OutputTTY;")
     private static native int ImGuiLogFlags_OutputTTY_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiLogFlags_OutputFile;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiLogFlags_OutputFile;")
     private static native int ImGuiLogFlags_OutputFile_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiLogFlags_OutputBuffer;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiLogFlags_OutputBuffer;")
     private static native int ImGuiLogFlags_OutputBuffer_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiLogFlags_OutputClipboard;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiLogFlags_OutputClipboard;")
     private static native int ImGuiLogFlags_OutputClipboard_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiLogFlags_OutputMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiLogFlags_OutputMask_;")
     private static native int ImGuiLogFlags_OutputMask__NATIVE();
 }

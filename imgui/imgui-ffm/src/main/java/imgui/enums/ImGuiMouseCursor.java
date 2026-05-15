@@ -53,192 +53,126 @@ public enum ImGuiMouseCursor implements NativeEnum<ImGuiMouseCursor> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMouseCursor_None;
-*/
     private static int ImGuiMouseCursor_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMouseCursor_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMouseCursor_Arrow;
-*/
     private static int ImGuiMouseCursor_Arrow_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMouseCursor_Arrow_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMouseCursor_TextInput;
-*/
     private static int ImGuiMouseCursor_TextInput_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMouseCursor_TextInput_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMouseCursor_ResizeAll;
-*/
     private static int ImGuiMouseCursor_ResizeAll_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMouseCursor_ResizeAll_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMouseCursor_ResizeNS;
-*/
     private static int ImGuiMouseCursor_ResizeNS_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMouseCursor_ResizeNS_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMouseCursor_ResizeEW;
-*/
     private static int ImGuiMouseCursor_ResizeEW_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMouseCursor_ResizeEW_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMouseCursor_ResizeNESW;
-*/
     private static int ImGuiMouseCursor_ResizeNESW_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMouseCursor_ResizeNESW_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMouseCursor_ResizeNWSE;
-*/
     private static int ImGuiMouseCursor_ResizeNWSE_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMouseCursor_ResizeNWSE_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMouseCursor_Hand;
-*/
     private static int ImGuiMouseCursor_Hand_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMouseCursor_Hand_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMouseCursor_Wait;
-*/
     private static int ImGuiMouseCursor_Wait_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMouseCursor_Wait_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMouseCursor_Progress;
-*/
     private static int ImGuiMouseCursor_Progress_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMouseCursor_Progress_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMouseCursor_NotAllowed;
-*/
     private static int ImGuiMouseCursor_NotAllowed_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMouseCursor_NotAllowed_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiMouseCursor_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimousecursor_imguimousecursor_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiMouseCursor_Arrow_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimousecursor_imguimousecursor_arrow_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiMouseCursor_TextInput_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimousecursor_imguimousecursor_textinput_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiMouseCursor_ResizeAll_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimousecursor_imguimousecursor_resizeall_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiMouseCursor_ResizeNS_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimousecursor_imguimousecursor_resizens_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiMouseCursor_ResizeEW_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimousecursor_imguimousecursor_resizeew_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiMouseCursor_ResizeNESW_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimousecursor_imguimousecursor_resizenesw_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiMouseCursor_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMouseCursor_ImGuiMouseCursor_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiMouseCursor_ResizeNWSE_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimousecursor_imguimousecursor_resizenwse_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiMouseCursor_Arrow_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMouseCursor_ImGuiMouseCursor_1Arrow_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiMouseCursor_Hand_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimousecursor_imguimousecursor_hand_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiMouseCursor_TextInput_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMouseCursor_ImGuiMouseCursor_1TextInput_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiMouseCursor_Wait_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimousecursor_imguimousecursor_wait_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiMouseCursor_ResizeAll_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMouseCursor_ImGuiMouseCursor_1ResizeAll_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiMouseCursor_Progress_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimousecursor_imguimousecursor_progress_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiMouseCursor_ResizeNS_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMouseCursor_ImGuiMouseCursor_1ResizeNS_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiMouseCursor_ResizeEW_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMouseCursor_ImGuiMouseCursor_1ResizeEW_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiMouseCursor_ResizeNESW_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMouseCursor_ImGuiMouseCursor_1ResizeNESW_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiMouseCursor_ResizeNWSE_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMouseCursor_ImGuiMouseCursor_1ResizeNWSE_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiMouseCursor_Hand_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMouseCursor_ImGuiMouseCursor_1Hand_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiMouseCursor_Wait_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMouseCursor_ImGuiMouseCursor_1Wait_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiMouseCursor_Progress_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMouseCursor_ImGuiMouseCursor_1Progress_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiMouseCursor_NotAllowed_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMouseCursor_ImGuiMouseCursor_1NotAllowed_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiMouseCursor_NotAllowed_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimousecursor_imguimousecursor_notallowed_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

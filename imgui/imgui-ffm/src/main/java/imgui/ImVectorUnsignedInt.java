@@ -37,15 +37,11 @@ public class ImVectorUnsignedInt extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImVectorUnsignedInt* nativeObject = (ImVectorUnsignedInt*)this_addr;
-delete nativeObject;
-*/
     public static void internal_native_deleteNative(long this_addr) {
         try {
             FFMHandles.internal_native_deleteNative__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -53,14 +49,11 @@ delete nativeObject;
         return internal_native_getData(native_address, index);
     }
 
-    /*[-FFM;-NATIVE]
-ImVectorUnsignedInt* nativeObject = (ImVectorUnsignedInt*)this_addr;
-return ((*nativeObject)[(int)index]);*/
     public static int internal_native_getData(long this_addr, int index) {
         try {
             return (int) FFMHandles.internal_native_getData__JI.invokeExact(this_addr, index);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -68,15 +61,11 @@ return ((*nativeObject)[(int)index]);*/
         return internal_native_size(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImVectorUnsignedInt* nativeObject = (ImVectorUnsignedInt*)this_addr;
-return nativeObject->size();
-*/
     public static int internal_native_size(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_size__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -84,15 +73,11 @@ return nativeObject->size();
         return internal_native_front(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImVectorUnsignedInt* nativeObject = (ImVectorUnsignedInt*)this_addr;
-return nativeObject->front();
-*/
     public static int internal_native_front(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_front__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -100,58 +85,24 @@ return nativeObject->front();
         return internal_native_back(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImVectorUnsignedInt* nativeObject = (ImVectorUnsignedInt*)this_addr;
-return nativeObject->back();
-*/
     public static int internal_native_back(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_back__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_imvectorunsignedint_deletenative", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle internal_native_getData__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_imvectorunsignedint_getdata", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle internal_native_size__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_imvectorunsignedint_size", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle internal_native_front__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_imvectorunsignedint_front", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
-
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
-
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
-
-        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = downcallDefault("jparser_imgui_ImVectorUnsignedInt_internal_1native_1deleteNative__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_getData__JI = downcallDefault("jparser_imgui_ImVectorUnsignedInt_internal_1native_1getData__JI", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle internal_native_size__J = downcallDefault("jparser_imgui_ImVectorUnsignedInt_internal_1native_1size__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_front__J = downcallDefault("jparser_imgui_ImVectorUnsignedInt_internal_1native_1front__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_back__J = downcallDefault("jparser_imgui_ImVectorUnsignedInt_internal_1native_1back__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_back__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_imvectorunsignedint_back", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
     }
 }

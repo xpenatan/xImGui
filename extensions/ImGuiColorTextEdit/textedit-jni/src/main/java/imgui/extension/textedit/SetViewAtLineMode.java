@@ -34,18 +34,15 @@ public enum SetViewAtLineMode implements NativeEnum<SetViewAtLineMode> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)SetViewAtLineMode::FirstVisibleLine;
-*/
-    private static native int FirstVisibleLine_NATIVE();
+    private static int FirstVisibleLine_NATIVE() {
+        return imgui.extension.textedit.natives.JNI_SetViewAtLineMode.FirstVisibleLine_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)SetViewAtLineMode::Centered;
-*/
-    private static native int Centered_NATIVE();
+    private static int Centered_NATIVE() {
+        return imgui.extension.textedit.natives.JNI_SetViewAtLineMode.Centered_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)SetViewAtLineMode::LastVisibleLine;
-*/
-    private static native int LastVisibleLine_NATIVE();
+    private static int LastVisibleLine_NATIVE() {
+        return imgui.extension.textedit.natives.JNI_SetViewAtLineMode.LastVisibleLine_NATIVE();
+    }
 }

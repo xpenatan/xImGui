@@ -30,10 +30,6 @@ public class ImGuiTabBar extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiTabBar);
-imgui.destroy(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiTabBar);imgui.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
@@ -41,10 +37,6 @@ imgui.destroy(jsObj);
         return internal_native_get_SelectedTabId(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiTabBar);
-return jsObj.get_SelectedTabId();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiTabBar);return jsObj.get_SelectedTabId();")
     public static native int internal_native_get_SelectedTabId(int this_addr);
 
@@ -52,10 +44,6 @@ return jsObj.get_SelectedTabId();
         internal_native_set_SelectedTabId(native_address, SelectedTabId);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiTabBar);
-jsObj.set_SelectedTabId(SelectedTabId);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "SelectedTabId"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiTabBar);jsObj.set_SelectedTabId(SelectedTabId);")
     public static native void internal_native_set_SelectedTabId(int this_addr, int SelectedTabId);
 
@@ -63,10 +51,6 @@ jsObj.set_SelectedTabId(SelectedTabId);
         return internal_native_get_NextSelectedTabId(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiTabBar);
-return jsObj.get_NextSelectedTabId();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiTabBar);return jsObj.get_NextSelectedTabId();")
     public static native int internal_native_get_NextSelectedTabId(int this_addr);
 
@@ -74,10 +58,6 @@ return jsObj.get_NextSelectedTabId();
         internal_native_set_NextSelectedTabId(native_address, NextSelectedTabId);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiTabBar);
-jsObj.set_NextSelectedTabId(NextSelectedTabId);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "NextSelectedTabId"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiTabBar);jsObj.set_NextSelectedTabId(NextSelectedTabId);")
     public static native void internal_native_set_NextSelectedTabId(int this_addr, int NextSelectedTabId);
 }

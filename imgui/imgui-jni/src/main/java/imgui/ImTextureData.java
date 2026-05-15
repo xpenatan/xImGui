@@ -48,31 +48,25 @@ public class ImTextureData extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ImTextureData.internal_native_deleteNative(this_addr);
+    }
 
     public void Create(ImTextureFormat format, int w, int h) {
         internal_native_Create(native_address, format.getValue(), w, h);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->Create((::ImTextureFormat)format, (int)w, (int)h);
-*/
-    public static native void internal_native_Create(long this_addr, int format, int w, int h);
+    public static void internal_native_Create(long this_addr, int format, int w, int h) {
+        imgui.natives.JNI_ImTextureData.internal_native_Create(this_addr, format, w, h);
+    }
 
     public void DestroyPixels() {
         internal_native_DestroyPixels(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->DestroyPixels();
-*/
-    public static native void internal_native_DestroyPixels(long this_addr);
+    public static void internal_native_DestroyPixels(long this_addr) {
+        imgui.natives.JNI_ImTextureData.internal_native_DestroyPixels(this_addr);
+    }
 
     public NativeObject GetPixels() {
         long addr = internal_native_GetPixels_addr(native_address);
@@ -84,11 +78,9 @@ nativeObject->DestroyPixels();
         return NativeObject_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return (jlong)nativeObject->GetPixels();
-*/
-    public static native long internal_native_GetPixels_addr(long this_addr);
+    public static long internal_native_GetPixels_addr(long this_addr) {
+        return imgui.natives.JNI_ImTextureData.internal_native_GetPixels_addr(this_addr);
+    }
 
     public NativeObject GetPixelsAt(int x, int y) {
         long addr = internal_native_GetPixelsAt_addr(native_address, x, y);
@@ -100,31 +92,25 @@ return (jlong)nativeObject->GetPixels();
         return NativeObject_TEMP_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return (jlong)nativeObject->GetPixelsAt((int)x, (int)y);
-*/
-    public static native long internal_native_GetPixelsAt_addr(long this_addr, int x, int y);
+    public static long internal_native_GetPixelsAt_addr(long this_addr, int x, int y) {
+        return imgui.natives.JNI_ImTextureData.internal_native_GetPixelsAt_addr(this_addr, x, y);
+    }
 
     public int GetSizeInBytes() {
         return internal_native_GetSizeInBytes(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return nativeObject->GetSizeInBytes();
-*/
-    public static native int internal_native_GetSizeInBytes(long this_addr);
+    public static int internal_native_GetSizeInBytes(long this_addr) {
+        return imgui.natives.JNI_ImTextureData.internal_native_GetSizeInBytes(this_addr);
+    }
 
     public int GetPitch() {
         return internal_native_GetPitch(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return nativeObject->GetPitch();
-*/
-    public static native int internal_native_GetPitch(long this_addr);
+    public static int internal_native_GetPitch(long this_addr) {
+        return imgui.natives.JNI_ImTextureData.internal_native_GetPitch(this_addr);
+    }
 
     public ImTextureRef GetTexRef() {
         long addr = internal_native_GetTexRef_addr(native_address);
@@ -136,12 +122,9 @@ return nativeObject->GetPitch();
         return ImTextureRef_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-static ImTextureRef copy_addr;
-copy_addr = nativeObject->GetTexRef();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetTexRef_addr(long this_addr);
+    public static long internal_native_GetTexRef_addr(long this_addr) {
+        return imgui.natives.JNI_ImTextureData.internal_native_GetTexRef_addr(this_addr);
+    }
 
     public ImTextureIDRef GetTexID() {
         long addr = internal_native_GetTexID_addr(native_address);
@@ -153,42 +136,33 @@ return (jlong)&copy_addr;*/
         return ImTextureIDRef_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-static ImTextureIDRef copy_addr;
-copy_addr = nativeObject->GetTexID();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetTexID_addr(long this_addr);
+    public static long internal_native_GetTexID_addr(long this_addr) {
+        return imgui.natives.JNI_ImTextureData.internal_native_GetTexID_addr(this_addr);
+    }
 
     public void SetTexID(ImTextureIDRef tex_id) {
         internal_native_SetTexID(native_address, tex_id.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->SetTexID(*((ImTextureIDRef* )tex_id_addr));
-*/
-    public static native void internal_native_SetTexID(long this_addr, long tex_id_addr);
+    public static void internal_native_SetTexID(long this_addr, long tex_id_addr) {
+        imgui.natives.JNI_ImTextureData.internal_native_SetTexID(this_addr, tex_id_addr);
+    }
 
     public void SetStatus(ImTextureStatus status) {
         internal_native_SetStatus(native_address, status.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->SetStatus((::ImTextureStatus)status);
-*/
-    public static native void internal_native_SetStatus(long this_addr, int status);
+    public static void internal_native_SetStatus(long this_addr, int status) {
+        imgui.natives.JNI_ImTextureData.internal_native_SetStatus(this_addr, status);
+    }
 
     public int get_UniqueID() {
         return internal_native_get_UniqueID(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return nativeObject->UniqueID;
-*/
-    public static native int internal_native_get_UniqueID(long this_addr);
+    public static int internal_native_get_UniqueID(long this_addr) {
+        return imgui.natives.JNI_ImTextureData.internal_native_get_UniqueID(this_addr);
+    }
 
     public ImTextureStatus get_Status() {
         int value = internal_native_get_Status(native_address);
@@ -201,11 +175,9 @@ return nativeObject->UniqueID;
         return ImTextureStatus.CUSTOM.setValue(value);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return (jint)nativeObject->Status;
-*/
-    public static native int internal_native_get_Status(long this_addr);
+    public static int internal_native_get_Status(long this_addr) {
+        return imgui.natives.JNI_ImTextureData.internal_native_get_Status(this_addr);
+    }
 
     public NativeObject get_BackendUserData() {
         long addr = internal_native_get_BackendUserData_addr(native_address);
@@ -217,21 +189,17 @@ return (jint)nativeObject->Status;
         return NativeObject_TEMP_GEN_2;
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return (jlong)nativeObject->BackendUserData;
-*/
-    public static native long internal_native_get_BackendUserData_addr(long this_addr);
+    public static long internal_native_get_BackendUserData_addr(long this_addr) {
+        return imgui.natives.JNI_ImTextureData.internal_native_get_BackendUserData_addr(this_addr);
+    }
 
     public void set_BackendUserData(NativeObject BackendUserData) {
         internal_native_set_BackendUserData(native_address, BackendUserData.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->BackendUserData = (void**)BackendUserData_addr;
-*/
-    public static native void internal_native_set_BackendUserData(long this_addr, long BackendUserData_addr);
+    public static void internal_native_set_BackendUserData(long this_addr, long BackendUserData_addr) {
+        imgui.natives.JNI_ImTextureData.internal_native_set_BackendUserData(this_addr, BackendUserData_addr);
+    }
 
     public ImTextureFormat get_Format() {
         int value = internal_native_get_Format(native_address);
@@ -244,81 +212,65 @@ nativeObject->BackendUserData = (void**)BackendUserData_addr;
         return ImTextureFormat.CUSTOM.setValue(value);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return (jint)nativeObject->Format;
-*/
-    public static native int internal_native_get_Format(long this_addr);
+    public static int internal_native_get_Format(long this_addr) {
+        return imgui.natives.JNI_ImTextureData.internal_native_get_Format(this_addr);
+    }
 
     public void set_Format(ImTextureFormat Format) {
         internal_native_set_Format(native_address, Format.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->Format = (::ImTextureFormat)Format;
-*/
-    public static native void internal_native_set_Format(long this_addr, int Format);
+    public static void internal_native_set_Format(long this_addr, int Format) {
+        imgui.natives.JNI_ImTextureData.internal_native_set_Format(this_addr, Format);
+    }
 
     public int get_Width() {
         return internal_native_get_Width(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return nativeObject->Width;
-*/
-    public static native int internal_native_get_Width(long this_addr);
+    public static int internal_native_get_Width(long this_addr) {
+        return imgui.natives.JNI_ImTextureData.internal_native_get_Width(this_addr);
+    }
 
     public void set_Width(int Width) {
         internal_native_set_Width(native_address, Width);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->Width = Width;
-*/
-    public static native void internal_native_set_Width(long this_addr, int Width);
+    public static void internal_native_set_Width(long this_addr, int Width) {
+        imgui.natives.JNI_ImTextureData.internal_native_set_Width(this_addr, Width);
+    }
 
     public int get_Height() {
         return internal_native_get_Height(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return nativeObject->Height;
-*/
-    public static native int internal_native_get_Height(long this_addr);
+    public static int internal_native_get_Height(long this_addr) {
+        return imgui.natives.JNI_ImTextureData.internal_native_get_Height(this_addr);
+    }
 
     public void set_Height(int Height) {
         internal_native_set_Height(native_address, Height);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->Height = Height;
-*/
-    public static native void internal_native_set_Height(long this_addr, int Height);
+    public static void internal_native_set_Height(long this_addr, int Height) {
+        imgui.natives.JNI_ImTextureData.internal_native_set_Height(this_addr, Height);
+    }
 
     public int get_BytesPerPixel() {
         return internal_native_get_BytesPerPixel(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return nativeObject->BytesPerPixel;
-*/
-    public static native int internal_native_get_BytesPerPixel(long this_addr);
+    public static int internal_native_get_BytesPerPixel(long this_addr) {
+        return imgui.natives.JNI_ImTextureData.internal_native_get_BytesPerPixel(this_addr);
+    }
 
     public void set_BytesPerPixel(int BytesPerPixel) {
         internal_native_set_BytesPerPixel(native_address, BytesPerPixel);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->BytesPerPixel = BytesPerPixel;
-*/
-    public static native void internal_native_set_BytesPerPixel(long this_addr, int BytesPerPixel);
+    public static void internal_native_set_BytesPerPixel(long this_addr, int BytesPerPixel) {
+        imgui.natives.JNI_ImTextureData.internal_native_set_BytesPerPixel(this_addr, BytesPerPixel);
+    }
 
     public ImTextureRect get_UsedRect() {
         long addr = internal_native_get_UsedRect_addr(native_address);
@@ -330,21 +282,17 @@ nativeObject->BytesPerPixel = BytesPerPixel;
         return ImTextureRect_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return (jlong)&nativeObject->UsedRect;
-*/
-    public static native long internal_native_get_UsedRect_addr(long this_addr);
+    public static long internal_native_get_UsedRect_addr(long this_addr) {
+        return imgui.natives.JNI_ImTextureData.internal_native_get_UsedRect_addr(this_addr);
+    }
 
     public void set_UsedRect(ImTextureRect UsedRect) {
         internal_native_set_UsedRect(native_address, UsedRect.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->UsedRect = *((ImTextureRect*)UsedRect_addr);
-*/
-    public static native void internal_native_set_UsedRect(long this_addr, long UsedRect_addr);
+    public static void internal_native_set_UsedRect(long this_addr, long UsedRect_addr) {
+        imgui.natives.JNI_ImTextureData.internal_native_set_UsedRect(this_addr, UsedRect_addr);
+    }
 
     public ImTextureRect get_UpdateRect() {
         long addr = internal_native_get_UpdateRect_addr(native_address);
@@ -356,21 +304,17 @@ nativeObject->UsedRect = *((ImTextureRect*)UsedRect_addr);
         return ImTextureRect_TEMP_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return (jlong)&nativeObject->UpdateRect;
-*/
-    public static native long internal_native_get_UpdateRect_addr(long this_addr);
+    public static long internal_native_get_UpdateRect_addr(long this_addr) {
+        return imgui.natives.JNI_ImTextureData.internal_native_get_UpdateRect_addr(this_addr);
+    }
 
     public void set_UpdateRect(ImTextureRect UpdateRect) {
         internal_native_set_UpdateRect(native_address, UpdateRect.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->UpdateRect = *((ImTextureRect*)UpdateRect_addr);
-*/
-    public static native void internal_native_set_UpdateRect(long this_addr, long UpdateRect_addr);
+    public static void internal_native_set_UpdateRect(long this_addr, long UpdateRect_addr) {
+        imgui.natives.JNI_ImTextureData.internal_native_set_UpdateRect(this_addr, UpdateRect_addr);
+    }
 
     public ImVectorImTextureRect get_Updates() {
         long addr = internal_native_get_Updates_addr(native_address);
@@ -382,99 +326,79 @@ nativeObject->UpdateRect = *((ImTextureRect*)UpdateRect_addr);
         return ImVectorImTextureRect_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return (jlong)&nativeObject->Updates;
-*/
-    public static native long internal_native_get_Updates_addr(long this_addr);
+    public static long internal_native_get_Updates_addr(long this_addr) {
+        return imgui.natives.JNI_ImTextureData.internal_native_get_Updates_addr(this_addr);
+    }
 
     public void set_Updates(ImVectorImTextureRect Updates) {
         internal_native_set_Updates(native_address, Updates.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->Updates = *((ImVectorImTextureRect*)Updates_addr);
-*/
-    public static native void internal_native_set_Updates(long this_addr, long Updates_addr);
+    public static void internal_native_set_Updates(long this_addr, long Updates_addr) {
+        imgui.natives.JNI_ImTextureData.internal_native_set_Updates(this_addr, Updates_addr);
+    }
 
     public int get_UnusedFrames() {
         return internal_native_get_UnusedFrames(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return nativeObject->UnusedFrames;
-*/
-    public static native int internal_native_get_UnusedFrames(long this_addr);
+    public static int internal_native_get_UnusedFrames(long this_addr) {
+        return imgui.natives.JNI_ImTextureData.internal_native_get_UnusedFrames(this_addr);
+    }
 
     public void set_UnusedFrames(int UnusedFrames) {
         internal_native_set_UnusedFrames(native_address, UnusedFrames);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->UnusedFrames = UnusedFrames;
-*/
-    public static native void internal_native_set_UnusedFrames(long this_addr, int UnusedFrames);
+    public static void internal_native_set_UnusedFrames(long this_addr, int UnusedFrames) {
+        imgui.natives.JNI_ImTextureData.internal_native_set_UnusedFrames(this_addr, UnusedFrames);
+    }
 
     public short get_RefCount() {
         return internal_native_get_RefCount(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return nativeObject->RefCount;
-*/
-    public static native short internal_native_get_RefCount(long this_addr);
+    public static short internal_native_get_RefCount(long this_addr) {
+        return imgui.natives.JNI_ImTextureData.internal_native_get_RefCount(this_addr);
+    }
 
     public void set_RefCount(short RefCount) {
         internal_native_set_RefCount(native_address, RefCount);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->RefCount = RefCount;
-*/
-    public static native void internal_native_set_RefCount(long this_addr, short RefCount);
+    public static void internal_native_set_RefCount(long this_addr, short RefCount) {
+        imgui.natives.JNI_ImTextureData.internal_native_set_RefCount(this_addr, RefCount);
+    }
 
     public boolean get_UseColors() {
         return internal_native_get_UseColors(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return nativeObject->UseColors;
-*/
-    public static native boolean internal_native_get_UseColors(long this_addr);
+    public static boolean internal_native_get_UseColors(long this_addr) {
+        return imgui.natives.JNI_ImTextureData.internal_native_get_UseColors(this_addr);
+    }
 
     public void set_UseColors(boolean UseColors) {
         internal_native_set_UseColors(native_address, UseColors);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->UseColors = UseColors;
-*/
-    public static native void internal_native_set_UseColors(long this_addr, boolean UseColors);
+    public static void internal_native_set_UseColors(long this_addr, boolean UseColors) {
+        imgui.natives.JNI_ImTextureData.internal_native_set_UseColors(this_addr, UseColors);
+    }
 
     public boolean get_WantDestroyNextFrame() {
         return internal_native_get_WantDestroyNextFrame(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return nativeObject->WantDestroyNextFrame;
-*/
-    public static native boolean internal_native_get_WantDestroyNextFrame(long this_addr);
+    public static boolean internal_native_get_WantDestroyNextFrame(long this_addr) {
+        return imgui.natives.JNI_ImTextureData.internal_native_get_WantDestroyNextFrame(this_addr);
+    }
 
     public void set_WantDestroyNextFrame(boolean WantDestroyNextFrame) {
         internal_native_set_WantDestroyNextFrame(native_address, WantDestroyNextFrame);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->WantDestroyNextFrame = WantDestroyNextFrame;
-*/
-    public static native void internal_native_set_WantDestroyNextFrame(long this_addr, boolean WantDestroyNextFrame);
+    public static void internal_native_set_WantDestroyNextFrame(long this_addr, boolean WantDestroyNextFrame) {
+        imgui.natives.JNI_ImTextureData.internal_native_set_WantDestroyNextFrame(this_addr, WantDestroyNextFrame);
+    }
 }

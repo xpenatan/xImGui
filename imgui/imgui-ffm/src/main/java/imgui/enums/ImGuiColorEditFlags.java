@@ -72,439 +72,316 @@ public enum ImGuiColorEditFlags implements NativeEnum<ImGuiColorEditFlags> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_None;
-*/
     private static int ImGuiColorEditFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_NoAlpha;
-*/
     private static int ImGuiColorEditFlags_NoAlpha_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_NoAlpha_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_NoPicker;
-*/
     private static int ImGuiColorEditFlags_NoPicker_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_NoPicker_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_NoOptions;
-*/
     private static int ImGuiColorEditFlags_NoOptions_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_NoOptions_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_NoSmallPreview;
-*/
     private static int ImGuiColorEditFlags_NoSmallPreview_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_NoSmallPreview_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_NoInputs;
-*/
     private static int ImGuiColorEditFlags_NoInputs_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_NoInputs_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_NoTooltip;
-*/
     private static int ImGuiColorEditFlags_NoTooltip_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_NoTooltip_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_NoLabel;
-*/
     private static int ImGuiColorEditFlags_NoLabel_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_NoLabel_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_NoSidePreview;
-*/
     private static int ImGuiColorEditFlags_NoSidePreview_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_NoSidePreview_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_NoDragDrop;
-*/
     private static int ImGuiColorEditFlags_NoDragDrop_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_NoDragDrop_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_NoBorder;
-*/
     private static int ImGuiColorEditFlags_NoBorder_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_NoBorder_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_AlphaOpaque;
-*/
     private static int ImGuiColorEditFlags_AlphaOpaque_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_AlphaOpaque_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_AlphaNoBg;
-*/
     private static int ImGuiColorEditFlags_AlphaNoBg_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_AlphaNoBg_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_AlphaPreviewHalf;
-*/
     private static int ImGuiColorEditFlags_AlphaPreviewHalf_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_AlphaPreviewHalf_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_AlphaBar;
-*/
     private static int ImGuiColorEditFlags_AlphaBar_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_AlphaBar_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_HDR;
-*/
     private static int ImGuiColorEditFlags_HDR_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_HDR_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_DisplayRGB;
-*/
     private static int ImGuiColorEditFlags_DisplayRGB_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_DisplayRGB_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_DisplayHSV;
-*/
     private static int ImGuiColorEditFlags_DisplayHSV_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_DisplayHSV_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_DisplayHex;
-*/
     private static int ImGuiColorEditFlags_DisplayHex_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_DisplayHex_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_Uint8;
-*/
     private static int ImGuiColorEditFlags_Uint8_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_Uint8_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_Float;
-*/
     private static int ImGuiColorEditFlags_Float_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_Float_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_PickerHueBar;
-*/
     private static int ImGuiColorEditFlags_PickerHueBar_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_PickerHueBar_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_PickerHueWheel;
-*/
     private static int ImGuiColorEditFlags_PickerHueWheel_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_PickerHueWheel_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_InputRGB;
-*/
     private static int ImGuiColorEditFlags_InputRGB_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_InputRGB_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_InputHSV;
-*/
     private static int ImGuiColorEditFlags_InputHSV_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_InputHSV_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_DefaultOptions_;
-*/
     private static int ImGuiColorEditFlags_DefaultOptions__NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_DefaultOptions__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_AlphaMask_;
-*/
     private static int ImGuiColorEditFlags_AlphaMask__NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_AlphaMask__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_DisplayMask_;
-*/
     private static int ImGuiColorEditFlags_DisplayMask__NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_DisplayMask__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_DataTypeMask_;
-*/
     private static int ImGuiColorEditFlags_DataTypeMask__NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_DataTypeMask__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_PickerMask_;
-*/
     private static int ImGuiColorEditFlags_PickerMask__NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_PickerMask__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiColorEditFlags_InputMask_;
-*/
     private static int ImGuiColorEditFlags_InputMask__NATIVE() {
         try {
             return (int) FFMHandles.ImGuiColorEditFlags_InputMask__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_NoAlpha_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_noalpha_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_NoPicker_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_nopicker_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_NoOptions_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_nooptions_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_NoSmallPreview_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_nosmallpreview_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_NoInputs_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_noinputs_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_NoTooltip_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_notooltip_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_NoLabel_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_nolabel_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_NoAlpha_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1NoAlpha_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_NoSidePreview_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_nosidepreview_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_NoPicker_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1NoPicker_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_NoDragDrop_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_nodragdrop_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_NoOptions_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1NoOptions_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_NoBorder_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_noborder_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_NoSmallPreview_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1NoSmallPreview_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_AlphaOpaque_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_alphaopaque_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_NoInputs_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1NoInputs_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_AlphaNoBg_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_alphanobg_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_NoTooltip_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1NoTooltip_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_AlphaPreviewHalf_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_alphapreviewhalf_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_NoLabel_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1NoLabel_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_AlphaBar_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_alphabar_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_NoSidePreview_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1NoSidePreview_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_HDR_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_hdr_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_NoDragDrop_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1NoDragDrop_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_DisplayRGB_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_displayrgb_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_NoBorder_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1NoBorder_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_DisplayHSV_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_displayhsv_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_AlphaOpaque_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1AlphaOpaque_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_DisplayHex_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_displayhex_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_AlphaNoBg_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1AlphaNoBg_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_Uint8_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_uint8_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_AlphaPreviewHalf_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1AlphaPreviewHalf_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_Float_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_float_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_AlphaBar_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1AlphaBar_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_PickerHueBar_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_pickerhuebar_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_HDR_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1HDR_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_PickerHueWheel_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_pickerhuewheel_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_DisplayRGB_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1DisplayRGB_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_InputRGB_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_inputrgb_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_DisplayHSV_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1DisplayHSV_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_InputHSV_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_inputhsv_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_DisplayHex_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1DisplayHex_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_DefaultOptions__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_defaultoptions__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_Uint8_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1Uint8_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_AlphaMask__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_alphamask__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_Float_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1Float_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_DisplayMask__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_displaymask__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_PickerHueBar_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1PickerHueBar_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_DataTypeMask__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_datatypemask__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_PickerHueWheel_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1PickerHueWheel_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_PickerMask__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_pickermask__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_InputRGB_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1InputRGB_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_InputHSV_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1InputHSV_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_DefaultOptions__NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1DefaultOptions_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_AlphaMask__NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1AlphaMask_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_DisplayMask__NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1DisplayMask_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_DataTypeMask__NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1DataTypeMask_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_PickerMask__NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1PickerMask_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_InputMask__NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiColorEditFlags_ImGuiColorEditFlags_1InputMask_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiColorEditFlags_InputMask__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicoloreditflags_imguicoloreditflags_inputmask__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

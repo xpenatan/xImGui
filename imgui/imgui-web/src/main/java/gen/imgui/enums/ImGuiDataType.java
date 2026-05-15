@@ -46,75 +46,39 @@ public enum ImGuiDataType implements NativeEnum<ImGuiDataType> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDataType_S8;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDataType_S8;")
     private static native int ImGuiDataType_S8_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDataType_U8;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDataType_U8;")
     private static native int ImGuiDataType_U8_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDataType_S16;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDataType_S16;")
     private static native int ImGuiDataType_S16_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDataType_U16;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDataType_U16;")
     private static native int ImGuiDataType_U16_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDataType_S32;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDataType_S32;")
     private static native int ImGuiDataType_S32_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDataType_U32;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDataType_U32;")
     private static native int ImGuiDataType_U32_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDataType_S64;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDataType_S64;")
     private static native int ImGuiDataType_S64_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDataType_U64;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDataType_U64;")
     private static native int ImGuiDataType_U64_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDataType_Float;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDataType_Float;")
     private static native int ImGuiDataType_Float_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDataType_Double;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDataType_Double;")
     private static native int ImGuiDataType_Double_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDataType_Bool;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDataType_Bool;")
     private static native int ImGuiDataType_Bool_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDataType_String;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDataType_String;")
     private static native int ImGuiDataType_String_NATIVE();
 }

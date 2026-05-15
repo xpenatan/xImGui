@@ -32,10 +32,6 @@ public class ImGuiDockNode extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiDockNode);
-imgui.destroy(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiDockNode);imgui.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
@@ -43,10 +39,6 @@ imgui.destroy(jsObj);
         return internal_native_get_LocalFlags(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiDockNode);
-return jsObj.get_LocalFlags();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiDockNode);return jsObj.get_LocalFlags();")
     public static native int internal_native_get_LocalFlags(int this_addr);
 
@@ -54,10 +46,6 @@ return jsObj.get_LocalFlags();
         internal_native_set_LocalFlags(native_address, LocalFlags);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiDockNode);
-jsObj.set_LocalFlags(LocalFlags);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "LocalFlags"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiDockNode);jsObj.set_LocalFlags(LocalFlags);")
     public static native void internal_native_set_LocalFlags(int this_addr, int LocalFlags);
 
@@ -65,10 +53,6 @@ jsObj.set_LocalFlags(LocalFlags);
         return internal_native_get_SelectedTabId(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiDockNode);
-return jsObj.get_SelectedTabId();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiDockNode);return jsObj.get_SelectedTabId();")
     public static native int internal_native_get_SelectedTabId(int this_addr);
 
@@ -76,10 +60,6 @@ return jsObj.get_SelectedTabId();
         internal_native_set_SelectedTabId(native_address, SelectedTabId);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiDockNode);
-jsObj.set_SelectedTabId(SelectedTabId);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "SelectedTabId"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiDockNode);jsObj.set_SelectedTabId(SelectedTabId);")
     public static native void internal_native_set_SelectedTabId(int this_addr, int SelectedTabId);
 
@@ -93,12 +73,6 @@ jsObj.set_SelectedTabId(SelectedTabId);
         return ImGuiTabBar_TEMP_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiDockNode);
-var returnedJSObj = jsObj.get_TabBar();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiDockNode);var returnedJSObj = jsObj.get_TabBar();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_TabBar_addr(int this_addr);
 
@@ -106,10 +80,6 @@ return imgui.getPointer(returnedJSObj);
         internal_native_set_TabBar(native_address, TabBar.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiDockNode);
-jsObj.set_TabBar(TabBar_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "TabBar_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiDockNode);jsObj.set_TabBar(TabBar_addr);")
     public static native void internal_native_set_TabBar(int this_addr, int TabBar_addr);
 }

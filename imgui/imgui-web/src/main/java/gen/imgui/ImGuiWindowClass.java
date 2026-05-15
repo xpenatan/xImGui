@@ -20,10 +20,6 @@ public class ImGuiWindowClass extends NativeObject {
         internal_reset(addr, true);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = new imgui.ImGuiWindowClass();
-return imgui.getPointer(jsObj);
-*/
     @org.teavm.jso.JSBody(script = "var jsObj = new imgui.ImGuiWindowClass();return imgui.getPointer(jsObj);")
     public static native int internal_native_create_addr();
 
@@ -45,10 +41,6 @@ return imgui.getPointer(jsObj);
         internal_native_deleteNative(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);
-imgui.destroy(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);imgui.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
@@ -56,10 +48,6 @@ imgui.destroy(jsObj);
         return internal_native_get_ClassId(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);
-return jsObj.get_ClassId();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);return jsObj.get_ClassId();")
     public static native int internal_native_get_ClassId(int this_addr);
 
@@ -67,10 +55,6 @@ return jsObj.get_ClassId();
         internal_native_set_ClassId(native_address, ClassId);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);
-jsObj.set_ClassId(ClassId);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "ClassId"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);jsObj.set_ClassId(ClassId);")
     public static native void internal_native_set_ClassId(int this_addr, int ClassId);
 
@@ -78,10 +62,6 @@ jsObj.set_ClassId(ClassId);
         return internal_native_get_ParentViewportId(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);
-return jsObj.get_ParentViewportId();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);return jsObj.get_ParentViewportId();")
     public static native int internal_native_get_ParentViewportId(int this_addr);
 
@@ -89,10 +69,6 @@ return jsObj.get_ParentViewportId();
         internal_native_set_ParentViewportId(native_address, ParentViewportId);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);
-jsObj.set_ParentViewportId(ParentViewportId);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "ParentViewportId"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);jsObj.set_ParentViewportId(ParentViewportId);")
     public static native void internal_native_set_ParentViewportId(int this_addr, int ParentViewportId);
 
@@ -100,10 +76,6 @@ jsObj.set_ParentViewportId(ParentViewportId);
         return internal_native_get_FocusRouteParentWindowId(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);
-return jsObj.get_FocusRouteParentWindowId();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);return jsObj.get_FocusRouteParentWindowId();")
     public static native int internal_native_get_FocusRouteParentWindowId(int this_addr);
 
@@ -111,10 +83,6 @@ return jsObj.get_FocusRouteParentWindowId();
         internal_native_set_FocusRouteParentWindowId(native_address, FocusRouteParentWindowId);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);
-jsObj.set_FocusRouteParentWindowId(FocusRouteParentWindowId);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "FocusRouteParentWindowId"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);jsObj.set_FocusRouteParentWindowId(FocusRouteParentWindowId);")
     public static native void internal_native_set_FocusRouteParentWindowId(int this_addr, int FocusRouteParentWindowId);
 
@@ -129,10 +97,6 @@ jsObj.set_FocusRouteParentWindowId(FocusRouteParentWindowId);
         return ImGuiViewportFlags.CUSTOM.setValue(value);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);
-return jsObj.get_ViewportFlagsOverrideSet();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);return jsObj.get_ViewportFlagsOverrideSet();")
     public static native int internal_native_get_ViewportFlagsOverrideSet(int this_addr);
 
@@ -140,10 +104,6 @@ return jsObj.get_ViewportFlagsOverrideSet();
         internal_native_set_ViewportFlagsOverrideSet(native_address, ViewportFlagsOverrideSet.getValue());
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);
-jsObj.set_ViewportFlagsOverrideSet(ViewportFlagsOverrideSet);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "ViewportFlagsOverrideSet"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);jsObj.set_ViewportFlagsOverrideSet(ViewportFlagsOverrideSet);")
     public static native void internal_native_set_ViewportFlagsOverrideSet(int this_addr, int ViewportFlagsOverrideSet);
 
@@ -158,10 +118,6 @@ jsObj.set_ViewportFlagsOverrideSet(ViewportFlagsOverrideSet);
         return ImGuiViewportFlags.CUSTOM.setValue(value);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);
-return jsObj.get_ViewportFlagsOverrideClear();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);return jsObj.get_ViewportFlagsOverrideClear();")
     public static native int internal_native_get_ViewportFlagsOverrideClear(int this_addr);
 
@@ -169,10 +125,6 @@ return jsObj.get_ViewportFlagsOverrideClear();
         internal_native_set_ViewportFlagsOverrideClear(native_address, ViewportFlagsOverrideClear.getValue());
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);
-jsObj.set_ViewportFlagsOverrideClear(ViewportFlagsOverrideClear);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "ViewportFlagsOverrideClear"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);jsObj.set_ViewportFlagsOverrideClear(ViewportFlagsOverrideClear);")
     public static native void internal_native_set_ViewportFlagsOverrideClear(int this_addr, int ViewportFlagsOverrideClear);
 
@@ -187,10 +139,6 @@ jsObj.set_ViewportFlagsOverrideClear(ViewportFlagsOverrideClear);
         return ImGuiTabItemFlags.CUSTOM.setValue(value);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);
-return jsObj.get_TabItemFlagsOverrideSet();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);return jsObj.get_TabItemFlagsOverrideSet();")
     public static native int internal_native_get_TabItemFlagsOverrideSet(int this_addr);
 
@@ -198,10 +146,6 @@ return jsObj.get_TabItemFlagsOverrideSet();
         internal_native_set_TabItemFlagsOverrideSet(native_address, TabItemFlagsOverrideSet.getValue());
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);
-jsObj.set_TabItemFlagsOverrideSet(TabItemFlagsOverrideSet);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "TabItemFlagsOverrideSet"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);jsObj.set_TabItemFlagsOverrideSet(TabItemFlagsOverrideSet);")
     public static native void internal_native_set_TabItemFlagsOverrideSet(int this_addr, int TabItemFlagsOverrideSet);
 
@@ -216,10 +160,6 @@ jsObj.set_TabItemFlagsOverrideSet(TabItemFlagsOverrideSet);
         return ImGuiDockNodeFlags.CUSTOM.setValue(value);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);
-return jsObj.get_DockNodeFlagsOverrideSet();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);return jsObj.get_DockNodeFlagsOverrideSet();")
     public static native int internal_native_get_DockNodeFlagsOverrideSet(int this_addr);
 
@@ -227,10 +167,6 @@ return jsObj.get_DockNodeFlagsOverrideSet();
         internal_native_set_DockNodeFlagsOverrideSet(native_address, DockNodeFlagsOverrideSet.getValue());
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);
-jsObj.set_DockNodeFlagsOverrideSet(DockNodeFlagsOverrideSet);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "DockNodeFlagsOverrideSet"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);jsObj.set_DockNodeFlagsOverrideSet(DockNodeFlagsOverrideSet);")
     public static native void internal_native_set_DockNodeFlagsOverrideSet(int this_addr, int DockNodeFlagsOverrideSet);
 
@@ -238,10 +174,6 @@ jsObj.set_DockNodeFlagsOverrideSet(DockNodeFlagsOverrideSet);
         return internal_native_get_DockingAlwaysTabBar(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);
-return jsObj.get_DockingAlwaysTabBar();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);return jsObj.get_DockingAlwaysTabBar();")
     public static native boolean internal_native_get_DockingAlwaysTabBar(int this_addr);
 
@@ -249,10 +181,6 @@ return jsObj.get_DockingAlwaysTabBar();
         internal_native_set_DockingAlwaysTabBar(native_address, DockingAlwaysTabBar);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);
-jsObj.set_DockingAlwaysTabBar(DockingAlwaysTabBar);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "DockingAlwaysTabBar"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);jsObj.set_DockingAlwaysTabBar(DockingAlwaysTabBar);")
     public static native void internal_native_set_DockingAlwaysTabBar(int this_addr, boolean DockingAlwaysTabBar);
 
@@ -260,10 +188,6 @@ jsObj.set_DockingAlwaysTabBar(DockingAlwaysTabBar);
         return internal_native_get_DockingAllowUnclassed(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);
-return jsObj.get_DockingAllowUnclassed();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);return jsObj.get_DockingAllowUnclassed();")
     public static native boolean internal_native_get_DockingAllowUnclassed(int this_addr);
 
@@ -271,10 +195,6 @@ return jsObj.get_DockingAllowUnclassed();
         internal_native_set_DockingAllowUnclassed(native_address, DockingAllowUnclassed);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);
-jsObj.set_DockingAllowUnclassed(DockingAllowUnclassed);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "DockingAllowUnclassed"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowClass);jsObj.set_DockingAllowUnclassed(DockingAllowUnclassed);")
     public static native void internal_native_set_DockingAllowUnclassed(int this_addr, boolean DockingAllowUnclassed);
 }

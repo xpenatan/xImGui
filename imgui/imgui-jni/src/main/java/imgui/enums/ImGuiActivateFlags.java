@@ -41,38 +41,31 @@ public enum ImGuiActivateFlags implements NativeEnum<ImGuiActivateFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiActivateFlags_None;
-*/
-    private static native int ImGuiActivateFlags_None_NATIVE();
+    private static int ImGuiActivateFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiActivateFlags.ImGuiActivateFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiActivateFlags_PreferInput;
-*/
-    private static native int ImGuiActivateFlags_PreferInput_NATIVE();
+    private static int ImGuiActivateFlags_PreferInput_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiActivateFlags.ImGuiActivateFlags_PreferInput_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiActivateFlags_PreferTweak;
-*/
-    private static native int ImGuiActivateFlags_PreferTweak_NATIVE();
+    private static int ImGuiActivateFlags_PreferTweak_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiActivateFlags.ImGuiActivateFlags_PreferTweak_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiActivateFlags_TryToPreserveState;
-*/
-    private static native int ImGuiActivateFlags_TryToPreserveState_NATIVE();
+    private static int ImGuiActivateFlags_TryToPreserveState_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiActivateFlags.ImGuiActivateFlags_TryToPreserveState_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiActivateFlags_FromTabbing;
-*/
-    private static native int ImGuiActivateFlags_FromTabbing_NATIVE();
+    private static int ImGuiActivateFlags_FromTabbing_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiActivateFlags.ImGuiActivateFlags_FromTabbing_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiActivateFlags_FromShortcut;
-*/
-    private static native int ImGuiActivateFlags_FromShortcut_NATIVE();
+    private static int ImGuiActivateFlags_FromShortcut_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiActivateFlags.ImGuiActivateFlags_FromShortcut_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiActivateFlags_FromFocusApi;
-*/
-    private static native int ImGuiActivateFlags_FromFocusApi_NATIVE();
+    private static int ImGuiActivateFlags_FromFocusApi_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiActivateFlags.ImGuiActivateFlags_FromFocusApi_NATIVE();
+    }
 }

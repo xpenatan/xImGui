@@ -34,27 +34,15 @@ public enum ImGuiWindowRefreshFlags implements NativeEnum<ImGuiWindowRefreshFlag
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowRefreshFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowRefreshFlags_None;")
     private static native int ImGuiWindowRefreshFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowRefreshFlags_TryToAvoidRefresh;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowRefreshFlags_TryToAvoidRefresh;")
     private static native int ImGuiWindowRefreshFlags_TryToAvoidRefresh_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowRefreshFlags_RefreshOnHover;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowRefreshFlags_RefreshOnHover;")
     private static native int ImGuiWindowRefreshFlags_RefreshOnHover_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowRefreshFlags_RefreshOnFocus;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowRefreshFlags_RefreshOnFocus;")
     private static native int ImGuiWindowRefreshFlags_RefreshOnFocus_NATIVE();
 }

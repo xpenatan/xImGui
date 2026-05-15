@@ -40,33 +40,27 @@ public enum ImGuiLogFlags implements NativeEnum<ImGuiLogFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLogFlags_None;
-*/
-    private static native int ImGuiLogFlags_None_NATIVE();
+    private static int ImGuiLogFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiLogFlags.ImGuiLogFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLogFlags_OutputTTY;
-*/
-    private static native int ImGuiLogFlags_OutputTTY_NATIVE();
+    private static int ImGuiLogFlags_OutputTTY_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiLogFlags.ImGuiLogFlags_OutputTTY_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLogFlags_OutputFile;
-*/
-    private static native int ImGuiLogFlags_OutputFile_NATIVE();
+    private static int ImGuiLogFlags_OutputFile_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiLogFlags.ImGuiLogFlags_OutputFile_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLogFlags_OutputBuffer;
-*/
-    private static native int ImGuiLogFlags_OutputBuffer_NATIVE();
+    private static int ImGuiLogFlags_OutputBuffer_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiLogFlags.ImGuiLogFlags_OutputBuffer_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLogFlags_OutputClipboard;
-*/
-    private static native int ImGuiLogFlags_OutputClipboard_NATIVE();
+    private static int ImGuiLogFlags_OutputClipboard_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiLogFlags.ImGuiLogFlags_OutputClipboard_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLogFlags_OutputMask_;
-*/
-    private static native int ImGuiLogFlags_OutputMask__NATIVE();
+    private static int ImGuiLogFlags_OutputMask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiLogFlags.ImGuiLogFlags_OutputMask__NATIVE();
+    }
 }

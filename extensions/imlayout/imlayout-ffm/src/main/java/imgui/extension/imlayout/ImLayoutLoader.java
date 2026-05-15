@@ -14,10 +14,6 @@ import com.github.xpenatan.jParser.loader.JParserLibraryLoaderListener;
  */
 public class ImLayoutLoader {
 
-    /*
-      [-FFM;-NATIVE]
-              #include "ImLayoutCustom.h"
-    */
     public static void init(JParserLibraryLoaderListener listener) {
         JParserLibraryLoader.load("imlayout", listener);
     }

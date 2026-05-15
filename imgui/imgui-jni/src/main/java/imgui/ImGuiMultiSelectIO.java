@@ -30,69 +30,55 @@ public class ImGuiMultiSelectIO extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiMultiSelectIO* nativeObject = (ImGuiMultiSelectIO*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ImGuiMultiSelectIO.internal_native_deleteNative(this_addr);
+    }
 
     public boolean get_NavIdSelected() {
         return internal_native_get_NavIdSelected(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiMultiSelectIO* nativeObject = (ImGuiMultiSelectIO*)this_addr;
-return nativeObject->NavIdSelected;
-*/
-    public static native boolean internal_native_get_NavIdSelected(long this_addr);
+    public static boolean internal_native_get_NavIdSelected(long this_addr) {
+        return imgui.natives.JNI_ImGuiMultiSelectIO.internal_native_get_NavIdSelected(this_addr);
+    }
 
     public void set_NavIdSelected(boolean NavIdSelected) {
         internal_native_set_NavIdSelected(native_address, NavIdSelected);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiMultiSelectIO* nativeObject = (ImGuiMultiSelectIO*)this_addr;
-nativeObject->NavIdSelected = NavIdSelected;
-*/
-    public static native void internal_native_set_NavIdSelected(long this_addr, boolean NavIdSelected);
+    public static void internal_native_set_NavIdSelected(long this_addr, boolean NavIdSelected) {
+        imgui.natives.JNI_ImGuiMultiSelectIO.internal_native_set_NavIdSelected(this_addr, NavIdSelected);
+    }
 
     public boolean get_RangeSrcReset() {
         return internal_native_get_RangeSrcReset(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiMultiSelectIO* nativeObject = (ImGuiMultiSelectIO*)this_addr;
-return nativeObject->RangeSrcReset;
-*/
-    public static native boolean internal_native_get_RangeSrcReset(long this_addr);
+    public static boolean internal_native_get_RangeSrcReset(long this_addr) {
+        return imgui.natives.JNI_ImGuiMultiSelectIO.internal_native_get_RangeSrcReset(this_addr);
+    }
 
     public void set_RangeSrcReset(boolean RangeSrcReset) {
         internal_native_set_RangeSrcReset(native_address, RangeSrcReset);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiMultiSelectIO* nativeObject = (ImGuiMultiSelectIO*)this_addr;
-nativeObject->RangeSrcReset = RangeSrcReset;
-*/
-    public static native void internal_native_set_RangeSrcReset(long this_addr, boolean RangeSrcReset);
+    public static void internal_native_set_RangeSrcReset(long this_addr, boolean RangeSrcReset) {
+        imgui.natives.JNI_ImGuiMultiSelectIO.internal_native_set_RangeSrcReset(this_addr, RangeSrcReset);
+    }
 
     public int get_ItemsCount() {
         return internal_native_get_ItemsCount(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiMultiSelectIO* nativeObject = (ImGuiMultiSelectIO*)this_addr;
-return nativeObject->ItemsCount;
-*/
-    public static native int internal_native_get_ItemsCount(long this_addr);
+    public static int internal_native_get_ItemsCount(long this_addr) {
+        return imgui.natives.JNI_ImGuiMultiSelectIO.internal_native_get_ItemsCount(this_addr);
+    }
 
     public void set_ItemsCount(int ItemsCount) {
         internal_native_set_ItemsCount(native_address, ItemsCount);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiMultiSelectIO* nativeObject = (ImGuiMultiSelectIO*)this_addr;
-nativeObject->ItemsCount = ItemsCount;
-*/
-    public static native void internal_native_set_ItemsCount(long this_addr, int ItemsCount);
+    public static void internal_native_set_ItemsCount(long this_addr, int ItemsCount) {
+        imgui.natives.JNI_ImGuiMultiSelectIO.internal_native_set_ItemsCount(this_addr, ItemsCount);
+    }
 }

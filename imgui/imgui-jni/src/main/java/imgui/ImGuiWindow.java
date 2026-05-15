@@ -77,21 +77,17 @@ public class ImGuiWindow extends NativeObject {
         return internal_native_GetID(native_address, str);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->GetID(str);
-*/
-    public static native int internal_native_GetID(long this_addr, String str);
+    public static int internal_native_GetID(long this_addr, String str) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_GetID(this_addr, str);
+    }
 
     public int GetIDFromRectangle(ImRect r_abs) {
         return internal_native_GetIDFromRectangle(native_address, r_abs.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->GetIDFromRectangle(*((ImRect* )r_abs_addr));
-*/
-    public static native int internal_native_GetIDFromRectangle(long this_addr, long r_abs_addr);
+    public static int internal_native_GetIDFromRectangle(long this_addr, long r_abs_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_GetIDFromRectangle(this_addr, r_abs_addr);
+    }
 
     public ImRect Rect() {
         long addr = internal_native_Rect_addr(native_address);
@@ -103,12 +99,9 @@ return nativeObject->GetIDFromRectangle(*((ImRect* )r_abs_addr));
         return ImRect_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-static ImRect copy_addr;
-copy_addr = nativeObject->Rect();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_Rect_addr(long this_addr);
+    public static long internal_native_Rect_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_Rect_addr(this_addr);
+    }
 
     public ImRect TitleBarRect() {
         long addr = internal_native_TitleBarRect_addr(native_address);
@@ -120,12 +113,9 @@ return (jlong)&copy_addr;*/
         return ImRect_TEMP_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-static ImRect copy_addr;
-copy_addr = nativeObject->TitleBarRect();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_TitleBarRect_addr(long this_addr);
+    public static long internal_native_TitleBarRect_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_TitleBarRect_addr(this_addr);
+    }
 
     public ImRect MenuBarRect() {
         long addr = internal_native_MenuBarRect_addr(native_address);
@@ -137,12 +127,9 @@ return (jlong)&copy_addr;*/
         return ImRect_TEMP_GEN_2;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-static ImRect copy_addr;
-copy_addr = nativeObject->MenuBarRect();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_MenuBarRect_addr(long this_addr);
+    public static long internal_native_MenuBarRect_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_MenuBarRect_addr(this_addr);
+    }
 
     public ImVectorUnsignedInt get_IDStack() {
         long addr = internal_native_get_IDStack_addr(native_address);
@@ -154,11 +141,9 @@ return (jlong)&copy_addr;*/
         return ImVectorUnsignedInt_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return (jlong)&nativeObject->IDStack;
-*/
-    public static native long internal_native_get_IDStack_addr(long this_addr);
+    public static long internal_native_get_IDStack_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_IDStack_addr(this_addr);
+    }
 
     public ImGuiWindowTempData get_DC() {
         long addr = internal_native_get_DC_addr(native_address);
@@ -170,21 +155,17 @@ return (jlong)&nativeObject->IDStack;
         return ImGuiWindowTempData_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return (jlong)&nativeObject->DC;
-*/
-    public static native long internal_native_get_DC_addr(long this_addr);
+    public static long internal_native_get_DC_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_DC_addr(this_addr);
+    }
 
     public int get_ID() {
         return internal_native_get_ID(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->ID;
-*/
-    public static native int internal_native_get_ID(long this_addr);
+    public static int internal_native_get_ID(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_ID(this_addr);
+    }
 
     public ImGuiWindowFlags get_Flags() {
         int value = internal_native_get_Flags(native_address);
@@ -197,11 +178,9 @@ return nativeObject->ID;
         return ImGuiWindowFlags.CUSTOM.setValue(value);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return (jint)nativeObject->Flags;
-*/
-    public static native int internal_native_get_Flags(long this_addr);
+    public static int internal_native_get_Flags(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_Flags(this_addr);
+    }
 
     public ImGuiWindowFlags get_FlagsPreviousFrame() {
         int value = internal_native_get_FlagsPreviousFrame(native_address);
@@ -214,21 +193,17 @@ return (jint)nativeObject->Flags;
         return ImGuiWindowFlags.CUSTOM.setValue(value);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return (jint)nativeObject->FlagsPreviousFrame;
-*/
-    public static native int internal_native_get_FlagsPreviousFrame(long this_addr);
+    public static int internal_native_get_FlagsPreviousFrame(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_FlagsPreviousFrame(this_addr);
+    }
 
     public int get_ViewportId() {
         return internal_native_get_ViewportId(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->ViewportId;
-*/
-    public static native int internal_native_get_ViewportId(long this_addr);
+    public static int internal_native_get_ViewportId(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_ViewportId(this_addr);
+    }
 
     public ImVec2 get_ViewportPos() {
         long addr = internal_native_get_ViewportPos_addr(native_address);
@@ -240,41 +215,33 @@ return nativeObject->ViewportId;
         return ImVec2_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return (jlong)&nativeObject->ViewportPos;
-*/
-    public static native long internal_native_get_ViewportPos_addr(long this_addr);
+    public static long internal_native_get_ViewportPos_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_ViewportPos_addr(this_addr);
+    }
 
     public void set_ViewportPos(ImVec2 ViewportPos) {
         internal_native_set_ViewportPos(native_address, ViewportPos.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->ViewportPos = *((ImVec2*)ViewportPos_addr);
-*/
-    public static native void internal_native_set_ViewportPos(long this_addr, long ViewportPos_addr);
+    public static void internal_native_set_ViewportPos(long this_addr, long ViewportPos_addr) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_ViewportPos(this_addr, ViewportPos_addr);
+    }
 
     public int get_ViewportAllowPlatformMonitorExtend() {
         return internal_native_get_ViewportAllowPlatformMonitorExtend(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->ViewportAllowPlatformMonitorExtend;
-*/
-    public static native int internal_native_get_ViewportAllowPlatformMonitorExtend(long this_addr);
+    public static int internal_native_get_ViewportAllowPlatformMonitorExtend(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_ViewportAllowPlatformMonitorExtend(this_addr);
+    }
 
     public void set_ViewportAllowPlatformMonitorExtend(int ViewportAllowPlatformMonitorExtend) {
         internal_native_set_ViewportAllowPlatformMonitorExtend(native_address, ViewportAllowPlatformMonitorExtend);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->ViewportAllowPlatformMonitorExtend = ViewportAllowPlatformMonitorExtend;
-*/
-    public static native void internal_native_set_ViewportAllowPlatformMonitorExtend(long this_addr, int ViewportAllowPlatformMonitorExtend);
+    public static void internal_native_set_ViewportAllowPlatformMonitorExtend(long this_addr, int ViewportAllowPlatformMonitorExtend) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_ViewportAllowPlatformMonitorExtend(this_addr, ViewportAllowPlatformMonitorExtend);
+    }
 
     public ImVec2 get_Pos() {
         long addr = internal_native_get_Pos_addr(native_address);
@@ -286,21 +253,17 @@ nativeObject->ViewportAllowPlatformMonitorExtend = ViewportAllowPlatformMonitorE
         return ImVec2_TEMP_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return (jlong)&nativeObject->Pos;
-*/
-    public static native long internal_native_get_Pos_addr(long this_addr);
+    public static long internal_native_get_Pos_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_Pos_addr(this_addr);
+    }
 
     public void set_Pos(ImVec2 Pos) {
         internal_native_set_Pos(native_address, Pos.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->Pos = *((ImVec2*)Pos_addr);
-*/
-    public static native void internal_native_set_Pos(long this_addr, long Pos_addr);
+    public static void internal_native_set_Pos(long this_addr, long Pos_addr) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_Pos(this_addr, Pos_addr);
+    }
 
     public ImVec2 get_Size() {
         long addr = internal_native_get_Size_addr(native_address);
@@ -312,21 +275,17 @@ nativeObject->Pos = *((ImVec2*)Pos_addr);
         return ImVec2_TEMP_GEN_2;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return (jlong)&nativeObject->Size;
-*/
-    public static native long internal_native_get_Size_addr(long this_addr);
+    public static long internal_native_get_Size_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_Size_addr(this_addr);
+    }
 
     public void set_Size(ImVec2 Size) {
         internal_native_set_Size(native_address, Size.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->Size = *((ImVec2*)Size_addr);
-*/
-    public static native void internal_native_set_Size(long this_addr, long Size_addr);
+    public static void internal_native_set_Size(long this_addr, long Size_addr) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_Size(this_addr, Size_addr);
+    }
 
     public ImVec2 get_SizeFull() {
         long addr = internal_native_get_SizeFull_addr(native_address);
@@ -338,21 +297,17 @@ nativeObject->Size = *((ImVec2*)Size_addr);
         return ImVec2_TEMP_GEN_3;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return (jlong)&nativeObject->SizeFull;
-*/
-    public static native long internal_native_get_SizeFull_addr(long this_addr);
+    public static long internal_native_get_SizeFull_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_SizeFull_addr(this_addr);
+    }
 
     public void set_SizeFull(ImVec2 SizeFull) {
         internal_native_set_SizeFull(native_address, SizeFull.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->SizeFull = *((ImVec2*)SizeFull_addr);
-*/
-    public static native void internal_native_set_SizeFull(long this_addr, long SizeFull_addr);
+    public static void internal_native_set_SizeFull(long this_addr, long SizeFull_addr) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_SizeFull(this_addr, SizeFull_addr);
+    }
 
     public ImVec2 get_ContentSize() {
         long addr = internal_native_get_ContentSize_addr(native_address);
@@ -364,21 +319,17 @@ nativeObject->SizeFull = *((ImVec2*)SizeFull_addr);
         return ImVec2_TEMP_GEN_4;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return (jlong)&nativeObject->ContentSize;
-*/
-    public static native long internal_native_get_ContentSize_addr(long this_addr);
+    public static long internal_native_get_ContentSize_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_ContentSize_addr(this_addr);
+    }
 
     public void set_ContentSize(ImVec2 ContentSize) {
         internal_native_set_ContentSize(native_address, ContentSize.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->ContentSize = *((ImVec2*)ContentSize_addr);
-*/
-    public static native void internal_native_set_ContentSize(long this_addr, long ContentSize_addr);
+    public static void internal_native_set_ContentSize(long this_addr, long ContentSize_addr) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_ContentSize(this_addr, ContentSize_addr);
+    }
 
     public ImVec2 get_ContentSizeIdeal() {
         long addr = internal_native_get_ContentSizeIdeal_addr(native_address);
@@ -390,21 +341,17 @@ nativeObject->ContentSize = *((ImVec2*)ContentSize_addr);
         return ImVec2_TEMP_GEN_5;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return (jlong)&nativeObject->ContentSizeIdeal;
-*/
-    public static native long internal_native_get_ContentSizeIdeal_addr(long this_addr);
+    public static long internal_native_get_ContentSizeIdeal_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_ContentSizeIdeal_addr(this_addr);
+    }
 
     public void set_ContentSizeIdeal(ImVec2 ContentSizeIdeal) {
         internal_native_set_ContentSizeIdeal(native_address, ContentSizeIdeal.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->ContentSizeIdeal = *((ImVec2*)ContentSizeIdeal_addr);
-*/
-    public static native void internal_native_set_ContentSizeIdeal(long this_addr, long ContentSizeIdeal_addr);
+    public static void internal_native_set_ContentSizeIdeal(long this_addr, long ContentSizeIdeal_addr) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_ContentSizeIdeal(this_addr, ContentSizeIdeal_addr);
+    }
 
     public ImVec2 get_ContentSizeExplicit() {
         long addr = internal_native_get_ContentSizeExplicit_addr(native_address);
@@ -416,21 +363,17 @@ nativeObject->ContentSizeIdeal = *((ImVec2*)ContentSizeIdeal_addr);
         return ImVec2_TEMP_GEN_6;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return (jlong)&nativeObject->ContentSizeExplicit;
-*/
-    public static native long internal_native_get_ContentSizeExplicit_addr(long this_addr);
+    public static long internal_native_get_ContentSizeExplicit_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_ContentSizeExplicit_addr(this_addr);
+    }
 
     public void set_ContentSizeExplicit(ImVec2 ContentSizeExplicit) {
         internal_native_set_ContentSizeExplicit(native_address, ContentSizeExplicit.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->ContentSizeExplicit = *((ImVec2*)ContentSizeExplicit_addr);
-*/
-    public static native void internal_native_set_ContentSizeExplicit(long this_addr, long ContentSizeExplicit_addr);
+    public static void internal_native_set_ContentSizeExplicit(long this_addr, long ContentSizeExplicit_addr) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_ContentSizeExplicit(this_addr, ContentSizeExplicit_addr);
+    }
 
     public ImVec2 get_WindowPadding() {
         long addr = internal_native_get_WindowPadding_addr(native_address);
@@ -442,231 +385,185 @@ nativeObject->ContentSizeExplicit = *((ImVec2*)ContentSizeExplicit_addr);
         return ImVec2_TEMP_GEN_7;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return (jlong)&nativeObject->WindowPadding;
-*/
-    public static native long internal_native_get_WindowPadding_addr(long this_addr);
+    public static long internal_native_get_WindowPadding_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_WindowPadding_addr(this_addr);
+    }
 
     public void set_WindowPadding(ImVec2 WindowPadding) {
         internal_native_set_WindowPadding(native_address, WindowPadding.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->WindowPadding = *((ImVec2*)WindowPadding_addr);
-*/
-    public static native void internal_native_set_WindowPadding(long this_addr, long WindowPadding_addr);
+    public static void internal_native_set_WindowPadding(long this_addr, long WindowPadding_addr) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_WindowPadding(this_addr, WindowPadding_addr);
+    }
 
     public float get_WindowRounding() {
         return internal_native_get_WindowRounding(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->WindowRounding;
-*/
-    public static native float internal_native_get_WindowRounding(long this_addr);
+    public static float internal_native_get_WindowRounding(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_WindowRounding(this_addr);
+    }
 
     public void set_WindowRounding(float WindowRounding) {
         internal_native_set_WindowRounding(native_address, WindowRounding);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->WindowRounding = WindowRounding;
-*/
-    public static native void internal_native_set_WindowRounding(long this_addr, float WindowRounding);
+    public static void internal_native_set_WindowRounding(long this_addr, float WindowRounding) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_WindowRounding(this_addr, WindowRounding);
+    }
 
     public float get_WindowBorderSize() {
         return internal_native_get_WindowBorderSize(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->WindowBorderSize;
-*/
-    public static native float internal_native_get_WindowBorderSize(long this_addr);
+    public static float internal_native_get_WindowBorderSize(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_WindowBorderSize(this_addr);
+    }
 
     public void set_WindowBorderSize(float WindowBorderSize) {
         internal_native_set_WindowBorderSize(native_address, WindowBorderSize);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->WindowBorderSize = WindowBorderSize;
-*/
-    public static native void internal_native_set_WindowBorderSize(long this_addr, float WindowBorderSize);
+    public static void internal_native_set_WindowBorderSize(long this_addr, float WindowBorderSize) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_WindowBorderSize(this_addr, WindowBorderSize);
+    }
 
     public float get_DecoOuterSizeX1() {
         return internal_native_get_DecoOuterSizeX1(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->DecoOuterSizeX1;
-*/
-    public static native float internal_native_get_DecoOuterSizeX1(long this_addr);
+    public static float internal_native_get_DecoOuterSizeX1(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_DecoOuterSizeX1(this_addr);
+    }
 
     public void set_DecoOuterSizeX1(float DecoOuterSizeX1) {
         internal_native_set_DecoOuterSizeX1(native_address, DecoOuterSizeX1);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->DecoOuterSizeX1 = DecoOuterSizeX1;
-*/
-    public static native void internal_native_set_DecoOuterSizeX1(long this_addr, float DecoOuterSizeX1);
+    public static void internal_native_set_DecoOuterSizeX1(long this_addr, float DecoOuterSizeX1) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_DecoOuterSizeX1(this_addr, DecoOuterSizeX1);
+    }
 
     public float get_DecoOuterSizeY1() {
         return internal_native_get_DecoOuterSizeY1(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->DecoOuterSizeY1;
-*/
-    public static native float internal_native_get_DecoOuterSizeY1(long this_addr);
+    public static float internal_native_get_DecoOuterSizeY1(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_DecoOuterSizeY1(this_addr);
+    }
 
     public void set_DecoOuterSizeY1(float DecoOuterSizeY1) {
         internal_native_set_DecoOuterSizeY1(native_address, DecoOuterSizeY1);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->DecoOuterSizeY1 = DecoOuterSizeY1;
-*/
-    public static native void internal_native_set_DecoOuterSizeY1(long this_addr, float DecoOuterSizeY1);
+    public static void internal_native_set_DecoOuterSizeY1(long this_addr, float DecoOuterSizeY1) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_DecoOuterSizeY1(this_addr, DecoOuterSizeY1);
+    }
 
     public float get_DecoOuterSizeX2() {
         return internal_native_get_DecoOuterSizeX2(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->DecoOuterSizeX2;
-*/
-    public static native float internal_native_get_DecoOuterSizeX2(long this_addr);
+    public static float internal_native_get_DecoOuterSizeX2(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_DecoOuterSizeX2(this_addr);
+    }
 
     public void set_DecoOuterSizeX2(float DecoOuterSizeX2) {
         internal_native_set_DecoOuterSizeX2(native_address, DecoOuterSizeX2);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->DecoOuterSizeX2 = DecoOuterSizeX2;
-*/
-    public static native void internal_native_set_DecoOuterSizeX2(long this_addr, float DecoOuterSizeX2);
+    public static void internal_native_set_DecoOuterSizeX2(long this_addr, float DecoOuterSizeX2) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_DecoOuterSizeX2(this_addr, DecoOuterSizeX2);
+    }
 
     public float get_DecoOuterSizeY2() {
         return internal_native_get_DecoOuterSizeY2(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->DecoOuterSizeY2;
-*/
-    public static native float internal_native_get_DecoOuterSizeY2(long this_addr);
+    public static float internal_native_get_DecoOuterSizeY2(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_DecoOuterSizeY2(this_addr);
+    }
 
     public void set_DecoOuterSizeY2(float DecoOuterSizeY2) {
         internal_native_set_DecoOuterSizeY2(native_address, DecoOuterSizeY2);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->DecoOuterSizeY2 = DecoOuterSizeY2;
-*/
-    public static native void internal_native_set_DecoOuterSizeY2(long this_addr, float DecoOuterSizeY2);
+    public static void internal_native_set_DecoOuterSizeY2(long this_addr, float DecoOuterSizeY2) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_DecoOuterSizeY2(this_addr, DecoOuterSizeY2);
+    }
 
     public float get_DecoInnerSizeX1() {
         return internal_native_get_DecoInnerSizeX1(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->DecoInnerSizeX1;
-*/
-    public static native float internal_native_get_DecoInnerSizeX1(long this_addr);
+    public static float internal_native_get_DecoInnerSizeX1(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_DecoInnerSizeX1(this_addr);
+    }
 
     public void set_DecoInnerSizeX1(float DecoInnerSizeX1) {
         internal_native_set_DecoInnerSizeX1(native_address, DecoInnerSizeX1);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->DecoInnerSizeX1 = DecoInnerSizeX1;
-*/
-    public static native void internal_native_set_DecoInnerSizeX1(long this_addr, float DecoInnerSizeX1);
+    public static void internal_native_set_DecoInnerSizeX1(long this_addr, float DecoInnerSizeX1) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_DecoInnerSizeX1(this_addr, DecoInnerSizeX1);
+    }
 
     public float get_DecoInnerSizeY1() {
         return internal_native_get_DecoInnerSizeY1(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->DecoInnerSizeY1;
-*/
-    public static native float internal_native_get_DecoInnerSizeY1(long this_addr);
+    public static float internal_native_get_DecoInnerSizeY1(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_DecoInnerSizeY1(this_addr);
+    }
 
     public void set_DecoInnerSizeY1(float DecoInnerSizeY1) {
         internal_native_set_DecoInnerSizeY1(native_address, DecoInnerSizeY1);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->DecoInnerSizeY1 = DecoInnerSizeY1;
-*/
-    public static native void internal_native_set_DecoInnerSizeY1(long this_addr, float DecoInnerSizeY1);
+    public static void internal_native_set_DecoInnerSizeY1(long this_addr, float DecoInnerSizeY1) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_DecoInnerSizeY1(this_addr, DecoInnerSizeY1);
+    }
 
     public int get_NameBufLen() {
         return internal_native_get_NameBufLen(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->NameBufLen;
-*/
-    public static native int internal_native_get_NameBufLen(long this_addr);
+    public static int internal_native_get_NameBufLen(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_NameBufLen(this_addr);
+    }
 
     public void set_NameBufLen(int NameBufLen) {
         internal_native_set_NameBufLen(native_address, NameBufLen);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->NameBufLen = NameBufLen;
-*/
-    public static native void internal_native_set_NameBufLen(long this_addr, int NameBufLen);
+    public static void internal_native_set_NameBufLen(long this_addr, int NameBufLen) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_NameBufLen(this_addr, NameBufLen);
+    }
 
     public int get_MoveId() {
         return internal_native_get_MoveId(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->MoveId;
-*/
-    public static native int internal_native_get_MoveId(long this_addr);
+    public static int internal_native_get_MoveId(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_MoveId(this_addr);
+    }
 
     public int get_TabId() {
         return internal_native_get_TabId(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->TabId;
-*/
-    public static native int internal_native_get_TabId(long this_addr);
+    public static int internal_native_get_TabId(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_TabId(this_addr);
+    }
 
     public int get_ChildId() {
         return internal_native_get_ChildId(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->ChildId;
-*/
-    public static native int internal_native_get_ChildId(long this_addr);
+    public static int internal_native_get_ChildId(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_ChildId(this_addr);
+    }
 
     public ImVec2 get_Scroll() {
         long addr = internal_native_get_Scroll_addr(native_address);
@@ -678,21 +575,17 @@ return nativeObject->ChildId;
         return ImVec2_TEMP_GEN_8;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return (jlong)&nativeObject->Scroll;
-*/
-    public static native long internal_native_get_Scroll_addr(long this_addr);
+    public static long internal_native_get_Scroll_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_Scroll_addr(this_addr);
+    }
 
     public void set_Scroll(ImVec2 Scroll) {
         internal_native_set_Scroll(native_address, Scroll.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->Scroll = *((ImVec2*)Scroll_addr);
-*/
-    public static native void internal_native_set_Scroll(long this_addr, long Scroll_addr);
+    public static void internal_native_set_Scroll(long this_addr, long Scroll_addr) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_Scroll(this_addr, Scroll_addr);
+    }
 
     public ImVec2 get_ScrollMax() {
         long addr = internal_native_get_ScrollMax_addr(native_address);
@@ -704,21 +597,17 @@ nativeObject->Scroll = *((ImVec2*)Scroll_addr);
         return ImVec2_TEMP_GEN_9;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return (jlong)&nativeObject->ScrollMax;
-*/
-    public static native long internal_native_get_ScrollMax_addr(long this_addr);
+    public static long internal_native_get_ScrollMax_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_ScrollMax_addr(this_addr);
+    }
 
     public void set_ScrollMax(ImVec2 ScrollMax) {
         internal_native_set_ScrollMax(native_address, ScrollMax.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->ScrollMax = *((ImVec2*)ScrollMax_addr);
-*/
-    public static native void internal_native_set_ScrollMax(long this_addr, long ScrollMax_addr);
+    public static void internal_native_set_ScrollMax(long this_addr, long ScrollMax_addr) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_ScrollMax(this_addr, ScrollMax_addr);
+    }
 
     public ImVec2 get_ScrollTarget() {
         long addr = internal_native_get_ScrollTarget_addr(native_address);
@@ -730,21 +619,17 @@ nativeObject->ScrollMax = *((ImVec2*)ScrollMax_addr);
         return ImVec2_TEMP_GEN_10;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return (jlong)&nativeObject->ScrollTarget;
-*/
-    public static native long internal_native_get_ScrollTarget_addr(long this_addr);
+    public static long internal_native_get_ScrollTarget_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_ScrollTarget_addr(this_addr);
+    }
 
     public void set_ScrollTarget(ImVec2 ScrollTarget) {
         internal_native_set_ScrollTarget(native_address, ScrollTarget.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->ScrollTarget = *((ImVec2*)ScrollTarget_addr);
-*/
-    public static native void internal_native_set_ScrollTarget(long this_addr, long ScrollTarget_addr);
+    public static void internal_native_set_ScrollTarget(long this_addr, long ScrollTarget_addr) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_ScrollTarget(this_addr, ScrollTarget_addr);
+    }
 
     public ImVec2 get_ScrollTargetCenterRatio() {
         long addr = internal_native_get_ScrollTargetCenterRatio_addr(native_address);
@@ -756,21 +641,17 @@ nativeObject->ScrollTarget = *((ImVec2*)ScrollTarget_addr);
         return ImVec2_TEMP_GEN_11;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return (jlong)&nativeObject->ScrollTargetCenterRatio;
-*/
-    public static native long internal_native_get_ScrollTargetCenterRatio_addr(long this_addr);
+    public static long internal_native_get_ScrollTargetCenterRatio_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_ScrollTargetCenterRatio_addr(this_addr);
+    }
 
     public void set_ScrollTargetCenterRatio(ImVec2 ScrollTargetCenterRatio) {
         internal_native_set_ScrollTargetCenterRatio(native_address, ScrollTargetCenterRatio.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->ScrollTargetCenterRatio = *((ImVec2*)ScrollTargetCenterRatio_addr);
-*/
-    public static native void internal_native_set_ScrollTargetCenterRatio(long this_addr, long ScrollTargetCenterRatio_addr);
+    public static void internal_native_set_ScrollTargetCenterRatio(long this_addr, long ScrollTargetCenterRatio_addr) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_ScrollTargetCenterRatio(this_addr, ScrollTargetCenterRatio_addr);
+    }
 
     public ImVec2 get_ScrollTargetEdgeSnapDist() {
         long addr = internal_native_get_ScrollTargetEdgeSnapDist_addr(native_address);
@@ -782,21 +663,17 @@ nativeObject->ScrollTargetCenterRatio = *((ImVec2*)ScrollTargetCenterRatio_addr)
         return ImVec2_TEMP_GEN_12;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return (jlong)&nativeObject->ScrollTargetEdgeSnapDist;
-*/
-    public static native long internal_native_get_ScrollTargetEdgeSnapDist_addr(long this_addr);
+    public static long internal_native_get_ScrollTargetEdgeSnapDist_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_ScrollTargetEdgeSnapDist_addr(this_addr);
+    }
 
     public void set_ScrollTargetEdgeSnapDist(ImVec2 ScrollTargetEdgeSnapDist) {
         internal_native_set_ScrollTargetEdgeSnapDist(native_address, ScrollTargetEdgeSnapDist.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->ScrollTargetEdgeSnapDist = *((ImVec2*)ScrollTargetEdgeSnapDist_addr);
-*/
-    public static native void internal_native_set_ScrollTargetEdgeSnapDist(long this_addr, long ScrollTargetEdgeSnapDist_addr);
+    public static void internal_native_set_ScrollTargetEdgeSnapDist(long this_addr, long ScrollTargetEdgeSnapDist_addr) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_ScrollTargetEdgeSnapDist(this_addr, ScrollTargetEdgeSnapDist_addr);
+    }
 
     public ImVec2 get_ScrollbarSizes() {
         long addr = internal_native_get_ScrollbarSizes_addr(native_address);
@@ -808,301 +685,241 @@ nativeObject->ScrollTargetEdgeSnapDist = *((ImVec2*)ScrollTargetEdgeSnapDist_add
         return ImVec2_TEMP_GEN_13;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return (jlong)&nativeObject->ScrollbarSizes;
-*/
-    public static native long internal_native_get_ScrollbarSizes_addr(long this_addr);
+    public static long internal_native_get_ScrollbarSizes_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_ScrollbarSizes_addr(this_addr);
+    }
 
     public void set_ScrollbarSizes(ImVec2 ScrollbarSizes) {
         internal_native_set_ScrollbarSizes(native_address, ScrollbarSizes.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->ScrollbarSizes = *((ImVec2*)ScrollbarSizes_addr);
-*/
-    public static native void internal_native_set_ScrollbarSizes(long this_addr, long ScrollbarSizes_addr);
+    public static void internal_native_set_ScrollbarSizes(long this_addr, long ScrollbarSizes_addr) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_ScrollbarSizes(this_addr, ScrollbarSizes_addr);
+    }
 
     public boolean get_ScrollbarX() {
         return internal_native_get_ScrollbarX(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->ScrollbarX;
-*/
-    public static native boolean internal_native_get_ScrollbarX(long this_addr);
+    public static boolean internal_native_get_ScrollbarX(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_ScrollbarX(this_addr);
+    }
 
     public void set_ScrollbarX(boolean ScrollbarX) {
         internal_native_set_ScrollbarX(native_address, ScrollbarX);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->ScrollbarX = ScrollbarX;
-*/
-    public static native void internal_native_set_ScrollbarX(long this_addr, boolean ScrollbarX);
+    public static void internal_native_set_ScrollbarX(long this_addr, boolean ScrollbarX) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_ScrollbarX(this_addr, ScrollbarX);
+    }
 
     public boolean get_ScrollbarY() {
         return internal_native_get_ScrollbarY(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->ScrollbarY;
-*/
-    public static native boolean internal_native_get_ScrollbarY(long this_addr);
+    public static boolean internal_native_get_ScrollbarY(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_ScrollbarY(this_addr);
+    }
 
     public void set_ScrollbarY(boolean ScrollbarY) {
         internal_native_set_ScrollbarY(native_address, ScrollbarY);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->ScrollbarY = ScrollbarY;
-*/
-    public static native void internal_native_set_ScrollbarY(long this_addr, boolean ScrollbarY);
+    public static void internal_native_set_ScrollbarY(long this_addr, boolean ScrollbarY) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_ScrollbarY(this_addr, ScrollbarY);
+    }
 
     public boolean get_ViewportOwned() {
         return internal_native_get_ViewportOwned(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->ViewportOwned;
-*/
-    public static native boolean internal_native_get_ViewportOwned(long this_addr);
+    public static boolean internal_native_get_ViewportOwned(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_ViewportOwned(this_addr);
+    }
 
     public void set_ViewportOwned(boolean ViewportOwned) {
         internal_native_set_ViewportOwned(native_address, ViewportOwned);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->ViewportOwned = ViewportOwned;
-*/
-    public static native void internal_native_set_ViewportOwned(long this_addr, boolean ViewportOwned);
+    public static void internal_native_set_ViewportOwned(long this_addr, boolean ViewportOwned) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_ViewportOwned(this_addr, ViewportOwned);
+    }
 
     public boolean get_Active() {
         return internal_native_get_Active(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->Active;
-*/
-    public static native boolean internal_native_get_Active(long this_addr);
+    public static boolean internal_native_get_Active(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_Active(this_addr);
+    }
 
     public void set_Active(boolean Active) {
         internal_native_set_Active(native_address, Active);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->Active = Active;
-*/
-    public static native void internal_native_set_Active(long this_addr, boolean Active);
+    public static void internal_native_set_Active(long this_addr, boolean Active) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_Active(this_addr, Active);
+    }
 
     public boolean get_WasActive() {
         return internal_native_get_WasActive(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->WasActive;
-*/
-    public static native boolean internal_native_get_WasActive(long this_addr);
+    public static boolean internal_native_get_WasActive(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_WasActive(this_addr);
+    }
 
     public void set_WasActive(boolean WasActive) {
         internal_native_set_WasActive(native_address, WasActive);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->WasActive = WasActive;
-*/
-    public static native void internal_native_set_WasActive(long this_addr, boolean WasActive);
+    public static void internal_native_set_WasActive(long this_addr, boolean WasActive) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_WasActive(this_addr, WasActive);
+    }
 
     public boolean get_WriteAccessed() {
         return internal_native_get_WriteAccessed(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->WriteAccessed;
-*/
-    public static native boolean internal_native_get_WriteAccessed(long this_addr);
+    public static boolean internal_native_get_WriteAccessed(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_WriteAccessed(this_addr);
+    }
 
     public void set_WriteAccessed(boolean WriteAccessed) {
         internal_native_set_WriteAccessed(native_address, WriteAccessed);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->WriteAccessed = WriteAccessed;
-*/
-    public static native void internal_native_set_WriteAccessed(long this_addr, boolean WriteAccessed);
+    public static void internal_native_set_WriteAccessed(long this_addr, boolean WriteAccessed) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_WriteAccessed(this_addr, WriteAccessed);
+    }
 
     public boolean get_Collapsed() {
         return internal_native_get_Collapsed(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->Collapsed;
-*/
-    public static native boolean internal_native_get_Collapsed(long this_addr);
+    public static boolean internal_native_get_Collapsed(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_Collapsed(this_addr);
+    }
 
     public void set_Collapsed(boolean Collapsed) {
         internal_native_set_Collapsed(native_address, Collapsed);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->Collapsed = Collapsed;
-*/
-    public static native void internal_native_set_Collapsed(long this_addr, boolean Collapsed);
+    public static void internal_native_set_Collapsed(long this_addr, boolean Collapsed) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_Collapsed(this_addr, Collapsed);
+    }
 
     public boolean get_WantCollapseToggle() {
         return internal_native_get_WantCollapseToggle(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->WantCollapseToggle;
-*/
-    public static native boolean internal_native_get_WantCollapseToggle(long this_addr);
+    public static boolean internal_native_get_WantCollapseToggle(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_WantCollapseToggle(this_addr);
+    }
 
     public void set_WantCollapseToggle(boolean WantCollapseToggle) {
         internal_native_set_WantCollapseToggle(native_address, WantCollapseToggle);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->WantCollapseToggle = WantCollapseToggle;
-*/
-    public static native void internal_native_set_WantCollapseToggle(long this_addr, boolean WantCollapseToggle);
+    public static void internal_native_set_WantCollapseToggle(long this_addr, boolean WantCollapseToggle) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_WantCollapseToggle(this_addr, WantCollapseToggle);
+    }
 
     public boolean get_SkipItems() {
         return internal_native_get_SkipItems(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->SkipItems;
-*/
-    public static native boolean internal_native_get_SkipItems(long this_addr);
+    public static boolean internal_native_get_SkipItems(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_SkipItems(this_addr);
+    }
 
     public void set_SkipItems(boolean SkipItems) {
         internal_native_set_SkipItems(native_address, SkipItems);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->SkipItems = SkipItems;
-*/
-    public static native void internal_native_set_SkipItems(long this_addr, boolean SkipItems);
+    public static void internal_native_set_SkipItems(long this_addr, boolean SkipItems) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_SkipItems(this_addr, SkipItems);
+    }
 
     public boolean get_Appearing() {
         return internal_native_get_Appearing(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->Appearing;
-*/
-    public static native boolean internal_native_get_Appearing(long this_addr);
+    public static boolean internal_native_get_Appearing(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_Appearing(this_addr);
+    }
 
     public void set_Appearing(boolean Appearing) {
         internal_native_set_Appearing(native_address, Appearing);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->Appearing = Appearing;
-*/
-    public static native void internal_native_set_Appearing(long this_addr, boolean Appearing);
+    public static void internal_native_set_Appearing(long this_addr, boolean Appearing) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_Appearing(this_addr, Appearing);
+    }
 
     public boolean get_Hidden() {
         return internal_native_get_Hidden(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->Hidden;
-*/
-    public static native boolean internal_native_get_Hidden(long this_addr);
+    public static boolean internal_native_get_Hidden(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_Hidden(this_addr);
+    }
 
     public void set_Hidden(boolean Hidden) {
         internal_native_set_Hidden(native_address, Hidden);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->Hidden = Hidden;
-*/
-    public static native void internal_native_set_Hidden(long this_addr, boolean Hidden);
+    public static void internal_native_set_Hidden(long this_addr, boolean Hidden) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_Hidden(this_addr, Hidden);
+    }
 
     public boolean get_IsFallbackWindow() {
         return internal_native_get_IsFallbackWindow(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->IsFallbackWindow;
-*/
-    public static native boolean internal_native_get_IsFallbackWindow(long this_addr);
+    public static boolean internal_native_get_IsFallbackWindow(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_IsFallbackWindow(this_addr);
+    }
 
     public void set_IsFallbackWindow(boolean IsFallbackWindow) {
         internal_native_set_IsFallbackWindow(native_address, IsFallbackWindow);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->IsFallbackWindow = IsFallbackWindow;
-*/
-    public static native void internal_native_set_IsFallbackWindow(long this_addr, boolean IsFallbackWindow);
+    public static void internal_native_set_IsFallbackWindow(long this_addr, boolean IsFallbackWindow) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_IsFallbackWindow(this_addr, IsFallbackWindow);
+    }
 
     public boolean get_IsExplicitChild() {
         return internal_native_get_IsExplicitChild(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->IsExplicitChild;
-*/
-    public static native boolean internal_native_get_IsExplicitChild(long this_addr);
+    public static boolean internal_native_get_IsExplicitChild(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_IsExplicitChild(this_addr);
+    }
 
     public void set_IsExplicitChild(boolean IsExplicitChild) {
         internal_native_set_IsExplicitChild(native_address, IsExplicitChild);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->IsExplicitChild = IsExplicitChild;
-*/
-    public static native void internal_native_set_IsExplicitChild(long this_addr, boolean IsExplicitChild);
+    public static void internal_native_set_IsExplicitChild(long this_addr, boolean IsExplicitChild) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_IsExplicitChild(this_addr, IsExplicitChild);
+    }
 
     public boolean get_HasCloseButton() {
         return internal_native_get_HasCloseButton(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->HasCloseButton;
-*/
-    public static native boolean internal_native_get_HasCloseButton(long this_addr);
+    public static boolean internal_native_get_HasCloseButton(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_HasCloseButton(this_addr);
+    }
 
     public void set_HasCloseButton(boolean HasCloseButton) {
         internal_native_set_HasCloseButton(native_address, HasCloseButton);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->HasCloseButton = HasCloseButton;
-*/
-    public static native void internal_native_set_HasCloseButton(long this_addr, boolean HasCloseButton);
+    public static void internal_native_set_HasCloseButton(long this_addr, boolean HasCloseButton) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_HasCloseButton(this_addr, HasCloseButton);
+    }
 
     public ImGuiStorage get_StateStorage() {
         long addr = internal_native_get_StateStorage_addr(native_address);
@@ -1114,21 +931,17 @@ nativeObject->HasCloseButton = HasCloseButton;
         return ImGuiStorage_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return (jlong)&nativeObject->StateStorage;
-*/
-    public static native long internal_native_get_StateStorage_addr(long this_addr);
+    public static long internal_native_get_StateStorage_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_StateStorage_addr(this_addr);
+    }
 
     public void set_StateStorage(ImGuiStorage StateStorage) {
         internal_native_set_StateStorage(native_address, StateStorage.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->StateStorage = *((ImGuiStorage*)StateStorage_addr);
-*/
-    public static native void internal_native_set_StateStorage(long this_addr, long StateStorage_addr);
+    public static void internal_native_set_StateStorage(long this_addr, long StateStorage_addr) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_StateStorage(this_addr, StateStorage_addr);
+    }
 
     public ImDrawList get_DrawList() {
         long addr = internal_native_get_DrawList_addr(native_address);
@@ -1140,102 +953,81 @@ nativeObject->StateStorage = *((ImGuiStorage*)StateStorage_addr);
         return ImDrawList_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-ImDrawList* attr = nativeObject->DrawList;
-return (jlong)attr;
-*/
-    public static native long internal_native_get_DrawList_addr(long this_addr);
+    public static long internal_native_get_DrawList_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_DrawList_addr(this_addr);
+    }
 
     public void set_DrawList(ImDrawList DrawList) {
         internal_native_set_DrawList(native_address, DrawList.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->DrawList = (ImDrawList*)DrawList_addr;
-*/
-    public static native void internal_native_set_DrawList(long this_addr, long DrawList_addr);
+    public static void internal_native_set_DrawList(long this_addr, long DrawList_addr) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_DrawList(this_addr, DrawList_addr);
+    }
 
     public boolean get_DockIsActive() {
         return internal_native_get_DockIsActive(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->DockIsActive;
-*/
-    public static native boolean internal_native_get_DockIsActive(long this_addr);
+    public static boolean internal_native_get_DockIsActive(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_DockIsActive(this_addr);
+    }
 
     public void set_DockIsActive(boolean DockIsActive) {
         internal_native_set_DockIsActive(native_address, DockIsActive);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->DockIsActive = DockIsActive;
-*/
-    public static native void internal_native_set_DockIsActive(long this_addr, boolean DockIsActive);
+    public static void internal_native_set_DockIsActive(long this_addr, boolean DockIsActive) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_DockIsActive(this_addr, DockIsActive);
+    }
 
     public boolean get_DockNodeIsVisible() {
         return internal_native_get_DockNodeIsVisible(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->DockNodeIsVisible;
-*/
-    public static native boolean internal_native_get_DockNodeIsVisible(long this_addr);
+    public static boolean internal_native_get_DockNodeIsVisible(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_DockNodeIsVisible(this_addr);
+    }
 
     public void set_DockNodeIsVisible(boolean DockNodeIsVisible) {
         internal_native_set_DockNodeIsVisible(native_address, DockNodeIsVisible);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->DockNodeIsVisible = DockNodeIsVisible;
-*/
-    public static native void internal_native_set_DockNodeIsVisible(long this_addr, boolean DockNodeIsVisible);
+    public static void internal_native_set_DockNodeIsVisible(long this_addr, boolean DockNodeIsVisible) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_DockNodeIsVisible(this_addr, DockNodeIsVisible);
+    }
 
     public boolean get_DockTabIsVisible() {
         return internal_native_get_DockTabIsVisible(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->DockTabIsVisible;
-*/
-    public static native boolean internal_native_get_DockTabIsVisible(long this_addr);
+    public static boolean internal_native_get_DockTabIsVisible(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_DockTabIsVisible(this_addr);
+    }
 
     public void set_DockTabIsVisible(boolean DockTabIsVisible) {
         internal_native_set_DockTabIsVisible(native_address, DockTabIsVisible);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->DockTabIsVisible = DockTabIsVisible;
-*/
-    public static native void internal_native_set_DockTabIsVisible(long this_addr, boolean DockTabIsVisible);
+    public static void internal_native_set_DockTabIsVisible(long this_addr, boolean DockTabIsVisible) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_DockTabIsVisible(this_addr, DockTabIsVisible);
+    }
 
     public boolean get_DockTabWantClose() {
         return internal_native_get_DockTabWantClose(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->DockTabWantClose;
-*/
-    public static native boolean internal_native_get_DockTabWantClose(long this_addr);
+    public static boolean internal_native_get_DockTabWantClose(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_DockTabWantClose(this_addr);
+    }
 
     public void set_DockTabWantClose(boolean DockTabWantClose) {
         internal_native_set_DockTabWantClose(native_address, DockTabWantClose);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->DockTabWantClose = DockTabWantClose;
-*/
-    public static native void internal_native_set_DockTabWantClose(long this_addr, boolean DockTabWantClose);
+    public static void internal_native_set_DockTabWantClose(long this_addr, boolean DockTabWantClose) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_DockTabWantClose(this_addr, DockTabWantClose);
+    }
 
     public ImGuiDockNode get_DockNode() {
         long addr = internal_native_get_DockNode_addr(native_address);
@@ -1247,22 +1039,17 @@ nativeObject->DockTabWantClose = DockTabWantClose;
         return ImGuiDockNode_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-ImGuiDockNode* attr = nativeObject->DockNode;
-return (jlong)attr;
-*/
-    public static native long internal_native_get_DockNode_addr(long this_addr);
+    public static long internal_native_get_DockNode_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_DockNode_addr(this_addr);
+    }
 
     public void set_DockNode(ImGuiDockNode DockNode) {
         internal_native_set_DockNode(native_address, DockNode.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->DockNode = (ImGuiDockNode*)DockNode_addr;
-*/
-    public static native void internal_native_set_DockNode(long this_addr, long DockNode_addr);
+    public static void internal_native_set_DockNode(long this_addr, long DockNode_addr) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_DockNode(this_addr, DockNode_addr);
+    }
 
     public ImGuiDockNode get_DockNodeAsHost() {
         long addr = internal_native_get_DockNodeAsHost_addr(native_address);
@@ -1274,80 +1061,63 @@ nativeObject->DockNode = (ImGuiDockNode*)DockNode_addr;
         return ImGuiDockNode_TEMP_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-ImGuiDockNode* attr = nativeObject->DockNodeAsHost;
-return (jlong)attr;
-*/
-    public static native long internal_native_get_DockNodeAsHost_addr(long this_addr);
+    public static long internal_native_get_DockNodeAsHost_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_DockNodeAsHost_addr(this_addr);
+    }
 
     public void set_DockNodeAsHost(ImGuiDockNode DockNodeAsHost) {
         internal_native_set_DockNodeAsHost(native_address, DockNodeAsHost.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->DockNodeAsHost = (ImGuiDockNode*)DockNodeAsHost_addr;
-*/
-    public static native void internal_native_set_DockNodeAsHost(long this_addr, long DockNodeAsHost_addr);
+    public static void internal_native_set_DockNodeAsHost(long this_addr, long DockNodeAsHost_addr) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_DockNodeAsHost(this_addr, DockNodeAsHost_addr);
+    }
 
     public int get_DockId() {
         return internal_native_get_DockId(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->DockId;
-*/
-    public static native int internal_native_get_DockId(long this_addr);
+    public static int internal_native_get_DockId(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_DockId(this_addr);
+    }
 
     public void set_DockId(int DockId) {
         internal_native_set_DockId(native_address, DockId);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->DockId = DockId;
-*/
-    public static native void internal_native_set_DockId(long this_addr, int DockId);
+    public static void internal_native_set_DockId(long this_addr, int DockId) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_DockId(this_addr, DockId);
+    }
 
     public float get_TitleBarHeight() {
         return internal_native_get_TitleBarHeight(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->TitleBarHeight;
-*/
-    public static native float internal_native_get_TitleBarHeight(long this_addr);
+    public static float internal_native_get_TitleBarHeight(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_TitleBarHeight(this_addr);
+    }
 
     public void set_TitleBarHeight(float TitleBarHeight) {
         internal_native_set_TitleBarHeight(native_address, TitleBarHeight);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->TitleBarHeight = TitleBarHeight;
-*/
-    public static native void internal_native_set_TitleBarHeight(long this_addr, float TitleBarHeight);
+    public static void internal_native_set_TitleBarHeight(long this_addr, float TitleBarHeight) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_TitleBarHeight(this_addr, TitleBarHeight);
+    }
 
     public float get_MenuBarHeight() {
         return internal_native_get_MenuBarHeight(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-return nativeObject->MenuBarHeight;
-*/
-    public static native float internal_native_get_MenuBarHeight(long this_addr);
+    public static float internal_native_get_MenuBarHeight(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindow.internal_native_get_MenuBarHeight(this_addr);
+    }
 
     public void set_MenuBarHeight(float MenuBarHeight) {
         internal_native_set_MenuBarHeight(native_address, MenuBarHeight);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindow* nativeObject = (ImGuiWindow*)this_addr;
-nativeObject->MenuBarHeight = MenuBarHeight;
-*/
-    public static native void internal_native_set_MenuBarHeight(long this_addr, float MenuBarHeight);
+    public static void internal_native_set_MenuBarHeight(long this_addr, float MenuBarHeight) {
+        imgui.natives.JNI_ImGuiWindow.internal_native_set_MenuBarHeight(this_addr, MenuBarHeight);
+    }
 }

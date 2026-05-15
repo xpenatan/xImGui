@@ -34,21 +34,12 @@ public enum ImGuiNavLayer implements NativeEnum<ImGuiNavLayer> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavLayer_Main;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavLayer_Main;")
     private static native int ImGuiNavLayer_Main_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavLayer_Menu;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavLayer_Menu;")
     private static native int ImGuiNavLayer_Menu_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavLayer_COUNT;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavLayer_COUNT;")
     private static native int ImGuiNavLayer_COUNT_NATIVE();
 }

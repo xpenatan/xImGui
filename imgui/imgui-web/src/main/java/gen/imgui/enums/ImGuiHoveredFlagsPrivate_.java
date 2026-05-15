@@ -34,21 +34,12 @@ public enum ImGuiHoveredFlagsPrivate_ implements NativeEnum<ImGuiHoveredFlagsPri
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiHoveredFlags_DelayMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiHoveredFlags_DelayMask_;")
     private static native int ImGuiHoveredFlags_DelayMask__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiHoveredFlags_AllowedMaskForIsWindowHovered;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiHoveredFlags_AllowedMaskForIsWindowHovered;")
     private static native int ImGuiHoveredFlags_AllowedMaskForIsWindowHovered_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiHoveredFlags_AllowedMaskForIsItemHovered;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiHoveredFlags_AllowedMaskForIsItemHovered;")
     private static native int ImGuiHoveredFlags_AllowedMaskForIsItemHovered_NATIVE();
 }

@@ -34,21 +34,12 @@ public enum CanvasSizeMode implements NativeEnum<CanvasSizeMode> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.FitVerticalView;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.FitVerticalView;")
     private static native int FitVerticalView_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.FitHorizontalView;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.FitHorizontalView;")
     private static native int FitHorizontalView_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.CenterOnly;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.CenterOnly;")
     private static native int CenterOnly_NATIVE();
 }

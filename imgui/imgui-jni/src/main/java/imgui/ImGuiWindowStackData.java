@@ -30,9 +30,7 @@ public class ImGuiWindowStackData extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindowStackData* nativeObject = (ImGuiWindowStackData*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ImGuiWindowStackData.internal_native_deleteNative(this_addr);
+    }
 }

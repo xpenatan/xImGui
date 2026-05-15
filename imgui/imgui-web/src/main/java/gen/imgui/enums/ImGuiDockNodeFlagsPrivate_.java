@@ -52,111 +52,57 @@ public enum ImGuiDockNodeFlagsPrivate_ implements NativeEnum<ImGuiDockNodeFlagsP
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_DockSpace;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_DockSpace;")
     private static native int ImGuiDockNodeFlags_DockSpace_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_CentralNode;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_CentralNode;")
     private static native int ImGuiDockNodeFlags_CentralNode_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_NoTabBar;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_NoTabBar;")
     private static native int ImGuiDockNodeFlags_NoTabBar_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_HiddenTabBar;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_HiddenTabBar;")
     private static native int ImGuiDockNodeFlags_HiddenTabBar_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_NoWindowMenuButton;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_NoWindowMenuButton;")
     private static native int ImGuiDockNodeFlags_NoWindowMenuButton_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_NoCloseButton;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_NoCloseButton;")
     private static native int ImGuiDockNodeFlags_NoCloseButton_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_NoResizeX;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_NoResizeX;")
     private static native int ImGuiDockNodeFlags_NoResizeX_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_NoResizeY;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_NoResizeY;")
     private static native int ImGuiDockNodeFlags_NoResizeY_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_DockedWindowsInFocusRoute;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_DockedWindowsInFocusRoute;")
     private static native int ImGuiDockNodeFlags_DockedWindowsInFocusRoute_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_NoDockingSplitOther;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_NoDockingSplitOther;")
     private static native int ImGuiDockNodeFlags_NoDockingSplitOther_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_NoDockingOverMe;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_NoDockingOverMe;")
     private static native int ImGuiDockNodeFlags_NoDockingOverMe_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_NoDockingOverOther;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_NoDockingOverOther;")
     private static native int ImGuiDockNodeFlags_NoDockingOverOther_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_NoDockingOverEmpty;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_NoDockingOverEmpty;")
     private static native int ImGuiDockNodeFlags_NoDockingOverEmpty_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_NoDocking;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_NoDocking;")
     private static native int ImGuiDockNodeFlags_NoDocking_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_SharedFlagsInheritMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_SharedFlagsInheritMask_;")
     private static native int ImGuiDockNodeFlags_SharedFlagsInheritMask__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_NoResizeFlagsMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_NoResizeFlagsMask_;")
     private static native int ImGuiDockNodeFlags_NoResizeFlagsMask__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_LocalFlagsTransferMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_LocalFlagsTransferMask_;")
     private static native int ImGuiDockNodeFlags_LocalFlagsTransferMask__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_SavedFlagsMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_SavedFlagsMask_;")
     private static native int ImGuiDockNodeFlags_SavedFlagsMask__NATIVE();
 }

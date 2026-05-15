@@ -39,33 +39,18 @@ public enum ImTextureStatus implements NativeEnum<ImTextureStatus> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImTextureStatus_OK;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImTextureStatus_OK;")
     private static native int ImTextureStatus_OK_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImTextureStatus_Destroyed;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImTextureStatus_Destroyed;")
     private static native int ImTextureStatus_Destroyed_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImTextureStatus_WantCreate;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImTextureStatus_WantCreate;")
     private static native int ImTextureStatus_WantCreate_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImTextureStatus_WantUpdates;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImTextureStatus_WantUpdates;")
     private static native int ImTextureStatus_WantUpdates_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImTextureStatus_WantDestroy;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImTextureStatus_WantDestroy;")
     private static native int ImTextureStatus_WantDestroy_NATIVE();
 }

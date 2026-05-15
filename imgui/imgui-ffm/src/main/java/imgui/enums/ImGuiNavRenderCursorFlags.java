@@ -41,88 +41,46 @@ public enum ImGuiNavRenderCursorFlags implements NativeEnum<ImGuiNavRenderCursor
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNavRenderCursorFlags_None;
-*/
     private static int ImGuiNavRenderCursorFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNavRenderCursorFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNavRenderCursorFlags_Compact;
-*/
     private static int ImGuiNavRenderCursorFlags_Compact_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNavRenderCursorFlags_Compact_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNavRenderCursorFlags_AlwaysDraw;
-*/
     private static int ImGuiNavRenderCursorFlags_AlwaysDraw_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNavRenderCursorFlags_AlwaysDraw_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNavRenderCursorFlags_NoRounding;
-*/
     private static int ImGuiNavRenderCursorFlags_NoRounding_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNavRenderCursorFlags_NoRounding_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiNavRenderCursorFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinavrendercursorflags_imguinavrendercursorflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiNavRenderCursorFlags_Compact_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinavrendercursorflags_imguinavrendercursorflags_compact_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiNavRenderCursorFlags_AlwaysDraw_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinavrendercursorflags_imguinavrendercursorflags_alwaysdraw_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
-
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
-
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
-
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
-
-        static final java.lang.invoke.MethodHandle ImGuiNavRenderCursorFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNavRenderCursorFlags_ImGuiNavRenderCursorFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiNavRenderCursorFlags_Compact_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNavRenderCursorFlags_ImGuiNavRenderCursorFlags_1Compact_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiNavRenderCursorFlags_AlwaysDraw_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNavRenderCursorFlags_ImGuiNavRenderCursorFlags_1AlwaysDraw_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiNavRenderCursorFlags_NoRounding_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNavRenderCursorFlags_ImGuiNavRenderCursorFlags_1NoRounding_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiNavRenderCursorFlags_NoRounding_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinavrendercursorflags_imguinavrendercursorflags_norounding_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

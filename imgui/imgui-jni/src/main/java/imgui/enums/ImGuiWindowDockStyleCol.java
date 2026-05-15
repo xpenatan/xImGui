@@ -43,48 +43,39 @@ public enum ImGuiWindowDockStyleCol implements NativeEnum<ImGuiWindowDockStyleCo
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowDockStyleCol_Text;
-*/
-    private static native int ImGuiWindowDockStyleCol_Text_NATIVE();
+    private static int ImGuiWindowDockStyleCol_Text_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiWindowDockStyleCol.ImGuiWindowDockStyleCol_Text_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowDockStyleCol_TabHovered;
-*/
-    private static native int ImGuiWindowDockStyleCol_TabHovered_NATIVE();
+    private static int ImGuiWindowDockStyleCol_TabHovered_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiWindowDockStyleCol.ImGuiWindowDockStyleCol_TabHovered_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowDockStyleCol_TabFocused;
-*/
-    private static native int ImGuiWindowDockStyleCol_TabFocused_NATIVE();
+    private static int ImGuiWindowDockStyleCol_TabFocused_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiWindowDockStyleCol.ImGuiWindowDockStyleCol_TabFocused_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowDockStyleCol_TabSelected;
-*/
-    private static native int ImGuiWindowDockStyleCol_TabSelected_NATIVE();
+    private static int ImGuiWindowDockStyleCol_TabSelected_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiWindowDockStyleCol.ImGuiWindowDockStyleCol_TabSelected_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowDockStyleCol_TabSelectedOverline;
-*/
-    private static native int ImGuiWindowDockStyleCol_TabSelectedOverline_NATIVE();
+    private static int ImGuiWindowDockStyleCol_TabSelectedOverline_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiWindowDockStyleCol.ImGuiWindowDockStyleCol_TabSelectedOverline_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowDockStyleCol_TabDimmed;
-*/
-    private static native int ImGuiWindowDockStyleCol_TabDimmed_NATIVE();
+    private static int ImGuiWindowDockStyleCol_TabDimmed_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiWindowDockStyleCol.ImGuiWindowDockStyleCol_TabDimmed_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowDockStyleCol_TabDimmedSelected;
-*/
-    private static native int ImGuiWindowDockStyleCol_TabDimmedSelected_NATIVE();
+    private static int ImGuiWindowDockStyleCol_TabDimmedSelected_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiWindowDockStyleCol.ImGuiWindowDockStyleCol_TabDimmedSelected_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowDockStyleCol_TabDimmedSelectedOverline;
-*/
-    private static native int ImGuiWindowDockStyleCol_TabDimmedSelectedOverline_NATIVE();
+    private static int ImGuiWindowDockStyleCol_TabDimmedSelectedOverline_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiWindowDockStyleCol.ImGuiWindowDockStyleCol_TabDimmedSelectedOverline_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowDockStyleCol_COUNT;
-*/
-    private static native int ImGuiWindowDockStyleCol_COUNT_NATIVE();
+    private static int ImGuiWindowDockStyleCol_COUNT_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiWindowDockStyleCol.ImGuiWindowDockStyleCol_COUNT_NATIVE();
+    }
 }

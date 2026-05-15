@@ -34,8 +34,7 @@ public enum ImGuiComboFlagsPrivate_ implements NativeEnum<ImGuiComboFlagsPrivate
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiComboFlags_CustomPreview;
-*/
-    private static native int ImGuiComboFlags_CustomPreview_NATIVE();
+    private static int ImGuiComboFlags_CustomPreview_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiComboFlagsPrivate_.ImGuiComboFlags_CustomPreview_NATIVE();
+    }
 }

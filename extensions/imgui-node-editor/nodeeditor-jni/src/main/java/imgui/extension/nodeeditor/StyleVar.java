@@ -62,143 +62,115 @@ public enum StyleVar implements NativeEnum<StyleVar> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_NodePadding;
-*/
-    private static native int StyleVar_NodePadding_NATIVE();
+    private static int StyleVar_NodePadding_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_NodePadding_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_NodeRounding;
-*/
-    private static native int StyleVar_NodeRounding_NATIVE();
+    private static int StyleVar_NodeRounding_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_NodeRounding_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_NodeBorderWidth;
-*/
-    private static native int StyleVar_NodeBorderWidth_NATIVE();
+    private static int StyleVar_NodeBorderWidth_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_NodeBorderWidth_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_HoveredNodeBorderWidth;
-*/
-    private static native int StyleVar_HoveredNodeBorderWidth_NATIVE();
+    private static int StyleVar_HoveredNodeBorderWidth_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_HoveredNodeBorderWidth_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_SelectedNodeBorderWidth;
-*/
-    private static native int StyleVar_SelectedNodeBorderWidth_NATIVE();
+    private static int StyleVar_SelectedNodeBorderWidth_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_SelectedNodeBorderWidth_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_PinRounding;
-*/
-    private static native int StyleVar_PinRounding_NATIVE();
+    private static int StyleVar_PinRounding_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_PinRounding_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_PinBorderWidth;
-*/
-    private static native int StyleVar_PinBorderWidth_NATIVE();
+    private static int StyleVar_PinBorderWidth_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_PinBorderWidth_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_LinkStrength;
-*/
-    private static native int StyleVar_LinkStrength_NATIVE();
+    private static int StyleVar_LinkStrength_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_LinkStrength_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_SourceDirection;
-*/
-    private static native int StyleVar_SourceDirection_NATIVE();
+    private static int StyleVar_SourceDirection_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_SourceDirection_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_TargetDirection;
-*/
-    private static native int StyleVar_TargetDirection_NATIVE();
+    private static int StyleVar_TargetDirection_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_TargetDirection_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_ScrollDuration;
-*/
-    private static native int StyleVar_ScrollDuration_NATIVE();
+    private static int StyleVar_ScrollDuration_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_ScrollDuration_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_FlowMarkerDistance;
-*/
-    private static native int StyleVar_FlowMarkerDistance_NATIVE();
+    private static int StyleVar_FlowMarkerDistance_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_FlowMarkerDistance_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_FlowSpeed;
-*/
-    private static native int StyleVar_FlowSpeed_NATIVE();
+    private static int StyleVar_FlowSpeed_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_FlowSpeed_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_FlowDuration;
-*/
-    private static native int StyleVar_FlowDuration_NATIVE();
+    private static int StyleVar_FlowDuration_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_FlowDuration_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_PivotAlignment;
-*/
-    private static native int StyleVar_PivotAlignment_NATIVE();
+    private static int StyleVar_PivotAlignment_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_PivotAlignment_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_PivotSize;
-*/
-    private static native int StyleVar_PivotSize_NATIVE();
+    private static int StyleVar_PivotSize_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_PivotSize_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_PivotScale;
-*/
-    private static native int StyleVar_PivotScale_NATIVE();
+    private static int StyleVar_PivotScale_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_PivotScale_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_PinCorners;
-*/
-    private static native int StyleVar_PinCorners_NATIVE();
+    private static int StyleVar_PinCorners_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_PinCorners_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_PinRadius;
-*/
-    private static native int StyleVar_PinRadius_NATIVE();
+    private static int StyleVar_PinRadius_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_PinRadius_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_PinArrowSize;
-*/
-    private static native int StyleVar_PinArrowSize_NATIVE();
+    private static int StyleVar_PinArrowSize_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_PinArrowSize_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_PinArrowWidth;
-*/
-    private static native int StyleVar_PinArrowWidth_NATIVE();
+    private static int StyleVar_PinArrowWidth_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_PinArrowWidth_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_GroupRounding;
-*/
-    private static native int StyleVar_GroupRounding_NATIVE();
+    private static int StyleVar_GroupRounding_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_GroupRounding_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_GroupBorderWidth;
-*/
-    private static native int StyleVar_GroupBorderWidth_NATIVE();
+    private static int StyleVar_GroupBorderWidth_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_GroupBorderWidth_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_HighlightConnectedLinks;
-*/
-    private static native int StyleVar_HighlightConnectedLinks_NATIVE();
+    private static int StyleVar_HighlightConnectedLinks_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_HighlightConnectedLinks_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_SnapLinkToPinDir;
-*/
-    private static native int StyleVar_SnapLinkToPinDir_NATIVE();
+    private static int StyleVar_SnapLinkToPinDir_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_SnapLinkToPinDir_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_HoveredNodeBorderOffset;
-*/
-    private static native int StyleVar_HoveredNodeBorderOffset_NATIVE();
+    private static int StyleVar_HoveredNodeBorderOffset_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_HoveredNodeBorderOffset_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_SelectedNodeBorderOffset;
-*/
-    private static native int StyleVar_SelectedNodeBorderOffset_NATIVE();
+    private static int StyleVar_SelectedNodeBorderOffset_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_SelectedNodeBorderOffset_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleVar_Count;
-*/
-    private static native int StyleVar_Count_NATIVE();
+    private static int StyleVar_Count_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleVar.StyleVar_Count_NATIVE();
+    }
 }

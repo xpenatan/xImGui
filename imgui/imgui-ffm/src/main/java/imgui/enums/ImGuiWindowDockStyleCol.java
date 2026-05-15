@@ -50,153 +50,96 @@ public enum ImGuiWindowDockStyleCol implements NativeEnum<ImGuiWindowDockStyleCo
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowDockStyleCol_Text;
-*/
     private static int ImGuiWindowDockStyleCol_Text_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowDockStyleCol_Text_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowDockStyleCol_TabHovered;
-*/
     private static int ImGuiWindowDockStyleCol_TabHovered_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowDockStyleCol_TabHovered_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowDockStyleCol_TabFocused;
-*/
     private static int ImGuiWindowDockStyleCol_TabFocused_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowDockStyleCol_TabFocused_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowDockStyleCol_TabSelected;
-*/
     private static int ImGuiWindowDockStyleCol_TabSelected_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowDockStyleCol_TabSelected_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowDockStyleCol_TabSelectedOverline;
-*/
     private static int ImGuiWindowDockStyleCol_TabSelectedOverline_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowDockStyleCol_TabSelectedOverline_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowDockStyleCol_TabDimmed;
-*/
     private static int ImGuiWindowDockStyleCol_TabDimmed_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowDockStyleCol_TabDimmed_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowDockStyleCol_TabDimmedSelected;
-*/
     private static int ImGuiWindowDockStyleCol_TabDimmedSelected_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowDockStyleCol_TabDimmedSelected_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowDockStyleCol_TabDimmedSelectedOverline;
-*/
     private static int ImGuiWindowDockStyleCol_TabDimmedSelectedOverline_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowDockStyleCol_TabDimmedSelectedOverline_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowDockStyleCol_COUNT;
-*/
     private static int ImGuiWindowDockStyleCol_COUNT_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowDockStyleCol_COUNT_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiWindowDockStyleCol_Text_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowdockstylecol_imguiwindowdockstylecol_text_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiWindowDockStyleCol_TabHovered_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowdockstylecol_imguiwindowdockstylecol_tabhovered_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiWindowDockStyleCol_TabFocused_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowdockstylecol_imguiwindowdockstylecol_tabfocused_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiWindowDockStyleCol_TabSelected_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowdockstylecol_imguiwindowdockstylecol_tabselected_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiWindowDockStyleCol_TabSelectedOverline_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowdockstylecol_imguiwindowdockstylecol_tabselectedoverline_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiWindowDockStyleCol_TabDimmed_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowdockstylecol_imguiwindowdockstylecol_tabdimmed_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiWindowDockStyleCol_TabDimmedSelected_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowdockstylecol_imguiwindowdockstylecol_tabdimmedselected_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowDockStyleCol_Text_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowDockStyleCol_ImGuiWindowDockStyleCol_1Text_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowDockStyleCol_TabDimmedSelectedOverline_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowdockstylecol_imguiwindowdockstylecol_tabdimmedselectedoverline_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowDockStyleCol_TabHovered_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowDockStyleCol_ImGuiWindowDockStyleCol_1TabHovered_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiWindowDockStyleCol_TabFocused_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowDockStyleCol_ImGuiWindowDockStyleCol_1TabFocused_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiWindowDockStyleCol_TabSelected_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowDockStyleCol_ImGuiWindowDockStyleCol_1TabSelected_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiWindowDockStyleCol_TabSelectedOverline_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowDockStyleCol_ImGuiWindowDockStyleCol_1TabSelectedOverline_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiWindowDockStyleCol_TabDimmed_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowDockStyleCol_ImGuiWindowDockStyleCol_1TabDimmed_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiWindowDockStyleCol_TabDimmedSelected_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowDockStyleCol_ImGuiWindowDockStyleCol_1TabDimmedSelected_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiWindowDockStyleCol_TabDimmedSelectedOverline_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowDockStyleCol_ImGuiWindowDockStyleCol_1TabDimmedSelectedOverline_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiWindowDockStyleCol_COUNT_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowDockStyleCol_ImGuiWindowDockStyleCol_1COUNT_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowDockStyleCol_COUNT_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowdockstylecol_imguiwindowdockstylecol_count_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

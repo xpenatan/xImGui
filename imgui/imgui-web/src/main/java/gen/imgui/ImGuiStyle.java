@@ -62,10 +62,6 @@ public class ImGuiStyle extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-imgui.destroy(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);imgui.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
@@ -73,10 +69,6 @@ imgui.destroy(jsObj);
         internal_native_ScaleAllSizes(native_address, scale_factor);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.ScaleAllSizes(scale_factor);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "scale_factor"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.ScaleAllSizes(scale_factor);")
     public static native void internal_native_ScaleAllSizes(int this_addr, float scale_factor);
 
@@ -84,10 +76,6 @@ jsObj.ScaleAllSizes(scale_factor);
         return internal_native_get_Alpha(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_Alpha();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_Alpha();")
     public static native float internal_native_get_Alpha(int this_addr);
 
@@ -95,10 +83,6 @@ return jsObj.get_Alpha();
         internal_native_set_Alpha(native_address, Alpha);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_Alpha(Alpha);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "Alpha"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_Alpha(Alpha);")
     public static native void internal_native_set_Alpha(int this_addr, float Alpha);
 
@@ -106,10 +90,6 @@ jsObj.set_Alpha(Alpha);
         return internal_native_get_DisabledAlpha(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_DisabledAlpha();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_DisabledAlpha();")
     public static native float internal_native_get_DisabledAlpha(int this_addr);
 
@@ -117,10 +97,6 @@ return jsObj.get_DisabledAlpha();
         internal_native_set_DisabledAlpha(native_address, DisabledAlpha);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_DisabledAlpha(DisabledAlpha);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "DisabledAlpha"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_DisabledAlpha(DisabledAlpha);")
     public static native void internal_native_set_DisabledAlpha(int this_addr, float DisabledAlpha);
 
@@ -134,12 +110,6 @@ jsObj.set_DisabledAlpha(DisabledAlpha);
         return ImVec2_TEMP_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-var returnedJSObj = jsObj.get_WindowPadding();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);var returnedJSObj = jsObj.get_WindowPadding();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_WindowPadding_addr(int this_addr);
 
@@ -147,10 +117,6 @@ return imgui.getPointer(returnedJSObj);
         internal_native_set_WindowPadding(native_address, WindowPadding.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_WindowPadding(WindowPadding_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "WindowPadding_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_WindowPadding(WindowPadding_addr);")
     public static native void internal_native_set_WindowPadding(int this_addr, int WindowPadding_addr);
 
@@ -158,10 +124,6 @@ jsObj.set_WindowPadding(WindowPadding_addr);
         return internal_native_get_WindowRounding(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_WindowRounding();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_WindowRounding();")
     public static native float internal_native_get_WindowRounding(int this_addr);
 
@@ -169,10 +131,6 @@ return jsObj.get_WindowRounding();
         internal_native_set_WindowRounding(native_address, WindowRounding);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_WindowRounding(WindowRounding);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "WindowRounding"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_WindowRounding(WindowRounding);")
     public static native void internal_native_set_WindowRounding(int this_addr, float WindowRounding);
 
@@ -180,10 +138,6 @@ jsObj.set_WindowRounding(WindowRounding);
         return internal_native_get_WindowBorderSize(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_WindowBorderSize();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_WindowBorderSize();")
     public static native float internal_native_get_WindowBorderSize(int this_addr);
 
@@ -191,10 +145,6 @@ return jsObj.get_WindowBorderSize();
         internal_native_set_WindowBorderSize(native_address, WindowBorderSize);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_WindowBorderSize(WindowBorderSize);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "WindowBorderSize"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_WindowBorderSize(WindowBorderSize);")
     public static native void internal_native_set_WindowBorderSize(int this_addr, float WindowBorderSize);
 
@@ -208,12 +158,6 @@ jsObj.set_WindowBorderSize(WindowBorderSize);
         return ImVec2_TEMP_GEN_1;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-var returnedJSObj = jsObj.get_WindowMinSize();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);var returnedJSObj = jsObj.get_WindowMinSize();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_WindowMinSize_addr(int this_addr);
 
@@ -221,10 +165,6 @@ return imgui.getPointer(returnedJSObj);
         internal_native_set_WindowMinSize(native_address, WindowMinSize.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_WindowMinSize(WindowMinSize_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "WindowMinSize_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_WindowMinSize(WindowMinSize_addr);")
     public static native void internal_native_set_WindowMinSize(int this_addr, int WindowMinSize_addr);
 
@@ -238,12 +178,6 @@ jsObj.set_WindowMinSize(WindowMinSize_addr);
         return ImVec2_TEMP_GEN_2;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-var returnedJSObj = jsObj.get_WindowTitleAlign();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);var returnedJSObj = jsObj.get_WindowTitleAlign();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_WindowTitleAlign_addr(int this_addr);
 
@@ -251,10 +185,6 @@ return imgui.getPointer(returnedJSObj);
         internal_native_set_WindowTitleAlign(native_address, WindowTitleAlign.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_WindowTitleAlign(WindowTitleAlign_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "WindowTitleAlign_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_WindowTitleAlign(WindowTitleAlign_addr);")
     public static native void internal_native_set_WindowTitleAlign(int this_addr, int WindowTitleAlign_addr);
 
@@ -269,10 +199,6 @@ jsObj.set_WindowTitleAlign(WindowTitleAlign_addr);
         return ImGuiDir.CUSTOM.setValue(value);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_WindowMenuButtonPosition();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_WindowMenuButtonPosition();")
     public static native int internal_native_get_WindowMenuButtonPosition(int this_addr);
 
@@ -280,10 +206,6 @@ return jsObj.get_WindowMenuButtonPosition();
         internal_native_set_WindowMenuButtonPosition(native_address, WindowMenuButtonPosition.getValue());
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_WindowMenuButtonPosition(WindowMenuButtonPosition);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "WindowMenuButtonPosition"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_WindowMenuButtonPosition(WindowMenuButtonPosition);")
     public static native void internal_native_set_WindowMenuButtonPosition(int this_addr, int WindowMenuButtonPosition);
 
@@ -291,10 +213,6 @@ jsObj.set_WindowMenuButtonPosition(WindowMenuButtonPosition);
         return internal_native_get_ChildRounding(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_ChildRounding();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_ChildRounding();")
     public static native float internal_native_get_ChildRounding(int this_addr);
 
@@ -302,10 +220,6 @@ return jsObj.get_ChildRounding();
         internal_native_set_ChildRounding(native_address, ChildRounding);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_ChildRounding(ChildRounding);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "ChildRounding"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_ChildRounding(ChildRounding);")
     public static native void internal_native_set_ChildRounding(int this_addr, float ChildRounding);
 
@@ -313,10 +227,6 @@ jsObj.set_ChildRounding(ChildRounding);
         return internal_native_get_ChildBorderSize(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_ChildBorderSize();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_ChildBorderSize();")
     public static native float internal_native_get_ChildBorderSize(int this_addr);
 
@@ -324,10 +234,6 @@ return jsObj.get_ChildBorderSize();
         internal_native_set_ChildBorderSize(native_address, ChildBorderSize);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_ChildBorderSize(ChildBorderSize);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "ChildBorderSize"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_ChildBorderSize(ChildBorderSize);")
     public static native void internal_native_set_ChildBorderSize(int this_addr, float ChildBorderSize);
 
@@ -335,10 +241,6 @@ jsObj.set_ChildBorderSize(ChildBorderSize);
         return internal_native_get_PopupRounding(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_PopupRounding();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_PopupRounding();")
     public static native float internal_native_get_PopupRounding(int this_addr);
 
@@ -346,10 +248,6 @@ return jsObj.get_PopupRounding();
         internal_native_set_PopupRounding(native_address, PopupRounding);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_PopupRounding(PopupRounding);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "PopupRounding"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_PopupRounding(PopupRounding);")
     public static native void internal_native_set_PopupRounding(int this_addr, float PopupRounding);
 
@@ -357,10 +255,6 @@ jsObj.set_PopupRounding(PopupRounding);
         return internal_native_get_PopupBorderSize(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_PopupBorderSize();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_PopupBorderSize();")
     public static native float internal_native_get_PopupBorderSize(int this_addr);
 
@@ -368,10 +262,6 @@ return jsObj.get_PopupBorderSize();
         internal_native_set_PopupBorderSize(native_address, PopupBorderSize);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_PopupBorderSize(PopupBorderSize);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "PopupBorderSize"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_PopupBorderSize(PopupBorderSize);")
     public static native void internal_native_set_PopupBorderSize(int this_addr, float PopupBorderSize);
 
@@ -385,12 +275,6 @@ jsObj.set_PopupBorderSize(PopupBorderSize);
         return ImVec2_TEMP_GEN_3;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-var returnedJSObj = jsObj.get_FramePadding();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);var returnedJSObj = jsObj.get_FramePadding();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_FramePadding_addr(int this_addr);
 
@@ -398,10 +282,6 @@ return imgui.getPointer(returnedJSObj);
         internal_native_set_FramePadding(native_address, FramePadding.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_FramePadding(FramePadding_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "FramePadding_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_FramePadding(FramePadding_addr);")
     public static native void internal_native_set_FramePadding(int this_addr, int FramePadding_addr);
 
@@ -409,10 +289,6 @@ jsObj.set_FramePadding(FramePadding_addr);
         return internal_native_get_FrameRounding(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_FrameRounding();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_FrameRounding();")
     public static native float internal_native_get_FrameRounding(int this_addr);
 
@@ -420,10 +296,6 @@ return jsObj.get_FrameRounding();
         internal_native_set_FrameRounding(native_address, FrameRounding);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_FrameRounding(FrameRounding);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "FrameRounding"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_FrameRounding(FrameRounding);")
     public static native void internal_native_set_FrameRounding(int this_addr, float FrameRounding);
 
@@ -431,10 +303,6 @@ jsObj.set_FrameRounding(FrameRounding);
         return internal_native_get_FrameBorderSize(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_FrameBorderSize();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_FrameBorderSize();")
     public static native float internal_native_get_FrameBorderSize(int this_addr);
 
@@ -442,10 +310,6 @@ return jsObj.get_FrameBorderSize();
         internal_native_set_FrameBorderSize(native_address, FrameBorderSize);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_FrameBorderSize(FrameBorderSize);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "FrameBorderSize"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_FrameBorderSize(FrameBorderSize);")
     public static native void internal_native_set_FrameBorderSize(int this_addr, float FrameBorderSize);
 
@@ -459,12 +323,6 @@ jsObj.set_FrameBorderSize(FrameBorderSize);
         return ImVec2_TEMP_GEN_4;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-var returnedJSObj = jsObj.get_ItemSpacing();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);var returnedJSObj = jsObj.get_ItemSpacing();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_ItemSpacing_addr(int this_addr);
 
@@ -472,10 +330,6 @@ return imgui.getPointer(returnedJSObj);
         internal_native_set_ItemSpacing(native_address, ItemSpacing.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_ItemSpacing(ItemSpacing_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "ItemSpacing_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_ItemSpacing(ItemSpacing_addr);")
     public static native void internal_native_set_ItemSpacing(int this_addr, int ItemSpacing_addr);
 
@@ -489,12 +343,6 @@ jsObj.set_ItemSpacing(ItemSpacing_addr);
         return ImVec2_TEMP_GEN_5;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-var returnedJSObj = jsObj.get_ItemInnerSpacing();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);var returnedJSObj = jsObj.get_ItemInnerSpacing();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_ItemInnerSpacing_addr(int this_addr);
 
@@ -502,10 +350,6 @@ return imgui.getPointer(returnedJSObj);
         internal_native_set_ItemInnerSpacing(native_address, ItemInnerSpacing.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_ItemInnerSpacing(ItemInnerSpacing_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "ItemInnerSpacing_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_ItemInnerSpacing(ItemInnerSpacing_addr);")
     public static native void internal_native_set_ItemInnerSpacing(int this_addr, int ItemInnerSpacing_addr);
 
@@ -519,12 +363,6 @@ jsObj.set_ItemInnerSpacing(ItemInnerSpacing_addr);
         return ImVec2_TEMP_GEN_6;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-var returnedJSObj = jsObj.get_CellPadding();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);var returnedJSObj = jsObj.get_CellPadding();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_CellPadding_addr(int this_addr);
 
@@ -532,10 +370,6 @@ return imgui.getPointer(returnedJSObj);
         internal_native_set_CellPadding(native_address, CellPadding.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_CellPadding(CellPadding_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "CellPadding_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_CellPadding(CellPadding_addr);")
     public static native void internal_native_set_CellPadding(int this_addr, int CellPadding_addr);
 
@@ -549,12 +383,6 @@ jsObj.set_CellPadding(CellPadding_addr);
         return ImVec2_TEMP_GEN_7;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-var returnedJSObj = jsObj.get_TouchExtraPadding();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);var returnedJSObj = jsObj.get_TouchExtraPadding();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_TouchExtraPadding_addr(int this_addr);
 
@@ -562,10 +390,6 @@ return imgui.getPointer(returnedJSObj);
         internal_native_set_TouchExtraPadding(native_address, TouchExtraPadding.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_TouchExtraPadding(TouchExtraPadding_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "TouchExtraPadding_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_TouchExtraPadding(TouchExtraPadding_addr);")
     public static native void internal_native_set_TouchExtraPadding(int this_addr, int TouchExtraPadding_addr);
 
@@ -573,10 +397,6 @@ jsObj.set_TouchExtraPadding(TouchExtraPadding_addr);
         return internal_native_get_IndentSpacing(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_IndentSpacing();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_IndentSpacing();")
     public static native float internal_native_get_IndentSpacing(int this_addr);
 
@@ -584,10 +404,6 @@ return jsObj.get_IndentSpacing();
         internal_native_set_IndentSpacing(native_address, IndentSpacing);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_IndentSpacing(IndentSpacing);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "IndentSpacing"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_IndentSpacing(IndentSpacing);")
     public static native void internal_native_set_IndentSpacing(int this_addr, float IndentSpacing);
 
@@ -595,10 +411,6 @@ jsObj.set_IndentSpacing(IndentSpacing);
         return internal_native_get_ColumnsMinSpacing(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_ColumnsMinSpacing();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_ColumnsMinSpacing();")
     public static native float internal_native_get_ColumnsMinSpacing(int this_addr);
 
@@ -606,10 +418,6 @@ return jsObj.get_ColumnsMinSpacing();
         internal_native_set_ColumnsMinSpacing(native_address, ColumnsMinSpacing);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_ColumnsMinSpacing(ColumnsMinSpacing);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "ColumnsMinSpacing"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_ColumnsMinSpacing(ColumnsMinSpacing);")
     public static native void internal_native_set_ColumnsMinSpacing(int this_addr, float ColumnsMinSpacing);
 
@@ -617,10 +425,6 @@ jsObj.set_ColumnsMinSpacing(ColumnsMinSpacing);
         return internal_native_get_ScrollbarSize(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_ScrollbarSize();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_ScrollbarSize();")
     public static native float internal_native_get_ScrollbarSize(int this_addr);
 
@@ -628,10 +432,6 @@ return jsObj.get_ScrollbarSize();
         internal_native_set_ScrollbarSize(native_address, ScrollbarSize);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_ScrollbarSize(ScrollbarSize);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "ScrollbarSize"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_ScrollbarSize(ScrollbarSize);")
     public static native void internal_native_set_ScrollbarSize(int this_addr, float ScrollbarSize);
 
@@ -639,10 +439,6 @@ jsObj.set_ScrollbarSize(ScrollbarSize);
         return internal_native_get_ScrollbarRounding(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_ScrollbarRounding();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_ScrollbarRounding();")
     public static native float internal_native_get_ScrollbarRounding(int this_addr);
 
@@ -650,10 +446,6 @@ return jsObj.get_ScrollbarRounding();
         internal_native_set_ScrollbarRounding(native_address, ScrollbarRounding);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_ScrollbarRounding(ScrollbarRounding);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "ScrollbarRounding"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_ScrollbarRounding(ScrollbarRounding);")
     public static native void internal_native_set_ScrollbarRounding(int this_addr, float ScrollbarRounding);
 
@@ -661,10 +453,6 @@ jsObj.set_ScrollbarRounding(ScrollbarRounding);
         return internal_native_get_GrabMinSize(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_GrabMinSize();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_GrabMinSize();")
     public static native float internal_native_get_GrabMinSize(int this_addr);
 
@@ -672,10 +460,6 @@ return jsObj.get_GrabMinSize();
         internal_native_set_GrabMinSize(native_address, GrabMinSize);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_GrabMinSize(GrabMinSize);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "GrabMinSize"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_GrabMinSize(GrabMinSize);")
     public static native void internal_native_set_GrabMinSize(int this_addr, float GrabMinSize);
 
@@ -683,10 +467,6 @@ jsObj.set_GrabMinSize(GrabMinSize);
         return internal_native_get_GrabRounding(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_GrabRounding();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_GrabRounding();")
     public static native float internal_native_get_GrabRounding(int this_addr);
 
@@ -694,10 +474,6 @@ return jsObj.get_GrabRounding();
         internal_native_set_GrabRounding(native_address, GrabRounding);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_GrabRounding(GrabRounding);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "GrabRounding"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_GrabRounding(GrabRounding);")
     public static native void internal_native_set_GrabRounding(int this_addr, float GrabRounding);
 
@@ -705,10 +481,6 @@ jsObj.set_GrabRounding(GrabRounding);
         return internal_native_get_LogSliderDeadzone(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_LogSliderDeadzone();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_LogSliderDeadzone();")
     public static native float internal_native_get_LogSliderDeadzone(int this_addr);
 
@@ -716,10 +488,6 @@ return jsObj.get_LogSliderDeadzone();
         internal_native_set_LogSliderDeadzone(native_address, LogSliderDeadzone);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_LogSliderDeadzone(LogSliderDeadzone);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "LogSliderDeadzone"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_LogSliderDeadzone(LogSliderDeadzone);")
     public static native void internal_native_set_LogSliderDeadzone(int this_addr, float LogSliderDeadzone);
 
@@ -727,10 +495,6 @@ jsObj.set_LogSliderDeadzone(LogSliderDeadzone);
         return internal_native_get_TabRounding(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_TabRounding();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_TabRounding();")
     public static native float internal_native_get_TabRounding(int this_addr);
 
@@ -738,10 +502,6 @@ return jsObj.get_TabRounding();
         internal_native_set_TabRounding(native_address, TabRounding);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_TabRounding(TabRounding);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "TabRounding"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_TabRounding(TabRounding);")
     public static native void internal_native_set_TabRounding(int this_addr, float TabRounding);
 
@@ -749,10 +509,6 @@ jsObj.set_TabRounding(TabRounding);
         return internal_native_get_TabBorderSize(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_TabBorderSize();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_TabBorderSize();")
     public static native float internal_native_get_TabBorderSize(int this_addr);
 
@@ -760,10 +516,6 @@ return jsObj.get_TabBorderSize();
         internal_native_set_TabBorderSize(native_address, TabBorderSize);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_TabBorderSize(TabBorderSize);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "TabBorderSize"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_TabBorderSize(TabBorderSize);")
     public static native void internal_native_set_TabBorderSize(int this_addr, float TabBorderSize);
 
@@ -771,10 +523,6 @@ jsObj.set_TabBorderSize(TabBorderSize);
         return internal_native_get_TabBarBorderSize(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_TabBarBorderSize();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_TabBarBorderSize();")
     public static native float internal_native_get_TabBarBorderSize(int this_addr);
 
@@ -782,10 +530,6 @@ return jsObj.get_TabBarBorderSize();
         internal_native_set_TabBarBorderSize(native_address, TabBarBorderSize);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_TabBarBorderSize(TabBarBorderSize);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "TabBarBorderSize"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_TabBarBorderSize(TabBarBorderSize);")
     public static native void internal_native_set_TabBarBorderSize(int this_addr, float TabBarBorderSize);
 
@@ -800,10 +544,6 @@ jsObj.set_TabBarBorderSize(TabBarBorderSize);
         return ImGuiDir.CUSTOM.setValue(value);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_ColorButtonPosition();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_ColorButtonPosition();")
     public static native int internal_native_get_ColorButtonPosition(int this_addr);
 
@@ -811,10 +551,6 @@ return jsObj.get_ColorButtonPosition();
         internal_native_set_ColorButtonPosition(native_address, ColorButtonPosition.getValue());
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_ColorButtonPosition(ColorButtonPosition);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "ColorButtonPosition"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_ColorButtonPosition(ColorButtonPosition);")
     public static native void internal_native_set_ColorButtonPosition(int this_addr, int ColorButtonPosition);
 
@@ -828,12 +564,6 @@ jsObj.set_ColorButtonPosition(ColorButtonPosition);
         return ImVec2_TEMP_GEN_8;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-var returnedJSObj = jsObj.get_ButtonTextAlign();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);var returnedJSObj = jsObj.get_ButtonTextAlign();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_ButtonTextAlign_addr(int this_addr);
 
@@ -841,10 +571,6 @@ return imgui.getPointer(returnedJSObj);
         internal_native_set_ButtonTextAlign(native_address, ButtonTextAlign.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_ButtonTextAlign(ButtonTextAlign_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "ButtonTextAlign_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_ButtonTextAlign(ButtonTextAlign_addr);")
     public static native void internal_native_set_ButtonTextAlign(int this_addr, int ButtonTextAlign_addr);
 
@@ -858,12 +584,6 @@ jsObj.set_ButtonTextAlign(ButtonTextAlign_addr);
         return ImVec2_TEMP_GEN_9;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-var returnedJSObj = jsObj.get_SelectableTextAlign();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);var returnedJSObj = jsObj.get_SelectableTextAlign();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_SelectableTextAlign_addr(int this_addr);
 
@@ -871,10 +591,6 @@ return imgui.getPointer(returnedJSObj);
         internal_native_set_SelectableTextAlign(native_address, SelectableTextAlign.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_SelectableTextAlign(SelectableTextAlign_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "SelectableTextAlign_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_SelectableTextAlign(SelectableTextAlign_addr);")
     public static native void internal_native_set_SelectableTextAlign(int this_addr, int SelectableTextAlign_addr);
 
@@ -882,10 +598,6 @@ jsObj.set_SelectableTextAlign(SelectableTextAlign_addr);
         return internal_native_get_SeparatorTextBorderSize(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_SeparatorTextBorderSize();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_SeparatorTextBorderSize();")
     public static native float internal_native_get_SeparatorTextBorderSize(int this_addr);
 
@@ -893,10 +605,6 @@ return jsObj.get_SeparatorTextBorderSize();
         internal_native_set_SeparatorTextBorderSize(native_address, SeparatorTextBorderSize);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_SeparatorTextBorderSize(SeparatorTextBorderSize);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "SeparatorTextBorderSize"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_SeparatorTextBorderSize(SeparatorTextBorderSize);")
     public static native void internal_native_set_SeparatorTextBorderSize(int this_addr, float SeparatorTextBorderSize);
 
@@ -910,12 +618,6 @@ jsObj.set_SeparatorTextBorderSize(SeparatorTextBorderSize);
         return ImVec2_TEMP_GEN_10;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-var returnedJSObj = jsObj.get_SeparatorTextAlign();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);var returnedJSObj = jsObj.get_SeparatorTextAlign();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_SeparatorTextAlign_addr(int this_addr);
 
@@ -923,10 +625,6 @@ return imgui.getPointer(returnedJSObj);
         internal_native_set_SeparatorTextAlign(native_address, SeparatorTextAlign.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_SeparatorTextAlign(SeparatorTextAlign_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "SeparatorTextAlign_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_SeparatorTextAlign(SeparatorTextAlign_addr);")
     public static native void internal_native_set_SeparatorTextAlign(int this_addr, int SeparatorTextAlign_addr);
 
@@ -940,12 +638,6 @@ jsObj.set_SeparatorTextAlign(SeparatorTextAlign_addr);
         return ImVec2_TEMP_GEN_11;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-var returnedJSObj = jsObj.get_SeparatorTextPadding();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);var returnedJSObj = jsObj.get_SeparatorTextPadding();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_SeparatorTextPadding_addr(int this_addr);
 
@@ -953,10 +645,6 @@ return imgui.getPointer(returnedJSObj);
         internal_native_set_SeparatorTextPadding(native_address, SeparatorTextPadding.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_SeparatorTextPadding(SeparatorTextPadding_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "SeparatorTextPadding_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_SeparatorTextPadding(SeparatorTextPadding_addr);")
     public static native void internal_native_set_SeparatorTextPadding(int this_addr, int SeparatorTextPadding_addr);
 
@@ -970,12 +658,6 @@ jsObj.set_SeparatorTextPadding(SeparatorTextPadding_addr);
         return ImVec2_TEMP_GEN_12;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-var returnedJSObj = jsObj.get_DisplayWindowPadding();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);var returnedJSObj = jsObj.get_DisplayWindowPadding();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_DisplayWindowPadding_addr(int this_addr);
 
@@ -983,10 +665,6 @@ return imgui.getPointer(returnedJSObj);
         internal_native_set_DisplayWindowPadding(native_address, DisplayWindowPadding.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_DisplayWindowPadding(DisplayWindowPadding_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "DisplayWindowPadding_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_DisplayWindowPadding(DisplayWindowPadding_addr);")
     public static native void internal_native_set_DisplayWindowPadding(int this_addr, int DisplayWindowPadding_addr);
 
@@ -1000,12 +678,6 @@ jsObj.set_DisplayWindowPadding(DisplayWindowPadding_addr);
         return ImVec2_TEMP_GEN_13;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-var returnedJSObj = jsObj.get_DisplaySafeAreaPadding();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);var returnedJSObj = jsObj.get_DisplaySafeAreaPadding();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_DisplaySafeAreaPadding_addr(int this_addr);
 
@@ -1013,10 +685,6 @@ return imgui.getPointer(returnedJSObj);
         internal_native_set_DisplaySafeAreaPadding(native_address, DisplaySafeAreaPadding.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_DisplaySafeAreaPadding(DisplaySafeAreaPadding_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "DisplaySafeAreaPadding_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_DisplaySafeAreaPadding(DisplaySafeAreaPadding_addr);")
     public static native void internal_native_set_DisplaySafeAreaPadding(int this_addr, int DisplaySafeAreaPadding_addr);
 
@@ -1024,10 +692,6 @@ jsObj.set_DisplaySafeAreaPadding(DisplaySafeAreaPadding_addr);
         return internal_native_get_DockingSeparatorSize(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_DockingSeparatorSize();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_DockingSeparatorSize();")
     public static native float internal_native_get_DockingSeparatorSize(int this_addr);
 
@@ -1035,10 +699,6 @@ return jsObj.get_DockingSeparatorSize();
         internal_native_set_DockingSeparatorSize(native_address, DockingSeparatorSize);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_DockingSeparatorSize(DockingSeparatorSize);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "DockingSeparatorSize"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_DockingSeparatorSize(DockingSeparatorSize);")
     public static native void internal_native_set_DockingSeparatorSize(int this_addr, float DockingSeparatorSize);
 
@@ -1046,10 +706,6 @@ jsObj.set_DockingSeparatorSize(DockingSeparatorSize);
         return internal_native_get_MouseCursorScale(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_MouseCursorScale();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_MouseCursorScale();")
     public static native float internal_native_get_MouseCursorScale(int this_addr);
 
@@ -1057,10 +713,6 @@ return jsObj.get_MouseCursorScale();
         internal_native_set_MouseCursorScale(native_address, MouseCursorScale);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_MouseCursorScale(MouseCursorScale);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "MouseCursorScale"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_MouseCursorScale(MouseCursorScale);")
     public static native void internal_native_set_MouseCursorScale(int this_addr, float MouseCursorScale);
 
@@ -1068,10 +720,6 @@ jsObj.set_MouseCursorScale(MouseCursorScale);
         return internal_native_get_AntiAliasedLines(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_AntiAliasedLines();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_AntiAliasedLines();")
     public static native boolean internal_native_get_AntiAliasedLines(int this_addr);
 
@@ -1079,10 +727,6 @@ return jsObj.get_AntiAliasedLines();
         internal_native_set_AntiAliasedLines(native_address, AntiAliasedLines);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_AntiAliasedLines(AntiAliasedLines);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "AntiAliasedLines"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_AntiAliasedLines(AntiAliasedLines);")
     public static native void internal_native_set_AntiAliasedLines(int this_addr, boolean AntiAliasedLines);
 
@@ -1090,10 +734,6 @@ jsObj.set_AntiAliasedLines(AntiAliasedLines);
         return internal_native_get_AntiAliasedLinesUseTex(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_AntiAliasedLinesUseTex();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_AntiAliasedLinesUseTex();")
     public static native boolean internal_native_get_AntiAliasedLinesUseTex(int this_addr);
 
@@ -1101,10 +741,6 @@ return jsObj.get_AntiAliasedLinesUseTex();
         internal_native_set_AntiAliasedLinesUseTex(native_address, AntiAliasedLinesUseTex);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_AntiAliasedLinesUseTex(AntiAliasedLinesUseTex);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "AntiAliasedLinesUseTex"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_AntiAliasedLinesUseTex(AntiAliasedLinesUseTex);")
     public static native void internal_native_set_AntiAliasedLinesUseTex(int this_addr, boolean AntiAliasedLinesUseTex);
 
@@ -1112,10 +748,6 @@ jsObj.set_AntiAliasedLinesUseTex(AntiAliasedLinesUseTex);
         return internal_native_get_AntiAliasedFill(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_AntiAliasedFill();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_AntiAliasedFill();")
     public static native boolean internal_native_get_AntiAliasedFill(int this_addr);
 
@@ -1123,10 +755,6 @@ return jsObj.get_AntiAliasedFill();
         internal_native_set_AntiAliasedFill(native_address, AntiAliasedFill);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_AntiAliasedFill(AntiAliasedFill);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "AntiAliasedFill"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_AntiAliasedFill(AntiAliasedFill);")
     public static native void internal_native_set_AntiAliasedFill(int this_addr, boolean AntiAliasedFill);
 
@@ -1134,10 +762,6 @@ jsObj.set_AntiAliasedFill(AntiAliasedFill);
         return internal_native_get_CurveTessellationTol(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_CurveTessellationTol();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_CurveTessellationTol();")
     public static native float internal_native_get_CurveTessellationTol(int this_addr);
 
@@ -1145,10 +769,6 @@ return jsObj.get_CurveTessellationTol();
         internal_native_set_CurveTessellationTol(native_address, CurveTessellationTol);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_CurveTessellationTol(CurveTessellationTol);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "CurveTessellationTol"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_CurveTessellationTol(CurveTessellationTol);")
     public static native void internal_native_set_CurveTessellationTol(int this_addr, float CurveTessellationTol);
 
@@ -1156,10 +776,6 @@ jsObj.set_CurveTessellationTol(CurveTessellationTol);
         return internal_native_get_CircleTessellationMaxError(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_CircleTessellationMaxError();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_CircleTessellationMaxError();")
     public static native float internal_native_get_CircleTessellationMaxError(int this_addr);
 
@@ -1167,10 +783,6 @@ return jsObj.get_CircleTessellationMaxError();
         internal_native_set_CircleTessellationMaxError(native_address, CircleTessellationMaxError);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_CircleTessellationMaxError(CircleTessellationMaxError);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "CircleTessellationMaxError"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_CircleTessellationMaxError(CircleTessellationMaxError);")
     public static native void internal_native_set_CircleTessellationMaxError(int this_addr, float CircleTessellationMaxError);
 
@@ -1178,10 +790,6 @@ jsObj.set_CircleTessellationMaxError(CircleTessellationMaxError);
         return internal_native_get_HoverStationaryDelay(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_HoverStationaryDelay();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_HoverStationaryDelay();")
     public static native float internal_native_get_HoverStationaryDelay(int this_addr);
 
@@ -1189,10 +797,6 @@ return jsObj.get_HoverStationaryDelay();
         internal_native_set_HoverStationaryDelay(native_address, HoverStationaryDelay);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_HoverStationaryDelay(HoverStationaryDelay);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "HoverStationaryDelay"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_HoverStationaryDelay(HoverStationaryDelay);")
     public static native void internal_native_set_HoverStationaryDelay(int this_addr, float HoverStationaryDelay);
 
@@ -1200,10 +804,6 @@ jsObj.set_HoverStationaryDelay(HoverStationaryDelay);
         return internal_native_get_HoverDelayShort(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_HoverDelayShort();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_HoverDelayShort();")
     public static native float internal_native_get_HoverDelayShort(int this_addr);
 
@@ -1211,10 +811,6 @@ return jsObj.get_HoverDelayShort();
         internal_native_set_HoverDelayShort(native_address, HoverDelayShort);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_HoverDelayShort(HoverDelayShort);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "HoverDelayShort"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_HoverDelayShort(HoverDelayShort);")
     public static native void internal_native_set_HoverDelayShort(int this_addr, float HoverDelayShort);
 
@@ -1222,10 +818,6 @@ jsObj.set_HoverDelayShort(HoverDelayShort);
         return internal_native_get_HoverDelayNormal(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_HoverDelayNormal();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_HoverDelayNormal();")
     public static native float internal_native_get_HoverDelayNormal(int this_addr);
 
@@ -1233,10 +825,6 @@ return jsObj.get_HoverDelayNormal();
         internal_native_set_HoverDelayNormal(native_address, HoverDelayNormal);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_HoverDelayNormal(HoverDelayNormal);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "HoverDelayNormal"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_HoverDelayNormal(HoverDelayNormal);")
     public static native void internal_native_set_HoverDelayNormal(int this_addr, float HoverDelayNormal);
 
@@ -1251,10 +839,6 @@ jsObj.set_HoverDelayNormal(HoverDelayNormal);
         return ImGuiHoveredFlags.CUSTOM.setValue(value);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_HoverFlagsForTooltipMouse();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_HoverFlagsForTooltipMouse();")
     public static native int internal_native_get_HoverFlagsForTooltipMouse(int this_addr);
 
@@ -1262,10 +846,6 @@ return jsObj.get_HoverFlagsForTooltipMouse();
         internal_native_set_HoverFlagsForTooltipMouse(native_address, HoverFlagsForTooltipMouse.getValue());
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_HoverFlagsForTooltipMouse(HoverFlagsForTooltipMouse);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "HoverFlagsForTooltipMouse"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_HoverFlagsForTooltipMouse(HoverFlagsForTooltipMouse);")
     public static native void internal_native_set_HoverFlagsForTooltipMouse(int this_addr, int HoverFlagsForTooltipMouse);
 
@@ -1280,10 +860,6 @@ jsObj.set_HoverFlagsForTooltipMouse(HoverFlagsForTooltipMouse);
         return ImGuiHoveredFlags.CUSTOM.setValue(value);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-return jsObj.get_HoverFlagsForTooltipNav();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);return jsObj.get_HoverFlagsForTooltipNav();")
     public static native int internal_native_get_HoverFlagsForTooltipNav(int this_addr);
 
@@ -1291,10 +867,6 @@ return jsObj.get_HoverFlagsForTooltipNav();
         internal_native_set_HoverFlagsForTooltipNav(native_address, HoverFlagsForTooltipNav.getValue());
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_HoverFlagsForTooltipNav(HoverFlagsForTooltipNav);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "HoverFlagsForTooltipNav"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_HoverFlagsForTooltipNav(HoverFlagsForTooltipNav);")
     public static native void internal_native_set_HoverFlagsForTooltipNav(int this_addr, int HoverFlagsForTooltipNav);
 
@@ -1308,12 +880,6 @@ jsObj.set_HoverFlagsForTooltipNav(HoverFlagsForTooltipNav);
         return ImVec4_TEMP_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-var returnedJSObj = jsObj.get_Colors(index);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "index"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);var returnedJSObj = jsObj.get_Colors(index);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_Colors_addr(int this_addr, int index);
 
@@ -1321,10 +887,6 @@ return imgui.getPointer(returnedJSObj);
         internal_native_set_Colors(native_address, index, Colors.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);
-jsObj.set_Colors(index, Colors_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "index", "Colors_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStyle);jsObj.set_Colors(index, Colors_addr);")
     public static native void internal_native_set_Colors(int this_addr, int index, int Colors_addr);
 }

@@ -24,14 +24,11 @@ public class ImGuiLayoutOptions extends NativeObject {
         internal_reset(addr, true);
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)new ImGuiLayoutOptions();
-*/
     public static long internal_native_create_addr() {
         try {
             return (long) FFMHandles.internal_native_create_addr__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -53,15 +50,11 @@ return (int64_t)new ImGuiLayoutOptions();
         internal_native_deleteNative(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiLayoutOptions* nativeObject = (ImGuiLayoutOptions*)this_addr;
-delete nativeObject;
-*/
     public static void internal_native_deleteNative(long this_addr) {
         try {
             FFMHandles.internal_native_deleteNative__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -69,15 +62,11 @@ delete nativeObject;
         return internal_native_get_clipping(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiLayoutOptions* nativeObject = (ImGuiLayoutOptions*)this_addr;
-return nativeObject->clipping;
-*/
     public static boolean internal_native_get_clipping(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_get_clipping__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -85,15 +74,11 @@ return nativeObject->clipping;
         internal_native_set_clipping(native_address, clipping);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiLayoutOptions* nativeObject = (ImGuiLayoutOptions*)this_addr;
-nativeObject->clipping = clipping;
-*/
     public static void internal_native_set_clipping(long this_addr, boolean clipping) {
         try {
             FFMHandles.internal_native_set_clipping__JZ.invokeExact(this_addr, clipping);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -101,15 +86,11 @@ nativeObject->clipping = clipping;
         return internal_native_get_paddingLeft(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiLayoutOptions* nativeObject = (ImGuiLayoutOptions*)this_addr;
-return nativeObject->paddingLeft;
-*/
     public static float internal_native_get_paddingLeft(long this_addr) {
         try {
             return (float) FFMHandles.internal_native_get_paddingLeft__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -117,15 +98,11 @@ return nativeObject->paddingLeft;
         internal_native_set_paddingLeft(native_address, paddingLeft);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiLayoutOptions* nativeObject = (ImGuiLayoutOptions*)this_addr;
-nativeObject->paddingLeft = paddingLeft;
-*/
     public static void internal_native_set_paddingLeft(long this_addr, float paddingLeft) {
         try {
             FFMHandles.internal_native_set_paddingLeft__JF.invokeExact(this_addr, paddingLeft);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -133,15 +110,11 @@ nativeObject->paddingLeft = paddingLeft;
         return internal_native_get_paddingRight(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiLayoutOptions* nativeObject = (ImGuiLayoutOptions*)this_addr;
-return nativeObject->paddingRight;
-*/
     public static float internal_native_get_paddingRight(long this_addr) {
         try {
             return (float) FFMHandles.internal_native_get_paddingRight__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -149,15 +122,11 @@ return nativeObject->paddingRight;
         internal_native_set_paddingRight(native_address, paddingRight);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiLayoutOptions* nativeObject = (ImGuiLayoutOptions*)this_addr;
-nativeObject->paddingRight = paddingRight;
-*/
     public static void internal_native_set_paddingRight(long this_addr, float paddingRight) {
         try {
             FFMHandles.internal_native_set_paddingRight__JF.invokeExact(this_addr, paddingRight);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -165,15 +134,11 @@ nativeObject->paddingRight = paddingRight;
         return internal_native_get_paddingTop(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiLayoutOptions* nativeObject = (ImGuiLayoutOptions*)this_addr;
-return nativeObject->paddingTop;
-*/
     public static float internal_native_get_paddingTop(long this_addr) {
         try {
             return (float) FFMHandles.internal_native_get_paddingTop__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -181,15 +146,11 @@ return nativeObject->paddingTop;
         internal_native_set_paddingTop(native_address, paddingTop);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiLayoutOptions* nativeObject = (ImGuiLayoutOptions*)this_addr;
-nativeObject->paddingTop = paddingTop;
-*/
     public static void internal_native_set_paddingTop(long this_addr, float paddingTop) {
         try {
             FFMHandles.internal_native_set_paddingTop__JF.invokeExact(this_addr, paddingTop);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -197,15 +158,11 @@ nativeObject->paddingTop = paddingTop;
         return internal_native_get_paddingBottom(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiLayoutOptions* nativeObject = (ImGuiLayoutOptions*)this_addr;
-return nativeObject->paddingBottom;
-*/
     public static float internal_native_get_paddingBottom(long this_addr) {
         try {
             return (float) FFMHandles.internal_native_get_paddingBottom__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -213,72 +170,38 @@ return nativeObject->paddingBottom;
         internal_native_set_paddingBottom(native_address, paddingBottom);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiLayoutOptions* nativeObject = (ImGuiLayoutOptions*)this_addr;
-nativeObject->paddingBottom = paddingBottom;
-*/
     public static void internal_native_set_paddingBottom(long this_addr, float paddingBottom) {
         try {
             FFMHandles.internal_native_set_paddingBottom__JF.invokeExact(this_addr, paddingBottom);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle internal_native_create_addr__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguilayoutoptions_create_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imguilayoutoptions_deletenative", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle internal_native_get_clipping__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguilayoutoptions_get_clipping", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle internal_native_set_clipping__JZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguilayoutoptions_set_clipping", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_get_paddingLeft__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguilayoutoptions_get_paddingleft", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_set_paddingLeft__JF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguilayoutoptions_set_paddingleft", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle internal_native_get_paddingRight__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguilayoutoptions_get_paddingright", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_create_addr__ = downcallDefault("jparser_imgui_extension_imlayout_ImGuiLayoutOptions_internal_1native_1create_1addr__", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_paddingRight__JF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguilayoutoptions_set_paddingright", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = downcallDefault("jparser_imgui_extension_imlayout_ImGuiLayoutOptions_internal_1native_1deleteNative__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_paddingTop__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguilayoutoptions_get_paddingtop", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_clipping__J = downcallDefault("jparser_imgui_extension_imlayout_ImGuiLayoutOptions_internal_1native_1get_1clipping__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_paddingTop__JF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguilayoutoptions_set_paddingtop", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_set_clipping__JZ = downcallDefault("jparser_imgui_extension_imlayout_ImGuiLayoutOptions_internal_1native_1set_1clipping__JZ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_get_paddingBottom__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguilayoutoptions_get_paddingbottom", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_paddingLeft__J = downcallDefault("jparser_imgui_extension_imlayout_ImGuiLayoutOptions_internal_1native_1get_1paddingLeft__J", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_paddingLeft__JF = downcallDefault("jparser_imgui_extension_imlayout_ImGuiLayoutOptions_internal_1native_1set_1paddingLeft__JF", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_paddingRight__J = downcallDefault("jparser_imgui_extension_imlayout_ImGuiLayoutOptions_internal_1native_1get_1paddingRight__J", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_paddingRight__JF = downcallDefault("jparser_imgui_extension_imlayout_ImGuiLayoutOptions_internal_1native_1set_1paddingRight__JF", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_paddingTop__J = downcallDefault("jparser_imgui_extension_imlayout_ImGuiLayoutOptions_internal_1native_1get_1paddingTop__J", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_paddingTop__JF = downcallDefault("jparser_imgui_extension_imlayout_ImGuiLayoutOptions_internal_1native_1set_1paddingTop__JF", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_paddingBottom__J = downcallDefault("jparser_imgui_extension_imlayout_ImGuiLayoutOptions_internal_1native_1get_1paddingBottom__J", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_paddingBottom__JF = downcallDefault("jparser_imgui_extension_imlayout_ImGuiLayoutOptions_internal_1native_1set_1paddingBottom__JF", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_set_paddingBottom__JF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguilayoutoptions_set_paddingbottom", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
     }
 }

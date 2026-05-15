@@ -34,21 +34,12 @@ public enum ImGuiSelectionRequestType implements NativeEnum<ImGuiSelectionReques
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSelectionRequestType_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSelectionRequestType_None;")
     private static native int ImGuiSelectionRequestType_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSelectionRequestType_SetAll;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSelectionRequestType_SetAll;")
     private static native int ImGuiSelectionRequestType_SetAll_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSelectionRequestType_SetRange;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSelectionRequestType_SetRange;")
     private static native int ImGuiSelectionRequestType_SetRange_NATIVE();
 }

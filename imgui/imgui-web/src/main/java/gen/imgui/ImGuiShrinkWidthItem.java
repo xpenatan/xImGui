@@ -30,10 +30,6 @@ public class ImGuiShrinkWidthItem extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiShrinkWidthItem);
-imgui.destroy(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiShrinkWidthItem);imgui.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
@@ -41,10 +37,6 @@ imgui.destroy(jsObj);
         return internal_native_get_Index(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiShrinkWidthItem);
-return jsObj.get_Index();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiShrinkWidthItem);return jsObj.get_Index();")
     public static native int internal_native_get_Index(int this_addr);
 
@@ -52,10 +44,6 @@ return jsObj.get_Index();
         internal_native_set_Index(native_address, Index);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiShrinkWidthItem);
-jsObj.set_Index(Index);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "Index"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiShrinkWidthItem);jsObj.set_Index(Index);")
     public static native void internal_native_set_Index(int this_addr, int Index);
 
@@ -63,10 +51,6 @@ jsObj.set_Index(Index);
         return internal_native_get_Width(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiShrinkWidthItem);
-return jsObj.get_Width();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiShrinkWidthItem);return jsObj.get_Width();")
     public static native float internal_native_get_Width(int this_addr);
 
@@ -74,10 +58,6 @@ return jsObj.get_Width();
         internal_native_set_Width(native_address, Width);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiShrinkWidthItem);
-jsObj.set_Width(Width);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "Width"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiShrinkWidthItem);jsObj.set_Width(Width);")
     public static native void internal_native_set_Width(int this_addr, float Width);
 
@@ -85,10 +65,6 @@ jsObj.set_Width(Width);
         return internal_native_get_InitialWidth(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiShrinkWidthItem);
-return jsObj.get_InitialWidth();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiShrinkWidthItem);return jsObj.get_InitialWidth();")
     public static native float internal_native_get_InitialWidth(int this_addr);
 
@@ -96,10 +72,6 @@ return jsObj.get_InitialWidth();
         internal_native_set_InitialWidth(native_address, InitialWidth);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiShrinkWidthItem);
-jsObj.set_InitialWidth(InitialWidth);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "InitialWidth"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiShrinkWidthItem);jsObj.set_InitialWidth(InitialWidth);")
     public static native void internal_native_set_InitialWidth(int this_addr, float InitialWidth);
 }

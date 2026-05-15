@@ -24,10 +24,6 @@ public class TextEditor extends NativeObject {
         internal_reset(addr, true);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = new textedit.TextEditor();
-return textedit.getPointer(jsObj);
-*/
     @org.teavm.jso.JSBody(script = "var jsObj = new textedit.TextEditor();return textedit.getPointer(jsObj);")
     public static native int internal_native_create_addr();
 
@@ -49,10 +45,6 @@ return textedit.getPointer(jsObj);
         internal_native_deleteNative(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-textedit.destroy(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);textedit.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
@@ -60,10 +52,6 @@ textedit.destroy(jsObj);
         internal_native_SetReadOnlyEnabled(native_address, aValue);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.SetReadOnlyEnabled(aValue);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "aValue"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.SetReadOnlyEnabled(aValue);")
     public static native void internal_native_SetReadOnlyEnabled(int this_addr, boolean aValue);
 
@@ -71,11 +59,6 @@ jsObj.SetReadOnlyEnabled(aValue);
         return internal_native_IsReadOnlyEnabled(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-var returnedJSObj = jsObj.IsReadOnlyEnabled();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);var returnedJSObj = jsObj.IsReadOnlyEnabled();return returnedJSObj;")
     public static native boolean internal_native_IsReadOnlyEnabled(int this_addr);
 
@@ -83,10 +66,6 @@ return returnedJSObj;
         internal_native_SetAutoIndentEnabled(native_address, aValue);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.SetAutoIndentEnabled(aValue);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "aValue"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.SetAutoIndentEnabled(aValue);")
     public static native void internal_native_SetAutoIndentEnabled(int this_addr, boolean aValue);
 
@@ -94,11 +73,6 @@ jsObj.SetAutoIndentEnabled(aValue);
         return internal_native_IsAutoIndentEnabled(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-var returnedJSObj = jsObj.IsAutoIndentEnabled();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);var returnedJSObj = jsObj.IsAutoIndentEnabled();return returnedJSObj;")
     public static native boolean internal_native_IsAutoIndentEnabled(int this_addr);
 
@@ -106,10 +80,6 @@ return returnedJSObj;
         internal_native_SetShowWhitespacesEnabled(native_address, aValue);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.SetShowWhitespacesEnabled(aValue);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "aValue"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.SetShowWhitespacesEnabled(aValue);")
     public static native void internal_native_SetShowWhitespacesEnabled(int this_addr, boolean aValue);
 
@@ -117,11 +87,6 @@ jsObj.SetShowWhitespacesEnabled(aValue);
         return internal_native_IsShowWhitespacesEnabled(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-var returnedJSObj = jsObj.IsShowWhitespacesEnabled();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);var returnedJSObj = jsObj.IsShowWhitespacesEnabled();return returnedJSObj;")
     public static native boolean internal_native_IsShowWhitespacesEnabled(int this_addr);
 
@@ -129,10 +94,6 @@ return returnedJSObj;
         internal_native_SetShowLineNumbersEnabled(native_address, aValue);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.SetShowLineNumbersEnabled(aValue);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "aValue"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.SetShowLineNumbersEnabled(aValue);")
     public static native void internal_native_SetShowLineNumbersEnabled(int this_addr, boolean aValue);
 
@@ -140,11 +101,6 @@ jsObj.SetShowLineNumbersEnabled(aValue);
         return internal_native_IsShowLineNumbersEnabled(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-var returnedJSObj = jsObj.IsShowLineNumbersEnabled();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);var returnedJSObj = jsObj.IsShowLineNumbersEnabled();return returnedJSObj;")
     public static native boolean internal_native_IsShowLineNumbersEnabled(int this_addr);
 
@@ -152,10 +108,6 @@ return returnedJSObj;
         internal_native_SetShortTabsEnabled(native_address, aValue);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.SetShortTabsEnabled(aValue);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "aValue"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.SetShortTabsEnabled(aValue);")
     public static native void internal_native_SetShortTabsEnabled(int this_addr, boolean aValue);
 
@@ -163,11 +115,6 @@ jsObj.SetShortTabsEnabled(aValue);
         return internal_native_IsShortTabsEnabled(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-var returnedJSObj = jsObj.IsShortTabsEnabled();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);var returnedJSObj = jsObj.IsShortTabsEnabled();return returnedJSObj;")
     public static native boolean internal_native_IsShortTabsEnabled(int this_addr);
 
@@ -175,11 +122,6 @@ return returnedJSObj;
         return internal_native_GetLineCount(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-var returnedJSObj = jsObj.GetLineCount();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);var returnedJSObj = jsObj.GetLineCount();return returnedJSObj;")
     public static native int internal_native_GetLineCount(int this_addr);
 
@@ -187,10 +129,6 @@ return returnedJSObj;
         internal_native_SetPalette(native_address, aValue.getValue());
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.SetPalette(aValue);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "aValue"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.SetPalette(aValue);")
     public static native void internal_native_SetPalette(int this_addr, int aValue);
 
@@ -205,11 +143,6 @@ jsObj.SetPalette(aValue);
         return PaletteId.CUSTOM.setValue(value);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-var returnedJSObj = jsObj.GetPalette();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);var returnedJSObj = jsObj.GetPalette();return returnedJSObj;")
     public static native int internal_native_GetPalette(int this_addr);
 
@@ -217,10 +150,6 @@ return returnedJSObj;
         internal_native_SetLanguageDefinition(native_address, aValue.getValue());
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.SetLanguageDefinition(aValue);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "aValue"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.SetLanguageDefinition(aValue);")
     public static native void internal_native_SetLanguageDefinition(int this_addr, int aValue);
 
@@ -235,11 +164,6 @@ jsObj.SetLanguageDefinition(aValue);
         return LanguageDefinitionId.CUSTOM.setValue(value);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-var returnedJSObj = jsObj.GetLanguageDefinition();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);var returnedJSObj = jsObj.GetLanguageDefinition();return returnedJSObj;")
     public static native int internal_native_GetLanguageDefinition(int this_addr);
 
@@ -253,12 +177,6 @@ return returnedJSObj;
         return NativeString_TEMP_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-var returnedJSObj = jsObj.GetLanguageDefinitionName();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return textedit.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);var returnedJSObj = jsObj.GetLanguageDefinitionName();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return textedit.getPointer(returnedJSObj);")
     public static native int internal_native_GetLanguageDefinitionName_addr(int this_addr);
 
@@ -266,10 +184,6 @@ return textedit.getPointer(returnedJSObj);
         internal_native_SetTabSize(native_address, aValue);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.SetTabSize(aValue);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "aValue"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.SetTabSize(aValue);")
     public static native void internal_native_SetTabSize(int this_addr, int aValue);
 
@@ -277,11 +191,6 @@ jsObj.SetTabSize(aValue);
         return internal_native_GetTabSize(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-var returnedJSObj = jsObj.GetTabSize();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);var returnedJSObj = jsObj.GetTabSize();return returnedJSObj;")
     public static native int internal_native_GetTabSize(int this_addr);
 
@@ -289,10 +198,6 @@ return returnedJSObj;
         internal_native_SetLineSpacing(native_address, aValue);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.SetLineSpacing(aValue);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "aValue"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.SetLineSpacing(aValue);")
     public static native void internal_native_SetLineSpacing(int this_addr, float aValue);
 
@@ -300,11 +205,6 @@ jsObj.SetLineSpacing(aValue);
         return internal_native_GetLineSpacing(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-var returnedJSObj = jsObj.GetLineSpacing();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);var returnedJSObj = jsObj.GetLineSpacing();return returnedJSObj;")
     public static native float internal_native_GetLineSpacing(int this_addr);
 
@@ -312,9 +212,6 @@ return returnedJSObj;
         internal_native_SetDefaultPalette(aValue.getValue());
     }
 
-    /*[-TEAVM;-NATIVE]
-textedit.TextEditor.prototype.SetDefaultPalette(aValue);
-*/
     @org.teavm.jso.JSBody(params = {"aValue"}, script = "textedit.TextEditor.prototype.SetDefaultPalette(aValue);")
     public static native void internal_native_SetDefaultPalette(int aValue);
 
@@ -329,10 +226,6 @@ textedit.TextEditor.prototype.SetDefaultPalette(aValue);
         return PaletteId.CUSTOM.setValue(value);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = textedit.TextEditor.prototype.GetDefaultPalette();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = textedit.TextEditor.prototype.GetDefaultPalette();return returnedJSObj;")
     public static native int internal_native_GetDefaultPalette();
 
@@ -340,10 +233,6 @@ return returnedJSObj;
         internal_native_SelectAll(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.SelectAll();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.SelectAll();")
     public static native void internal_native_SelectAll(int this_addr);
 
@@ -351,10 +240,6 @@ jsObj.SelectAll();
         internal_native_SelectLine(native_address, aLine);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.SelectLine(aLine);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "aLine"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.SelectLine(aLine);")
     public static native void internal_native_SelectLine(int this_addr, int aLine);
 
@@ -362,10 +247,6 @@ jsObj.SelectLine(aLine);
         internal_native_SelectRegion(native_address, aStartLine, aStartChar, aEndLine, aEndChar);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.SelectRegion(aStartLine, aStartChar, aEndLine, aEndChar);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "aStartLine", "aStartChar", "aEndLine", "aEndChar"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.SelectRegion(aStartLine, aStartChar, aEndLine, aEndChar);")
     public static native void internal_native_SelectRegion(int this_addr, int aStartLine, int aStartChar, int aEndLine, int aEndChar);
 
@@ -373,10 +254,6 @@ jsObj.SelectRegion(aStartLine, aStartChar, aEndLine, aEndChar);
         internal_native_SelectNextOccurrenceOf(native_address, aText, aTextSize, aCaseSensitive);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.SelectNextOccurrenceOf(aText, aTextSize, aCaseSensitive);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "aText", "aTextSize", "aCaseSensitive"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.SelectNextOccurrenceOf(aText, aTextSize, aCaseSensitive);")
     public static native void internal_native_SelectNextOccurrenceOf(int this_addr, String aText, int aTextSize, boolean aCaseSensitive);
 
@@ -384,10 +261,6 @@ jsObj.SelectNextOccurrenceOf(aText, aTextSize, aCaseSensitive);
         internal_native_SelectNextOccurrenceOf(native_address, aText, aTextSize);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.SelectNextOccurrenceOf(aText, aTextSize);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "aText", "aTextSize"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.SelectNextOccurrenceOf(aText, aTextSize);")
     public static native void internal_native_SelectNextOccurrenceOf(int this_addr, String aText, int aTextSize);
 
@@ -395,10 +268,6 @@ jsObj.SelectNextOccurrenceOf(aText, aTextSize);
         internal_native_SelectAllOccurrencesOf(native_address, aText, aTextSize, aCaseSensitive);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.SelectAllOccurrencesOf(aText, aTextSize, aCaseSensitive);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "aText", "aTextSize", "aCaseSensitive"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.SelectAllOccurrencesOf(aText, aTextSize, aCaseSensitive);")
     public static native void internal_native_SelectAllOccurrencesOf(int this_addr, String aText, int aTextSize, boolean aCaseSensitive);
 
@@ -406,10 +275,6 @@ jsObj.SelectAllOccurrencesOf(aText, aTextSize, aCaseSensitive);
         internal_native_SelectAllOccurrencesOf(native_address, aText, aTextSize);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.SelectAllOccurrencesOf(aText, aTextSize);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "aText", "aTextSize"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.SelectAllOccurrencesOf(aText, aTextSize);")
     public static native void internal_native_SelectAllOccurrencesOf(int this_addr, String aText, int aTextSize);
 
@@ -417,11 +282,6 @@ jsObj.SelectAllOccurrencesOf(aText, aTextSize);
         return internal_native_AnyCursorHasSelection(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-var returnedJSObj = jsObj.AnyCursorHasSelection();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);var returnedJSObj = jsObj.AnyCursorHasSelection();return returnedJSObj;")
     public static native boolean internal_native_AnyCursorHasSelection(int this_addr);
 
@@ -429,11 +289,6 @@ return returnedJSObj;
         return internal_native_AllCursorsHaveSelection(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-var returnedJSObj = jsObj.AllCursorsHaveSelection();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);var returnedJSObj = jsObj.AllCursorsHaveSelection();return returnedJSObj;")
     public static native boolean internal_native_AllCursorsHaveSelection(int this_addr);
 
@@ -441,10 +296,6 @@ return returnedJSObj;
         internal_native_ClearExtraCursors(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.ClearExtraCursors();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.ClearExtraCursors();")
     public static native void internal_native_ClearExtraCursors(int this_addr);
 
@@ -452,10 +303,6 @@ jsObj.ClearExtraCursors();
         internal_native_ClearSelections(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.ClearSelections();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.ClearSelections();")
     public static native void internal_native_ClearSelections(int this_addr);
 
@@ -463,10 +310,6 @@ jsObj.ClearSelections();
         internal_native_SetCursorPosition(native_address, aLine, aCharIndex);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.SetCursorPosition(aLine, aCharIndex);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "aLine", "aCharIndex"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.SetCursorPosition(aLine, aCharIndex);")
     public static native void internal_native_SetCursorPosition(int this_addr, int aLine, int aCharIndex);
 
@@ -474,10 +317,6 @@ jsObj.SetCursorPosition(aLine, aCharIndex);
         internal_native_GetCursorPosition(native_address, outLine.native_void_address, outColumn.native_void_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.GetCursorPosition(outLine_addr, outColumn_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "outLine_addr", "outColumn_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.GetCursorPosition(outLine_addr, outColumn_addr);")
     public static native void internal_native_GetCursorPosition(int this_addr, int outLine_addr, int outColumn_addr);
 
@@ -485,11 +324,6 @@ jsObj.GetCursorPosition(outLine_addr, outColumn_addr);
         return internal_native_GetFirstVisibleLine(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-var returnedJSObj = jsObj.GetFirstVisibleLine();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);var returnedJSObj = jsObj.GetFirstVisibleLine();return returnedJSObj;")
     public static native int internal_native_GetFirstVisibleLine(int this_addr);
 
@@ -497,11 +331,6 @@ return returnedJSObj;
         return internal_native_GetLastVisibleLine(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-var returnedJSObj = jsObj.GetLastVisibleLine();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);var returnedJSObj = jsObj.GetLastVisibleLine();return returnedJSObj;")
     public static native int internal_native_GetLastVisibleLine(int this_addr);
 
@@ -509,10 +338,6 @@ return returnedJSObj;
         internal_native_SetViewAtLine(native_address, aLine, aMode.getValue());
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.SetViewAtLine(aLine, aMode);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "aLine", "aMode"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.SetViewAtLine(aLine, aMode);")
     public static native void internal_native_SetViewAtLine(int this_addr, int aLine, int aMode);
 
@@ -520,10 +345,6 @@ jsObj.SetViewAtLine(aLine, aMode);
         internal_native_Copy(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.Copy();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.Copy();")
     public static native void internal_native_Copy(int this_addr);
 
@@ -531,10 +352,6 @@ jsObj.Copy();
         internal_native_Cut(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.Cut();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.Cut();")
     public static native void internal_native_Cut(int this_addr);
 
@@ -542,10 +359,6 @@ jsObj.Cut();
         internal_native_Paste(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.Paste();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.Paste();")
     public static native void internal_native_Paste(int this_addr);
 
@@ -553,10 +366,6 @@ jsObj.Paste();
         internal_native_Undo(native_address, aSteps);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.Undo(aSteps);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "aSteps"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.Undo(aSteps);")
     public static native void internal_native_Undo(int this_addr, int aSteps);
 
@@ -564,10 +373,6 @@ jsObj.Undo(aSteps);
         internal_native_Undo(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.Undo();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.Undo();")
     public static native void internal_native_Undo(int this_addr);
 
@@ -575,10 +380,6 @@ jsObj.Undo();
         internal_native_Redo(native_address, aSteps);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.Redo(aSteps);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "aSteps"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.Redo(aSteps);")
     public static native void internal_native_Redo(int this_addr, int aSteps);
 
@@ -586,10 +387,6 @@ jsObj.Redo(aSteps);
         internal_native_Redo(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.Redo();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.Redo();")
     public static native void internal_native_Redo(int this_addr);
 
@@ -597,11 +394,6 @@ jsObj.Redo();
         return internal_native_CanUndo(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-var returnedJSObj = jsObj.CanUndo();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);var returnedJSObj = jsObj.CanUndo();return returnedJSObj;")
     public static native boolean internal_native_CanUndo(int this_addr);
 
@@ -609,11 +401,6 @@ return returnedJSObj;
         return internal_native_CanRedo(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-var returnedJSObj = jsObj.CanRedo();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);var returnedJSObj = jsObj.CanRedo();return returnedJSObj;")
     public static native boolean internal_native_CanRedo(int this_addr);
 
@@ -621,11 +408,6 @@ return returnedJSObj;
         return internal_native_GetUndoIndex(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-var returnedJSObj = jsObj.GetUndoIndex();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);var returnedJSObj = jsObj.GetUndoIndex();return returnedJSObj;")
     public static native int internal_native_GetUndoIndex(int this_addr);
 
@@ -633,10 +415,6 @@ return returnedJSObj;
         internal_native_SetText(native_address, aText);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.SetText(aText);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "aText"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.SetText(aText);")
     public static native void internal_native_SetText(int this_addr, String aText);
 
@@ -650,12 +428,6 @@ jsObj.SetText(aText);
         return NativeString_TEMP_GEN_1;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-var returnedJSObj = jsObj.GetText();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return textedit.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);var returnedJSObj = jsObj.GetText();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return textedit.getPointer(returnedJSObj);")
     public static native int internal_native_GetText_addr(int this_addr);
 
@@ -663,10 +435,6 @@ return textedit.getPointer(returnedJSObj);
         internal_native_Render(native_address, aTitle, aParentIsFocused, aSize.native_address, aBorder);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.Render(aTitle, aParentIsFocused, aSize_addr, aBorder);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "aTitle", "aParentIsFocused", "aSize_addr", "aBorder"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.Render(aTitle, aParentIsFocused, aSize_addr, aBorder);")
     public static native void internal_native_Render(int this_addr, String aTitle, boolean aParentIsFocused, int aSize_addr, boolean aBorder);
 
@@ -674,10 +442,6 @@ jsObj.Render(aTitle, aParentIsFocused, aSize_addr, aBorder);
         internal_native_Render(native_address, aTitle, aParentIsFocused, aSize.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.Render(aTitle, aParentIsFocused, aSize_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "aTitle", "aParentIsFocused", "aSize_addr"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.Render(aTitle, aParentIsFocused, aSize_addr);")
     public static native void internal_native_Render(int this_addr, String aTitle, boolean aParentIsFocused, int aSize_addr);
 
@@ -685,10 +449,6 @@ jsObj.Render(aTitle, aParentIsFocused, aSize_addr);
         internal_native_Render(native_address, aTitle, aParentIsFocused);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.Render(aTitle, aParentIsFocused);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "aTitle", "aParentIsFocused"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.Render(aTitle, aParentIsFocused);")
     public static native void internal_native_Render(int this_addr, String aTitle, boolean aParentIsFocused);
 
@@ -696,10 +456,6 @@ jsObj.Render(aTitle, aParentIsFocused);
         internal_native_Render(native_address, aTitle);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);
-jsObj.Render(aTitle);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "aTitle"}, script = "var jsObj = textedit.wrapPointer(this_addr, textedit.TextEditor);jsObj.Render(aTitle);")
     public static native void internal_native_Render(int this_addr, String aTitle);
 }

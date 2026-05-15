@@ -40,33 +40,27 @@ public enum ImGuiOldColumnFlags implements NativeEnum<ImGuiOldColumnFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiOldColumnFlags_None;
-*/
-    private static native int ImGuiOldColumnFlags_None_NATIVE();
+    private static int ImGuiOldColumnFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiOldColumnFlags.ImGuiOldColumnFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiOldColumnFlags_NoBorder;
-*/
-    private static native int ImGuiOldColumnFlags_NoBorder_NATIVE();
+    private static int ImGuiOldColumnFlags_NoBorder_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiOldColumnFlags.ImGuiOldColumnFlags_NoBorder_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiOldColumnFlags_NoResize;
-*/
-    private static native int ImGuiOldColumnFlags_NoResize_NATIVE();
+    private static int ImGuiOldColumnFlags_NoResize_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiOldColumnFlags.ImGuiOldColumnFlags_NoResize_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiOldColumnFlags_NoPreserveWidths;
-*/
-    private static native int ImGuiOldColumnFlags_NoPreserveWidths_NATIVE();
+    private static int ImGuiOldColumnFlags_NoPreserveWidths_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiOldColumnFlags.ImGuiOldColumnFlags_NoPreserveWidths_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiOldColumnFlags_NoForceWithinWindow;
-*/
-    private static native int ImGuiOldColumnFlags_NoForceWithinWindow_NATIVE();
+    private static int ImGuiOldColumnFlags_NoForceWithinWindow_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiOldColumnFlags.ImGuiOldColumnFlags_NoForceWithinWindow_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiOldColumnFlags_GrowParentContentsSize;
-*/
-    private static native int ImGuiOldColumnFlags_GrowParentContentsSize_NATIVE();
+    private static int ImGuiOldColumnFlags_GrowParentContentsSize_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiOldColumnFlags.ImGuiOldColumnFlags_GrowParentContentsSize_NATIVE();
+    }
 }

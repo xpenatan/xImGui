@@ -40,39 +40,21 @@ public enum ImGuiOldColumnFlags implements NativeEnum<ImGuiOldColumnFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiOldColumnFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiOldColumnFlags_None;")
     private static native int ImGuiOldColumnFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiOldColumnFlags_NoBorder;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiOldColumnFlags_NoBorder;")
     private static native int ImGuiOldColumnFlags_NoBorder_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiOldColumnFlags_NoResize;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiOldColumnFlags_NoResize;")
     private static native int ImGuiOldColumnFlags_NoResize_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiOldColumnFlags_NoPreserveWidths;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiOldColumnFlags_NoPreserveWidths;")
     private static native int ImGuiOldColumnFlags_NoPreserveWidths_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiOldColumnFlags_NoForceWithinWindow;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiOldColumnFlags_NoForceWithinWindow;")
     private static native int ImGuiOldColumnFlags_NoForceWithinWindow_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiOldColumnFlags_GrowParentContentsSize;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiOldColumnFlags_GrowParentContentsSize;")
     private static native int ImGuiOldColumnFlags_GrowParentContentsSize_NATIVE();
 }

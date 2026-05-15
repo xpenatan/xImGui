@@ -47,81 +47,42 @@ public enum ImGuiTabBarFlags implements NativeEnum<ImGuiTabBarFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabBarFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabBarFlags_None;")
     private static native int ImGuiTabBarFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabBarFlags_Reorderable;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabBarFlags_Reorderable;")
     private static native int ImGuiTabBarFlags_Reorderable_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabBarFlags_AutoSelectNewTabs;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabBarFlags_AutoSelectNewTabs;")
     private static native int ImGuiTabBarFlags_AutoSelectNewTabs_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabBarFlags_TabListPopupButton;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabBarFlags_TabListPopupButton;")
     private static native int ImGuiTabBarFlags_TabListPopupButton_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabBarFlags_NoCloseWithMiddleMouseButton;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabBarFlags_NoCloseWithMiddleMouseButton;")
     private static native int ImGuiTabBarFlags_NoCloseWithMiddleMouseButton_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabBarFlags_NoTabListScrollingButtons;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabBarFlags_NoTabListScrollingButtons;")
     private static native int ImGuiTabBarFlags_NoTabListScrollingButtons_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabBarFlags_NoTooltip;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabBarFlags_NoTooltip;")
     private static native int ImGuiTabBarFlags_NoTooltip_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabBarFlags_DrawSelectedOverline;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabBarFlags_DrawSelectedOverline;")
     private static native int ImGuiTabBarFlags_DrawSelectedOverline_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabBarFlags_FittingPolicyMixed;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabBarFlags_FittingPolicyMixed;")
     private static native int ImGuiTabBarFlags_FittingPolicyMixed_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabBarFlags_FittingPolicyShrink;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabBarFlags_FittingPolicyShrink;")
     private static native int ImGuiTabBarFlags_FittingPolicyShrink_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabBarFlags_FittingPolicyScroll;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabBarFlags_FittingPolicyScroll;")
     private static native int ImGuiTabBarFlags_FittingPolicyScroll_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabBarFlags_FittingPolicyMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabBarFlags_FittingPolicyMask_;")
     private static native int ImGuiTabBarFlags_FittingPolicyMask__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabBarFlags_FittingPolicyDefault_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabBarFlags_FittingPolicyDefault_;")
     private static native int ImGuiTabBarFlags_FittingPolicyDefault__NATIVE();
 }

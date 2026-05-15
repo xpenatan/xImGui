@@ -41,45 +41,24 @@ public enum ImGuiItemFlags implements NativeEnum<ImGuiItemFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiItemFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiItemFlags_None;")
     private static native int ImGuiItemFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiItemFlags_NoTabStop;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiItemFlags_NoTabStop;")
     private static native int ImGuiItemFlags_NoTabStop_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiItemFlags_NoNav;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiItemFlags_NoNav;")
     private static native int ImGuiItemFlags_NoNav_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiItemFlags_NoNavDefaultFocus;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiItemFlags_NoNavDefaultFocus;")
     private static native int ImGuiItemFlags_NoNavDefaultFocus_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiItemFlags_ButtonRepeat;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiItemFlags_ButtonRepeat;")
     private static native int ImGuiItemFlags_ButtonRepeat_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiItemFlags_AutoClosePopups;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiItemFlags_AutoClosePopups;")
     private static native int ImGuiItemFlags_AutoClosePopups_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiItemFlags_AllowDuplicateId;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiItemFlags_AllowDuplicateId;")
     private static native int ImGuiItemFlags_AllowDuplicateId_NATIVE();
 }

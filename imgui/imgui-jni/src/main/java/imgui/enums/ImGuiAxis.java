@@ -34,18 +34,15 @@ public enum ImGuiAxis implements NativeEnum<ImGuiAxis> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiAxis_None;
-*/
-    private static native int ImGuiAxis_None_NATIVE();
+    private static int ImGuiAxis_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiAxis.ImGuiAxis_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiAxis_X;
-*/
-    private static native int ImGuiAxis_X_NATIVE();
+    private static int ImGuiAxis_X_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiAxis.ImGuiAxis_X_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiAxis_Y;
-*/
-    private static native int ImGuiAxis_Y_NATIVE();
+    private static int ImGuiAxis_Y_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiAxis.ImGuiAxis_Y_NATIVE();
+    }
 }

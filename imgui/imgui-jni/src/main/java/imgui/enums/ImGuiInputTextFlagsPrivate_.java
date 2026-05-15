@@ -34,18 +34,15 @@ public enum ImGuiInputTextFlagsPrivate_ implements NativeEnum<ImGuiInputTextFlag
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_Multiline;
-*/
-    private static native int ImGuiInputTextFlags_Multiline_NATIVE();
+    private static int ImGuiInputTextFlags_Multiline_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlagsPrivate_.ImGuiInputTextFlags_Multiline_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_MergedItem;
-*/
-    private static native int ImGuiInputTextFlags_MergedItem_NATIVE();
+    private static int ImGuiInputTextFlags_MergedItem_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlagsPrivate_.ImGuiInputTextFlags_MergedItem_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_LocalizeDecimalPoint;
-*/
-    private static native int ImGuiInputTextFlags_LocalizeDecimalPoint_NATIVE();
+    private static int ImGuiInputTextFlags_LocalizeDecimalPoint_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlagsPrivate_.ImGuiInputTextFlags_LocalizeDecimalPoint_NATIVE();
+    }
 }

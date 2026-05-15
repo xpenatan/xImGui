@@ -34,15 +34,9 @@ public enum ImGuiTooltipFlags implements NativeEnum<ImGuiTooltipFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTooltipFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTooltipFlags_None;")
     private static native int ImGuiTooltipFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTooltipFlags_OverridePrevious;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTooltipFlags_OverridePrevious;")
     private static native int ImGuiTooltipFlags_OverridePrevious_NATIVE();
 }

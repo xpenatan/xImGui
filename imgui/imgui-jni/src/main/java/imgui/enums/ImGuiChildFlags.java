@@ -44,53 +44,43 @@ public enum ImGuiChildFlags implements NativeEnum<ImGuiChildFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiChildFlags_None;
-*/
-    private static native int ImGuiChildFlags_None_NATIVE();
+    private static int ImGuiChildFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiChildFlags.ImGuiChildFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiChildFlags_Borders;
-*/
-    private static native int ImGuiChildFlags_Borders_NATIVE();
+    private static int ImGuiChildFlags_Borders_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiChildFlags.ImGuiChildFlags_Borders_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiChildFlags_AlwaysUseWindowPadding;
-*/
-    private static native int ImGuiChildFlags_AlwaysUseWindowPadding_NATIVE();
+    private static int ImGuiChildFlags_AlwaysUseWindowPadding_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiChildFlags.ImGuiChildFlags_AlwaysUseWindowPadding_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiChildFlags_ResizeX;
-*/
-    private static native int ImGuiChildFlags_ResizeX_NATIVE();
+    private static int ImGuiChildFlags_ResizeX_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiChildFlags.ImGuiChildFlags_ResizeX_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiChildFlags_ResizeY;
-*/
-    private static native int ImGuiChildFlags_ResizeY_NATIVE();
+    private static int ImGuiChildFlags_ResizeY_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiChildFlags.ImGuiChildFlags_ResizeY_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiChildFlags_AutoResizeX;
-*/
-    private static native int ImGuiChildFlags_AutoResizeX_NATIVE();
+    private static int ImGuiChildFlags_AutoResizeX_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiChildFlags.ImGuiChildFlags_AutoResizeX_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiChildFlags_AutoResizeY;
-*/
-    private static native int ImGuiChildFlags_AutoResizeY_NATIVE();
+    private static int ImGuiChildFlags_AutoResizeY_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiChildFlags.ImGuiChildFlags_AutoResizeY_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiChildFlags_AlwaysAutoResize;
-*/
-    private static native int ImGuiChildFlags_AlwaysAutoResize_NATIVE();
+    private static int ImGuiChildFlags_AlwaysAutoResize_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiChildFlags.ImGuiChildFlags_AlwaysAutoResize_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiChildFlags_FrameStyle;
-*/
-    private static native int ImGuiChildFlags_FrameStyle_NATIVE();
+    private static int ImGuiChildFlags_FrameStyle_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiChildFlags.ImGuiChildFlags_FrameStyle_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiChildFlags_NavFlattened;
-*/
-    private static native int ImGuiChildFlags_NavFlattened_NATIVE();
+    private static int ImGuiChildFlags_NavFlattened_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiChildFlags.ImGuiChildFlags_NavFlattened_NATIVE();
+    }
 }

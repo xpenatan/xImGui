@@ -39,33 +39,18 @@ public enum ImGuiDir implements NativeEnum<ImGuiDir> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDir_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDir_None;")
     private static native int ImGuiDir_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDir_Left;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDir_Left;")
     private static native int ImGuiDir_Left_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDir_Right;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDir_Right;")
     private static native int ImGuiDir_Right_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDir_Up;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDir_Up;")
     private static native int ImGuiDir_Up_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDir_Down;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDir_Down;")
     private static native int ImGuiDir_Down_NATIVE();
 }

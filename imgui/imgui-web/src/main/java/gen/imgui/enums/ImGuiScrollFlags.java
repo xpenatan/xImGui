@@ -44,63 +44,33 @@ public enum ImGuiScrollFlags implements NativeEnum<ImGuiScrollFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiScrollFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiScrollFlags_None;")
     private static native int ImGuiScrollFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiScrollFlags_KeepVisibleEdgeX;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiScrollFlags_KeepVisibleEdgeX;")
     private static native int ImGuiScrollFlags_KeepVisibleEdgeX_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiScrollFlags_KeepVisibleEdgeY;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiScrollFlags_KeepVisibleEdgeY;")
     private static native int ImGuiScrollFlags_KeepVisibleEdgeY_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiScrollFlags_KeepVisibleCenterX;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiScrollFlags_KeepVisibleCenterX;")
     private static native int ImGuiScrollFlags_KeepVisibleCenterX_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiScrollFlags_KeepVisibleCenterY;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiScrollFlags_KeepVisibleCenterY;")
     private static native int ImGuiScrollFlags_KeepVisibleCenterY_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiScrollFlags_AlwaysCenterX;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiScrollFlags_AlwaysCenterX;")
     private static native int ImGuiScrollFlags_AlwaysCenterX_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiScrollFlags_AlwaysCenterY;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiScrollFlags_AlwaysCenterY;")
     private static native int ImGuiScrollFlags_AlwaysCenterY_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiScrollFlags_NoScrollParent;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiScrollFlags_NoScrollParent;")
     private static native int ImGuiScrollFlags_NoScrollParent_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiScrollFlags_MaskX_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiScrollFlags_MaskX_;")
     private static native int ImGuiScrollFlags_MaskX__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiScrollFlags_MaskY_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiScrollFlags_MaskY_;")
     private static native int ImGuiScrollFlags_MaskY__NATIVE();
 }

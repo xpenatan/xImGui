@@ -44,63 +44,33 @@ public enum ImGuiSliderFlags implements NativeEnum<ImGuiSliderFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSliderFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSliderFlags_None;")
     private static native int ImGuiSliderFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSliderFlags_Logarithmic;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSliderFlags_Logarithmic;")
     private static native int ImGuiSliderFlags_Logarithmic_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSliderFlags_NoRoundToFormat;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSliderFlags_NoRoundToFormat;")
     private static native int ImGuiSliderFlags_NoRoundToFormat_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSliderFlags_NoInput;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSliderFlags_NoInput;")
     private static native int ImGuiSliderFlags_NoInput_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSliderFlags_WrapAround;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSliderFlags_WrapAround;")
     private static native int ImGuiSliderFlags_WrapAround_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSliderFlags_ClampOnInput;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSliderFlags_ClampOnInput;")
     private static native int ImGuiSliderFlags_ClampOnInput_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSliderFlags_ClampZeroRange;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSliderFlags_ClampZeroRange;")
     private static native int ImGuiSliderFlags_ClampZeroRange_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSliderFlags_NoSpeedTweaks;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSliderFlags_NoSpeedTweaks;")
     private static native int ImGuiSliderFlags_NoSpeedTweaks_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSliderFlags_AlwaysClamp;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSliderFlags_AlwaysClamp;")
     private static native int ImGuiSliderFlags_AlwaysClamp_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSliderFlags_InvalidMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSliderFlags_InvalidMask_;")
     private static native int ImGuiSliderFlags_InvalidMask__NATIVE();
 }

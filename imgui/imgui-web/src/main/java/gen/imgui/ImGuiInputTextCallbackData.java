@@ -31,10 +31,6 @@ public class ImGuiInputTextCallbackData extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInputTextCallbackData);
-imgui.destroy(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInputTextCallbackData);imgui.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
@@ -42,10 +38,6 @@ imgui.destroy(jsObj);
         return internal_native_get_BufSize(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInputTextCallbackData);
-return jsObj.get_BufSize();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInputTextCallbackData);return jsObj.get_BufSize();")
     public static native int internal_native_get_BufSize(int this_addr);
 
@@ -53,10 +45,6 @@ return jsObj.get_BufSize();
         internal_native_set_BufSize(native_address, BufSize);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInputTextCallbackData);
-jsObj.set_BufSize(BufSize);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "BufSize"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInputTextCallbackData);jsObj.set_BufSize(BufSize);")
     public static native void internal_native_set_BufSize(int this_addr, int BufSize);
 
@@ -64,10 +52,6 @@ jsObj.set_BufSize(BufSize);
         return internal_native_get_BufDirty(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInputTextCallbackData);
-return jsObj.get_BufDirty();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInputTextCallbackData);return jsObj.get_BufDirty();")
     public static native boolean internal_native_get_BufDirty(int this_addr);
 
@@ -75,10 +59,6 @@ return jsObj.get_BufDirty();
         internal_native_set_BufDirty(native_address, BufDirty);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInputTextCallbackData);
-jsObj.set_BufDirty(BufDirty);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "BufDirty"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInputTextCallbackData);jsObj.set_BufDirty(BufDirty);")
     public static native void internal_native_set_BufDirty(int this_addr, boolean BufDirty);
 
@@ -86,10 +66,6 @@ jsObj.set_BufDirty(BufDirty);
         return internal_native_get_BufTextLen(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInputTextCallbackData);
-return jsObj.get_BufTextLen();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInputTextCallbackData);return jsObj.get_BufTextLen();")
     public static native int internal_native_get_BufTextLen(int this_addr);
 
@@ -97,10 +73,6 @@ return jsObj.get_BufTextLen();
         internal_native_set_BufTextLen(native_address, BufTextLen);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInputTextCallbackData);
-jsObj.set_BufTextLen(BufTextLen);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "BufTextLen"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInputTextCallbackData);jsObj.set_BufTextLen(BufTextLen);")
     public static native void internal_native_set_BufTextLen(int this_addr, int BufTextLen);
 
@@ -115,10 +87,6 @@ jsObj.set_BufTextLen(BufTextLen);
         return ImGuiInputTextFlags.CUSTOM.setValue(value);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInputTextCallbackData);
-return jsObj.get_Flags();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInputTextCallbackData);return jsObj.get_Flags();")
     public static native int internal_native_get_Flags(int this_addr);
 
@@ -126,10 +94,6 @@ return jsObj.get_Flags();
         internal_native_set_Flags(native_address, Flags.getValue());
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInputTextCallbackData);
-jsObj.set_Flags(Flags);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "Flags"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiInputTextCallbackData);jsObj.set_Flags(Flags);")
     public static native void internal_native_set_Flags(int this_addr, int Flags);
 }

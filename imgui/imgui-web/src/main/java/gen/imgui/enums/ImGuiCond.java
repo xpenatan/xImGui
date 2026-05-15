@@ -39,33 +39,18 @@ public enum ImGuiCond implements NativeEnum<ImGuiCond> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCond_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCond_None;")
     private static native int ImGuiCond_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCond_Always;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCond_Always;")
     private static native int ImGuiCond_Always_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCond_Once;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCond_Once;")
     private static native int ImGuiCond_Once_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCond_FirstUseEver;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCond_FirstUseEver;")
     private static native int ImGuiCond_FirstUseEver_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCond_Appearing;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCond_Appearing;")
     private static native int ImGuiCond_Appearing_NATIVE();
 }

@@ -64,183 +64,93 @@ public enum ImGuiWindowFlags implements NativeEnum<ImGuiWindowFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_None;")
     private static native int ImGuiWindowFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_NoTitleBar;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_NoTitleBar;")
     private static native int ImGuiWindowFlags_NoTitleBar_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_NoResize;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_NoResize;")
     private static native int ImGuiWindowFlags_NoResize_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_NoMove;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_NoMove;")
     private static native int ImGuiWindowFlags_NoMove_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_NoScrollbar;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_NoScrollbar;")
     private static native int ImGuiWindowFlags_NoScrollbar_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_NoScrollWithMouse;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_NoScrollWithMouse;")
     private static native int ImGuiWindowFlags_NoScrollWithMouse_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_NoCollapse;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_NoCollapse;")
     private static native int ImGuiWindowFlags_NoCollapse_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_AlwaysAutoResize;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_AlwaysAutoResize;")
     private static native int ImGuiWindowFlags_AlwaysAutoResize_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_NoBackground;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_NoBackground;")
     private static native int ImGuiWindowFlags_NoBackground_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_NoSavedSettings;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_NoSavedSettings;")
     private static native int ImGuiWindowFlags_NoSavedSettings_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_NoMouseInputs;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_NoMouseInputs;")
     private static native int ImGuiWindowFlags_NoMouseInputs_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_MenuBar;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_MenuBar;")
     private static native int ImGuiWindowFlags_MenuBar_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_HorizontalScrollbar;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_HorizontalScrollbar;")
     private static native int ImGuiWindowFlags_HorizontalScrollbar_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_NoFocusOnAppearing;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_NoFocusOnAppearing;")
     private static native int ImGuiWindowFlags_NoFocusOnAppearing_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_NoBringToFrontOnFocus;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_NoBringToFrontOnFocus;")
     private static native int ImGuiWindowFlags_NoBringToFrontOnFocus_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_AlwaysVerticalScrollbar;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_AlwaysVerticalScrollbar;")
     private static native int ImGuiWindowFlags_AlwaysVerticalScrollbar_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_AlwaysHorizontalScrollbar;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_AlwaysHorizontalScrollbar;")
     private static native int ImGuiWindowFlags_AlwaysHorizontalScrollbar_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_NoNavInputs;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_NoNavInputs;")
     private static native int ImGuiWindowFlags_NoNavInputs_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_NoNavFocus;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_NoNavFocus;")
     private static native int ImGuiWindowFlags_NoNavFocus_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_UnsavedDocument;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_UnsavedDocument;")
     private static native int ImGuiWindowFlags_UnsavedDocument_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_NoDocking;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_NoDocking;")
     private static native int ImGuiWindowFlags_NoDocking_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_NoNav;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_NoNav;")
     private static native int ImGuiWindowFlags_NoNav_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_NoDecoration;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_NoDecoration;")
     private static native int ImGuiWindowFlags_NoDecoration_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_NoInputs;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_NoInputs;")
     private static native int ImGuiWindowFlags_NoInputs_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_DockNodeHost;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_DockNodeHost;")
     private static native int ImGuiWindowFlags_DockNodeHost_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_ChildWindow;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_ChildWindow;")
     private static native int ImGuiWindowFlags_ChildWindow_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_Tooltip;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_Tooltip;")
     private static native int ImGuiWindowFlags_Tooltip_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_Popup;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_Popup;")
     private static native int ImGuiWindowFlags_Popup_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_Modal;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_Modal;")
     private static native int ImGuiWindowFlags_Modal_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowFlags_ChildMenu;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowFlags_ChildMenu;")
     private static native int ImGuiWindowFlags_ChildMenu_NATIVE();
 }

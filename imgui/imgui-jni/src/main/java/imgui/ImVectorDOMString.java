@@ -22,10 +22,9 @@ public class ImVectorDOMString extends NativeObject {
         internal_reset(addr, true);
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)new ImVectorDOMString();
-*/
-    public static native long internal_native_create_addr();
+    public static long internal_native_create_addr() {
+        return imgui.natives.JNI_ImVectorDOMString.internal_native_create_addr();
+    }
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -45,21 +44,17 @@ return (jlong)new ImVectorDOMString();
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorDOMString* nativeObject = (ImVectorDOMString*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ImVectorDOMString.internal_native_deleteNative(this_addr);
+    }
 
     public int size() {
         return internal_native_size(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorDOMString* nativeObject = (ImVectorDOMString*)this_addr;
-return nativeObject->size();
-*/
-    public static native int internal_native_size(long this_addr);
+    public static int internal_native_size(long this_addr) {
+        return imgui.natives.JNI_ImVectorDOMString.internal_native_size(this_addr);
+    }
 
     public NativeString getData(int index) {
         long addr = internal_native_getData_addr(native_address, index);
@@ -71,52 +66,41 @@ return nativeObject->size();
         return NativeString_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorDOMString* nativeObject = (ImVectorDOMString*)this_addr;
-static NativeString copy_addr;
-copy_addr = (*nativeObject)[(int)index];
-return (jlong)&copy_addr;*/
-    public static native long internal_native_getData_addr(long this_addr, int index);
+    public static long internal_native_getData_addr(long this_addr, int index) {
+        return imgui.natives.JNI_ImVectorDOMString.internal_native_getData_addr(this_addr, index);
+    }
 
     public void push_back(String v) {
         internal_native_push_back(native_address, v);
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorDOMString* nativeObject = (ImVectorDOMString*)this_addr;
-nativeObject->push_back(v);
-*/
-    public static native void internal_native_push_back(long this_addr, String v);
+    public static void internal_native_push_back(long this_addr, String v) {
+        imgui.natives.JNI_ImVectorDOMString.internal_native_push_back(this_addr, v);
+    }
 
     public void reserve(int new_capacity) {
         internal_native_reserve(native_address, new_capacity);
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorDOMString* nativeObject = (ImVectorDOMString*)this_addr;
-nativeObject->reserve((int)new_capacity);
-*/
-    public static native void internal_native_reserve(long this_addr, int new_capacity);
+    public static void internal_native_reserve(long this_addr, int new_capacity) {
+        imgui.natives.JNI_ImVectorDOMString.internal_native_reserve(this_addr, new_capacity);
+    }
 
     public void resize(int new_size) {
         internal_native_resize(native_address, new_size);
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorDOMString* nativeObject = (ImVectorDOMString*)this_addr;
-nativeObject->resize((int)new_size);
-*/
-    public static native void internal_native_resize(long this_addr, int new_size);
+    public static void internal_native_resize(long this_addr, int new_size) {
+        imgui.natives.JNI_ImVectorDOMString.internal_native_resize(this_addr, new_size);
+    }
 
     public void clear() {
         internal_native_clear(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorDOMString* nativeObject = (ImVectorDOMString*)this_addr;
-nativeObject->clear();
-*/
-    public static native void internal_native_clear(long this_addr);
+    public static void internal_native_clear(long this_addr) {
+        imgui.natives.JNI_ImVectorDOMString.internal_native_clear(this_addr);
+    }
 
     public NativeObject get_Data() {
         long addr = internal_native_get_Data_addr(native_address);
@@ -128,9 +112,7 @@ nativeObject->clear();
         return NativeObject_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorDOMString* nativeObject = (ImVectorDOMString*)this_addr;
-return (jlong)nativeObject->Data;
-*/
-    public static native long internal_native_get_Data_addr(long this_addr);
+    public static long internal_native_get_Data_addr(long this_addr) {
+        return imgui.natives.JNI_ImVectorDOMString.internal_native_get_Data_addr(this_addr);
+    }
 }

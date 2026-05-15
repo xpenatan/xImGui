@@ -39,28 +39,23 @@ public enum ImTextureStatus implements NativeEnum<ImTextureStatus> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTextureStatus_OK;
-*/
-    private static native int ImTextureStatus_OK_NATIVE();
+    private static int ImTextureStatus_OK_NATIVE() {
+        return imgui.enums.natives.JNI_ImTextureStatus.ImTextureStatus_OK_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTextureStatus_Destroyed;
-*/
-    private static native int ImTextureStatus_Destroyed_NATIVE();
+    private static int ImTextureStatus_Destroyed_NATIVE() {
+        return imgui.enums.natives.JNI_ImTextureStatus.ImTextureStatus_Destroyed_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTextureStatus_WantCreate;
-*/
-    private static native int ImTextureStatus_WantCreate_NATIVE();
+    private static int ImTextureStatus_WantCreate_NATIVE() {
+        return imgui.enums.natives.JNI_ImTextureStatus.ImTextureStatus_WantCreate_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTextureStatus_WantUpdates;
-*/
-    private static native int ImTextureStatus_WantUpdates_NATIVE();
+    private static int ImTextureStatus_WantUpdates_NATIVE() {
+        return imgui.enums.natives.JNI_ImTextureStatus.ImTextureStatus_WantUpdates_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTextureStatus_WantDestroy;
-*/
-    private static native int ImTextureStatus_WantDestroy_NATIVE();
+    private static int ImTextureStatus_WantDestroy_NATIVE() {
+        return imgui.enums.natives.JNI_ImTextureStatus.ImTextureStatus_WantDestroy_NATIVE();
+    }
 }

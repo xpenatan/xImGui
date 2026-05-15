@@ -47,81 +47,42 @@ public enum ImGuiDragDropFlags implements NativeEnum<ImGuiDragDropFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDragDropFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDragDropFlags_None;")
     private static native int ImGuiDragDropFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDragDropFlags_SourceNoPreviewTooltip;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDragDropFlags_SourceNoPreviewTooltip;")
     private static native int ImGuiDragDropFlags_SourceNoPreviewTooltip_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDragDropFlags_SourceNoDisableHover;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDragDropFlags_SourceNoDisableHover;")
     private static native int ImGuiDragDropFlags_SourceNoDisableHover_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDragDropFlags_SourceNoHoldToOpenOthers;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDragDropFlags_SourceNoHoldToOpenOthers;")
     private static native int ImGuiDragDropFlags_SourceNoHoldToOpenOthers_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDragDropFlags_SourceAllowNullID;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDragDropFlags_SourceAllowNullID;")
     private static native int ImGuiDragDropFlags_SourceAllowNullID_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDragDropFlags_SourceExtern;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDragDropFlags_SourceExtern;")
     private static native int ImGuiDragDropFlags_SourceExtern_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDragDropFlags_PayloadAutoExpire;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDragDropFlags_PayloadAutoExpire;")
     private static native int ImGuiDragDropFlags_PayloadAutoExpire_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDragDropFlags_PayloadNoCrossContext;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDragDropFlags_PayloadNoCrossContext;")
     private static native int ImGuiDragDropFlags_PayloadNoCrossContext_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDragDropFlags_PayloadNoCrossProcess;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDragDropFlags_PayloadNoCrossProcess;")
     private static native int ImGuiDragDropFlags_PayloadNoCrossProcess_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDragDropFlags_AcceptBeforeDelivery;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDragDropFlags_AcceptBeforeDelivery;")
     private static native int ImGuiDragDropFlags_AcceptBeforeDelivery_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDragDropFlags_AcceptNoDrawDefaultRect;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDragDropFlags_AcceptNoDrawDefaultRect;")
     private static native int ImGuiDragDropFlags_AcceptNoDrawDefaultRect_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDragDropFlags_AcceptNoPreviewTooltip;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDragDropFlags_AcceptNoPreviewTooltip;")
     private static native int ImGuiDragDropFlags_AcceptNoPreviewTooltip_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDragDropFlags_AcceptPeekOnly;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDragDropFlags_AcceptPeekOnly;")
     private static native int ImGuiDragDropFlags_AcceptPeekOnly_NATIVE();
 }

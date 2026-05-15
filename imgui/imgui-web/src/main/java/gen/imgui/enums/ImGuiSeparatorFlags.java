@@ -34,27 +34,15 @@ public enum ImGuiSeparatorFlags implements NativeEnum<ImGuiSeparatorFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSeparatorFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSeparatorFlags_None;")
     private static native int ImGuiSeparatorFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSeparatorFlags_Horizontal;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSeparatorFlags_Horizontal;")
     private static native int ImGuiSeparatorFlags_Horizontal_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSeparatorFlags_Vertical;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSeparatorFlags_Vertical;")
     private static native int ImGuiSeparatorFlags_Vertical_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSeparatorFlags_SpanAllColumns;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSeparatorFlags_SpanAllColumns;")
     private static native int ImGuiSeparatorFlags_SpanAllColumns_NATIVE();
 }

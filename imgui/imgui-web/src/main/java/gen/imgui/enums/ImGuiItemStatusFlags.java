@@ -46,75 +46,39 @@ public enum ImGuiItemStatusFlags implements NativeEnum<ImGuiItemStatusFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiItemStatusFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiItemStatusFlags_None;")
     private static native int ImGuiItemStatusFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiItemStatusFlags_HoveredRect;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiItemStatusFlags_HoveredRect;")
     private static native int ImGuiItemStatusFlags_HoveredRect_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiItemStatusFlags_HasDisplayRect;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiItemStatusFlags_HasDisplayRect;")
     private static native int ImGuiItemStatusFlags_HasDisplayRect_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiItemStatusFlags_Edited;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiItemStatusFlags_Edited;")
     private static native int ImGuiItemStatusFlags_Edited_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiItemStatusFlags_ToggledSelection;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiItemStatusFlags_ToggledSelection;")
     private static native int ImGuiItemStatusFlags_ToggledSelection_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiItemStatusFlags_ToggledOpen;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiItemStatusFlags_ToggledOpen;")
     private static native int ImGuiItemStatusFlags_ToggledOpen_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiItemStatusFlags_HasDeactivated;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiItemStatusFlags_HasDeactivated;")
     private static native int ImGuiItemStatusFlags_HasDeactivated_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiItemStatusFlags_Deactivated;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiItemStatusFlags_Deactivated;")
     private static native int ImGuiItemStatusFlags_Deactivated_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiItemStatusFlags_HoveredWindow;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiItemStatusFlags_HoveredWindow;")
     private static native int ImGuiItemStatusFlags_HoveredWindow_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiItemStatusFlags_Visible;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiItemStatusFlags_Visible;")
     private static native int ImGuiItemStatusFlags_Visible_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiItemStatusFlags_HasClipRect;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiItemStatusFlags_HasClipRect;")
     private static native int ImGuiItemStatusFlags_HasClipRect_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiItemStatusFlags_HasShortcut;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiItemStatusFlags_HasShortcut;")
     private static native int ImGuiItemStatusFlags_HasShortcut_NATIVE();
 }

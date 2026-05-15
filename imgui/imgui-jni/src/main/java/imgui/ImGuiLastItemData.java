@@ -32,11 +32,9 @@ public class ImGuiLastItemData extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiLastItemData* nativeObject = (ImGuiLastItemData*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ImGuiLastItemData.internal_native_deleteNative(this_addr);
+    }
 
     public ImRect get_Rect() {
         long addr = internal_native_get_Rect_addr(native_address);
@@ -48,9 +46,7 @@ delete nativeObject;
         return ImRect_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiLastItemData* nativeObject = (ImGuiLastItemData*)this_addr;
-return (jlong)&nativeObject->Rect;
-*/
-    public static native long internal_native_get_Rect_addr(long this_addr);
+    public static long internal_native_get_Rect_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiLastItemData.internal_native_get_Rect_addr(this_addr);
+    }
 }

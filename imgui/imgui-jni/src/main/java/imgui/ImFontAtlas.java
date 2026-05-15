@@ -40,11 +40,9 @@ public class ImFontAtlas extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontAtlas* nativeObject = (ImFontAtlas*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ImFontAtlas.internal_native_deleteNative(this_addr);
+    }
 
     public ImFont AddFont(ImFontConfig font_cfg) {
         long addr = internal_native_AddFont_addr(native_address, font_cfg.native_address);
@@ -56,12 +54,9 @@ delete nativeObject;
         return ImFont_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImFontAtlas* nativeObject = (ImFontAtlas*)this_addr;
-ImFont* obj = nativeObject->AddFont((ImFontConfig* )font_cfg_addr);
-return (jlong)obj;
-*/
-    public static native long internal_native_AddFont_addr(long this_addr, long font_cfg_addr);
+    public static long internal_native_AddFont_addr(long this_addr, long font_cfg_addr) {
+        return imgui.natives.JNI_ImFontAtlas.internal_native_AddFont_addr(this_addr, font_cfg_addr);
+    }
 
     public ImFont AddFontDefault(ImFontConfig font_cfg) {
         long addr = internal_native_AddFontDefault_addr(native_address, font_cfg.native_address);
@@ -73,12 +68,9 @@ return (jlong)obj;
         return ImFont_TEMP_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-ImFontAtlas* nativeObject = (ImFontAtlas*)this_addr;
-ImFont* obj = nativeObject->AddFontDefault((ImFontConfig* )font_cfg_addr);
-return (jlong)obj;
-*/
-    public static native long internal_native_AddFontDefault_addr(long this_addr, long font_cfg_addr);
+    public static long internal_native_AddFontDefault_addr(long this_addr, long font_cfg_addr) {
+        return imgui.natives.JNI_ImFontAtlas.internal_native_AddFontDefault_addr(this_addr, font_cfg_addr);
+    }
 
     public ImFont AddFontDefault() {
         long addr = internal_native_AddFontDefault_addr(native_address);
@@ -90,12 +82,9 @@ return (jlong)obj;
         return ImFont_TEMP_GEN_2;
     }
 
-    /*[-JNI;-NATIVE]
-ImFontAtlas* nativeObject = (ImFontAtlas*)this_addr;
-ImFont* obj = nativeObject->AddFontDefault();
-return (jlong)obj;
-*/
-    public static native long internal_native_AddFontDefault_addr(long this_addr);
+    public static long internal_native_AddFontDefault_addr(long this_addr) {
+        return imgui.natives.JNI_ImFontAtlas.internal_native_AddFontDefault_addr(this_addr);
+    }
 
     public ImFont AddFontFromMemoryTTF(NativeObject font_data, int font_data_size, int size_pixels, ImFontConfig font_cfg) {
         long addr = internal_native_AddFontFromMemoryTTF_addr(native_address, font_data.native_void_address, font_data_size, size_pixels, font_cfg.native_address);
@@ -107,12 +96,9 @@ return (jlong)obj;
         return ImFont_TEMP_GEN_3;
     }
 
-    /*[-JNI;-NATIVE]
-ImFontAtlas* nativeObject = (ImFontAtlas*)this_addr;
-ImFont* obj = nativeObject->AddFontFromMemoryTTF((void*)font_data_addr, (int)font_data_size, (int)size_pixels, (ImFontConfig* )font_cfg_addr);
-return (jlong)obj;
-*/
-    public static native long internal_native_AddFontFromMemoryTTF_addr(long this_addr, long font_data_addr, int font_data_size, int size_pixels, long font_cfg_addr);
+    public static long internal_native_AddFontFromMemoryTTF_addr(long this_addr, long font_data_addr, int font_data_size, int size_pixels, long font_cfg_addr) {
+        return imgui.natives.JNI_ImFontAtlas.internal_native_AddFontFromMemoryTTF_addr(this_addr, font_data_addr, font_data_size, size_pixels, font_cfg_addr);
+    }
 
     public ImFont AddFontFromMemoryTTF(NativeObject font_data, int font_data_size, int size_pixels) {
         long addr = internal_native_AddFontFromMemoryTTF_addr(native_address, font_data.native_void_address, font_data_size, size_pixels);
@@ -124,10 +110,7 @@ return (jlong)obj;
         return ImFont_TEMP_GEN_4;
     }
 
-    /*[-JNI;-NATIVE]
-ImFontAtlas* nativeObject = (ImFontAtlas*)this_addr;
-ImFont* obj = nativeObject->AddFontFromMemoryTTF((void*)font_data_addr, (int)font_data_size, (int)size_pixels);
-return (jlong)obj;
-*/
-    public static native long internal_native_AddFontFromMemoryTTF_addr(long this_addr, long font_data_addr, int font_data_size, int size_pixels);
+    public static long internal_native_AddFontFromMemoryTTF_addr(long this_addr, long font_data_addr, int font_data_size, int size_pixels) {
+        return imgui.natives.JNI_ImFontAtlas.internal_native_AddFontFromMemoryTTF_addr(this_addr, font_data_addr, font_data_size, size_pixels);
+    }
 }

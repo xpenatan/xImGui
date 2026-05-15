@@ -34,21 +34,12 @@ public enum ImGuiSortDirection implements NativeEnum<ImGuiSortDirection> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSortDirection_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSortDirection_None;")
     private static native int ImGuiSortDirection_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSortDirection_Ascending;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSortDirection_Ascending;")
     private static native int ImGuiSortDirection_Ascending_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSortDirection_Descending;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSortDirection_Descending;")
     private static native int ImGuiSortDirection_Descending_NATIVE();
 }

@@ -95,308 +95,247 @@ public enum ImGuiCol implements NativeEnum<ImGuiCol> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_Text;
-*/
-    private static native int ImGuiCol_Text_NATIVE();
+    private static int ImGuiCol_Text_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_Text_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TextDisabled;
-*/
-    private static native int ImGuiCol_TextDisabled_NATIVE();
+    private static int ImGuiCol_TextDisabled_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_TextDisabled_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_WindowBg;
-*/
-    private static native int ImGuiCol_WindowBg_NATIVE();
+    private static int ImGuiCol_WindowBg_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_WindowBg_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_ChildBg;
-*/
-    private static native int ImGuiCol_ChildBg_NATIVE();
+    private static int ImGuiCol_ChildBg_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_ChildBg_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_PopupBg;
-*/
-    private static native int ImGuiCol_PopupBg_NATIVE();
+    private static int ImGuiCol_PopupBg_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_PopupBg_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_Border;
-*/
-    private static native int ImGuiCol_Border_NATIVE();
+    private static int ImGuiCol_Border_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_Border_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_BorderShadow;
-*/
-    private static native int ImGuiCol_BorderShadow_NATIVE();
+    private static int ImGuiCol_BorderShadow_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_BorderShadow_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_FrameBg;
-*/
-    private static native int ImGuiCol_FrameBg_NATIVE();
+    private static int ImGuiCol_FrameBg_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_FrameBg_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_FrameBgHovered;
-*/
-    private static native int ImGuiCol_FrameBgHovered_NATIVE();
+    private static int ImGuiCol_FrameBgHovered_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_FrameBgHovered_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_FrameBgActive;
-*/
-    private static native int ImGuiCol_FrameBgActive_NATIVE();
+    private static int ImGuiCol_FrameBgActive_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_FrameBgActive_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TitleBg;
-*/
-    private static native int ImGuiCol_TitleBg_NATIVE();
+    private static int ImGuiCol_TitleBg_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_TitleBg_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TitleBgActive;
-*/
-    private static native int ImGuiCol_TitleBgActive_NATIVE();
+    private static int ImGuiCol_TitleBgActive_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_TitleBgActive_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TitleBgCollapsed;
-*/
-    private static native int ImGuiCol_TitleBgCollapsed_NATIVE();
+    private static int ImGuiCol_TitleBgCollapsed_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_TitleBgCollapsed_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_MenuBarBg;
-*/
-    private static native int ImGuiCol_MenuBarBg_NATIVE();
+    private static int ImGuiCol_MenuBarBg_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_MenuBarBg_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_ScrollbarBg;
-*/
-    private static native int ImGuiCol_ScrollbarBg_NATIVE();
+    private static int ImGuiCol_ScrollbarBg_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_ScrollbarBg_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_ScrollbarGrab;
-*/
-    private static native int ImGuiCol_ScrollbarGrab_NATIVE();
+    private static int ImGuiCol_ScrollbarGrab_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_ScrollbarGrab_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_ScrollbarGrabHovered;
-*/
-    private static native int ImGuiCol_ScrollbarGrabHovered_NATIVE();
+    private static int ImGuiCol_ScrollbarGrabHovered_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_ScrollbarGrabHovered_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_ScrollbarGrabActive;
-*/
-    private static native int ImGuiCol_ScrollbarGrabActive_NATIVE();
+    private static int ImGuiCol_ScrollbarGrabActive_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_ScrollbarGrabActive_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_CheckMark;
-*/
-    private static native int ImGuiCol_CheckMark_NATIVE();
+    private static int ImGuiCol_CheckMark_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_CheckMark_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_SliderGrab;
-*/
-    private static native int ImGuiCol_SliderGrab_NATIVE();
+    private static int ImGuiCol_SliderGrab_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_SliderGrab_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_SliderGrabActive;
-*/
-    private static native int ImGuiCol_SliderGrabActive_NATIVE();
+    private static int ImGuiCol_SliderGrabActive_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_SliderGrabActive_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_Button;
-*/
-    private static native int ImGuiCol_Button_NATIVE();
+    private static int ImGuiCol_Button_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_Button_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_ButtonHovered;
-*/
-    private static native int ImGuiCol_ButtonHovered_NATIVE();
+    private static int ImGuiCol_ButtonHovered_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_ButtonHovered_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_ButtonActive;
-*/
-    private static native int ImGuiCol_ButtonActive_NATIVE();
+    private static int ImGuiCol_ButtonActive_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_ButtonActive_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_Header;
-*/
-    private static native int ImGuiCol_Header_NATIVE();
+    private static int ImGuiCol_Header_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_Header_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_HeaderHovered;
-*/
-    private static native int ImGuiCol_HeaderHovered_NATIVE();
+    private static int ImGuiCol_HeaderHovered_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_HeaderHovered_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_HeaderActive;
-*/
-    private static native int ImGuiCol_HeaderActive_NATIVE();
+    private static int ImGuiCol_HeaderActive_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_HeaderActive_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_Separator;
-*/
-    private static native int ImGuiCol_Separator_NATIVE();
+    private static int ImGuiCol_Separator_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_Separator_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_SeparatorHovered;
-*/
-    private static native int ImGuiCol_SeparatorHovered_NATIVE();
+    private static int ImGuiCol_SeparatorHovered_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_SeparatorHovered_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_SeparatorActive;
-*/
-    private static native int ImGuiCol_SeparatorActive_NATIVE();
+    private static int ImGuiCol_SeparatorActive_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_SeparatorActive_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_ResizeGrip;
-*/
-    private static native int ImGuiCol_ResizeGrip_NATIVE();
+    private static int ImGuiCol_ResizeGrip_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_ResizeGrip_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_ResizeGripHovered;
-*/
-    private static native int ImGuiCol_ResizeGripHovered_NATIVE();
+    private static int ImGuiCol_ResizeGripHovered_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_ResizeGripHovered_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_ResizeGripActive;
-*/
-    private static native int ImGuiCol_ResizeGripActive_NATIVE();
+    private static int ImGuiCol_ResizeGripActive_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_ResizeGripActive_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_InputTextCursor;
-*/
-    private static native int ImGuiCol_InputTextCursor_NATIVE();
+    private static int ImGuiCol_InputTextCursor_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_InputTextCursor_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TabHovered;
-*/
-    private static native int ImGuiCol_TabHovered_NATIVE();
+    private static int ImGuiCol_TabHovered_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_TabHovered_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_Tab;
-*/
-    private static native int ImGuiCol_Tab_NATIVE();
+    private static int ImGuiCol_Tab_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_Tab_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TabSelected;
-*/
-    private static native int ImGuiCol_TabSelected_NATIVE();
+    private static int ImGuiCol_TabSelected_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_TabSelected_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TabSelectedOverline;
-*/
-    private static native int ImGuiCol_TabSelectedOverline_NATIVE();
+    private static int ImGuiCol_TabSelectedOverline_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_TabSelectedOverline_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TabDimmed;
-*/
-    private static native int ImGuiCol_TabDimmed_NATIVE();
+    private static int ImGuiCol_TabDimmed_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_TabDimmed_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TabDimmedSelected;
-*/
-    private static native int ImGuiCol_TabDimmedSelected_NATIVE();
+    private static int ImGuiCol_TabDimmedSelected_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_TabDimmedSelected_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TabDimmedSelectedOverline;
-*/
-    private static native int ImGuiCol_TabDimmedSelectedOverline_NATIVE();
+    private static int ImGuiCol_TabDimmedSelectedOverline_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_TabDimmedSelectedOverline_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_DockingPreview;
-*/
-    private static native int ImGuiCol_DockingPreview_NATIVE();
+    private static int ImGuiCol_DockingPreview_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_DockingPreview_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_DockingEmptyBg;
-*/
-    private static native int ImGuiCol_DockingEmptyBg_NATIVE();
+    private static int ImGuiCol_DockingEmptyBg_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_DockingEmptyBg_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_PlotLines;
-*/
-    private static native int ImGuiCol_PlotLines_NATIVE();
+    private static int ImGuiCol_PlotLines_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_PlotLines_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_PlotLinesHovered;
-*/
-    private static native int ImGuiCol_PlotLinesHovered_NATIVE();
+    private static int ImGuiCol_PlotLinesHovered_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_PlotLinesHovered_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_PlotHistogram;
-*/
-    private static native int ImGuiCol_PlotHistogram_NATIVE();
+    private static int ImGuiCol_PlotHistogram_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_PlotHistogram_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_PlotHistogramHovered;
-*/
-    private static native int ImGuiCol_PlotHistogramHovered_NATIVE();
+    private static int ImGuiCol_PlotHistogramHovered_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_PlotHistogramHovered_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TableHeaderBg;
-*/
-    private static native int ImGuiCol_TableHeaderBg_NATIVE();
+    private static int ImGuiCol_TableHeaderBg_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_TableHeaderBg_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TableBorderStrong;
-*/
-    private static native int ImGuiCol_TableBorderStrong_NATIVE();
+    private static int ImGuiCol_TableBorderStrong_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_TableBorderStrong_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TableBorderLight;
-*/
-    private static native int ImGuiCol_TableBorderLight_NATIVE();
+    private static int ImGuiCol_TableBorderLight_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_TableBorderLight_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TableRowBg;
-*/
-    private static native int ImGuiCol_TableRowBg_NATIVE();
+    private static int ImGuiCol_TableRowBg_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_TableRowBg_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TableRowBgAlt;
-*/
-    private static native int ImGuiCol_TableRowBgAlt_NATIVE();
+    private static int ImGuiCol_TableRowBgAlt_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_TableRowBgAlt_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TextLink;
-*/
-    private static native int ImGuiCol_TextLink_NATIVE();
+    private static int ImGuiCol_TextLink_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_TextLink_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TextSelectedBg;
-*/
-    private static native int ImGuiCol_TextSelectedBg_NATIVE();
+    private static int ImGuiCol_TextSelectedBg_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_TextSelectedBg_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_TreeLines;
-*/
-    private static native int ImGuiCol_TreeLines_NATIVE();
+    private static int ImGuiCol_TreeLines_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_TreeLines_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_DragDropTarget;
-*/
-    private static native int ImGuiCol_DragDropTarget_NATIVE();
+    private static int ImGuiCol_DragDropTarget_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_DragDropTarget_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_UnsavedMarker;
-*/
-    private static native int ImGuiCol_UnsavedMarker_NATIVE();
+    private static int ImGuiCol_UnsavedMarker_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_UnsavedMarker_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_NavCursor;
-*/
-    private static native int ImGuiCol_NavCursor_NATIVE();
+    private static int ImGuiCol_NavCursor_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_NavCursor_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_NavWindowingHighlight;
-*/
-    private static native int ImGuiCol_NavWindowingHighlight_NATIVE();
+    private static int ImGuiCol_NavWindowingHighlight_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_NavWindowingHighlight_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_NavWindowingDimBg;
-*/
-    private static native int ImGuiCol_NavWindowingDimBg_NATIVE();
+    private static int ImGuiCol_NavWindowingDimBg_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_NavWindowingDimBg_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCol_ModalWindowDimBg;
-*/
-    private static native int ImGuiCol_ModalWindowDimBg_NATIVE();
+    private static int ImGuiCol_ModalWindowDimBg_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCol.ImGuiCol_ModalWindowDimBg_NATIVE();
+    }
 }

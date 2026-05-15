@@ -47,114 +47,66 @@ public enum ImGuiButtonFlags implements NativeEnum<ImGuiButtonFlags> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiButtonFlags_None;
-*/
     private static int ImGuiButtonFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiButtonFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiButtonFlags_MouseButtonLeft;
-*/
     private static int ImGuiButtonFlags_MouseButtonLeft_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiButtonFlags_MouseButtonLeft_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiButtonFlags_MouseButtonRight;
-*/
     private static int ImGuiButtonFlags_MouseButtonRight_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiButtonFlags_MouseButtonRight_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiButtonFlags_MouseButtonMiddle;
-*/
     private static int ImGuiButtonFlags_MouseButtonMiddle_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiButtonFlags_MouseButtonMiddle_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiButtonFlags_MouseButtonMask_;
-*/
     private static int ImGuiButtonFlags_MouseButtonMask__NATIVE() {
         try {
             return (int) FFMHandles.ImGuiButtonFlags_MouseButtonMask__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiButtonFlags_EnableNav;
-*/
     private static int ImGuiButtonFlags_EnableNav_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiButtonFlags_EnableNav_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibuttonflags_imguibuttonflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_MouseButtonLeft_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibuttonflags_imguibuttonflags_mousebuttonleft_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_MouseButtonRight_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibuttonflags_imguibuttonflags_mousebuttonright_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_MouseButtonMiddle_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibuttonflags_imguibuttonflags_mousebuttonmiddle_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_MouseButtonMask__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibuttonflags_imguibuttonflags_mousebuttonmask__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
-
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
-
-        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiButtonFlags_ImGuiButtonFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_MouseButtonLeft_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiButtonFlags_ImGuiButtonFlags_1MouseButtonLeft_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_MouseButtonRight_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiButtonFlags_ImGuiButtonFlags_1MouseButtonRight_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_MouseButtonMiddle_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiButtonFlags_ImGuiButtonFlags_1MouseButtonMiddle_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_MouseButtonMask__NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiButtonFlags_ImGuiButtonFlags_1MouseButtonMask_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_EnableNav_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiButtonFlags_ImGuiButtonFlags_1EnableNav_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiButtonFlags_EnableNav_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibuttonflags_imguibuttonflags_enablenav_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

@@ -40,33 +40,27 @@ public enum ImGuiButtonFlags implements NativeEnum<ImGuiButtonFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_None;
-*/
-    private static native int ImGuiButtonFlags_None_NATIVE();
+    private static int ImGuiButtonFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiButtonFlags.ImGuiButtonFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_MouseButtonLeft;
-*/
-    private static native int ImGuiButtonFlags_MouseButtonLeft_NATIVE();
+    private static int ImGuiButtonFlags_MouseButtonLeft_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiButtonFlags.ImGuiButtonFlags_MouseButtonLeft_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_MouseButtonRight;
-*/
-    private static native int ImGuiButtonFlags_MouseButtonRight_NATIVE();
+    private static int ImGuiButtonFlags_MouseButtonRight_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiButtonFlags.ImGuiButtonFlags_MouseButtonRight_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_MouseButtonMiddle;
-*/
-    private static native int ImGuiButtonFlags_MouseButtonMiddle_NATIVE();
+    private static int ImGuiButtonFlags_MouseButtonMiddle_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiButtonFlags.ImGuiButtonFlags_MouseButtonMiddle_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_MouseButtonMask_;
-*/
-    private static native int ImGuiButtonFlags_MouseButtonMask__NATIVE();
+    private static int ImGuiButtonFlags_MouseButtonMask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiButtonFlags.ImGuiButtonFlags_MouseButtonMask__NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_EnableNav;
-*/
-    private static native int ImGuiButtonFlags_EnableNav_NATIVE();
+    private static int ImGuiButtonFlags_EnableNav_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiButtonFlags.ImGuiButtonFlags_EnableNav_NATIVE();
+    }
 }

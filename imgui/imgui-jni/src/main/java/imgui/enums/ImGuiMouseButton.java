@@ -34,18 +34,15 @@ public enum ImGuiMouseButton implements NativeEnum<ImGuiMouseButton> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseButton_Left;
-*/
-    private static native int ImGuiMouseButton_Left_NATIVE();
+    private static int ImGuiMouseButton_Left_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMouseButton.ImGuiMouseButton_Left_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseButton_Right;
-*/
-    private static native int ImGuiMouseButton_Right_NATIVE();
+    private static int ImGuiMouseButton_Right_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMouseButton.ImGuiMouseButton_Right_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseButton_Middle;
-*/
-    private static native int ImGuiMouseButton_Middle_NATIVE();
+    private static int ImGuiMouseButton_Middle_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMouseButton.ImGuiMouseButton_Middle_NATIVE();
+    }
 }

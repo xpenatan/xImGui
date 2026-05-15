@@ -34,18 +34,15 @@ public enum ImOrientation implements NativeEnum<ImOrientation> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)NONE;
-*/
-    private static native int NONE_NATIVE();
+    private static int NONE_NATIVE() {
+        return imgui.extension.imlayout.natives.JNI_ImOrientation.NONE_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)HORIZONTAL;
-*/
-    private static native int HORIZONTAL_NATIVE();
+    private static int HORIZONTAL_NATIVE() {
+        return imgui.extension.imlayout.natives.JNI_ImOrientation.HORIZONTAL_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)VERTICAL;
-*/
-    private static native int VERTICAL_NATIVE();
+    private static int VERTICAL_NATIVE() {
+        return imgui.extension.imlayout.natives.JNI_ImOrientation.VERTICAL_NATIVE();
+    }
 }

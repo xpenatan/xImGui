@@ -34,21 +34,12 @@ public enum ImGuiAxis implements NativeEnum<ImGuiAxis> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiAxis_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiAxis_None;")
     private static native int ImGuiAxis_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiAxis_X;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiAxis_X;")
     private static native int ImGuiAxis_X_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiAxis_Y;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiAxis_Y;")
     private static native int ImGuiAxis_Y_NATIVE();
 }

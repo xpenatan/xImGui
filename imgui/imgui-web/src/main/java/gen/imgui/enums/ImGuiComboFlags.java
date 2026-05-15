@@ -44,63 +44,33 @@ public enum ImGuiComboFlags implements NativeEnum<ImGuiComboFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiComboFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiComboFlags_None;")
     private static native int ImGuiComboFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiComboFlags_PopupAlignLeft;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiComboFlags_PopupAlignLeft;")
     private static native int ImGuiComboFlags_PopupAlignLeft_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiComboFlags_HeightSmall;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiComboFlags_HeightSmall;")
     private static native int ImGuiComboFlags_HeightSmall_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiComboFlags_HeightRegular;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiComboFlags_HeightRegular;")
     private static native int ImGuiComboFlags_HeightRegular_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiComboFlags_HeightLarge;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiComboFlags_HeightLarge;")
     private static native int ImGuiComboFlags_HeightLarge_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiComboFlags_HeightLargest;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiComboFlags_HeightLargest;")
     private static native int ImGuiComboFlags_HeightLargest_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiComboFlags_NoArrowButton;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiComboFlags_NoArrowButton;")
     private static native int ImGuiComboFlags_NoArrowButton_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiComboFlags_NoPreview;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiComboFlags_NoPreview;")
     private static native int ImGuiComboFlags_NoPreview_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiComboFlags_WidthFitPreview;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiComboFlags_WidthFitPreview;")
     private static native int ImGuiComboFlags_WidthFitPreview_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiComboFlags_HeightMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiComboFlags_HeightMask_;")
     private static native int ImGuiComboFlags_HeightMask__NATIVE();
 }

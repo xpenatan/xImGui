@@ -55,15 +55,11 @@ public class ImTextureData extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-delete nativeObject;
-*/
     public static void internal_native_deleteNative(long this_addr) {
         try {
             FFMHandles.internal_native_deleteNative__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -71,15 +67,11 @@ delete nativeObject;
         internal_native_Create(native_address, format.getValue(), w, h);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->Create((::ImTextureFormat)format, (int)w, (int)h);
-*/
     public static void internal_native_Create(long this_addr, int format, int w, int h) {
         try {
             FFMHandles.internal_native_Create__JIII.invokeExact(this_addr, format, w, h);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -87,15 +79,11 @@ nativeObject->Create((::ImTextureFormat)format, (int)w, (int)h);
         internal_native_DestroyPixels(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->DestroyPixels();
-*/
     public static void internal_native_DestroyPixels(long this_addr) {
         try {
             FFMHandles.internal_native_DestroyPixels__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -109,15 +97,11 @@ nativeObject->DestroyPixels();
         return NativeObject_TEMP_GEN_0;
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return (int64_t)nativeObject->GetPixels();
-*/
     public static long internal_native_GetPixels_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_GetPixels_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -131,15 +115,11 @@ return (int64_t)nativeObject->GetPixels();
         return NativeObject_TEMP_GEN_1;
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return (int64_t)nativeObject->GetPixelsAt((int)x, (int)y);
-*/
     public static long internal_native_GetPixelsAt_addr(long this_addr, int x, int y) {
         try {
             return (long) FFMHandles.internal_native_GetPixelsAt_addr__JII.invokeExact(this_addr, x, y);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -147,15 +127,11 @@ return (int64_t)nativeObject->GetPixelsAt((int)x, (int)y);
         return internal_native_GetSizeInBytes(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return nativeObject->GetSizeInBytes();
-*/
     public static int internal_native_GetSizeInBytes(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_GetSizeInBytes__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -163,15 +139,11 @@ return nativeObject->GetSizeInBytes();
         return internal_native_GetPitch(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return nativeObject->GetPitch();
-*/
     public static int internal_native_GetPitch(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_GetPitch__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -185,16 +157,11 @@ return nativeObject->GetPitch();
         return ImTextureRef_TEMP_GEN_0;
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-static ImTextureRef copy_addr;
-copy_addr = nativeObject->GetTexRef();
-return (int64_t)&copy_addr;*/
     public static long internal_native_GetTexRef_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_GetTexRef_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -208,16 +175,11 @@ return (int64_t)&copy_addr;*/
         return ImTextureIDRef_TEMP_GEN_0;
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-static ImTextureIDRef copy_addr;
-copy_addr = nativeObject->GetTexID();
-return (int64_t)&copy_addr;*/
     public static long internal_native_GetTexID_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_GetTexID_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -225,15 +187,11 @@ return (int64_t)&copy_addr;*/
         internal_native_SetTexID(native_address, tex_id.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->SetTexID(*((ImTextureIDRef* )tex_id_addr));
-*/
     public static void internal_native_SetTexID(long this_addr, long tex_id_addr) {
         try {
             FFMHandles.internal_native_SetTexID__JJ.invokeExact(this_addr, tex_id_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -241,15 +199,11 @@ nativeObject->SetTexID(*((ImTextureIDRef* )tex_id_addr));
         internal_native_SetStatus(native_address, status.getValue());
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->SetStatus((::ImTextureStatus)status);
-*/
     public static void internal_native_SetStatus(long this_addr, int status) {
         try {
             FFMHandles.internal_native_SetStatus__JI.invokeExact(this_addr, status);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -257,15 +211,11 @@ nativeObject->SetStatus((::ImTextureStatus)status);
         return internal_native_get_UniqueID(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return nativeObject->UniqueID;
-*/
     public static int internal_native_get_UniqueID(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_UniqueID__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -280,15 +230,11 @@ return nativeObject->UniqueID;
         return ImTextureStatus.CUSTOM.setValue(value);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return (int32_t)nativeObject->Status;
-*/
     public static int internal_native_get_Status(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_Status__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -302,15 +248,11 @@ return (int32_t)nativeObject->Status;
         return NativeObject_TEMP_GEN_2;
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return (int64_t)nativeObject->BackendUserData;
-*/
     public static long internal_native_get_BackendUserData_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_BackendUserData_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -318,15 +260,11 @@ return (int64_t)nativeObject->BackendUserData;
         internal_native_set_BackendUserData(native_address, BackendUserData.native_void_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->BackendUserData = (void**)BackendUserData_addr;
-*/
     public static void internal_native_set_BackendUserData(long this_addr, long BackendUserData_addr) {
         try {
             FFMHandles.internal_native_set_BackendUserData__JJ.invokeExact(this_addr, BackendUserData_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -341,15 +279,11 @@ nativeObject->BackendUserData = (void**)BackendUserData_addr;
         return ImTextureFormat.CUSTOM.setValue(value);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return (int32_t)nativeObject->Format;
-*/
     public static int internal_native_get_Format(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_Format__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -357,15 +291,11 @@ return (int32_t)nativeObject->Format;
         internal_native_set_Format(native_address, Format.getValue());
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->Format = (::ImTextureFormat)Format;
-*/
     public static void internal_native_set_Format(long this_addr, int Format) {
         try {
             FFMHandles.internal_native_set_Format__JI.invokeExact(this_addr, Format);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -373,15 +303,11 @@ nativeObject->Format = (::ImTextureFormat)Format;
         return internal_native_get_Width(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return nativeObject->Width;
-*/
     public static int internal_native_get_Width(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_Width__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -389,15 +315,11 @@ return nativeObject->Width;
         internal_native_set_Width(native_address, Width);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->Width = Width;
-*/
     public static void internal_native_set_Width(long this_addr, int Width) {
         try {
             FFMHandles.internal_native_set_Width__JI.invokeExact(this_addr, Width);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -405,15 +327,11 @@ nativeObject->Width = Width;
         return internal_native_get_Height(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return nativeObject->Height;
-*/
     public static int internal_native_get_Height(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_Height__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -421,15 +339,11 @@ return nativeObject->Height;
         internal_native_set_Height(native_address, Height);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->Height = Height;
-*/
     public static void internal_native_set_Height(long this_addr, int Height) {
         try {
             FFMHandles.internal_native_set_Height__JI.invokeExact(this_addr, Height);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -437,15 +351,11 @@ nativeObject->Height = Height;
         return internal_native_get_BytesPerPixel(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return nativeObject->BytesPerPixel;
-*/
     public static int internal_native_get_BytesPerPixel(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_BytesPerPixel__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -453,15 +363,11 @@ return nativeObject->BytesPerPixel;
         internal_native_set_BytesPerPixel(native_address, BytesPerPixel);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->BytesPerPixel = BytesPerPixel;
-*/
     public static void internal_native_set_BytesPerPixel(long this_addr, int BytesPerPixel) {
         try {
             FFMHandles.internal_native_set_BytesPerPixel__JI.invokeExact(this_addr, BytesPerPixel);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -475,15 +381,11 @@ nativeObject->BytesPerPixel = BytesPerPixel;
         return ImTextureRect_TEMP_GEN_0;
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return (int64_t)&nativeObject->UsedRect;
-*/
     public static long internal_native_get_UsedRect_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_UsedRect_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -491,15 +393,11 @@ return (int64_t)&nativeObject->UsedRect;
         internal_native_set_UsedRect(native_address, UsedRect.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->UsedRect = *((ImTextureRect*)UsedRect_addr);
-*/
     public static void internal_native_set_UsedRect(long this_addr, long UsedRect_addr) {
         try {
             FFMHandles.internal_native_set_UsedRect__JJ.invokeExact(this_addr, UsedRect_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -513,15 +411,11 @@ nativeObject->UsedRect = *((ImTextureRect*)UsedRect_addr);
         return ImTextureRect_TEMP_GEN_1;
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return (int64_t)&nativeObject->UpdateRect;
-*/
     public static long internal_native_get_UpdateRect_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_UpdateRect_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -529,15 +423,11 @@ return (int64_t)&nativeObject->UpdateRect;
         internal_native_set_UpdateRect(native_address, UpdateRect.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->UpdateRect = *((ImTextureRect*)UpdateRect_addr);
-*/
     public static void internal_native_set_UpdateRect(long this_addr, long UpdateRect_addr) {
         try {
             FFMHandles.internal_native_set_UpdateRect__JJ.invokeExact(this_addr, UpdateRect_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -551,15 +441,11 @@ nativeObject->UpdateRect = *((ImTextureRect*)UpdateRect_addr);
         return ImVectorImTextureRect_TEMP_GEN_0;
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return (int64_t)&nativeObject->Updates;
-*/
     public static long internal_native_get_Updates_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_Updates_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -567,15 +453,11 @@ return (int64_t)&nativeObject->Updates;
         internal_native_set_Updates(native_address, Updates.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->Updates = *((ImVectorImTextureRect*)Updates_addr);
-*/
     public static void internal_native_set_Updates(long this_addr, long Updates_addr) {
         try {
             FFMHandles.internal_native_set_Updates__JJ.invokeExact(this_addr, Updates_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -583,15 +465,11 @@ nativeObject->Updates = *((ImVectorImTextureRect*)Updates_addr);
         return internal_native_get_UnusedFrames(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return nativeObject->UnusedFrames;
-*/
     public static int internal_native_get_UnusedFrames(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_UnusedFrames__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -599,15 +477,11 @@ return nativeObject->UnusedFrames;
         internal_native_set_UnusedFrames(native_address, UnusedFrames);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->UnusedFrames = UnusedFrames;
-*/
     public static void internal_native_set_UnusedFrames(long this_addr, int UnusedFrames) {
         try {
             FFMHandles.internal_native_set_UnusedFrames__JI.invokeExact(this_addr, UnusedFrames);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -615,15 +489,11 @@ nativeObject->UnusedFrames = UnusedFrames;
         return internal_native_get_RefCount(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return nativeObject->RefCount;
-*/
     public static short internal_native_get_RefCount(long this_addr) {
         try {
             return (short) FFMHandles.internal_native_get_RefCount__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -631,15 +501,11 @@ return nativeObject->RefCount;
         internal_native_set_RefCount(native_address, RefCount);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->RefCount = RefCount;
-*/
     public static void internal_native_set_RefCount(long this_addr, short RefCount) {
         try {
             FFMHandles.internal_native_set_RefCount__JS.invokeExact(this_addr, RefCount);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -647,15 +513,11 @@ nativeObject->RefCount = RefCount;
         return internal_native_get_UseColors(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return nativeObject->UseColors;
-*/
     public static boolean internal_native_get_UseColors(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_get_UseColors__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -663,15 +525,11 @@ return nativeObject->UseColors;
         internal_native_set_UseColors(native_address, UseColors);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->UseColors = UseColors;
-*/
     public static void internal_native_set_UseColors(long this_addr, boolean UseColors) {
         try {
             FFMHandles.internal_native_set_UseColors__JZ.invokeExact(this_addr, UseColors);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -679,15 +537,11 @@ nativeObject->UseColors = UseColors;
         return internal_native_get_WantDestroyNextFrame(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-return nativeObject->WantDestroyNextFrame;
-*/
     public static boolean internal_native_get_WantDestroyNextFrame(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_get_WantDestroyNextFrame__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -695,122 +549,88 @@ return nativeObject->WantDestroyNextFrame;
         internal_native_set_WantDestroyNextFrame(native_address, WantDestroyNextFrame);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureData* nativeObject = (ImTextureData*)this_addr;
-nativeObject->WantDestroyNextFrame = WantDestroyNextFrame;
-*/
     public static void internal_native_set_WantDestroyNextFrame(long this_addr, boolean WantDestroyNextFrame) {
         try {
             FFMHandles.internal_native_set_WantDestroyNextFrame__JZ.invokeExact(this_addr, WantDestroyNextFrame);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_imtexturedata_deletenative", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle internal_native_Create__JIII = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_imtexturedata_create", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle internal_native_DestroyPixels__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_imtexturedata_destroypixels", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle internal_native_GetPixels_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_getpixels_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_GetPixelsAt_addr__JII = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_getpixelsat_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_GetSizeInBytes__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_imtexturedata_getsizeinbytes", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle internal_native_GetPitch__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_imtexturedata_getpitch", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1deleteNative__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_GetTexRef_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_gettexref_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_Create__JIII = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1Create__JIII", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_GetTexID_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_gettexid_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_DestroyPixels__J = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1DestroyPixels__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_SetTexID__JJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_imtexturedata_settexid", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetPixels_addr__J = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1GetPixels_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_SetStatus__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_imtexturedata_setstatus", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetPixelsAt_addr__JII = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1GetPixelsAt_1addr__JII", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_get_UniqueID__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_get_uniqueid", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetSizeInBytes__J = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1GetSizeInBytes__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_Status__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_get_status", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetPitch__J = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1GetPitch__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_BackendUserData_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_get_backenduserdata_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetTexRef_addr__J = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1GetTexRef_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_BackendUserData__JJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_set_backenduserdata", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetTexID_addr__J = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1GetTexID_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_Format__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_get_format", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_SetTexID__JJ = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1SetTexID__JJ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_Format__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_set_format", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_SetStatus__JI = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1SetStatus__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_get_Width__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_get_width", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_UniqueID__J = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1get_1UniqueID__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_Width__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_set_width", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_Status__J = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1get_1Status__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_Height__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_get_height", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_BackendUserData_addr__J = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1get_1BackendUserData_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_Height__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_set_height", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_set_BackendUserData__JJ = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1set_1BackendUserData__JJ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_BytesPerPixel__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_get_bytesperpixel", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_Format__J = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1get_1Format__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_BytesPerPixel__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_set_bytesperpixel", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_set_Format__JI = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1set_1Format__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_get_UsedRect_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_get_usedrect_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_Width__J = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1get_1Width__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_UsedRect__JJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_set_usedrect", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_set_Width__JI = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1set_1Width__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_get_UpdateRect_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_get_updaterect_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_Height__J = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1get_1Height__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_UpdateRect__JJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_set_updaterect", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_set_Height__JI = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1set_1Height__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_get_Updates_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_get_updates_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_BytesPerPixel__J = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1get_1BytesPerPixel__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_Updates__JJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_set_updates", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_set_BytesPerPixel__JI = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1set_1BytesPerPixel__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_get_UnusedFrames__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_get_unusedframes", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_UsedRect_addr__J = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1get_1UsedRect_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_UnusedFrames__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_set_unusedframes", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_set_UsedRect__JJ = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1set_1UsedRect__JJ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_RefCount__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_get_refcount", FunctionDescriptor.of(ValueLayout.JAVA_SHORT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_UpdateRect_addr__J = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1get_1UpdateRect_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_RefCount__JS = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_set_refcount", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_SHORT));
 
-        static final java.lang.invoke.MethodHandle internal_native_set_UpdateRect__JJ = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1set_1UpdateRect__JJ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_UseColors__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_get_usecolors", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_Updates_addr__J = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1get_1Updates_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_UseColors__JZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_set_usecolors", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_set_Updates__JJ = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1set_1Updates__JJ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_WantDestroyNextFrame__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_get_wantdestroynextframe", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_UnusedFrames__J = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1get_1UnusedFrames__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_UnusedFrames__JI = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1set_1UnusedFrames__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_RefCount__J = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1get_1RefCount__J", FunctionDescriptor.of(ValueLayout.JAVA_SHORT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_RefCount__JS = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1set_1RefCount__JS", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_SHORT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_UseColors__J = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1get_1UseColors__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_UseColors__JZ = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1set_1UseColors__JZ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_WantDestroyNextFrame__J = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1get_1WantDestroyNextFrame__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_WantDestroyNextFrame__JZ = downcallDefault("jparser_imgui_ImTextureData_internal_1native_1set_1WantDestroyNextFrame__JZ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_set_WantDestroyNextFrame__JZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturedata_set_wantdestroynextframe", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
     }
 }

@@ -46,63 +46,51 @@ public enum ImGuiPopupFlags implements NativeEnum<ImGuiPopupFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiPopupFlags_None;
-*/
-    private static native int ImGuiPopupFlags_None_NATIVE();
+    private static int ImGuiPopupFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiPopupFlags.ImGuiPopupFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiPopupFlags_MouseButtonLeft;
-*/
-    private static native int ImGuiPopupFlags_MouseButtonLeft_NATIVE();
+    private static int ImGuiPopupFlags_MouseButtonLeft_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiPopupFlags.ImGuiPopupFlags_MouseButtonLeft_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiPopupFlags_MouseButtonRight;
-*/
-    private static native int ImGuiPopupFlags_MouseButtonRight_NATIVE();
+    private static int ImGuiPopupFlags_MouseButtonRight_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiPopupFlags.ImGuiPopupFlags_MouseButtonRight_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiPopupFlags_MouseButtonMiddle;
-*/
-    private static native int ImGuiPopupFlags_MouseButtonMiddle_NATIVE();
+    private static int ImGuiPopupFlags_MouseButtonMiddle_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiPopupFlags.ImGuiPopupFlags_MouseButtonMiddle_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiPopupFlags_MouseButtonMask_;
-*/
-    private static native int ImGuiPopupFlags_MouseButtonMask__NATIVE();
+    private static int ImGuiPopupFlags_MouseButtonMask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiPopupFlags.ImGuiPopupFlags_MouseButtonMask__NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiPopupFlags_MouseButtonDefault_;
-*/
-    private static native int ImGuiPopupFlags_MouseButtonDefault__NATIVE();
+    private static int ImGuiPopupFlags_MouseButtonDefault__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiPopupFlags.ImGuiPopupFlags_MouseButtonDefault__NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiPopupFlags_NoReopen;
-*/
-    private static native int ImGuiPopupFlags_NoReopen_NATIVE();
+    private static int ImGuiPopupFlags_NoReopen_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiPopupFlags.ImGuiPopupFlags_NoReopen_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiPopupFlags_NoOpenOverExistingPopup;
-*/
-    private static native int ImGuiPopupFlags_NoOpenOverExistingPopup_NATIVE();
+    private static int ImGuiPopupFlags_NoOpenOverExistingPopup_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiPopupFlags.ImGuiPopupFlags_NoOpenOverExistingPopup_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiPopupFlags_NoOpenOverItems;
-*/
-    private static native int ImGuiPopupFlags_NoOpenOverItems_NATIVE();
+    private static int ImGuiPopupFlags_NoOpenOverItems_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiPopupFlags.ImGuiPopupFlags_NoOpenOverItems_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiPopupFlags_AnyPopupId;
-*/
-    private static native int ImGuiPopupFlags_AnyPopupId_NATIVE();
+    private static int ImGuiPopupFlags_AnyPopupId_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiPopupFlags.ImGuiPopupFlags_AnyPopupId_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiPopupFlags_AnyPopupLevel;
-*/
-    private static native int ImGuiPopupFlags_AnyPopupLevel_NATIVE();
+    private static int ImGuiPopupFlags_AnyPopupLevel_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiPopupFlags.ImGuiPopupFlags_AnyPopupLevel_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiPopupFlags_AnyPopup;
-*/
-    private static native int ImGuiPopupFlags_AnyPopup_NATIVE();
+    private static int ImGuiPopupFlags_AnyPopup_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiPopupFlags.ImGuiPopupFlags_AnyPopup_NATIVE();
+    }
 }

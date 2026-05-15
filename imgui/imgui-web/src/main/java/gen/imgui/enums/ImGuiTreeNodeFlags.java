@@ -56,135 +56,69 @@ public enum ImGuiTreeNodeFlags implements NativeEnum<ImGuiTreeNodeFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_None;")
     private static native int ImGuiTreeNodeFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_Selected;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_Selected;")
     private static native int ImGuiTreeNodeFlags_Selected_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_Framed;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_Framed;")
     private static native int ImGuiTreeNodeFlags_Framed_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_AllowOverlap;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_AllowOverlap;")
     private static native int ImGuiTreeNodeFlags_AllowOverlap_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_NoTreePushOnOpen;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_NoTreePushOnOpen;")
     private static native int ImGuiTreeNodeFlags_NoTreePushOnOpen_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_NoAutoOpenOnLog;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_NoAutoOpenOnLog;")
     private static native int ImGuiTreeNodeFlags_NoAutoOpenOnLog_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_DefaultOpen;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_DefaultOpen;")
     private static native int ImGuiTreeNodeFlags_DefaultOpen_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_OpenOnDoubleClick;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_OpenOnDoubleClick;")
     private static native int ImGuiTreeNodeFlags_OpenOnDoubleClick_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_OpenOnArrow;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_OpenOnArrow;")
     private static native int ImGuiTreeNodeFlags_OpenOnArrow_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_Leaf;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_Leaf;")
     private static native int ImGuiTreeNodeFlags_Leaf_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_Bullet;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_Bullet;")
     private static native int ImGuiTreeNodeFlags_Bullet_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_FramePadding;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_FramePadding;")
     private static native int ImGuiTreeNodeFlags_FramePadding_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_SpanAvailWidth;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_SpanAvailWidth;")
     private static native int ImGuiTreeNodeFlags_SpanAvailWidth_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_SpanFullWidth;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_SpanFullWidth;")
     private static native int ImGuiTreeNodeFlags_SpanFullWidth_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_SpanLabelWidth;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_SpanLabelWidth;")
     private static native int ImGuiTreeNodeFlags_SpanLabelWidth_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_SpanAllColumns;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_SpanAllColumns;")
     private static native int ImGuiTreeNodeFlags_SpanAllColumns_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_LabelSpanAllColumns;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_LabelSpanAllColumns;")
     private static native int ImGuiTreeNodeFlags_LabelSpanAllColumns_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_NavLeftJumpsToParent;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_NavLeftJumpsToParent;")
     private static native int ImGuiTreeNodeFlags_NavLeftJumpsToParent_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_CollapsingHeader;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_CollapsingHeader;")
     private static native int ImGuiTreeNodeFlags_CollapsingHeader_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_DrawLinesNone;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_DrawLinesNone;")
     private static native int ImGuiTreeNodeFlags_DrawLinesNone_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_DrawLinesFull;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_DrawLinesFull;")
     private static native int ImGuiTreeNodeFlags_DrawLinesFull_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_DrawLinesToNodes;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_DrawLinesToNodes;")
     private static native int ImGuiTreeNodeFlags_DrawLinesToNodes_NATIVE();
 }

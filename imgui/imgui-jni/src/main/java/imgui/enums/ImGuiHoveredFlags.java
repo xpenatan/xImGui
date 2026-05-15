@@ -55,108 +55,87 @@ public enum ImGuiHoveredFlags implements NativeEnum<ImGuiHoveredFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_None;
-*/
-    private static native int ImGuiHoveredFlags_None_NATIVE();
+    private static int ImGuiHoveredFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiHoveredFlags.ImGuiHoveredFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_ChildWindows;
-*/
-    private static native int ImGuiHoveredFlags_ChildWindows_NATIVE();
+    private static int ImGuiHoveredFlags_ChildWindows_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiHoveredFlags.ImGuiHoveredFlags_ChildWindows_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_RootWindow;
-*/
-    private static native int ImGuiHoveredFlags_RootWindow_NATIVE();
+    private static int ImGuiHoveredFlags_RootWindow_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiHoveredFlags.ImGuiHoveredFlags_RootWindow_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_AnyWindow;
-*/
-    private static native int ImGuiHoveredFlags_AnyWindow_NATIVE();
+    private static int ImGuiHoveredFlags_AnyWindow_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiHoveredFlags.ImGuiHoveredFlags_AnyWindow_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_NoPopupHierarchy;
-*/
-    private static native int ImGuiHoveredFlags_NoPopupHierarchy_NATIVE();
+    private static int ImGuiHoveredFlags_NoPopupHierarchy_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiHoveredFlags.ImGuiHoveredFlags_NoPopupHierarchy_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_DockHierarchy;
-*/
-    private static native int ImGuiHoveredFlags_DockHierarchy_NATIVE();
+    private static int ImGuiHoveredFlags_DockHierarchy_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiHoveredFlags.ImGuiHoveredFlags_DockHierarchy_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_AllowWhenBlockedByPopup;
-*/
-    private static native int ImGuiHoveredFlags_AllowWhenBlockedByPopup_NATIVE();
+    private static int ImGuiHoveredFlags_AllowWhenBlockedByPopup_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiHoveredFlags.ImGuiHoveredFlags_AllowWhenBlockedByPopup_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_AllowWhenBlockedByActiveItem;
-*/
-    private static native int ImGuiHoveredFlags_AllowWhenBlockedByActiveItem_NATIVE();
+    private static int ImGuiHoveredFlags_AllowWhenBlockedByActiveItem_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiHoveredFlags.ImGuiHoveredFlags_AllowWhenBlockedByActiveItem_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_AllowWhenOverlappedByItem;
-*/
-    private static native int ImGuiHoveredFlags_AllowWhenOverlappedByItem_NATIVE();
+    private static int ImGuiHoveredFlags_AllowWhenOverlappedByItem_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiHoveredFlags.ImGuiHoveredFlags_AllowWhenOverlappedByItem_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_AllowWhenOverlappedByWindow;
-*/
-    private static native int ImGuiHoveredFlags_AllowWhenOverlappedByWindow_NATIVE();
+    private static int ImGuiHoveredFlags_AllowWhenOverlappedByWindow_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiHoveredFlags.ImGuiHoveredFlags_AllowWhenOverlappedByWindow_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_AllowWhenDisabled;
-*/
-    private static native int ImGuiHoveredFlags_AllowWhenDisabled_NATIVE();
+    private static int ImGuiHoveredFlags_AllowWhenDisabled_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiHoveredFlags.ImGuiHoveredFlags_AllowWhenDisabled_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_NoNavOverride;
-*/
-    private static native int ImGuiHoveredFlags_NoNavOverride_NATIVE();
+    private static int ImGuiHoveredFlags_NoNavOverride_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiHoveredFlags.ImGuiHoveredFlags_NoNavOverride_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_AllowWhenOverlapped;
-*/
-    private static native int ImGuiHoveredFlags_AllowWhenOverlapped_NATIVE();
+    private static int ImGuiHoveredFlags_AllowWhenOverlapped_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiHoveredFlags.ImGuiHoveredFlags_AllowWhenOverlapped_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_RectOnly;
-*/
-    private static native int ImGuiHoveredFlags_RectOnly_NATIVE();
+    private static int ImGuiHoveredFlags_RectOnly_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiHoveredFlags.ImGuiHoveredFlags_RectOnly_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_RootAndChildWindows;
-*/
-    private static native int ImGuiHoveredFlags_RootAndChildWindows_NATIVE();
+    private static int ImGuiHoveredFlags_RootAndChildWindows_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiHoveredFlags.ImGuiHoveredFlags_RootAndChildWindows_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_ForTooltip;
-*/
-    private static native int ImGuiHoveredFlags_ForTooltip_NATIVE();
+    private static int ImGuiHoveredFlags_ForTooltip_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiHoveredFlags.ImGuiHoveredFlags_ForTooltip_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_Stationary;
-*/
-    private static native int ImGuiHoveredFlags_Stationary_NATIVE();
+    private static int ImGuiHoveredFlags_Stationary_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiHoveredFlags.ImGuiHoveredFlags_Stationary_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_DelayNone;
-*/
-    private static native int ImGuiHoveredFlags_DelayNone_NATIVE();
+    private static int ImGuiHoveredFlags_DelayNone_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiHoveredFlags.ImGuiHoveredFlags_DelayNone_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_DelayShort;
-*/
-    private static native int ImGuiHoveredFlags_DelayShort_NATIVE();
+    private static int ImGuiHoveredFlags_DelayShort_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiHoveredFlags.ImGuiHoveredFlags_DelayShort_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_DelayNormal;
-*/
-    private static native int ImGuiHoveredFlags_DelayNormal_NATIVE();
+    private static int ImGuiHoveredFlags_DelayNormal_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiHoveredFlags.ImGuiHoveredFlags_DelayNormal_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_NoSharedDelay;
-*/
-    private static native int ImGuiHoveredFlags_NoSharedDelay_NATIVE();
+    private static int ImGuiHoveredFlags_NoSharedDelay_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiHoveredFlags.ImGuiHoveredFlags_NoSharedDelay_NATIVE();
+    }
 }

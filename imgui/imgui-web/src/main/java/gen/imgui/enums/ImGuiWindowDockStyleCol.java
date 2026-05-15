@@ -43,57 +43,30 @@ public enum ImGuiWindowDockStyleCol implements NativeEnum<ImGuiWindowDockStyleCo
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowDockStyleCol_Text;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowDockStyleCol_Text;")
     private static native int ImGuiWindowDockStyleCol_Text_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowDockStyleCol_TabHovered;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowDockStyleCol_TabHovered;")
     private static native int ImGuiWindowDockStyleCol_TabHovered_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowDockStyleCol_TabFocused;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowDockStyleCol_TabFocused;")
     private static native int ImGuiWindowDockStyleCol_TabFocused_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowDockStyleCol_TabSelected;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowDockStyleCol_TabSelected;")
     private static native int ImGuiWindowDockStyleCol_TabSelected_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowDockStyleCol_TabSelectedOverline;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowDockStyleCol_TabSelectedOverline;")
     private static native int ImGuiWindowDockStyleCol_TabSelectedOverline_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowDockStyleCol_TabDimmed;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowDockStyleCol_TabDimmed;")
     private static native int ImGuiWindowDockStyleCol_TabDimmed_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowDockStyleCol_TabDimmedSelected;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowDockStyleCol_TabDimmedSelected;")
     private static native int ImGuiWindowDockStyleCol_TabDimmedSelected_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowDockStyleCol_TabDimmedSelectedOverline;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowDockStyleCol_TabDimmedSelectedOverline;")
     private static native int ImGuiWindowDockStyleCol_TabDimmedSelectedOverline_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiWindowDockStyleCol_COUNT;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiWindowDockStyleCol_COUNT;")
     private static native int ImGuiWindowDockStyleCol_COUNT_NATIVE();
 }

@@ -24,14 +24,11 @@ public class ImVec4 extends NativeObject {
         internal_reset(addr, true);
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)new ImVec4();
-*/
     public static long internal_native_create_addr() {
         try {
             return (long) FFMHandles.internal_native_create_addr__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -40,14 +37,11 @@ return (int64_t)new ImVec4();
         internal_reset(addr, true);
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)new ImVec4((float)x, (float)y, (float)z, (float)w);
-*/
     public static long internal_native_create_float_float_float_float_addr(float x, float y, float z, float w) {
         try {
             return (long) FFMHandles.internal_native_create_float_float_float_float_addr__FFFF.invokeExact(x, y, z, w);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -69,15 +63,11 @@ return (int64_t)new ImVec4((float)x, (float)y, (float)z, (float)w);
         internal_native_deleteNative(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImVec4* nativeObject = (ImVec4*)this_addr;
-delete nativeObject;
-*/
     public static void internal_native_deleteNative(long this_addr) {
         try {
             FFMHandles.internal_native_deleteNative__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -86,15 +76,11 @@ delete nativeObject;
         return this;
     }
 
-    /*[-FFM;-NATIVE]
-ImVec4* nativeObject = (ImVec4*)this_addr;
-return (int64_t)&(*nativeObject = *((ImVec4* )value_addr));
-*/
     public static long internal_native_copy_addr(long this_addr, long value_addr) {
         try {
             return (long) FFMHandles.internal_native_copy_addr__JJ.invokeExact(this_addr, value_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -102,15 +88,11 @@ return (int64_t)&(*nativeObject = *((ImVec4* )value_addr));
         return internal_native_get_x(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImVec4* nativeObject = (ImVec4*)this_addr;
-return nativeObject->x;
-*/
     public static float internal_native_get_x(long this_addr) {
         try {
             return (float) FFMHandles.internal_native_get_x__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -118,15 +100,11 @@ return nativeObject->x;
         internal_native_set_x(native_address, x);
     }
 
-    /*[-FFM;-NATIVE]
-ImVec4* nativeObject = (ImVec4*)this_addr;
-nativeObject->x = x;
-*/
     public static void internal_native_set_x(long this_addr, float x) {
         try {
             FFMHandles.internal_native_set_x__JF.invokeExact(this_addr, x);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -134,15 +112,11 @@ nativeObject->x = x;
         return internal_native_get_y(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImVec4* nativeObject = (ImVec4*)this_addr;
-return nativeObject->y;
-*/
     public static float internal_native_get_y(long this_addr) {
         try {
             return (float) FFMHandles.internal_native_get_y__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -150,15 +124,11 @@ return nativeObject->y;
         internal_native_set_y(native_address, y);
     }
 
-    /*[-FFM;-NATIVE]
-ImVec4* nativeObject = (ImVec4*)this_addr;
-nativeObject->y = y;
-*/
     public static void internal_native_set_y(long this_addr, float y) {
         try {
             FFMHandles.internal_native_set_y__JF.invokeExact(this_addr, y);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -166,15 +136,11 @@ nativeObject->y = y;
         return internal_native_get_z(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImVec4* nativeObject = (ImVec4*)this_addr;
-return nativeObject->z;
-*/
     public static float internal_native_get_z(long this_addr) {
         try {
             return (float) FFMHandles.internal_native_get_z__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -182,15 +148,11 @@ return nativeObject->z;
         internal_native_set_z(native_address, z);
     }
 
-    /*[-FFM;-NATIVE]
-ImVec4* nativeObject = (ImVec4*)this_addr;
-nativeObject->z = z;
-*/
     public static void internal_native_set_z(long this_addr, float z) {
         try {
             FFMHandles.internal_native_set_z__JF.invokeExact(this_addr, z);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -198,15 +160,11 @@ nativeObject->z = z;
         return internal_native_get_w(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImVec4* nativeObject = (ImVec4*)this_addr;
-return nativeObject->w;
-*/
     public static float internal_native_get_w(long this_addr) {
         try {
             return (float) FFMHandles.internal_native_get_w__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -214,72 +172,38 @@ return nativeObject->w;
         internal_native_set_w(native_address, w);
     }
 
-    /*[-FFM;-NATIVE]
-ImVec4* nativeObject = (ImVec4*)this_addr;
-nativeObject->w = w;
-*/
     public static void internal_native_set_w(long this_addr, float w) {
         try {
             FFMHandles.internal_native_set_w__JF.invokeExact(this_addr, w);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle internal_native_create_addr__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imvec4_create_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle internal_native_create_float_float_float_float_addr__FFFF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imvec4_create_float_float_float_float_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_imvec4_deletenative", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle internal_native_copy_addr__JJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imvec4_copy_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_get_x__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imvec4_get_x", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_set_x__JF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imvec4_set_x", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle internal_native_get_y__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imvec4_get_y", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_create_addr__ = downcallDefault("jparser_imgui_ImVec4_internal_1native_1create_1addr__", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_y__JF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imvec4_set_y", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_create_float_float_float_float_addr__FFFF = downcallDefault("jparser_imgui_ImVec4_internal_1native_1create_1float_1float_1float_1float_1addr__FFFF", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_get_z__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imvec4_get_z", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = downcallDefault("jparser_imgui_ImVec4_internal_1native_1deleteNative__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_z__JF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imvec4_set_z", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_copy_addr__JJ = downcallDefault("jparser_imgui_ImVec4_internal_1native_1copy_1addr__JJ", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_w__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imvec4_get_w", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_x__J = downcallDefault("jparser_imgui_ImVec4_internal_1native_1get_1x__J", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_x__JF = downcallDefault("jparser_imgui_ImVec4_internal_1native_1set_1x__JF", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_y__J = downcallDefault("jparser_imgui_ImVec4_internal_1native_1get_1y__J", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_y__JF = downcallDefault("jparser_imgui_ImVec4_internal_1native_1set_1y__JF", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_z__J = downcallDefault("jparser_imgui_ImVec4_internal_1native_1get_1z__J", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_z__JF = downcallDefault("jparser_imgui_ImVec4_internal_1native_1set_1z__JF", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_w__J = downcallDefault("jparser_imgui_ImVec4_internal_1native_1get_1w__J", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_w__JF = downcallDefault("jparser_imgui_ImVec4_internal_1native_1set_1w__JF", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_set_w__JF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imvec4_set_w", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_FLOAT));
     }
 }

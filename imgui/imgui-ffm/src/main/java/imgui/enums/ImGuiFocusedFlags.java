@@ -48,127 +48,76 @@ public enum ImGuiFocusedFlags implements NativeEnum<ImGuiFocusedFlags> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiFocusedFlags_None;
-*/
     private static int ImGuiFocusedFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiFocusedFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiFocusedFlags_ChildWindows;
-*/
     private static int ImGuiFocusedFlags_ChildWindows_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiFocusedFlags_ChildWindows_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiFocusedFlags_RootWindow;
-*/
     private static int ImGuiFocusedFlags_RootWindow_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiFocusedFlags_RootWindow_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiFocusedFlags_AnyWindow;
-*/
     private static int ImGuiFocusedFlags_AnyWindow_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiFocusedFlags_AnyWindow_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiFocusedFlags_NoPopupHierarchy;
-*/
     private static int ImGuiFocusedFlags_NoPopupHierarchy_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiFocusedFlags_NoPopupHierarchy_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiFocusedFlags_DockHierarchy;
-*/
     private static int ImGuiFocusedFlags_DockHierarchy_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiFocusedFlags_DockHierarchy_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiFocusedFlags_RootAndChildWindows;
-*/
     private static int ImGuiFocusedFlags_RootAndChildWindows_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiFocusedFlags_RootAndChildWindows_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiFocusedFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguifocusedflags_imguifocusedflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiFocusedFlags_ChildWindows_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguifocusedflags_imguifocusedflags_childwindows_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiFocusedFlags_RootWindow_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguifocusedflags_imguifocusedflags_rootwindow_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiFocusedFlags_AnyWindow_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguifocusedflags_imguifocusedflags_anywindow_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiFocusedFlags_NoPopupHierarchy_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguifocusedflags_imguifocusedflags_nopopuphierarchy_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiFocusedFlags_DockHierarchy_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguifocusedflags_imguifocusedflags_dockhierarchy_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
-
-        static final java.lang.invoke.MethodHandle ImGuiFocusedFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiFocusedFlags_ImGuiFocusedFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiFocusedFlags_ChildWindows_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiFocusedFlags_ImGuiFocusedFlags_1ChildWindows_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiFocusedFlags_RootWindow_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiFocusedFlags_ImGuiFocusedFlags_1RootWindow_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiFocusedFlags_AnyWindow_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiFocusedFlags_ImGuiFocusedFlags_1AnyWindow_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiFocusedFlags_NoPopupHierarchy_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiFocusedFlags_ImGuiFocusedFlags_1NoPopupHierarchy_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiFocusedFlags_DockHierarchy_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiFocusedFlags_ImGuiFocusedFlags_1DockHierarchy_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiFocusedFlags_RootAndChildWindows_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiFocusedFlags_ImGuiFocusedFlags_1RootAndChildWindows_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiFocusedFlags_RootAndChildWindows_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguifocusedflags_imguifocusedflags_rootandchildwindows_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

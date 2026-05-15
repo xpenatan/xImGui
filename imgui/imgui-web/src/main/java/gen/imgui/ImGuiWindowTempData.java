@@ -38,12 +38,6 @@ public class ImGuiWindowTempData extends NativeObject {
         return ImVec2_TEMP_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowTempData);
-var returnedJSObj = jsObj.get_CursorPos();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowTempData);var returnedJSObj = jsObj.get_CursorPos();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_CursorPos_addr(int this_addr);
 
@@ -51,10 +45,6 @@ return imgui.getPointer(returnedJSObj);
         return internal_native_get_TreeDepth(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowTempData);
-return jsObj.get_TreeDepth();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowTempData);return jsObj.get_TreeDepth();")
     public static native int internal_native_get_TreeDepth(int this_addr);
 
@@ -62,10 +52,6 @@ return jsObj.get_TreeDepth();
         internal_native_set_TreeDepth(native_address, TreeDepth);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowTempData);
-jsObj.set_TreeDepth(TreeDepth);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "TreeDepth"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiWindowTempData);jsObj.set_TreeDepth(TreeDepth);")
     public static native void internal_native_set_TreeDepth(int this_addr, int TreeDepth);
 }

@@ -34,23 +34,19 @@ public enum ImFontAtlasFlags implements NativeEnum<ImFontAtlasFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImFontAtlasFlags_None;
-*/
-    private static native int ImFontAtlasFlags_None_NATIVE();
+    private static int ImFontAtlasFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImFontAtlasFlags.ImFontAtlasFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImFontAtlasFlags_NoPowerOfTwoHeight;
-*/
-    private static native int ImFontAtlasFlags_NoPowerOfTwoHeight_NATIVE();
+    private static int ImFontAtlasFlags_NoPowerOfTwoHeight_NATIVE() {
+        return imgui.enums.natives.JNI_ImFontAtlasFlags.ImFontAtlasFlags_NoPowerOfTwoHeight_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImFontAtlasFlags_NoMouseCursors;
-*/
-    private static native int ImFontAtlasFlags_NoMouseCursors_NATIVE();
+    private static int ImFontAtlasFlags_NoMouseCursors_NATIVE() {
+        return imgui.enums.natives.JNI_ImFontAtlasFlags.ImFontAtlasFlags_NoMouseCursors_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImFontAtlasFlags_NoBakedLines;
-*/
-    private static native int ImFontAtlasFlags_NoBakedLines_NATIVE();
+    private static int ImFontAtlasFlags_NoBakedLines_NATIVE() {
+        return imgui.enums.natives.JNI_ImFontAtlasFlags.ImFontAtlasFlags_NoBakedLines_NATIVE();
+    }
 }

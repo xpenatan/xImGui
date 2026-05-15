@@ -34,27 +34,15 @@ public enum ImGuiTableBgTarget implements NativeEnum<ImGuiTableBgTarget> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTableBgTarget_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTableBgTarget_None;")
     private static native int ImGuiTableBgTarget_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTableBgTarget_RowBg0;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTableBgTarget_RowBg0;")
     private static native int ImGuiTableBgTarget_RowBg0_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTableBgTarget_RowBg1;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTableBgTarget_RowBg1;")
     private static native int ImGuiTableBgTarget_RowBg1_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTableBgTarget_CellBg;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTableBgTarget_CellBg;")
     private static native int ImGuiTableBgTarget_CellBg_NATIVE();
 }

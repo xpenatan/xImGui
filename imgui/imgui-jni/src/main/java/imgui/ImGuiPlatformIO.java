@@ -32,11 +32,9 @@ public class ImGuiPlatformIO extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiPlatformIO* nativeObject = (ImGuiPlatformIO*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ImGuiPlatformIO.internal_native_deleteNative(this_addr);
+    }
 
     public ImVectorImTextureDataPtr get_Textures() {
         long addr = internal_native_get_Textures_addr(native_address);
@@ -48,19 +46,15 @@ delete nativeObject;
         return ImVectorImTextureDataPtr_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiPlatformIO* nativeObject = (ImGuiPlatformIO*)this_addr;
-return (jlong)&nativeObject->Textures;
-*/
-    public static native long internal_native_get_Textures_addr(long this_addr);
+    public static long internal_native_get_Textures_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiPlatformIO.internal_native_get_Textures_addr(this_addr);
+    }
 
     public void set_Textures(ImVectorImTextureDataPtr Textures) {
         internal_native_set_Textures(native_address, Textures.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiPlatformIO* nativeObject = (ImGuiPlatformIO*)this_addr;
-nativeObject->Textures = *((ImVectorImTextureDataPtr*)Textures_addr);
-*/
-    public static native void internal_native_set_Textures(long this_addr, long Textures_addr);
+    public static void internal_native_set_Textures(long this_addr, long Textures_addr) {
+        imgui.natives.JNI_ImGuiPlatformIO.internal_native_set_Textures(this_addr, Textures_addr);
+    }
 }

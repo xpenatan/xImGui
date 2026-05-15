@@ -32,10 +32,6 @@ public class ImGuiStoragePair extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStoragePair);
-imgui.destroy(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStoragePair);imgui.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
@@ -49,10 +45,6 @@ imgui.destroy(jsObj);
         return NativeObject_TEMP_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStoragePair);
-return jsObj.get_val_p();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStoragePair);return jsObj.get_val_p();")
     public static native int internal_native_get_val_p_addr(int this_addr);
 
@@ -60,10 +52,6 @@ return jsObj.get_val_p();
         internal_native_set_val_p(native_address, val_p.native_void_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStoragePair);
-jsObj.set_val_p(val_p_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "val_p_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiStoragePair);jsObj.set_val_p(val_p_addr);")
     public static native void internal_native_set_val_p(int this_addr, int val_p_addr);
 }

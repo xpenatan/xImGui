@@ -24,14 +24,11 @@ public class ImGuiCollapseLayoutOptions extends ImGuiLayoutOptions {
         internal_reset(addr, true);
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)new ImGuiCollapseLayoutOptions();
-*/
     public static long internal_native_create_addr() {
         try {
             return (long) FFMHandles.internal_native_create_addr__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -54,15 +51,11 @@ return (int64_t)new ImGuiCollapseLayoutOptions();
         internal_native_deleteNative(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiCollapseLayoutOptions* nativeObject = (ImGuiCollapseLayoutOptions*)this_addr;
-delete nativeObject;
-*/
     public static void internal_native_deleteNative(long this_addr) {
         try {
             FFMHandles.internal_native_deleteNative__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -70,15 +63,11 @@ delete nativeObject;
         return internal_native_get_arrowColor(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiCollapseLayoutOptions* nativeObject = (ImGuiCollapseLayoutOptions*)this_addr;
-return nativeObject->arrowColor;
-*/
     public static int internal_native_get_arrowColor(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_arrowColor__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -86,15 +75,11 @@ return nativeObject->arrowColor;
         internal_native_set_arrowColor(native_address, arrowColor);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiCollapseLayoutOptions* nativeObject = (ImGuiCollapseLayoutOptions*)this_addr;
-nativeObject->arrowColor = arrowColor;
-*/
     public static void internal_native_set_arrowColor(long this_addr, int arrowColor) {
         try {
             FFMHandles.internal_native_set_arrowColor__JI.invokeExact(this_addr, arrowColor);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -102,15 +87,11 @@ nativeObject->arrowColor = arrowColor;
         return internal_native_get_arrowBackgroundHoveredColor(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiCollapseLayoutOptions* nativeObject = (ImGuiCollapseLayoutOptions*)this_addr;
-return nativeObject->arrowBackgroundHoveredColor;
-*/
     public static int internal_native_get_arrowBackgroundHoveredColor(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_arrowBackgroundHoveredColor__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -118,15 +99,11 @@ return nativeObject->arrowBackgroundHoveredColor;
         internal_native_set_arrowBackgroundHoveredColor(native_address, arrowBackgroundHoveredColor);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiCollapseLayoutOptions* nativeObject = (ImGuiCollapseLayoutOptions*)this_addr;
-nativeObject->arrowBackgroundHoveredColor = arrowBackgroundHoveredColor;
-*/
     public static void internal_native_set_arrowBackgroundHoveredColor(long this_addr, int arrowBackgroundHoveredColor) {
         try {
             FFMHandles.internal_native_set_arrowBackgroundHoveredColor__JI.invokeExact(this_addr, arrowBackgroundHoveredColor);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -134,15 +111,11 @@ nativeObject->arrowBackgroundHoveredColor = arrowBackgroundHoveredColor;
         return internal_native_get_arrowBackgroundClickedColor(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiCollapseLayoutOptions* nativeObject = (ImGuiCollapseLayoutOptions*)this_addr;
-return nativeObject->arrowBackgroundClickedColor;
-*/
     public static int internal_native_get_arrowBackgroundClickedColor(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_arrowBackgroundClickedColor__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -150,15 +123,11 @@ return nativeObject->arrowBackgroundClickedColor;
         internal_native_set_arrowBackgroundClickedColor(native_address, arrowBackgroundClickedColor);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiCollapseLayoutOptions* nativeObject = (ImGuiCollapseLayoutOptions*)this_addr;
-nativeObject->arrowBackgroundClickedColor = arrowBackgroundClickedColor;
-*/
     public static void internal_native_set_arrowBackgroundClickedColor(long this_addr, int arrowBackgroundClickedColor) {
         try {
             FFMHandles.internal_native_set_arrowBackgroundClickedColor__JI.invokeExact(this_addr, arrowBackgroundClickedColor);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -166,15 +135,11 @@ nativeObject->arrowBackgroundClickedColor = arrowBackgroundClickedColor;
         return internal_native_get_frameColor(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiCollapseLayoutOptions* nativeObject = (ImGuiCollapseLayoutOptions*)this_addr;
-return nativeObject->frameColor;
-*/
     public static int internal_native_get_frameColor(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_frameColor__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -182,15 +147,11 @@ return nativeObject->frameColor;
         internal_native_set_frameColor(native_address, frameColor);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiCollapseLayoutOptions* nativeObject = (ImGuiCollapseLayoutOptions*)this_addr;
-nativeObject->frameColor = frameColor;
-*/
     public static void internal_native_set_frameColor(long this_addr, int frameColor) {
         try {
             FFMHandles.internal_native_set_frameColor__JI.invokeExact(this_addr, frameColor);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -198,15 +159,11 @@ nativeObject->frameColor = frameColor;
         return internal_native_get_borderColor(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiCollapseLayoutOptions* nativeObject = (ImGuiCollapseLayoutOptions*)this_addr;
-return nativeObject->borderColor;
-*/
     public static int internal_native_get_borderColor(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_borderColor__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -214,15 +171,11 @@ return nativeObject->borderColor;
         internal_native_set_borderColor(native_address, borderColor);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiCollapseLayoutOptions* nativeObject = (ImGuiCollapseLayoutOptions*)this_addr;
-nativeObject->borderColor = borderColor;
-*/
     public static void internal_native_set_borderColor(long this_addr, int borderColor) {
         try {
             FFMHandles.internal_native_set_borderColor__JI.invokeExact(this_addr, borderColor);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -230,15 +183,11 @@ nativeObject->borderColor = borderColor;
         return internal_native_get_borderRound(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiCollapseLayoutOptions* nativeObject = (ImGuiCollapseLayoutOptions*)this_addr;
-return nativeObject->borderRound;
-*/
     public static int internal_native_get_borderRound(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_borderRound__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -246,15 +195,11 @@ return nativeObject->borderRound;
         internal_native_set_borderRound(native_address, borderRound);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiCollapseLayoutOptions* nativeObject = (ImGuiCollapseLayoutOptions*)this_addr;
-nativeObject->borderRound = borderRound;
-*/
     public static void internal_native_set_borderRound(long this_addr, int borderRound) {
         try {
             FFMHandles.internal_native_set_borderRound__JI.invokeExact(this_addr, borderRound);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -262,15 +207,11 @@ nativeObject->borderRound = borderRound;
         return internal_native_get_roundingCorners(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiCollapseLayoutOptions* nativeObject = (ImGuiCollapseLayoutOptions*)this_addr;
-return nativeObject->roundingCorners;
-*/
     public static int internal_native_get_roundingCorners(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_roundingCorners__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -278,15 +219,11 @@ return nativeObject->roundingCorners;
         internal_native_set_roundingCorners(native_address, roundingCorners);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiCollapseLayoutOptions* nativeObject = (ImGuiCollapseLayoutOptions*)this_addr;
-nativeObject->roundingCorners = roundingCorners;
-*/
     public static void internal_native_set_roundingCorners(long this_addr, int roundingCorners) {
         try {
             FFMHandles.internal_native_set_roundingCorners__JI.invokeExact(this_addr, roundingCorners);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -294,15 +231,11 @@ nativeObject->roundingCorners = roundingCorners;
         return internal_native_get_openDefault(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiCollapseLayoutOptions* nativeObject = (ImGuiCollapseLayoutOptions*)this_addr;
-return nativeObject->openDefault;
-*/
     public static boolean internal_native_get_openDefault(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_get_openDefault__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -310,84 +243,50 @@ return nativeObject->openDefault;
         internal_native_set_openDefault(native_address, openDefault);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiCollapseLayoutOptions* nativeObject = (ImGuiCollapseLayoutOptions*)this_addr;
-nativeObject->openDefault = openDefault;
-*/
     public static void internal_native_set_openDefault(long this_addr, boolean openDefault) {
         try {
             FFMHandles.internal_native_set_openDefault__JZ.invokeExact(this_addr, openDefault);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle internal_native_create_addr__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguicollapselayoutoptions_create_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imguicollapselayoutoptions_deletenative", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle internal_native_get_arrowColor__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguicollapselayoutoptions_get_arrowcolor", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle internal_native_set_arrowColor__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguicollapselayoutoptions_set_arrowcolor", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_get_arrowBackgroundHoveredColor__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguicollapselayoutoptions_get_arrowbackgroundhoveredcolor", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_set_arrowBackgroundHoveredColor__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguicollapselayoutoptions_set_arrowbackgroundhoveredcolor", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle internal_native_get_arrowBackgroundClickedColor__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguicollapselayoutoptions_get_arrowbackgroundclickedcolor", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_create_addr__ = downcallDefault("jparser_imgui_extension_imlayout_ImGuiCollapseLayoutOptions_internal_1native_1create_1addr__", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_arrowBackgroundClickedColor__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguicollapselayoutoptions_set_arrowbackgroundclickedcolor", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = downcallDefault("jparser_imgui_extension_imlayout_ImGuiCollapseLayoutOptions_internal_1native_1deleteNative__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_frameColor__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguicollapselayoutoptions_get_framecolor", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_arrowColor__J = downcallDefault("jparser_imgui_extension_imlayout_ImGuiCollapseLayoutOptions_internal_1native_1get_1arrowColor__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_frameColor__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguicollapselayoutoptions_set_framecolor", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_set_arrowColor__JI = downcallDefault("jparser_imgui_extension_imlayout_ImGuiCollapseLayoutOptions_internal_1native_1set_1arrowColor__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_get_borderColor__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguicollapselayoutoptions_get_bordercolor", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_arrowBackgroundHoveredColor__J = downcallDefault("jparser_imgui_extension_imlayout_ImGuiCollapseLayoutOptions_internal_1native_1get_1arrowBackgroundHoveredColor__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_borderColor__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguicollapselayoutoptions_set_bordercolor", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_set_arrowBackgroundHoveredColor__JI = downcallDefault("jparser_imgui_extension_imlayout_ImGuiCollapseLayoutOptions_internal_1native_1set_1arrowBackgroundHoveredColor__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_get_borderRound__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguicollapselayoutoptions_get_borderround", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_arrowBackgroundClickedColor__J = downcallDefault("jparser_imgui_extension_imlayout_ImGuiCollapseLayoutOptions_internal_1native_1get_1arrowBackgroundClickedColor__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_borderRound__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguicollapselayoutoptions_set_borderround", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_set_arrowBackgroundClickedColor__JI = downcallDefault("jparser_imgui_extension_imlayout_ImGuiCollapseLayoutOptions_internal_1native_1set_1arrowBackgroundClickedColor__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_get_roundingCorners__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguicollapselayoutoptions_get_roundingcorners", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_frameColor__J = downcallDefault("jparser_imgui_extension_imlayout_ImGuiCollapseLayoutOptions_internal_1native_1get_1frameColor__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_roundingCorners__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguicollapselayoutoptions_set_roundingcorners", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_set_frameColor__JI = downcallDefault("jparser_imgui_extension_imlayout_ImGuiCollapseLayoutOptions_internal_1native_1set_1frameColor__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_get_openDefault__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguicollapselayoutoptions_get_opendefault", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_borderColor__J = downcallDefault("jparser_imgui_extension_imlayout_ImGuiCollapseLayoutOptions_internal_1native_1get_1borderColor__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_borderColor__JI = downcallDefault("jparser_imgui_extension_imlayout_ImGuiCollapseLayoutOptions_internal_1native_1set_1borderColor__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_borderRound__J = downcallDefault("jparser_imgui_extension_imlayout_ImGuiCollapseLayoutOptions_internal_1native_1get_1borderRound__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_borderRound__JI = downcallDefault("jparser_imgui_extension_imlayout_ImGuiCollapseLayoutOptions_internal_1native_1set_1borderRound__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_roundingCorners__J = downcallDefault("jparser_imgui_extension_imlayout_ImGuiCollapseLayoutOptions_internal_1native_1get_1roundingCorners__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_roundingCorners__JI = downcallDefault("jparser_imgui_extension_imlayout_ImGuiCollapseLayoutOptions_internal_1native_1set_1roundingCorners__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_openDefault__J = downcallDefault("jparser_imgui_extension_imlayout_ImGuiCollapseLayoutOptions_internal_1native_1get_1openDefault__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_openDefault__JZ = downcallDefault("jparser_imgui_extension_imlayout_ImGuiCollapseLayoutOptions_internal_1native_1set_1openDefault__JZ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_set_openDefault__JZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguicollapselayoutoptions_set_opendefault", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
     }
 }

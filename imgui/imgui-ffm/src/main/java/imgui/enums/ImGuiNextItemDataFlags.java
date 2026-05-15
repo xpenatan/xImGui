@@ -47,114 +47,66 @@ public enum ImGuiNextItemDataFlags implements NativeEnum<ImGuiNextItemDataFlags>
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNextItemDataFlags_None;
-*/
     private static int ImGuiNextItemDataFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNextItemDataFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNextItemDataFlags_HasWidth;
-*/
     private static int ImGuiNextItemDataFlags_HasWidth_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNextItemDataFlags_HasWidth_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNextItemDataFlags_HasOpen;
-*/
     private static int ImGuiNextItemDataFlags_HasOpen_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNextItemDataFlags_HasOpen_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNextItemDataFlags_HasShortcut;
-*/
     private static int ImGuiNextItemDataFlags_HasShortcut_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNextItemDataFlags_HasShortcut_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNextItemDataFlags_HasRefVal;
-*/
     private static int ImGuiNextItemDataFlags_HasRefVal_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNextItemDataFlags_HasRefVal_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNextItemDataFlags_HasStorageID;
-*/
     private static int ImGuiNextItemDataFlags_HasStorageID_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNextItemDataFlags_HasStorageID_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiNextItemDataFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinextitemdataflags_imguinextitemdataflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiNextItemDataFlags_HasWidth_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinextitemdataflags_imguinextitemdataflags_haswidth_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiNextItemDataFlags_HasOpen_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinextitemdataflags_imguinextitemdataflags_hasopen_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiNextItemDataFlags_HasShortcut_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinextitemdataflags_imguinextitemdataflags_hasshortcut_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiNextItemDataFlags_HasRefVal_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinextitemdataflags_imguinextitemdataflags_hasrefval_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
-
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
-
-        static final java.lang.invoke.MethodHandle ImGuiNextItemDataFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNextItemDataFlags_ImGuiNextItemDataFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiNextItemDataFlags_HasWidth_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNextItemDataFlags_ImGuiNextItemDataFlags_1HasWidth_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiNextItemDataFlags_HasOpen_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNextItemDataFlags_ImGuiNextItemDataFlags_1HasOpen_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiNextItemDataFlags_HasShortcut_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNextItemDataFlags_ImGuiNextItemDataFlags_1HasShortcut_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiNextItemDataFlags_HasRefVal_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNextItemDataFlags_ImGuiNextItemDataFlags_1HasRefVal_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiNextItemDataFlags_HasStorageID_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNextItemDataFlags_ImGuiNextItemDataFlags_1HasStorageID_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiNextItemDataFlags_HasStorageID_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinextitemdataflags_imguinextitemdataflags_hasstorageid_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

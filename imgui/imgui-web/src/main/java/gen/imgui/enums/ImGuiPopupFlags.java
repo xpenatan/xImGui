@@ -46,75 +46,39 @@ public enum ImGuiPopupFlags implements NativeEnum<ImGuiPopupFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiPopupFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiPopupFlags_None;")
     private static native int ImGuiPopupFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiPopupFlags_MouseButtonLeft;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiPopupFlags_MouseButtonLeft;")
     private static native int ImGuiPopupFlags_MouseButtonLeft_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiPopupFlags_MouseButtonRight;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiPopupFlags_MouseButtonRight;")
     private static native int ImGuiPopupFlags_MouseButtonRight_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiPopupFlags_MouseButtonMiddle;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiPopupFlags_MouseButtonMiddle;")
     private static native int ImGuiPopupFlags_MouseButtonMiddle_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiPopupFlags_MouseButtonMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiPopupFlags_MouseButtonMask_;")
     private static native int ImGuiPopupFlags_MouseButtonMask__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiPopupFlags_MouseButtonDefault_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiPopupFlags_MouseButtonDefault_;")
     private static native int ImGuiPopupFlags_MouseButtonDefault__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiPopupFlags_NoReopen;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiPopupFlags_NoReopen;")
     private static native int ImGuiPopupFlags_NoReopen_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiPopupFlags_NoOpenOverExistingPopup;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiPopupFlags_NoOpenOverExistingPopup;")
     private static native int ImGuiPopupFlags_NoOpenOverExistingPopup_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiPopupFlags_NoOpenOverItems;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiPopupFlags_NoOpenOverItems;")
     private static native int ImGuiPopupFlags_NoOpenOverItems_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiPopupFlags_AnyPopupId;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiPopupFlags_AnyPopupId;")
     private static native int ImGuiPopupFlags_AnyPopupId_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiPopupFlags_AnyPopupLevel;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiPopupFlags_AnyPopupLevel;")
     private static native int ImGuiPopupFlags_AnyPopupLevel_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiPopupFlags_AnyPopup;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiPopupFlags_AnyPopup;")
     private static native int ImGuiPopupFlags_AnyPopup_NATIVE();
 }

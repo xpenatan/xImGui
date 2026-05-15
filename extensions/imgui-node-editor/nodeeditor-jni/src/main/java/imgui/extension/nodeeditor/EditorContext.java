@@ -30,9 +30,7 @@ public class EditorContext extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-EditorContext* nativeObject = (EditorContext*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.extension.nodeeditor.natives.JNI_EditorContext.internal_native_deleteNative(this_addr);
+    }
 }

@@ -54,123 +54,63 @@ public enum StyleColor implements NativeEnum<StyleColor> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleColor_Bg;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleColor_Bg;")
     private static native int StyleColor_Bg_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleColor_Grid;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleColor_Grid;")
     private static native int StyleColor_Grid_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleColor_NodeBg;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleColor_NodeBg;")
     private static native int StyleColor_NodeBg_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleColor_NodeBorder;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleColor_NodeBorder;")
     private static native int StyleColor_NodeBorder_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleColor_HovNodeBorder;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleColor_HovNodeBorder;")
     private static native int StyleColor_HovNodeBorder_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleColor_SelNodeBorder;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleColor_SelNodeBorder;")
     private static native int StyleColor_SelNodeBorder_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleColor_NodeSelRect;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleColor_NodeSelRect;")
     private static native int StyleColor_NodeSelRect_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleColor_NodeSelRectBorder;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleColor_NodeSelRectBorder;")
     private static native int StyleColor_NodeSelRectBorder_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleColor_HovLinkBorder;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleColor_HovLinkBorder;")
     private static native int StyleColor_HovLinkBorder_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleColor_SelLinkBorder;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleColor_SelLinkBorder;")
     private static native int StyleColor_SelLinkBorder_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleColor_HighlightLinkBorder;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleColor_HighlightLinkBorder;")
     private static native int StyleColor_HighlightLinkBorder_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleColor_LinkSelRect;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleColor_LinkSelRect;")
     private static native int StyleColor_LinkSelRect_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleColor_LinkSelRectBorder;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleColor_LinkSelRectBorder;")
     private static native int StyleColor_LinkSelRectBorder_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleColor_PinRect;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleColor_PinRect;")
     private static native int StyleColor_PinRect_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleColor_PinRectBorder;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleColor_PinRectBorder;")
     private static native int StyleColor_PinRectBorder_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleColor_Flow;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleColor_Flow;")
     private static native int StyleColor_Flow_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleColor_FlowMarker;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleColor_FlowMarker;")
     private static native int StyleColor_FlowMarker_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleColor_GroupBg;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleColor_GroupBg;")
     private static native int StyleColor_GroupBg_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleColor_GroupBorder;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleColor_GroupBorder;")
     private static native int StyleColor_GroupBorder_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleColor_Count;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleColor_Count;")
     private static native int StyleColor_Count_NATIVE();
 }

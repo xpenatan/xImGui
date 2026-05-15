@@ -65,189 +65,96 @@ public enum ImGuiColorEditFlags implements NativeEnum<ImGuiColorEditFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_None;")
     private static native int ImGuiColorEditFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_NoAlpha;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_NoAlpha;")
     private static native int ImGuiColorEditFlags_NoAlpha_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_NoPicker;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_NoPicker;")
     private static native int ImGuiColorEditFlags_NoPicker_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_NoOptions;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_NoOptions;")
     private static native int ImGuiColorEditFlags_NoOptions_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_NoSmallPreview;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_NoSmallPreview;")
     private static native int ImGuiColorEditFlags_NoSmallPreview_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_NoInputs;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_NoInputs;")
     private static native int ImGuiColorEditFlags_NoInputs_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_NoTooltip;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_NoTooltip;")
     private static native int ImGuiColorEditFlags_NoTooltip_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_NoLabel;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_NoLabel;")
     private static native int ImGuiColorEditFlags_NoLabel_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_NoSidePreview;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_NoSidePreview;")
     private static native int ImGuiColorEditFlags_NoSidePreview_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_NoDragDrop;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_NoDragDrop;")
     private static native int ImGuiColorEditFlags_NoDragDrop_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_NoBorder;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_NoBorder;")
     private static native int ImGuiColorEditFlags_NoBorder_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_AlphaOpaque;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_AlphaOpaque;")
     private static native int ImGuiColorEditFlags_AlphaOpaque_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_AlphaNoBg;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_AlphaNoBg;")
     private static native int ImGuiColorEditFlags_AlphaNoBg_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_AlphaPreviewHalf;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_AlphaPreviewHalf;")
     private static native int ImGuiColorEditFlags_AlphaPreviewHalf_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_AlphaBar;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_AlphaBar;")
     private static native int ImGuiColorEditFlags_AlphaBar_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_HDR;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_HDR;")
     private static native int ImGuiColorEditFlags_HDR_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_DisplayRGB;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_DisplayRGB;")
     private static native int ImGuiColorEditFlags_DisplayRGB_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_DisplayHSV;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_DisplayHSV;")
     private static native int ImGuiColorEditFlags_DisplayHSV_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_DisplayHex;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_DisplayHex;")
     private static native int ImGuiColorEditFlags_DisplayHex_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_Uint8;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_Uint8;")
     private static native int ImGuiColorEditFlags_Uint8_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_Float;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_Float;")
     private static native int ImGuiColorEditFlags_Float_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_PickerHueBar;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_PickerHueBar;")
     private static native int ImGuiColorEditFlags_PickerHueBar_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_PickerHueWheel;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_PickerHueWheel;")
     private static native int ImGuiColorEditFlags_PickerHueWheel_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_InputRGB;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_InputRGB;")
     private static native int ImGuiColorEditFlags_InputRGB_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_InputHSV;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_InputHSV;")
     private static native int ImGuiColorEditFlags_InputHSV_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_DefaultOptions_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_DefaultOptions_;")
     private static native int ImGuiColorEditFlags_DefaultOptions__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_AlphaMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_AlphaMask_;")
     private static native int ImGuiColorEditFlags_AlphaMask__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_DisplayMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_DisplayMask_;")
     private static native int ImGuiColorEditFlags_DisplayMask__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_DataTypeMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_DataTypeMask_;")
     private static native int ImGuiColorEditFlags_DataTypeMask__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_PickerMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_PickerMask_;")
     private static native int ImGuiColorEditFlags_PickerMask__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiColorEditFlags_InputMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiColorEditFlags_InputMask_;")
     private static native int ImGuiColorEditFlags_InputMask__NATIVE();
 }

@@ -48,87 +48,45 @@ public enum ImGuiLocKey implements NativeEnum<ImGuiLocKey> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiLocKey_VersionStr;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiLocKey_VersionStr;")
     private static native int ImGuiLocKey_VersionStr_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiLocKey_TableSizeOne;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiLocKey_TableSizeOne;")
     private static native int ImGuiLocKey_TableSizeOne_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiLocKey_TableSizeAllFit;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiLocKey_TableSizeAllFit;")
     private static native int ImGuiLocKey_TableSizeAllFit_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiLocKey_TableSizeAllDefault;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiLocKey_TableSizeAllDefault;")
     private static native int ImGuiLocKey_TableSizeAllDefault_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiLocKey_TableResetOrder;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiLocKey_TableResetOrder;")
     private static native int ImGuiLocKey_TableResetOrder_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiLocKey_WindowingMainMenuBar;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiLocKey_WindowingMainMenuBar;")
     private static native int ImGuiLocKey_WindowingMainMenuBar_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiLocKey_WindowingPopup;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiLocKey_WindowingPopup;")
     private static native int ImGuiLocKey_WindowingPopup_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiLocKey_WindowingUntitled;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiLocKey_WindowingUntitled;")
     private static native int ImGuiLocKey_WindowingUntitled_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiLocKey_OpenLink_s;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiLocKey_OpenLink_s;")
     private static native int ImGuiLocKey_OpenLink_s_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiLocKey_CopyLink;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiLocKey_CopyLink;")
     private static native int ImGuiLocKey_CopyLink_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiLocKey_DockingHideTabBar;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiLocKey_DockingHideTabBar;")
     private static native int ImGuiLocKey_DockingHideTabBar_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiLocKey_DockingHoldShiftToDock;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiLocKey_DockingHoldShiftToDock;")
     private static native int ImGuiLocKey_DockingHoldShiftToDock_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiLocKey_DockingDragToUndockOrMoveNode;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiLocKey_DockingDragToUndockOrMoveNode;")
     private static native int ImGuiLocKey_DockingDragToUndockOrMoveNode_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiLocKey_COUNT;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiLocKey_COUNT;")
     private static native int ImGuiLocKey_COUNT_NATIVE();
 }

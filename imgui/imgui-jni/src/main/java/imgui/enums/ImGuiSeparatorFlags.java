@@ -34,23 +34,19 @@ public enum ImGuiSeparatorFlags implements NativeEnum<ImGuiSeparatorFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSeparatorFlags_None;
-*/
-    private static native int ImGuiSeparatorFlags_None_NATIVE();
+    private static int ImGuiSeparatorFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSeparatorFlags.ImGuiSeparatorFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSeparatorFlags_Horizontal;
-*/
-    private static native int ImGuiSeparatorFlags_Horizontal_NATIVE();
+    private static int ImGuiSeparatorFlags_Horizontal_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSeparatorFlags.ImGuiSeparatorFlags_Horizontal_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSeparatorFlags_Vertical;
-*/
-    private static native int ImGuiSeparatorFlags_Vertical_NATIVE();
+    private static int ImGuiSeparatorFlags_Vertical_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSeparatorFlags.ImGuiSeparatorFlags_Vertical_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSeparatorFlags_SpanAllColumns;
-*/
-    private static native int ImGuiSeparatorFlags_SpanAllColumns_NATIVE();
+    private static int ImGuiSeparatorFlags_SpanAllColumns_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSeparatorFlags.ImGuiSeparatorFlags_SpanAllColumns_NATIVE();
+    }
 }

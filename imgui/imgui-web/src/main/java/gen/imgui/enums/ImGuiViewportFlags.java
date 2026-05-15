@@ -49,93 +49,48 @@ public enum ImGuiViewportFlags implements NativeEnum<ImGuiViewportFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiViewportFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiViewportFlags_None;")
     private static native int ImGuiViewportFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiViewportFlags_IsPlatformWindow;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiViewportFlags_IsPlatformWindow;")
     private static native int ImGuiViewportFlags_IsPlatformWindow_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiViewportFlags_IsPlatformMonitor;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiViewportFlags_IsPlatformMonitor;")
     private static native int ImGuiViewportFlags_IsPlatformMonitor_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiViewportFlags_OwnedByApp;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiViewportFlags_OwnedByApp;")
     private static native int ImGuiViewportFlags_OwnedByApp_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiViewportFlags_NoDecoration;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiViewportFlags_NoDecoration;")
     private static native int ImGuiViewportFlags_NoDecoration_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiViewportFlags_NoTaskBarIcon;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiViewportFlags_NoTaskBarIcon;")
     private static native int ImGuiViewportFlags_NoTaskBarIcon_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiViewportFlags_NoFocusOnAppearing;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiViewportFlags_NoFocusOnAppearing;")
     private static native int ImGuiViewportFlags_NoFocusOnAppearing_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiViewportFlags_NoFocusOnClick;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiViewportFlags_NoFocusOnClick;")
     private static native int ImGuiViewportFlags_NoFocusOnClick_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiViewportFlags_NoInputs;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiViewportFlags_NoInputs;")
     private static native int ImGuiViewportFlags_NoInputs_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiViewportFlags_NoRendererClear;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiViewportFlags_NoRendererClear;")
     private static native int ImGuiViewportFlags_NoRendererClear_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiViewportFlags_NoAutoMerge;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiViewportFlags_NoAutoMerge;")
     private static native int ImGuiViewportFlags_NoAutoMerge_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiViewportFlags_TopMost;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiViewportFlags_TopMost;")
     private static native int ImGuiViewportFlags_TopMost_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiViewportFlags_CanHostOtherWindows;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiViewportFlags_CanHostOtherWindows;")
     private static native int ImGuiViewportFlags_CanHostOtherWindows_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiViewportFlags_IsMinimized;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiViewportFlags_IsMinimized;")
     private static native int ImGuiViewportFlags_IsMinimized_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiViewportFlags_IsFocused;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiViewportFlags_IsFocused;")
     private static native int ImGuiViewportFlags_IsFocused_NATIVE();
 }

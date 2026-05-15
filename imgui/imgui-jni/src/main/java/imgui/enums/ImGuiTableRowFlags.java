@@ -34,13 +34,11 @@ public enum ImGuiTableRowFlags implements NativeEnum<ImGuiTableRowFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableRowFlags_None;
-*/
-    private static native int ImGuiTableRowFlags_None_NATIVE();
+    private static int ImGuiTableRowFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableRowFlags.ImGuiTableRowFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableRowFlags_Headers;
-*/
-    private static native int ImGuiTableRowFlags_Headers_NATIVE();
+    private static int ImGuiTableRowFlags_Headers_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableRowFlags.ImGuiTableRowFlags_Headers_NATIVE();
+    }
 }

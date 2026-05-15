@@ -17,10 +17,6 @@ public class Config extends NativeObject {
         internal_reset(addr, true);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = new nodeeditor.Config();
-return nodeeditor.getPointer(jsObj);
-*/
     @org.teavm.jso.JSBody(script = "var jsObj = new nodeeditor.Config();return nodeeditor.getPointer(jsObj);")
     public static native int internal_native_create_addr();
 
@@ -42,10 +38,6 @@ return nodeeditor.getPointer(jsObj);
         internal_native_deleteNative(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = nodeeditor.wrapPointer(this_addr, nodeeditor.Config);
-nodeeditor.destroy(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = nodeeditor.wrapPointer(this_addr, nodeeditor.Config);nodeeditor.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 }

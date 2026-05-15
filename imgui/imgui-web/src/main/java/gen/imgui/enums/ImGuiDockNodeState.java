@@ -34,27 +34,15 @@ public enum ImGuiDockNodeState implements NativeEnum<ImGuiDockNodeState> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeState_Unknown;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeState_Unknown;")
     private static native int ImGuiDockNodeState_Unknown_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeState_HostWindowHiddenBecauseSingleWindow;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeState_HostWindowHiddenBecauseSingleWindow;")
     private static native int ImGuiDockNodeState_HostWindowHiddenBecauseSingleWindow_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeState_HostWindowHiddenBecauseWindowsAreResizing;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeState_HostWindowHiddenBecauseWindowsAreResizing;")
     private static native int ImGuiDockNodeState_HostWindowHiddenBecauseWindowsAreResizing_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeState_HostWindowVisible;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeState_HostWindowVisible;")
     private static native int ImGuiDockNodeState_HostWindowVisible_NATIVE();
 }

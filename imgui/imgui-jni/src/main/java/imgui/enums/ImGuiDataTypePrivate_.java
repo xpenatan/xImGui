@@ -34,13 +34,11 @@ public enum ImGuiDataTypePrivate_ implements NativeEnum<ImGuiDataTypePrivate_> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_Pointer;
-*/
-    private static native int ImGuiDataType_Pointer_NATIVE();
+    private static int ImGuiDataType_Pointer_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDataTypePrivate_.ImGuiDataType_Pointer_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_ID;
-*/
-    private static native int ImGuiDataType_ID_NATIVE();
+    private static int ImGuiDataType_ID_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDataTypePrivate_.ImGuiDataType_ID_NATIVE();
+    }
 }

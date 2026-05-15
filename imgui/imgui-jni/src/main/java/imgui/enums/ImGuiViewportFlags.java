@@ -49,78 +49,63 @@ public enum ImGuiViewportFlags implements NativeEnum<ImGuiViewportFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_None;
-*/
-    private static native int ImGuiViewportFlags_None_NATIVE();
+    private static int ImGuiViewportFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiViewportFlags.ImGuiViewportFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_IsPlatformWindow;
-*/
-    private static native int ImGuiViewportFlags_IsPlatformWindow_NATIVE();
+    private static int ImGuiViewportFlags_IsPlatformWindow_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiViewportFlags.ImGuiViewportFlags_IsPlatformWindow_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_IsPlatformMonitor;
-*/
-    private static native int ImGuiViewportFlags_IsPlatformMonitor_NATIVE();
+    private static int ImGuiViewportFlags_IsPlatformMonitor_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiViewportFlags.ImGuiViewportFlags_IsPlatformMonitor_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_OwnedByApp;
-*/
-    private static native int ImGuiViewportFlags_OwnedByApp_NATIVE();
+    private static int ImGuiViewportFlags_OwnedByApp_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiViewportFlags.ImGuiViewportFlags_OwnedByApp_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_NoDecoration;
-*/
-    private static native int ImGuiViewportFlags_NoDecoration_NATIVE();
+    private static int ImGuiViewportFlags_NoDecoration_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiViewportFlags.ImGuiViewportFlags_NoDecoration_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_NoTaskBarIcon;
-*/
-    private static native int ImGuiViewportFlags_NoTaskBarIcon_NATIVE();
+    private static int ImGuiViewportFlags_NoTaskBarIcon_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiViewportFlags.ImGuiViewportFlags_NoTaskBarIcon_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_NoFocusOnAppearing;
-*/
-    private static native int ImGuiViewportFlags_NoFocusOnAppearing_NATIVE();
+    private static int ImGuiViewportFlags_NoFocusOnAppearing_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiViewportFlags.ImGuiViewportFlags_NoFocusOnAppearing_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_NoFocusOnClick;
-*/
-    private static native int ImGuiViewportFlags_NoFocusOnClick_NATIVE();
+    private static int ImGuiViewportFlags_NoFocusOnClick_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiViewportFlags.ImGuiViewportFlags_NoFocusOnClick_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_NoInputs;
-*/
-    private static native int ImGuiViewportFlags_NoInputs_NATIVE();
+    private static int ImGuiViewportFlags_NoInputs_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiViewportFlags.ImGuiViewportFlags_NoInputs_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_NoRendererClear;
-*/
-    private static native int ImGuiViewportFlags_NoRendererClear_NATIVE();
+    private static int ImGuiViewportFlags_NoRendererClear_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiViewportFlags.ImGuiViewportFlags_NoRendererClear_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_NoAutoMerge;
-*/
-    private static native int ImGuiViewportFlags_NoAutoMerge_NATIVE();
+    private static int ImGuiViewportFlags_NoAutoMerge_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiViewportFlags.ImGuiViewportFlags_NoAutoMerge_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_TopMost;
-*/
-    private static native int ImGuiViewportFlags_TopMost_NATIVE();
+    private static int ImGuiViewportFlags_TopMost_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiViewportFlags.ImGuiViewportFlags_TopMost_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_CanHostOtherWindows;
-*/
-    private static native int ImGuiViewportFlags_CanHostOtherWindows_NATIVE();
+    private static int ImGuiViewportFlags_CanHostOtherWindows_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiViewportFlags.ImGuiViewportFlags_CanHostOtherWindows_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_IsMinimized;
-*/
-    private static native int ImGuiViewportFlags_IsMinimized_NATIVE();
+    private static int ImGuiViewportFlags_IsMinimized_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiViewportFlags.ImGuiViewportFlags_IsMinimized_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiViewportFlags_IsFocused;
-*/
-    private static native int ImGuiViewportFlags_IsFocused_NATIVE();
+    private static int ImGuiViewportFlags_IsFocused_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiViewportFlags.ImGuiViewportFlags_IsFocused_NATIVE();
+    }
 }

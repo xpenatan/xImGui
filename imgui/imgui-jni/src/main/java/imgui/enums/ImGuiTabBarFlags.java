@@ -47,68 +47,55 @@ public enum ImGuiTabBarFlags implements NativeEnum<ImGuiTabBarFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabBarFlags_None;
-*/
-    private static native int ImGuiTabBarFlags_None_NATIVE();
+    private static int ImGuiTabBarFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabBarFlags.ImGuiTabBarFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabBarFlags_Reorderable;
-*/
-    private static native int ImGuiTabBarFlags_Reorderable_NATIVE();
+    private static int ImGuiTabBarFlags_Reorderable_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabBarFlags.ImGuiTabBarFlags_Reorderable_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabBarFlags_AutoSelectNewTabs;
-*/
-    private static native int ImGuiTabBarFlags_AutoSelectNewTabs_NATIVE();
+    private static int ImGuiTabBarFlags_AutoSelectNewTabs_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabBarFlags.ImGuiTabBarFlags_AutoSelectNewTabs_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabBarFlags_TabListPopupButton;
-*/
-    private static native int ImGuiTabBarFlags_TabListPopupButton_NATIVE();
+    private static int ImGuiTabBarFlags_TabListPopupButton_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabBarFlags.ImGuiTabBarFlags_TabListPopupButton_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabBarFlags_NoCloseWithMiddleMouseButton;
-*/
-    private static native int ImGuiTabBarFlags_NoCloseWithMiddleMouseButton_NATIVE();
+    private static int ImGuiTabBarFlags_NoCloseWithMiddleMouseButton_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabBarFlags.ImGuiTabBarFlags_NoCloseWithMiddleMouseButton_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabBarFlags_NoTabListScrollingButtons;
-*/
-    private static native int ImGuiTabBarFlags_NoTabListScrollingButtons_NATIVE();
+    private static int ImGuiTabBarFlags_NoTabListScrollingButtons_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabBarFlags.ImGuiTabBarFlags_NoTabListScrollingButtons_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabBarFlags_NoTooltip;
-*/
-    private static native int ImGuiTabBarFlags_NoTooltip_NATIVE();
+    private static int ImGuiTabBarFlags_NoTooltip_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabBarFlags.ImGuiTabBarFlags_NoTooltip_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabBarFlags_DrawSelectedOverline;
-*/
-    private static native int ImGuiTabBarFlags_DrawSelectedOverline_NATIVE();
+    private static int ImGuiTabBarFlags_DrawSelectedOverline_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabBarFlags.ImGuiTabBarFlags_DrawSelectedOverline_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabBarFlags_FittingPolicyMixed;
-*/
-    private static native int ImGuiTabBarFlags_FittingPolicyMixed_NATIVE();
+    private static int ImGuiTabBarFlags_FittingPolicyMixed_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabBarFlags.ImGuiTabBarFlags_FittingPolicyMixed_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabBarFlags_FittingPolicyShrink;
-*/
-    private static native int ImGuiTabBarFlags_FittingPolicyShrink_NATIVE();
+    private static int ImGuiTabBarFlags_FittingPolicyShrink_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabBarFlags.ImGuiTabBarFlags_FittingPolicyShrink_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabBarFlags_FittingPolicyScroll;
-*/
-    private static native int ImGuiTabBarFlags_FittingPolicyScroll_NATIVE();
+    private static int ImGuiTabBarFlags_FittingPolicyScroll_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabBarFlags.ImGuiTabBarFlags_FittingPolicyScroll_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabBarFlags_FittingPolicyMask_;
-*/
-    private static native int ImGuiTabBarFlags_FittingPolicyMask__NATIVE();
+    private static int ImGuiTabBarFlags_FittingPolicyMask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabBarFlags.ImGuiTabBarFlags_FittingPolicyMask__NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabBarFlags_FittingPolicyDefault_;
-*/
-    private static native int ImGuiTabBarFlags_FittingPolicyDefault__NATIVE();
+    private static int ImGuiTabBarFlags_FittingPolicyDefault__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabBarFlags.ImGuiTabBarFlags_FittingPolicyDefault__NATIVE();
+    }
 }

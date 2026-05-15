@@ -32,10 +32,6 @@ public class ImGuiPayload extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPayload);
-imgui.destroy(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPayload);imgui.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
@@ -43,10 +39,6 @@ imgui.destroy(jsObj);
         internal_native_Clear(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPayload);
-jsObj.Clear();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPayload);jsObj.Clear();")
     public static native void internal_native_Clear(int this_addr);
 
@@ -54,11 +46,6 @@ jsObj.Clear();
         return internal_native_IsDataType(native_address, type);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPayload);
-var returnedJSObj = jsObj.IsDataType(type);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "type"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPayload);var returnedJSObj = jsObj.IsDataType(type);return returnedJSObj;")
     public static native boolean internal_native_IsDataType(int this_addr, String type);
 
@@ -66,11 +53,6 @@ return returnedJSObj;
         return internal_native_IsPreview(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPayload);
-var returnedJSObj = jsObj.IsPreview();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPayload);var returnedJSObj = jsObj.IsPreview();return returnedJSObj;")
     public static native boolean internal_native_IsPreview(int this_addr);
 
@@ -78,11 +60,6 @@ return returnedJSObj;
         return internal_native_IsDelivery(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPayload);
-var returnedJSObj = jsObj.IsDelivery();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPayload);var returnedJSObj = jsObj.IsDelivery();return returnedJSObj;")
     public static native boolean internal_native_IsDelivery(int this_addr);
 
@@ -96,10 +73,6 @@ return returnedJSObj;
         return NativeObject_TEMP_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPayload);
-return jsObj.get_Data();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPayload);return jsObj.get_Data();")
     public static native int internal_native_get_Data_addr(int this_addr);
 
@@ -107,10 +80,6 @@ return jsObj.get_Data();
         return internal_native_get_DataSize(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPayload);
-return jsObj.get_DataSize();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiPayload);return jsObj.get_DataSize();")
     public static native int internal_native_get_DataSize(int this_addr);
 }

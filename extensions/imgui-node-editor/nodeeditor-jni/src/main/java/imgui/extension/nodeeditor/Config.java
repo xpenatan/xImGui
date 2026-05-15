@@ -17,10 +17,9 @@ public class Config extends NativeObject {
         internal_reset(addr, true);
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)new Config();
-*/
-    public static native long internal_native_create_addr();
+    public static long internal_native_create_addr() {
+        return imgui.extension.nodeeditor.natives.JNI_Config.internal_native_create_addr();
+    }
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -40,9 +39,7 @@ return (jlong)new Config();
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-Config* nativeObject = (Config*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.extension.nodeeditor.natives.JNI_Config.internal_native_deleteNative(this_addr);
+    }
 }

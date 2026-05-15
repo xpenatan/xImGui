@@ -39,33 +39,18 @@ public enum ImGuiTabItemFlagsPrivate_ implements NativeEnum<ImGuiTabItemFlagsPri
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabItemFlags_SectionMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabItemFlags_SectionMask_;")
     private static native int ImGuiTabItemFlags_SectionMask__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabItemFlags_NoCloseButton;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabItemFlags_NoCloseButton;")
     private static native int ImGuiTabItemFlags_NoCloseButton_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabItemFlags_Button;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabItemFlags_Button;")
     private static native int ImGuiTabItemFlags_Button_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabItemFlags_Invisible;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabItemFlags_Invisible;")
     private static native int ImGuiTabItemFlags_Invisible_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabItemFlags_Unsorted;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabItemFlags_Unsorted;")
     private static native int ImGuiTabItemFlags_Unsorted_NATIVE();
 }

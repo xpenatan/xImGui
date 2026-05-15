@@ -58,257 +58,176 @@ public enum ImGuiMultiSelectFlags implements NativeEnum<ImGuiMultiSelectFlags> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMultiSelectFlags_None;
-*/
     private static int ImGuiMultiSelectFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMultiSelectFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMultiSelectFlags_SingleSelect;
-*/
     private static int ImGuiMultiSelectFlags_SingleSelect_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMultiSelectFlags_SingleSelect_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMultiSelectFlags_NoSelectAll;
-*/
     private static int ImGuiMultiSelectFlags_NoSelectAll_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMultiSelectFlags_NoSelectAll_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMultiSelectFlags_NoRangeSelect;
-*/
     private static int ImGuiMultiSelectFlags_NoRangeSelect_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMultiSelectFlags_NoRangeSelect_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMultiSelectFlags_NoAutoSelect;
-*/
     private static int ImGuiMultiSelectFlags_NoAutoSelect_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMultiSelectFlags_NoAutoSelect_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMultiSelectFlags_NoAutoClear;
-*/
     private static int ImGuiMultiSelectFlags_NoAutoClear_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMultiSelectFlags_NoAutoClear_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMultiSelectFlags_NoAutoClearOnReselect;
-*/
     private static int ImGuiMultiSelectFlags_NoAutoClearOnReselect_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMultiSelectFlags_NoAutoClearOnReselect_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMultiSelectFlags_BoxSelect1d;
-*/
     private static int ImGuiMultiSelectFlags_BoxSelect1d_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMultiSelectFlags_BoxSelect1d_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMultiSelectFlags_BoxSelect2d;
-*/
     private static int ImGuiMultiSelectFlags_BoxSelect2d_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMultiSelectFlags_BoxSelect2d_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMultiSelectFlags_BoxSelectNoScroll;
-*/
     private static int ImGuiMultiSelectFlags_BoxSelectNoScroll_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMultiSelectFlags_BoxSelectNoScroll_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMultiSelectFlags_ClearOnEscape;
-*/
     private static int ImGuiMultiSelectFlags_ClearOnEscape_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMultiSelectFlags_ClearOnEscape_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMultiSelectFlags_ClearOnClickVoid;
-*/
     private static int ImGuiMultiSelectFlags_ClearOnClickVoid_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMultiSelectFlags_ClearOnClickVoid_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMultiSelectFlags_ScopeWindow;
-*/
     private static int ImGuiMultiSelectFlags_ScopeWindow_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMultiSelectFlags_ScopeWindow_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMultiSelectFlags_ScopeRect;
-*/
     private static int ImGuiMultiSelectFlags_ScopeRect_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMultiSelectFlags_ScopeRect_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMultiSelectFlags_SelectOnClick;
-*/
     private static int ImGuiMultiSelectFlags_SelectOnClick_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMultiSelectFlags_SelectOnClick_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMultiSelectFlags_SelectOnClickRelease;
-*/
     private static int ImGuiMultiSelectFlags_SelectOnClickRelease_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMultiSelectFlags_SelectOnClickRelease_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMultiSelectFlags_NavWrapX;
-*/
     private static int ImGuiMultiSelectFlags_NavWrapX_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMultiSelectFlags_NavWrapX_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimultiselectflags_imguimultiselectflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_SingleSelect_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimultiselectflags_imguimultiselectflags_singleselect_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_NoSelectAll_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimultiselectflags_imguimultiselectflags_noselectall_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_NoRangeSelect_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimultiselectflags_imguimultiselectflags_norangeselect_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_NoAutoSelect_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimultiselectflags_imguimultiselectflags_noautoselect_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_NoAutoClear_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimultiselectflags_imguimultiselectflags_noautoclear_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_NoAutoClearOnReselect_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimultiselectflags_imguimultiselectflags_noautoclearonreselect_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMultiSelectFlags_ImGuiMultiSelectFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_BoxSelect1d_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimultiselectflags_imguimultiselectflags_boxselect1d_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_SingleSelect_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMultiSelectFlags_ImGuiMultiSelectFlags_1SingleSelect_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_BoxSelect2d_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimultiselectflags_imguimultiselectflags_boxselect2d_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_NoSelectAll_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMultiSelectFlags_ImGuiMultiSelectFlags_1NoSelectAll_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_BoxSelectNoScroll_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimultiselectflags_imguimultiselectflags_boxselectnoscroll_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_NoRangeSelect_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMultiSelectFlags_ImGuiMultiSelectFlags_1NoRangeSelect_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_ClearOnEscape_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimultiselectflags_imguimultiselectflags_clearonescape_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_NoAutoSelect_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMultiSelectFlags_ImGuiMultiSelectFlags_1NoAutoSelect_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_ClearOnClickVoid_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimultiselectflags_imguimultiselectflags_clearonclickvoid_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_NoAutoClear_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMultiSelectFlags_ImGuiMultiSelectFlags_1NoAutoClear_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_ScopeWindow_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimultiselectflags_imguimultiselectflags_scopewindow_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_NoAutoClearOnReselect_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMultiSelectFlags_ImGuiMultiSelectFlags_1NoAutoClearOnReselect_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_ScopeRect_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimultiselectflags_imguimultiselectflags_scoperect_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_BoxSelect1d_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMultiSelectFlags_ImGuiMultiSelectFlags_1BoxSelect1d_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_SelectOnClick_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimultiselectflags_imguimultiselectflags_selectonclick_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_BoxSelect2d_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMultiSelectFlags_ImGuiMultiSelectFlags_1BoxSelect2d_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_SelectOnClickRelease_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimultiselectflags_imguimultiselectflags_selectonclickrelease_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_BoxSelectNoScroll_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMultiSelectFlags_ImGuiMultiSelectFlags_1BoxSelectNoScroll_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_ClearOnEscape_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMultiSelectFlags_ImGuiMultiSelectFlags_1ClearOnEscape_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_ClearOnClickVoid_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMultiSelectFlags_ImGuiMultiSelectFlags_1ClearOnClickVoid_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_ScopeWindow_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMultiSelectFlags_ImGuiMultiSelectFlags_1ScopeWindow_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_ScopeRect_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMultiSelectFlags_ImGuiMultiSelectFlags_1ScopeRect_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_SelectOnClick_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMultiSelectFlags_ImGuiMultiSelectFlags_1SelectOnClick_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_SelectOnClickRelease_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMultiSelectFlags_ImGuiMultiSelectFlags_1SelectOnClickRelease_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_NavWrapX_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiMultiSelectFlags_ImGuiMultiSelectFlags_1NavWrapX_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiMultiSelectFlags_NavWrapX_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguimultiselectflags_imguimultiselectflags_navwrapx_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

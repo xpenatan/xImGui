@@ -62,171 +62,87 @@ public enum StyleVar implements NativeEnum<StyleVar> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_NodePadding;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_NodePadding;")
     private static native int StyleVar_NodePadding_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_NodeRounding;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_NodeRounding;")
     private static native int StyleVar_NodeRounding_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_NodeBorderWidth;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_NodeBorderWidth;")
     private static native int StyleVar_NodeBorderWidth_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_HoveredNodeBorderWidth;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_HoveredNodeBorderWidth;")
     private static native int StyleVar_HoveredNodeBorderWidth_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_SelectedNodeBorderWidth;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_SelectedNodeBorderWidth;")
     private static native int StyleVar_SelectedNodeBorderWidth_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_PinRounding;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_PinRounding;")
     private static native int StyleVar_PinRounding_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_PinBorderWidth;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_PinBorderWidth;")
     private static native int StyleVar_PinBorderWidth_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_LinkStrength;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_LinkStrength;")
     private static native int StyleVar_LinkStrength_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_SourceDirection;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_SourceDirection;")
     private static native int StyleVar_SourceDirection_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_TargetDirection;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_TargetDirection;")
     private static native int StyleVar_TargetDirection_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_ScrollDuration;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_ScrollDuration;")
     private static native int StyleVar_ScrollDuration_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_FlowMarkerDistance;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_FlowMarkerDistance;")
     private static native int StyleVar_FlowMarkerDistance_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_FlowSpeed;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_FlowSpeed;")
     private static native int StyleVar_FlowSpeed_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_FlowDuration;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_FlowDuration;")
     private static native int StyleVar_FlowDuration_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_PivotAlignment;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_PivotAlignment;")
     private static native int StyleVar_PivotAlignment_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_PivotSize;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_PivotSize;")
     private static native int StyleVar_PivotSize_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_PivotScale;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_PivotScale;")
     private static native int StyleVar_PivotScale_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_PinCorners;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_PinCorners;")
     private static native int StyleVar_PinCorners_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_PinRadius;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_PinRadius;")
     private static native int StyleVar_PinRadius_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_PinArrowSize;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_PinArrowSize;")
     private static native int StyleVar_PinArrowSize_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_PinArrowWidth;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_PinArrowWidth;")
     private static native int StyleVar_PinArrowWidth_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_GroupRounding;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_GroupRounding;")
     private static native int StyleVar_GroupRounding_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_GroupBorderWidth;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_GroupBorderWidth;")
     private static native int StyleVar_GroupBorderWidth_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_HighlightConnectedLinks;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_HighlightConnectedLinks;")
     private static native int StyleVar_HighlightConnectedLinks_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_SnapLinkToPinDir;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_SnapLinkToPinDir;")
     private static native int StyleVar_SnapLinkToPinDir_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_HoveredNodeBorderOffset;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_HoveredNodeBorderOffset;")
     private static native int StyleVar_HoveredNodeBorderOffset_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_SelectedNodeBorderOffset;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_SelectedNodeBorderOffset;")
     private static native int StyleVar_SelectedNodeBorderOffset_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.StyleVar_Count;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.StyleVar_Count;")
     private static native int StyleVar_Count_NATIVE();
 }

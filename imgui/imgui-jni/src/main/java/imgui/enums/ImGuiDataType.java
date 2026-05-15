@@ -46,63 +46,51 @@ public enum ImGuiDataType implements NativeEnum<ImGuiDataType> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_S8;
-*/
-    private static native int ImGuiDataType_S8_NATIVE();
+    private static int ImGuiDataType_S8_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDataType.ImGuiDataType_S8_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_U8;
-*/
-    private static native int ImGuiDataType_U8_NATIVE();
+    private static int ImGuiDataType_U8_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDataType.ImGuiDataType_U8_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_S16;
-*/
-    private static native int ImGuiDataType_S16_NATIVE();
+    private static int ImGuiDataType_S16_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDataType.ImGuiDataType_S16_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_U16;
-*/
-    private static native int ImGuiDataType_U16_NATIVE();
+    private static int ImGuiDataType_U16_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDataType.ImGuiDataType_U16_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_S32;
-*/
-    private static native int ImGuiDataType_S32_NATIVE();
+    private static int ImGuiDataType_S32_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDataType.ImGuiDataType_S32_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_U32;
-*/
-    private static native int ImGuiDataType_U32_NATIVE();
+    private static int ImGuiDataType_U32_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDataType.ImGuiDataType_U32_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_S64;
-*/
-    private static native int ImGuiDataType_S64_NATIVE();
+    private static int ImGuiDataType_S64_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDataType.ImGuiDataType_S64_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_U64;
-*/
-    private static native int ImGuiDataType_U64_NATIVE();
+    private static int ImGuiDataType_U64_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDataType.ImGuiDataType_U64_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_Float;
-*/
-    private static native int ImGuiDataType_Float_NATIVE();
+    private static int ImGuiDataType_Float_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDataType.ImGuiDataType_Float_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_Double;
-*/
-    private static native int ImGuiDataType_Double_NATIVE();
+    private static int ImGuiDataType_Double_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDataType.ImGuiDataType_Double_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_Bool;
-*/
-    private static native int ImGuiDataType_Bool_NATIVE();
+    private static int ImGuiDataType_Bool_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDataType.ImGuiDataType_Bool_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataType_String;
-*/
-    private static native int ImGuiDataType_String_NATIVE();
+    private static int ImGuiDataType_String_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDataType.ImGuiDataType_String_NATIVE();
+    }
 }

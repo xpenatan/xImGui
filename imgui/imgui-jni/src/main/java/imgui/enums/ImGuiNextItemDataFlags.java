@@ -40,33 +40,27 @@ public enum ImGuiNextItemDataFlags implements NativeEnum<ImGuiNextItemDataFlags>
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNextItemDataFlags_None;
-*/
-    private static native int ImGuiNextItemDataFlags_None_NATIVE();
+    private static int ImGuiNextItemDataFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiNextItemDataFlags.ImGuiNextItemDataFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNextItemDataFlags_HasWidth;
-*/
-    private static native int ImGuiNextItemDataFlags_HasWidth_NATIVE();
+    private static int ImGuiNextItemDataFlags_HasWidth_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiNextItemDataFlags.ImGuiNextItemDataFlags_HasWidth_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNextItemDataFlags_HasOpen;
-*/
-    private static native int ImGuiNextItemDataFlags_HasOpen_NATIVE();
+    private static int ImGuiNextItemDataFlags_HasOpen_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiNextItemDataFlags.ImGuiNextItemDataFlags_HasOpen_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNextItemDataFlags_HasShortcut;
-*/
-    private static native int ImGuiNextItemDataFlags_HasShortcut_NATIVE();
+    private static int ImGuiNextItemDataFlags_HasShortcut_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiNextItemDataFlags.ImGuiNextItemDataFlags_HasShortcut_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNextItemDataFlags_HasRefVal;
-*/
-    private static native int ImGuiNextItemDataFlags_HasRefVal_NATIVE();
+    private static int ImGuiNextItemDataFlags_HasRefVal_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiNextItemDataFlags.ImGuiNextItemDataFlags_HasRefVal_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNextItemDataFlags_HasStorageID;
-*/
-    private static native int ImGuiNextItemDataFlags_HasStorageID_NATIVE();
+    private static int ImGuiNextItemDataFlags_HasStorageID_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiNextItemDataFlags.ImGuiNextItemDataFlags_HasStorageID_NATIVE();
+    }
 }

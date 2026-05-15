@@ -44,63 +44,33 @@ public enum ImGuiChildFlags implements NativeEnum<ImGuiChildFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiChildFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiChildFlags_None;")
     private static native int ImGuiChildFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiChildFlags_Borders;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiChildFlags_Borders;")
     private static native int ImGuiChildFlags_Borders_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiChildFlags_AlwaysUseWindowPadding;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiChildFlags_AlwaysUseWindowPadding;")
     private static native int ImGuiChildFlags_AlwaysUseWindowPadding_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiChildFlags_ResizeX;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiChildFlags_ResizeX;")
     private static native int ImGuiChildFlags_ResizeX_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiChildFlags_ResizeY;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiChildFlags_ResizeY;")
     private static native int ImGuiChildFlags_ResizeY_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiChildFlags_AutoResizeX;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiChildFlags_AutoResizeX;")
     private static native int ImGuiChildFlags_AutoResizeX_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiChildFlags_AutoResizeY;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiChildFlags_AutoResizeY;")
     private static native int ImGuiChildFlags_AutoResizeY_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiChildFlags_AlwaysAutoResize;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiChildFlags_AlwaysAutoResize;")
     private static native int ImGuiChildFlags_AlwaysAutoResize_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiChildFlags_FrameStyle;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiChildFlags_FrameStyle;")
     private static native int ImGuiChildFlags_FrameStyle_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiChildFlags_NavFlattened;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiChildFlags_NavFlattened;")
     private static native int ImGuiChildFlags_NavFlattened_NATIVE();
 }

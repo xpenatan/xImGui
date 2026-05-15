@@ -63,322 +63,226 @@ public enum ImGuiTreeNodeFlags implements NativeEnum<ImGuiTreeNodeFlags> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTreeNodeFlags_None;
-*/
     private static int ImGuiTreeNodeFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTreeNodeFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTreeNodeFlags_Selected;
-*/
     private static int ImGuiTreeNodeFlags_Selected_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTreeNodeFlags_Selected_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTreeNodeFlags_Framed;
-*/
     private static int ImGuiTreeNodeFlags_Framed_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTreeNodeFlags_Framed_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTreeNodeFlags_AllowOverlap;
-*/
     private static int ImGuiTreeNodeFlags_AllowOverlap_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTreeNodeFlags_AllowOverlap_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTreeNodeFlags_NoTreePushOnOpen;
-*/
     private static int ImGuiTreeNodeFlags_NoTreePushOnOpen_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTreeNodeFlags_NoTreePushOnOpen_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTreeNodeFlags_NoAutoOpenOnLog;
-*/
     private static int ImGuiTreeNodeFlags_NoAutoOpenOnLog_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTreeNodeFlags_NoAutoOpenOnLog_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTreeNodeFlags_DefaultOpen;
-*/
     private static int ImGuiTreeNodeFlags_DefaultOpen_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTreeNodeFlags_DefaultOpen_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTreeNodeFlags_OpenOnDoubleClick;
-*/
     private static int ImGuiTreeNodeFlags_OpenOnDoubleClick_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTreeNodeFlags_OpenOnDoubleClick_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTreeNodeFlags_OpenOnArrow;
-*/
     private static int ImGuiTreeNodeFlags_OpenOnArrow_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTreeNodeFlags_OpenOnArrow_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTreeNodeFlags_Leaf;
-*/
     private static int ImGuiTreeNodeFlags_Leaf_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTreeNodeFlags_Leaf_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTreeNodeFlags_Bullet;
-*/
     private static int ImGuiTreeNodeFlags_Bullet_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTreeNodeFlags_Bullet_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTreeNodeFlags_FramePadding;
-*/
     private static int ImGuiTreeNodeFlags_FramePadding_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTreeNodeFlags_FramePadding_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTreeNodeFlags_SpanAvailWidth;
-*/
     private static int ImGuiTreeNodeFlags_SpanAvailWidth_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTreeNodeFlags_SpanAvailWidth_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTreeNodeFlags_SpanFullWidth;
-*/
     private static int ImGuiTreeNodeFlags_SpanFullWidth_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTreeNodeFlags_SpanFullWidth_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTreeNodeFlags_SpanLabelWidth;
-*/
     private static int ImGuiTreeNodeFlags_SpanLabelWidth_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTreeNodeFlags_SpanLabelWidth_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTreeNodeFlags_SpanAllColumns;
-*/
     private static int ImGuiTreeNodeFlags_SpanAllColumns_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTreeNodeFlags_SpanAllColumns_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTreeNodeFlags_LabelSpanAllColumns;
-*/
     private static int ImGuiTreeNodeFlags_LabelSpanAllColumns_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTreeNodeFlags_LabelSpanAllColumns_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTreeNodeFlags_NavLeftJumpsToParent;
-*/
     private static int ImGuiTreeNodeFlags_NavLeftJumpsToParent_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTreeNodeFlags_NavLeftJumpsToParent_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTreeNodeFlags_CollapsingHeader;
-*/
     private static int ImGuiTreeNodeFlags_CollapsingHeader_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTreeNodeFlags_CollapsingHeader_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTreeNodeFlags_DrawLinesNone;
-*/
     private static int ImGuiTreeNodeFlags_DrawLinesNone_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTreeNodeFlags_DrawLinesNone_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTreeNodeFlags_DrawLinesFull;
-*/
     private static int ImGuiTreeNodeFlags_DrawLinesFull_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTreeNodeFlags_DrawLinesFull_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTreeNodeFlags_DrawLinesToNodes;
-*/
     private static int ImGuiTreeNodeFlags_DrawLinesToNodes_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTreeNodeFlags_DrawLinesToNodes_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitreenodeflags_imguitreenodeflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_Selected_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitreenodeflags_imguitreenodeflags_selected_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_Framed_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitreenodeflags_imguitreenodeflags_framed_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_AllowOverlap_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitreenodeflags_imguitreenodeflags_allowoverlap_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_NoTreePushOnOpen_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitreenodeflags_imguitreenodeflags_notreepushonopen_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_NoAutoOpenOnLog_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitreenodeflags_imguitreenodeflags_noautoopenonlog_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_DefaultOpen_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitreenodeflags_imguitreenodeflags_defaultopen_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTreeNodeFlags_ImGuiTreeNodeFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_OpenOnDoubleClick_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitreenodeflags_imguitreenodeflags_openondoubleclick_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_Selected_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTreeNodeFlags_ImGuiTreeNodeFlags_1Selected_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_OpenOnArrow_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitreenodeflags_imguitreenodeflags_openonarrow_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_Framed_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTreeNodeFlags_ImGuiTreeNodeFlags_1Framed_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_Leaf_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitreenodeflags_imguitreenodeflags_leaf_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_AllowOverlap_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTreeNodeFlags_ImGuiTreeNodeFlags_1AllowOverlap_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_Bullet_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitreenodeflags_imguitreenodeflags_bullet_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_NoTreePushOnOpen_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTreeNodeFlags_ImGuiTreeNodeFlags_1NoTreePushOnOpen_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_FramePadding_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitreenodeflags_imguitreenodeflags_framepadding_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_NoAutoOpenOnLog_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTreeNodeFlags_ImGuiTreeNodeFlags_1NoAutoOpenOnLog_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_SpanAvailWidth_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitreenodeflags_imguitreenodeflags_spanavailwidth_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_DefaultOpen_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTreeNodeFlags_ImGuiTreeNodeFlags_1DefaultOpen_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_SpanFullWidth_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitreenodeflags_imguitreenodeflags_spanfullwidth_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_OpenOnDoubleClick_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTreeNodeFlags_ImGuiTreeNodeFlags_1OpenOnDoubleClick_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_SpanLabelWidth_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitreenodeflags_imguitreenodeflags_spanlabelwidth_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_OpenOnArrow_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTreeNodeFlags_ImGuiTreeNodeFlags_1OpenOnArrow_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_SpanAllColumns_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitreenodeflags_imguitreenodeflags_spanallcolumns_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_Leaf_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTreeNodeFlags_ImGuiTreeNodeFlags_1Leaf_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_LabelSpanAllColumns_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitreenodeflags_imguitreenodeflags_labelspanallcolumns_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_Bullet_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTreeNodeFlags_ImGuiTreeNodeFlags_1Bullet_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_NavLeftJumpsToParent_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitreenodeflags_imguitreenodeflags_navleftjumpstoparent_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_FramePadding_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTreeNodeFlags_ImGuiTreeNodeFlags_1FramePadding_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_CollapsingHeader_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitreenodeflags_imguitreenodeflags_collapsingheader_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_SpanAvailWidth_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTreeNodeFlags_ImGuiTreeNodeFlags_1SpanAvailWidth_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_DrawLinesNone_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitreenodeflags_imguitreenodeflags_drawlinesnone_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_SpanFullWidth_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTreeNodeFlags_ImGuiTreeNodeFlags_1SpanFullWidth_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_DrawLinesFull_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitreenodeflags_imguitreenodeflags_drawlinesfull_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_SpanLabelWidth_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTreeNodeFlags_ImGuiTreeNodeFlags_1SpanLabelWidth_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_SpanAllColumns_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTreeNodeFlags_ImGuiTreeNodeFlags_1SpanAllColumns_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_LabelSpanAllColumns_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTreeNodeFlags_ImGuiTreeNodeFlags_1LabelSpanAllColumns_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_NavLeftJumpsToParent_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTreeNodeFlags_ImGuiTreeNodeFlags_1NavLeftJumpsToParent_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_CollapsingHeader_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTreeNodeFlags_ImGuiTreeNodeFlags_1CollapsingHeader_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_DrawLinesNone_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTreeNodeFlags_ImGuiTreeNodeFlags_1DrawLinesNone_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_DrawLinesFull_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTreeNodeFlags_ImGuiTreeNodeFlags_1DrawLinesFull_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_DrawLinesToNodes_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTreeNodeFlags_ImGuiTreeNodeFlags_1DrawLinesToNodes_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTreeNodeFlags_DrawLinesToNodes_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitreenodeflags_imguitreenodeflags_drawlinestonodes_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

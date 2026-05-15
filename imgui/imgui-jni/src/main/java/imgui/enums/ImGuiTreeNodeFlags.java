@@ -56,113 +56,91 @@ public enum ImGuiTreeNodeFlags implements NativeEnum<ImGuiTreeNodeFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_None;
-*/
-    private static native int ImGuiTreeNodeFlags_None_NATIVE();
+    private static int ImGuiTreeNodeFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlags.ImGuiTreeNodeFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_Selected;
-*/
-    private static native int ImGuiTreeNodeFlags_Selected_NATIVE();
+    private static int ImGuiTreeNodeFlags_Selected_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlags.ImGuiTreeNodeFlags_Selected_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_Framed;
-*/
-    private static native int ImGuiTreeNodeFlags_Framed_NATIVE();
+    private static int ImGuiTreeNodeFlags_Framed_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlags.ImGuiTreeNodeFlags_Framed_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_AllowOverlap;
-*/
-    private static native int ImGuiTreeNodeFlags_AllowOverlap_NATIVE();
+    private static int ImGuiTreeNodeFlags_AllowOverlap_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlags.ImGuiTreeNodeFlags_AllowOverlap_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_NoTreePushOnOpen;
-*/
-    private static native int ImGuiTreeNodeFlags_NoTreePushOnOpen_NATIVE();
+    private static int ImGuiTreeNodeFlags_NoTreePushOnOpen_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlags.ImGuiTreeNodeFlags_NoTreePushOnOpen_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_NoAutoOpenOnLog;
-*/
-    private static native int ImGuiTreeNodeFlags_NoAutoOpenOnLog_NATIVE();
+    private static int ImGuiTreeNodeFlags_NoAutoOpenOnLog_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlags.ImGuiTreeNodeFlags_NoAutoOpenOnLog_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_DefaultOpen;
-*/
-    private static native int ImGuiTreeNodeFlags_DefaultOpen_NATIVE();
+    private static int ImGuiTreeNodeFlags_DefaultOpen_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlags.ImGuiTreeNodeFlags_DefaultOpen_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_OpenOnDoubleClick;
-*/
-    private static native int ImGuiTreeNodeFlags_OpenOnDoubleClick_NATIVE();
+    private static int ImGuiTreeNodeFlags_OpenOnDoubleClick_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlags.ImGuiTreeNodeFlags_OpenOnDoubleClick_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_OpenOnArrow;
-*/
-    private static native int ImGuiTreeNodeFlags_OpenOnArrow_NATIVE();
+    private static int ImGuiTreeNodeFlags_OpenOnArrow_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlags.ImGuiTreeNodeFlags_OpenOnArrow_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_Leaf;
-*/
-    private static native int ImGuiTreeNodeFlags_Leaf_NATIVE();
+    private static int ImGuiTreeNodeFlags_Leaf_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlags.ImGuiTreeNodeFlags_Leaf_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_Bullet;
-*/
-    private static native int ImGuiTreeNodeFlags_Bullet_NATIVE();
+    private static int ImGuiTreeNodeFlags_Bullet_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlags.ImGuiTreeNodeFlags_Bullet_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_FramePadding;
-*/
-    private static native int ImGuiTreeNodeFlags_FramePadding_NATIVE();
+    private static int ImGuiTreeNodeFlags_FramePadding_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlags.ImGuiTreeNodeFlags_FramePadding_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_SpanAvailWidth;
-*/
-    private static native int ImGuiTreeNodeFlags_SpanAvailWidth_NATIVE();
+    private static int ImGuiTreeNodeFlags_SpanAvailWidth_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlags.ImGuiTreeNodeFlags_SpanAvailWidth_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_SpanFullWidth;
-*/
-    private static native int ImGuiTreeNodeFlags_SpanFullWidth_NATIVE();
+    private static int ImGuiTreeNodeFlags_SpanFullWidth_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlags.ImGuiTreeNodeFlags_SpanFullWidth_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_SpanLabelWidth;
-*/
-    private static native int ImGuiTreeNodeFlags_SpanLabelWidth_NATIVE();
+    private static int ImGuiTreeNodeFlags_SpanLabelWidth_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlags.ImGuiTreeNodeFlags_SpanLabelWidth_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_SpanAllColumns;
-*/
-    private static native int ImGuiTreeNodeFlags_SpanAllColumns_NATIVE();
+    private static int ImGuiTreeNodeFlags_SpanAllColumns_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlags.ImGuiTreeNodeFlags_SpanAllColumns_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_LabelSpanAllColumns;
-*/
-    private static native int ImGuiTreeNodeFlags_LabelSpanAllColumns_NATIVE();
+    private static int ImGuiTreeNodeFlags_LabelSpanAllColumns_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlags.ImGuiTreeNodeFlags_LabelSpanAllColumns_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_NavLeftJumpsToParent;
-*/
-    private static native int ImGuiTreeNodeFlags_NavLeftJumpsToParent_NATIVE();
+    private static int ImGuiTreeNodeFlags_NavLeftJumpsToParent_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlags.ImGuiTreeNodeFlags_NavLeftJumpsToParent_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_CollapsingHeader;
-*/
-    private static native int ImGuiTreeNodeFlags_CollapsingHeader_NATIVE();
+    private static int ImGuiTreeNodeFlags_CollapsingHeader_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlags.ImGuiTreeNodeFlags_CollapsingHeader_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_DrawLinesNone;
-*/
-    private static native int ImGuiTreeNodeFlags_DrawLinesNone_NATIVE();
+    private static int ImGuiTreeNodeFlags_DrawLinesNone_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlags.ImGuiTreeNodeFlags_DrawLinesNone_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_DrawLinesFull;
-*/
-    private static native int ImGuiTreeNodeFlags_DrawLinesFull_NATIVE();
+    private static int ImGuiTreeNodeFlags_DrawLinesFull_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlags.ImGuiTreeNodeFlags_DrawLinesFull_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_DrawLinesToNodes;
-*/
-    private static native int ImGuiTreeNodeFlags_DrawLinesToNodes_NATIVE();
+    private static int ImGuiTreeNodeFlags_DrawLinesToNodes_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlags.ImGuiTreeNodeFlags_DrawLinesToNodes_NATIVE();
+    }
 }

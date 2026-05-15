@@ -34,21 +34,17 @@ public class ImVectorImTextureDataPtr extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorImTextureDataPtr* nativeObject = (ImVectorImTextureDataPtr*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ImVectorImTextureDataPtr.internal_native_deleteNative(this_addr);
+    }
 
     public int size() {
         return internal_native_size(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorImTextureDataPtr* nativeObject = (ImVectorImTextureDataPtr*)this_addr;
-return nativeObject->size();
-*/
-    public static native int internal_native_size(long this_addr);
+    public static int internal_native_size(long this_addr) {
+        return imgui.natives.JNI_ImVectorImTextureDataPtr.internal_native_size(this_addr);
+    }
 
     public ImTextureData getData(int index) {
         long addr = internal_native_getData_addr(native_address, index);
@@ -60,12 +56,9 @@ return nativeObject->size();
         return ImTextureData_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorImTextureDataPtr* nativeObject = (ImVectorImTextureDataPtr*)this_addr;
-ImTextureData* obj = (*nativeObject)[(int)index];
-return (jlong)obj;
-*/
-    public static native long internal_native_getData_addr(long this_addr, int index);
+    public static long internal_native_getData_addr(long this_addr, int index) {
+        return imgui.natives.JNI_ImVectorImTextureDataPtr.internal_native_getData_addr(this_addr, index);
+    }
 
     public NativeObject get_Data() {
         long addr = internal_native_get_Data_addr(native_address);
@@ -77,9 +70,7 @@ return (jlong)obj;
         return NativeObject_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorImTextureDataPtr* nativeObject = (ImVectorImTextureDataPtr*)this_addr;
-return (jlong)nativeObject->Data;
-*/
-    public static native long internal_native_get_Data_addr(long this_addr);
+    public static long internal_native_get_Data_addr(long this_addr) {
+        return imgui.natives.JNI_ImVectorImTextureDataPtr.internal_native_get_Data_addr(this_addr);
+    }
 }

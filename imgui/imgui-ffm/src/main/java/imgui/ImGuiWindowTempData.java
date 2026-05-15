@@ -45,15 +45,11 @@ public class ImGuiWindowTempData extends NativeObject {
         return ImVec2_TEMP_GEN_0;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiWindowTempData* nativeObject = (ImGuiWindowTempData*)this_addr;
-return (int64_t)&nativeObject->CursorPos;
-*/
     public static long internal_native_get_CursorPos_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_CursorPos_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -61,15 +57,11 @@ return (int64_t)&nativeObject->CursorPos;
         return internal_native_get_TreeDepth(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiWindowTempData* nativeObject = (ImGuiWindowTempData*)this_addr;
-return nativeObject->TreeDepth;
-*/
     public static int internal_native_get_TreeDepth(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_TreeDepth__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -77,54 +69,20 @@ return nativeObject->TreeDepth;
         internal_native_set_TreeDepth(native_address, TreeDepth);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiWindowTempData* nativeObject = (ImGuiWindowTempData*)this_addr;
-nativeObject->TreeDepth = TreeDepth;
-*/
     public static void internal_native_set_TreeDepth(long this_addr, int TreeDepth) {
         try {
             FFMHandles.internal_native_set_TreeDepth__JI.invokeExact(this_addr, TreeDepth);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle internal_native_get_CursorPos_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiwindowtempdata_get_cursorpos_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle internal_native_get_TreeDepth__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiwindowtempdata_get_treedepth", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
-
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
-
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
-
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
-
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
-
-        static final java.lang.invoke.MethodHandle internal_native_get_CursorPos_addr__J = downcallDefault("jparser_imgui_ImGuiWindowTempData_internal_1native_1get_1CursorPos_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_TreeDepth__J = downcallDefault("jparser_imgui_ImGuiWindowTempData_internal_1native_1get_1TreeDepth__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_TreeDepth__JI = downcallDefault("jparser_imgui_ImGuiWindowTempData_internal_1native_1set_1TreeDepth__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_set_TreeDepth__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiwindowtempdata_set_treedepth", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
     }
 }

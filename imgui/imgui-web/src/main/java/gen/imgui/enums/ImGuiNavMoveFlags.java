@@ -52,111 +52,57 @@ public enum ImGuiNavMoveFlags implements NativeEnum<ImGuiNavMoveFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavMoveFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavMoveFlags_None;")
     private static native int ImGuiNavMoveFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavMoveFlags_LoopX;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavMoveFlags_LoopX;")
     private static native int ImGuiNavMoveFlags_LoopX_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavMoveFlags_LoopY;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavMoveFlags_LoopY;")
     private static native int ImGuiNavMoveFlags_LoopY_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavMoveFlags_WrapX;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavMoveFlags_WrapX;")
     private static native int ImGuiNavMoveFlags_WrapX_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavMoveFlags_WrapY;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavMoveFlags_WrapY;")
     private static native int ImGuiNavMoveFlags_WrapY_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavMoveFlags_WrapMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavMoveFlags_WrapMask_;")
     private static native int ImGuiNavMoveFlags_WrapMask__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavMoveFlags_AllowCurrentNavId;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavMoveFlags_AllowCurrentNavId;")
     private static native int ImGuiNavMoveFlags_AllowCurrentNavId_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavMoveFlags_AlsoScoreVisibleSet;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavMoveFlags_AlsoScoreVisibleSet;")
     private static native int ImGuiNavMoveFlags_AlsoScoreVisibleSet_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavMoveFlags_ScrollToEdgeY;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavMoveFlags_ScrollToEdgeY;")
     private static native int ImGuiNavMoveFlags_ScrollToEdgeY_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavMoveFlags_Forwarded;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavMoveFlags_Forwarded;")
     private static native int ImGuiNavMoveFlags_Forwarded_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavMoveFlags_DebugNoResult;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavMoveFlags_DebugNoResult;")
     private static native int ImGuiNavMoveFlags_DebugNoResult_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavMoveFlags_FocusApi;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavMoveFlags_FocusApi;")
     private static native int ImGuiNavMoveFlags_FocusApi_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavMoveFlags_IsTabbing;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavMoveFlags_IsTabbing;")
     private static native int ImGuiNavMoveFlags_IsTabbing_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavMoveFlags_IsPageMove;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavMoveFlags_IsPageMove;")
     private static native int ImGuiNavMoveFlags_IsPageMove_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavMoveFlags_Activate;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavMoveFlags_Activate;")
     private static native int ImGuiNavMoveFlags_Activate_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavMoveFlags_NoSelect;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavMoveFlags_NoSelect;")
     private static native int ImGuiNavMoveFlags_NoSelect_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavMoveFlags_NoSetNavCursorVisible;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavMoveFlags_NoSetNavCursorVisible;")
     private static native int ImGuiNavMoveFlags_NoSetNavCursorVisible_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavMoveFlags_NoClearActiveId;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavMoveFlags_NoClearActiveId;")
     private static native int ImGuiNavMoveFlags_NoClearActiveId_NATIVE();
 }

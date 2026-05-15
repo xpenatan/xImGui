@@ -51,166 +51,106 @@ public enum ImGuiSliderFlags implements NativeEnum<ImGuiSliderFlags> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiSliderFlags_None;
-*/
     private static int ImGuiSliderFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiSliderFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiSliderFlags_Logarithmic;
-*/
     private static int ImGuiSliderFlags_Logarithmic_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiSliderFlags_Logarithmic_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiSliderFlags_NoRoundToFormat;
-*/
     private static int ImGuiSliderFlags_NoRoundToFormat_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiSliderFlags_NoRoundToFormat_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiSliderFlags_NoInput;
-*/
     private static int ImGuiSliderFlags_NoInput_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiSliderFlags_NoInput_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiSliderFlags_WrapAround;
-*/
     private static int ImGuiSliderFlags_WrapAround_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiSliderFlags_WrapAround_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiSliderFlags_ClampOnInput;
-*/
     private static int ImGuiSliderFlags_ClampOnInput_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiSliderFlags_ClampOnInput_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiSliderFlags_ClampZeroRange;
-*/
     private static int ImGuiSliderFlags_ClampZeroRange_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiSliderFlags_ClampZeroRange_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiSliderFlags_NoSpeedTweaks;
-*/
     private static int ImGuiSliderFlags_NoSpeedTweaks_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiSliderFlags_NoSpeedTweaks_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiSliderFlags_AlwaysClamp;
-*/
     private static int ImGuiSliderFlags_AlwaysClamp_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiSliderFlags_AlwaysClamp_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiSliderFlags_InvalidMask_;
-*/
     private static int ImGuiSliderFlags_InvalidMask__NATIVE() {
         try {
             return (int) FFMHandles.ImGuiSliderFlags_InvalidMask__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiSliderFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguisliderflags_imguisliderflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiSliderFlags_Logarithmic_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguisliderflags_imguisliderflags_logarithmic_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiSliderFlags_NoRoundToFormat_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguisliderflags_imguisliderflags_noroundtoformat_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiSliderFlags_NoInput_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguisliderflags_imguisliderflags_noinput_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiSliderFlags_WrapAround_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguisliderflags_imguisliderflags_wraparound_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiSliderFlags_ClampOnInput_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguisliderflags_imguisliderflags_clamponinput_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiSliderFlags_ClampZeroRange_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguisliderflags_imguisliderflags_clampzerorange_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiSliderFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiSliderFlags_ImGuiSliderFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiSliderFlags_NoSpeedTweaks_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguisliderflags_imguisliderflags_nospeedtweaks_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiSliderFlags_Logarithmic_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiSliderFlags_ImGuiSliderFlags_1Logarithmic_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiSliderFlags_AlwaysClamp_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguisliderflags_imguisliderflags_alwaysclamp_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiSliderFlags_NoRoundToFormat_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiSliderFlags_ImGuiSliderFlags_1NoRoundToFormat_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiSliderFlags_NoInput_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiSliderFlags_ImGuiSliderFlags_1NoInput_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiSliderFlags_WrapAround_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiSliderFlags_ImGuiSliderFlags_1WrapAround_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiSliderFlags_ClampOnInput_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiSliderFlags_ImGuiSliderFlags_1ClampOnInput_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiSliderFlags_ClampZeroRange_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiSliderFlags_ImGuiSliderFlags_1ClampZeroRange_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiSliderFlags_NoSpeedTweaks_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiSliderFlags_ImGuiSliderFlags_1NoSpeedTweaks_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiSliderFlags_AlwaysClamp_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiSliderFlags_ImGuiSliderFlags_1AlwaysClamp_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiSliderFlags_InvalidMask__NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiSliderFlags_ImGuiSliderFlags_1InvalidMask_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiSliderFlags_InvalidMask__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguisliderflags_imguisliderflags_invalidmask__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

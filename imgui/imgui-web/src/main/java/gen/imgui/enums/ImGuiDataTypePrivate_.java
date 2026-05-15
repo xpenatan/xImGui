@@ -34,15 +34,9 @@ public enum ImGuiDataTypePrivate_ implements NativeEnum<ImGuiDataTypePrivate_> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDataType_Pointer;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDataType_Pointer;")
     private static native int ImGuiDataType_Pointer_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDataType_ID;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDataType_ID;")
     private static native int ImGuiDataType_ID_NATIVE();
 }

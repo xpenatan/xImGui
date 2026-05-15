@@ -42,51 +42,27 @@ public enum ImGuiSelectableFlags implements NativeEnum<ImGuiSelectableFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSelectableFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSelectableFlags_None;")
     private static native int ImGuiSelectableFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSelectableFlags_NoAutoClosePopups;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSelectableFlags_NoAutoClosePopups;")
     private static native int ImGuiSelectableFlags_NoAutoClosePopups_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSelectableFlags_SpanAllColumns;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSelectableFlags_SpanAllColumns;")
     private static native int ImGuiSelectableFlags_SpanAllColumns_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSelectableFlags_AllowDoubleClick;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSelectableFlags_AllowDoubleClick;")
     private static native int ImGuiSelectableFlags_AllowDoubleClick_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSelectableFlags_Disabled;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSelectableFlags_Disabled;")
     private static native int ImGuiSelectableFlags_Disabled_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSelectableFlags_AllowOverlap;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSelectableFlags_AllowOverlap;")
     private static native int ImGuiSelectableFlags_AllowOverlap_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSelectableFlags_Highlight;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSelectableFlags_Highlight;")
     private static native int ImGuiSelectableFlags_Highlight_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSelectableFlags_SelectOnNav;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSelectableFlags_SelectOnNav;")
     private static native int ImGuiSelectableFlags_SelectOnNav_NATIVE();
 }

@@ -40,39 +40,21 @@ public enum ImGuiNextItemDataFlags implements NativeEnum<ImGuiNextItemDataFlags>
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNextItemDataFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNextItemDataFlags_None;")
     private static native int ImGuiNextItemDataFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNextItemDataFlags_HasWidth;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNextItemDataFlags_HasWidth;")
     private static native int ImGuiNextItemDataFlags_HasWidth_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNextItemDataFlags_HasOpen;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNextItemDataFlags_HasOpen;")
     private static native int ImGuiNextItemDataFlags_HasOpen_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNextItemDataFlags_HasShortcut;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNextItemDataFlags_HasShortcut;")
     private static native int ImGuiNextItemDataFlags_HasShortcut_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNextItemDataFlags_HasRefVal;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNextItemDataFlags_HasRefVal;")
     private static native int ImGuiNextItemDataFlags_HasRefVal_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNextItemDataFlags_HasStorageID;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNextItemDataFlags_HasStorageID;")
     private static native int ImGuiNextItemDataFlags_HasStorageID_NATIVE();
 }

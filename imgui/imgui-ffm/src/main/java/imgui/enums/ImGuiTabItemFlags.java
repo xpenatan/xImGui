@@ -51,166 +51,106 @@ public enum ImGuiTabItemFlags implements NativeEnum<ImGuiTabItemFlags> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTabItemFlags_None;
-*/
     private static int ImGuiTabItemFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTabItemFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTabItemFlags_UnsavedDocument;
-*/
     private static int ImGuiTabItemFlags_UnsavedDocument_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTabItemFlags_UnsavedDocument_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTabItemFlags_SetSelected;
-*/
     private static int ImGuiTabItemFlags_SetSelected_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTabItemFlags_SetSelected_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTabItemFlags_NoCloseWithMiddleMouseButton;
-*/
     private static int ImGuiTabItemFlags_NoCloseWithMiddleMouseButton_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTabItemFlags_NoCloseWithMiddleMouseButton_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTabItemFlags_NoPushId;
-*/
     private static int ImGuiTabItemFlags_NoPushId_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTabItemFlags_NoPushId_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTabItemFlags_NoTooltip;
-*/
     private static int ImGuiTabItemFlags_NoTooltip_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTabItemFlags_NoTooltip_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTabItemFlags_NoReorder;
-*/
     private static int ImGuiTabItemFlags_NoReorder_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTabItemFlags_NoReorder_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTabItemFlags_Leading;
-*/
     private static int ImGuiTabItemFlags_Leading_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTabItemFlags_Leading_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTabItemFlags_Trailing;
-*/
     private static int ImGuiTabItemFlags_Trailing_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTabItemFlags_Trailing_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTabItemFlags_NoAssumedClosure;
-*/
     private static int ImGuiTabItemFlags_NoAssumedClosure_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTabItemFlags_NoAssumedClosure_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiTabItemFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitabitemflags_imguitabitemflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiTabItemFlags_UnsavedDocument_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitabitemflags_imguitabitemflags_unsaveddocument_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiTabItemFlags_SetSelected_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitabitemflags_imguitabitemflags_setselected_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiTabItemFlags_NoCloseWithMiddleMouseButton_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitabitemflags_imguitabitemflags_noclosewithmiddlemousebutton_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiTabItemFlags_NoPushId_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitabitemflags_imguitabitemflags_nopushid_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiTabItemFlags_NoTooltip_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitabitemflags_imguitabitemflags_notooltip_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiTabItemFlags_NoReorder_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitabitemflags_imguitabitemflags_noreorder_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTabItemFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTabItemFlags_ImGuiTabItemFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTabItemFlags_Leading_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitabitemflags_imguitabitemflags_leading_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTabItemFlags_UnsavedDocument_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTabItemFlags_ImGuiTabItemFlags_1UnsavedDocument_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTabItemFlags_Trailing_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitabitemflags_imguitabitemflags_trailing_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTabItemFlags_SetSelected_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTabItemFlags_ImGuiTabItemFlags_1SetSelected_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiTabItemFlags_NoCloseWithMiddleMouseButton_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTabItemFlags_ImGuiTabItemFlags_1NoCloseWithMiddleMouseButton_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiTabItemFlags_NoPushId_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTabItemFlags_ImGuiTabItemFlags_1NoPushId_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiTabItemFlags_NoTooltip_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTabItemFlags_ImGuiTabItemFlags_1NoTooltip_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiTabItemFlags_NoReorder_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTabItemFlags_ImGuiTabItemFlags_1NoReorder_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiTabItemFlags_Leading_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTabItemFlags_ImGuiTabItemFlags_1Leading_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiTabItemFlags_Trailing_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTabItemFlags_ImGuiTabItemFlags_1Trailing_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiTabItemFlags_NoAssumedClosure_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTabItemFlags_ImGuiTabItemFlags_1NoAssumedClosure_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTabItemFlags_NoAssumedClosure_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitabitemflags_imguitabitemflags_noassumedclosure_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

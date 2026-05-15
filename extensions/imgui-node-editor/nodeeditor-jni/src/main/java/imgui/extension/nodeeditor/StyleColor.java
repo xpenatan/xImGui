@@ -54,103 +54,83 @@ public enum StyleColor implements NativeEnum<StyleColor> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_Bg;
-*/
-    private static native int StyleColor_Bg_NATIVE();
+    private static int StyleColor_Bg_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleColor.StyleColor_Bg_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_Grid;
-*/
-    private static native int StyleColor_Grid_NATIVE();
+    private static int StyleColor_Grid_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleColor.StyleColor_Grid_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_NodeBg;
-*/
-    private static native int StyleColor_NodeBg_NATIVE();
+    private static int StyleColor_NodeBg_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleColor.StyleColor_NodeBg_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_NodeBorder;
-*/
-    private static native int StyleColor_NodeBorder_NATIVE();
+    private static int StyleColor_NodeBorder_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleColor.StyleColor_NodeBorder_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_HovNodeBorder;
-*/
-    private static native int StyleColor_HovNodeBorder_NATIVE();
+    private static int StyleColor_HovNodeBorder_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleColor.StyleColor_HovNodeBorder_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_SelNodeBorder;
-*/
-    private static native int StyleColor_SelNodeBorder_NATIVE();
+    private static int StyleColor_SelNodeBorder_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleColor.StyleColor_SelNodeBorder_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_NodeSelRect;
-*/
-    private static native int StyleColor_NodeSelRect_NATIVE();
+    private static int StyleColor_NodeSelRect_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleColor.StyleColor_NodeSelRect_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_NodeSelRectBorder;
-*/
-    private static native int StyleColor_NodeSelRectBorder_NATIVE();
+    private static int StyleColor_NodeSelRectBorder_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleColor.StyleColor_NodeSelRectBorder_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_HovLinkBorder;
-*/
-    private static native int StyleColor_HovLinkBorder_NATIVE();
+    private static int StyleColor_HovLinkBorder_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleColor.StyleColor_HovLinkBorder_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_SelLinkBorder;
-*/
-    private static native int StyleColor_SelLinkBorder_NATIVE();
+    private static int StyleColor_SelLinkBorder_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleColor.StyleColor_SelLinkBorder_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_HighlightLinkBorder;
-*/
-    private static native int StyleColor_HighlightLinkBorder_NATIVE();
+    private static int StyleColor_HighlightLinkBorder_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleColor.StyleColor_HighlightLinkBorder_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_LinkSelRect;
-*/
-    private static native int StyleColor_LinkSelRect_NATIVE();
+    private static int StyleColor_LinkSelRect_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleColor.StyleColor_LinkSelRect_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_LinkSelRectBorder;
-*/
-    private static native int StyleColor_LinkSelRectBorder_NATIVE();
+    private static int StyleColor_LinkSelRectBorder_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleColor.StyleColor_LinkSelRectBorder_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_PinRect;
-*/
-    private static native int StyleColor_PinRect_NATIVE();
+    private static int StyleColor_PinRect_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleColor.StyleColor_PinRect_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_PinRectBorder;
-*/
-    private static native int StyleColor_PinRectBorder_NATIVE();
+    private static int StyleColor_PinRectBorder_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleColor.StyleColor_PinRectBorder_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_Flow;
-*/
-    private static native int StyleColor_Flow_NATIVE();
+    private static int StyleColor_Flow_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleColor.StyleColor_Flow_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_FlowMarker;
-*/
-    private static native int StyleColor_FlowMarker_NATIVE();
+    private static int StyleColor_FlowMarker_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleColor.StyleColor_FlowMarker_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_GroupBg;
-*/
-    private static native int StyleColor_GroupBg_NATIVE();
+    private static int StyleColor_GroupBg_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleColor.StyleColor_GroupBg_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_GroupBorder;
-*/
-    private static native int StyleColor_GroupBorder_NATIVE();
+    private static int StyleColor_GroupBorder_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleColor.StyleColor_GroupBorder_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)StyleColor_Count;
-*/
-    private static native int StyleColor_Count_NATIVE();
+    private static int StyleColor_Count_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_StyleColor.StyleColor_Count_NATIVE();
+    }
 }

@@ -24,10 +24,9 @@ public class TextEditor extends NativeObject {
         internal_reset(addr, true);
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)new TextEditorWrapper::TextEditor();
-*/
-    public static native long internal_native_create_addr();
+    public static long internal_native_create_addr() {
+        return imgui.extension.textedit.natives.JNI_TextEditor.internal_native_create_addr();
+    }
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -47,131 +46,105 @@ return (jlong)new TextEditorWrapper::TextEditor();
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_deleteNative(this_addr);
+    }
 
     public void SetReadOnlyEnabled(boolean aValue) {
         internal_native_SetReadOnlyEnabled(native_address, aValue);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SetReadOnlyEnabled(aValue);
-*/
-    public static native void internal_native_SetReadOnlyEnabled(long this_addr, boolean aValue);
+    public static void internal_native_SetReadOnlyEnabled(long this_addr, boolean aValue) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_SetReadOnlyEnabled(this_addr, aValue);
+    }
 
     public boolean IsReadOnlyEnabled() {
         return internal_native_IsReadOnlyEnabled(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->IsReadOnlyEnabled();
-*/
-    public static native boolean internal_native_IsReadOnlyEnabled(long this_addr);
+    public static boolean internal_native_IsReadOnlyEnabled(long this_addr) {
+        return imgui.extension.textedit.natives.JNI_TextEditor.internal_native_IsReadOnlyEnabled(this_addr);
+    }
 
     public void SetAutoIndentEnabled(boolean aValue) {
         internal_native_SetAutoIndentEnabled(native_address, aValue);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SetAutoIndentEnabled(aValue);
-*/
-    public static native void internal_native_SetAutoIndentEnabled(long this_addr, boolean aValue);
+    public static void internal_native_SetAutoIndentEnabled(long this_addr, boolean aValue) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_SetAutoIndentEnabled(this_addr, aValue);
+    }
 
     public boolean IsAutoIndentEnabled() {
         return internal_native_IsAutoIndentEnabled(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->IsAutoIndentEnabled();
-*/
-    public static native boolean internal_native_IsAutoIndentEnabled(long this_addr);
+    public static boolean internal_native_IsAutoIndentEnabled(long this_addr) {
+        return imgui.extension.textedit.natives.JNI_TextEditor.internal_native_IsAutoIndentEnabled(this_addr);
+    }
 
     public void SetShowWhitespacesEnabled(boolean aValue) {
         internal_native_SetShowWhitespacesEnabled(native_address, aValue);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SetShowWhitespacesEnabled(aValue);
-*/
-    public static native void internal_native_SetShowWhitespacesEnabled(long this_addr, boolean aValue);
+    public static void internal_native_SetShowWhitespacesEnabled(long this_addr, boolean aValue) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_SetShowWhitespacesEnabled(this_addr, aValue);
+    }
 
     public boolean IsShowWhitespacesEnabled() {
         return internal_native_IsShowWhitespacesEnabled(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->IsShowWhitespacesEnabled();
-*/
-    public static native boolean internal_native_IsShowWhitespacesEnabled(long this_addr);
+    public static boolean internal_native_IsShowWhitespacesEnabled(long this_addr) {
+        return imgui.extension.textedit.natives.JNI_TextEditor.internal_native_IsShowWhitespacesEnabled(this_addr);
+    }
 
     public void SetShowLineNumbersEnabled(boolean aValue) {
         internal_native_SetShowLineNumbersEnabled(native_address, aValue);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SetShowLineNumbersEnabled(aValue);
-*/
-    public static native void internal_native_SetShowLineNumbersEnabled(long this_addr, boolean aValue);
+    public static void internal_native_SetShowLineNumbersEnabled(long this_addr, boolean aValue) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_SetShowLineNumbersEnabled(this_addr, aValue);
+    }
 
     public boolean IsShowLineNumbersEnabled() {
         return internal_native_IsShowLineNumbersEnabled(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->IsShowLineNumbersEnabled();
-*/
-    public static native boolean internal_native_IsShowLineNumbersEnabled(long this_addr);
+    public static boolean internal_native_IsShowLineNumbersEnabled(long this_addr) {
+        return imgui.extension.textedit.natives.JNI_TextEditor.internal_native_IsShowLineNumbersEnabled(this_addr);
+    }
 
     public void SetShortTabsEnabled(boolean aValue) {
         internal_native_SetShortTabsEnabled(native_address, aValue);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SetShortTabsEnabled(aValue);
-*/
-    public static native void internal_native_SetShortTabsEnabled(long this_addr, boolean aValue);
+    public static void internal_native_SetShortTabsEnabled(long this_addr, boolean aValue) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_SetShortTabsEnabled(this_addr, aValue);
+    }
 
     public boolean IsShortTabsEnabled() {
         return internal_native_IsShortTabsEnabled(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->IsShortTabsEnabled();
-*/
-    public static native boolean internal_native_IsShortTabsEnabled(long this_addr);
+    public static boolean internal_native_IsShortTabsEnabled(long this_addr) {
+        return imgui.extension.textedit.natives.JNI_TextEditor.internal_native_IsShortTabsEnabled(this_addr);
+    }
 
     public int GetLineCount() {
         return internal_native_GetLineCount(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->GetLineCount();
-*/
-    public static native int internal_native_GetLineCount(long this_addr);
+    public static int internal_native_GetLineCount(long this_addr) {
+        return imgui.extension.textedit.natives.JNI_TextEditor.internal_native_GetLineCount(this_addr);
+    }
 
     public void SetPalette(PaletteId aValue) {
         internal_native_SetPalette(native_address, aValue.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SetPalette((PaletteId)aValue);
-*/
-    public static native void internal_native_SetPalette(long this_addr, int aValue);
+    public static void internal_native_SetPalette(long this_addr, int aValue) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_SetPalette(this_addr, aValue);
+    }
 
     public PaletteId GetPalette() {
         int value = internal_native_GetPalette(native_address);
@@ -184,21 +157,17 @@ nativeObject->SetPalette((PaletteId)aValue);
         return PaletteId.CUSTOM.setValue(value);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return (int)nativeObject->GetPalette();
-*/
-    public static native int internal_native_GetPalette(long this_addr);
+    public static int internal_native_GetPalette(long this_addr) {
+        return imgui.extension.textedit.natives.JNI_TextEditor.internal_native_GetPalette(this_addr);
+    }
 
     public void SetLanguageDefinition(LanguageDefinitionId aValue) {
         internal_native_SetLanguageDefinition(native_address, aValue.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SetLanguageDefinition((LanguageDefinitionId)aValue);
-*/
-    public static native void internal_native_SetLanguageDefinition(long this_addr, int aValue);
+    public static void internal_native_SetLanguageDefinition(long this_addr, int aValue) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_SetLanguageDefinition(this_addr, aValue);
+    }
 
     public LanguageDefinitionId GetLanguageDefinition() {
         int value = internal_native_GetLanguageDefinition(native_address);
@@ -211,11 +180,9 @@ nativeObject->SetLanguageDefinition((LanguageDefinitionId)aValue);
         return LanguageDefinitionId.CUSTOM.setValue(value);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return (int)nativeObject->GetLanguageDefinition();
-*/
-    public static native int internal_native_GetLanguageDefinition(long this_addr);
+    public static int internal_native_GetLanguageDefinition(long this_addr) {
+        return imgui.extension.textedit.natives.JNI_TextEditor.internal_native_GetLanguageDefinition(this_addr);
+    }
 
     public NativeString GetLanguageDefinitionName() {
         long addr = internal_native_GetLanguageDefinitionName_addr(native_address);
@@ -227,61 +194,49 @@ return (int)nativeObject->GetLanguageDefinition();
         return NativeString_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-static NativeString copy_addr;
-copy_addr = nativeObject->GetLanguageDefinitionName();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetLanguageDefinitionName_addr(long this_addr);
+    public static long internal_native_GetLanguageDefinitionName_addr(long this_addr) {
+        return imgui.extension.textedit.natives.JNI_TextEditor.internal_native_GetLanguageDefinitionName_addr(this_addr);
+    }
 
     public void SetTabSize(int aValue) {
         internal_native_SetTabSize(native_address, aValue);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SetTabSize((int)aValue);
-*/
-    public static native void internal_native_SetTabSize(long this_addr, int aValue);
+    public static void internal_native_SetTabSize(long this_addr, int aValue) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_SetTabSize(this_addr, aValue);
+    }
 
     public int GetTabSize() {
         return internal_native_GetTabSize(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->GetTabSize();
-*/
-    public static native int internal_native_GetTabSize(long this_addr);
+    public static int internal_native_GetTabSize(long this_addr) {
+        return imgui.extension.textedit.natives.JNI_TextEditor.internal_native_GetTabSize(this_addr);
+    }
 
     public void SetLineSpacing(float aValue) {
         internal_native_SetLineSpacing(native_address, aValue);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SetLineSpacing((float)aValue);
-*/
-    public static native void internal_native_SetLineSpacing(long this_addr, float aValue);
+    public static void internal_native_SetLineSpacing(long this_addr, float aValue) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_SetLineSpacing(this_addr, aValue);
+    }
 
     public float GetLineSpacing() {
         return internal_native_GetLineSpacing(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->GetLineSpacing();
-*/
-    public static native float internal_native_GetLineSpacing(long this_addr);
+    public static float internal_native_GetLineSpacing(long this_addr) {
+        return imgui.extension.textedit.natives.JNI_TextEditor.internal_native_GetLineSpacing(this_addr);
+    }
 
     public static void SetDefaultPalette(PaletteId aValue) {
         internal_native_SetDefaultPalette(aValue.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor::SetDefaultPalette((PaletteId)aValue);
-*/
-    public static native void internal_native_SetDefaultPalette(int aValue);
+    public static void internal_native_SetDefaultPalette(int aValue) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_SetDefaultPalette(aValue);
+    }
 
     public static PaletteId GetDefaultPalette() {
         int value = internal_native_GetDefaultPalette();
@@ -294,280 +249,225 @@ TextEditorWrapper::TextEditor::SetDefaultPalette((PaletteId)aValue);
         return PaletteId.CUSTOM.setValue(value);
     }
 
-    /*[-JNI;-NATIVE]
-return (int)TextEditorWrapper::TextEditor::GetDefaultPalette();
-*/
-    public static native int internal_native_GetDefaultPalette();
+    public static int internal_native_GetDefaultPalette() {
+        return imgui.extension.textedit.natives.JNI_TextEditor.internal_native_GetDefaultPalette();
+    }
 
     public void SelectAll() {
         internal_native_SelectAll(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SelectAll();
-*/
-    public static native void internal_native_SelectAll(long this_addr);
+    public static void internal_native_SelectAll(long this_addr) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_SelectAll(this_addr);
+    }
 
     public void SelectLine(int aLine) {
         internal_native_SelectLine(native_address, aLine);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SelectLine((int)aLine);
-*/
-    public static native void internal_native_SelectLine(long this_addr, int aLine);
+    public static void internal_native_SelectLine(long this_addr, int aLine) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_SelectLine(this_addr, aLine);
+    }
 
     public void SelectRegion(int aStartLine, int aStartChar, int aEndLine, int aEndChar) {
         internal_native_SelectRegion(native_address, aStartLine, aStartChar, aEndLine, aEndChar);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SelectRegion((int)aStartLine, (int)aStartChar, (int)aEndLine, (int)aEndChar);
-*/
-    public static native void internal_native_SelectRegion(long this_addr, int aStartLine, int aStartChar, int aEndLine, int aEndChar);
+    public static void internal_native_SelectRegion(long this_addr, int aStartLine, int aStartChar, int aEndLine, int aEndChar) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_SelectRegion(this_addr, aStartLine, aStartChar, aEndLine, aEndChar);
+    }
 
     public void SelectNextOccurrenceOf(String aText, int aTextSize, boolean aCaseSensitive) {
         internal_native_SelectNextOccurrenceOf(native_address, aText, aTextSize, aCaseSensitive);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SelectNextOccurrenceOf(aText, (int)aTextSize, aCaseSensitive);
-*/
-    public static native void internal_native_SelectNextOccurrenceOf(long this_addr, String aText, int aTextSize, boolean aCaseSensitive);
+    public static void internal_native_SelectNextOccurrenceOf(long this_addr, String aText, int aTextSize, boolean aCaseSensitive) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_SelectNextOccurrenceOf(this_addr, aText, aTextSize, aCaseSensitive);
+    }
 
     public void SelectNextOccurrenceOf(String aText, int aTextSize) {
         internal_native_SelectNextOccurrenceOf(native_address, aText, aTextSize);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SelectNextOccurrenceOf(aText, (int)aTextSize);
-*/
-    public static native void internal_native_SelectNextOccurrenceOf(long this_addr, String aText, int aTextSize);
+    public static void internal_native_SelectNextOccurrenceOf(long this_addr, String aText, int aTextSize) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_SelectNextOccurrenceOf(this_addr, aText, aTextSize);
+    }
 
     public void SelectAllOccurrencesOf(String aText, int aTextSize, boolean aCaseSensitive) {
         internal_native_SelectAllOccurrencesOf(native_address, aText, aTextSize, aCaseSensitive);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SelectAllOccurrencesOf(aText, (int)aTextSize, aCaseSensitive);
-*/
-    public static native void internal_native_SelectAllOccurrencesOf(long this_addr, String aText, int aTextSize, boolean aCaseSensitive);
+    public static void internal_native_SelectAllOccurrencesOf(long this_addr, String aText, int aTextSize, boolean aCaseSensitive) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_SelectAllOccurrencesOf(this_addr, aText, aTextSize, aCaseSensitive);
+    }
 
     public void SelectAllOccurrencesOf(String aText, int aTextSize) {
         internal_native_SelectAllOccurrencesOf(native_address, aText, aTextSize);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SelectAllOccurrencesOf(aText, (int)aTextSize);
-*/
-    public static native void internal_native_SelectAllOccurrencesOf(long this_addr, String aText, int aTextSize);
+    public static void internal_native_SelectAllOccurrencesOf(long this_addr, String aText, int aTextSize) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_SelectAllOccurrencesOf(this_addr, aText, aTextSize);
+    }
 
     public boolean AnyCursorHasSelection() {
         return internal_native_AnyCursorHasSelection(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->AnyCursorHasSelection();
-*/
-    public static native boolean internal_native_AnyCursorHasSelection(long this_addr);
+    public static boolean internal_native_AnyCursorHasSelection(long this_addr) {
+        return imgui.extension.textedit.natives.JNI_TextEditor.internal_native_AnyCursorHasSelection(this_addr);
+    }
 
     public boolean AllCursorsHaveSelection() {
         return internal_native_AllCursorsHaveSelection(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->AllCursorsHaveSelection();
-*/
-    public static native boolean internal_native_AllCursorsHaveSelection(long this_addr);
+    public static boolean internal_native_AllCursorsHaveSelection(long this_addr) {
+        return imgui.extension.textedit.natives.JNI_TextEditor.internal_native_AllCursorsHaveSelection(this_addr);
+    }
 
     public void ClearExtraCursors() {
         internal_native_ClearExtraCursors(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->ClearExtraCursors();
-*/
-    public static native void internal_native_ClearExtraCursors(long this_addr);
+    public static void internal_native_ClearExtraCursors(long this_addr) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_ClearExtraCursors(this_addr);
+    }
 
     public void ClearSelections() {
         internal_native_ClearSelections(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->ClearSelections();
-*/
-    public static native void internal_native_ClearSelections(long this_addr);
+    public static void internal_native_ClearSelections(long this_addr) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_ClearSelections(this_addr);
+    }
 
     public void SetCursorPosition(int aLine, int aCharIndex) {
         internal_native_SetCursorPosition(native_address, aLine, aCharIndex);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SetCursorPosition((int)aLine, (int)aCharIndex);
-*/
-    public static native void internal_native_SetCursorPosition(long this_addr, int aLine, int aCharIndex);
+    public static void internal_native_SetCursorPosition(long this_addr, int aLine, int aCharIndex) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_SetCursorPosition(this_addr, aLine, aCharIndex);
+    }
 
     public void GetCursorPosition(NativeIntArray outLine, NativeIntArray outColumn) {
         internal_native_GetCursorPosition(native_address, outLine.native_void_address, outColumn.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->GetCursorPosition((int*)outLine_addr, (int*)outColumn_addr);
-*/
-    public static native void internal_native_GetCursorPosition(long this_addr, long outLine_addr, long outColumn_addr);
+    public static void internal_native_GetCursorPosition(long this_addr, long outLine_addr, long outColumn_addr) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_GetCursorPosition(this_addr, outLine_addr, outColumn_addr);
+    }
 
     public int GetFirstVisibleLine() {
         return internal_native_GetFirstVisibleLine(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->GetFirstVisibleLine();
-*/
-    public static native int internal_native_GetFirstVisibleLine(long this_addr);
+    public static int internal_native_GetFirstVisibleLine(long this_addr) {
+        return imgui.extension.textedit.natives.JNI_TextEditor.internal_native_GetFirstVisibleLine(this_addr);
+    }
 
     public int GetLastVisibleLine() {
         return internal_native_GetLastVisibleLine(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->GetLastVisibleLine();
-*/
-    public static native int internal_native_GetLastVisibleLine(long this_addr);
+    public static int internal_native_GetLastVisibleLine(long this_addr) {
+        return imgui.extension.textedit.natives.JNI_TextEditor.internal_native_GetLastVisibleLine(this_addr);
+    }
 
     public void SetViewAtLine(int aLine, SetViewAtLineMode aMode) {
         internal_native_SetViewAtLine(native_address, aLine, aMode.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SetViewAtLine((int)aLine, (SetViewAtLineMode)aMode);
-*/
-    public static native void internal_native_SetViewAtLine(long this_addr, int aLine, int aMode);
+    public static void internal_native_SetViewAtLine(long this_addr, int aLine, int aMode) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_SetViewAtLine(this_addr, aLine, aMode);
+    }
 
     public void Copy() {
         internal_native_Copy(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->Copy();
-*/
-    public static native void internal_native_Copy(long this_addr);
+    public static void internal_native_Copy(long this_addr) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_Copy(this_addr);
+    }
 
     public void Cut() {
         internal_native_Cut(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->Cut();
-*/
-    public static native void internal_native_Cut(long this_addr);
+    public static void internal_native_Cut(long this_addr) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_Cut(this_addr);
+    }
 
     public void Paste() {
         internal_native_Paste(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->Paste();
-*/
-    public static native void internal_native_Paste(long this_addr);
+    public static void internal_native_Paste(long this_addr) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_Paste(this_addr);
+    }
 
     public void Undo(int aSteps) {
         internal_native_Undo(native_address, aSteps);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->Undo((int)aSteps);
-*/
-    public static native void internal_native_Undo(long this_addr, int aSteps);
+    public static void internal_native_Undo(long this_addr, int aSteps) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_Undo(this_addr, aSteps);
+    }
 
     public void Undo() {
         internal_native_Undo(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->Undo();
-*/
-    public static native void internal_native_Undo(long this_addr);
+    public static void internal_native_Undo(long this_addr) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_Undo(this_addr);
+    }
 
     public void Redo(int aSteps) {
         internal_native_Redo(native_address, aSteps);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->Redo((int)aSteps);
-*/
-    public static native void internal_native_Redo(long this_addr, int aSteps);
+    public static void internal_native_Redo(long this_addr, int aSteps) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_Redo(this_addr, aSteps);
+    }
 
     public void Redo() {
         internal_native_Redo(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->Redo();
-*/
-    public static native void internal_native_Redo(long this_addr);
+    public static void internal_native_Redo(long this_addr) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_Redo(this_addr);
+    }
 
     public boolean CanUndo() {
         return internal_native_CanUndo(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->CanUndo();
-*/
-    public static native boolean internal_native_CanUndo(long this_addr);
+    public static boolean internal_native_CanUndo(long this_addr) {
+        return imgui.extension.textedit.natives.JNI_TextEditor.internal_native_CanUndo(this_addr);
+    }
 
     public boolean CanRedo() {
         return internal_native_CanRedo(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->CanRedo();
-*/
-    public static native boolean internal_native_CanRedo(long this_addr);
+    public static boolean internal_native_CanRedo(long this_addr) {
+        return imgui.extension.textedit.natives.JNI_TextEditor.internal_native_CanRedo(this_addr);
+    }
 
     public int GetUndoIndex() {
         return internal_native_GetUndoIndex(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-return nativeObject->GetUndoIndex();
-*/
-    public static native int internal_native_GetUndoIndex(long this_addr);
+    public static int internal_native_GetUndoIndex(long this_addr) {
+        return imgui.extension.textedit.natives.JNI_TextEditor.internal_native_GetUndoIndex(this_addr);
+    }
 
     public void SetText(String aText) {
         internal_native_SetText(native_address, aText);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->SetText(aText);
-*/
-    public static native void internal_native_SetText(long this_addr, String aText);
+    public static void internal_native_SetText(long this_addr, String aText) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_SetText(this_addr, aText);
+    }
 
     public NativeString GetText() {
         long addr = internal_native_GetText_addr(native_address);
@@ -579,50 +479,39 @@ nativeObject->SetText(aText);
         return NativeString_TEMP_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-static NativeString copy_addr;
-copy_addr = nativeObject->GetText();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetText_addr(long this_addr);
+    public static long internal_native_GetText_addr(long this_addr) {
+        return imgui.extension.textedit.natives.JNI_TextEditor.internal_native_GetText_addr(this_addr);
+    }
 
     public void Render(String aTitle, boolean aParentIsFocused, ImVec2 aSize, boolean aBorder) {
         internal_native_Render(native_address, aTitle, aParentIsFocused, aSize.native_address, aBorder);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->Render(aTitle, aParentIsFocused, *((ImVec2* )aSize_addr), aBorder);
-*/
-    public static native void internal_native_Render(long this_addr, String aTitle, boolean aParentIsFocused, long aSize_addr, boolean aBorder);
+    public static void internal_native_Render(long this_addr, String aTitle, boolean aParentIsFocused, long aSize_addr, boolean aBorder) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_Render(this_addr, aTitle, aParentIsFocused, aSize_addr, aBorder);
+    }
 
     public void Render(String aTitle, boolean aParentIsFocused, ImVec2 aSize) {
         internal_native_Render(native_address, aTitle, aParentIsFocused, aSize.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->Render(aTitle, aParentIsFocused, *((ImVec2* )aSize_addr));
-*/
-    public static native void internal_native_Render(long this_addr, String aTitle, boolean aParentIsFocused, long aSize_addr);
+    public static void internal_native_Render(long this_addr, String aTitle, boolean aParentIsFocused, long aSize_addr) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_Render(this_addr, aTitle, aParentIsFocused, aSize_addr);
+    }
 
     public void Render(String aTitle, boolean aParentIsFocused) {
         internal_native_Render(native_address, aTitle, aParentIsFocused);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->Render(aTitle, aParentIsFocused);
-*/
-    public static native void internal_native_Render(long this_addr, String aTitle, boolean aParentIsFocused);
+    public static void internal_native_Render(long this_addr, String aTitle, boolean aParentIsFocused) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_Render(this_addr, aTitle, aParentIsFocused);
+    }
 
     public void Render(String aTitle) {
         internal_native_Render(native_address, aTitle);
     }
 
-    /*[-JNI;-NATIVE]
-TextEditorWrapper::TextEditor* nativeObject = (TextEditorWrapper::TextEditor*)this_addr;
-nativeObject->Render(aTitle);
-*/
-    public static native void internal_native_Render(long this_addr, String aTitle);
+    public static void internal_native_Render(long this_addr, String aTitle) {
+        imgui.extension.textedit.natives.JNI_TextEditor.internal_native_Render(this_addr, aTitle);
+    }
 }

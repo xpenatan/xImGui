@@ -39,28 +39,23 @@ public enum ImGuiInputSource implements NativeEnum<ImGuiInputSource> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputSource_None;
-*/
-    private static native int ImGuiInputSource_None_NATIVE();
+    private static int ImGuiInputSource_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputSource.ImGuiInputSource_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputSource_Mouse;
-*/
-    private static native int ImGuiInputSource_Mouse_NATIVE();
+    private static int ImGuiInputSource_Mouse_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputSource.ImGuiInputSource_Mouse_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputSource_Keyboard;
-*/
-    private static native int ImGuiInputSource_Keyboard_NATIVE();
+    private static int ImGuiInputSource_Keyboard_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputSource.ImGuiInputSource_Keyboard_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputSource_Gamepad;
-*/
-    private static native int ImGuiInputSource_Gamepad_NATIVE();
+    private static int ImGuiInputSource_Gamepad_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputSource.ImGuiInputSource_Gamepad_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputSource_COUNT;
-*/
-    private static native int ImGuiInputSource_COUNT_NATIVE();
+    private static int ImGuiInputSource_COUNT_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputSource.ImGuiInputSource_COUNT_NATIVE();
+    }
 }

@@ -71,15 +71,11 @@ public class ImGuiContext extends NativeObject {
         return internal_native_get_Time(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->Time;
-*/
     public static double internal_native_get_Time(long this_addr) {
         try {
             return (double) FFMHandles.internal_native_get_Time__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -87,15 +83,11 @@ return nativeObject->Time;
         return internal_native_get_NavId(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->NavId;
-*/
     public static int internal_native_get_NavId(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_NavId__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -109,15 +101,11 @@ return nativeObject->NavId;
         return ImVectorImGuiWindowPtr_TEMP_GEN_0;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return (int64_t)&nativeObject->Windows;
-*/
     public static long internal_native_get_Windows_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_Windows_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -131,15 +119,11 @@ return (int64_t)&nativeObject->Windows;
         return ImVectorImGuiWindowPtr_TEMP_GEN_1;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return (int64_t)&nativeObject->WindowsFocusOrder;
-*/
     public static long internal_native_get_WindowsFocusOrder_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_WindowsFocusOrder_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -153,15 +137,11 @@ return (int64_t)&nativeObject->WindowsFocusOrder;
         return ImVectorImGuiWindowPtr_TEMP_GEN_2;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return (int64_t)&nativeObject->WindowsTempSortBuffer;
-*/
     public static long internal_native_get_WindowsTempSortBuffer_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_WindowsTempSortBuffer_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -175,15 +155,11 @@ return (int64_t)&nativeObject->WindowsTempSortBuffer;
         return ImVectorImGuiWindowStackData_TEMP_GEN_0;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return (int64_t)&nativeObject->CurrentWindowStack;
-*/
     public static long internal_native_get_CurrentWindowStack_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_CurrentWindowStack_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -197,15 +173,11 @@ return (int64_t)&nativeObject->CurrentWindowStack;
         return ImGuiStorage_TEMP_GEN_0;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return (int64_t)&nativeObject->WindowsById;
-*/
     public static long internal_native_get_WindowsById_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_WindowsById_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -213,15 +185,11 @@ return (int64_t)&nativeObject->WindowsById;
         return internal_native_get_WindowsActiveCount(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->WindowsActiveCount;
-*/
     public static int internal_native_get_WindowsActiveCount(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_WindowsActiveCount__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -229,15 +197,11 @@ return nativeObject->WindowsActiveCount;
         return internal_native_get_WindowsBorderHoverPadding(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->WindowsBorderHoverPadding;
-*/
     public static float internal_native_get_WindowsBorderHoverPadding(long this_addr) {
         try {
             return (float) FFMHandles.internal_native_get_WindowsBorderHoverPadding__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -245,15 +209,11 @@ return nativeObject->WindowsBorderHoverPadding;
         return internal_native_get_DebugBreakInWindow(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->DebugBreakInWindow;
-*/
     public static int internal_native_get_DebugBreakInWindow(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_DebugBreakInWindow__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -267,16 +227,11 @@ return nativeObject->DebugBreakInWindow;
         return ImGuiWindow_TEMP_GEN_0;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-ImGuiWindow* attr = nativeObject->CurrentWindow;
-return (int64_t)attr;
-*/
     public static long internal_native_get_CurrentWindow_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_CurrentWindow_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -290,16 +245,11 @@ return (int64_t)attr;
         return ImGuiWindow_TEMP_GEN_1;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-ImGuiWindow* attr = nativeObject->HoveredWindow;
-return (int64_t)attr;
-*/
     public static long internal_native_get_HoveredWindow_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_HoveredWindow_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -313,16 +263,11 @@ return (int64_t)attr;
         return ImGuiWindow_TEMP_GEN_2;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-ImGuiWindow* attr = nativeObject->HoveredWindowUnderMovingWindow;
-return (int64_t)attr;
-*/
     public static long internal_native_get_HoveredWindowUnderMovingWindow_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_HoveredWindowUnderMovingWindow_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -336,16 +281,11 @@ return (int64_t)attr;
         return ImGuiWindow_TEMP_GEN_3;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-ImGuiWindow* attr = nativeObject->HoveredWindowBeforeClear;
-return (int64_t)attr;
-*/
     public static long internal_native_get_HoveredWindowBeforeClear_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_HoveredWindowBeforeClear_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -359,16 +299,11 @@ return (int64_t)attr;
         return ImGuiWindow_TEMP_GEN_4;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-ImGuiWindow* attr = nativeObject->MovingWindow;
-return (int64_t)attr;
-*/
     public static long internal_native_get_MovingWindow_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_MovingWindow_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -382,16 +317,11 @@ return (int64_t)attr;
         return ImGuiWindow_TEMP_GEN_5;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-ImGuiWindow* attr = nativeObject->WheelingWindow;
-return (int64_t)attr;
-*/
     public static long internal_native_get_WheelingWindow_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_WheelingWindow_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -405,15 +335,11 @@ return (int64_t)attr;
         return ImVec2_TEMP_GEN_0;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return (int64_t)&nativeObject->WheelingWindowRefMousePos;
-*/
     public static long internal_native_get_WheelingWindowRefMousePos_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_WheelingWindowRefMousePos_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -421,15 +347,11 @@ return (int64_t)&nativeObject->WheelingWindowRefMousePos;
         return internal_native_get_WheelingWindowStartFrame(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->WheelingWindowStartFrame;
-*/
     public static int internal_native_get_WheelingWindowStartFrame(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_WheelingWindowStartFrame__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -437,15 +359,11 @@ return nativeObject->WheelingWindowStartFrame;
         return internal_native_get_WheelingWindowScrolledFrame(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->WheelingWindowScrolledFrame;
-*/
     public static int internal_native_get_WheelingWindowScrolledFrame(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_WheelingWindowScrolledFrame__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -453,15 +371,11 @@ return nativeObject->WheelingWindowScrolledFrame;
         return internal_native_get_WheelingWindowReleaseTimer(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->WheelingWindowReleaseTimer;
-*/
     public static float internal_native_get_WheelingWindowReleaseTimer(long this_addr) {
         try {
             return (float) FFMHandles.internal_native_get_WheelingWindowReleaseTimer__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -475,15 +389,11 @@ return nativeObject->WheelingWindowReleaseTimer;
         return ImVec2_TEMP_GEN_1;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return (int64_t)&nativeObject->WheelingWindowWheelRemainder;
-*/
     public static long internal_native_get_WheelingWindowWheelRemainder_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_WheelingWindowWheelRemainder_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -497,15 +407,11 @@ return (int64_t)&nativeObject->WheelingWindowWheelRemainder;
         return ImVec2_TEMP_GEN_2;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return (int64_t)&nativeObject->WheelingAxisAvg;
-*/
     public static long internal_native_get_WheelingAxisAvg_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_WheelingAxisAvg_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -513,15 +419,11 @@ return (int64_t)&nativeObject->WheelingAxisAvg;
         return internal_native_get_DebugDrawIdConflictsId(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->DebugDrawIdConflictsId;
-*/
     public static int internal_native_get_DebugDrawIdConflictsId(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_DebugDrawIdConflictsId__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -529,15 +431,11 @@ return nativeObject->DebugDrawIdConflictsId;
         return internal_native_get_DebugHookIdInfoId(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->DebugHookIdInfoId;
-*/
     public static int internal_native_get_DebugHookIdInfoId(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_DebugHookIdInfoId__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -545,15 +443,11 @@ return nativeObject->DebugHookIdInfoId;
         return internal_native_get_HoveredId(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->HoveredId;
-*/
     public static int internal_native_get_HoveredId(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_HoveredId__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -561,15 +455,11 @@ return nativeObject->HoveredId;
         return internal_native_get_HoveredIdPreviousFrame(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->HoveredIdPreviousFrame;
-*/
     public static int internal_native_get_HoveredIdPreviousFrame(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_HoveredIdPreviousFrame__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -577,15 +467,11 @@ return nativeObject->HoveredIdPreviousFrame;
         return internal_native_get_HoveredIdPreviousFrameItemCount(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->HoveredIdPreviousFrameItemCount;
-*/
     public static int internal_native_get_HoveredIdPreviousFrameItemCount(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_HoveredIdPreviousFrameItemCount__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -593,15 +479,11 @@ return nativeObject->HoveredIdPreviousFrameItemCount;
         return internal_native_get_HoveredIdTimer(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->HoveredIdTimer;
-*/
     public static float internal_native_get_HoveredIdTimer(long this_addr) {
         try {
             return (float) FFMHandles.internal_native_get_HoveredIdTimer__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -609,15 +491,11 @@ return nativeObject->HoveredIdTimer;
         return internal_native_get_HoveredIdNotActiveTimer(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->HoveredIdNotActiveTimer;
-*/
     public static float internal_native_get_HoveredIdNotActiveTimer(long this_addr) {
         try {
             return (float) FFMHandles.internal_native_get_HoveredIdNotActiveTimer__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -625,15 +503,11 @@ return nativeObject->HoveredIdNotActiveTimer;
         return internal_native_get_HoveredIdAllowOverlap(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->HoveredIdAllowOverlap;
-*/
     public static boolean internal_native_get_HoveredIdAllowOverlap(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_get_HoveredIdAllowOverlap__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -641,15 +515,11 @@ return nativeObject->HoveredIdAllowOverlap;
         return internal_native_get_HoveredIdIsDisabled(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->HoveredIdIsDisabled;
-*/
     public static boolean internal_native_get_HoveredIdIsDisabled(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_get_HoveredIdIsDisabled__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -657,15 +527,11 @@ return nativeObject->HoveredIdIsDisabled;
         return internal_native_get_ItemUnclipByLog(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ItemUnclipByLog;
-*/
     public static boolean internal_native_get_ItemUnclipByLog(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_get_ItemUnclipByLog__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -673,15 +539,11 @@ return nativeObject->ItemUnclipByLog;
         return internal_native_get_ActiveId(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveId;
-*/
     public static int internal_native_get_ActiveId(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_ActiveId__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -689,15 +551,11 @@ return nativeObject->ActiveId;
         return internal_native_get_ActiveIdIsAlive(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdIsAlive;
-*/
     public static int internal_native_get_ActiveIdIsAlive(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_ActiveIdIsAlive__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -705,15 +563,11 @@ return nativeObject->ActiveIdIsAlive;
         return internal_native_get_ActiveIdTimer(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdTimer;
-*/
     public static float internal_native_get_ActiveIdTimer(long this_addr) {
         try {
             return (float) FFMHandles.internal_native_get_ActiveIdTimer__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -721,15 +575,11 @@ return nativeObject->ActiveIdTimer;
         return internal_native_get_ActiveIdIsJustActivated(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdIsJustActivated;
-*/
     public static boolean internal_native_get_ActiveIdIsJustActivated(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_get_ActiveIdIsJustActivated__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -737,15 +587,11 @@ return nativeObject->ActiveIdIsJustActivated;
         return internal_native_get_ActiveIdAllowOverlap(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdAllowOverlap;
-*/
     public static boolean internal_native_get_ActiveIdAllowOverlap(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_get_ActiveIdAllowOverlap__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -753,15 +599,11 @@ return nativeObject->ActiveIdAllowOverlap;
         return internal_native_get_ActiveIdNoClearOnFocusLoss(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdNoClearOnFocusLoss;
-*/
     public static boolean internal_native_get_ActiveIdNoClearOnFocusLoss(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_get_ActiveIdNoClearOnFocusLoss__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -769,15 +611,11 @@ return nativeObject->ActiveIdNoClearOnFocusLoss;
         return internal_native_get_ActiveIdHasBeenPressedBefore(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdHasBeenPressedBefore;
-*/
     public static boolean internal_native_get_ActiveIdHasBeenPressedBefore(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_get_ActiveIdHasBeenPressedBefore__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -785,15 +623,11 @@ return nativeObject->ActiveIdHasBeenPressedBefore;
         return internal_native_get_ActiveIdHasBeenEditedBefore(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdHasBeenEditedBefore;
-*/
     public static boolean internal_native_get_ActiveIdHasBeenEditedBefore(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_get_ActiveIdHasBeenEditedBefore__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -801,15 +635,11 @@ return nativeObject->ActiveIdHasBeenEditedBefore;
         return internal_native_get_ActiveIdHasBeenEditedThisFrame(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdHasBeenEditedThisFrame;
-*/
     public static boolean internal_native_get_ActiveIdHasBeenEditedThisFrame(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_get_ActiveIdHasBeenEditedThisFrame__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -817,15 +647,11 @@ return nativeObject->ActiveIdHasBeenEditedThisFrame;
         return internal_native_get_ActiveIdFromShortcut(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdFromShortcut;
-*/
     public static boolean internal_native_get_ActiveIdFromShortcut(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_get_ActiveIdFromShortcut__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -833,15 +659,11 @@ return nativeObject->ActiveIdFromShortcut;
         return internal_native_get_ActiveIdDisabledId(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdDisabledId;
-*/
     public static int internal_native_get_ActiveIdDisabledId(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_ActiveIdDisabledId__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -849,15 +671,11 @@ return nativeObject->ActiveIdDisabledId;
         return internal_native_get_ActiveIdMouseButton(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdMouseButton;
-*/
     public static int internal_native_get_ActiveIdMouseButton(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_ActiveIdMouseButton__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -871,15 +689,11 @@ return nativeObject->ActiveIdMouseButton;
         return ImVec2_TEMP_GEN_3;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return (int64_t)&nativeObject->ActiveIdClickOffset;
-*/
     public static long internal_native_get_ActiveIdClickOffset_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_ActiveIdClickOffset_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -893,16 +707,11 @@ return (int64_t)&nativeObject->ActiveIdClickOffset;
         return ImGuiWindow_TEMP_GEN_6;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-ImGuiWindow* attr = nativeObject->ActiveIdWindow;
-return (int64_t)attr;
-*/
     public static long internal_native_get_ActiveIdWindow_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_ActiveIdWindow_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -910,15 +719,11 @@ return (int64_t)attr;
         return internal_native_get_ActiveIdPreviousFrame(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdPreviousFrame;
-*/
     public static int internal_native_get_ActiveIdPreviousFrame(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_ActiveIdPreviousFrame__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -926,15 +731,11 @@ return nativeObject->ActiveIdPreviousFrame;
         return internal_native_get_LastActiveId(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->LastActiveId;
-*/
     public static int internal_native_get_LastActiveId(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_LastActiveId__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -942,15 +743,11 @@ return nativeObject->LastActiveId;
         return internal_native_get_LastActiveIdTimer(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->LastActiveIdTimer;
-*/
     public static float internal_native_get_LastActiveIdTimer(long this_addr) {
         try {
             return (float) FFMHandles.internal_native_get_LastActiveIdTimer__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -964,148 +761,114 @@ return nativeObject->LastActiveIdTimer;
         return ImGuiLastItemData_TEMP_GEN_0;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return (int64_t)&nativeObject->LastItemData;
-*/
     public static long internal_native_get_LastItemData_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_LastItemData_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle internal_native_get_Time__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_time", FunctionDescriptor.of(ValueLayout.JAVA_DOUBLE, ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle internal_native_get_NavId__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_navid", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle internal_native_get_Windows_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_windows_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle internal_native_get_WindowsFocusOrder_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_windowsfocusorder_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_get_WindowsTempSortBuffer_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_windowstempsortbuffer_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_get_CurrentWindowStack_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_currentwindowstack_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle internal_native_get_WindowsById_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_windowsbyid_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_Time__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1Time__J", FunctionDescriptor.of(ValueLayout.JAVA_DOUBLE, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_WindowsActiveCount__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_windowsactivecount", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_NavId__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1NavId__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_WindowsBorderHoverPadding__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_windowsborderhoverpadding", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_Windows_addr__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1Windows_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_DebugBreakInWindow__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_debugbreakinwindow", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_WindowsFocusOrder_addr__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1WindowsFocusOrder_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_CurrentWindow_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_currentwindow_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_WindowsTempSortBuffer_addr__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1WindowsTempSortBuffer_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_HoveredWindow_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_hoveredwindow_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_CurrentWindowStack_addr__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1CurrentWindowStack_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_HoveredWindowUnderMovingWindow_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_hoveredwindowundermovingwindow_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_WindowsById_addr__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1WindowsById_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_HoveredWindowBeforeClear_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_hoveredwindowbeforeclear_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_WindowsActiveCount__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1WindowsActiveCount__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_MovingWindow_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_movingwindow_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_WindowsBorderHoverPadding__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1WindowsBorderHoverPadding__J", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_WheelingWindow_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_wheelingwindow_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_DebugBreakInWindow__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1DebugBreakInWindow__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_WheelingWindowRefMousePos_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_wheelingwindowrefmousepos_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_CurrentWindow_addr__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1CurrentWindow_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_WheelingWindowStartFrame__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_wheelingwindowstartframe", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_HoveredWindow_addr__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1HoveredWindow_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_WheelingWindowScrolledFrame__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_wheelingwindowscrolledframe", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_HoveredWindowUnderMovingWindow_addr__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1HoveredWindowUnderMovingWindow_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_WheelingWindowReleaseTimer__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_wheelingwindowreleasetimer", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_HoveredWindowBeforeClear_addr__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1HoveredWindowBeforeClear_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_WheelingWindowWheelRemainder_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_wheelingwindowwheelremainder_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_MovingWindow_addr__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1MovingWindow_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_WheelingAxisAvg_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_wheelingaxisavg_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_WheelingWindow_addr__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1WheelingWindow_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_DebugDrawIdConflictsId__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_debugdrawidconflictsid", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_WheelingWindowRefMousePos_addr__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1WheelingWindowRefMousePos_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_DebugHookIdInfoId__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_debughookidinfoid", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_WheelingWindowStartFrame__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1WheelingWindowStartFrame__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_HoveredId__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_hoveredid", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_WheelingWindowScrolledFrame__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1WheelingWindowScrolledFrame__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_HoveredIdPreviousFrame__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_hoveredidpreviousframe", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_WheelingWindowReleaseTimer__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1WheelingWindowReleaseTimer__J", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_HoveredIdPreviousFrameItemCount__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_hoveredidpreviousframeitemcount", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_WheelingWindowWheelRemainder_addr__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1WheelingWindowWheelRemainder_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_HoveredIdTimer__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_hoveredidtimer", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_WheelingAxisAvg_addr__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1WheelingAxisAvg_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_HoveredIdNotActiveTimer__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_hoveredidnotactivetimer", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_DebugDrawIdConflictsId__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1DebugDrawIdConflictsId__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_HoveredIdAllowOverlap__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_hoveredidallowoverlap", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_DebugHookIdInfoId__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1DebugHookIdInfoId__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_HoveredIdIsDisabled__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_hoveredidisdisabled", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_HoveredId__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1HoveredId__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_ItemUnclipByLog__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_itemunclipbylog", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_HoveredIdPreviousFrame__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1HoveredIdPreviousFrame__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_ActiveId__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_activeid", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_HoveredIdPreviousFrameItemCount__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1HoveredIdPreviousFrameItemCount__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdIsAlive__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_activeidisalive", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_HoveredIdTimer__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1HoveredIdTimer__J", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdTimer__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_activeidtimer", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_HoveredIdNotActiveTimer__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1HoveredIdNotActiveTimer__J", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdIsJustActivated__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_activeidisjustactivated", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_HoveredIdAllowOverlap__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1HoveredIdAllowOverlap__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdAllowOverlap__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_activeidallowoverlap", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_HoveredIdIsDisabled__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1HoveredIdIsDisabled__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdNoClearOnFocusLoss__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_activeidnoclearonfocusloss", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_ItemUnclipByLog__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1ItemUnclipByLog__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdHasBeenPressedBefore__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_activeidhasbeenpressedbefore", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_ActiveId__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1ActiveId__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdHasBeenEditedBefore__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_activeidhasbeeneditedbefore", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdIsAlive__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1ActiveIdIsAlive__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdHasBeenEditedThisFrame__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_activeidhasbeeneditedthisframe", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdTimer__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1ActiveIdTimer__J", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdFromShortcut__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_activeidfromshortcut", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdIsJustActivated__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1ActiveIdIsJustActivated__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdDisabledId__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_activeiddisabledid", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdAllowOverlap__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1ActiveIdAllowOverlap__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdMouseButton__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_activeidmousebutton", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdNoClearOnFocusLoss__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1ActiveIdNoClearOnFocusLoss__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdClickOffset_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_activeidclickoffset_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdHasBeenPressedBefore__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1ActiveIdHasBeenPressedBefore__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdWindow_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_activeidwindow_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdHasBeenEditedBefore__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1ActiveIdHasBeenEditedBefore__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdPreviousFrame__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_activeidpreviousframe", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdHasBeenEditedThisFrame__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1ActiveIdHasBeenEditedThisFrame__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_LastActiveId__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_lastactiveid", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdFromShortcut__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1ActiveIdFromShortcut__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_LastActiveIdTimer__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_lastactiveidtimer", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdDisabledId__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1ActiveIdDisabledId__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdMouseButton__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1ActiveIdMouseButton__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdClickOffset_addr__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1ActiveIdClickOffset_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdWindow_addr__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1ActiveIdWindow_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_ActiveIdPreviousFrame__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1ActiveIdPreviousFrame__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_LastActiveId__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1LastActiveId__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_LastActiveIdTimer__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1LastActiveIdTimer__J", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_LastItemData_addr__J = downcallDefault("jparser_imgui_ImGuiContext_internal_1native_1get_1LastItemData_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_LastItemData_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguicontext_get_lastitemdata_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
     }
 }

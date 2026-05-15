@@ -34,13 +34,11 @@ public enum ImGuiLayoutType implements NativeEnum<ImGuiLayoutType> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLayoutType_Horizontal;
-*/
-    private static native int ImGuiLayoutType_Horizontal_NATIVE();
+    private static int ImGuiLayoutType_Horizontal_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiLayoutType.ImGuiLayoutType_Horizontal_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLayoutType_Vertical;
-*/
-    private static native int ImGuiLayoutType_Vertical_NATIVE();
+    private static int ImGuiLayoutType_Vertical_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiLayoutType.ImGuiLayoutType_Vertical_NATIVE();
+    }
 }

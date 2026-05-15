@@ -34,15 +34,9 @@ public enum PinKind implements NativeEnum<PinKind> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.Input;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.Input;")
     private static native int Input_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.Output;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.Output;")
     private static native int Output_NATIVE();
 }

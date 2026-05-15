@@ -40,39 +40,21 @@ public enum ImGuiButtonFlags implements NativeEnum<ImGuiButtonFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiButtonFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiButtonFlags_None;")
     private static native int ImGuiButtonFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiButtonFlags_MouseButtonLeft;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiButtonFlags_MouseButtonLeft;")
     private static native int ImGuiButtonFlags_MouseButtonLeft_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiButtonFlags_MouseButtonRight;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiButtonFlags_MouseButtonRight;")
     private static native int ImGuiButtonFlags_MouseButtonRight_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiButtonFlags_MouseButtonMiddle;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiButtonFlags_MouseButtonMiddle;")
     private static native int ImGuiButtonFlags_MouseButtonMiddle_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiButtonFlags_MouseButtonMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiButtonFlags_MouseButtonMask_;")
     private static native int ImGuiButtonFlags_MouseButtonMask__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiButtonFlags_EnableNav;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiButtonFlags_EnableNav;")
     private static native int ImGuiButtonFlags_EnableNav_NATIVE();
 }

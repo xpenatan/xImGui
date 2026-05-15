@@ -60,133 +60,107 @@ public enum ImGuiInputTextFlags implements NativeEnum<ImGuiInputTextFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_None;
-*/
-    private static native int ImGuiInputTextFlags_None_NATIVE();
+    private static int ImGuiInputTextFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_CharsDecimal;
-*/
-    private static native int ImGuiInputTextFlags_CharsDecimal_NATIVE();
+    private static int ImGuiInputTextFlags_CharsDecimal_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_CharsDecimal_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_CharsHexadecimal;
-*/
-    private static native int ImGuiInputTextFlags_CharsHexadecimal_NATIVE();
+    private static int ImGuiInputTextFlags_CharsHexadecimal_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_CharsHexadecimal_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_CharsScientific;
-*/
-    private static native int ImGuiInputTextFlags_CharsScientific_NATIVE();
+    private static int ImGuiInputTextFlags_CharsScientific_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_CharsScientific_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_CharsUppercase;
-*/
-    private static native int ImGuiInputTextFlags_CharsUppercase_NATIVE();
+    private static int ImGuiInputTextFlags_CharsUppercase_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_CharsUppercase_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_CharsNoBlank;
-*/
-    private static native int ImGuiInputTextFlags_CharsNoBlank_NATIVE();
+    private static int ImGuiInputTextFlags_CharsNoBlank_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_CharsNoBlank_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_AllowTabInput;
-*/
-    private static native int ImGuiInputTextFlags_AllowTabInput_NATIVE();
+    private static int ImGuiInputTextFlags_AllowTabInput_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_AllowTabInput_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_EnterReturnsTrue;
-*/
-    private static native int ImGuiInputTextFlags_EnterReturnsTrue_NATIVE();
+    private static int ImGuiInputTextFlags_EnterReturnsTrue_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_EnterReturnsTrue_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_EscapeClearsAll;
-*/
-    private static native int ImGuiInputTextFlags_EscapeClearsAll_NATIVE();
+    private static int ImGuiInputTextFlags_EscapeClearsAll_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_EscapeClearsAll_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_CtrlEnterForNewLine;
-*/
-    private static native int ImGuiInputTextFlags_CtrlEnterForNewLine_NATIVE();
+    private static int ImGuiInputTextFlags_CtrlEnterForNewLine_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_CtrlEnterForNewLine_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_ReadOnly;
-*/
-    private static native int ImGuiInputTextFlags_ReadOnly_NATIVE();
+    private static int ImGuiInputTextFlags_ReadOnly_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_ReadOnly_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_Password;
-*/
-    private static native int ImGuiInputTextFlags_Password_NATIVE();
+    private static int ImGuiInputTextFlags_Password_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_Password_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_AlwaysOverwrite;
-*/
-    private static native int ImGuiInputTextFlags_AlwaysOverwrite_NATIVE();
+    private static int ImGuiInputTextFlags_AlwaysOverwrite_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_AlwaysOverwrite_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_AutoSelectAll;
-*/
-    private static native int ImGuiInputTextFlags_AutoSelectAll_NATIVE();
+    private static int ImGuiInputTextFlags_AutoSelectAll_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_AutoSelectAll_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_ParseEmptyRefVal;
-*/
-    private static native int ImGuiInputTextFlags_ParseEmptyRefVal_NATIVE();
+    private static int ImGuiInputTextFlags_ParseEmptyRefVal_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_ParseEmptyRefVal_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_DisplayEmptyRefVal;
-*/
-    private static native int ImGuiInputTextFlags_DisplayEmptyRefVal_NATIVE();
+    private static int ImGuiInputTextFlags_DisplayEmptyRefVal_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_DisplayEmptyRefVal_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_NoHorizontalScroll;
-*/
-    private static native int ImGuiInputTextFlags_NoHorizontalScroll_NATIVE();
+    private static int ImGuiInputTextFlags_NoHorizontalScroll_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_NoHorizontalScroll_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_NoUndoRedo;
-*/
-    private static native int ImGuiInputTextFlags_NoUndoRedo_NATIVE();
+    private static int ImGuiInputTextFlags_NoUndoRedo_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_NoUndoRedo_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_ElideLeft;
-*/
-    private static native int ImGuiInputTextFlags_ElideLeft_NATIVE();
+    private static int ImGuiInputTextFlags_ElideLeft_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_ElideLeft_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_CallbackCompletion;
-*/
-    private static native int ImGuiInputTextFlags_CallbackCompletion_NATIVE();
+    private static int ImGuiInputTextFlags_CallbackCompletion_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_CallbackCompletion_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_CallbackHistory;
-*/
-    private static native int ImGuiInputTextFlags_CallbackHistory_NATIVE();
+    private static int ImGuiInputTextFlags_CallbackHistory_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_CallbackHistory_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_CallbackAlways;
-*/
-    private static native int ImGuiInputTextFlags_CallbackAlways_NATIVE();
+    private static int ImGuiInputTextFlags_CallbackAlways_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_CallbackAlways_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_CallbackCharFilter;
-*/
-    private static native int ImGuiInputTextFlags_CallbackCharFilter_NATIVE();
+    private static int ImGuiInputTextFlags_CallbackCharFilter_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_CallbackCharFilter_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_CallbackResize;
-*/
-    private static native int ImGuiInputTextFlags_CallbackResize_NATIVE();
+    private static int ImGuiInputTextFlags_CallbackResize_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_CallbackResize_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_CallbackEdit;
-*/
-    private static native int ImGuiInputTextFlags_CallbackEdit_NATIVE();
+    private static int ImGuiInputTextFlags_CallbackEdit_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_CallbackEdit_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputTextFlags_WordWrap;
-*/
-    private static native int ImGuiInputTextFlags_WordWrap_NATIVE();
+    private static int ImGuiInputTextFlags_WordWrap_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputTextFlags.ImGuiInputTextFlags_WordWrap_NATIVE();
+    }
 }

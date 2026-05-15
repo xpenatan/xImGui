@@ -30,10 +30,6 @@ public class ImGuiMultiSelectIO extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiMultiSelectIO);
-imgui.destroy(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiMultiSelectIO);imgui.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
@@ -41,10 +37,6 @@ imgui.destroy(jsObj);
         return internal_native_get_NavIdSelected(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiMultiSelectIO);
-return jsObj.get_NavIdSelected();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiMultiSelectIO);return jsObj.get_NavIdSelected();")
     public static native boolean internal_native_get_NavIdSelected(int this_addr);
 
@@ -52,10 +44,6 @@ return jsObj.get_NavIdSelected();
         internal_native_set_NavIdSelected(native_address, NavIdSelected);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiMultiSelectIO);
-jsObj.set_NavIdSelected(NavIdSelected);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "NavIdSelected"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiMultiSelectIO);jsObj.set_NavIdSelected(NavIdSelected);")
     public static native void internal_native_set_NavIdSelected(int this_addr, boolean NavIdSelected);
 
@@ -63,10 +51,6 @@ jsObj.set_NavIdSelected(NavIdSelected);
         return internal_native_get_RangeSrcReset(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiMultiSelectIO);
-return jsObj.get_RangeSrcReset();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiMultiSelectIO);return jsObj.get_RangeSrcReset();")
     public static native boolean internal_native_get_RangeSrcReset(int this_addr);
 
@@ -74,10 +58,6 @@ return jsObj.get_RangeSrcReset();
         internal_native_set_RangeSrcReset(native_address, RangeSrcReset);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiMultiSelectIO);
-jsObj.set_RangeSrcReset(RangeSrcReset);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "RangeSrcReset"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiMultiSelectIO);jsObj.set_RangeSrcReset(RangeSrcReset);")
     public static native void internal_native_set_RangeSrcReset(int this_addr, boolean RangeSrcReset);
 
@@ -85,10 +65,6 @@ jsObj.set_RangeSrcReset(RangeSrcReset);
         return internal_native_get_ItemsCount(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiMultiSelectIO);
-return jsObj.get_ItemsCount();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiMultiSelectIO);return jsObj.get_ItemsCount();")
     public static native int internal_native_get_ItemsCount(int this_addr);
 
@@ -96,10 +72,6 @@ return jsObj.get_ItemsCount();
         internal_native_set_ItemsCount(native_address, ItemsCount);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiMultiSelectIO);
-jsObj.set_ItemsCount(ItemsCount);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "ItemsCount"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiMultiSelectIO);jsObj.set_ItemsCount(ItemsCount);")
     public static native void internal_native_set_ItemsCount(int this_addr, int ItemsCount);
 }

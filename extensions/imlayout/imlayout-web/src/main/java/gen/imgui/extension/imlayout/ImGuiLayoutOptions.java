@@ -17,10 +17,6 @@ public class ImGuiLayoutOptions extends NativeObject {
         internal_reset(addr, true);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = new imlayout.ImGuiLayoutOptions();
-return imlayout.getPointer(jsObj);
-*/
     @org.teavm.jso.JSBody(script = "var jsObj = new imlayout.ImGuiLayoutOptions();return imlayout.getPointer(jsObj);")
     public static native int internal_native_create_addr();
 
@@ -42,10 +38,6 @@ return imlayout.getPointer(jsObj);
         internal_native_deleteNative(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);
-imlayout.destroy(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);imlayout.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
@@ -53,10 +45,6 @@ imlayout.destroy(jsObj);
         return internal_native_get_clipping(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);
-return jsObj.get_clipping();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);return jsObj.get_clipping();")
     public static native boolean internal_native_get_clipping(int this_addr);
 
@@ -64,10 +52,6 @@ return jsObj.get_clipping();
         internal_native_set_clipping(native_address, clipping);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);
-jsObj.set_clipping(clipping);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "clipping"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);jsObj.set_clipping(clipping);")
     public static native void internal_native_set_clipping(int this_addr, boolean clipping);
 
@@ -75,10 +59,6 @@ jsObj.set_clipping(clipping);
         return internal_native_get_paddingLeft(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);
-return jsObj.get_paddingLeft();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);return jsObj.get_paddingLeft();")
     public static native float internal_native_get_paddingLeft(int this_addr);
 
@@ -86,10 +66,6 @@ return jsObj.get_paddingLeft();
         internal_native_set_paddingLeft(native_address, paddingLeft);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);
-jsObj.set_paddingLeft(paddingLeft);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "paddingLeft"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);jsObj.set_paddingLeft(paddingLeft);")
     public static native void internal_native_set_paddingLeft(int this_addr, float paddingLeft);
 
@@ -97,10 +73,6 @@ jsObj.set_paddingLeft(paddingLeft);
         return internal_native_get_paddingRight(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);
-return jsObj.get_paddingRight();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);return jsObj.get_paddingRight();")
     public static native float internal_native_get_paddingRight(int this_addr);
 
@@ -108,10 +80,6 @@ return jsObj.get_paddingRight();
         internal_native_set_paddingRight(native_address, paddingRight);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);
-jsObj.set_paddingRight(paddingRight);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "paddingRight"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);jsObj.set_paddingRight(paddingRight);")
     public static native void internal_native_set_paddingRight(int this_addr, float paddingRight);
 
@@ -119,10 +87,6 @@ jsObj.set_paddingRight(paddingRight);
         return internal_native_get_paddingTop(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);
-return jsObj.get_paddingTop();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);return jsObj.get_paddingTop();")
     public static native float internal_native_get_paddingTop(int this_addr);
 
@@ -130,10 +94,6 @@ return jsObj.get_paddingTop();
         internal_native_set_paddingTop(native_address, paddingTop);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);
-jsObj.set_paddingTop(paddingTop);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "paddingTop"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);jsObj.set_paddingTop(paddingTop);")
     public static native void internal_native_set_paddingTop(int this_addr, float paddingTop);
 
@@ -141,10 +101,6 @@ jsObj.set_paddingTop(paddingTop);
         return internal_native_get_paddingBottom(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);
-return jsObj.get_paddingBottom();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);return jsObj.get_paddingBottom();")
     public static native float internal_native_get_paddingBottom(int this_addr);
 
@@ -152,10 +108,6 @@ return jsObj.get_paddingBottom();
         internal_native_set_paddingBottom(native_address, paddingBottom);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);
-jsObj.set_paddingBottom(paddingBottom);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "paddingBottom"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayoutOptions);jsObj.set_paddingBottom(paddingBottom);")
     public static native void internal_native_set_paddingBottom(int this_addr, float paddingBottom);
 }

@@ -51,166 +51,106 @@ public enum ImGuiScrollFlags implements NativeEnum<ImGuiScrollFlags> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiScrollFlags_None;
-*/
     private static int ImGuiScrollFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiScrollFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiScrollFlags_KeepVisibleEdgeX;
-*/
     private static int ImGuiScrollFlags_KeepVisibleEdgeX_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiScrollFlags_KeepVisibleEdgeX_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiScrollFlags_KeepVisibleEdgeY;
-*/
     private static int ImGuiScrollFlags_KeepVisibleEdgeY_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiScrollFlags_KeepVisibleEdgeY_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiScrollFlags_KeepVisibleCenterX;
-*/
     private static int ImGuiScrollFlags_KeepVisibleCenterX_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiScrollFlags_KeepVisibleCenterX_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiScrollFlags_KeepVisibleCenterY;
-*/
     private static int ImGuiScrollFlags_KeepVisibleCenterY_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiScrollFlags_KeepVisibleCenterY_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiScrollFlags_AlwaysCenterX;
-*/
     private static int ImGuiScrollFlags_AlwaysCenterX_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiScrollFlags_AlwaysCenterX_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiScrollFlags_AlwaysCenterY;
-*/
     private static int ImGuiScrollFlags_AlwaysCenterY_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiScrollFlags_AlwaysCenterY_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiScrollFlags_NoScrollParent;
-*/
     private static int ImGuiScrollFlags_NoScrollParent_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiScrollFlags_NoScrollParent_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiScrollFlags_MaskX_;
-*/
     private static int ImGuiScrollFlags_MaskX__NATIVE() {
         try {
             return (int) FFMHandles.ImGuiScrollFlags_MaskX__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiScrollFlags_MaskY_;
-*/
     private static int ImGuiScrollFlags_MaskY__NATIVE() {
         try {
             return (int) FFMHandles.ImGuiScrollFlags_MaskY__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiScrollFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiscrollflags_imguiscrollflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiScrollFlags_KeepVisibleEdgeX_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiscrollflags_imguiscrollflags_keepvisibleedgex_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiScrollFlags_KeepVisibleEdgeY_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiscrollflags_imguiscrollflags_keepvisibleedgey_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiScrollFlags_KeepVisibleCenterX_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiscrollflags_imguiscrollflags_keepvisiblecenterx_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiScrollFlags_KeepVisibleCenterY_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiscrollflags_imguiscrollflags_keepvisiblecentery_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiScrollFlags_AlwaysCenterX_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiscrollflags_imguiscrollflags_alwayscenterx_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiScrollFlags_AlwaysCenterY_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiscrollflags_imguiscrollflags_alwayscentery_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiScrollFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiScrollFlags_ImGuiScrollFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiScrollFlags_NoScrollParent_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiscrollflags_imguiscrollflags_noscrollparent_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiScrollFlags_KeepVisibleEdgeX_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiScrollFlags_ImGuiScrollFlags_1KeepVisibleEdgeX_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiScrollFlags_MaskX__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiscrollflags_imguiscrollflags_maskx__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiScrollFlags_KeepVisibleEdgeY_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiScrollFlags_ImGuiScrollFlags_1KeepVisibleEdgeY_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiScrollFlags_KeepVisibleCenterX_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiScrollFlags_ImGuiScrollFlags_1KeepVisibleCenterX_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiScrollFlags_KeepVisibleCenterY_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiScrollFlags_ImGuiScrollFlags_1KeepVisibleCenterY_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiScrollFlags_AlwaysCenterX_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiScrollFlags_ImGuiScrollFlags_1AlwaysCenterX_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiScrollFlags_AlwaysCenterY_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiScrollFlags_ImGuiScrollFlags_1AlwaysCenterY_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiScrollFlags_NoScrollParent_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiScrollFlags_ImGuiScrollFlags_1NoScrollParent_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiScrollFlags_MaskX__NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiScrollFlags_ImGuiScrollFlags_1MaskX_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiScrollFlags_MaskY__NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiScrollFlags_ImGuiScrollFlags_1MaskY_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiScrollFlags_MaskY__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiscrollflags_imguiscrollflags_masky__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

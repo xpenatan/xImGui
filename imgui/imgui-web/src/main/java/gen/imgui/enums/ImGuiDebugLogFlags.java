@@ -50,99 +50,51 @@ public enum ImGuiDebugLogFlags implements NativeEnum<ImGuiDebugLogFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDebugLogFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDebugLogFlags_None;")
     private static native int ImGuiDebugLogFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDebugLogFlags_EventError;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDebugLogFlags_EventError;")
     private static native int ImGuiDebugLogFlags_EventError_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDebugLogFlags_EventActiveId;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDebugLogFlags_EventActiveId;")
     private static native int ImGuiDebugLogFlags_EventActiveId_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDebugLogFlags_EventFocus;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDebugLogFlags_EventFocus;")
     private static native int ImGuiDebugLogFlags_EventFocus_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDebugLogFlags_EventPopup;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDebugLogFlags_EventPopup;")
     private static native int ImGuiDebugLogFlags_EventPopup_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDebugLogFlags_EventNav;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDebugLogFlags_EventNav;")
     private static native int ImGuiDebugLogFlags_EventNav_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDebugLogFlags_EventClipper;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDebugLogFlags_EventClipper;")
     private static native int ImGuiDebugLogFlags_EventClipper_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDebugLogFlags_EventSelection;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDebugLogFlags_EventSelection;")
     private static native int ImGuiDebugLogFlags_EventSelection_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDebugLogFlags_EventIO;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDebugLogFlags_EventIO;")
     private static native int ImGuiDebugLogFlags_EventIO_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDebugLogFlags_EventFont;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDebugLogFlags_EventFont;")
     private static native int ImGuiDebugLogFlags_EventFont_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDebugLogFlags_EventInputRouting;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDebugLogFlags_EventInputRouting;")
     private static native int ImGuiDebugLogFlags_EventInputRouting_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDebugLogFlags_EventDocking;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDebugLogFlags_EventDocking;")
     private static native int ImGuiDebugLogFlags_EventDocking_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDebugLogFlags_EventViewport;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDebugLogFlags_EventViewport;")
     private static native int ImGuiDebugLogFlags_EventViewport_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDebugLogFlags_EventMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDebugLogFlags_EventMask_;")
     private static native int ImGuiDebugLogFlags_EventMask__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDebugLogFlags_OutputToTTY;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDebugLogFlags_OutputToTTY;")
     private static native int ImGuiDebugLogFlags_OutputToTTY_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDebugLogFlags_OutputToTestEngine;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDebugLogFlags_OutputToTestEngine;")
     private static native int ImGuiDebugLogFlags_OutputToTestEngine_NATIVE();
 }

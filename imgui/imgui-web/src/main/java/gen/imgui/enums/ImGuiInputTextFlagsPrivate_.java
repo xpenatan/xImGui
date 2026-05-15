@@ -34,21 +34,12 @@ public enum ImGuiInputTextFlagsPrivate_ implements NativeEnum<ImGuiInputTextFlag
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_Multiline;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_Multiline;")
     private static native int ImGuiInputTextFlags_Multiline_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_MergedItem;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_MergedItem;")
     private static native int ImGuiInputTextFlags_MergedItem_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_LocalizeDecimalPoint;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_LocalizeDecimalPoint;")
     private static native int ImGuiInputTextFlags_LocalizeDecimalPoint_NATIVE();
 }

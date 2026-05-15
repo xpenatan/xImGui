@@ -48,127 +48,76 @@ public enum ImGuiActivateFlags implements NativeEnum<ImGuiActivateFlags> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiActivateFlags_None;
-*/
     private static int ImGuiActivateFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiActivateFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiActivateFlags_PreferInput;
-*/
     private static int ImGuiActivateFlags_PreferInput_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiActivateFlags_PreferInput_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiActivateFlags_PreferTweak;
-*/
     private static int ImGuiActivateFlags_PreferTweak_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiActivateFlags_PreferTweak_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiActivateFlags_TryToPreserveState;
-*/
     private static int ImGuiActivateFlags_TryToPreserveState_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiActivateFlags_TryToPreserveState_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiActivateFlags_FromTabbing;
-*/
     private static int ImGuiActivateFlags_FromTabbing_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiActivateFlags_FromTabbing_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiActivateFlags_FromShortcut;
-*/
     private static int ImGuiActivateFlags_FromShortcut_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiActivateFlags_FromShortcut_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiActivateFlags_FromFocusApi;
-*/
     private static int ImGuiActivateFlags_FromFocusApi_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiActivateFlags_FromFocusApi_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiActivateFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiactivateflags_imguiactivateflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiActivateFlags_PreferInput_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiactivateflags_imguiactivateflags_preferinput_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiActivateFlags_PreferTweak_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiactivateflags_imguiactivateflags_prefertweak_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiActivateFlags_TryToPreserveState_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiactivateflags_imguiactivateflags_trytopreservestate_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiActivateFlags_FromTabbing_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiactivateflags_imguiactivateflags_fromtabbing_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiActivateFlags_FromShortcut_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiactivateflags_imguiactivateflags_fromshortcut_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
-
-        static final java.lang.invoke.MethodHandle ImGuiActivateFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiActivateFlags_ImGuiActivateFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiActivateFlags_PreferInput_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiActivateFlags_ImGuiActivateFlags_1PreferInput_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiActivateFlags_PreferTweak_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiActivateFlags_ImGuiActivateFlags_1PreferTweak_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiActivateFlags_TryToPreserveState_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiActivateFlags_ImGuiActivateFlags_1TryToPreserveState_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiActivateFlags_FromTabbing_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiActivateFlags_ImGuiActivateFlags_1FromTabbing_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiActivateFlags_FromShortcut_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiActivateFlags_ImGuiActivateFlags_1FromShortcut_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiActivateFlags_FromFocusApi_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiActivateFlags_ImGuiActivateFlags_1FromFocusApi_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiActivateFlags_FromFocusApi_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiactivateflags_imguiactivateflags_fromfocusapi_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

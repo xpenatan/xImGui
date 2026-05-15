@@ -30,89 +30,71 @@ public class ImTextureRect extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureRect* nativeObject = (ImTextureRect*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ImTextureRect.internal_native_deleteNative(this_addr);
+    }
 
     public short get_x() {
         return internal_native_get_x(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureRect* nativeObject = (ImTextureRect*)this_addr;
-return nativeObject->x;
-*/
-    public static native short internal_native_get_x(long this_addr);
+    public static short internal_native_get_x(long this_addr) {
+        return imgui.natives.JNI_ImTextureRect.internal_native_get_x(this_addr);
+    }
 
     public void set_x(short x) {
         internal_native_set_x(native_address, x);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureRect* nativeObject = (ImTextureRect*)this_addr;
-nativeObject->x = x;
-*/
-    public static native void internal_native_set_x(long this_addr, short x);
+    public static void internal_native_set_x(long this_addr, short x) {
+        imgui.natives.JNI_ImTextureRect.internal_native_set_x(this_addr, x);
+    }
 
     public short get_y() {
         return internal_native_get_y(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureRect* nativeObject = (ImTextureRect*)this_addr;
-return nativeObject->y;
-*/
-    public static native short internal_native_get_y(long this_addr);
+    public static short internal_native_get_y(long this_addr) {
+        return imgui.natives.JNI_ImTextureRect.internal_native_get_y(this_addr);
+    }
 
     public void set_y(short y) {
         internal_native_set_y(native_address, y);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureRect* nativeObject = (ImTextureRect*)this_addr;
-nativeObject->y = y;
-*/
-    public static native void internal_native_set_y(long this_addr, short y);
+    public static void internal_native_set_y(long this_addr, short y) {
+        imgui.natives.JNI_ImTextureRect.internal_native_set_y(this_addr, y);
+    }
 
     public short get_w() {
         return internal_native_get_w(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureRect* nativeObject = (ImTextureRect*)this_addr;
-return nativeObject->w;
-*/
-    public static native short internal_native_get_w(long this_addr);
+    public static short internal_native_get_w(long this_addr) {
+        return imgui.natives.JNI_ImTextureRect.internal_native_get_w(this_addr);
+    }
 
     public void set_w(short w) {
         internal_native_set_w(native_address, w);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureRect* nativeObject = (ImTextureRect*)this_addr;
-nativeObject->w = w;
-*/
-    public static native void internal_native_set_w(long this_addr, short w);
+    public static void internal_native_set_w(long this_addr, short w) {
+        imgui.natives.JNI_ImTextureRect.internal_native_set_w(this_addr, w);
+    }
 
     public short get_h() {
         return internal_native_get_h(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureRect* nativeObject = (ImTextureRect*)this_addr;
-return nativeObject->h;
-*/
-    public static native short internal_native_get_h(long this_addr);
+    public static short internal_native_get_h(long this_addr) {
+        return imgui.natives.JNI_ImTextureRect.internal_native_get_h(this_addr);
+    }
 
     public void set_h(short h) {
         internal_native_set_h(native_address, h);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureRect* nativeObject = (ImTextureRect*)this_addr;
-nativeObject->h = h;
-*/
-    public static native void internal_native_set_h(long this_addr, short h);
+    public static void internal_native_set_h(long this_addr, short h) {
+        imgui.natives.JNI_ImTextureRect.internal_native_set_h(this_addr, h);
+    }
 }

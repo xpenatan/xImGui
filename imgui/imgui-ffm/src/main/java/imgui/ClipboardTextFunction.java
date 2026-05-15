@@ -36,27 +36,6 @@ public class ClipboardTextFunction extends NativeObject {
 
     static public final ClipboardTextFunction NULL = ClipboardTextFunction.native_new();
 
-    /*[-FFM;-NATIVE]
-typedef void (*fp_ClipboardTextFunctionImpl_onGetClipboardText_J)(int64_t);
-typedef void (*fp_ClipboardTextFunctionImpl_onSetClipboardText_J)(int64_t);
-
-class ClipboardTextFunctionImpl : public ClipboardTextFunction {
-private:
-	fp_ClipboardTextFunctionImpl_onGetClipboardText_J onGetClipboardText_ptr;
-	fp_ClipboardTextFunctionImpl_onSetClipboardText_J onSetClipboardText_ptr;
-public:
-	void setupCallback(fp_ClipboardTextFunctionImpl_onGetClipboardText_J onGetClipboardText, fp_ClipboardTextFunctionImpl_onSetClipboardText_J onSetClipboardText) {
-		this->onGetClipboardText_ptr = onGetClipboardText;
-		this->onSetClipboardText_ptr = onSetClipboardText;
-	}
-	virtual void onGetClipboardText(NativeString* strOut) {
-		onGetClipboardText_ptr((int64_t)strOut);
-	}
-	virtual void onSetClipboardText(NativeString* text) {
-		onSetClipboardText_ptr((int64_t)text);
-	}
-};
-*/
     @Deprecated()
     protected ClipboardTextFunction(byte b, char c) {
     }
@@ -73,15 +52,11 @@ public:
         releaseUpcallResources();
     }
 
-    /*[-FFM;-NATIVE]
-ClipboardTextFunctionImpl* nativeObject = (ClipboardTextFunctionImpl*)this_addr;
-delete nativeObject;
-*/
     public static void internal_native_deleteNative(long this_addr) {
         try {
             FFMHandles.internal_native_deleteNative__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -89,14 +64,11 @@ delete nativeObject;
         internal_native_setClipboardTextFunction(io.native_address, clipboardFunction.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ClipboardTextFunction::setClipboardTextFunction((ImGuiPlatformIO* )io_addr, (ClipboardTextFunction* )clipboardFunction_addr);
-*/
     public static void internal_native_setClipboardTextFunction(long io_addr, long clipboardFunction_addr) {
         try {
             FFMHandles.internal_native_setClipboardTextFunction__JJ.invokeExact(io_addr, clipboardFunction_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -140,14 +112,11 @@ ClipboardTextFunction::setClipboardTextFunction((ImGuiPlatformIO* )io_addr, (Cli
         onSetClipboardText(NativeString_TEMP_STATIC_GEN_1);
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)new ClipboardTextFunctionImpl();
-*/
     public static long internal_native_create_addr() {
         try {
             return (long) FFMHandles.internal_native_create_addr__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -170,56 +139,22 @@ return (int64_t)new ClipboardTextFunctionImpl();
         }
     }
 
-    /*[-FFM;-NATIVE]
-ClipboardTextFunctionImpl* nativeObject = (ClipboardTextFunctionImpl*)this_addr;
-nativeObject->setupCallback((fp_ClipboardTextFunctionImpl_onGetClipboardText_J)onGetClipboardText_fp, (fp_ClipboardTextFunctionImpl_onSetClipboardText_J)onSetClipboardText_fp);
-*/
     public static void internal_native_setupCallback(long this_addr, long onGetClipboardText_fp, long onSetClipboardText_fp) {
         try {
             FFMHandles.internal_native_setupCallback__JJJ.invokeExact(this_addr, onGetClipboardText_fp, onSetClipboardText_fp);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_clipboardtextfunction_deletenative", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle internal_native_setClipboardTextFunction__JJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_clipboardtextfunction_setclipboardtextfunction", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle internal_native_create_addr__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_clipboardtextfunction_create_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
-
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
-
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
-
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
-
-        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = downcallDefault("jparser_imgui_ClipboardTextFunction_internal_1native_1deleteNative__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_setClipboardTextFunction__JJ = downcallDefault("jparser_imgui_ClipboardTextFunction_internal_1native_1setClipboardTextFunction__JJ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_create_addr__ = downcallDefault("jparser_imgui_ClipboardTextFunction_internal_1native_1create_1addr__", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_setupCallback__JJJ = downcallDefault("jparser_imgui_ClipboardTextFunction_internal_1native_1setupCallback__JJJ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_setupCallback__JJJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_clipboardtextfunction_setupcallback", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
     }
 }

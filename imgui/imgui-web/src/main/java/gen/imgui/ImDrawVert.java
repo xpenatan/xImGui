@@ -34,10 +34,6 @@ public class ImDrawVert extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawVert);
-imgui.destroy(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawVert);imgui.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
@@ -51,12 +47,6 @@ imgui.destroy(jsObj);
         return ImVec2_TEMP_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawVert);
-var returnedJSObj = jsObj.get_pos();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawVert);var returnedJSObj = jsObj.get_pos();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_pos_addr(int this_addr);
 
@@ -64,10 +54,6 @@ return imgui.getPointer(returnedJSObj);
         internal_native_set_pos(native_address, pos.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawVert);
-jsObj.set_pos(pos_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "pos_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawVert);jsObj.set_pos(pos_addr);")
     public static native void internal_native_set_pos(int this_addr, int pos_addr);
 
@@ -81,12 +67,6 @@ jsObj.set_pos(pos_addr);
         return ImVec2_TEMP_GEN_1;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawVert);
-var returnedJSObj = jsObj.get_uv();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawVert);var returnedJSObj = jsObj.get_uv();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_uv_addr(int this_addr);
 
@@ -94,10 +74,6 @@ return imgui.getPointer(returnedJSObj);
         internal_native_set_uv(native_address, uv.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawVert);
-jsObj.set_uv(uv_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "uv_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawVert);jsObj.set_uv(uv_addr);")
     public static native void internal_native_set_uv(int this_addr, int uv_addr);
 
@@ -105,10 +81,6 @@ jsObj.set_uv(uv_addr);
         return internal_native_get_col(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawVert);
-return jsObj.get_col();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawVert);return jsObj.get_col();")
     public static native int internal_native_get_col(int this_addr);
 
@@ -116,10 +88,6 @@ return jsObj.get_col();
         internal_native_set_col(native_address, col);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawVert);
-jsObj.set_col(col);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "col"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawVert);jsObj.set_col(col);")
     public static native void internal_native_set_col(int this_addr, int col);
 }

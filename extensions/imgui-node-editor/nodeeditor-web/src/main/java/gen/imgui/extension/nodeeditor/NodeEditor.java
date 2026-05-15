@@ -69,10 +69,6 @@ public class NodeEditor extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = nodeeditor.wrapPointer(this_addr, nodeeditor.NodeEditor);
-nodeeditor.destroy(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = nodeeditor.wrapPointer(this_addr, nodeeditor.NodeEditor);nodeeditor.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
@@ -80,9 +76,6 @@ nodeeditor.destroy(jsObj);
         internal_native_SetCurrentEditor(ctx.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.SetCurrentEditor(ctx_addr);
-*/
     @org.teavm.jso.JSBody(params = {"ctx_addr"}, script = "nodeeditor.NodeEditor.prototype.SetCurrentEditor(ctx_addr);")
     public static native void internal_native_SetCurrentEditor(int ctx_addr);
 
@@ -96,11 +89,6 @@ nodeeditor.NodeEditor.prototype.SetCurrentEditor(ctx_addr);
         return EditorContext_TEMP_STATIC_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetCurrentEditor();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return nodeeditor.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetCurrentEditor();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return nodeeditor.getPointer(returnedJSObj);")
     public static native int internal_native_GetCurrentEditor_addr();
 
@@ -114,11 +102,6 @@ return nodeeditor.getPointer(returnedJSObj);
         return EditorContext_TEMP_STATIC_GEN_1;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.CreateEditor(listener_addr);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return nodeeditor.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"listener_addr"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.CreateEditor(listener_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return nodeeditor.getPointer(returnedJSObj);")
     public static native int internal_native_CreateEditor_addr(int listener_addr);
 
@@ -132,11 +115,6 @@ return nodeeditor.getPointer(returnedJSObj);
         return EditorContext_TEMP_STATIC_GEN_2;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.CreateEditor();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return nodeeditor.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.CreateEditor();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return nodeeditor.getPointer(returnedJSObj);")
     public static native int internal_native_CreateEditor_addr();
 
@@ -144,9 +122,6 @@ return nodeeditor.getPointer(returnedJSObj);
         internal_native_DestroyEditor(ctx.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.DestroyEditor(ctx_addr);
-*/
     @org.teavm.jso.JSBody(params = {"ctx_addr"}, script = "nodeeditor.NodeEditor.prototype.DestroyEditor(ctx_addr);")
     public static native void internal_native_DestroyEditor(int ctx_addr);
 
@@ -160,11 +135,6 @@ nodeeditor.NodeEditor.prototype.DestroyEditor(ctx_addr);
         return Config_TEMP_STATIC_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetConfig(ctx_addr);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return nodeeditor.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"ctx_addr"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetConfig(ctx_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return nodeeditor.getPointer(returnedJSObj);")
     public static native int internal_native_GetConfig_addr(int ctx_addr);
 
@@ -178,11 +148,6 @@ return nodeeditor.getPointer(returnedJSObj);
         return Config_TEMP_STATIC_GEN_1;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetConfig();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return nodeeditor.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetConfig();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return nodeeditor.getPointer(returnedJSObj);")
     public static native int internal_native_GetConfig_addr();
 
@@ -196,11 +161,6 @@ return nodeeditor.getPointer(returnedJSObj);
         return Style_TEMP_STATIC_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetStyle();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return nodeeditor.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetStyle();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return nodeeditor.getPointer(returnedJSObj);")
     public static native int internal_native_GetStyle_addr();
 
@@ -214,11 +174,6 @@ return nodeeditor.getPointer(returnedJSObj);
         return NativeString_TEMP_STATIC_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetStyleColorName(colorIndex);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return nodeeditor.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"colorIndex"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetStyleColorName(colorIndex);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return nodeeditor.getPointer(returnedJSObj);")
     public static native int internal_native_GetStyleColorName_addr(int colorIndex);
 
@@ -226,9 +181,6 @@ return nodeeditor.getPointer(returnedJSObj);
         internal_native_PushStyleColor(colorIndex.getValue(), color.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.PushStyleColor(colorIndex, color_addr);
-*/
     @org.teavm.jso.JSBody(params = {"colorIndex", "color_addr"}, script = "nodeeditor.NodeEditor.prototype.PushStyleColor(colorIndex, color_addr);")
     public static native void internal_native_PushStyleColor(int colorIndex, int color_addr);
 
@@ -236,9 +188,6 @@ nodeeditor.NodeEditor.prototype.PushStyleColor(colorIndex, color_addr);
         internal_native_PopStyleColor(count);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.PopStyleColor(count);
-*/
     @org.teavm.jso.JSBody(params = {"count"}, script = "nodeeditor.NodeEditor.prototype.PopStyleColor(count);")
     public static native void internal_native_PopStyleColor(int count);
 
@@ -246,9 +195,6 @@ nodeeditor.NodeEditor.prototype.PopStyleColor(count);
         internal_native_PopStyleColor();
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.PopStyleColor();
-*/
     @org.teavm.jso.JSBody(script = "nodeeditor.NodeEditor.prototype.PopStyleColor();")
     public static native void internal_native_PopStyleColor();
 
@@ -256,9 +202,6 @@ nodeeditor.NodeEditor.prototype.PopStyleColor();
         internal_native_PushStyleVar__0(varIndex.getValue(), value);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.PushStyleVar__0(varIndex, value);
-*/
     @org.teavm.jso.JSBody(params = {"varIndex", "value"}, script = "nodeeditor.NodeEditor.prototype.PushStyleVar__0(varIndex, value);")
     public static native void internal_native_PushStyleVar__0(int varIndex, float value);
 
@@ -266,9 +209,6 @@ nodeeditor.NodeEditor.prototype.PushStyleVar__0(varIndex, value);
         internal_native_PushStyleVar__1(varIndex.getValue(), value.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.PushStyleVar__1(varIndex, value_addr);
-*/
     @org.teavm.jso.JSBody(params = {"varIndex", "value_addr"}, script = "nodeeditor.NodeEditor.prototype.PushStyleVar__1(varIndex, value_addr);")
     public static native void internal_native_PushStyleVar__1(int varIndex, int value_addr);
 
@@ -276,9 +216,6 @@ nodeeditor.NodeEditor.prototype.PushStyleVar__1(varIndex, value_addr);
         internal_native_PushStyleVar__2(varIndex.getValue(), value.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.PushStyleVar__2(varIndex, value_addr);
-*/
     @org.teavm.jso.JSBody(params = {"varIndex", "value_addr"}, script = "nodeeditor.NodeEditor.prototype.PushStyleVar__2(varIndex, value_addr);")
     public static native void internal_native_PushStyleVar__2(int varIndex, int value_addr);
 
@@ -286,9 +223,6 @@ nodeeditor.NodeEditor.prototype.PushStyleVar__2(varIndex, value_addr);
         internal_native_PopStyleVar(count);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.PopStyleVar(count);
-*/
     @org.teavm.jso.JSBody(params = {"count"}, script = "nodeeditor.NodeEditor.prototype.PopStyleVar(count);")
     public static native void internal_native_PopStyleVar(int count);
 
@@ -296,9 +230,6 @@ nodeeditor.NodeEditor.prototype.PopStyleVar(count);
         internal_native_PopStyleVar();
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.PopStyleVar();
-*/
     @org.teavm.jso.JSBody(script = "nodeeditor.NodeEditor.prototype.PopStyleVar();")
     public static native void internal_native_PopStyleVar();
 
@@ -306,9 +237,6 @@ nodeeditor.NodeEditor.prototype.PopStyleVar();
         internal_native_Begin(id, size.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.Begin(id, size_addr);
-*/
     @org.teavm.jso.JSBody(params = {"id", "size_addr"}, script = "nodeeditor.NodeEditor.prototype.Begin(id, size_addr);")
     public static native void internal_native_Begin(String id, int size_addr);
 
@@ -316,9 +244,6 @@ nodeeditor.NodeEditor.prototype.Begin(id, size_addr);
         internal_native_Begin(id);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.Begin(id);
-*/
     @org.teavm.jso.JSBody(params = {"id"}, script = "nodeeditor.NodeEditor.prototype.Begin(id);")
     public static native void internal_native_Begin(String id);
 
@@ -326,9 +251,6 @@ nodeeditor.NodeEditor.prototype.Begin(id);
         internal_native_End();
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.End();
-*/
     @org.teavm.jso.JSBody(script = "nodeeditor.NodeEditor.prototype.End();")
     public static native void internal_native_End();
 
@@ -336,9 +258,6 @@ nodeeditor.NodeEditor.prototype.End();
         internal_native_BeginNode(id);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.BeginNode(id);
-*/
     @org.teavm.jso.JSBody(params = {"id"}, script = "nodeeditor.NodeEditor.prototype.BeginNode(id);")
     public static native void internal_native_BeginNode(int id);
 
@@ -346,9 +265,6 @@ nodeeditor.NodeEditor.prototype.BeginNode(id);
         internal_native_BeginPin(id, kind.getValue());
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.BeginPin(id, kind);
-*/
     @org.teavm.jso.JSBody(params = {"id", "kind"}, script = "nodeeditor.NodeEditor.prototype.BeginPin(id, kind);")
     public static native void internal_native_BeginPin(int id, int kind);
 
@@ -356,9 +272,6 @@ nodeeditor.NodeEditor.prototype.BeginPin(id, kind);
         internal_native_PinRect(a.native_address, b.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.PinRect(a_addr, b_addr);
-*/
     @org.teavm.jso.JSBody(params = {"a_addr", "b_addr"}, script = "nodeeditor.NodeEditor.prototype.PinRect(a_addr, b_addr);")
     public static native void internal_native_PinRect(int a_addr, int b_addr);
 
@@ -366,9 +279,6 @@ nodeeditor.NodeEditor.prototype.PinRect(a_addr, b_addr);
         internal_native_PinPivotRect(a.native_address, b.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.PinPivotRect(a_addr, b_addr);
-*/
     @org.teavm.jso.JSBody(params = {"a_addr", "b_addr"}, script = "nodeeditor.NodeEditor.prototype.PinPivotRect(a_addr, b_addr);")
     public static native void internal_native_PinPivotRect(int a_addr, int b_addr);
 
@@ -376,9 +286,6 @@ nodeeditor.NodeEditor.prototype.PinPivotRect(a_addr, b_addr);
         internal_native_PinPivotSize(size.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.PinPivotSize(size_addr);
-*/
     @org.teavm.jso.JSBody(params = {"size_addr"}, script = "nodeeditor.NodeEditor.prototype.PinPivotSize(size_addr);")
     public static native void internal_native_PinPivotSize(int size_addr);
 
@@ -386,9 +293,6 @@ nodeeditor.NodeEditor.prototype.PinPivotSize(size_addr);
         internal_native_PinPivotScale(scale.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.PinPivotScale(scale_addr);
-*/
     @org.teavm.jso.JSBody(params = {"scale_addr"}, script = "nodeeditor.NodeEditor.prototype.PinPivotScale(scale_addr);")
     public static native void internal_native_PinPivotScale(int scale_addr);
 
@@ -396,9 +300,6 @@ nodeeditor.NodeEditor.prototype.PinPivotScale(scale_addr);
         internal_native_PinPivotAlignment(alignment.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.PinPivotAlignment(alignment_addr);
-*/
     @org.teavm.jso.JSBody(params = {"alignment_addr"}, script = "nodeeditor.NodeEditor.prototype.PinPivotAlignment(alignment_addr);")
     public static native void internal_native_PinPivotAlignment(int alignment_addr);
 
@@ -406,9 +307,6 @@ nodeeditor.NodeEditor.prototype.PinPivotAlignment(alignment_addr);
         internal_native_EndPin();
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.EndPin();
-*/
     @org.teavm.jso.JSBody(script = "nodeeditor.NodeEditor.prototype.EndPin();")
     public static native void internal_native_EndPin();
 
@@ -416,9 +314,6 @@ nodeeditor.NodeEditor.prototype.EndPin();
         internal_native_Group(size.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.Group(size_addr);
-*/
     @org.teavm.jso.JSBody(params = {"size_addr"}, script = "nodeeditor.NodeEditor.prototype.Group(size_addr);")
     public static native void internal_native_Group(int size_addr);
 
@@ -426,9 +321,6 @@ nodeeditor.NodeEditor.prototype.Group(size_addr);
         internal_native_EndNode();
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.EndNode();
-*/
     @org.teavm.jso.JSBody(script = "nodeeditor.NodeEditor.prototype.EndNode();")
     public static native void internal_native_EndNode();
 
@@ -436,10 +328,6 @@ nodeeditor.NodeEditor.prototype.EndNode();
         return internal_native_BeginGroupHint(nodeId);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.BeginGroupHint(nodeId);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"nodeId"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.BeginGroupHint(nodeId);return returnedJSObj;")
     public static native boolean internal_native_BeginGroupHint(int nodeId);
 
@@ -453,11 +341,6 @@ return returnedJSObj;
         return ImVec2_TEMP_STATIC_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetGroupMin();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return nodeeditor.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetGroupMin();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return nodeeditor.getPointer(returnedJSObj);")
     public static native int internal_native_GetGroupMin_addr();
 
@@ -471,11 +354,6 @@ return nodeeditor.getPointer(returnedJSObj);
         return ImVec2_TEMP_STATIC_GEN_1;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetGroupMax();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return nodeeditor.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetGroupMax();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return nodeeditor.getPointer(returnedJSObj);")
     public static native int internal_native_GetGroupMax_addr();
 
@@ -489,11 +367,6 @@ return nodeeditor.getPointer(returnedJSObj);
         return ImDrawList_TEMP_STATIC_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetHintForegroundDrawList();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return nodeeditor.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetHintForegroundDrawList();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return nodeeditor.getPointer(returnedJSObj);")
     public static native int internal_native_GetHintForegroundDrawList_addr();
 
@@ -507,11 +380,6 @@ return nodeeditor.getPointer(returnedJSObj);
         return ImDrawList_TEMP_STATIC_GEN_1;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetHintBackgroundDrawList();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return nodeeditor.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetHintBackgroundDrawList();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return nodeeditor.getPointer(returnedJSObj);")
     public static native int internal_native_GetHintBackgroundDrawList_addr();
 
@@ -519,9 +387,6 @@ return nodeeditor.getPointer(returnedJSObj);
         internal_native_EndGroupHint();
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.EndGroupHint();
-*/
     @org.teavm.jso.JSBody(script = "nodeeditor.NodeEditor.prototype.EndGroupHint();")
     public static native void internal_native_EndGroupHint();
 
@@ -535,11 +400,6 @@ nodeeditor.NodeEditor.prototype.EndGroupHint();
         return ImDrawList_TEMP_STATIC_GEN_2;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetNodeBackgroundDrawList(nodeId);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return nodeeditor.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"nodeId"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetNodeBackgroundDrawList(nodeId);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return nodeeditor.getPointer(returnedJSObj);")
     public static native int internal_native_GetNodeBackgroundDrawList_addr(int nodeId);
 
@@ -547,10 +407,6 @@ return nodeeditor.getPointer(returnedJSObj);
         return internal_native_Link(id, startPinId, endPinId, color.native_address, thickness);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.Link(id, startPinId, endPinId, color_addr, thickness);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"id", "startPinId", "endPinId", "color_addr", "thickness"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.Link(id, startPinId, endPinId, color_addr, thickness);return returnedJSObj;")
     public static native boolean internal_native_Link(int id, int startPinId, int endPinId, int color_addr, float thickness);
 
@@ -558,10 +414,6 @@ return returnedJSObj;
         return internal_native_Link(id, startPinId, endPinId, color.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.Link(id, startPinId, endPinId, color_addr);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"id", "startPinId", "endPinId", "color_addr"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.Link(id, startPinId, endPinId, color_addr);return returnedJSObj;")
     public static native boolean internal_native_Link(int id, int startPinId, int endPinId, int color_addr);
 
@@ -569,10 +421,6 @@ return returnedJSObj;
         return internal_native_Link(id, startPinId, endPinId);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.Link(id, startPinId, endPinId);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"id", "startPinId", "endPinId"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.Link(id, startPinId, endPinId);return returnedJSObj;")
     public static native boolean internal_native_Link(int id, int startPinId, int endPinId);
 
@@ -580,9 +428,6 @@ return returnedJSObj;
         internal_native_Flow(linkId, direction.getValue());
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.Flow(linkId, direction);
-*/
     @org.teavm.jso.JSBody(params = {"linkId", "direction"}, script = "nodeeditor.NodeEditor.prototype.Flow(linkId, direction);")
     public static native void internal_native_Flow(int linkId, int direction);
 
@@ -590,9 +435,6 @@ nodeeditor.NodeEditor.prototype.Flow(linkId, direction);
         internal_native_Flow(linkId);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.Flow(linkId);
-*/
     @org.teavm.jso.JSBody(params = {"linkId"}, script = "nodeeditor.NodeEditor.prototype.Flow(linkId);")
     public static native void internal_native_Flow(int linkId);
 
@@ -600,10 +442,6 @@ nodeeditor.NodeEditor.prototype.Flow(linkId);
         return internal_native_BeginCreate(color.native_address, thickness);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.BeginCreate(color_addr, thickness);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"color_addr", "thickness"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.BeginCreate(color_addr, thickness);return returnedJSObj;")
     public static native boolean internal_native_BeginCreate(int color_addr, float thickness);
 
@@ -611,10 +449,6 @@ return returnedJSObj;
         return internal_native_BeginCreate(color.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.BeginCreate(color_addr);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"color_addr"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.BeginCreate(color_addr);return returnedJSObj;")
     public static native boolean internal_native_BeginCreate(int color_addr);
 
@@ -622,10 +456,6 @@ return returnedJSObj;
         return internal_native_BeginCreate();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.BeginCreate();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.BeginCreate();return returnedJSObj;")
     public static native boolean internal_native_BeginCreate();
 
@@ -633,10 +463,6 @@ return returnedJSObj;
         return internal_native_QueryNewLink(startId.native_void_address, endId.native_void_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.QueryNewLink(startId_addr, endId_addr);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"startId_addr", "endId_addr"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.QueryNewLink(startId_addr, endId_addr);return returnedJSObj;")
     public static native boolean internal_native_QueryNewLink(int startId_addr, int endId_addr);
 
@@ -644,10 +470,6 @@ return returnedJSObj;
         return internal_native_QueryNewLink(startId.native_void_address, endId.native_void_address, color.native_address, thickness);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.QueryNewLink(startId_addr, endId_addr, color_addr, thickness);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"startId_addr", "endId_addr", "color_addr", "thickness"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.QueryNewLink(startId_addr, endId_addr, color_addr, thickness);return returnedJSObj;")
     public static native boolean internal_native_QueryNewLink(int startId_addr, int endId_addr, int color_addr, float thickness);
 
@@ -655,10 +477,6 @@ return returnedJSObj;
         return internal_native_QueryNewLink(startId.native_void_address, endId.native_void_address, color.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.QueryNewLink(startId_addr, endId_addr, color_addr);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"startId_addr", "endId_addr", "color_addr"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.QueryNewLink(startId_addr, endId_addr, color_addr);return returnedJSObj;")
     public static native boolean internal_native_QueryNewLink(int startId_addr, int endId_addr, int color_addr);
 
@@ -666,10 +484,6 @@ return returnedJSObj;
         return internal_native_QueryNewNode(pinId.native_void_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.QueryNewNode(pinId_addr);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"pinId_addr"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.QueryNewNode(pinId_addr);return returnedJSObj;")
     public static native boolean internal_native_QueryNewNode(int pinId_addr);
 
@@ -677,10 +491,6 @@ return returnedJSObj;
         return internal_native_QueryNewNode(pinId.native_void_address, color.native_address, thickness);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.QueryNewNode(pinId_addr, color_addr, thickness);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"pinId_addr", "color_addr", "thickness"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.QueryNewNode(pinId_addr, color_addr, thickness);return returnedJSObj;")
     public static native boolean internal_native_QueryNewNode(int pinId_addr, int color_addr, float thickness);
 
@@ -688,10 +498,6 @@ return returnedJSObj;
         return internal_native_QueryNewNode(pinId.native_void_address, color.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.QueryNewNode(pinId_addr, color_addr);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"pinId_addr", "color_addr"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.QueryNewNode(pinId_addr, color_addr);return returnedJSObj;")
     public static native boolean internal_native_QueryNewNode(int pinId_addr, int color_addr);
 
@@ -699,10 +505,6 @@ return returnedJSObj;
         return internal_native_AcceptNewItem();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.AcceptNewItem();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.AcceptNewItem();return returnedJSObj;")
     public static native boolean internal_native_AcceptNewItem();
 
@@ -710,10 +512,6 @@ return returnedJSObj;
         return internal_native_AcceptNewItem(color.native_address, thickness);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.AcceptNewItem(color_addr, thickness);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"color_addr", "thickness"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.AcceptNewItem(color_addr, thickness);return returnedJSObj;")
     public static native boolean internal_native_AcceptNewItem(int color_addr, float thickness);
 
@@ -721,10 +519,6 @@ return returnedJSObj;
         return internal_native_AcceptNewItem(color.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.AcceptNewItem(color_addr);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"color_addr"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.AcceptNewItem(color_addr);return returnedJSObj;")
     public static native boolean internal_native_AcceptNewItem(int color_addr);
 
@@ -732,9 +526,6 @@ return returnedJSObj;
         internal_native_RejectNewItem();
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.RejectNewItem();
-*/
     @org.teavm.jso.JSBody(script = "nodeeditor.NodeEditor.prototype.RejectNewItem();")
     public static native void internal_native_RejectNewItem();
 
@@ -742,9 +533,6 @@ nodeeditor.NodeEditor.prototype.RejectNewItem();
         internal_native_RejectNewItem(color.native_address, thickness);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.RejectNewItem(color_addr, thickness);
-*/
     @org.teavm.jso.JSBody(params = {"color_addr", "thickness"}, script = "nodeeditor.NodeEditor.prototype.RejectNewItem(color_addr, thickness);")
     public static native void internal_native_RejectNewItem(int color_addr, float thickness);
 
@@ -752,9 +540,6 @@ nodeeditor.NodeEditor.prototype.RejectNewItem(color_addr, thickness);
         internal_native_RejectNewItem(color.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.RejectNewItem(color_addr);
-*/
     @org.teavm.jso.JSBody(params = {"color_addr"}, script = "nodeeditor.NodeEditor.prototype.RejectNewItem(color_addr);")
     public static native void internal_native_RejectNewItem(int color_addr);
 
@@ -762,9 +547,6 @@ nodeeditor.NodeEditor.prototype.RejectNewItem(color_addr);
         internal_native_EndCreate();
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.EndCreate();
-*/
     @org.teavm.jso.JSBody(script = "nodeeditor.NodeEditor.prototype.EndCreate();")
     public static native void internal_native_EndCreate();
 
@@ -772,10 +554,6 @@ nodeeditor.NodeEditor.prototype.EndCreate();
         return internal_native_BeginDelete();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.BeginDelete();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.BeginDelete();return returnedJSObj;")
     public static native boolean internal_native_BeginDelete();
 
@@ -783,10 +561,6 @@ return returnedJSObj;
         return internal_native_QueryDeletedLink(linkId.native_void_address, startId.native_void_address, endId.native_void_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.QueryDeletedLink(linkId_addr, startId_addr, endId_addr);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"linkId_addr", "startId_addr", "endId_addr"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.QueryDeletedLink(linkId_addr, startId_addr, endId_addr);return returnedJSObj;")
     public static native boolean internal_native_QueryDeletedLink(int linkId_addr, int startId_addr, int endId_addr);
 
@@ -794,10 +568,6 @@ return returnedJSObj;
         return internal_native_QueryDeletedLink(linkId.native_void_address, startId.native_void_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.QueryDeletedLink(linkId_addr, startId_addr);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"linkId_addr", "startId_addr"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.QueryDeletedLink(linkId_addr, startId_addr);return returnedJSObj;")
     public static native boolean internal_native_QueryDeletedLink(int linkId_addr, int startId_addr);
 
@@ -805,10 +575,6 @@ return returnedJSObj;
         return internal_native_QueryDeletedLink(linkId.native_void_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.QueryDeletedLink(linkId_addr);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"linkId_addr"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.QueryDeletedLink(linkId_addr);return returnedJSObj;")
     public static native boolean internal_native_QueryDeletedLink(int linkId_addr);
 
@@ -816,10 +582,6 @@ return returnedJSObj;
         return internal_native_QueryDeletedNode(nodeId.native_void_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.QueryDeletedNode(nodeId_addr);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"nodeId_addr"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.QueryDeletedNode(nodeId_addr);return returnedJSObj;")
     public static native boolean internal_native_QueryDeletedNode(int nodeId_addr);
 
@@ -827,10 +589,6 @@ return returnedJSObj;
         return internal_native_AcceptDeletedItem(deleteDependencies);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.AcceptDeletedItem(deleteDependencies);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"deleteDependencies"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.AcceptDeletedItem(deleteDependencies);return returnedJSObj;")
     public static native boolean internal_native_AcceptDeletedItem(boolean deleteDependencies);
 
@@ -838,10 +596,6 @@ return returnedJSObj;
         return internal_native_AcceptDeletedItem();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.AcceptDeletedItem();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.AcceptDeletedItem();return returnedJSObj;")
     public static native boolean internal_native_AcceptDeletedItem();
 
@@ -849,9 +603,6 @@ return returnedJSObj;
         internal_native_RejectDeletedItem();
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.RejectDeletedItem();
-*/
     @org.teavm.jso.JSBody(script = "nodeeditor.NodeEditor.prototype.RejectDeletedItem();")
     public static native void internal_native_RejectDeletedItem();
 
@@ -859,9 +610,6 @@ nodeeditor.NodeEditor.prototype.RejectDeletedItem();
         internal_native_EndDelete();
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.EndDelete();
-*/
     @org.teavm.jso.JSBody(script = "nodeeditor.NodeEditor.prototype.EndDelete();")
     public static native void internal_native_EndDelete();
 
@@ -869,9 +617,6 @@ nodeeditor.NodeEditor.prototype.EndDelete();
         internal_native_SetNodePosition(nodeId, editorPosition.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.SetNodePosition(nodeId, editorPosition_addr);
-*/
     @org.teavm.jso.JSBody(params = {"nodeId", "editorPosition_addr"}, script = "nodeeditor.NodeEditor.prototype.SetNodePosition(nodeId, editorPosition_addr);")
     public static native void internal_native_SetNodePosition(int nodeId, int editorPosition_addr);
 
@@ -879,9 +624,6 @@ nodeeditor.NodeEditor.prototype.SetNodePosition(nodeId, editorPosition_addr);
         internal_native_SetGroupSize(nodeId, size.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.SetGroupSize(nodeId, size_addr);
-*/
     @org.teavm.jso.JSBody(params = {"nodeId", "size_addr"}, script = "nodeeditor.NodeEditor.prototype.SetGroupSize(nodeId, size_addr);")
     public static native void internal_native_SetGroupSize(int nodeId, int size_addr);
 
@@ -895,11 +637,6 @@ nodeeditor.NodeEditor.prototype.SetGroupSize(nodeId, size_addr);
         return ImVec2_TEMP_STATIC_GEN_2;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetNodePosition(nodeId);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return nodeeditor.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"nodeId"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetNodePosition(nodeId);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return nodeeditor.getPointer(returnedJSObj);")
     public static native int internal_native_GetNodePosition_addr(int nodeId);
 
@@ -913,11 +650,6 @@ return nodeeditor.getPointer(returnedJSObj);
         return ImVec2_TEMP_STATIC_GEN_3;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetNodeSize(nodeId);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return nodeeditor.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"nodeId"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetNodeSize(nodeId);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return nodeeditor.getPointer(returnedJSObj);")
     public static native int internal_native_GetNodeSize_addr(int nodeId);
 
@@ -925,9 +657,6 @@ return nodeeditor.getPointer(returnedJSObj);
         internal_native_CenterNodeOnScreen(nodeId);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.CenterNodeOnScreen(nodeId);
-*/
     @org.teavm.jso.JSBody(params = {"nodeId"}, script = "nodeeditor.NodeEditor.prototype.CenterNodeOnScreen(nodeId);")
     public static native void internal_native_CenterNodeOnScreen(int nodeId);
 
@@ -935,9 +664,6 @@ nodeeditor.NodeEditor.prototype.CenterNodeOnScreen(nodeId);
         internal_native_SetNodeZPosition(nodeId, z);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.SetNodeZPosition(nodeId, z);
-*/
     @org.teavm.jso.JSBody(params = {"nodeId", "z"}, script = "nodeeditor.NodeEditor.prototype.SetNodeZPosition(nodeId, z);")
     public static native void internal_native_SetNodeZPosition(int nodeId, float z);
 
@@ -945,10 +671,6 @@ nodeeditor.NodeEditor.prototype.SetNodeZPosition(nodeId, z);
         return internal_native_GetNodeZPosition(nodeId);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetNodeZPosition(nodeId);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"nodeId"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetNodeZPosition(nodeId);return returnedJSObj;")
     public static native float internal_native_GetNodeZPosition(int nodeId);
 
@@ -956,9 +678,6 @@ return returnedJSObj;
         internal_native_RestoreNodeState(nodeId);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.RestoreNodeState(nodeId);
-*/
     @org.teavm.jso.JSBody(params = {"nodeId"}, script = "nodeeditor.NodeEditor.prototype.RestoreNodeState(nodeId);")
     public static native void internal_native_RestoreNodeState(int nodeId);
 
@@ -966,9 +685,6 @@ nodeeditor.NodeEditor.prototype.RestoreNodeState(nodeId);
         internal_native_Suspend();
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.Suspend();
-*/
     @org.teavm.jso.JSBody(script = "nodeeditor.NodeEditor.prototype.Suspend();")
     public static native void internal_native_Suspend();
 
@@ -976,9 +692,6 @@ nodeeditor.NodeEditor.prototype.Suspend();
         internal_native_Resume();
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.Resume();
-*/
     @org.teavm.jso.JSBody(script = "nodeeditor.NodeEditor.prototype.Resume();")
     public static native void internal_native_Resume();
 
@@ -986,10 +699,6 @@ nodeeditor.NodeEditor.prototype.Resume();
         return internal_native_IsSuspended();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.IsSuspended();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.IsSuspended();return returnedJSObj;")
     public static native boolean internal_native_IsSuspended();
 
@@ -997,10 +706,6 @@ return returnedJSObj;
         return internal_native_IsActive();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.IsActive();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.IsActive();return returnedJSObj;")
     public static native boolean internal_native_IsActive();
 
@@ -1008,10 +713,6 @@ return returnedJSObj;
         return internal_native_HasSelectionChanged();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.HasSelectionChanged();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.HasSelectionChanged();return returnedJSObj;")
     public static native boolean internal_native_HasSelectionChanged();
 
@@ -1019,10 +720,6 @@ return returnedJSObj;
         return internal_native_GetSelectedObjectCount();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetSelectedObjectCount();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetSelectedObjectCount();return returnedJSObj;")
     public static native int internal_native_GetSelectedObjectCount();
 
@@ -1030,10 +727,6 @@ return returnedJSObj;
         return internal_native_GetSelectedNodes(nodes.native_void_address, size);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetSelectedNodes(nodes_addr, size);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"nodes_addr", "size"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetSelectedNodes(nodes_addr, size);return returnedJSObj;")
     public static native int internal_native_GetSelectedNodes(int nodes_addr, int size);
 
@@ -1041,10 +734,6 @@ return returnedJSObj;
         return internal_native_GetSelectedLinks(links.native_void_address, size);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetSelectedLinks(links_addr, size);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"links_addr", "size"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetSelectedLinks(links_addr, size);return returnedJSObj;")
     public static native int internal_native_GetSelectedLinks(int links_addr, int size);
 
@@ -1052,10 +741,6 @@ return returnedJSObj;
         return internal_native_IsNodeSelected(nodeId);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.IsNodeSelected(nodeId);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"nodeId"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.IsNodeSelected(nodeId);return returnedJSObj;")
     public static native boolean internal_native_IsNodeSelected(int nodeId);
 
@@ -1063,10 +748,6 @@ return returnedJSObj;
         return internal_native_IsLinkSelected(linkId);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.IsLinkSelected(linkId);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"linkId"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.IsLinkSelected(linkId);return returnedJSObj;")
     public static native boolean internal_native_IsLinkSelected(int linkId);
 
@@ -1074,9 +755,6 @@ return returnedJSObj;
         internal_native_ClearSelection();
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.ClearSelection();
-*/
     @org.teavm.jso.JSBody(script = "nodeeditor.NodeEditor.prototype.ClearSelection();")
     public static native void internal_native_ClearSelection();
 
@@ -1084,9 +762,6 @@ nodeeditor.NodeEditor.prototype.ClearSelection();
         internal_native_SelectNode(nodeId, append);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.SelectNode(nodeId, append);
-*/
     @org.teavm.jso.JSBody(params = {"nodeId", "append"}, script = "nodeeditor.NodeEditor.prototype.SelectNode(nodeId, append);")
     public static native void internal_native_SelectNode(int nodeId, boolean append);
 
@@ -1094,9 +769,6 @@ nodeeditor.NodeEditor.prototype.SelectNode(nodeId, append);
         internal_native_SelectNode(nodeId);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.SelectNode(nodeId);
-*/
     @org.teavm.jso.JSBody(params = {"nodeId"}, script = "nodeeditor.NodeEditor.prototype.SelectNode(nodeId);")
     public static native void internal_native_SelectNode(int nodeId);
 
@@ -1104,9 +776,6 @@ nodeeditor.NodeEditor.prototype.SelectNode(nodeId);
         internal_native_SelectLink(linkId, append);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.SelectLink(linkId, append);
-*/
     @org.teavm.jso.JSBody(params = {"linkId", "append"}, script = "nodeeditor.NodeEditor.prototype.SelectLink(linkId, append);")
     public static native void internal_native_SelectLink(int linkId, boolean append);
 
@@ -1114,9 +783,6 @@ nodeeditor.NodeEditor.prototype.SelectLink(linkId, append);
         internal_native_SelectLink(linkId);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.SelectLink(linkId);
-*/
     @org.teavm.jso.JSBody(params = {"linkId"}, script = "nodeeditor.NodeEditor.prototype.SelectLink(linkId);")
     public static native void internal_native_SelectLink(int linkId);
 
@@ -1124,9 +790,6 @@ nodeeditor.NodeEditor.prototype.SelectLink(linkId);
         internal_native_DeselectNode(nodeId);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.DeselectNode(nodeId);
-*/
     @org.teavm.jso.JSBody(params = {"nodeId"}, script = "nodeeditor.NodeEditor.prototype.DeselectNode(nodeId);")
     public static native void internal_native_DeselectNode(int nodeId);
 
@@ -1134,9 +797,6 @@ nodeeditor.NodeEditor.prototype.DeselectNode(nodeId);
         internal_native_DeselectLink(linkId);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.DeselectLink(linkId);
-*/
     @org.teavm.jso.JSBody(params = {"linkId"}, script = "nodeeditor.NodeEditor.prototype.DeselectLink(linkId);")
     public static native void internal_native_DeselectLink(int linkId);
 
@@ -1144,10 +804,6 @@ nodeeditor.NodeEditor.prototype.DeselectLink(linkId);
         return internal_native_DeleteNode(nodeId);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.DeleteNode(nodeId);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"nodeId"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.DeleteNode(nodeId);return returnedJSObj;")
     public static native boolean internal_native_DeleteNode(int nodeId);
 
@@ -1155,10 +811,6 @@ return returnedJSObj;
         return internal_native_DeleteLink(linkId);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.DeleteLink(linkId);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"linkId"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.DeleteLink(linkId);return returnedJSObj;")
     public static native boolean internal_native_DeleteLink(int linkId);
 
@@ -1166,10 +818,6 @@ return returnedJSObj;
         return internal_native_HasAnyLinksNode(nodeId);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.HasAnyLinksNode(nodeId);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"nodeId"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.HasAnyLinksNode(nodeId);return returnedJSObj;")
     public static native boolean internal_native_HasAnyLinksNode(int nodeId);
 
@@ -1177,10 +825,6 @@ return returnedJSObj;
         return internal_native_HasAnyLinksPin(pinId);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.HasAnyLinksPin(pinId);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"pinId"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.HasAnyLinksPin(pinId);return returnedJSObj;")
     public static native boolean internal_native_HasAnyLinksPin(int pinId);
 
@@ -1188,10 +832,6 @@ return returnedJSObj;
         return internal_native_BreakLinksNode(nodeId);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.BreakLinksNode(nodeId);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"nodeId"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.BreakLinksNode(nodeId);return returnedJSObj;")
     public static native int internal_native_BreakLinksNode(int nodeId);
 
@@ -1199,10 +839,6 @@ return returnedJSObj;
         return internal_native_BreakLinksPin(pinId);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.BreakLinksPin(pinId);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"pinId"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.BreakLinksPin(pinId);return returnedJSObj;")
     public static native int internal_native_BreakLinksPin(int pinId);
 
@@ -1210,9 +846,6 @@ return returnedJSObj;
         internal_native_NavigateToContent(duration);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.NavigateToContent(duration);
-*/
     @org.teavm.jso.JSBody(params = {"duration"}, script = "nodeeditor.NodeEditor.prototype.NavigateToContent(duration);")
     public static native void internal_native_NavigateToContent(float duration);
 
@@ -1220,9 +853,6 @@ nodeeditor.NodeEditor.prototype.NavigateToContent(duration);
         internal_native_NavigateToContent();
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.NavigateToContent();
-*/
     @org.teavm.jso.JSBody(script = "nodeeditor.NodeEditor.prototype.NavigateToContent();")
     public static native void internal_native_NavigateToContent();
 
@@ -1230,9 +860,6 @@ nodeeditor.NodeEditor.prototype.NavigateToContent();
         internal_native_NavigateToSelection(zoomIn, duration);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.NavigateToSelection(zoomIn, duration);
-*/
     @org.teavm.jso.JSBody(params = {"zoomIn", "duration"}, script = "nodeeditor.NodeEditor.prototype.NavigateToSelection(zoomIn, duration);")
     public static native void internal_native_NavigateToSelection(boolean zoomIn, float duration);
 
@@ -1240,9 +867,6 @@ nodeeditor.NodeEditor.prototype.NavigateToSelection(zoomIn, duration);
         internal_native_NavigateToSelection(zoomIn);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.NavigateToSelection(zoomIn);
-*/
     @org.teavm.jso.JSBody(params = {"zoomIn"}, script = "nodeeditor.NodeEditor.prototype.NavigateToSelection(zoomIn);")
     public static native void internal_native_NavigateToSelection(boolean zoomIn);
 
@@ -1250,9 +874,6 @@ nodeeditor.NodeEditor.prototype.NavigateToSelection(zoomIn);
         internal_native_NavigateToSelection();
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.NavigateToSelection();
-*/
     @org.teavm.jso.JSBody(script = "nodeeditor.NodeEditor.prototype.NavigateToSelection();")
     public static native void internal_native_NavigateToSelection();
 
@@ -1260,10 +881,6 @@ nodeeditor.NodeEditor.prototype.NavigateToSelection();
         return internal_native_ShowNodeContextMenu(nodeId.native_void_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.ShowNodeContextMenu(nodeId_addr);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"nodeId_addr"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.ShowNodeContextMenu(nodeId_addr);return returnedJSObj;")
     public static native boolean internal_native_ShowNodeContextMenu(int nodeId_addr);
 
@@ -1271,10 +888,6 @@ return returnedJSObj;
         return internal_native_ShowPinContextMenu(pinId.native_void_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.ShowPinContextMenu(pinId_addr);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"pinId_addr"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.ShowPinContextMenu(pinId_addr);return returnedJSObj;")
     public static native boolean internal_native_ShowPinContextMenu(int pinId_addr);
 
@@ -1282,10 +895,6 @@ return returnedJSObj;
         return internal_native_ShowLinkContextMenu(linkId.native_void_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.ShowLinkContextMenu(linkId_addr);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"linkId_addr"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.ShowLinkContextMenu(linkId_addr);return returnedJSObj;")
     public static native boolean internal_native_ShowLinkContextMenu(int linkId_addr);
 
@@ -1293,10 +902,6 @@ return returnedJSObj;
         return internal_native_ShowBackgroundContextMenu();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.ShowBackgroundContextMenu();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.ShowBackgroundContextMenu();return returnedJSObj;")
     public static native boolean internal_native_ShowBackgroundContextMenu();
 
@@ -1304,9 +909,6 @@ return returnedJSObj;
         internal_native_EnableShortcuts(enable);
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.EnableShortcuts(enable);
-*/
     @org.teavm.jso.JSBody(params = {"enable"}, script = "nodeeditor.NodeEditor.prototype.EnableShortcuts(enable);")
     public static native void internal_native_EnableShortcuts(boolean enable);
 
@@ -1314,10 +916,6 @@ nodeeditor.NodeEditor.prototype.EnableShortcuts(enable);
         return internal_native_AreShortcutsEnabled();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.AreShortcutsEnabled();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.AreShortcutsEnabled();return returnedJSObj;")
     public static native boolean internal_native_AreShortcutsEnabled();
 
@@ -1325,10 +923,6 @@ return returnedJSObj;
         return internal_native_BeginShortcut();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.BeginShortcut();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.BeginShortcut();return returnedJSObj;")
     public static native boolean internal_native_BeginShortcut();
 
@@ -1336,10 +930,6 @@ return returnedJSObj;
         return internal_native_AcceptCut();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.AcceptCut();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.AcceptCut();return returnedJSObj;")
     public static native boolean internal_native_AcceptCut();
 
@@ -1347,10 +937,6 @@ return returnedJSObj;
         return internal_native_AcceptCopy();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.AcceptCopy();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.AcceptCopy();return returnedJSObj;")
     public static native boolean internal_native_AcceptCopy();
 
@@ -1358,10 +944,6 @@ return returnedJSObj;
         return internal_native_AcceptPaste();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.AcceptPaste();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.AcceptPaste();return returnedJSObj;")
     public static native boolean internal_native_AcceptPaste();
 
@@ -1369,10 +951,6 @@ return returnedJSObj;
         return internal_native_AcceptDuplicate();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.AcceptDuplicate();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.AcceptDuplicate();return returnedJSObj;")
     public static native boolean internal_native_AcceptDuplicate();
 
@@ -1380,10 +958,6 @@ return returnedJSObj;
         return internal_native_AcceptCreateNode();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.AcceptCreateNode();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.AcceptCreateNode();return returnedJSObj;")
     public static native boolean internal_native_AcceptCreateNode();
 
@@ -1391,10 +965,6 @@ return returnedJSObj;
         return internal_native_GetActionContextSize();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetActionContextSize();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetActionContextSize();return returnedJSObj;")
     public static native int internal_native_GetActionContextSize();
 
@@ -1402,10 +972,6 @@ return returnedJSObj;
         return internal_native_GetActionContextNodes(nodes.native_void_address, size);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetActionContextNodes(nodes_addr, size);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"nodes_addr", "size"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetActionContextNodes(nodes_addr, size);return returnedJSObj;")
     public static native int internal_native_GetActionContextNodes(int nodes_addr, int size);
 
@@ -1413,10 +979,6 @@ return returnedJSObj;
         return internal_native_GetActionContextLinks(links.native_void_address, size);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetActionContextLinks(links_addr, size);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"links_addr", "size"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetActionContextLinks(links_addr, size);return returnedJSObj;")
     public static native int internal_native_GetActionContextLinks(int links_addr, int size);
 
@@ -1424,9 +986,6 @@ return returnedJSObj;
         internal_native_EndShortcut();
     }
 
-    /*[-TEAVM;-NATIVE]
-nodeeditor.NodeEditor.prototype.EndShortcut();
-*/
     @org.teavm.jso.JSBody(script = "nodeeditor.NodeEditor.prototype.EndShortcut();")
     public static native void internal_native_EndShortcut();
 
@@ -1434,10 +993,6 @@ nodeeditor.NodeEditor.prototype.EndShortcut();
         return internal_native_GetCurrentZoom();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetCurrentZoom();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetCurrentZoom();return returnedJSObj;")
     public static native float internal_native_GetCurrentZoom();
 
@@ -1445,10 +1000,6 @@ return returnedJSObj;
         return internal_native_GetHoveredNode();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetHoveredNode();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetHoveredNode();return returnedJSObj;")
     public static native int internal_native_GetHoveredNode();
 
@@ -1456,10 +1007,6 @@ return returnedJSObj;
         return internal_native_GetHoveredPin();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetHoveredPin();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetHoveredPin();return returnedJSObj;")
     public static native int internal_native_GetHoveredPin();
 
@@ -1467,10 +1014,6 @@ return returnedJSObj;
         return internal_native_GetHoveredLink();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetHoveredLink();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetHoveredLink();return returnedJSObj;")
     public static native int internal_native_GetHoveredLink();
 
@@ -1478,10 +1021,6 @@ return returnedJSObj;
         return internal_native_GetDoubleClickedNode();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetDoubleClickedNode();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetDoubleClickedNode();return returnedJSObj;")
     public static native int internal_native_GetDoubleClickedNode();
 
@@ -1489,10 +1028,6 @@ return returnedJSObj;
         return internal_native_GetDoubleClickedPin();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetDoubleClickedPin();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetDoubleClickedPin();return returnedJSObj;")
     public static native int internal_native_GetDoubleClickedPin();
 
@@ -1500,10 +1035,6 @@ return returnedJSObj;
         return internal_native_GetDoubleClickedLink();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetDoubleClickedLink();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetDoubleClickedLink();return returnedJSObj;")
     public static native int internal_native_GetDoubleClickedLink();
 
@@ -1511,10 +1042,6 @@ return returnedJSObj;
         return internal_native_IsBackgroundClicked();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.IsBackgroundClicked();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.IsBackgroundClicked();return returnedJSObj;")
     public static native boolean internal_native_IsBackgroundClicked();
 
@@ -1522,10 +1049,6 @@ return returnedJSObj;
         return internal_native_IsBackgroundDoubleClicked();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.IsBackgroundDoubleClicked();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.IsBackgroundDoubleClicked();return returnedJSObj;")
     public static native boolean internal_native_IsBackgroundDoubleClicked();
 
@@ -1533,10 +1056,6 @@ return returnedJSObj;
         return internal_native_GetBackgroundClickButtonIndex();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetBackgroundClickButtonIndex();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetBackgroundClickButtonIndex();return returnedJSObj;")
     public static native int internal_native_GetBackgroundClickButtonIndex();
 
@@ -1544,10 +1063,6 @@ return returnedJSObj;
         return internal_native_GetBackgroundDoubleClickButtonIndex();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetBackgroundDoubleClickButtonIndex();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetBackgroundDoubleClickButtonIndex();return returnedJSObj;")
     public static native int internal_native_GetBackgroundDoubleClickButtonIndex();
 
@@ -1555,10 +1070,6 @@ return returnedJSObj;
         return internal_native_GetLinkPins(linkId, startPinId.native_void_address, endPinId.native_void_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetLinkPins(linkId, startPinId_addr, endPinId_addr);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"linkId", "startPinId_addr", "endPinId_addr"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetLinkPins(linkId, startPinId_addr, endPinId_addr);return returnedJSObj;")
     public static native boolean internal_native_GetLinkPins(int linkId, int startPinId_addr, int endPinId_addr);
 
@@ -1566,10 +1077,6 @@ return returnedJSObj;
         return internal_native_PinHadAnyLinks(pinId);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.PinHadAnyLinks(pinId);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"pinId"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.PinHadAnyLinks(pinId);return returnedJSObj;")
     public static native boolean internal_native_PinHadAnyLinks(int pinId);
 
@@ -1583,11 +1090,6 @@ return returnedJSObj;
         return ImVec2_TEMP_STATIC_GEN_4;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetScreenSize();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return nodeeditor.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetScreenSize();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return nodeeditor.getPointer(returnedJSObj);")
     public static native int internal_native_GetScreenSize_addr();
 
@@ -1601,11 +1103,6 @@ return nodeeditor.getPointer(returnedJSObj);
         return ImVec2_TEMP_STATIC_GEN_5;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.ScreenToCanvas(pos_addr);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return nodeeditor.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"pos_addr"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.ScreenToCanvas(pos_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return nodeeditor.getPointer(returnedJSObj);")
     public static native int internal_native_ScreenToCanvas_addr(int pos_addr);
 
@@ -1619,11 +1116,6 @@ return nodeeditor.getPointer(returnedJSObj);
         return ImVec2_TEMP_STATIC_GEN_6;
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.CanvasToScreen(pos_addr);
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return nodeeditor.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"pos_addr"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.CanvasToScreen(pos_addr);if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return nodeeditor.getPointer(returnedJSObj);")
     public static native int internal_native_CanvasToScreen_addr(int pos_addr);
 
@@ -1631,10 +1123,6 @@ return nodeeditor.getPointer(returnedJSObj);
         return internal_native_GetNodeCount();
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetNodeCount();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetNodeCount();return returnedJSObj;")
     public static native int internal_native_GetNodeCount();
 
@@ -1642,10 +1130,6 @@ return returnedJSObj;
         return internal_native_GetOrderedNodeIds(nodes.native_void_address, size);
     }
 
-    /*[-TEAVM;-NATIVE]
-var returnedJSObj = nodeeditor.NodeEditor.prototype.GetOrderedNodeIds(nodes_addr, size);
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"nodes_addr", "size"}, script = "var returnedJSObj = nodeeditor.NodeEditor.prototype.GetOrderedNodeIds(nodes_addr, size);return returnedJSObj;")
     public static native int internal_native_GetOrderedNodeIds(int nodes_addr, int size);
 }

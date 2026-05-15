@@ -116,10 +116,9 @@ public class ImTemp extends NativeObject {
         return ImTextureIDRef_TEMP_STATIC_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImTextureIDRef_1(textureId);
-*/
-    public static native long internal_native_ImTextureIDRef_1__0_addr(long textureId);
+    public static long internal_native_ImTextureIDRef_1__0_addr(long textureId) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImTextureIDRef_1__0_addr(textureId);
+    }
 
     public static ImTextureRef ImTextureRef_1(long textureId) {
         long addr = internal_native_ImTextureRef_1__0_addr(textureId);
@@ -131,10 +130,9 @@ return (jlong)ImTemp::ImTextureIDRef_1(textureId);
         return ImTextureRef_TEMP_STATIC_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImTextureRef_1(textureId);
-*/
-    public static native long internal_native_ImTextureRef_1__0_addr(long textureId);
+    public static long internal_native_ImTextureRef_1__0_addr(long textureId) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImTextureRef_1__0_addr(textureId);
+    }
 
     public static ImTextureRef ImTextureRef_2(long textureId) {
         long addr = internal_native_ImTextureRef_2__0_addr(textureId);
@@ -146,10 +144,9 @@ return (jlong)ImTemp::ImTextureRef_1(textureId);
         return ImTextureRef_TEMP_STATIC_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImTextureRef_2(textureId);
-*/
-    public static native long internal_native_ImTextureRef_2__0_addr(long textureId);
+    public static long internal_native_ImTextureRef_2__0_addr(long textureId) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImTextureRef_2__0_addr(textureId);
+    }
 
     public static ImTextureRef ImTextureRef_3(long textureId) {
         long addr = internal_native_ImTextureRef_3__0_addr(textureId);
@@ -161,10 +158,9 @@ return (jlong)ImTemp::ImTextureRef_2(textureId);
         return ImTextureRef_TEMP_STATIC_GEN_2;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImTextureRef_3(textureId);
-*/
-    public static native long internal_native_ImTextureRef_3__0_addr(long textureId);
+    public static long internal_native_ImTextureRef_3__0_addr(long textureId) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImTextureRef_3__0_addr(textureId);
+    }
 
     public static ImVec2 ImVec2_1() {
         long addr = internal_native_ImVec2_1__0_addr();
@@ -176,10 +172,9 @@ return (jlong)ImTemp::ImTextureRef_3(textureId);
         return ImVec2_TEMP_STATIC_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImVec2_1();
-*/
-    public static native long internal_native_ImVec2_1__0_addr();
+    public static long internal_native_ImVec2_1__0_addr() {
+        return imgui.natives.JNI_ImTemp.internal_native_ImVec2_1__0_addr();
+    }
 
     public static ImVec2 ImVec2_1(float x, float y) {
         long addr = internal_native_ImVec2_1__1_addr(x, y);
@@ -191,10 +186,9 @@ return (jlong)ImTemp::ImVec2_1();
         return ImVec2_TEMP_STATIC_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImVec2_1((float)x, (float)y);
-*/
-    public static native long internal_native_ImVec2_1__1_addr(float x, float y);
+    public static long internal_native_ImVec2_1__1_addr(float x, float y) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImVec2_1__1_addr(x, y);
+    }
 
     public static ImVec2 ImVec2_1(ImVec2 other) {
         long addr = internal_native_ImVec2_1__2_addr(other.native_address);
@@ -206,10 +200,9 @@ return (jlong)ImTemp::ImVec2_1((float)x, (float)y);
         return ImVec2_TEMP_STATIC_GEN_2;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImVec2_1(*((ImVec2* )other_addr));
-*/
-    public static native long internal_native_ImVec2_1__2_addr(long other_addr);
+    public static long internal_native_ImVec2_1__2_addr(long other_addr) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImVec2_1__2_addr(other_addr);
+    }
 
     public static ImVec2 ImVec2_2() {
         long addr = internal_native_ImVec2_2__0_addr();
@@ -221,10 +214,9 @@ return (jlong)ImTemp::ImVec2_1(*((ImVec2* )other_addr));
         return ImVec2_TEMP_STATIC_GEN_3;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImVec2_2();
-*/
-    public static native long internal_native_ImVec2_2__0_addr();
+    public static long internal_native_ImVec2_2__0_addr() {
+        return imgui.natives.JNI_ImTemp.internal_native_ImVec2_2__0_addr();
+    }
 
     public static ImVec2 ImVec2_2(float x, float y) {
         long addr = internal_native_ImVec2_2__1_addr(x, y);
@@ -236,10 +228,9 @@ return (jlong)ImTemp::ImVec2_2();
         return ImVec2_TEMP_STATIC_GEN_4;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImVec2_2((float)x, (float)y);
-*/
-    public static native long internal_native_ImVec2_2__1_addr(float x, float y);
+    public static long internal_native_ImVec2_2__1_addr(float x, float y) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImVec2_2__1_addr(x, y);
+    }
 
     public static ImVec2 ImVec2_2(ImVec2 other) {
         long addr = internal_native_ImVec2_2__2_addr(other.native_address);
@@ -251,10 +242,9 @@ return (jlong)ImTemp::ImVec2_2((float)x, (float)y);
         return ImVec2_TEMP_STATIC_GEN_5;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImVec2_2(*((ImVec2* )other_addr));
-*/
-    public static native long internal_native_ImVec2_2__2_addr(long other_addr);
+    public static long internal_native_ImVec2_2__2_addr(long other_addr) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImVec2_2__2_addr(other_addr);
+    }
 
     public static ImVec2 ImVec2_3() {
         long addr = internal_native_ImVec2_3__0_addr();
@@ -266,10 +256,9 @@ return (jlong)ImTemp::ImVec2_2(*((ImVec2* )other_addr));
         return ImVec2_TEMP_STATIC_GEN_6;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImVec2_3();
-*/
-    public static native long internal_native_ImVec2_3__0_addr();
+    public static long internal_native_ImVec2_3__0_addr() {
+        return imgui.natives.JNI_ImTemp.internal_native_ImVec2_3__0_addr();
+    }
 
     public static ImVec2 ImVec2_3(float x, float y) {
         long addr = internal_native_ImVec2_3__1_addr(x, y);
@@ -281,10 +270,9 @@ return (jlong)ImTemp::ImVec2_3();
         return ImVec2_TEMP_STATIC_GEN_7;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImVec2_3((float)x, (float)y);
-*/
-    public static native long internal_native_ImVec2_3__1_addr(float x, float y);
+    public static long internal_native_ImVec2_3__1_addr(float x, float y) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImVec2_3__1_addr(x, y);
+    }
 
     public static ImVec2 ImVec2_3(ImVec2 other) {
         long addr = internal_native_ImVec2_3__2_addr(other.native_address);
@@ -296,10 +284,9 @@ return (jlong)ImTemp::ImVec2_3((float)x, (float)y);
         return ImVec2_TEMP_STATIC_GEN_8;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImVec2_3(*((ImVec2* )other_addr));
-*/
-    public static native long internal_native_ImVec2_3__2_addr(long other_addr);
+    public static long internal_native_ImVec2_3__2_addr(long other_addr) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImVec2_3__2_addr(other_addr);
+    }
 
     public static ImVec2 ImVec2_4() {
         long addr = internal_native_ImVec2_4__0_addr();
@@ -311,10 +298,9 @@ return (jlong)ImTemp::ImVec2_3(*((ImVec2* )other_addr));
         return ImVec2_TEMP_STATIC_GEN_9;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImVec2_4();
-*/
-    public static native long internal_native_ImVec2_4__0_addr();
+    public static long internal_native_ImVec2_4__0_addr() {
+        return imgui.natives.JNI_ImTemp.internal_native_ImVec2_4__0_addr();
+    }
 
     public static ImVec2 ImVec2_4(float x, float y) {
         long addr = internal_native_ImVec2_4__1_addr(x, y);
@@ -326,10 +312,9 @@ return (jlong)ImTemp::ImVec2_4();
         return ImVec2_TEMP_STATIC_GEN_10;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImVec2_4((float)x, (float)y);
-*/
-    public static native long internal_native_ImVec2_4__1_addr(float x, float y);
+    public static long internal_native_ImVec2_4__1_addr(float x, float y) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImVec2_4__1_addr(x, y);
+    }
 
     public static ImVec2 ImVec2_4(ImVec2 other) {
         long addr = internal_native_ImVec2_4__2_addr(other.native_address);
@@ -341,10 +326,9 @@ return (jlong)ImTemp::ImVec2_4((float)x, (float)y);
         return ImVec2_TEMP_STATIC_GEN_11;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImVec2_4(*((ImVec2* )other_addr));
-*/
-    public static native long internal_native_ImVec2_4__2_addr(long other_addr);
+    public static long internal_native_ImVec2_4__2_addr(long other_addr) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImVec2_4__2_addr(other_addr);
+    }
 
     public static ImVec4 ImVec4_1() {
         long addr = internal_native_ImVec4_1__0_addr();
@@ -356,10 +340,9 @@ return (jlong)ImTemp::ImVec2_4(*((ImVec2* )other_addr));
         return ImVec4_TEMP_STATIC_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImVec4_1();
-*/
-    public static native long internal_native_ImVec4_1__0_addr();
+    public static long internal_native_ImVec4_1__0_addr() {
+        return imgui.natives.JNI_ImTemp.internal_native_ImVec4_1__0_addr();
+    }
 
     public static ImVec4 ImVec4_1(float x, float y, float z, float w) {
         long addr = internal_native_ImVec4_1__1_addr(x, y, z, w);
@@ -371,10 +354,9 @@ return (jlong)ImTemp::ImVec4_1();
         return ImVec4_TEMP_STATIC_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImVec4_1((float)x, (float)y, (float)z, (float)w);
-*/
-    public static native long internal_native_ImVec4_1__1_addr(float x, float y, float z, float w);
+    public static long internal_native_ImVec4_1__1_addr(float x, float y, float z, float w) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImVec4_1__1_addr(x, y, z, w);
+    }
 
     public static ImVec4 ImVec4_1(ImVec4 other) {
         long addr = internal_native_ImVec4_1__2_addr(other.native_address);
@@ -386,10 +368,9 @@ return (jlong)ImTemp::ImVec4_1((float)x, (float)y, (float)z, (float)w);
         return ImVec4_TEMP_STATIC_GEN_2;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImVec4_1(*((ImVec4* )other_addr));
-*/
-    public static native long internal_native_ImVec4_1__2_addr(long other_addr);
+    public static long internal_native_ImVec4_1__2_addr(long other_addr) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImVec4_1__2_addr(other_addr);
+    }
 
     public static ImVec4 ImVec4_2() {
         long addr = internal_native_ImVec4_2__0_addr();
@@ -401,10 +382,9 @@ return (jlong)ImTemp::ImVec4_1(*((ImVec4* )other_addr));
         return ImVec4_TEMP_STATIC_GEN_3;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImVec4_2();
-*/
-    public static native long internal_native_ImVec4_2__0_addr();
+    public static long internal_native_ImVec4_2__0_addr() {
+        return imgui.natives.JNI_ImTemp.internal_native_ImVec4_2__0_addr();
+    }
 
     public static ImVec4 ImVec4_2(float x, float y, float z, float w) {
         long addr = internal_native_ImVec4_2__1_addr(x, y, z, w);
@@ -416,10 +396,9 @@ return (jlong)ImTemp::ImVec4_2();
         return ImVec4_TEMP_STATIC_GEN_4;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImVec4_2((float)x, (float)y, (float)z, (float)w);
-*/
-    public static native long internal_native_ImVec4_2__1_addr(float x, float y, float z, float w);
+    public static long internal_native_ImVec4_2__1_addr(float x, float y, float z, float w) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImVec4_2__1_addr(x, y, z, w);
+    }
 
     public static ImVec4 ImVec4_2(ImVec4 other) {
         long addr = internal_native_ImVec4_2__2_addr(other.native_address);
@@ -431,10 +410,9 @@ return (jlong)ImTemp::ImVec4_2((float)x, (float)y, (float)z, (float)w);
         return ImVec4_TEMP_STATIC_GEN_5;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImVec4_2(*((ImVec4* )other_addr));
-*/
-    public static native long internal_native_ImVec4_2__2_addr(long other_addr);
+    public static long internal_native_ImVec4_2__2_addr(long other_addr) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImVec4_2__2_addr(other_addr);
+    }
 
     public static ImVec4 ImVec4_3() {
         long addr = internal_native_ImVec4_3__0_addr();
@@ -446,10 +424,9 @@ return (jlong)ImTemp::ImVec4_2(*((ImVec4* )other_addr));
         return ImVec4_TEMP_STATIC_GEN_6;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImVec4_3();
-*/
-    public static native long internal_native_ImVec4_3__0_addr();
+    public static long internal_native_ImVec4_3__0_addr() {
+        return imgui.natives.JNI_ImTemp.internal_native_ImVec4_3__0_addr();
+    }
 
     public static ImVec4 ImVec4_3(float x, float y, float z, float w) {
         long addr = internal_native_ImVec4_3__1_addr(x, y, z, w);
@@ -461,10 +438,9 @@ return (jlong)ImTemp::ImVec4_3();
         return ImVec4_TEMP_STATIC_GEN_7;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImVec4_3((float)x, (float)y, (float)z, (float)w);
-*/
-    public static native long internal_native_ImVec4_3__1_addr(float x, float y, float z, float w);
+    public static long internal_native_ImVec4_3__1_addr(float x, float y, float z, float w) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImVec4_3__1_addr(x, y, z, w);
+    }
 
     public static ImVec4 ImVec4_3(ImVec4 other) {
         long addr = internal_native_ImVec4_3__2_addr(other.native_address);
@@ -476,10 +452,9 @@ return (jlong)ImTemp::ImVec4_3((float)x, (float)y, (float)z, (float)w);
         return ImVec4_TEMP_STATIC_GEN_8;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImVec4_3(*((ImVec4* )other_addr));
-*/
-    public static native long internal_native_ImVec4_3__2_addr(long other_addr);
+    public static long internal_native_ImVec4_3__2_addr(long other_addr) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImVec4_3__2_addr(other_addr);
+    }
 
     public static ImVec4 ImVec4_4() {
         long addr = internal_native_ImVec4_4__0_addr();
@@ -491,10 +466,9 @@ return (jlong)ImTemp::ImVec4_3(*((ImVec4* )other_addr));
         return ImVec4_TEMP_STATIC_GEN_9;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImVec4_4();
-*/
-    public static native long internal_native_ImVec4_4__0_addr();
+    public static long internal_native_ImVec4_4__0_addr() {
+        return imgui.natives.JNI_ImTemp.internal_native_ImVec4_4__0_addr();
+    }
 
     public static ImVec4 ImVec4_4(float x, float y, float z, float w) {
         long addr = internal_native_ImVec4_4__1_addr(x, y, z, w);
@@ -506,10 +480,9 @@ return (jlong)ImTemp::ImVec4_4();
         return ImVec4_TEMP_STATIC_GEN_10;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImVec4_4((float)x, (float)y, (float)z, (float)w);
-*/
-    public static native long internal_native_ImVec4_4__1_addr(float x, float y, float z, float w);
+    public static long internal_native_ImVec4_4__1_addr(float x, float y, float z, float w) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImVec4_4__1_addr(x, y, z, w);
+    }
 
     public static ImVec4 ImVec4_4(ImVec4 other) {
         long addr = internal_native_ImVec4_4__2_addr(other.native_address);
@@ -521,10 +494,9 @@ return (jlong)ImTemp::ImVec4_4((float)x, (float)y, (float)z, (float)w);
         return ImVec4_TEMP_STATIC_GEN_11;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImVec4_4(*((ImVec4* )other_addr));
-*/
-    public static native long internal_native_ImVec4_4__2_addr(long other_addr);
+    public static long internal_native_ImVec4_4__2_addr(long other_addr) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImVec4_4__2_addr(other_addr);
+    }
 
     public static ImRect ImRect_1() {
         long addr = internal_native_ImRect_1__0_addr();
@@ -536,10 +508,9 @@ return (jlong)ImTemp::ImVec4_4(*((ImVec4* )other_addr));
         return ImRect_TEMP_STATIC_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImRect_1();
-*/
-    public static native long internal_native_ImRect_1__0_addr();
+    public static long internal_native_ImRect_1__0_addr() {
+        return imgui.natives.JNI_ImTemp.internal_native_ImRect_1__0_addr();
+    }
 
     public static ImRect ImRect_1(float minX, float minY, float maxX, float maxY) {
         long addr = internal_native_ImRect_1__1_addr(minX, minY, maxX, maxY);
@@ -551,10 +522,9 @@ return (jlong)ImTemp::ImRect_1();
         return ImRect_TEMP_STATIC_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImRect_1((float)minX, (float)minY, (float)maxX, (float)maxY);
-*/
-    public static native long internal_native_ImRect_1__1_addr(float minX, float minY, float maxX, float maxY);
+    public static long internal_native_ImRect_1__1_addr(float minX, float minY, float maxX, float maxY) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImRect_1__1_addr(minX, minY, maxX, maxY);
+    }
 
     public static ImRect ImRect_1(ImVec2 min, ImVec2 max) {
         long addr = internal_native_ImRect_1__2_addr(min.native_address, max.native_address);
@@ -566,10 +536,9 @@ return (jlong)ImTemp::ImRect_1((float)minX, (float)minY, (float)maxX, (float)max
         return ImRect_TEMP_STATIC_GEN_2;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImRect_1(*((ImVec2* )min_addr), *((ImVec2* )max_addr));
-*/
-    public static native long internal_native_ImRect_1__2_addr(long min_addr, long max_addr);
+    public static long internal_native_ImRect_1__2_addr(long min_addr, long max_addr) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImRect_1__2_addr(min_addr, max_addr);
+    }
 
     public static ImRect ImRect_2() {
         long addr = internal_native_ImRect_2__0_addr();
@@ -581,10 +550,9 @@ return (jlong)ImTemp::ImRect_1(*((ImVec2* )min_addr), *((ImVec2* )max_addr));
         return ImRect_TEMP_STATIC_GEN_3;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImRect_2();
-*/
-    public static native long internal_native_ImRect_2__0_addr();
+    public static long internal_native_ImRect_2__0_addr() {
+        return imgui.natives.JNI_ImTemp.internal_native_ImRect_2__0_addr();
+    }
 
     public static ImRect ImRect_2(float minX, float minY, float maxX, float maxY) {
         long addr = internal_native_ImRect_2__1_addr(minX, minY, maxX, maxY);
@@ -596,10 +564,9 @@ return (jlong)ImTemp::ImRect_2();
         return ImRect_TEMP_STATIC_GEN_4;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImRect_2((float)minX, (float)minY, (float)maxX, (float)maxY);
-*/
-    public static native long internal_native_ImRect_2__1_addr(float minX, float minY, float maxX, float maxY);
+    public static long internal_native_ImRect_2__1_addr(float minX, float minY, float maxX, float maxY) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImRect_2__1_addr(minX, minY, maxX, maxY);
+    }
 
     public static ImRect ImRect_2(ImVec2 min, ImVec2 max) {
         long addr = internal_native_ImRect_2__2_addr(min.native_address, max.native_address);
@@ -611,10 +578,9 @@ return (jlong)ImTemp::ImRect_2((float)minX, (float)minY, (float)maxX, (float)max
         return ImRect_TEMP_STATIC_GEN_5;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImRect_2(*((ImVec2* )min_addr), *((ImVec2* )max_addr));
-*/
-    public static native long internal_native_ImRect_2__2_addr(long min_addr, long max_addr);
+    public static long internal_native_ImRect_2__2_addr(long min_addr, long max_addr) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImRect_2__2_addr(min_addr, max_addr);
+    }
 
     public static ImRect ImRect_3() {
         long addr = internal_native_ImRect_3__0_addr();
@@ -626,10 +592,9 @@ return (jlong)ImTemp::ImRect_2(*((ImVec2* )min_addr), *((ImVec2* )max_addr));
         return ImRect_TEMP_STATIC_GEN_6;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImRect_3();
-*/
-    public static native long internal_native_ImRect_3__0_addr();
+    public static long internal_native_ImRect_3__0_addr() {
+        return imgui.natives.JNI_ImTemp.internal_native_ImRect_3__0_addr();
+    }
 
     public static ImRect ImRect_3(float minX, float minY, float maxX, float maxY) {
         long addr = internal_native_ImRect_3__1_addr(minX, minY, maxX, maxY);
@@ -641,10 +606,9 @@ return (jlong)ImTemp::ImRect_3();
         return ImRect_TEMP_STATIC_GEN_7;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImRect_3((float)minX, (float)minY, (float)maxX, (float)maxY);
-*/
-    public static native long internal_native_ImRect_3__1_addr(float minX, float minY, float maxX, float maxY);
+    public static long internal_native_ImRect_3__1_addr(float minX, float minY, float maxX, float maxY) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImRect_3__1_addr(minX, minY, maxX, maxY);
+    }
 
     public static ImRect ImRect_3(ImVec2 min, ImVec2 max) {
         long addr = internal_native_ImRect_3__2_addr(min.native_address, max.native_address);
@@ -656,10 +620,9 @@ return (jlong)ImTemp::ImRect_3((float)minX, (float)minY, (float)maxX, (float)max
         return ImRect_TEMP_STATIC_GEN_8;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImRect_3(*((ImVec2* )min_addr), *((ImVec2* )max_addr));
-*/
-    public static native long internal_native_ImRect_3__2_addr(long min_addr, long max_addr);
+    public static long internal_native_ImRect_3__2_addr(long min_addr, long max_addr) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImRect_3__2_addr(min_addr, max_addr);
+    }
 
     public static ImRect ImRect_4() {
         long addr = internal_native_ImRect_4__0_addr();
@@ -671,10 +634,9 @@ return (jlong)ImTemp::ImRect_3(*((ImVec2* )min_addr), *((ImVec2* )max_addr));
         return ImRect_TEMP_STATIC_GEN_9;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImRect_4();
-*/
-    public static native long internal_native_ImRect_4__0_addr();
+    public static long internal_native_ImRect_4__0_addr() {
+        return imgui.natives.JNI_ImTemp.internal_native_ImRect_4__0_addr();
+    }
 
     public static ImRect ImRect_4(float minX, float minY, float maxX, float maxY) {
         long addr = internal_native_ImRect_4__1_addr(minX, minY, maxX, maxY);
@@ -686,10 +648,9 @@ return (jlong)ImTemp::ImRect_4();
         return ImRect_TEMP_STATIC_GEN_10;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImRect_4((float)minX, (float)minY, (float)maxX, (float)maxY);
-*/
-    public static native long internal_native_ImRect_4__1_addr(float minX, float minY, float maxX, float maxY);
+    public static long internal_native_ImRect_4__1_addr(float minX, float minY, float maxX, float maxY) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImRect_4__1_addr(minX, minY, maxX, maxY);
+    }
 
     public static ImRect ImRect_4(ImVec2 min, ImVec2 max) {
         long addr = internal_native_ImRect_4__2_addr(min.native_address, max.native_address);
@@ -701,8 +662,7 @@ return (jlong)ImTemp::ImRect_4((float)minX, (float)minY, (float)maxX, (float)max
         return ImRect_TEMP_STATIC_GEN_11;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTemp::ImRect_4(*((ImVec2* )min_addr), *((ImVec2* )max_addr));
-*/
-    public static native long internal_native_ImRect_4__2_addr(long min_addr, long max_addr);
+    public static long internal_native_ImRect_4__2_addr(long min_addr, long max_addr) {
+        return imgui.natives.JNI_ImTemp.internal_native_ImRect_4__2_addr(min_addr, max_addr);
+    }
 }

@@ -34,9 +34,6 @@ public enum ImGuiComboFlagsPrivate_ implements NativeEnum<ImGuiComboFlagsPrivate
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiComboFlags_CustomPreview;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiComboFlags_CustomPreview;")
     private static native int ImGuiComboFlags_CustomPreview_NATIVE();
 }

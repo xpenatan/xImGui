@@ -34,13 +34,11 @@ public enum ImGuiTextFlags implements NativeEnum<ImGuiTextFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTextFlags_None;
-*/
-    private static native int ImGuiTextFlags_None_NATIVE();
+    private static int ImGuiTextFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTextFlags.ImGuiTextFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTextFlags_NoWidthForLargeClippedText;
-*/
-    private static native int ImGuiTextFlags_NoWidthForLargeClippedText_NATIVE();
+    private static int ImGuiTextFlags_NoWidthForLargeClippedText_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTextFlags.ImGuiTextFlags_NoWidthForLargeClippedText_NATIVE();
+    }
 }

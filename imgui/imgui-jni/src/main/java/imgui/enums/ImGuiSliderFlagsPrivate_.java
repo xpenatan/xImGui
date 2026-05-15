@@ -34,13 +34,11 @@ public enum ImGuiSliderFlagsPrivate_ implements NativeEnum<ImGuiSliderFlagsPriva
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSliderFlags_Vertical;
-*/
-    private static native int ImGuiSliderFlags_Vertical_NATIVE();
+    private static int ImGuiSliderFlags_Vertical_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSliderFlagsPrivate_.ImGuiSliderFlags_Vertical_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSliderFlags_ReadOnly;
-*/
-    private static native int ImGuiSliderFlags_ReadOnly_NATIVE();
+    private static int ImGuiSliderFlags_ReadOnly_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSliderFlagsPrivate_.ImGuiSliderFlags_ReadOnly_NATIVE();
+    }
 }

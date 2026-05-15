@@ -34,21 +34,12 @@ public enum ImGuiDataAuthority implements NativeEnum<ImGuiDataAuthority> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDataAuthority_Auto;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDataAuthority_Auto;")
     private static native int ImGuiDataAuthority_Auto_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDataAuthority_DockNode;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDataAuthority_DockNode;")
     private static native int ImGuiDataAuthority_DockNode_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDataAuthority_Window;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDataAuthority_Window;")
     private static native int ImGuiDataAuthority_Window_NATIVE();
 }

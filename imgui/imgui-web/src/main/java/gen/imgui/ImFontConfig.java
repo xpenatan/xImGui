@@ -21,10 +21,6 @@ public class ImFontConfig extends NativeObject {
         internal_reset(addr, true);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = new imgui.ImFontConfig();
-return imgui.getPointer(jsObj);
-*/
     @org.teavm.jso.JSBody(script = "var jsObj = new imgui.ImFontConfig();return imgui.getPointer(jsObj);")
     public static native int internal_native_create_addr();
 
@@ -46,10 +42,6 @@ return imgui.getPointer(jsObj);
         internal_native_deleteNative(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-imgui.destroy(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);imgui.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
@@ -57,10 +49,6 @@ imgui.destroy(jsObj);
         return internal_native_get_Name(native_address, index);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-return jsObj.get_Name(index);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "index"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);return jsObj.get_Name(index);")
     public static native byte internal_native_get_Name(int this_addr, int index);
 
@@ -68,10 +56,6 @@ return jsObj.get_Name(index);
         internal_native_set_Name(native_address, index, Name);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-jsObj.set_Name(index, Name);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "index", "Name"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);jsObj.set_Name(index, Name);")
     public static native void internal_native_set_Name(int this_addr, int index, byte Name);
 
@@ -85,10 +69,6 @@ jsObj.set_Name(index, Name);
         return NativeObject_TEMP_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-return jsObj.get_FontData();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);return jsObj.get_FontData();")
     public static native int internal_native_get_FontData_addr(int this_addr);
 
@@ -96,10 +76,6 @@ return jsObj.get_FontData();
         internal_native_set_FontData(native_address, FontData.native_void_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-jsObj.set_FontData(FontData_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "FontData_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);jsObj.set_FontData(FontData_addr);")
     public static native void internal_native_set_FontData(int this_addr, int FontData_addr);
 
@@ -107,10 +83,6 @@ jsObj.set_FontData(FontData_addr);
         return internal_native_get_FontDataSize(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-return jsObj.get_FontDataSize();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);return jsObj.get_FontDataSize();")
     public static native int internal_native_get_FontDataSize(int this_addr);
 
@@ -118,10 +90,6 @@ return jsObj.get_FontDataSize();
         internal_native_set_FontDataSize(native_address, FontDataSize);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-jsObj.set_FontDataSize(FontDataSize);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "FontDataSize"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);jsObj.set_FontDataSize(FontDataSize);")
     public static native void internal_native_set_FontDataSize(int this_addr, int FontDataSize);
 
@@ -129,10 +97,6 @@ jsObj.set_FontDataSize(FontDataSize);
         return internal_native_get_FontDataOwnedByAtlas(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-return jsObj.get_FontDataOwnedByAtlas();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);return jsObj.get_FontDataOwnedByAtlas();")
     public static native boolean internal_native_get_FontDataOwnedByAtlas(int this_addr);
 
@@ -140,10 +104,6 @@ return jsObj.get_FontDataOwnedByAtlas();
         internal_native_set_FontDataOwnedByAtlas(native_address, FontDataOwnedByAtlas);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-jsObj.set_FontDataOwnedByAtlas(FontDataOwnedByAtlas);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "FontDataOwnedByAtlas"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);jsObj.set_FontDataOwnedByAtlas(FontDataOwnedByAtlas);")
     public static native void internal_native_set_FontDataOwnedByAtlas(int this_addr, boolean FontDataOwnedByAtlas);
 
@@ -151,10 +111,6 @@ jsObj.set_FontDataOwnedByAtlas(FontDataOwnedByAtlas);
         return internal_native_get_MergeMode(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-return jsObj.get_MergeMode();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);return jsObj.get_MergeMode();")
     public static native boolean internal_native_get_MergeMode(int this_addr);
 
@@ -162,10 +118,6 @@ return jsObj.get_MergeMode();
         internal_native_set_MergeMode(native_address, MergeMode);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-jsObj.set_MergeMode(MergeMode);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "MergeMode"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);jsObj.set_MergeMode(MergeMode);")
     public static native void internal_native_set_MergeMode(int this_addr, boolean MergeMode);
 
@@ -173,10 +125,6 @@ jsObj.set_MergeMode(MergeMode);
         return internal_native_get_PixelSnapH(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-return jsObj.get_PixelSnapH();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);return jsObj.get_PixelSnapH();")
     public static native boolean internal_native_get_PixelSnapH(int this_addr);
 
@@ -184,10 +132,6 @@ return jsObj.get_PixelSnapH();
         internal_native_set_PixelSnapH(native_address, PixelSnapH);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-jsObj.set_PixelSnapH(PixelSnapH);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "PixelSnapH"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);jsObj.set_PixelSnapH(PixelSnapH);")
     public static native void internal_native_set_PixelSnapH(int this_addr, boolean PixelSnapH);
 
@@ -195,10 +139,6 @@ jsObj.set_PixelSnapH(PixelSnapH);
         return internal_native_get_PixelSnapV(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-return jsObj.get_PixelSnapV();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);return jsObj.get_PixelSnapV();")
     public static native boolean internal_native_get_PixelSnapV(int this_addr);
 
@@ -206,10 +146,6 @@ return jsObj.get_PixelSnapV();
         internal_native_set_PixelSnapV(native_address, PixelSnapV);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-jsObj.set_PixelSnapV(PixelSnapV);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "PixelSnapV"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);jsObj.set_PixelSnapV(PixelSnapV);")
     public static native void internal_native_set_PixelSnapV(int this_addr, boolean PixelSnapV);
 
@@ -217,10 +153,6 @@ jsObj.set_PixelSnapV(PixelSnapV);
         return internal_native_get_OversampleH(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-return jsObj.get_OversampleH();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);return jsObj.get_OversampleH();")
     public static native int internal_native_get_OversampleH(int this_addr);
 
@@ -228,10 +160,6 @@ return jsObj.get_OversampleH();
         internal_native_set_OversampleH(native_address, OversampleH);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-jsObj.set_OversampleH(OversampleH);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "OversampleH"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);jsObj.set_OversampleH(OversampleH);")
     public static native void internal_native_set_OversampleH(int this_addr, int OversampleH);
 
@@ -239,10 +167,6 @@ jsObj.set_OversampleH(OversampleH);
         return internal_native_get_OversampleV(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-return jsObj.get_OversampleV();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);return jsObj.get_OversampleV();")
     public static native int internal_native_get_OversampleV(int this_addr);
 
@@ -250,10 +174,6 @@ return jsObj.get_OversampleV();
         internal_native_set_OversampleV(native_address, OversampleV);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-jsObj.set_OversampleV(OversampleV);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "OversampleV"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);jsObj.set_OversampleV(OversampleV);")
     public static native void internal_native_set_OversampleV(int this_addr, int OversampleV);
 
@@ -261,10 +181,6 @@ jsObj.set_OversampleV(OversampleV);
         return internal_native_get_EllipsisChar(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-return jsObj.get_EllipsisChar();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);return jsObj.get_EllipsisChar();")
     public static native short internal_native_get_EllipsisChar(int this_addr);
 
@@ -272,10 +188,6 @@ return jsObj.get_EllipsisChar();
         internal_native_set_EllipsisChar(native_address, EllipsisChar);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-jsObj.set_EllipsisChar(EllipsisChar);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "EllipsisChar"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);jsObj.set_EllipsisChar(EllipsisChar);")
     public static native void internal_native_set_EllipsisChar(int this_addr, short EllipsisChar);
 
@@ -283,10 +195,6 @@ jsObj.set_EllipsisChar(EllipsisChar);
         return internal_native_get_SizePixels(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-return jsObj.get_SizePixels();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);return jsObj.get_SizePixels();")
     public static native float internal_native_get_SizePixels(int this_addr);
 
@@ -294,10 +202,6 @@ return jsObj.get_SizePixels();
         internal_native_set_SizePixels(native_address, SizePixels);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-jsObj.set_SizePixels(SizePixels);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "SizePixels"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);jsObj.set_SizePixels(SizePixels);")
     public static native void internal_native_set_SizePixels(int this_addr, float SizePixels);
 
@@ -311,12 +215,6 @@ jsObj.set_SizePixels(SizePixels);
         return ImVec2_TEMP_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-var returnedJSObj = jsObj.get_GlyphOffset();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);var returnedJSObj = jsObj.get_GlyphOffset();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_GlyphOffset_addr(int this_addr);
 
@@ -324,10 +222,6 @@ return imgui.getPointer(returnedJSObj);
         internal_native_set_GlyphOffset(native_address, GlyphOffset.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-jsObj.set_GlyphOffset(GlyphOffset_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "GlyphOffset_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);jsObj.set_GlyphOffset(GlyphOffset_addr);")
     public static native void internal_native_set_GlyphOffset(int this_addr, int GlyphOffset_addr);
 
@@ -335,10 +229,6 @@ jsObj.set_GlyphOffset(GlyphOffset_addr);
         return internal_native_get_GlyphMinAdvanceX(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-return jsObj.get_GlyphMinAdvanceX();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);return jsObj.get_GlyphMinAdvanceX();")
     public static native float internal_native_get_GlyphMinAdvanceX(int this_addr);
 
@@ -346,10 +236,6 @@ return jsObj.get_GlyphMinAdvanceX();
         internal_native_set_GlyphMinAdvanceX(native_address, GlyphMinAdvanceX);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-jsObj.set_GlyphMinAdvanceX(GlyphMinAdvanceX);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "GlyphMinAdvanceX"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);jsObj.set_GlyphMinAdvanceX(GlyphMinAdvanceX);")
     public static native void internal_native_set_GlyphMinAdvanceX(int this_addr, float GlyphMinAdvanceX);
 
@@ -357,10 +243,6 @@ jsObj.set_GlyphMinAdvanceX(GlyphMinAdvanceX);
         return internal_native_get_GlyphMaxAdvanceX(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-return jsObj.get_GlyphMaxAdvanceX();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);return jsObj.get_GlyphMaxAdvanceX();")
     public static native float internal_native_get_GlyphMaxAdvanceX(int this_addr);
 
@@ -368,10 +250,6 @@ return jsObj.get_GlyphMaxAdvanceX();
         internal_native_set_GlyphMaxAdvanceX(native_address, GlyphMaxAdvanceX);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-jsObj.set_GlyphMaxAdvanceX(GlyphMaxAdvanceX);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "GlyphMaxAdvanceX"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);jsObj.set_GlyphMaxAdvanceX(GlyphMaxAdvanceX);")
     public static native void internal_native_set_GlyphMaxAdvanceX(int this_addr, float GlyphMaxAdvanceX);
 
@@ -379,10 +257,6 @@ jsObj.set_GlyphMaxAdvanceX(GlyphMaxAdvanceX);
         return internal_native_get_GlyphExtraAdvanceX(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-return jsObj.get_GlyphExtraAdvanceX();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);return jsObj.get_GlyphExtraAdvanceX();")
     public static native float internal_native_get_GlyphExtraAdvanceX(int this_addr);
 
@@ -390,10 +264,6 @@ return jsObj.get_GlyphExtraAdvanceX();
         internal_native_set_GlyphExtraAdvanceX(native_address, GlyphExtraAdvanceX);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-jsObj.set_GlyphExtraAdvanceX(GlyphExtraAdvanceX);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "GlyphExtraAdvanceX"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);jsObj.set_GlyphExtraAdvanceX(GlyphExtraAdvanceX);")
     public static native void internal_native_set_GlyphExtraAdvanceX(int this_addr, float GlyphExtraAdvanceX);
 
@@ -401,10 +271,6 @@ jsObj.set_GlyphExtraAdvanceX(GlyphExtraAdvanceX);
         return internal_native_get_FontNo(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-return jsObj.get_FontNo();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);return jsObj.get_FontNo();")
     public static native int internal_native_get_FontNo(int this_addr);
 
@@ -412,10 +278,6 @@ return jsObj.get_FontNo();
         internal_native_set_FontNo(native_address, FontNo);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-jsObj.set_FontNo(FontNo);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "FontNo"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);jsObj.set_FontNo(FontNo);")
     public static native void internal_native_set_FontNo(int this_addr, int FontNo);
 
@@ -423,10 +285,6 @@ jsObj.set_FontNo(FontNo);
         return internal_native_get_FontLoaderFlags(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-return jsObj.get_FontLoaderFlags();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);return jsObj.get_FontLoaderFlags();")
     public static native int internal_native_get_FontLoaderFlags(int this_addr);
 
@@ -434,10 +292,6 @@ return jsObj.get_FontLoaderFlags();
         internal_native_set_FontLoaderFlags(native_address, FontLoaderFlags);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-jsObj.set_FontLoaderFlags(FontLoaderFlags);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "FontLoaderFlags"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);jsObj.set_FontLoaderFlags(FontLoaderFlags);")
     public static native void internal_native_set_FontLoaderFlags(int this_addr, int FontLoaderFlags);
 
@@ -445,10 +299,6 @@ jsObj.set_FontLoaderFlags(FontLoaderFlags);
         return internal_native_get_RasterizerMultiply(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-return jsObj.get_RasterizerMultiply();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);return jsObj.get_RasterizerMultiply();")
     public static native float internal_native_get_RasterizerMultiply(int this_addr);
 
@@ -456,10 +306,6 @@ return jsObj.get_RasterizerMultiply();
         internal_native_set_RasterizerMultiply(native_address, RasterizerMultiply);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-jsObj.set_RasterizerMultiply(RasterizerMultiply);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "RasterizerMultiply"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);jsObj.set_RasterizerMultiply(RasterizerMultiply);")
     public static native void internal_native_set_RasterizerMultiply(int this_addr, float RasterizerMultiply);
 
@@ -467,10 +313,6 @@ jsObj.set_RasterizerMultiply(RasterizerMultiply);
         return internal_native_get_RasterizerDensity(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-return jsObj.get_RasterizerDensity();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);return jsObj.get_RasterizerDensity();")
     public static native float internal_native_get_RasterizerDensity(int this_addr);
 
@@ -478,10 +320,6 @@ return jsObj.get_RasterizerDensity();
         internal_native_set_RasterizerDensity(native_address, RasterizerDensity);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);
-jsObj.set_RasterizerDensity(RasterizerDensity);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "RasterizerDensity"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImFontConfig);jsObj.set_RasterizerDensity(RasterizerDensity);")
     public static native void internal_native_set_RasterizerDensity(int this_addr, float RasterizerDensity);
 }

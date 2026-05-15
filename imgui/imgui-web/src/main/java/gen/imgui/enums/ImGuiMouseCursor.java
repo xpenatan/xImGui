@@ -46,75 +46,39 @@ public enum ImGuiMouseCursor implements NativeEnum<ImGuiMouseCursor> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiMouseCursor_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiMouseCursor_None;")
     private static native int ImGuiMouseCursor_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiMouseCursor_Arrow;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiMouseCursor_Arrow;")
     private static native int ImGuiMouseCursor_Arrow_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiMouseCursor_TextInput;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiMouseCursor_TextInput;")
     private static native int ImGuiMouseCursor_TextInput_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiMouseCursor_ResizeAll;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiMouseCursor_ResizeAll;")
     private static native int ImGuiMouseCursor_ResizeAll_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiMouseCursor_ResizeNS;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiMouseCursor_ResizeNS;")
     private static native int ImGuiMouseCursor_ResizeNS_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiMouseCursor_ResizeEW;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiMouseCursor_ResizeEW;")
     private static native int ImGuiMouseCursor_ResizeEW_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiMouseCursor_ResizeNESW;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiMouseCursor_ResizeNESW;")
     private static native int ImGuiMouseCursor_ResizeNESW_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiMouseCursor_ResizeNWSE;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiMouseCursor_ResizeNWSE;")
     private static native int ImGuiMouseCursor_ResizeNWSE_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiMouseCursor_Hand;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiMouseCursor_Hand;")
     private static native int ImGuiMouseCursor_Hand_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiMouseCursor_Wait;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiMouseCursor_Wait;")
     private static native int ImGuiMouseCursor_Wait_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiMouseCursor_Progress;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiMouseCursor_Progress;")
     private static native int ImGuiMouseCursor_Progress_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiMouseCursor_NotAllowed;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiMouseCursor_NotAllowed;")
     private static native int ImGuiMouseCursor_NotAllowed_NATIVE();
 }

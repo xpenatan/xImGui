@@ -50,15 +50,11 @@ public class ImGuiLayout extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiLayout* nativeObject = (ImGuiLayout*)this_addr;
-delete nativeObject;
-*/
     public static void internal_native_deleteNative(long this_addr) {
         try {
             FFMHandles.internal_native_deleteNative__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -72,16 +68,11 @@ delete nativeObject;
         return ImVec2_TEMP_GEN_0;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiLayout* nativeObject = (ImGuiLayout*)this_addr;
-static ImVec2 copy_addr;
-copy_addr = nativeObject->getAbsoluteSize();
-return (int64_t)&copy_addr;*/
     public static long internal_native_getAbsoluteSize_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_getAbsoluteSize_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -95,16 +86,11 @@ return (int64_t)&copy_addr;*/
         return ImVec2_TEMP_GEN_1;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiLayout* nativeObject = (ImGuiLayout*)this_addr;
-static ImVec2 copy_addr;
-copy_addr = nativeObject->getAbsoluteSizePadding();
-return (int64_t)&copy_addr;*/
     public static long internal_native_getAbsoluteSizePadding_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_getAbsoluteSizePadding_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -118,16 +104,11 @@ return (int64_t)&copy_addr;*/
         return ImVec2_TEMP_GEN_2;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiLayout* nativeObject = (ImGuiLayout*)this_addr;
-static ImVec2 copy_addr;
-copy_addr = nativeObject->getContentSize();
-return (int64_t)&copy_addr;*/
     public static long internal_native_getContentSize_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_getContentSize_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -141,16 +122,11 @@ return (int64_t)&copy_addr;*/
         return ImVec2_TEMP_GEN_3;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiLayout* nativeObject = (ImGuiLayout*)this_addr;
-static ImVec2 copy_addr;
-copy_addr = nativeObject->getPositionPadding();
-return (int64_t)&copy_addr;*/
     public static long internal_native_getPositionPadding_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_getPositionPadding_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -164,15 +140,11 @@ return (int64_t)&copy_addr;*/
         return ImVec2_TEMP_GEN_4;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiLayout* nativeObject = (ImGuiLayout*)this_addr;
-return (int64_t)&nativeObject->position;
-*/
     public static long internal_native_get_position_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_position_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -180,15 +152,11 @@ return (int64_t)&nativeObject->position;
         internal_native_set_position(native_address, position.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiLayout* nativeObject = (ImGuiLayout*)this_addr;
-nativeObject->position = *((ImVec2*)position_addr);
-*/
     public static void internal_native_set_position(long this_addr, long position_addr) {
         try {
             FFMHandles.internal_native_set_position__JJ.invokeExact(this_addr, position_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -202,15 +170,11 @@ nativeObject->position = *((ImVec2*)position_addr);
         return ImVec2_TEMP_GEN_5;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiLayout* nativeObject = (ImGuiLayout*)this_addr;
-return (int64_t)&nativeObject->size;
-*/
     public static long internal_native_get_size_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_size_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -218,66 +182,32 @@ return (int64_t)&nativeObject->size;
         internal_native_set_size(native_address, size.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiLayout* nativeObject = (ImGuiLayout*)this_addr;
-nativeObject->size = *((ImVec2*)size_addr);
-*/
     public static void internal_native_set_size(long this_addr, long size_addr) {
         try {
             FFMHandles.internal_native_set_size__JJ.invokeExact(this_addr, size_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imguilayout_deletenative", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle internal_native_getAbsoluteSize_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguilayout_getabsolutesize_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle internal_native_getAbsoluteSizePadding_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguilayout_getabsolutesizepadding_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle internal_native_getContentSize_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguilayout_getcontentsize_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_getPositionPadding_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguilayout_getpositionpadding_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_get_position_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguilayout_get_position_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle internal_native_set_position__JJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguilayout_set_position", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = downcallDefault("jparser_imgui_extension_imlayout_ImGuiLayout_internal_1native_1deleteNative__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_size_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguilayout_get_size_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_getAbsoluteSize_addr__J = downcallDefault("jparser_imgui_extension_imlayout_ImGuiLayout_internal_1native_1getAbsoluteSize_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_getAbsoluteSizePadding_addr__J = downcallDefault("jparser_imgui_extension_imlayout_ImGuiLayout_internal_1native_1getAbsoluteSizePadding_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_getContentSize_addr__J = downcallDefault("jparser_imgui_extension_imlayout_ImGuiLayout_internal_1native_1getContentSize_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_getPositionPadding_addr__J = downcallDefault("jparser_imgui_extension_imlayout_ImGuiLayout_internal_1native_1getPositionPadding_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_position_addr__J = downcallDefault("jparser_imgui_extension_imlayout_ImGuiLayout_internal_1native_1get_1position_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_position__JJ = downcallDefault("jparser_imgui_extension_imlayout_ImGuiLayout_internal_1native_1set_1position__JJ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_size_addr__J = downcallDefault("jparser_imgui_extension_imlayout_ImGuiLayout_internal_1native_1get_1size_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_size__JJ = downcallDefault("jparser_imgui_extension_imlayout_ImGuiLayout_internal_1native_1set_1size__JJ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_size__JJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imguilayout_set_size", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
     }
 }

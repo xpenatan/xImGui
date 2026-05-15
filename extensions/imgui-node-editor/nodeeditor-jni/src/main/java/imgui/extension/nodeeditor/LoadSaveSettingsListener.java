@@ -17,33 +17,6 @@ public class LoadSaveSettingsListener extends NativeObject {
 
     static public final LoadSaveSettingsListener NULL = LoadSaveSettingsListener.native_new();
 
-    /*[-JNI;-NATIVE]
-	static jmethodID LoadSaveSettingsListenerImpl_onLoadJ_ID;
-	static jmethodID LoadSaveSettingsListenerImpl_onSaveJI_ID;
-
-class LoadSaveSettingsListenerImpl : public LoadSaveSettingsListener {
-private:
-	JNIEnv* env;
-	jobject obj;
-public:
-void setupCallback(JNIEnv* env, jobject obj) {
-	this->env = env;
-	this->obj = env->NewGlobalRef(obj);
-	static jclass jClassID = 0;
-	if(jClassID == 0) {
-		jClassID = (jclass)env->NewGlobalRef(env->GetObjectClass(obj));
-		LoadSaveSettingsListenerImpl_onLoadJ_ID = env->GetMethodID(jClassID, "internal_onLoad", "(J)V");
-		LoadSaveSettingsListenerImpl_onSaveJI_ID = env->GetMethodID(jClassID, "internal_onSave", "(JI)Z");
-	}
-}
-virtual void onLoad(NativeString* data) {
-   env->CallVoidMethod(obj, LoadSaveSettingsListenerImpl_onLoadJ_ID, (jlong)data);
-}
-virtual bool onSave(NativeString* data, SaveReasonFlags reason) {
-   return env->CallBooleanMethod(obj, LoadSaveSettingsListenerImpl_onSaveJI_ID, (jlong)data, reason);
-}
-};
-*/
     @Deprecated()
     protected LoadSaveSettingsListener(byte b, char c) {
     }
@@ -59,11 +32,9 @@ virtual bool onSave(NativeString* data, SaveReasonFlags reason) {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-LoadSaveSettingsListenerImpl* nativeObject = (LoadSaveSettingsListenerImpl*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.extension.nodeeditor.natives.JNI_LoadSaveSettingsListener.internal_native_deleteNative(this_addr);
+    }
 
     public LoadSaveSettingsListener() {
         long addr = internal_native_create_addr();
@@ -105,14 +76,9 @@ delete nativeObject;
         return onSave(NativeString_TEMP_STATIC_GEN_1, reason_addr_enum);
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)new LoadSaveSettingsListenerImpl();
-*/
-    public static native long internal_native_create_addr();
+    public static long internal_native_create_addr() {
+        return imgui.extension.nodeeditor.natives.JNI_LoadSaveSettingsListener.internal_native_create_addr();
+    }
 
-    /*[-JNI;-NATIVE]
-LoadSaveSettingsListenerImpl* nativeObject = (LoadSaveSettingsListenerImpl*)this_addr;
-nativeObject->setupCallback(env, object);
-*/
     public native void internal_native_setupCallback(long this_addr);
 }

@@ -41,45 +41,24 @@ public enum ImGuiActivateFlags implements NativeEnum<ImGuiActivateFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiActivateFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiActivateFlags_None;")
     private static native int ImGuiActivateFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiActivateFlags_PreferInput;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiActivateFlags_PreferInput;")
     private static native int ImGuiActivateFlags_PreferInput_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiActivateFlags_PreferTweak;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiActivateFlags_PreferTweak;")
     private static native int ImGuiActivateFlags_PreferTweak_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiActivateFlags_TryToPreserveState;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiActivateFlags_TryToPreserveState;")
     private static native int ImGuiActivateFlags_TryToPreserveState_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiActivateFlags_FromTabbing;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiActivateFlags_FromTabbing;")
     private static native int ImGuiActivateFlags_FromTabbing_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiActivateFlags_FromShortcut;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiActivateFlags_FromShortcut;")
     private static native int ImGuiActivateFlags_FromShortcut_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiActivateFlags_FromFocusApi;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiActivateFlags_FromFocusApi;")
     private static native int ImGuiActivateFlags_FromFocusApi_NATIVE();
 }

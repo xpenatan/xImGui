@@ -34,27 +34,15 @@ public enum ImGuiNavRenderCursorFlags implements NativeEnum<ImGuiNavRenderCursor
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavRenderCursorFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavRenderCursorFlags_None;")
     private static native int ImGuiNavRenderCursorFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavRenderCursorFlags_Compact;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavRenderCursorFlags_Compact;")
     private static native int ImGuiNavRenderCursorFlags_Compact_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavRenderCursorFlags_AlwaysDraw;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavRenderCursorFlags_AlwaysDraw;")
     private static native int ImGuiNavRenderCursorFlags_AlwaysDraw_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNavRenderCursorFlags_NoRounding;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNavRenderCursorFlags_NoRounding;")
     private static native int ImGuiNavRenderCursorFlags_NoRounding_NATIVE();
 }

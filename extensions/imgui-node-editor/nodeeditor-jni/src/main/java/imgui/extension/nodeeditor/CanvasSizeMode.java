@@ -34,18 +34,15 @@ public enum CanvasSizeMode implements NativeEnum<CanvasSizeMode> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)CanvasSizeMode::FitVerticalView;
-*/
-    private static native int FitVerticalView_NATIVE();
+    private static int FitVerticalView_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_CanvasSizeMode.FitVerticalView_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)CanvasSizeMode::FitHorizontalView;
-*/
-    private static native int FitHorizontalView_NATIVE();
+    private static int FitHorizontalView_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_CanvasSizeMode.FitHorizontalView_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)CanvasSizeMode::CenterOnly;
-*/
-    private static native int CenterOnly_NATIVE();
+    private static int CenterOnly_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_CanvasSizeMode.CenterOnly_NATIVE();
+    }
 }

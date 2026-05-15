@@ -34,15 +34,9 @@ public enum ImGuiLayoutType implements NativeEnum<ImGuiLayoutType> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiLayoutType_Horizontal;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiLayoutType_Horizontal;")
     private static native int ImGuiLayoutType_Horizontal_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiLayoutType_Vertical;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiLayoutType_Vertical;")
     private static native int ImGuiLayoutType_Vertical_NATIVE();
 }

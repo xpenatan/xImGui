@@ -41,75 +41,36 @@ public enum ImGuiPopupPositionPolicy implements NativeEnum<ImGuiPopupPositionPol
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiPopupPositionPolicy_Default;
-*/
     private static int ImGuiPopupPositionPolicy_Default_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiPopupPositionPolicy_Default_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiPopupPositionPolicy_ComboBox;
-*/
     private static int ImGuiPopupPositionPolicy_ComboBox_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiPopupPositionPolicy_ComboBox_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiPopupPositionPolicy_Tooltip;
-*/
     private static int ImGuiPopupPositionPolicy_Tooltip_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiPopupPositionPolicy_Tooltip_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiPopupPositionPolicy_Default_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguipopuppositionpolicy_imguipopuppositionpolicy_default_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiPopupPositionPolicy_ComboBox_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguipopuppositionpolicy_imguipopuppositionpolicy_combobox_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
-
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
-
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
-
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
-
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
-
-        static final java.lang.invoke.MethodHandle ImGuiPopupPositionPolicy_Default_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiPopupPositionPolicy_ImGuiPopupPositionPolicy_1Default_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiPopupPositionPolicy_ComboBox_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiPopupPositionPolicy_ImGuiPopupPositionPolicy_1ComboBox_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiPopupPositionPolicy_Tooltip_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiPopupPositionPolicy_ImGuiPopupPositionPolicy_1Tooltip_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiPopupPositionPolicy_Tooltip_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguipopuppositionpolicy_imguipopuppositionpolicy_tooltip_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

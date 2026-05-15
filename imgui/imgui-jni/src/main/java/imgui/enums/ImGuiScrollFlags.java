@@ -44,53 +44,43 @@ public enum ImGuiScrollFlags implements NativeEnum<ImGuiScrollFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiScrollFlags_None;
-*/
-    private static native int ImGuiScrollFlags_None_NATIVE();
+    private static int ImGuiScrollFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiScrollFlags.ImGuiScrollFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiScrollFlags_KeepVisibleEdgeX;
-*/
-    private static native int ImGuiScrollFlags_KeepVisibleEdgeX_NATIVE();
+    private static int ImGuiScrollFlags_KeepVisibleEdgeX_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiScrollFlags.ImGuiScrollFlags_KeepVisibleEdgeX_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiScrollFlags_KeepVisibleEdgeY;
-*/
-    private static native int ImGuiScrollFlags_KeepVisibleEdgeY_NATIVE();
+    private static int ImGuiScrollFlags_KeepVisibleEdgeY_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiScrollFlags.ImGuiScrollFlags_KeepVisibleEdgeY_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiScrollFlags_KeepVisibleCenterX;
-*/
-    private static native int ImGuiScrollFlags_KeepVisibleCenterX_NATIVE();
+    private static int ImGuiScrollFlags_KeepVisibleCenterX_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiScrollFlags.ImGuiScrollFlags_KeepVisibleCenterX_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiScrollFlags_KeepVisibleCenterY;
-*/
-    private static native int ImGuiScrollFlags_KeepVisibleCenterY_NATIVE();
+    private static int ImGuiScrollFlags_KeepVisibleCenterY_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiScrollFlags.ImGuiScrollFlags_KeepVisibleCenterY_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiScrollFlags_AlwaysCenterX;
-*/
-    private static native int ImGuiScrollFlags_AlwaysCenterX_NATIVE();
+    private static int ImGuiScrollFlags_AlwaysCenterX_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiScrollFlags.ImGuiScrollFlags_AlwaysCenterX_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiScrollFlags_AlwaysCenterY;
-*/
-    private static native int ImGuiScrollFlags_AlwaysCenterY_NATIVE();
+    private static int ImGuiScrollFlags_AlwaysCenterY_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiScrollFlags.ImGuiScrollFlags_AlwaysCenterY_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiScrollFlags_NoScrollParent;
-*/
-    private static native int ImGuiScrollFlags_NoScrollParent_NATIVE();
+    private static int ImGuiScrollFlags_NoScrollParent_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiScrollFlags.ImGuiScrollFlags_NoScrollParent_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiScrollFlags_MaskX_;
-*/
-    private static native int ImGuiScrollFlags_MaskX__NATIVE();
+    private static int ImGuiScrollFlags_MaskX__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiScrollFlags.ImGuiScrollFlags_MaskX__NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiScrollFlags_MaskY_;
-*/
-    private static native int ImGuiScrollFlags_MaskY__NATIVE();
+    private static int ImGuiScrollFlags_MaskY__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiScrollFlags.ImGuiScrollFlags_MaskY__NATIVE();
+    }
 }

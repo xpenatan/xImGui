@@ -52,93 +52,75 @@ public enum ImGuiDockNodeFlagsPrivate_ implements NativeEnum<ImGuiDockNodeFlagsP
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_DockSpace;
-*/
-    private static native int ImGuiDockNodeFlags_DockSpace_NATIVE();
+    private static int ImGuiDockNodeFlags_DockSpace_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlagsPrivate_.ImGuiDockNodeFlags_DockSpace_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_CentralNode;
-*/
-    private static native int ImGuiDockNodeFlags_CentralNode_NATIVE();
+    private static int ImGuiDockNodeFlags_CentralNode_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlagsPrivate_.ImGuiDockNodeFlags_CentralNode_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoTabBar;
-*/
-    private static native int ImGuiDockNodeFlags_NoTabBar_NATIVE();
+    private static int ImGuiDockNodeFlags_NoTabBar_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlagsPrivate_.ImGuiDockNodeFlags_NoTabBar_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_HiddenTabBar;
-*/
-    private static native int ImGuiDockNodeFlags_HiddenTabBar_NATIVE();
+    private static int ImGuiDockNodeFlags_HiddenTabBar_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlagsPrivate_.ImGuiDockNodeFlags_HiddenTabBar_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoWindowMenuButton;
-*/
-    private static native int ImGuiDockNodeFlags_NoWindowMenuButton_NATIVE();
+    private static int ImGuiDockNodeFlags_NoWindowMenuButton_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlagsPrivate_.ImGuiDockNodeFlags_NoWindowMenuButton_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoCloseButton;
-*/
-    private static native int ImGuiDockNodeFlags_NoCloseButton_NATIVE();
+    private static int ImGuiDockNodeFlags_NoCloseButton_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlagsPrivate_.ImGuiDockNodeFlags_NoCloseButton_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoResizeX;
-*/
-    private static native int ImGuiDockNodeFlags_NoResizeX_NATIVE();
+    private static int ImGuiDockNodeFlags_NoResizeX_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlagsPrivate_.ImGuiDockNodeFlags_NoResizeX_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoResizeY;
-*/
-    private static native int ImGuiDockNodeFlags_NoResizeY_NATIVE();
+    private static int ImGuiDockNodeFlags_NoResizeY_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlagsPrivate_.ImGuiDockNodeFlags_NoResizeY_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_DockedWindowsInFocusRoute;
-*/
-    private static native int ImGuiDockNodeFlags_DockedWindowsInFocusRoute_NATIVE();
+    private static int ImGuiDockNodeFlags_DockedWindowsInFocusRoute_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlagsPrivate_.ImGuiDockNodeFlags_DockedWindowsInFocusRoute_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoDockingSplitOther;
-*/
-    private static native int ImGuiDockNodeFlags_NoDockingSplitOther_NATIVE();
+    private static int ImGuiDockNodeFlags_NoDockingSplitOther_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlagsPrivate_.ImGuiDockNodeFlags_NoDockingSplitOther_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoDockingOverMe;
-*/
-    private static native int ImGuiDockNodeFlags_NoDockingOverMe_NATIVE();
+    private static int ImGuiDockNodeFlags_NoDockingOverMe_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlagsPrivate_.ImGuiDockNodeFlags_NoDockingOverMe_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoDockingOverOther;
-*/
-    private static native int ImGuiDockNodeFlags_NoDockingOverOther_NATIVE();
+    private static int ImGuiDockNodeFlags_NoDockingOverOther_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlagsPrivate_.ImGuiDockNodeFlags_NoDockingOverOther_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoDockingOverEmpty;
-*/
-    private static native int ImGuiDockNodeFlags_NoDockingOverEmpty_NATIVE();
+    private static int ImGuiDockNodeFlags_NoDockingOverEmpty_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlagsPrivate_.ImGuiDockNodeFlags_NoDockingOverEmpty_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoDocking;
-*/
-    private static native int ImGuiDockNodeFlags_NoDocking_NATIVE();
+    private static int ImGuiDockNodeFlags_NoDocking_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlagsPrivate_.ImGuiDockNodeFlags_NoDocking_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_SharedFlagsInheritMask_;
-*/
-    private static native int ImGuiDockNodeFlags_SharedFlagsInheritMask__NATIVE();
+    private static int ImGuiDockNodeFlags_SharedFlagsInheritMask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlagsPrivate_.ImGuiDockNodeFlags_SharedFlagsInheritMask__NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoResizeFlagsMask_;
-*/
-    private static native int ImGuiDockNodeFlags_NoResizeFlagsMask__NATIVE();
+    private static int ImGuiDockNodeFlags_NoResizeFlagsMask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlagsPrivate_.ImGuiDockNodeFlags_NoResizeFlagsMask__NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_LocalFlagsTransferMask_;
-*/
-    private static native int ImGuiDockNodeFlags_LocalFlagsTransferMask__NATIVE();
+    private static int ImGuiDockNodeFlags_LocalFlagsTransferMask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlagsPrivate_.ImGuiDockNodeFlags_LocalFlagsTransferMask__NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_SavedFlagsMask_;
-*/
-    private static native int ImGuiDockNodeFlags_SavedFlagsMask__NATIVE();
+    private static int ImGuiDockNodeFlags_SavedFlagsMask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlagsPrivate_.ImGuiDockNodeFlags_SavedFlagsMask__NATIVE();
+    }
 }

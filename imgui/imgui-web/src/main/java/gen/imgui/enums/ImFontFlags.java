@@ -34,27 +34,15 @@ public enum ImFontFlags implements NativeEnum<ImFontFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImFontFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImFontFlags_None;")
     private static native int ImFontFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImFontFlags_NoLoadError;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImFontFlags_NoLoadError;")
     private static native int ImFontFlags_NoLoadError_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImFontFlags_NoLoadGlyphs;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImFontFlags_NoLoadGlyphs;")
     private static native int ImFontFlags_NoLoadGlyphs_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImFontFlags_LockBakedSizes;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImFontFlags_LockBakedSizes;")
     private static native int ImFontFlags_LockBakedSizes_NATIVE();
 }

@@ -71,426 +71,306 @@ public enum ImGuiWindowFlags implements NativeEnum<ImGuiWindowFlags> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_None;
-*/
     private static int ImGuiWindowFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_NoTitleBar;
-*/
     private static int ImGuiWindowFlags_NoTitleBar_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_NoTitleBar_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_NoResize;
-*/
     private static int ImGuiWindowFlags_NoResize_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_NoResize_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_NoMove;
-*/
     private static int ImGuiWindowFlags_NoMove_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_NoMove_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_NoScrollbar;
-*/
     private static int ImGuiWindowFlags_NoScrollbar_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_NoScrollbar_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_NoScrollWithMouse;
-*/
     private static int ImGuiWindowFlags_NoScrollWithMouse_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_NoScrollWithMouse_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_NoCollapse;
-*/
     private static int ImGuiWindowFlags_NoCollapse_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_NoCollapse_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_AlwaysAutoResize;
-*/
     private static int ImGuiWindowFlags_AlwaysAutoResize_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_AlwaysAutoResize_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_NoBackground;
-*/
     private static int ImGuiWindowFlags_NoBackground_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_NoBackground_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_NoSavedSettings;
-*/
     private static int ImGuiWindowFlags_NoSavedSettings_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_NoSavedSettings_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_NoMouseInputs;
-*/
     private static int ImGuiWindowFlags_NoMouseInputs_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_NoMouseInputs_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_MenuBar;
-*/
     private static int ImGuiWindowFlags_MenuBar_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_MenuBar_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_HorizontalScrollbar;
-*/
     private static int ImGuiWindowFlags_HorizontalScrollbar_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_HorizontalScrollbar_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_NoFocusOnAppearing;
-*/
     private static int ImGuiWindowFlags_NoFocusOnAppearing_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_NoFocusOnAppearing_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_NoBringToFrontOnFocus;
-*/
     private static int ImGuiWindowFlags_NoBringToFrontOnFocus_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_NoBringToFrontOnFocus_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_AlwaysVerticalScrollbar;
-*/
     private static int ImGuiWindowFlags_AlwaysVerticalScrollbar_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_AlwaysVerticalScrollbar_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_AlwaysHorizontalScrollbar;
-*/
     private static int ImGuiWindowFlags_AlwaysHorizontalScrollbar_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_AlwaysHorizontalScrollbar_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_NoNavInputs;
-*/
     private static int ImGuiWindowFlags_NoNavInputs_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_NoNavInputs_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_NoNavFocus;
-*/
     private static int ImGuiWindowFlags_NoNavFocus_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_NoNavFocus_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_UnsavedDocument;
-*/
     private static int ImGuiWindowFlags_UnsavedDocument_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_UnsavedDocument_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_NoDocking;
-*/
     private static int ImGuiWindowFlags_NoDocking_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_NoDocking_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_NoNav;
-*/
     private static int ImGuiWindowFlags_NoNav_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_NoNav_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_NoDecoration;
-*/
     private static int ImGuiWindowFlags_NoDecoration_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_NoDecoration_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_NoInputs;
-*/
     private static int ImGuiWindowFlags_NoInputs_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_NoInputs_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_DockNodeHost;
-*/
     private static int ImGuiWindowFlags_DockNodeHost_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_DockNodeHost_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_ChildWindow;
-*/
     private static int ImGuiWindowFlags_ChildWindow_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_ChildWindow_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_Tooltip;
-*/
     private static int ImGuiWindowFlags_Tooltip_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_Tooltip_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_Popup;
-*/
     private static int ImGuiWindowFlags_Popup_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_Popup_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_Modal;
-*/
     private static int ImGuiWindowFlags_Modal_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_Modal_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiWindowFlags_ChildMenu;
-*/
     private static int ImGuiWindowFlags_ChildMenu_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiWindowFlags_ChildMenu_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoTitleBar_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_notitlebar_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoResize_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_noresize_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoMove_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_nomove_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoScrollbar_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_noscrollbar_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoScrollWithMouse_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_noscrollwithmouse_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoCollapse_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_nocollapse_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_AlwaysAutoResize_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_alwaysautoresize_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoTitleBar_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1NoTitleBar_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoBackground_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_nobackground_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoResize_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1NoResize_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoSavedSettings_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_nosavedsettings_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoMove_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1NoMove_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoMouseInputs_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_nomouseinputs_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoScrollbar_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1NoScrollbar_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_MenuBar_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_menubar_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoScrollWithMouse_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1NoScrollWithMouse_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_HorizontalScrollbar_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_horizontalscrollbar_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoCollapse_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1NoCollapse_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoFocusOnAppearing_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_nofocusonappearing_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_AlwaysAutoResize_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1AlwaysAutoResize_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoBringToFrontOnFocus_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_nobringtofrontonfocus_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoBackground_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1NoBackground_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_AlwaysVerticalScrollbar_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_alwaysverticalscrollbar_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoSavedSettings_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1NoSavedSettings_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_AlwaysHorizontalScrollbar_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_alwayshorizontalscrollbar_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoMouseInputs_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1NoMouseInputs_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoNavInputs_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_nonavinputs_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_MenuBar_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1MenuBar_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoNavFocus_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_nonavfocus_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_HorizontalScrollbar_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1HorizontalScrollbar_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_UnsavedDocument_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_unsaveddocument_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoFocusOnAppearing_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1NoFocusOnAppearing_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoDocking_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_nodocking_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoBringToFrontOnFocus_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1NoBringToFrontOnFocus_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoNav_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_nonav_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_AlwaysVerticalScrollbar_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1AlwaysVerticalScrollbar_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoDecoration_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_nodecoration_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_AlwaysHorizontalScrollbar_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1AlwaysHorizontalScrollbar_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoInputs_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_noinputs_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoNavInputs_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1NoNavInputs_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_DockNodeHost_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_docknodehost_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoNavFocus_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1NoNavFocus_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_ChildWindow_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_childwindow_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_UnsavedDocument_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1UnsavedDocument_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_Tooltip_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_tooltip_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoDocking_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1NoDocking_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_Popup_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_popup_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoNav_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1NoNav_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_Modal_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_modal_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoDecoration_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1NoDecoration_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_NoInputs_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1NoInputs_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_DockNodeHost_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1DockNodeHost_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_ChildWindow_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1ChildWindow_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_Tooltip_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1Tooltip_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_Popup_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1Popup_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_Modal_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1Modal_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_ChildMenu_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiWindowFlags_ImGuiWindowFlags_1ChildMenu_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiWindowFlags_ChildMenu_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiwindowflags_imguiwindowflags_childmenu_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

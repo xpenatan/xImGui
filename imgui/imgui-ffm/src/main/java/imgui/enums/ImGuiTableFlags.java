@@ -78,517 +78,376 @@ public enum ImGuiTableFlags implements NativeEnum<ImGuiTableFlags> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_None;
-*/
     private static int ImGuiTableFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_Resizable;
-*/
     private static int ImGuiTableFlags_Resizable_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_Resizable_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_Reorderable;
-*/
     private static int ImGuiTableFlags_Reorderable_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_Reorderable_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_Hideable;
-*/
     private static int ImGuiTableFlags_Hideable_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_Hideable_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_Sortable;
-*/
     private static int ImGuiTableFlags_Sortable_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_Sortable_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_NoSavedSettings;
-*/
     private static int ImGuiTableFlags_NoSavedSettings_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_NoSavedSettings_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_ContextMenuInBody;
-*/
     private static int ImGuiTableFlags_ContextMenuInBody_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_ContextMenuInBody_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_RowBg;
-*/
     private static int ImGuiTableFlags_RowBg_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_RowBg_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_BordersInnerH;
-*/
     private static int ImGuiTableFlags_BordersInnerH_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_BordersInnerH_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_BordersOuterH;
-*/
     private static int ImGuiTableFlags_BordersOuterH_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_BordersOuterH_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_BordersInnerV;
-*/
     private static int ImGuiTableFlags_BordersInnerV_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_BordersInnerV_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_BordersOuterV;
-*/
     private static int ImGuiTableFlags_BordersOuterV_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_BordersOuterV_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_BordersH;
-*/
     private static int ImGuiTableFlags_BordersH_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_BordersH_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_BordersV;
-*/
     private static int ImGuiTableFlags_BordersV_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_BordersV_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_BordersInner;
-*/
     private static int ImGuiTableFlags_BordersInner_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_BordersInner_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_BordersOuter;
-*/
     private static int ImGuiTableFlags_BordersOuter_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_BordersOuter_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_Borders;
-*/
     private static int ImGuiTableFlags_Borders_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_Borders_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_NoBordersInBody;
-*/
     private static int ImGuiTableFlags_NoBordersInBody_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_NoBordersInBody_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_NoBordersInBodyUntilResize;
-*/
     private static int ImGuiTableFlags_NoBordersInBodyUntilResize_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_NoBordersInBodyUntilResize_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_SizingFixedFit;
-*/
     private static int ImGuiTableFlags_SizingFixedFit_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_SizingFixedFit_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_SizingFixedSame;
-*/
     private static int ImGuiTableFlags_SizingFixedSame_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_SizingFixedSame_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_SizingStretchProp;
-*/
     private static int ImGuiTableFlags_SizingStretchProp_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_SizingStretchProp_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_SizingStretchSame;
-*/
     private static int ImGuiTableFlags_SizingStretchSame_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_SizingStretchSame_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_NoHostExtendX;
-*/
     private static int ImGuiTableFlags_NoHostExtendX_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_NoHostExtendX_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_NoHostExtendY;
-*/
     private static int ImGuiTableFlags_NoHostExtendY_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_NoHostExtendY_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_NoKeepColumnsVisible;
-*/
     private static int ImGuiTableFlags_NoKeepColumnsVisible_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_NoKeepColumnsVisible_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_PreciseWidths;
-*/
     private static int ImGuiTableFlags_PreciseWidths_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_PreciseWidths_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_NoClip;
-*/
     private static int ImGuiTableFlags_NoClip_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_NoClip_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_PadOuterX;
-*/
     private static int ImGuiTableFlags_PadOuterX_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_PadOuterX_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_NoPadOuterX;
-*/
     private static int ImGuiTableFlags_NoPadOuterX_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_NoPadOuterX_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_NoPadInnerX;
-*/
     private static int ImGuiTableFlags_NoPadInnerX_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_NoPadInnerX_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_ScrollX;
-*/
     private static int ImGuiTableFlags_ScrollX_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_ScrollX_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_ScrollY;
-*/
     private static int ImGuiTableFlags_ScrollY_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_ScrollY_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_SortMulti;
-*/
     private static int ImGuiTableFlags_SortMulti_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_SortMulti_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_SortTristate;
-*/
     private static int ImGuiTableFlags_SortTristate_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_SortTristate_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_HighlightHoveredColumn;
-*/
     private static int ImGuiTableFlags_HighlightHoveredColumn_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_HighlightHoveredColumn_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTableFlags_SizingMask_;
-*/
     private static int ImGuiTableFlags_SizingMask__NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTableFlags_SizingMask__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_Resizable_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_resizable_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_Reorderable_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_reorderable_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_Hideable_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_hideable_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_Sortable_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_sortable_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_NoSavedSettings_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_nosavedsettings_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_ContextMenuInBody_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_contextmenuinbody_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_RowBg_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_rowbg_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_Resizable_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1Resizable_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_BordersInnerH_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_bordersinnerh_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_Reorderable_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1Reorderable_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_BordersOuterH_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_bordersouterh_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_Hideable_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1Hideable_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_BordersInnerV_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_bordersinnerv_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_Sortable_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1Sortable_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_BordersOuterV_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_bordersouterv_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_NoSavedSettings_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1NoSavedSettings_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_BordersH_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_bordersh_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_ContextMenuInBody_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1ContextMenuInBody_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_BordersV_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_bordersv_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_RowBg_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1RowBg_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_BordersInner_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_bordersinner_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_BordersInnerH_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1BordersInnerH_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_BordersOuter_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_bordersouter_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_BordersOuterH_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1BordersOuterH_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_Borders_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_borders_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_BordersInnerV_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1BordersInnerV_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_NoBordersInBody_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_nobordersinbody_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_BordersOuterV_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1BordersOuterV_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_NoBordersInBodyUntilResize_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_nobordersinbodyuntilresize_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_BordersH_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1BordersH_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_SizingFixedFit_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_sizingfixedfit_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_BordersV_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1BordersV_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_SizingFixedSame_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_sizingfixedsame_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_BordersInner_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1BordersInner_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_SizingStretchProp_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_sizingstretchprop_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_BordersOuter_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1BordersOuter_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_SizingStretchSame_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_sizingstretchsame_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_Borders_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1Borders_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_NoHostExtendX_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_nohostextendx_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_NoBordersInBody_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1NoBordersInBody_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_NoHostExtendY_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_nohostextendy_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_NoBordersInBodyUntilResize_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1NoBordersInBodyUntilResize_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_NoKeepColumnsVisible_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_nokeepcolumnsvisible_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_SizingFixedFit_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1SizingFixedFit_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_PreciseWidths_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_precisewidths_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_SizingFixedSame_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1SizingFixedSame_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_NoClip_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_noclip_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_SizingStretchProp_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1SizingStretchProp_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_PadOuterX_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_padouterx_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_SizingStretchSame_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1SizingStretchSame_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_NoPadOuterX_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_nopadouterx_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_NoHostExtendX_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1NoHostExtendX_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_NoPadInnerX_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_nopadinnerx_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_NoHostExtendY_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1NoHostExtendY_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_ScrollX_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_scrollx_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_NoKeepColumnsVisible_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1NoKeepColumnsVisible_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_ScrollY_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_scrolly_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_PreciseWidths_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1PreciseWidths_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_SortMulti_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_sortmulti_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_NoClip_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1NoClip_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_SortTristate_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_sorttristate_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_PadOuterX_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1PadOuterX_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_HighlightHoveredColumn_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_highlighthoveredcolumn_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_NoPadOuterX_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1NoPadOuterX_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_NoPadInnerX_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1NoPadInnerX_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_ScrollX_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1ScrollX_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_ScrollY_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1ScrollY_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_SortMulti_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1SortMulti_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_SortTristate_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1SortTristate_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_HighlightHoveredColumn_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1HighlightHoveredColumn_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiTableFlags_SizingMask__NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTableFlags_ImGuiTableFlags_1SizingMask_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTableFlags_SizingMask__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitableflags_imguitableflags_sizingmask__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

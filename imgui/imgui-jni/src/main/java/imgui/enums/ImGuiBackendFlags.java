@@ -44,53 +44,43 @@ public enum ImGuiBackendFlags implements NativeEnum<ImGuiBackendFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiBackendFlags_None;
-*/
-    private static native int ImGuiBackendFlags_None_NATIVE();
+    private static int ImGuiBackendFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiBackendFlags.ImGuiBackendFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiBackendFlags_HasGamepad;
-*/
-    private static native int ImGuiBackendFlags_HasGamepad_NATIVE();
+    private static int ImGuiBackendFlags_HasGamepad_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiBackendFlags.ImGuiBackendFlags_HasGamepad_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiBackendFlags_HasMouseCursors;
-*/
-    private static native int ImGuiBackendFlags_HasMouseCursors_NATIVE();
+    private static int ImGuiBackendFlags_HasMouseCursors_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiBackendFlags.ImGuiBackendFlags_HasMouseCursors_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiBackendFlags_HasSetMousePos;
-*/
-    private static native int ImGuiBackendFlags_HasSetMousePos_NATIVE();
+    private static int ImGuiBackendFlags_HasSetMousePos_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiBackendFlags.ImGuiBackendFlags_HasSetMousePos_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiBackendFlags_RendererHasVtxOffset;
-*/
-    private static native int ImGuiBackendFlags_RendererHasVtxOffset_NATIVE();
+    private static int ImGuiBackendFlags_RendererHasVtxOffset_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiBackendFlags.ImGuiBackendFlags_RendererHasVtxOffset_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiBackendFlags_RendererHasTextures;
-*/
-    private static native int ImGuiBackendFlags_RendererHasTextures_NATIVE();
+    private static int ImGuiBackendFlags_RendererHasTextures_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiBackendFlags.ImGuiBackendFlags_RendererHasTextures_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiBackendFlags_RendererHasViewports;
-*/
-    private static native int ImGuiBackendFlags_RendererHasViewports_NATIVE();
+    private static int ImGuiBackendFlags_RendererHasViewports_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiBackendFlags.ImGuiBackendFlags_RendererHasViewports_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiBackendFlags_PlatformHasViewports;
-*/
-    private static native int ImGuiBackendFlags_PlatformHasViewports_NATIVE();
+    private static int ImGuiBackendFlags_PlatformHasViewports_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiBackendFlags.ImGuiBackendFlags_PlatformHasViewports_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiBackendFlags_HasMouseHoveredViewport;
-*/
-    private static native int ImGuiBackendFlags_HasMouseHoveredViewport_NATIVE();
+    private static int ImGuiBackendFlags_HasMouseHoveredViewport_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiBackendFlags.ImGuiBackendFlags_HasMouseHoveredViewport_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiBackendFlags_HasParentViewport;
-*/
-    private static native int ImGuiBackendFlags_HasParentViewport_NATIVE();
+    private static int ImGuiBackendFlags_HasParentViewport_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiBackendFlags.ImGuiBackendFlags_HasParentViewport_NATIVE();
+    }
 }

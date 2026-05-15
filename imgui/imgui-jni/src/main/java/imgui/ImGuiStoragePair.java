@@ -32,11 +32,9 @@ public class ImGuiStoragePair extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiStoragePair* nativeObject = (ImGuiStoragePair*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ImGuiStoragePair.internal_native_deleteNative(this_addr);
+    }
 
     public NativeObject get_val_p() {
         long addr = internal_native_get_val_p_addr(native_address);
@@ -48,19 +46,15 @@ delete nativeObject;
         return NativeObject_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiStoragePair* nativeObject = (ImGuiStoragePair*)this_addr;
-return (jlong)nativeObject->val_p;
-*/
-    public static native long internal_native_get_val_p_addr(long this_addr);
+    public static long internal_native_get_val_p_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiStoragePair.internal_native_get_val_p_addr(this_addr);
+    }
 
     public void set_val_p(NativeObject val_p) {
         internal_native_set_val_p(native_address, val_p.native_void_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiStoragePair* nativeObject = (ImGuiStoragePair*)this_addr;
-nativeObject->val_p = (void**)val_p_addr;
-*/
-    public static native void internal_native_set_val_p(long this_addr, long val_p_addr);
+    public static void internal_native_set_val_p(long this_addr, long val_p_addr) {
+        imgui.natives.JNI_ImGuiStoragePair.internal_native_set_val_p(this_addr, val_p_addr);
+    }
 }

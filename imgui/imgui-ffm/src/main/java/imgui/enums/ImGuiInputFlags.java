@@ -52,179 +52,116 @@ public enum ImGuiInputFlags implements NativeEnum<ImGuiInputFlags> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_None;
-*/
     private static int ImGuiInputFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_Repeat;
-*/
     private static int ImGuiInputFlags_Repeat_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_Repeat_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_RouteActive;
-*/
     private static int ImGuiInputFlags_RouteActive_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_RouteActive_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_RouteFocused;
-*/
     private static int ImGuiInputFlags_RouteFocused_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_RouteFocused_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_RouteGlobal;
-*/
     private static int ImGuiInputFlags_RouteGlobal_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_RouteGlobal_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_RouteAlways;
-*/
     private static int ImGuiInputFlags_RouteAlways_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_RouteAlways_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_RouteOverFocused;
-*/
     private static int ImGuiInputFlags_RouteOverFocused_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_RouteOverFocused_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_RouteOverActive;
-*/
     private static int ImGuiInputFlags_RouteOverActive_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_RouteOverActive_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_RouteUnlessBgFocused;
-*/
     private static int ImGuiInputFlags_RouteUnlessBgFocused_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_RouteUnlessBgFocused_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_RouteFromRootWindow;
-*/
     private static int ImGuiInputFlags_RouteFromRootWindow_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_RouteFromRootWindow_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_Tooltip;
-*/
     private static int ImGuiInputFlags_Tooltip_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_Tooltip_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflags_imguiinputflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_Repeat_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflags_imguiinputflags_repeat_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RouteActive_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflags_imguiinputflags_routeactive_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RouteFocused_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflags_imguiinputflags_routefocused_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RouteGlobal_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflags_imguiinputflags_routeglobal_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RouteAlways_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflags_imguiinputflags_routealways_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RouteOverFocused_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflags_imguiinputflags_routeoverfocused_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlags_ImGuiInputFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RouteOverActive_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflags_imguiinputflags_routeoveractive_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_Repeat_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlags_ImGuiInputFlags_1Repeat_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RouteUnlessBgFocused_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflags_imguiinputflags_routeunlessbgfocused_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RouteActive_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlags_ImGuiInputFlags_1RouteActive_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RouteFromRootWindow_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflags_imguiinputflags_routefromrootwindow_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RouteFocused_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlags_ImGuiInputFlags_1RouteFocused_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RouteGlobal_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlags_ImGuiInputFlags_1RouteGlobal_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RouteAlways_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlags_ImGuiInputFlags_1RouteAlways_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RouteOverFocused_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlags_ImGuiInputFlags_1RouteOverFocused_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RouteOverActive_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlags_ImGuiInputFlags_1RouteOverActive_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RouteUnlessBgFocused_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlags_ImGuiInputFlags_1RouteUnlessBgFocused_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RouteFromRootWindow_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlags_ImGuiInputFlags_1RouteFromRootWindow_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_Tooltip_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlags_ImGuiInputFlags_1Tooltip_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_Tooltip_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflags_imguiinputflags_tooltip_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

@@ -74,203 +74,163 @@ public enum ImGuiStyleVar implements NativeEnum<ImGuiStyleVar> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_Alpha;
-*/
-    private static native int ImGuiStyleVar_Alpha_NATIVE();
+    private static int ImGuiStyleVar_Alpha_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_Alpha_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_DisabledAlpha;
-*/
-    private static native int ImGuiStyleVar_DisabledAlpha_NATIVE();
+    private static int ImGuiStyleVar_DisabledAlpha_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_DisabledAlpha_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_WindowPadding;
-*/
-    private static native int ImGuiStyleVar_WindowPadding_NATIVE();
+    private static int ImGuiStyleVar_WindowPadding_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_WindowPadding_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_WindowRounding;
-*/
-    private static native int ImGuiStyleVar_WindowRounding_NATIVE();
+    private static int ImGuiStyleVar_WindowRounding_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_WindowRounding_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_WindowBorderSize;
-*/
-    private static native int ImGuiStyleVar_WindowBorderSize_NATIVE();
+    private static int ImGuiStyleVar_WindowBorderSize_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_WindowBorderSize_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_WindowMinSize;
-*/
-    private static native int ImGuiStyleVar_WindowMinSize_NATIVE();
+    private static int ImGuiStyleVar_WindowMinSize_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_WindowMinSize_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_WindowTitleAlign;
-*/
-    private static native int ImGuiStyleVar_WindowTitleAlign_NATIVE();
+    private static int ImGuiStyleVar_WindowTitleAlign_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_WindowTitleAlign_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_ChildRounding;
-*/
-    private static native int ImGuiStyleVar_ChildRounding_NATIVE();
+    private static int ImGuiStyleVar_ChildRounding_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_ChildRounding_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_ChildBorderSize;
-*/
-    private static native int ImGuiStyleVar_ChildBorderSize_NATIVE();
+    private static int ImGuiStyleVar_ChildBorderSize_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_ChildBorderSize_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_PopupRounding;
-*/
-    private static native int ImGuiStyleVar_PopupRounding_NATIVE();
+    private static int ImGuiStyleVar_PopupRounding_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_PopupRounding_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_PopupBorderSize;
-*/
-    private static native int ImGuiStyleVar_PopupBorderSize_NATIVE();
+    private static int ImGuiStyleVar_PopupBorderSize_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_PopupBorderSize_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_FramePadding;
-*/
-    private static native int ImGuiStyleVar_FramePadding_NATIVE();
+    private static int ImGuiStyleVar_FramePadding_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_FramePadding_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_FrameRounding;
-*/
-    private static native int ImGuiStyleVar_FrameRounding_NATIVE();
+    private static int ImGuiStyleVar_FrameRounding_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_FrameRounding_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_FrameBorderSize;
-*/
-    private static native int ImGuiStyleVar_FrameBorderSize_NATIVE();
+    private static int ImGuiStyleVar_FrameBorderSize_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_FrameBorderSize_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_ItemSpacing;
-*/
-    private static native int ImGuiStyleVar_ItemSpacing_NATIVE();
+    private static int ImGuiStyleVar_ItemSpacing_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_ItemSpacing_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_ItemInnerSpacing;
-*/
-    private static native int ImGuiStyleVar_ItemInnerSpacing_NATIVE();
+    private static int ImGuiStyleVar_ItemInnerSpacing_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_ItemInnerSpacing_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_IndentSpacing;
-*/
-    private static native int ImGuiStyleVar_IndentSpacing_NATIVE();
+    private static int ImGuiStyleVar_IndentSpacing_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_IndentSpacing_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_CellPadding;
-*/
-    private static native int ImGuiStyleVar_CellPadding_NATIVE();
+    private static int ImGuiStyleVar_CellPadding_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_CellPadding_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_ScrollbarSize;
-*/
-    private static native int ImGuiStyleVar_ScrollbarSize_NATIVE();
+    private static int ImGuiStyleVar_ScrollbarSize_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_ScrollbarSize_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_ScrollbarRounding;
-*/
-    private static native int ImGuiStyleVar_ScrollbarRounding_NATIVE();
+    private static int ImGuiStyleVar_ScrollbarRounding_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_ScrollbarRounding_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_ScrollbarPadding;
-*/
-    private static native int ImGuiStyleVar_ScrollbarPadding_NATIVE();
+    private static int ImGuiStyleVar_ScrollbarPadding_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_ScrollbarPadding_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_GrabMinSize;
-*/
-    private static native int ImGuiStyleVar_GrabMinSize_NATIVE();
+    private static int ImGuiStyleVar_GrabMinSize_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_GrabMinSize_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_GrabRounding;
-*/
-    private static native int ImGuiStyleVar_GrabRounding_NATIVE();
+    private static int ImGuiStyleVar_GrabRounding_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_GrabRounding_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_ImageBorderSize;
-*/
-    private static native int ImGuiStyleVar_ImageBorderSize_NATIVE();
+    private static int ImGuiStyleVar_ImageBorderSize_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_ImageBorderSize_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_TabRounding;
-*/
-    private static native int ImGuiStyleVar_TabRounding_NATIVE();
+    private static int ImGuiStyleVar_TabRounding_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_TabRounding_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_TabBorderSize;
-*/
-    private static native int ImGuiStyleVar_TabBorderSize_NATIVE();
+    private static int ImGuiStyleVar_TabBorderSize_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_TabBorderSize_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_TabMinWidthBase;
-*/
-    private static native int ImGuiStyleVar_TabMinWidthBase_NATIVE();
+    private static int ImGuiStyleVar_TabMinWidthBase_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_TabMinWidthBase_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_TabMinWidthShrink;
-*/
-    private static native int ImGuiStyleVar_TabMinWidthShrink_NATIVE();
+    private static int ImGuiStyleVar_TabMinWidthShrink_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_TabMinWidthShrink_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_TabBarBorderSize;
-*/
-    private static native int ImGuiStyleVar_TabBarBorderSize_NATIVE();
+    private static int ImGuiStyleVar_TabBarBorderSize_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_TabBarBorderSize_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_TabBarOverlineSize;
-*/
-    private static native int ImGuiStyleVar_TabBarOverlineSize_NATIVE();
+    private static int ImGuiStyleVar_TabBarOverlineSize_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_TabBarOverlineSize_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_TableAngledHeadersAngle;
-*/
-    private static native int ImGuiStyleVar_TableAngledHeadersAngle_NATIVE();
+    private static int ImGuiStyleVar_TableAngledHeadersAngle_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_TableAngledHeadersAngle_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_TableAngledHeadersTextAlign;
-*/
-    private static native int ImGuiStyleVar_TableAngledHeadersTextAlign_NATIVE();
+    private static int ImGuiStyleVar_TableAngledHeadersTextAlign_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_TableAngledHeadersTextAlign_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_TreeLinesSize;
-*/
-    private static native int ImGuiStyleVar_TreeLinesSize_NATIVE();
+    private static int ImGuiStyleVar_TreeLinesSize_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_TreeLinesSize_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_TreeLinesRounding;
-*/
-    private static native int ImGuiStyleVar_TreeLinesRounding_NATIVE();
+    private static int ImGuiStyleVar_TreeLinesRounding_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_TreeLinesRounding_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_ButtonTextAlign;
-*/
-    private static native int ImGuiStyleVar_ButtonTextAlign_NATIVE();
+    private static int ImGuiStyleVar_ButtonTextAlign_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_ButtonTextAlign_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_SelectableTextAlign;
-*/
-    private static native int ImGuiStyleVar_SelectableTextAlign_NATIVE();
+    private static int ImGuiStyleVar_SelectableTextAlign_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_SelectableTextAlign_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_SeparatorTextBorderSize;
-*/
-    private static native int ImGuiStyleVar_SeparatorTextBorderSize_NATIVE();
+    private static int ImGuiStyleVar_SeparatorTextBorderSize_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_SeparatorTextBorderSize_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_SeparatorTextAlign;
-*/
-    private static native int ImGuiStyleVar_SeparatorTextAlign_NATIVE();
+    private static int ImGuiStyleVar_SeparatorTextAlign_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_SeparatorTextAlign_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_SeparatorTextPadding;
-*/
-    private static native int ImGuiStyleVar_SeparatorTextPadding_NATIVE();
+    private static int ImGuiStyleVar_SeparatorTextPadding_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_SeparatorTextPadding_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiStyleVar_DockingSeparatorSize;
-*/
-    private static native int ImGuiStyleVar_DockingSeparatorSize_NATIVE();
+    private static int ImGuiStyleVar_DockingSeparatorSize_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiStyleVar.ImGuiStyleVar_DockingSeparatorSize_NATIVE();
+    }
 }

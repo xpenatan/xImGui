@@ -34,15 +34,9 @@ public enum ImTextureFormat implements NativeEnum<ImTextureFormat> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImTextureFormat_RGBA32;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImTextureFormat_RGBA32;")
     private static native int ImTextureFormat_RGBA32_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImTextureFormat_Alpha8;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImTextureFormat_Alpha8;")
     private static native int ImTextureFormat_Alpha8_NATIVE();
 }

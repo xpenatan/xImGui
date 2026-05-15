@@ -43,10 +43,6 @@ public class ImGuiLayout extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayout);
-imlayout.destroy(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayout);imlayout.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
@@ -60,12 +56,6 @@ imlayout.destroy(jsObj);
         return ImVec2_TEMP_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayout);
-var returnedJSObj = jsObj.getAbsoluteSize();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imlayout.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayout);var returnedJSObj = jsObj.getAbsoluteSize();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imlayout.getPointer(returnedJSObj);")
     public static native int internal_native_getAbsoluteSize_addr(int this_addr);
 
@@ -79,12 +69,6 @@ return imlayout.getPointer(returnedJSObj);
         return ImVec2_TEMP_GEN_1;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayout);
-var returnedJSObj = jsObj.getAbsoluteSizePadding();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imlayout.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayout);var returnedJSObj = jsObj.getAbsoluteSizePadding();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imlayout.getPointer(returnedJSObj);")
     public static native int internal_native_getAbsoluteSizePadding_addr(int this_addr);
 
@@ -98,12 +82,6 @@ return imlayout.getPointer(returnedJSObj);
         return ImVec2_TEMP_GEN_2;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayout);
-var returnedJSObj = jsObj.getContentSize();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imlayout.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayout);var returnedJSObj = jsObj.getContentSize();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imlayout.getPointer(returnedJSObj);")
     public static native int internal_native_getContentSize_addr(int this_addr);
 
@@ -117,12 +95,6 @@ return imlayout.getPointer(returnedJSObj);
         return ImVec2_TEMP_GEN_3;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayout);
-var returnedJSObj = jsObj.getPositionPadding();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imlayout.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayout);var returnedJSObj = jsObj.getPositionPadding();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imlayout.getPointer(returnedJSObj);")
     public static native int internal_native_getPositionPadding_addr(int this_addr);
 
@@ -136,12 +108,6 @@ return imlayout.getPointer(returnedJSObj);
         return ImVec2_TEMP_GEN_4;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayout);
-var returnedJSObj = jsObj.get_position();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imlayout.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayout);var returnedJSObj = jsObj.get_position();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imlayout.getPointer(returnedJSObj);")
     public static native int internal_native_get_position_addr(int this_addr);
 
@@ -149,10 +115,6 @@ return imlayout.getPointer(returnedJSObj);
         internal_native_set_position(native_address, position.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayout);
-jsObj.set_position(position_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "position_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayout);jsObj.set_position(position_addr);")
     public static native void internal_native_set_position(int this_addr, int position_addr);
 
@@ -166,12 +128,6 @@ jsObj.set_position(position_addr);
         return ImVec2_TEMP_GEN_5;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayout);
-var returnedJSObj = jsObj.get_size();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imlayout.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayout);var returnedJSObj = jsObj.get_size();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imlayout.getPointer(returnedJSObj);")
     public static native int internal_native_get_size_addr(int this_addr);
 
@@ -179,10 +135,6 @@ return imlayout.getPointer(returnedJSObj);
         internal_native_set_size(native_address, size.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayout);
-jsObj.set_size(size_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "size_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiLayout);jsObj.set_size(size_addr);")
     public static native void internal_native_set_size(int this_addr, int size_addr);
 }

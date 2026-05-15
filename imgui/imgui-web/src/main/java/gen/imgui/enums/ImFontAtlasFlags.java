@@ -34,27 +34,15 @@ public enum ImFontAtlasFlags implements NativeEnum<ImFontAtlasFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImFontAtlasFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImFontAtlasFlags_None;")
     private static native int ImFontAtlasFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImFontAtlasFlags_NoPowerOfTwoHeight;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImFontAtlasFlags_NoPowerOfTwoHeight;")
     private static native int ImFontAtlasFlags_NoPowerOfTwoHeight_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImFontAtlasFlags_NoMouseCursors;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImFontAtlasFlags_NoMouseCursors;")
     private static native int ImFontAtlasFlags_NoMouseCursors_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImFontAtlasFlags_NoBakedLines;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImFontAtlasFlags_NoBakedLines;")
     private static native int ImFontAtlasFlags_NoBakedLines_NATIVE();
 }

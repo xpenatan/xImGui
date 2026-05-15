@@ -35,10 +35,6 @@ public class LoadSaveSettingsListener extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = nodeeditor.wrapPointer(this_addr, nodeeditor.LoadSaveSettingsListenerImpl);
-nodeeditor.destroy(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = nodeeditor.wrapPointer(this_addr, nodeeditor.LoadSaveSettingsListenerImpl);nodeeditor.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
@@ -94,10 +90,6 @@ nodeeditor.destroy(jsObj);
         return onSave(NativeString_TEMP_STATIC_GEN_1, reason_addr_enum);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = new nodeeditor.LoadSaveSettingsListenerImpl();
-return nodeeditor.getPointer(jsObj);
-*/
     @org.teavm.jso.JSBody(script = "var jsObj = new nodeeditor.LoadSaveSettingsListenerImpl();return nodeeditor.getPointer(jsObj);")
     public static native int internal_native_create_addr();
 

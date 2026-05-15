@@ -51,166 +51,106 @@ public enum ImGuiBackendFlags implements NativeEnum<ImGuiBackendFlags> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiBackendFlags_None;
-*/
     private static int ImGuiBackendFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiBackendFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiBackendFlags_HasGamepad;
-*/
     private static int ImGuiBackendFlags_HasGamepad_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiBackendFlags_HasGamepad_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiBackendFlags_HasMouseCursors;
-*/
     private static int ImGuiBackendFlags_HasMouseCursors_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiBackendFlags_HasMouseCursors_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiBackendFlags_HasSetMousePos;
-*/
     private static int ImGuiBackendFlags_HasSetMousePos_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiBackendFlags_HasSetMousePos_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiBackendFlags_RendererHasVtxOffset;
-*/
     private static int ImGuiBackendFlags_RendererHasVtxOffset_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiBackendFlags_RendererHasVtxOffset_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiBackendFlags_RendererHasTextures;
-*/
     private static int ImGuiBackendFlags_RendererHasTextures_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiBackendFlags_RendererHasTextures_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiBackendFlags_RendererHasViewports;
-*/
     private static int ImGuiBackendFlags_RendererHasViewports_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiBackendFlags_RendererHasViewports_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiBackendFlags_PlatformHasViewports;
-*/
     private static int ImGuiBackendFlags_PlatformHasViewports_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiBackendFlags_PlatformHasViewports_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiBackendFlags_HasMouseHoveredViewport;
-*/
     private static int ImGuiBackendFlags_HasMouseHoveredViewport_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiBackendFlags_HasMouseHoveredViewport_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiBackendFlags_HasParentViewport;
-*/
     private static int ImGuiBackendFlags_HasParentViewport_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiBackendFlags_HasParentViewport_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiBackendFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibackendflags_imguibackendflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiBackendFlags_HasGamepad_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibackendflags_imguibackendflags_hasgamepad_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiBackendFlags_HasMouseCursors_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibackendflags_imguibackendflags_hasmousecursors_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiBackendFlags_HasSetMousePos_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibackendflags_imguibackendflags_hassetmousepos_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiBackendFlags_RendererHasVtxOffset_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibackendflags_imguibackendflags_rendererhasvtxoffset_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiBackendFlags_RendererHasTextures_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibackendflags_imguibackendflags_rendererhastextures_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiBackendFlags_RendererHasViewports_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibackendflags_imguibackendflags_rendererhasviewports_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiBackendFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiBackendFlags_ImGuiBackendFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiBackendFlags_PlatformHasViewports_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibackendflags_imguibackendflags_platformhasviewports_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiBackendFlags_HasGamepad_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiBackendFlags_ImGuiBackendFlags_1HasGamepad_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiBackendFlags_HasMouseHoveredViewport_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibackendflags_imguibackendflags_hasmousehoveredviewport_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiBackendFlags_HasMouseCursors_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiBackendFlags_ImGuiBackendFlags_1HasMouseCursors_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiBackendFlags_HasSetMousePos_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiBackendFlags_ImGuiBackendFlags_1HasSetMousePos_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiBackendFlags_RendererHasVtxOffset_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiBackendFlags_ImGuiBackendFlags_1RendererHasVtxOffset_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiBackendFlags_RendererHasTextures_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiBackendFlags_ImGuiBackendFlags_1RendererHasTextures_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiBackendFlags_RendererHasViewports_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiBackendFlags_ImGuiBackendFlags_1RendererHasViewports_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiBackendFlags_PlatformHasViewports_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiBackendFlags_ImGuiBackendFlags_1PlatformHasViewports_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiBackendFlags_HasMouseHoveredViewport_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiBackendFlags_ImGuiBackendFlags_1HasMouseHoveredViewport_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiBackendFlags_HasParentViewport_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiBackendFlags_ImGuiBackendFlags_1HasParentViewport_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiBackendFlags_HasParentViewport_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguibackendflags_imguibackendflags_hasparentviewport_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

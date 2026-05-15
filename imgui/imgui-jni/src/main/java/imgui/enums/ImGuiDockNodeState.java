@@ -34,23 +34,19 @@ public enum ImGuiDockNodeState implements NativeEnum<ImGuiDockNodeState> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeState_Unknown;
-*/
-    private static native int ImGuiDockNodeState_Unknown_NATIVE();
+    private static int ImGuiDockNodeState_Unknown_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeState.ImGuiDockNodeState_Unknown_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeState_HostWindowHiddenBecauseSingleWindow;
-*/
-    private static native int ImGuiDockNodeState_HostWindowHiddenBecauseSingleWindow_NATIVE();
+    private static int ImGuiDockNodeState_HostWindowHiddenBecauseSingleWindow_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeState.ImGuiDockNodeState_HostWindowHiddenBecauseSingleWindow_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeState_HostWindowHiddenBecauseWindowsAreResizing;
-*/
-    private static native int ImGuiDockNodeState_HostWindowHiddenBecauseWindowsAreResizing_NATIVE();
+    private static int ImGuiDockNodeState_HostWindowHiddenBecauseWindowsAreResizing_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeState.ImGuiDockNodeState_HostWindowHiddenBecauseWindowsAreResizing_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeState_HostWindowVisible;
-*/
-    private static native int ImGuiDockNodeState_HostWindowVisible_NATIVE();
+    private static int ImGuiDockNodeState_HostWindowVisible_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeState.ImGuiDockNodeState_HostWindowVisible_NATIVE();
+    }
 }

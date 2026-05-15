@@ -64,21 +64,17 @@ public class ImGuiContext extends NativeObject {
         return internal_native_get_Time(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->Time;
-*/
-    public static native double internal_native_get_Time(long this_addr);
+    public static double internal_native_get_Time(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_Time(this_addr);
+    }
 
     public int get_NavId() {
         return internal_native_get_NavId(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->NavId;
-*/
-    public static native int internal_native_get_NavId(long this_addr);
+    public static int internal_native_get_NavId(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_NavId(this_addr);
+    }
 
     public ImVectorImGuiWindowPtr get_Windows() {
         long addr = internal_native_get_Windows_addr(native_address);
@@ -90,11 +86,9 @@ return nativeObject->NavId;
         return ImVectorImGuiWindowPtr_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return (jlong)&nativeObject->Windows;
-*/
-    public static native long internal_native_get_Windows_addr(long this_addr);
+    public static long internal_native_get_Windows_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_Windows_addr(this_addr);
+    }
 
     public ImVectorImGuiWindowPtr get_WindowsFocusOrder() {
         long addr = internal_native_get_WindowsFocusOrder_addr(native_address);
@@ -106,11 +100,9 @@ return (jlong)&nativeObject->Windows;
         return ImVectorImGuiWindowPtr_TEMP_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return (jlong)&nativeObject->WindowsFocusOrder;
-*/
-    public static native long internal_native_get_WindowsFocusOrder_addr(long this_addr);
+    public static long internal_native_get_WindowsFocusOrder_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_WindowsFocusOrder_addr(this_addr);
+    }
 
     public ImVectorImGuiWindowPtr get_WindowsTempSortBuffer() {
         long addr = internal_native_get_WindowsTempSortBuffer_addr(native_address);
@@ -122,11 +114,9 @@ return (jlong)&nativeObject->WindowsFocusOrder;
         return ImVectorImGuiWindowPtr_TEMP_GEN_2;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return (jlong)&nativeObject->WindowsTempSortBuffer;
-*/
-    public static native long internal_native_get_WindowsTempSortBuffer_addr(long this_addr);
+    public static long internal_native_get_WindowsTempSortBuffer_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_WindowsTempSortBuffer_addr(this_addr);
+    }
 
     public ImVectorImGuiWindowStackData get_CurrentWindowStack() {
         long addr = internal_native_get_CurrentWindowStack_addr(native_address);
@@ -138,11 +128,9 @@ return (jlong)&nativeObject->WindowsTempSortBuffer;
         return ImVectorImGuiWindowStackData_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return (jlong)&nativeObject->CurrentWindowStack;
-*/
-    public static native long internal_native_get_CurrentWindowStack_addr(long this_addr);
+    public static long internal_native_get_CurrentWindowStack_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_CurrentWindowStack_addr(this_addr);
+    }
 
     public ImGuiStorage get_WindowsById() {
         long addr = internal_native_get_WindowsById_addr(native_address);
@@ -154,41 +142,33 @@ return (jlong)&nativeObject->CurrentWindowStack;
         return ImGuiStorage_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return (jlong)&nativeObject->WindowsById;
-*/
-    public static native long internal_native_get_WindowsById_addr(long this_addr);
+    public static long internal_native_get_WindowsById_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_WindowsById_addr(this_addr);
+    }
 
     public int get_WindowsActiveCount() {
         return internal_native_get_WindowsActiveCount(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->WindowsActiveCount;
-*/
-    public static native int internal_native_get_WindowsActiveCount(long this_addr);
+    public static int internal_native_get_WindowsActiveCount(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_WindowsActiveCount(this_addr);
+    }
 
     public float get_WindowsBorderHoverPadding() {
         return internal_native_get_WindowsBorderHoverPadding(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->WindowsBorderHoverPadding;
-*/
-    public static native float internal_native_get_WindowsBorderHoverPadding(long this_addr);
+    public static float internal_native_get_WindowsBorderHoverPadding(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_WindowsBorderHoverPadding(this_addr);
+    }
 
     public int get_DebugBreakInWindow() {
         return internal_native_get_DebugBreakInWindow(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->DebugBreakInWindow;
-*/
-    public static native int internal_native_get_DebugBreakInWindow(long this_addr);
+    public static int internal_native_get_DebugBreakInWindow(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_DebugBreakInWindow(this_addr);
+    }
 
     public ImGuiWindow get_CurrentWindow() {
         long addr = internal_native_get_CurrentWindow_addr(native_address);
@@ -200,12 +180,9 @@ return nativeObject->DebugBreakInWindow;
         return ImGuiWindow_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-ImGuiWindow* attr = nativeObject->CurrentWindow;
-return (jlong)attr;
-*/
-    public static native long internal_native_get_CurrentWindow_addr(long this_addr);
+    public static long internal_native_get_CurrentWindow_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_CurrentWindow_addr(this_addr);
+    }
 
     public ImGuiWindow get_HoveredWindow() {
         long addr = internal_native_get_HoveredWindow_addr(native_address);
@@ -217,12 +194,9 @@ return (jlong)attr;
         return ImGuiWindow_TEMP_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-ImGuiWindow* attr = nativeObject->HoveredWindow;
-return (jlong)attr;
-*/
-    public static native long internal_native_get_HoveredWindow_addr(long this_addr);
+    public static long internal_native_get_HoveredWindow_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_HoveredWindow_addr(this_addr);
+    }
 
     public ImGuiWindow get_HoveredWindowUnderMovingWindow() {
         long addr = internal_native_get_HoveredWindowUnderMovingWindow_addr(native_address);
@@ -234,12 +208,9 @@ return (jlong)attr;
         return ImGuiWindow_TEMP_GEN_2;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-ImGuiWindow* attr = nativeObject->HoveredWindowUnderMovingWindow;
-return (jlong)attr;
-*/
-    public static native long internal_native_get_HoveredWindowUnderMovingWindow_addr(long this_addr);
+    public static long internal_native_get_HoveredWindowUnderMovingWindow_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_HoveredWindowUnderMovingWindow_addr(this_addr);
+    }
 
     public ImGuiWindow get_HoveredWindowBeforeClear() {
         long addr = internal_native_get_HoveredWindowBeforeClear_addr(native_address);
@@ -251,12 +222,9 @@ return (jlong)attr;
         return ImGuiWindow_TEMP_GEN_3;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-ImGuiWindow* attr = nativeObject->HoveredWindowBeforeClear;
-return (jlong)attr;
-*/
-    public static native long internal_native_get_HoveredWindowBeforeClear_addr(long this_addr);
+    public static long internal_native_get_HoveredWindowBeforeClear_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_HoveredWindowBeforeClear_addr(this_addr);
+    }
 
     public ImGuiWindow get_MovingWindow() {
         long addr = internal_native_get_MovingWindow_addr(native_address);
@@ -268,12 +236,9 @@ return (jlong)attr;
         return ImGuiWindow_TEMP_GEN_4;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-ImGuiWindow* attr = nativeObject->MovingWindow;
-return (jlong)attr;
-*/
-    public static native long internal_native_get_MovingWindow_addr(long this_addr);
+    public static long internal_native_get_MovingWindow_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_MovingWindow_addr(this_addr);
+    }
 
     public ImGuiWindow get_WheelingWindow() {
         long addr = internal_native_get_WheelingWindow_addr(native_address);
@@ -285,12 +250,9 @@ return (jlong)attr;
         return ImGuiWindow_TEMP_GEN_5;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-ImGuiWindow* attr = nativeObject->WheelingWindow;
-return (jlong)attr;
-*/
-    public static native long internal_native_get_WheelingWindow_addr(long this_addr);
+    public static long internal_native_get_WheelingWindow_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_WheelingWindow_addr(this_addr);
+    }
 
     public ImVec2 get_WheelingWindowRefMousePos() {
         long addr = internal_native_get_WheelingWindowRefMousePos_addr(native_address);
@@ -302,41 +264,33 @@ return (jlong)attr;
         return ImVec2_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return (jlong)&nativeObject->WheelingWindowRefMousePos;
-*/
-    public static native long internal_native_get_WheelingWindowRefMousePos_addr(long this_addr);
+    public static long internal_native_get_WheelingWindowRefMousePos_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_WheelingWindowRefMousePos_addr(this_addr);
+    }
 
     public int get_WheelingWindowStartFrame() {
         return internal_native_get_WheelingWindowStartFrame(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->WheelingWindowStartFrame;
-*/
-    public static native int internal_native_get_WheelingWindowStartFrame(long this_addr);
+    public static int internal_native_get_WheelingWindowStartFrame(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_WheelingWindowStartFrame(this_addr);
+    }
 
     public int get_WheelingWindowScrolledFrame() {
         return internal_native_get_WheelingWindowScrolledFrame(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->WheelingWindowScrolledFrame;
-*/
-    public static native int internal_native_get_WheelingWindowScrolledFrame(long this_addr);
+    public static int internal_native_get_WheelingWindowScrolledFrame(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_WheelingWindowScrolledFrame(this_addr);
+    }
 
     public float get_WheelingWindowReleaseTimer() {
         return internal_native_get_WheelingWindowReleaseTimer(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->WheelingWindowReleaseTimer;
-*/
-    public static native float internal_native_get_WheelingWindowReleaseTimer(long this_addr);
+    public static float internal_native_get_WheelingWindowReleaseTimer(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_WheelingWindowReleaseTimer(this_addr);
+    }
 
     public ImVec2 get_WheelingWindowWheelRemainder() {
         long addr = internal_native_get_WheelingWindowWheelRemainder_addr(native_address);
@@ -348,11 +302,9 @@ return nativeObject->WheelingWindowReleaseTimer;
         return ImVec2_TEMP_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return (jlong)&nativeObject->WheelingWindowWheelRemainder;
-*/
-    public static native long internal_native_get_WheelingWindowWheelRemainder_addr(long this_addr);
+    public static long internal_native_get_WheelingWindowWheelRemainder_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_WheelingWindowWheelRemainder_addr(this_addr);
+    }
 
     public ImVec2 get_WheelingAxisAvg() {
         long addr = internal_native_get_WheelingAxisAvg_addr(native_address);
@@ -364,231 +316,185 @@ return (jlong)&nativeObject->WheelingWindowWheelRemainder;
         return ImVec2_TEMP_GEN_2;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return (jlong)&nativeObject->WheelingAxisAvg;
-*/
-    public static native long internal_native_get_WheelingAxisAvg_addr(long this_addr);
+    public static long internal_native_get_WheelingAxisAvg_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_WheelingAxisAvg_addr(this_addr);
+    }
 
     public int get_DebugDrawIdConflictsId() {
         return internal_native_get_DebugDrawIdConflictsId(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->DebugDrawIdConflictsId;
-*/
-    public static native int internal_native_get_DebugDrawIdConflictsId(long this_addr);
+    public static int internal_native_get_DebugDrawIdConflictsId(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_DebugDrawIdConflictsId(this_addr);
+    }
 
     public int get_DebugHookIdInfoId() {
         return internal_native_get_DebugHookIdInfoId(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->DebugHookIdInfoId;
-*/
-    public static native int internal_native_get_DebugHookIdInfoId(long this_addr);
+    public static int internal_native_get_DebugHookIdInfoId(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_DebugHookIdInfoId(this_addr);
+    }
 
     public int get_HoveredId() {
         return internal_native_get_HoveredId(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->HoveredId;
-*/
-    public static native int internal_native_get_HoveredId(long this_addr);
+    public static int internal_native_get_HoveredId(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_HoveredId(this_addr);
+    }
 
     public int get_HoveredIdPreviousFrame() {
         return internal_native_get_HoveredIdPreviousFrame(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->HoveredIdPreviousFrame;
-*/
-    public static native int internal_native_get_HoveredIdPreviousFrame(long this_addr);
+    public static int internal_native_get_HoveredIdPreviousFrame(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_HoveredIdPreviousFrame(this_addr);
+    }
 
     public int get_HoveredIdPreviousFrameItemCount() {
         return internal_native_get_HoveredIdPreviousFrameItemCount(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->HoveredIdPreviousFrameItemCount;
-*/
-    public static native int internal_native_get_HoveredIdPreviousFrameItemCount(long this_addr);
+    public static int internal_native_get_HoveredIdPreviousFrameItemCount(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_HoveredIdPreviousFrameItemCount(this_addr);
+    }
 
     public float get_HoveredIdTimer() {
         return internal_native_get_HoveredIdTimer(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->HoveredIdTimer;
-*/
-    public static native float internal_native_get_HoveredIdTimer(long this_addr);
+    public static float internal_native_get_HoveredIdTimer(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_HoveredIdTimer(this_addr);
+    }
 
     public float get_HoveredIdNotActiveTimer() {
         return internal_native_get_HoveredIdNotActiveTimer(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->HoveredIdNotActiveTimer;
-*/
-    public static native float internal_native_get_HoveredIdNotActiveTimer(long this_addr);
+    public static float internal_native_get_HoveredIdNotActiveTimer(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_HoveredIdNotActiveTimer(this_addr);
+    }
 
     public boolean get_HoveredIdAllowOverlap() {
         return internal_native_get_HoveredIdAllowOverlap(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->HoveredIdAllowOverlap;
-*/
-    public static native boolean internal_native_get_HoveredIdAllowOverlap(long this_addr);
+    public static boolean internal_native_get_HoveredIdAllowOverlap(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_HoveredIdAllowOverlap(this_addr);
+    }
 
     public boolean get_HoveredIdIsDisabled() {
         return internal_native_get_HoveredIdIsDisabled(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->HoveredIdIsDisabled;
-*/
-    public static native boolean internal_native_get_HoveredIdIsDisabled(long this_addr);
+    public static boolean internal_native_get_HoveredIdIsDisabled(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_HoveredIdIsDisabled(this_addr);
+    }
 
     public boolean get_ItemUnclipByLog() {
         return internal_native_get_ItemUnclipByLog(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ItemUnclipByLog;
-*/
-    public static native boolean internal_native_get_ItemUnclipByLog(long this_addr);
+    public static boolean internal_native_get_ItemUnclipByLog(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_ItemUnclipByLog(this_addr);
+    }
 
     public int get_ActiveId() {
         return internal_native_get_ActiveId(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveId;
-*/
-    public static native int internal_native_get_ActiveId(long this_addr);
+    public static int internal_native_get_ActiveId(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_ActiveId(this_addr);
+    }
 
     public int get_ActiveIdIsAlive() {
         return internal_native_get_ActiveIdIsAlive(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdIsAlive;
-*/
-    public static native int internal_native_get_ActiveIdIsAlive(long this_addr);
+    public static int internal_native_get_ActiveIdIsAlive(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_ActiveIdIsAlive(this_addr);
+    }
 
     public float get_ActiveIdTimer() {
         return internal_native_get_ActiveIdTimer(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdTimer;
-*/
-    public static native float internal_native_get_ActiveIdTimer(long this_addr);
+    public static float internal_native_get_ActiveIdTimer(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_ActiveIdTimer(this_addr);
+    }
 
     public boolean get_ActiveIdIsJustActivated() {
         return internal_native_get_ActiveIdIsJustActivated(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdIsJustActivated;
-*/
-    public static native boolean internal_native_get_ActiveIdIsJustActivated(long this_addr);
+    public static boolean internal_native_get_ActiveIdIsJustActivated(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_ActiveIdIsJustActivated(this_addr);
+    }
 
     public boolean get_ActiveIdAllowOverlap() {
         return internal_native_get_ActiveIdAllowOverlap(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdAllowOverlap;
-*/
-    public static native boolean internal_native_get_ActiveIdAllowOverlap(long this_addr);
+    public static boolean internal_native_get_ActiveIdAllowOverlap(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_ActiveIdAllowOverlap(this_addr);
+    }
 
     public boolean get_ActiveIdNoClearOnFocusLoss() {
         return internal_native_get_ActiveIdNoClearOnFocusLoss(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdNoClearOnFocusLoss;
-*/
-    public static native boolean internal_native_get_ActiveIdNoClearOnFocusLoss(long this_addr);
+    public static boolean internal_native_get_ActiveIdNoClearOnFocusLoss(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_ActiveIdNoClearOnFocusLoss(this_addr);
+    }
 
     public boolean get_ActiveIdHasBeenPressedBefore() {
         return internal_native_get_ActiveIdHasBeenPressedBefore(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdHasBeenPressedBefore;
-*/
-    public static native boolean internal_native_get_ActiveIdHasBeenPressedBefore(long this_addr);
+    public static boolean internal_native_get_ActiveIdHasBeenPressedBefore(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_ActiveIdHasBeenPressedBefore(this_addr);
+    }
 
     public boolean get_ActiveIdHasBeenEditedBefore() {
         return internal_native_get_ActiveIdHasBeenEditedBefore(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdHasBeenEditedBefore;
-*/
-    public static native boolean internal_native_get_ActiveIdHasBeenEditedBefore(long this_addr);
+    public static boolean internal_native_get_ActiveIdHasBeenEditedBefore(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_ActiveIdHasBeenEditedBefore(this_addr);
+    }
 
     public boolean get_ActiveIdHasBeenEditedThisFrame() {
         return internal_native_get_ActiveIdHasBeenEditedThisFrame(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdHasBeenEditedThisFrame;
-*/
-    public static native boolean internal_native_get_ActiveIdHasBeenEditedThisFrame(long this_addr);
+    public static boolean internal_native_get_ActiveIdHasBeenEditedThisFrame(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_ActiveIdHasBeenEditedThisFrame(this_addr);
+    }
 
     public boolean get_ActiveIdFromShortcut() {
         return internal_native_get_ActiveIdFromShortcut(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdFromShortcut;
-*/
-    public static native boolean internal_native_get_ActiveIdFromShortcut(long this_addr);
+    public static boolean internal_native_get_ActiveIdFromShortcut(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_ActiveIdFromShortcut(this_addr);
+    }
 
     public int get_ActiveIdDisabledId() {
         return internal_native_get_ActiveIdDisabledId(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdDisabledId;
-*/
-    public static native int internal_native_get_ActiveIdDisabledId(long this_addr);
+    public static int internal_native_get_ActiveIdDisabledId(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_ActiveIdDisabledId(this_addr);
+    }
 
     public int get_ActiveIdMouseButton() {
         return internal_native_get_ActiveIdMouseButton(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdMouseButton;
-*/
-    public static native int internal_native_get_ActiveIdMouseButton(long this_addr);
+    public static int internal_native_get_ActiveIdMouseButton(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_ActiveIdMouseButton(this_addr);
+    }
 
     public ImVec2 get_ActiveIdClickOffset() {
         long addr = internal_native_get_ActiveIdClickOffset_addr(native_address);
@@ -600,11 +506,9 @@ return nativeObject->ActiveIdMouseButton;
         return ImVec2_TEMP_GEN_3;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return (jlong)&nativeObject->ActiveIdClickOffset;
-*/
-    public static native long internal_native_get_ActiveIdClickOffset_addr(long this_addr);
+    public static long internal_native_get_ActiveIdClickOffset_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_ActiveIdClickOffset_addr(this_addr);
+    }
 
     public ImGuiWindow get_ActiveIdWindow() {
         long addr = internal_native_get_ActiveIdWindow_addr(native_address);
@@ -616,42 +520,33 @@ return (jlong)&nativeObject->ActiveIdClickOffset;
         return ImGuiWindow_TEMP_GEN_6;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-ImGuiWindow* attr = nativeObject->ActiveIdWindow;
-return (jlong)attr;
-*/
-    public static native long internal_native_get_ActiveIdWindow_addr(long this_addr);
+    public static long internal_native_get_ActiveIdWindow_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_ActiveIdWindow_addr(this_addr);
+    }
 
     public int get_ActiveIdPreviousFrame() {
         return internal_native_get_ActiveIdPreviousFrame(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->ActiveIdPreviousFrame;
-*/
-    public static native int internal_native_get_ActiveIdPreviousFrame(long this_addr);
+    public static int internal_native_get_ActiveIdPreviousFrame(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_ActiveIdPreviousFrame(this_addr);
+    }
 
     public int get_LastActiveId() {
         return internal_native_get_LastActiveId(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->LastActiveId;
-*/
-    public static native int internal_native_get_LastActiveId(long this_addr);
+    public static int internal_native_get_LastActiveId(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_LastActiveId(this_addr);
+    }
 
     public float get_LastActiveIdTimer() {
         return internal_native_get_LastActiveIdTimer(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return nativeObject->LastActiveIdTimer;
-*/
-    public static native float internal_native_get_LastActiveIdTimer(long this_addr);
+    public static float internal_native_get_LastActiveIdTimer(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_LastActiveIdTimer(this_addr);
+    }
 
     public ImGuiLastItemData get_LastItemData() {
         long addr = internal_native_get_LastItemData_addr(native_address);
@@ -663,9 +558,7 @@ return nativeObject->LastActiveIdTimer;
         return ImGuiLastItemData_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiContext* nativeObject = (ImGuiContext*)this_addr;
-return (jlong)&nativeObject->LastItemData;
-*/
-    public static native long internal_native_get_LastItemData_addr(long this_addr);
+    public static long internal_native_get_LastItemData_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiContext.internal_native_get_LastItemData_addr(this_addr);
+    }
 }

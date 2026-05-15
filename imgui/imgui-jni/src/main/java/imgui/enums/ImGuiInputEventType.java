@@ -43,48 +43,39 @@ public enum ImGuiInputEventType implements NativeEnum<ImGuiInputEventType> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputEventType_None;
-*/
-    private static native int ImGuiInputEventType_None_NATIVE();
+    private static int ImGuiInputEventType_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputEventType.ImGuiInputEventType_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputEventType_MousePos;
-*/
-    private static native int ImGuiInputEventType_MousePos_NATIVE();
+    private static int ImGuiInputEventType_MousePos_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputEventType.ImGuiInputEventType_MousePos_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputEventType_MouseWheel;
-*/
-    private static native int ImGuiInputEventType_MouseWheel_NATIVE();
+    private static int ImGuiInputEventType_MouseWheel_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputEventType.ImGuiInputEventType_MouseWheel_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputEventType_MouseButton;
-*/
-    private static native int ImGuiInputEventType_MouseButton_NATIVE();
+    private static int ImGuiInputEventType_MouseButton_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputEventType.ImGuiInputEventType_MouseButton_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputEventType_MouseViewport;
-*/
-    private static native int ImGuiInputEventType_MouseViewport_NATIVE();
+    private static int ImGuiInputEventType_MouseViewport_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputEventType.ImGuiInputEventType_MouseViewport_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputEventType_Key;
-*/
-    private static native int ImGuiInputEventType_Key_NATIVE();
+    private static int ImGuiInputEventType_Key_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputEventType.ImGuiInputEventType_Key_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputEventType_Text;
-*/
-    private static native int ImGuiInputEventType_Text_NATIVE();
+    private static int ImGuiInputEventType_Text_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputEventType.ImGuiInputEventType_Text_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputEventType_Focus;
-*/
-    private static native int ImGuiInputEventType_Focus_NATIVE();
+    private static int ImGuiInputEventType_Focus_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputEventType.ImGuiInputEventType_Focus_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiInputEventType_COUNT;
-*/
-    private static native int ImGuiInputEventType_COUNT_NATIVE();
+    private static int ImGuiInputEventType_COUNT_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiInputEventType.ImGuiInputEventType_COUNT_NATIVE();
+    }
 }

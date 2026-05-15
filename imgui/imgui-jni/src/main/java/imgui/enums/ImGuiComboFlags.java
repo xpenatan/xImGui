@@ -44,53 +44,43 @@ public enum ImGuiComboFlags implements NativeEnum<ImGuiComboFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiComboFlags_None;
-*/
-    private static native int ImGuiComboFlags_None_NATIVE();
+    private static int ImGuiComboFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiComboFlags.ImGuiComboFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiComboFlags_PopupAlignLeft;
-*/
-    private static native int ImGuiComboFlags_PopupAlignLeft_NATIVE();
+    private static int ImGuiComboFlags_PopupAlignLeft_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiComboFlags.ImGuiComboFlags_PopupAlignLeft_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiComboFlags_HeightSmall;
-*/
-    private static native int ImGuiComboFlags_HeightSmall_NATIVE();
+    private static int ImGuiComboFlags_HeightSmall_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiComboFlags.ImGuiComboFlags_HeightSmall_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiComboFlags_HeightRegular;
-*/
-    private static native int ImGuiComboFlags_HeightRegular_NATIVE();
+    private static int ImGuiComboFlags_HeightRegular_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiComboFlags.ImGuiComboFlags_HeightRegular_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiComboFlags_HeightLarge;
-*/
-    private static native int ImGuiComboFlags_HeightLarge_NATIVE();
+    private static int ImGuiComboFlags_HeightLarge_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiComboFlags.ImGuiComboFlags_HeightLarge_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiComboFlags_HeightLargest;
-*/
-    private static native int ImGuiComboFlags_HeightLargest_NATIVE();
+    private static int ImGuiComboFlags_HeightLargest_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiComboFlags.ImGuiComboFlags_HeightLargest_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiComboFlags_NoArrowButton;
-*/
-    private static native int ImGuiComboFlags_NoArrowButton_NATIVE();
+    private static int ImGuiComboFlags_NoArrowButton_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiComboFlags.ImGuiComboFlags_NoArrowButton_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiComboFlags_NoPreview;
-*/
-    private static native int ImGuiComboFlags_NoPreview_NATIVE();
+    private static int ImGuiComboFlags_NoPreview_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiComboFlags.ImGuiComboFlags_NoPreview_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiComboFlags_WidthFitPreview;
-*/
-    private static native int ImGuiComboFlags_WidthFitPreview_NATIVE();
+    private static int ImGuiComboFlags_WidthFitPreview_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiComboFlags.ImGuiComboFlags_WidthFitPreview_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiComboFlags_HeightMask_;
-*/
-    private static native int ImGuiComboFlags_HeightMask__NATIVE();
+    private static int ImGuiComboFlags_HeightMask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiComboFlags.ImGuiComboFlags_HeightMask__NATIVE();
+    }
 }

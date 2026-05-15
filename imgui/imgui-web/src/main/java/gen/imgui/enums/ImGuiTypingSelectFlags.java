@@ -34,21 +34,12 @@ public enum ImGuiTypingSelectFlags implements NativeEnum<ImGuiTypingSelectFlags>
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTypingSelectFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTypingSelectFlags_None;")
     private static native int ImGuiTypingSelectFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTypingSelectFlags_AllowBackspace;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTypingSelectFlags_AllowBackspace;")
     private static native int ImGuiTypingSelectFlags_AllowBackspace_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTypingSelectFlags_AllowSingleCharMode;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTypingSelectFlags_AllowSingleCharMode;")
     private static native int ImGuiTypingSelectFlags_AllowSingleCharMode_NATIVE();
 }

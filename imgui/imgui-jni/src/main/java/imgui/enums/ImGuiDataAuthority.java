@@ -34,18 +34,15 @@ public enum ImGuiDataAuthority implements NativeEnum<ImGuiDataAuthority> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataAuthority_Auto;
-*/
-    private static native int ImGuiDataAuthority_Auto_NATIVE();
+    private static int ImGuiDataAuthority_Auto_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDataAuthority.ImGuiDataAuthority_Auto_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataAuthority_DockNode;
-*/
-    private static native int ImGuiDataAuthority_DockNode_NATIVE();
+    private static int ImGuiDataAuthority_DockNode_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDataAuthority.ImGuiDataAuthority_DockNode_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDataAuthority_Window;
-*/
-    private static native int ImGuiDataAuthority_Window_NATIVE();
+    private static int ImGuiDataAuthority_Window_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDataAuthority.ImGuiDataAuthority_Window_NATIVE();
+    }
 }

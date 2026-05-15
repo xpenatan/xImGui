@@ -44,53 +44,43 @@ public enum ImGuiSliderFlags implements NativeEnum<ImGuiSliderFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSliderFlags_None;
-*/
-    private static native int ImGuiSliderFlags_None_NATIVE();
+    private static int ImGuiSliderFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSliderFlags.ImGuiSliderFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSliderFlags_Logarithmic;
-*/
-    private static native int ImGuiSliderFlags_Logarithmic_NATIVE();
+    private static int ImGuiSliderFlags_Logarithmic_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSliderFlags.ImGuiSliderFlags_Logarithmic_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSliderFlags_NoRoundToFormat;
-*/
-    private static native int ImGuiSliderFlags_NoRoundToFormat_NATIVE();
+    private static int ImGuiSliderFlags_NoRoundToFormat_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSliderFlags.ImGuiSliderFlags_NoRoundToFormat_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSliderFlags_NoInput;
-*/
-    private static native int ImGuiSliderFlags_NoInput_NATIVE();
+    private static int ImGuiSliderFlags_NoInput_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSliderFlags.ImGuiSliderFlags_NoInput_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSliderFlags_WrapAround;
-*/
-    private static native int ImGuiSliderFlags_WrapAround_NATIVE();
+    private static int ImGuiSliderFlags_WrapAround_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSliderFlags.ImGuiSliderFlags_WrapAround_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSliderFlags_ClampOnInput;
-*/
-    private static native int ImGuiSliderFlags_ClampOnInput_NATIVE();
+    private static int ImGuiSliderFlags_ClampOnInput_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSliderFlags.ImGuiSliderFlags_ClampOnInput_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSliderFlags_ClampZeroRange;
-*/
-    private static native int ImGuiSliderFlags_ClampZeroRange_NATIVE();
+    private static int ImGuiSliderFlags_ClampZeroRange_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSliderFlags.ImGuiSliderFlags_ClampZeroRange_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSliderFlags_NoSpeedTweaks;
-*/
-    private static native int ImGuiSliderFlags_NoSpeedTweaks_NATIVE();
+    private static int ImGuiSliderFlags_NoSpeedTweaks_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSliderFlags.ImGuiSliderFlags_NoSpeedTweaks_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSliderFlags_AlwaysClamp;
-*/
-    private static native int ImGuiSliderFlags_AlwaysClamp_NATIVE();
+    private static int ImGuiSliderFlags_AlwaysClamp_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSliderFlags.ImGuiSliderFlags_AlwaysClamp_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSliderFlags_InvalidMask_;
-*/
-    private static native int ImGuiSliderFlags_InvalidMask__NATIVE();
+    private static int ImGuiSliderFlags_InvalidMask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSliderFlags.ImGuiSliderFlags_InvalidMask__NATIVE();
+    }
 }

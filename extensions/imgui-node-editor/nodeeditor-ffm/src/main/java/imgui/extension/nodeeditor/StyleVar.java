@@ -69,400 +69,286 @@ public enum StyleVar implements NativeEnum<StyleVar> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_NodePadding;
-*/
     private static int StyleVar_NodePadding_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_NodePadding_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_NodeRounding;
-*/
     private static int StyleVar_NodeRounding_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_NodeRounding_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_NodeBorderWidth;
-*/
     private static int StyleVar_NodeBorderWidth_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_NodeBorderWidth_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_HoveredNodeBorderWidth;
-*/
     private static int StyleVar_HoveredNodeBorderWidth_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_HoveredNodeBorderWidth_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_SelectedNodeBorderWidth;
-*/
     private static int StyleVar_SelectedNodeBorderWidth_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_SelectedNodeBorderWidth_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_PinRounding;
-*/
     private static int StyleVar_PinRounding_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_PinRounding_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_PinBorderWidth;
-*/
     private static int StyleVar_PinBorderWidth_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_PinBorderWidth_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_LinkStrength;
-*/
     private static int StyleVar_LinkStrength_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_LinkStrength_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_SourceDirection;
-*/
     private static int StyleVar_SourceDirection_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_SourceDirection_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_TargetDirection;
-*/
     private static int StyleVar_TargetDirection_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_TargetDirection_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_ScrollDuration;
-*/
     private static int StyleVar_ScrollDuration_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_ScrollDuration_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_FlowMarkerDistance;
-*/
     private static int StyleVar_FlowMarkerDistance_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_FlowMarkerDistance_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_FlowSpeed;
-*/
     private static int StyleVar_FlowSpeed_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_FlowSpeed_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_FlowDuration;
-*/
     private static int StyleVar_FlowDuration_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_FlowDuration_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_PivotAlignment;
-*/
     private static int StyleVar_PivotAlignment_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_PivotAlignment_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_PivotSize;
-*/
     private static int StyleVar_PivotSize_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_PivotSize_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_PivotScale;
-*/
     private static int StyleVar_PivotScale_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_PivotScale_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_PinCorners;
-*/
     private static int StyleVar_PinCorners_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_PinCorners_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_PinRadius;
-*/
     private static int StyleVar_PinRadius_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_PinRadius_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_PinArrowSize;
-*/
     private static int StyleVar_PinArrowSize_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_PinArrowSize_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_PinArrowWidth;
-*/
     private static int StyleVar_PinArrowWidth_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_PinArrowWidth_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_GroupRounding;
-*/
     private static int StyleVar_GroupRounding_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_GroupRounding_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_GroupBorderWidth;
-*/
     private static int StyleVar_GroupBorderWidth_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_GroupBorderWidth_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_HighlightConnectedLinks;
-*/
     private static int StyleVar_HighlightConnectedLinks_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_HighlightConnectedLinks_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_SnapLinkToPinDir;
-*/
     private static int StyleVar_SnapLinkToPinDir_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_SnapLinkToPinDir_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_HoveredNodeBorderOffset;
-*/
     private static int StyleVar_HoveredNodeBorderOffset_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_HoveredNodeBorderOffset_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_SelectedNodeBorderOffset;
-*/
     private static int StyleVar_SelectedNodeBorderOffset_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_SelectedNodeBorderOffset_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)StyleVar_Count;
-*/
     private static int StyleVar_Count_NATIVE() {
         try {
             return (int) FFMHandles.StyleVar_Count_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle StyleVar_NodePadding_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_nodepadding_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle StyleVar_NodeRounding_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_noderounding_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle StyleVar_NodeBorderWidth_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_nodeborderwidth_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle StyleVar_HoveredNodeBorderWidth_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_hoverednodeborderwidth_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle StyleVar_SelectedNodeBorderWidth_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_selectednodeborderwidth_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle StyleVar_PinRounding_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_pinrounding_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle StyleVar_PinBorderWidth_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_pinborderwidth_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleVar_NodePadding_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1NodePadding_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleVar_LinkStrength_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_linkstrength_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleVar_NodeRounding_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1NodeRounding_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleVar_SourceDirection_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_sourcedirection_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleVar_NodeBorderWidth_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1NodeBorderWidth_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleVar_TargetDirection_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_targetdirection_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleVar_HoveredNodeBorderWidth_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1HoveredNodeBorderWidth_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleVar_ScrollDuration_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_scrollduration_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleVar_SelectedNodeBorderWidth_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1SelectedNodeBorderWidth_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleVar_FlowMarkerDistance_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_flowmarkerdistance_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleVar_PinRounding_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1PinRounding_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleVar_FlowSpeed_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_flowspeed_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleVar_PinBorderWidth_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1PinBorderWidth_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleVar_FlowDuration_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_flowduration_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleVar_LinkStrength_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1LinkStrength_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleVar_PivotAlignment_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_pivotalignment_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleVar_SourceDirection_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1SourceDirection_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleVar_PivotSize_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_pivotsize_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleVar_TargetDirection_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1TargetDirection_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleVar_PivotScale_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_pivotscale_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleVar_ScrollDuration_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1ScrollDuration_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleVar_PinCorners_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_pincorners_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleVar_FlowMarkerDistance_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1FlowMarkerDistance_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleVar_PinRadius_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_pinradius_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleVar_FlowSpeed_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1FlowSpeed_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleVar_PinArrowSize_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_pinarrowsize_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleVar_FlowDuration_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1FlowDuration_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleVar_PinArrowWidth_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_pinarrowwidth_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleVar_PivotAlignment_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1PivotAlignment_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleVar_GroupRounding_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_grouprounding_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleVar_PivotSize_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1PivotSize_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleVar_GroupBorderWidth_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_groupborderwidth_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleVar_PivotScale_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1PivotScale_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleVar_HighlightConnectedLinks_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_highlightconnectedlinks_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleVar_PinCorners_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1PinCorners_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleVar_SnapLinkToPinDir_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_snaplinktopindir_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleVar_PinRadius_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1PinRadius_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleVar_HoveredNodeBorderOffset_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_hoverednodeborderoffset_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleVar_PinArrowSize_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1PinArrowSize_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleVar_SelectedNodeBorderOffset_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_selectednodeborderoffset_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle StyleVar_PinArrowWidth_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1PinArrowWidth_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle StyleVar_GroupRounding_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1GroupRounding_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle StyleVar_GroupBorderWidth_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1GroupBorderWidth_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle StyleVar_HighlightConnectedLinks_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1HighlightConnectedLinks_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle StyleVar_SnapLinkToPinDir_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1SnapLinkToPinDir_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle StyleVar_HoveredNodeBorderOffset_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1HoveredNodeBorderOffset_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle StyleVar_SelectedNodeBorderOffset_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1SelectedNodeBorderOffset_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle StyleVar_Count_NATIVE__ = downcallDefault("jparser_imgui_extension_nodeeditor_StyleVar_StyleVar_1Count_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle StyleVar_Count_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_stylevar_stylevar_count_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

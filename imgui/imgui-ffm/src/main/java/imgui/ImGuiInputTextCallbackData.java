@@ -38,15 +38,11 @@ public class ImGuiInputTextCallbackData extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-delete nativeObject;
-*/
     public static void internal_native_deleteNative(long this_addr) {
         try {
             FFMHandles.internal_native_deleteNative__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -54,15 +50,11 @@ delete nativeObject;
         return internal_native_get_BufSize(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-return nativeObject->BufSize;
-*/
     public static int internal_native_get_BufSize(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_BufSize__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -70,15 +62,11 @@ return nativeObject->BufSize;
         internal_native_set_BufSize(native_address, BufSize);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-nativeObject->BufSize = BufSize;
-*/
     public static void internal_native_set_BufSize(long this_addr, int BufSize) {
         try {
             FFMHandles.internal_native_set_BufSize__JI.invokeExact(this_addr, BufSize);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -86,15 +74,11 @@ nativeObject->BufSize = BufSize;
         return internal_native_get_BufDirty(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-return nativeObject->BufDirty;
-*/
     public static boolean internal_native_get_BufDirty(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_get_BufDirty__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -102,15 +86,11 @@ return nativeObject->BufDirty;
         internal_native_set_BufDirty(native_address, BufDirty);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-nativeObject->BufDirty = BufDirty;
-*/
     public static void internal_native_set_BufDirty(long this_addr, boolean BufDirty) {
         try {
             FFMHandles.internal_native_set_BufDirty__JZ.invokeExact(this_addr, BufDirty);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -118,15 +98,11 @@ nativeObject->BufDirty = BufDirty;
         return internal_native_get_BufTextLen(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-return nativeObject->BufTextLen;
-*/
     public static int internal_native_get_BufTextLen(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_BufTextLen__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -134,15 +110,11 @@ return nativeObject->BufTextLen;
         internal_native_set_BufTextLen(native_address, BufTextLen);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-nativeObject->BufTextLen = BufTextLen;
-*/
     public static void internal_native_set_BufTextLen(long this_addr, int BufTextLen) {
         try {
             FFMHandles.internal_native_set_BufTextLen__JI.invokeExact(this_addr, BufTextLen);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -157,15 +129,11 @@ nativeObject->BufTextLen = BufTextLen;
         return ImGuiInputTextFlags.CUSTOM.setValue(value);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-return (int32_t)nativeObject->Flags;
-*/
     public static int internal_native_get_Flags(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_Flags__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -173,66 +141,32 @@ return (int32_t)nativeObject->Flags;
         internal_native_set_Flags(native_address, Flags.getValue());
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiInputTextCallbackData* nativeObject = (ImGuiInputTextCallbackData*)this_addr;
-nativeObject->Flags = (::ImGuiInputTextFlags)Flags;
-*/
     public static void internal_native_set_Flags(long this_addr, int Flags) {
         try {
             FFMHandles.internal_native_set_Flags__JI.invokeExact(this_addr, Flags);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_imguiinputtextcallbackdata_deletenative", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle internal_native_get_BufSize__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiinputtextcallbackdata_get_bufsize", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle internal_native_set_BufSize__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiinputtextcallbackdata_set_bufsize", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle internal_native_get_BufDirty__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiinputtextcallbackdata_get_bufdirty", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_set_BufDirty__JZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiinputtextcallbackdata_set_bufdirty", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_get_BufTextLen__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiinputtextcallbackdata_get_buftextlen", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle internal_native_set_BufTextLen__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiinputtextcallbackdata_set_buftextlen", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = downcallDefault("jparser_imgui_ImGuiInputTextCallbackData_internal_1native_1deleteNative__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_Flags__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiinputtextcallbackdata_get_flags", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_BufSize__J = downcallDefault("jparser_imgui_ImGuiInputTextCallbackData_internal_1native_1get_1BufSize__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_BufSize__JI = downcallDefault("jparser_imgui_ImGuiInputTextCallbackData_internal_1native_1set_1BufSize__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_BufDirty__J = downcallDefault("jparser_imgui_ImGuiInputTextCallbackData_internal_1native_1get_1BufDirty__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_BufDirty__JZ = downcallDefault("jparser_imgui_ImGuiInputTextCallbackData_internal_1native_1set_1BufDirty__JZ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_BufTextLen__J = downcallDefault("jparser_imgui_ImGuiInputTextCallbackData_internal_1native_1get_1BufTextLen__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_BufTextLen__JI = downcallDefault("jparser_imgui_ImGuiInputTextCallbackData_internal_1native_1set_1BufTextLen__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_Flags__J = downcallDefault("jparser_imgui_ImGuiInputTextCallbackData_internal_1native_1get_1Flags__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_Flags__JI = downcallDefault("jparser_imgui_ImGuiInputTextCallbackData_internal_1native_1set_1Flags__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_set_Flags__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiinputtextcallbackdata_set_flags", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
     }
 }

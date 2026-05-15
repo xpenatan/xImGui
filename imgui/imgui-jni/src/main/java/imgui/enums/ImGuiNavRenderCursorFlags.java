@@ -34,23 +34,19 @@ public enum ImGuiNavRenderCursorFlags implements NativeEnum<ImGuiNavRenderCursor
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavRenderCursorFlags_None;
-*/
-    private static native int ImGuiNavRenderCursorFlags_None_NATIVE();
+    private static int ImGuiNavRenderCursorFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiNavRenderCursorFlags.ImGuiNavRenderCursorFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavRenderCursorFlags_Compact;
-*/
-    private static native int ImGuiNavRenderCursorFlags_Compact_NATIVE();
+    private static int ImGuiNavRenderCursorFlags_Compact_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiNavRenderCursorFlags.ImGuiNavRenderCursorFlags_Compact_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavRenderCursorFlags_AlwaysDraw;
-*/
-    private static native int ImGuiNavRenderCursorFlags_AlwaysDraw_NATIVE();
+    private static int ImGuiNavRenderCursorFlags_AlwaysDraw_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiNavRenderCursorFlags.ImGuiNavRenderCursorFlags_AlwaysDraw_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavRenderCursorFlags_NoRounding;
-*/
-    private static native int ImGuiNavRenderCursorFlags_NoRounding_NATIVE();
+    private static int ImGuiNavRenderCursorFlags_NoRounding_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiNavRenderCursorFlags.ImGuiNavRenderCursorFlags_NoRounding_NATIVE();
+    }
 }

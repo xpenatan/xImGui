@@ -41,45 +41,24 @@ public enum ImGuiFocusedFlags implements NativeEnum<ImGuiFocusedFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiFocusedFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiFocusedFlags_None;")
     private static native int ImGuiFocusedFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiFocusedFlags_ChildWindows;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiFocusedFlags_ChildWindows;")
     private static native int ImGuiFocusedFlags_ChildWindows_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiFocusedFlags_RootWindow;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiFocusedFlags_RootWindow;")
     private static native int ImGuiFocusedFlags_RootWindow_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiFocusedFlags_AnyWindow;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiFocusedFlags_AnyWindow;")
     private static native int ImGuiFocusedFlags_AnyWindow_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiFocusedFlags_NoPopupHierarchy;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiFocusedFlags_NoPopupHierarchy;")
     private static native int ImGuiFocusedFlags_NoPopupHierarchy_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiFocusedFlags_DockHierarchy;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiFocusedFlags_DockHierarchy;")
     private static native int ImGuiFocusedFlags_DockHierarchy_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiFocusedFlags_RootAndChildWindows;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiFocusedFlags_RootAndChildWindows;")
     private static native int ImGuiFocusedFlags_RootAndChildWindows_NATIVE();
 }

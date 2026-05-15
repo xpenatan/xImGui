@@ -41,45 +41,24 @@ public enum ImGuiSelectableFlagsPrivate_ implements NativeEnum<ImGuiSelectableFl
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSelectableFlags_NoHoldingActiveID;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSelectableFlags_NoHoldingActiveID;")
     private static native int ImGuiSelectableFlags_NoHoldingActiveID_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSelectableFlags_SelectOnClick;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSelectableFlags_SelectOnClick;")
     private static native int ImGuiSelectableFlags_SelectOnClick_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSelectableFlags_SelectOnRelease;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSelectableFlags_SelectOnRelease;")
     private static native int ImGuiSelectableFlags_SelectOnRelease_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSelectableFlags_SpanAvailWidth;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSelectableFlags_SpanAvailWidth;")
     private static native int ImGuiSelectableFlags_SpanAvailWidth_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSelectableFlags_SetNavIdOnHover;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSelectableFlags_SetNavIdOnHover;")
     private static native int ImGuiSelectableFlags_SetNavIdOnHover_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSelectableFlags_NoPadWithHalfSpacing;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSelectableFlags_NoPadWithHalfSpacing;")
     private static native int ImGuiSelectableFlags_NoPadWithHalfSpacing_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiSelectableFlags_NoSetKeyOwner;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiSelectableFlags_NoSetKeyOwner;")
     private static native int ImGuiSelectableFlags_NoSetKeyOwner_NATIVE();
 }

@@ -41,75 +41,36 @@ public enum ImGuiTypingSelectFlags implements NativeEnum<ImGuiTypingSelectFlags>
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTypingSelectFlags_None;
-*/
     private static int ImGuiTypingSelectFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTypingSelectFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTypingSelectFlags_AllowBackspace;
-*/
     private static int ImGuiTypingSelectFlags_AllowBackspace_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTypingSelectFlags_AllowBackspace_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiTypingSelectFlags_AllowSingleCharMode;
-*/
     private static int ImGuiTypingSelectFlags_AllowSingleCharMode_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiTypingSelectFlags_AllowSingleCharMode_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiTypingSelectFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitypingselectflags_imguitypingselectflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiTypingSelectFlags_AllowBackspace_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitypingselectflags_imguitypingselectflags_allowbackspace_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
-
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
-
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
-
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
-
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
-
-        static final java.lang.invoke.MethodHandle ImGuiTypingSelectFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTypingSelectFlags_ImGuiTypingSelectFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiTypingSelectFlags_AllowBackspace_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTypingSelectFlags_ImGuiTypingSelectFlags_1AllowBackspace_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiTypingSelectFlags_AllowSingleCharMode_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiTypingSelectFlags_ImGuiTypingSelectFlags_1AllowSingleCharMode_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiTypingSelectFlags_AllowSingleCharMode_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguitypingselectflags_imguitypingselectflags_allowsinglecharmode_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

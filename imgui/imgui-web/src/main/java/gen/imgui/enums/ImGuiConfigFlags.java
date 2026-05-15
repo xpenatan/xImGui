@@ -44,63 +44,33 @@ public enum ImGuiConfigFlags implements NativeEnum<ImGuiConfigFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiConfigFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiConfigFlags_None;")
     private static native int ImGuiConfigFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiConfigFlags_NavEnableKeyboard;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiConfigFlags_NavEnableKeyboard;")
     private static native int ImGuiConfigFlags_NavEnableKeyboard_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiConfigFlags_NavEnableGamepad;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiConfigFlags_NavEnableGamepad;")
     private static native int ImGuiConfigFlags_NavEnableGamepad_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiConfigFlags_NoMouse;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiConfigFlags_NoMouse;")
     private static native int ImGuiConfigFlags_NoMouse_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiConfigFlags_NoMouseCursorChange;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiConfigFlags_NoMouseCursorChange;")
     private static native int ImGuiConfigFlags_NoMouseCursorChange_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiConfigFlags_NoKeyboard;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiConfigFlags_NoKeyboard;")
     private static native int ImGuiConfigFlags_NoKeyboard_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiConfigFlags_DockingEnable;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiConfigFlags_DockingEnable;")
     private static native int ImGuiConfigFlags_DockingEnable_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiConfigFlags_ViewportsEnable;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiConfigFlags_ViewportsEnable;")
     private static native int ImGuiConfigFlags_ViewportsEnable_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiConfigFlags_IsSRGB;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiConfigFlags_IsSRGB;")
     private static native int ImGuiConfigFlags_IsSRGB_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiConfigFlags_IsTouchScreen;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiConfigFlags_IsTouchScreen;")
     private static native int ImGuiConfigFlags_IsTouchScreen_NATIVE();
 }

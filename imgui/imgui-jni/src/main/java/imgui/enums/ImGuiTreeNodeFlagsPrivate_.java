@@ -39,28 +39,23 @@ public enum ImGuiTreeNodeFlagsPrivate_ implements NativeEnum<ImGuiTreeNodeFlagsP
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_NoNavFocus;
-*/
-    private static native int ImGuiTreeNodeFlags_NoNavFocus_NATIVE();
+    private static int ImGuiTreeNodeFlags_NoNavFocus_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlagsPrivate_.ImGuiTreeNodeFlags_NoNavFocus_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_ClipLabelForTrailingButton;
-*/
-    private static native int ImGuiTreeNodeFlags_ClipLabelForTrailingButton_NATIVE();
+    private static int ImGuiTreeNodeFlags_ClipLabelForTrailingButton_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlagsPrivate_.ImGuiTreeNodeFlags_ClipLabelForTrailingButton_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_UpsideDownArrow;
-*/
-    private static native int ImGuiTreeNodeFlags_UpsideDownArrow_NATIVE();
+    private static int ImGuiTreeNodeFlags_UpsideDownArrow_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlagsPrivate_.ImGuiTreeNodeFlags_UpsideDownArrow_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_OpenOnMask_;
-*/
-    private static native int ImGuiTreeNodeFlags_OpenOnMask__NATIVE();
+    private static int ImGuiTreeNodeFlags_OpenOnMask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlagsPrivate_.ImGuiTreeNodeFlags_OpenOnMask__NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTreeNodeFlags_DrawLinesMask_;
-*/
-    private static native int ImGuiTreeNodeFlags_DrawLinesMask__NATIVE();
+    private static int ImGuiTreeNodeFlags_DrawLinesMask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTreeNodeFlagsPrivate_.ImGuiTreeNodeFlags_DrawLinesMask__NATIVE();
+    }
 }

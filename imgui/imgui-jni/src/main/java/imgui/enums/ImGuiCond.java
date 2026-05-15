@@ -39,28 +39,23 @@ public enum ImGuiCond implements NativeEnum<ImGuiCond> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCond_None;
-*/
-    private static native int ImGuiCond_None_NATIVE();
+    private static int ImGuiCond_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCond.ImGuiCond_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCond_Always;
-*/
-    private static native int ImGuiCond_Always_NATIVE();
+    private static int ImGuiCond_Always_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCond.ImGuiCond_Always_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCond_Once;
-*/
-    private static native int ImGuiCond_Once_NATIVE();
+    private static int ImGuiCond_Once_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCond.ImGuiCond_Once_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCond_FirstUseEver;
-*/
-    private static native int ImGuiCond_FirstUseEver_NATIVE();
+    private static int ImGuiCond_FirstUseEver_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCond.ImGuiCond_FirstUseEver_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiCond_Appearing;
-*/
-    private static native int ImGuiCond_Appearing_NATIVE();
+    private static int ImGuiCond_Appearing_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiCond.ImGuiCond_Appearing_NATIVE();
+    }
 }

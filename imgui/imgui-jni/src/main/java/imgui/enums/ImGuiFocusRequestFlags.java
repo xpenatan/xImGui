@@ -34,18 +34,15 @@ public enum ImGuiFocusRequestFlags implements NativeEnum<ImGuiFocusRequestFlags>
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiFocusRequestFlags_None;
-*/
-    private static native int ImGuiFocusRequestFlags_None_NATIVE();
+    private static int ImGuiFocusRequestFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiFocusRequestFlags.ImGuiFocusRequestFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiFocusRequestFlags_RestoreFocusedChild;
-*/
-    private static native int ImGuiFocusRequestFlags_RestoreFocusedChild_NATIVE();
+    private static int ImGuiFocusRequestFlags_RestoreFocusedChild_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiFocusRequestFlags.ImGuiFocusRequestFlags_RestoreFocusedChild_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiFocusRequestFlags_UnlessBelowModal;
-*/
-    private static native int ImGuiFocusRequestFlags_UnlessBelowModal_NATIVE();
+    private static int ImGuiFocusRequestFlags_UnlessBelowModal_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiFocusRequestFlags.ImGuiFocusRequestFlags_UnlessBelowModal_NATIVE();
+    }
 }

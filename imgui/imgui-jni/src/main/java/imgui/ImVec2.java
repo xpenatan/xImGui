@@ -17,20 +17,18 @@ public class ImVec2 extends NativeObject {
         internal_reset(addr, true);
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)new ImVec2();
-*/
-    public static native long internal_native_create_addr();
+    public static long internal_native_create_addr() {
+        return imgui.natives.JNI_ImVec2.internal_native_create_addr();
+    }
 
     public ImVec2(float x, float y) {
         long addr = internal_native_create_float_float_addr(x, y);
         internal_reset(addr, true);
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)new ImVec2((float)x, (float)y);
-*/
-    public static native long internal_native_create_float_float_addr(float x, float y);
+    public static long internal_native_create_float_float_addr(float x, float y) {
+        return imgui.natives.JNI_ImVec2.internal_native_create_float_float_addr(x, y);
+    }
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -50,49 +48,39 @@ return (jlong)new ImVec2((float)x, (float)y);
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImVec2* nativeObject = (ImVec2*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ImVec2.internal_native_deleteNative(this_addr);
+    }
 
     public float get_x() {
         return internal_native_get_x(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImVec2* nativeObject = (ImVec2*)this_addr;
-return nativeObject->x;
-*/
-    public static native float internal_native_get_x(long this_addr);
+    public static float internal_native_get_x(long this_addr) {
+        return imgui.natives.JNI_ImVec2.internal_native_get_x(this_addr);
+    }
 
     public void set_x(float x) {
         internal_native_set_x(native_address, x);
     }
 
-    /*[-JNI;-NATIVE]
-ImVec2* nativeObject = (ImVec2*)this_addr;
-nativeObject->x = x;
-*/
-    public static native void internal_native_set_x(long this_addr, float x);
+    public static void internal_native_set_x(long this_addr, float x) {
+        imgui.natives.JNI_ImVec2.internal_native_set_x(this_addr, x);
+    }
 
     public float get_y() {
         return internal_native_get_y(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImVec2* nativeObject = (ImVec2*)this_addr;
-return nativeObject->y;
-*/
-    public static native float internal_native_get_y(long this_addr);
+    public static float internal_native_get_y(long this_addr) {
+        return imgui.natives.JNI_ImVec2.internal_native_get_y(this_addr);
+    }
 
     public void set_y(float y) {
         internal_native_set_y(native_address, y);
     }
 
-    /*[-JNI;-NATIVE]
-ImVec2* nativeObject = (ImVec2*)this_addr;
-nativeObject->y = y;
-*/
-    public static native void internal_native_set_y(long this_addr, float y);
+    public static void internal_native_set_y(long this_addr, float y) {
+        imgui.natives.JNI_ImVec2.internal_native_set_y(this_addr, y);
+    }
 }

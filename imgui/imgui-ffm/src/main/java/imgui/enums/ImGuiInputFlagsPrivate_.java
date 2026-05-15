@@ -65,348 +65,246 @@ public enum ImGuiInputFlagsPrivate_ implements NativeEnum<ImGuiInputFlagsPrivate
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_RepeatRateDefault;
-*/
     private static int ImGuiInputFlags_RepeatRateDefault_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_RepeatRateDefault_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_RepeatRateNavMove;
-*/
     private static int ImGuiInputFlags_RepeatRateNavMove_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_RepeatRateNavMove_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_RepeatRateNavTweak;
-*/
     private static int ImGuiInputFlags_RepeatRateNavTweak_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_RepeatRateNavTweak_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_RepeatUntilRelease;
-*/
     private static int ImGuiInputFlags_RepeatUntilRelease_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_RepeatUntilRelease_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_RepeatUntilKeyModsChange;
-*/
     private static int ImGuiInputFlags_RepeatUntilKeyModsChange_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_RepeatUntilKeyModsChange_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_RepeatUntilKeyModsChangeFromNone;
-*/
     private static int ImGuiInputFlags_RepeatUntilKeyModsChangeFromNone_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_RepeatUntilKeyModsChangeFromNone_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_RepeatUntilOtherKeyPress;
-*/
     private static int ImGuiInputFlags_RepeatUntilOtherKeyPress_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_RepeatUntilOtherKeyPress_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_LockThisFrame;
-*/
     private static int ImGuiInputFlags_LockThisFrame_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_LockThisFrame_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_LockUntilRelease;
-*/
     private static int ImGuiInputFlags_LockUntilRelease_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_LockUntilRelease_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_CondHovered;
-*/
     private static int ImGuiInputFlags_CondHovered_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_CondHovered_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_CondActive;
-*/
     private static int ImGuiInputFlags_CondActive_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_CondActive_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_CondDefault_;
-*/
     private static int ImGuiInputFlags_CondDefault__NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_CondDefault__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_RepeatRateMask_;
-*/
     private static int ImGuiInputFlags_RepeatRateMask__NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_RepeatRateMask__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_RepeatUntilMask_;
-*/
     private static int ImGuiInputFlags_RepeatUntilMask__NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_RepeatUntilMask__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_RepeatMask_;
-*/
     private static int ImGuiInputFlags_RepeatMask__NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_RepeatMask__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_CondMask_;
-*/
     private static int ImGuiInputFlags_CondMask__NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_CondMask__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_RouteTypeMask_;
-*/
     private static int ImGuiInputFlags_RouteTypeMask__NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_RouteTypeMask__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_RouteOptionsMask_;
-*/
     private static int ImGuiInputFlags_RouteOptionsMask__NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_RouteOptionsMask__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_SupportedByIsKeyPressed;
-*/
     private static int ImGuiInputFlags_SupportedByIsKeyPressed_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_SupportedByIsKeyPressed_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_SupportedByIsMouseClicked;
-*/
     private static int ImGuiInputFlags_SupportedByIsMouseClicked_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_SupportedByIsMouseClicked_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_SupportedByShortcut;
-*/
     private static int ImGuiInputFlags_SupportedByShortcut_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_SupportedByShortcut_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_SupportedBySetNextItemShortcut;
-*/
     private static int ImGuiInputFlags_SupportedBySetNextItemShortcut_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_SupportedBySetNextItemShortcut_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_SupportedBySetKeyOwner;
-*/
     private static int ImGuiInputFlags_SupportedBySetKeyOwner_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_SupportedBySetKeyOwner_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiInputFlags_SupportedBySetItemKeyOwner;
-*/
     private static int ImGuiInputFlags_SupportedBySetItemKeyOwner_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiInputFlags_SupportedBySetItemKeyOwner_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RepeatRateDefault_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflagsprivate__imguiinputflags_repeatratedefault_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RepeatRateNavMove_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflagsprivate__imguiinputflags_repeatratenavmove_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RepeatRateNavTweak_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflagsprivate__imguiinputflags_repeatratenavtweak_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RepeatUntilRelease_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflagsprivate__imguiinputflags_repeatuntilrelease_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RepeatUntilKeyModsChange_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflagsprivate__imguiinputflags_repeatuntilkeymodschange_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RepeatUntilKeyModsChangeFromNone_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflagsprivate__imguiinputflags_repeatuntilkeymodschangefromnone_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RepeatUntilOtherKeyPress_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflagsprivate__imguiinputflags_repeatuntilotherkeypress_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RepeatRateDefault_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlagsPrivate_1_ImGuiInputFlags_1RepeatRateDefault_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_LockThisFrame_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflagsprivate__imguiinputflags_lockthisframe_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RepeatRateNavMove_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlagsPrivate_1_ImGuiInputFlags_1RepeatRateNavMove_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_LockUntilRelease_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflagsprivate__imguiinputflags_lockuntilrelease_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RepeatRateNavTweak_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlagsPrivate_1_ImGuiInputFlags_1RepeatRateNavTweak_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_CondHovered_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflagsprivate__imguiinputflags_condhovered_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RepeatUntilRelease_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlagsPrivate_1_ImGuiInputFlags_1RepeatUntilRelease_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_CondActive_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflagsprivate__imguiinputflags_condactive_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RepeatUntilKeyModsChange_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlagsPrivate_1_ImGuiInputFlags_1RepeatUntilKeyModsChange_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_CondDefault__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflagsprivate__imguiinputflags_conddefault__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RepeatUntilKeyModsChangeFromNone_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlagsPrivate_1_ImGuiInputFlags_1RepeatUntilKeyModsChangeFromNone_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RepeatRateMask__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflagsprivate__imguiinputflags_repeatratemask__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RepeatUntilOtherKeyPress_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlagsPrivate_1_ImGuiInputFlags_1RepeatUntilOtherKeyPress_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RepeatUntilMask__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflagsprivate__imguiinputflags_repeatuntilmask__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_LockThisFrame_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlagsPrivate_1_ImGuiInputFlags_1LockThisFrame_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RepeatMask__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflagsprivate__imguiinputflags_repeatmask__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_LockUntilRelease_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlagsPrivate_1_ImGuiInputFlags_1LockUntilRelease_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_CondMask__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflagsprivate__imguiinputflags_condmask__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_CondHovered_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlagsPrivate_1_ImGuiInputFlags_1CondHovered_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RouteTypeMask__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflagsprivate__imguiinputflags_routetypemask__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_CondActive_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlagsPrivate_1_ImGuiInputFlags_1CondActive_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RouteOptionsMask__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflagsprivate__imguiinputflags_routeoptionsmask__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_CondDefault__NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlagsPrivate_1_ImGuiInputFlags_1CondDefault_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_SupportedByIsKeyPressed_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflagsprivate__imguiinputflags_supportedbyiskeypressed_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RepeatRateMask__NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlagsPrivate_1_ImGuiInputFlags_1RepeatRateMask_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_SupportedByIsMouseClicked_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflagsprivate__imguiinputflags_supportedbyismouseclicked_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RepeatUntilMask__NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlagsPrivate_1_ImGuiInputFlags_1RepeatUntilMask_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_SupportedByShortcut_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflagsprivate__imguiinputflags_supportedbyshortcut_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RepeatMask__NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlagsPrivate_1_ImGuiInputFlags_1RepeatMask_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_SupportedBySetNextItemShortcut_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflagsprivate__imguiinputflags_supportedbysetnextitemshortcut_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_CondMask__NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlagsPrivate_1_ImGuiInputFlags_1CondMask_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_SupportedBySetKeyOwner_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflagsprivate__imguiinputflags_supportedbysetkeyowner_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RouteTypeMask__NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlagsPrivate_1_ImGuiInputFlags_1RouteTypeMask_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_RouteOptionsMask__NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlagsPrivate_1_ImGuiInputFlags_1RouteOptionsMask_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_SupportedByIsKeyPressed_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlagsPrivate_1_ImGuiInputFlags_1SupportedByIsKeyPressed_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_SupportedByIsMouseClicked_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlagsPrivate_1_ImGuiInputFlags_1SupportedByIsMouseClicked_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_SupportedByShortcut_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlagsPrivate_1_ImGuiInputFlags_1SupportedByShortcut_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_SupportedBySetNextItemShortcut_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlagsPrivate_1_ImGuiInputFlags_1SupportedBySetNextItemShortcut_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_SupportedBySetKeyOwner_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlagsPrivate_1_ImGuiInputFlags_1SupportedBySetKeyOwner_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiInputFlags_SupportedBySetItemKeyOwner_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiInputFlagsPrivate_1_ImGuiInputFlags_1SupportedBySetItemKeyOwner_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiInputFlags_SupportedBySetItemKeyOwner_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiinputflagsprivate__imguiinputflags_supportedbysetitemkeyowner_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

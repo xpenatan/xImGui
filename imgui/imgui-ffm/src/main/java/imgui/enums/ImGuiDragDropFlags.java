@@ -54,205 +54,136 @@ public enum ImGuiDragDropFlags implements NativeEnum<ImGuiDragDropFlags> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDragDropFlags_None;
-*/
     private static int ImGuiDragDropFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDragDropFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDragDropFlags_SourceNoPreviewTooltip;
-*/
     private static int ImGuiDragDropFlags_SourceNoPreviewTooltip_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDragDropFlags_SourceNoPreviewTooltip_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDragDropFlags_SourceNoDisableHover;
-*/
     private static int ImGuiDragDropFlags_SourceNoDisableHover_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDragDropFlags_SourceNoDisableHover_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDragDropFlags_SourceNoHoldToOpenOthers;
-*/
     private static int ImGuiDragDropFlags_SourceNoHoldToOpenOthers_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDragDropFlags_SourceNoHoldToOpenOthers_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDragDropFlags_SourceAllowNullID;
-*/
     private static int ImGuiDragDropFlags_SourceAllowNullID_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDragDropFlags_SourceAllowNullID_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDragDropFlags_SourceExtern;
-*/
     private static int ImGuiDragDropFlags_SourceExtern_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDragDropFlags_SourceExtern_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDragDropFlags_PayloadAutoExpire;
-*/
     private static int ImGuiDragDropFlags_PayloadAutoExpire_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDragDropFlags_PayloadAutoExpire_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDragDropFlags_PayloadNoCrossContext;
-*/
     private static int ImGuiDragDropFlags_PayloadNoCrossContext_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDragDropFlags_PayloadNoCrossContext_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDragDropFlags_PayloadNoCrossProcess;
-*/
     private static int ImGuiDragDropFlags_PayloadNoCrossProcess_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDragDropFlags_PayloadNoCrossProcess_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDragDropFlags_AcceptBeforeDelivery;
-*/
     private static int ImGuiDragDropFlags_AcceptBeforeDelivery_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDragDropFlags_AcceptBeforeDelivery_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDragDropFlags_AcceptNoDrawDefaultRect;
-*/
     private static int ImGuiDragDropFlags_AcceptNoDrawDefaultRect_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDragDropFlags_AcceptNoDrawDefaultRect_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDragDropFlags_AcceptNoPreviewTooltip;
-*/
     private static int ImGuiDragDropFlags_AcceptNoPreviewTooltip_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDragDropFlags_AcceptNoPreviewTooltip_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDragDropFlags_AcceptPeekOnly;
-*/
     private static int ImGuiDragDropFlags_AcceptPeekOnly_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDragDropFlags_AcceptPeekOnly_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidragdropflags_imguidragdropflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_SourceNoPreviewTooltip_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidragdropflags_imguidragdropflags_sourcenopreviewtooltip_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_SourceNoDisableHover_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidragdropflags_imguidragdropflags_sourcenodisablehover_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_SourceNoHoldToOpenOthers_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidragdropflags_imguidragdropflags_sourcenoholdtoopenothers_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_SourceAllowNullID_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidragdropflags_imguidragdropflags_sourceallownullid_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_SourceExtern_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidragdropflags_imguidragdropflags_sourceextern_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_PayloadAutoExpire_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidragdropflags_imguidragdropflags_payloadautoexpire_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDragDropFlags_ImGuiDragDropFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_PayloadNoCrossContext_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidragdropflags_imguidragdropflags_payloadnocrosscontext_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_SourceNoPreviewTooltip_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDragDropFlags_ImGuiDragDropFlags_1SourceNoPreviewTooltip_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_PayloadNoCrossProcess_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidragdropflags_imguidragdropflags_payloadnocrossprocess_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_SourceNoDisableHover_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDragDropFlags_ImGuiDragDropFlags_1SourceNoDisableHover_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_AcceptBeforeDelivery_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidragdropflags_imguidragdropflags_acceptbeforedelivery_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_SourceNoHoldToOpenOthers_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDragDropFlags_ImGuiDragDropFlags_1SourceNoHoldToOpenOthers_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_AcceptNoDrawDefaultRect_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidragdropflags_imguidragdropflags_acceptnodrawdefaultrect_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_SourceAllowNullID_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDragDropFlags_ImGuiDragDropFlags_1SourceAllowNullID_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_AcceptNoPreviewTooltip_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidragdropflags_imguidragdropflags_acceptnopreviewtooltip_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_SourceExtern_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDragDropFlags_ImGuiDragDropFlags_1SourceExtern_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_PayloadAutoExpire_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDragDropFlags_ImGuiDragDropFlags_1PayloadAutoExpire_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_PayloadNoCrossContext_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDragDropFlags_ImGuiDragDropFlags_1PayloadNoCrossContext_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_PayloadNoCrossProcess_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDragDropFlags_ImGuiDragDropFlags_1PayloadNoCrossProcess_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_AcceptBeforeDelivery_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDragDropFlags_ImGuiDragDropFlags_1AcceptBeforeDelivery_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_AcceptNoDrawDefaultRect_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDragDropFlags_ImGuiDragDropFlags_1AcceptNoDrawDefaultRect_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_AcceptNoPreviewTooltip_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDragDropFlags_ImGuiDragDropFlags_1AcceptNoPreviewTooltip_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_AcceptPeekOnly_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDragDropFlags_ImGuiDragDropFlags_1AcceptPeekOnly_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiDragDropFlags_AcceptPeekOnly_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidragdropflags_imguidragdropflags_acceptpeekonly_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

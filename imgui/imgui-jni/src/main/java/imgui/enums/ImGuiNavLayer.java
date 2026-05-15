@@ -34,18 +34,15 @@ public enum ImGuiNavLayer implements NativeEnum<ImGuiNavLayer> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavLayer_Main;
-*/
-    private static native int ImGuiNavLayer_Main_NATIVE();
+    private static int ImGuiNavLayer_Main_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiNavLayer.ImGuiNavLayer_Main_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavLayer_Menu;
-*/
-    private static native int ImGuiNavLayer_Menu_NATIVE();
+    private static int ImGuiNavLayer_Menu_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiNavLayer.ImGuiNavLayer_Menu_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiNavLayer_COUNT;
-*/
-    private static native int ImGuiNavLayer_COUNT_NATIVE();
+    private static int ImGuiNavLayer_COUNT_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiNavLayer.ImGuiNavLayer_COUNT_NATIVE();
+    }
 }

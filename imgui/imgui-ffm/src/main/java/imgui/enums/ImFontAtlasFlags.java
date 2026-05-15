@@ -41,88 +41,46 @@ public enum ImFontAtlasFlags implements NativeEnum<ImFontAtlasFlags> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImFontAtlasFlags_None;
-*/
     private static int ImFontAtlasFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImFontAtlasFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImFontAtlasFlags_NoPowerOfTwoHeight;
-*/
     private static int ImFontAtlasFlags_NoPowerOfTwoHeight_NATIVE() {
         try {
             return (int) FFMHandles.ImFontAtlasFlags_NoPowerOfTwoHeight_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImFontAtlasFlags_NoMouseCursors;
-*/
     private static int ImFontAtlasFlags_NoMouseCursors_NATIVE() {
         try {
             return (int) FFMHandles.ImFontAtlasFlags_NoMouseCursors_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImFontAtlasFlags_NoBakedLines;
-*/
     private static int ImFontAtlasFlags_NoBakedLines_NATIVE() {
         try {
             return (int) FFMHandles.ImFontAtlasFlags_NoBakedLines_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImFontAtlasFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imfontatlasflags_imfontatlasflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImFontAtlasFlags_NoPowerOfTwoHeight_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imfontatlasflags_imfontatlasflags_nopoweroftwoheight_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImFontAtlasFlags_NoMouseCursors_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imfontatlasflags_imfontatlasflags_nomousecursors_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
-
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
-
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
-
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
-
-        static final java.lang.invoke.MethodHandle ImFontAtlasFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImFontAtlasFlags_ImFontAtlasFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImFontAtlasFlags_NoPowerOfTwoHeight_NATIVE__ = downcallDefault("jparser_imgui_enums_ImFontAtlasFlags_ImFontAtlasFlags_1NoPowerOfTwoHeight_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImFontAtlasFlags_NoMouseCursors_NATIVE__ = downcallDefault("jparser_imgui_enums_ImFontAtlasFlags_ImFontAtlasFlags_1NoMouseCursors_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImFontAtlasFlags_NoBakedLines_NATIVE__ = downcallDefault("jparser_imgui_enums_ImFontAtlasFlags_ImFontAtlasFlags_1NoBakedLines_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImFontAtlasFlags_NoBakedLines_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imfontatlasflags_imfontatlasflags_nobakedlines_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

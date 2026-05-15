@@ -34,18 +34,15 @@ public enum ImGuiTypingSelectFlags implements NativeEnum<ImGuiTypingSelectFlags>
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTypingSelectFlags_None;
-*/
-    private static native int ImGuiTypingSelectFlags_None_NATIVE();
+    private static int ImGuiTypingSelectFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTypingSelectFlags.ImGuiTypingSelectFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTypingSelectFlags_AllowBackspace;
-*/
-    private static native int ImGuiTypingSelectFlags_AllowBackspace_NATIVE();
+    private static int ImGuiTypingSelectFlags_AllowBackspace_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTypingSelectFlags.ImGuiTypingSelectFlags_AllowBackspace_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTypingSelectFlags_AllowSingleCharMode;
-*/
-    private static native int ImGuiTypingSelectFlags_AllowSingleCharMode_NATIVE();
+    private static int ImGuiTypingSelectFlags_AllowSingleCharMode_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTypingSelectFlags.ImGuiTypingSelectFlags_AllowSingleCharMode_NATIVE();
+    }
 }

@@ -41,71 +41,57 @@ public class ImDrawList extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ImDrawList.internal_native_deleteNative(this_addr);
+    }
 
     public void PushClipRect(ImVec2 cr_min, ImVec2 cr_max, boolean intersect_with_current_clip_rect) {
         internal_native_PushClipRect(native_address, cr_min.native_address, cr_max.native_address, intersect_with_current_clip_rect);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->PushClipRect(*((ImVec2* )cr_min_addr), *((ImVec2* )cr_max_addr), intersect_with_current_clip_rect);
-*/
-    public static native void internal_native_PushClipRect(long this_addr, long cr_min_addr, long cr_max_addr, boolean intersect_with_current_clip_rect);
+    public static void internal_native_PushClipRect(long this_addr, long cr_min_addr, long cr_max_addr, boolean intersect_with_current_clip_rect) {
+        imgui.natives.JNI_ImDrawList.internal_native_PushClipRect(this_addr, cr_min_addr, cr_max_addr, intersect_with_current_clip_rect);
+    }
 
     public void PushClipRect(ImVec2 cr_min, ImVec2 cr_max) {
         internal_native_PushClipRect(native_address, cr_min.native_address, cr_max.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->PushClipRect(*((ImVec2* )cr_min_addr), *((ImVec2* )cr_max_addr));
-*/
-    public static native void internal_native_PushClipRect(long this_addr, long cr_min_addr, long cr_max_addr);
+    public static void internal_native_PushClipRect(long this_addr, long cr_min_addr, long cr_max_addr) {
+        imgui.natives.JNI_ImDrawList.internal_native_PushClipRect(this_addr, cr_min_addr, cr_max_addr);
+    }
 
     public void PushClipRectFullScreen() {
         internal_native_PushClipRectFullScreen(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->PushClipRectFullScreen();
-*/
-    public static native void internal_native_PushClipRectFullScreen(long this_addr);
+    public static void internal_native_PushClipRectFullScreen(long this_addr) {
+        imgui.natives.JNI_ImDrawList.internal_native_PushClipRectFullScreen(this_addr);
+    }
 
     public void PopClipRect() {
         internal_native_PopClipRect(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->PopClipRect();
-*/
-    public static native void internal_native_PopClipRect(long this_addr);
+    public static void internal_native_PopClipRect(long this_addr) {
+        imgui.natives.JNI_ImDrawList.internal_native_PopClipRect(this_addr);
+    }
 
     public void PushTextureID(ImTextureRef tex_ref) {
         internal_native_PushTextureID(native_address, tex_ref.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->PushTextureID(*((ImTextureRef* )tex_ref_addr));
-*/
-    public static native void internal_native_PushTextureID(long this_addr, long tex_ref_addr);
+    public static void internal_native_PushTextureID(long this_addr, long tex_ref_addr) {
+        imgui.natives.JNI_ImDrawList.internal_native_PushTextureID(this_addr, tex_ref_addr);
+    }
 
     public void PopTextureID() {
         internal_native_PopTextureID(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->PopTextureID();
-*/
-    public static native void internal_native_PopTextureID(long this_addr);
+    public static void internal_native_PopTextureID(long this_addr) {
+        imgui.natives.JNI_ImDrawList.internal_native_PopTextureID(this_addr);
+    }
 
     public ImVec2 GetClipRectMin() {
         long addr = internal_native_GetClipRectMin_addr(native_address);
@@ -117,12 +103,9 @@ nativeObject->PopTextureID();
         return ImVec2_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-static ImVec2 copy_addr;
-copy_addr = nativeObject->GetClipRectMin();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetClipRectMin_addr(long this_addr);
+    public static long internal_native_GetClipRectMin_addr(long this_addr) {
+        return imgui.natives.JNI_ImDrawList.internal_native_GetClipRectMin_addr(this_addr);
+    }
 
     public ImVec2 GetClipRectMax() {
         long addr = internal_native_GetClipRectMax_addr(native_address);
@@ -134,602 +117,481 @@ return (jlong)&copy_addr;*/
         return ImVec2_TEMP_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-static ImVec2 copy_addr;
-copy_addr = nativeObject->GetClipRectMax();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_GetClipRectMax_addr(long this_addr);
+    public static long internal_native_GetClipRectMax_addr(long this_addr) {
+        return imgui.natives.JNI_ImDrawList.internal_native_GetClipRectMax_addr(this_addr);
+    }
 
     public void AddLine(ImVec2 p1, ImVec2 p2, int col, float thickness) {
         internal_native_AddLine(native_address, p1.native_address, p2.native_address, col, thickness);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddLine(*((ImVec2* )p1_addr), *((ImVec2* )p2_addr), (int)col, (float)thickness);
-*/
-    public static native void internal_native_AddLine(long this_addr, long p1_addr, long p2_addr, int col, float thickness);
+    public static void internal_native_AddLine(long this_addr, long p1_addr, long p2_addr, int col, float thickness) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddLine(this_addr, p1_addr, p2_addr, col, thickness);
+    }
 
     public void AddLine(ImVec2 p1, ImVec2 p2, int col) {
         internal_native_AddLine(native_address, p1.native_address, p2.native_address, col);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddLine(*((ImVec2* )p1_addr), *((ImVec2* )p2_addr), (int)col);
-*/
-    public static native void internal_native_AddLine(long this_addr, long p1_addr, long p2_addr, int col);
+    public static void internal_native_AddLine(long this_addr, long p1_addr, long p2_addr, int col) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddLine(this_addr, p1_addr, p2_addr, col);
+    }
 
     public void AddRect(ImVec2 p_min, ImVec2 p_max, int col, float rounding, ImDrawFlags flags, float thickness) {
         internal_native_AddRect(native_address, p_min.native_address, p_max.native_address, col, rounding, flags.getValue(), thickness);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddRect(*((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), (int)col, (float)rounding, (::ImDrawFlags)flags, (float)thickness);
-*/
-    public static native void internal_native_AddRect(long this_addr, long p_min_addr, long p_max_addr, int col, float rounding, int flags, float thickness);
+    public static void internal_native_AddRect(long this_addr, long p_min_addr, long p_max_addr, int col, float rounding, int flags, float thickness) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddRect(this_addr, p_min_addr, p_max_addr, col, rounding, flags, thickness);
+    }
 
     public void AddRect(ImVec2 p_min, ImVec2 p_max, int col, float rounding, ImDrawFlags flags) {
         internal_native_AddRect(native_address, p_min.native_address, p_max.native_address, col, rounding, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddRect(*((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), (int)col, (float)rounding, (::ImDrawFlags)flags);
-*/
-    public static native void internal_native_AddRect(long this_addr, long p_min_addr, long p_max_addr, int col, float rounding, int flags);
+    public static void internal_native_AddRect(long this_addr, long p_min_addr, long p_max_addr, int col, float rounding, int flags) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddRect(this_addr, p_min_addr, p_max_addr, col, rounding, flags);
+    }
 
     public void AddRect(ImVec2 p_min, ImVec2 p_max, int col, float rounding) {
         internal_native_AddRect(native_address, p_min.native_address, p_max.native_address, col, rounding);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddRect(*((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), (int)col, (float)rounding);
-*/
-    public static native void internal_native_AddRect(long this_addr, long p_min_addr, long p_max_addr, int col, float rounding);
+    public static void internal_native_AddRect(long this_addr, long p_min_addr, long p_max_addr, int col, float rounding) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddRect(this_addr, p_min_addr, p_max_addr, col, rounding);
+    }
 
     public void AddRect(ImVec2 p_min, ImVec2 p_max, int col) {
         internal_native_AddRect(native_address, p_min.native_address, p_max.native_address, col);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddRect(*((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), (int)col);
-*/
-    public static native void internal_native_AddRect(long this_addr, long p_min_addr, long p_max_addr, int col);
+    public static void internal_native_AddRect(long this_addr, long p_min_addr, long p_max_addr, int col) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddRect(this_addr, p_min_addr, p_max_addr, col);
+    }
 
     public void AddRectFilled(ImVec2 p_min, ImVec2 p_max, int col, float rounding, ImDrawFlags flags) {
         internal_native_AddRectFilled(native_address, p_min.native_address, p_max.native_address, col, rounding, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddRectFilled(*((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), (int)col, (float)rounding, (::ImDrawFlags)flags);
-*/
-    public static native void internal_native_AddRectFilled(long this_addr, long p_min_addr, long p_max_addr, int col, float rounding, int flags);
+    public static void internal_native_AddRectFilled(long this_addr, long p_min_addr, long p_max_addr, int col, float rounding, int flags) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddRectFilled(this_addr, p_min_addr, p_max_addr, col, rounding, flags);
+    }
 
     public void AddRectFilled(ImVec2 p_min, ImVec2 p_max, int col, float rounding) {
         internal_native_AddRectFilled(native_address, p_min.native_address, p_max.native_address, col, rounding);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddRectFilled(*((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), (int)col, (float)rounding);
-*/
-    public static native void internal_native_AddRectFilled(long this_addr, long p_min_addr, long p_max_addr, int col, float rounding);
+    public static void internal_native_AddRectFilled(long this_addr, long p_min_addr, long p_max_addr, int col, float rounding) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddRectFilled(this_addr, p_min_addr, p_max_addr, col, rounding);
+    }
 
     public void AddRectFilled(ImVec2 p_min, ImVec2 p_max, int col) {
         internal_native_AddRectFilled(native_address, p_min.native_address, p_max.native_address, col);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddRectFilled(*((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), (int)col);
-*/
-    public static native void internal_native_AddRectFilled(long this_addr, long p_min_addr, long p_max_addr, int col);
+    public static void internal_native_AddRectFilled(long this_addr, long p_min_addr, long p_max_addr, int col) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddRectFilled(this_addr, p_min_addr, p_max_addr, col);
+    }
 
     public void AddRectFilledMultiColor(ImVec2 p_min, ImVec2 p_max, int col_upr_left, int col_upr_right, int col_bot_right, int col_bot_left) {
         internal_native_AddRectFilledMultiColor(native_address, p_min.native_address, p_max.native_address, col_upr_left, col_upr_right, col_bot_right, col_bot_left);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddRectFilledMultiColor(*((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), (int)col_upr_left, (int)col_upr_right, (int)col_bot_right, (int)col_bot_left);
-*/
-    public static native void internal_native_AddRectFilledMultiColor(long this_addr, long p_min_addr, long p_max_addr, int col_upr_left, int col_upr_right, int col_bot_right, int col_bot_left);
+    public static void internal_native_AddRectFilledMultiColor(long this_addr, long p_min_addr, long p_max_addr, int col_upr_left, int col_upr_right, int col_bot_right, int col_bot_left) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddRectFilledMultiColor(this_addr, p_min_addr, p_max_addr, col_upr_left, col_upr_right, col_bot_right, col_bot_left);
+    }
 
     public void AddQuad(ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, int col, float thickness) {
         internal_native_AddQuad(native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, col, thickness);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddQuad(*((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), *((ImVec2* )p4_addr), (int)col, (float)thickness);
-*/
-    public static native void internal_native_AddQuad(long this_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, int col, float thickness);
+    public static void internal_native_AddQuad(long this_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, int col, float thickness) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddQuad(this_addr, p1_addr, p2_addr, p3_addr, p4_addr, col, thickness);
+    }
 
     public void AddQuad(ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, int col) {
         internal_native_AddQuad(native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, col);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddQuad(*((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), *((ImVec2* )p4_addr), (int)col);
-*/
-    public static native void internal_native_AddQuad(long this_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, int col);
+    public static void internal_native_AddQuad(long this_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, int col) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddQuad(this_addr, p1_addr, p2_addr, p3_addr, p4_addr, col);
+    }
 
     public void AddQuadFilled(ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, int col) {
         internal_native_AddQuadFilled(native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, col);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddQuadFilled(*((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), *((ImVec2* )p4_addr), (int)col);
-*/
-    public static native void internal_native_AddQuadFilled(long this_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, int col);
+    public static void internal_native_AddQuadFilled(long this_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, int col) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddQuadFilled(this_addr, p1_addr, p2_addr, p3_addr, p4_addr, col);
+    }
 
     public void AddTriangle(ImVec2 p1, ImVec2 p2, ImVec2 p3, int col, float thickness) {
         internal_native_AddTriangle(native_address, p1.native_address, p2.native_address, p3.native_address, col, thickness);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddTriangle(*((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), (int)col, (float)thickness);
-*/
-    public static native void internal_native_AddTriangle(long this_addr, long p1_addr, long p2_addr, long p3_addr, int col, float thickness);
+    public static void internal_native_AddTriangle(long this_addr, long p1_addr, long p2_addr, long p3_addr, int col, float thickness) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddTriangle(this_addr, p1_addr, p2_addr, p3_addr, col, thickness);
+    }
 
     public void AddTriangle(ImVec2 p1, ImVec2 p2, ImVec2 p3, int col) {
         internal_native_AddTriangle(native_address, p1.native_address, p2.native_address, p3.native_address, col);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddTriangle(*((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), (int)col);
-*/
-    public static native void internal_native_AddTriangle(long this_addr, long p1_addr, long p2_addr, long p3_addr, int col);
+    public static void internal_native_AddTriangle(long this_addr, long p1_addr, long p2_addr, long p3_addr, int col) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddTriangle(this_addr, p1_addr, p2_addr, p3_addr, col);
+    }
 
     public void AddTriangleFilled(ImVec2 p1, ImVec2 p2, ImVec2 p3, int col) {
         internal_native_AddTriangleFilled(native_address, p1.native_address, p2.native_address, p3.native_address, col);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddTriangleFilled(*((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), (int)col);
-*/
-    public static native void internal_native_AddTriangleFilled(long this_addr, long p1_addr, long p2_addr, long p3_addr, int col);
+    public static void internal_native_AddTriangleFilled(long this_addr, long p1_addr, long p2_addr, long p3_addr, int col) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddTriangleFilled(this_addr, p1_addr, p2_addr, p3_addr, col);
+    }
 
     public void AddCircle(ImVec2 center, float radius, int col, int num_segments, float thickness) {
         internal_native_AddCircle(native_address, center.native_address, radius, col, num_segments, thickness);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddCircle(*((ImVec2* )center_addr), (float)radius, (int)col, (int)num_segments, (float)thickness);
-*/
-    public static native void internal_native_AddCircle(long this_addr, long center_addr, float radius, int col, int num_segments, float thickness);
+    public static void internal_native_AddCircle(long this_addr, long center_addr, float radius, int col, int num_segments, float thickness) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddCircle(this_addr, center_addr, radius, col, num_segments, thickness);
+    }
 
     public void AddCircle(ImVec2 center, float radius, int col, int num_segments) {
         internal_native_AddCircle(native_address, center.native_address, radius, col, num_segments);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddCircle(*((ImVec2* )center_addr), (float)radius, (int)col, (int)num_segments);
-*/
-    public static native void internal_native_AddCircle(long this_addr, long center_addr, float radius, int col, int num_segments);
+    public static void internal_native_AddCircle(long this_addr, long center_addr, float radius, int col, int num_segments) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddCircle(this_addr, center_addr, radius, col, num_segments);
+    }
 
     public void AddCircle(ImVec2 center, float radius, int col) {
         internal_native_AddCircle(native_address, center.native_address, radius, col);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddCircle(*((ImVec2* )center_addr), (float)radius, (int)col);
-*/
-    public static native void internal_native_AddCircle(long this_addr, long center_addr, float radius, int col);
+    public static void internal_native_AddCircle(long this_addr, long center_addr, float radius, int col) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddCircle(this_addr, center_addr, radius, col);
+    }
 
     public void AddCircleFilled(ImVec2 center, float radius, int col, int num_segments) {
         internal_native_AddCircleFilled(native_address, center.native_address, radius, col, num_segments);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddCircleFilled(*((ImVec2* )center_addr), (float)radius, (int)col, (int)num_segments);
-*/
-    public static native void internal_native_AddCircleFilled(long this_addr, long center_addr, float radius, int col, int num_segments);
+    public static void internal_native_AddCircleFilled(long this_addr, long center_addr, float radius, int col, int num_segments) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddCircleFilled(this_addr, center_addr, radius, col, num_segments);
+    }
 
     public void AddCircleFilled(ImVec2 center, float radius, int col) {
         internal_native_AddCircleFilled(native_address, center.native_address, radius, col);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddCircleFilled(*((ImVec2* )center_addr), (float)radius, (int)col);
-*/
-    public static native void internal_native_AddCircleFilled(long this_addr, long center_addr, float radius, int col);
+    public static void internal_native_AddCircleFilled(long this_addr, long center_addr, float radius, int col) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddCircleFilled(this_addr, center_addr, radius, col);
+    }
 
     public void AddNgon(ImVec2 center, float radius, int col, int num_segments, float thickness) {
         internal_native_AddNgon(native_address, center.native_address, radius, col, num_segments, thickness);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddNgon(*((ImVec2* )center_addr), (float)radius, (int)col, (int)num_segments, (float)thickness);
-*/
-    public static native void internal_native_AddNgon(long this_addr, long center_addr, float radius, int col, int num_segments, float thickness);
+    public static void internal_native_AddNgon(long this_addr, long center_addr, float radius, int col, int num_segments, float thickness) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddNgon(this_addr, center_addr, radius, col, num_segments, thickness);
+    }
 
     public void AddNgon(ImVec2 center, float radius, int col, int num_segments) {
         internal_native_AddNgon(native_address, center.native_address, radius, col, num_segments);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddNgon(*((ImVec2* )center_addr), (float)radius, (int)col, (int)num_segments);
-*/
-    public static native void internal_native_AddNgon(long this_addr, long center_addr, float radius, int col, int num_segments);
+    public static void internal_native_AddNgon(long this_addr, long center_addr, float radius, int col, int num_segments) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddNgon(this_addr, center_addr, radius, col, num_segments);
+    }
 
     public void AddNgonFilled(ImVec2 center, float radius, int col, int num_segments) {
         internal_native_AddNgonFilled(native_address, center.native_address, radius, col, num_segments);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddNgonFilled(*((ImVec2* )center_addr), (float)radius, (int)col, (int)num_segments);
-*/
-    public static native void internal_native_AddNgonFilled(long this_addr, long center_addr, float radius, int col, int num_segments);
+    public static void internal_native_AddNgonFilled(long this_addr, long center_addr, float radius, int col, int num_segments) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddNgonFilled(this_addr, center_addr, radius, col, num_segments);
+    }
 
     public void AddEllipse(ImVec2 center, ImVec2 radius, int col, float rot, int num_segments, float thickness) {
         internal_native_AddEllipse(native_address, center.native_address, radius.native_address, col, rot, num_segments, thickness);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddEllipse(*((ImVec2* )center_addr), *((ImVec2* )radius_addr), (int)col, (float)rot, (int)num_segments, (float)thickness);
-*/
-    public static native void internal_native_AddEllipse(long this_addr, long center_addr, long radius_addr, int col, float rot, int num_segments, float thickness);
+    public static void internal_native_AddEllipse(long this_addr, long center_addr, long radius_addr, int col, float rot, int num_segments, float thickness) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddEllipse(this_addr, center_addr, radius_addr, col, rot, num_segments, thickness);
+    }
 
     public void AddEllipse(ImVec2 center, ImVec2 radius, int col, float rot, int num_segments) {
         internal_native_AddEllipse(native_address, center.native_address, radius.native_address, col, rot, num_segments);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddEllipse(*((ImVec2* )center_addr), *((ImVec2* )radius_addr), (int)col, (float)rot, (int)num_segments);
-*/
-    public static native void internal_native_AddEllipse(long this_addr, long center_addr, long radius_addr, int col, float rot, int num_segments);
+    public static void internal_native_AddEllipse(long this_addr, long center_addr, long radius_addr, int col, float rot, int num_segments) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddEllipse(this_addr, center_addr, radius_addr, col, rot, num_segments);
+    }
 
     public void AddEllipse(ImVec2 center, ImVec2 radius, int col, float rot) {
         internal_native_AddEllipse(native_address, center.native_address, radius.native_address, col, rot);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddEllipse(*((ImVec2* )center_addr), *((ImVec2* )radius_addr), (int)col, (float)rot);
-*/
-    public static native void internal_native_AddEllipse(long this_addr, long center_addr, long radius_addr, int col, float rot);
+    public static void internal_native_AddEllipse(long this_addr, long center_addr, long radius_addr, int col, float rot) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddEllipse(this_addr, center_addr, radius_addr, col, rot);
+    }
 
     public void AddEllipse(ImVec2 center, ImVec2 radius, int col) {
         internal_native_AddEllipse(native_address, center.native_address, radius.native_address, col);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddEllipse(*((ImVec2* )center_addr), *((ImVec2* )radius_addr), (int)col);
-*/
-    public static native void internal_native_AddEllipse(long this_addr, long center_addr, long radius_addr, int col);
+    public static void internal_native_AddEllipse(long this_addr, long center_addr, long radius_addr, int col) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddEllipse(this_addr, center_addr, radius_addr, col);
+    }
 
     public void AddEllipseFilled(ImVec2 center, ImVec2 radius, int col, float rot, int num_segments) {
         internal_native_AddEllipseFilled(native_address, center.native_address, radius.native_address, col, rot, num_segments);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddEllipseFilled(*((ImVec2* )center_addr), *((ImVec2* )radius_addr), (int)col, (float)rot, (int)num_segments);
-*/
-    public static native void internal_native_AddEllipseFilled(long this_addr, long center_addr, long radius_addr, int col, float rot, int num_segments);
+    public static void internal_native_AddEllipseFilled(long this_addr, long center_addr, long radius_addr, int col, float rot, int num_segments) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddEllipseFilled(this_addr, center_addr, radius_addr, col, rot, num_segments);
+    }
 
     public void AddEllipseFilled(ImVec2 center, ImVec2 radius, int col, float rot) {
         internal_native_AddEllipseFilled(native_address, center.native_address, radius.native_address, col, rot);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddEllipseFilled(*((ImVec2* )center_addr), *((ImVec2* )radius_addr), (int)col, (float)rot);
-*/
-    public static native void internal_native_AddEllipseFilled(long this_addr, long center_addr, long radius_addr, int col, float rot);
+    public static void internal_native_AddEllipseFilled(long this_addr, long center_addr, long radius_addr, int col, float rot) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddEllipseFilled(this_addr, center_addr, radius_addr, col, rot);
+    }
 
     public void AddEllipseFilled(ImVec2 center, ImVec2 radius, int col) {
         internal_native_AddEllipseFilled(native_address, center.native_address, radius.native_address, col);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddEllipseFilled(*((ImVec2* )center_addr), *((ImVec2* )radius_addr), (int)col);
-*/
-    public static native void internal_native_AddEllipseFilled(long this_addr, long center_addr, long radius_addr, int col);
+    public static void internal_native_AddEllipseFilled(long this_addr, long center_addr, long radius_addr, int col) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddEllipseFilled(this_addr, center_addr, radius_addr, col);
+    }
 
     public void AddText(ImVec2 pos, int col, String text_begin, String text_end) {
         internal_native_AddText(native_address, pos.native_address, col, text_begin, text_end);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddText(*((ImVec2* )pos_addr), (int)col, text_begin, text_end);
-*/
-    public static native void internal_native_AddText(long this_addr, long pos_addr, int col, String text_begin, String text_end);
+    public static void internal_native_AddText(long this_addr, long pos_addr, int col, String text_begin, String text_end) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddText(this_addr, pos_addr, col, text_begin, text_end);
+    }
 
     public void AddText(ImVec2 pos, int col, String text_begin) {
         internal_native_AddText(native_address, pos.native_address, col, text_begin);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddText(*((ImVec2* )pos_addr), (int)col, text_begin);
-*/
-    public static native void internal_native_AddText(long this_addr, long pos_addr, int col, String text_begin);
+    public static void internal_native_AddText(long this_addr, long pos_addr, int col, String text_begin) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddText(this_addr, pos_addr, col, text_begin);
+    }
 
     public void AddBezierCubic(ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, int col, float thickness, int num_segments) {
         internal_native_AddBezierCubic(native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, col, thickness, num_segments);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddBezierCubic(*((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), *((ImVec2* )p4_addr), (int)col, (float)thickness, (int)num_segments);
-*/
-    public static native void internal_native_AddBezierCubic(long this_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, int col, float thickness, int num_segments);
+    public static void internal_native_AddBezierCubic(long this_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, int col, float thickness, int num_segments) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddBezierCubic(this_addr, p1_addr, p2_addr, p3_addr, p4_addr, col, thickness, num_segments);
+    }
 
     public void AddBezierCubic(ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, int col, float thickness) {
         internal_native_AddBezierCubic(native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, col, thickness);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddBezierCubic(*((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), *((ImVec2* )p4_addr), (int)col, (float)thickness);
-*/
-    public static native void internal_native_AddBezierCubic(long this_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, int col, float thickness);
+    public static void internal_native_AddBezierCubic(long this_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, int col, float thickness) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddBezierCubic(this_addr, p1_addr, p2_addr, p3_addr, p4_addr, col, thickness);
+    }
 
     public void AddBezierQuadratic(ImVec2 p1, ImVec2 p2, ImVec2 p3, int col, float thickness, int num_segments) {
         internal_native_AddBezierQuadratic(native_address, p1.native_address, p2.native_address, p3.native_address, col, thickness, num_segments);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddBezierQuadratic(*((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), (int)col, (float)thickness, (int)num_segments);
-*/
-    public static native void internal_native_AddBezierQuadratic(long this_addr, long p1_addr, long p2_addr, long p3_addr, int col, float thickness, int num_segments);
+    public static void internal_native_AddBezierQuadratic(long this_addr, long p1_addr, long p2_addr, long p3_addr, int col, float thickness, int num_segments) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddBezierQuadratic(this_addr, p1_addr, p2_addr, p3_addr, col, thickness, num_segments);
+    }
 
     public void AddBezierQuadratic(ImVec2 p1, ImVec2 p2, ImVec2 p3, int col, float thickness) {
         internal_native_AddBezierQuadratic(native_address, p1.native_address, p2.native_address, p3.native_address, col, thickness);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddBezierQuadratic(*((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), (int)col, (float)thickness);
-*/
-    public static native void internal_native_AddBezierQuadratic(long this_addr, long p1_addr, long p2_addr, long p3_addr, int col, float thickness);
+    public static void internal_native_AddBezierQuadratic(long this_addr, long p1_addr, long p2_addr, long p3_addr, int col, float thickness) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddBezierQuadratic(this_addr, p1_addr, p2_addr, p3_addr, col, thickness);
+    }
 
     public void AddImage(ImTextureRef tex_ref, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max, int col) {
         internal_native_AddImage(native_address, tex_ref.native_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address, col);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImage(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), *((ImVec2* )uv_min_addr), *((ImVec2* )uv_max_addr), (int)col);
-*/
-    public static native void internal_native_AddImage(long this_addr, long tex_ref_addr, long p_min_addr, long p_max_addr, long uv_min_addr, long uv_max_addr, int col);
+    public static void internal_native_AddImage(long this_addr, long tex_ref_addr, long p_min_addr, long p_max_addr, long uv_min_addr, long uv_max_addr, int col) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddImage(this_addr, tex_ref_addr, p_min_addr, p_max_addr, uv_min_addr, uv_max_addr, col);
+    }
 
     public void AddImage(ImTextureRef tex_ref, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max) {
         internal_native_AddImage(native_address, tex_ref.native_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImage(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), *((ImVec2* )uv_min_addr), *((ImVec2* )uv_max_addr));
-*/
-    public static native void internal_native_AddImage(long this_addr, long tex_ref_addr, long p_min_addr, long p_max_addr, long uv_min_addr, long uv_max_addr);
+    public static void internal_native_AddImage(long this_addr, long tex_ref_addr, long p_min_addr, long p_max_addr, long uv_min_addr, long uv_max_addr) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddImage(this_addr, tex_ref_addr, p_min_addr, p_max_addr, uv_min_addr, uv_max_addr);
+    }
 
     public void AddImage(ImTextureRef tex_ref, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min) {
         internal_native_AddImage(native_address, tex_ref.native_address, p_min.native_address, p_max.native_address, uv_min.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImage(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), *((ImVec2* )uv_min_addr));
-*/
-    public static native void internal_native_AddImage(long this_addr, long tex_ref_addr, long p_min_addr, long p_max_addr, long uv_min_addr);
+    public static void internal_native_AddImage(long this_addr, long tex_ref_addr, long p_min_addr, long p_max_addr, long uv_min_addr) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddImage(this_addr, tex_ref_addr, p_min_addr, p_max_addr, uv_min_addr);
+    }
 
     public void AddImage(ImTextureRef tex_ref, ImVec2 p_min, ImVec2 p_max) {
         internal_native_AddImage(native_address, tex_ref.native_address, p_min.native_address, p_max.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImage(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr));
-*/
-    public static native void internal_native_AddImage(long this_addr, long tex_ref_addr, long p_min_addr, long p_max_addr);
+    public static void internal_native_AddImage(long this_addr, long tex_ref_addr, long p_min_addr, long p_max_addr) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddImage(this_addr, tex_ref_addr, p_min_addr, p_max_addr);
+    }
 
     public void AddImageQuad(ImTextureRef tex_ref, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1, ImVec2 uv2, ImVec2 uv3, ImVec2 uv4, int col) {
         internal_native_AddImageQuad(native_address, tex_ref.native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address, uv2.native_address, uv3.native_address, uv4.native_address, col);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImageQuad(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), *((ImVec2* )p4_addr), *((ImVec2* )uv1_addr), *((ImVec2* )uv2_addr), *((ImVec2* )uv3_addr), *((ImVec2* )uv4_addr), (int)col);
-*/
-    public static native void internal_native_AddImageQuad(long this_addr, long tex_ref_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, long uv1_addr, long uv2_addr, long uv3_addr, long uv4_addr, int col);
+    public static void internal_native_AddImageQuad(long this_addr, long tex_ref_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, long uv1_addr, long uv2_addr, long uv3_addr, long uv4_addr, int col) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddImageQuad(this_addr, tex_ref_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr, uv2_addr, uv3_addr, uv4_addr, col);
+    }
 
     public void AddImageQuad(ImTextureRef tex_ref, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1, ImVec2 uv2, ImVec2 uv3, ImVec2 uv4) {
         internal_native_AddImageQuad(native_address, tex_ref.native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address, uv2.native_address, uv3.native_address, uv4.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImageQuad(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), *((ImVec2* )p4_addr), *((ImVec2* )uv1_addr), *((ImVec2* )uv2_addr), *((ImVec2* )uv3_addr), *((ImVec2* )uv4_addr));
-*/
-    public static native void internal_native_AddImageQuad(long this_addr, long tex_ref_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, long uv1_addr, long uv2_addr, long uv3_addr, long uv4_addr);
+    public static void internal_native_AddImageQuad(long this_addr, long tex_ref_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, long uv1_addr, long uv2_addr, long uv3_addr, long uv4_addr) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddImageQuad(this_addr, tex_ref_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr, uv2_addr, uv3_addr, uv4_addr);
+    }
 
     public void AddImageQuad(ImTextureRef tex_ref, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1, ImVec2 uv2, ImVec2 uv3) {
         internal_native_AddImageQuad(native_address, tex_ref.native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address, uv2.native_address, uv3.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImageQuad(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), *((ImVec2* )p4_addr), *((ImVec2* )uv1_addr), *((ImVec2* )uv2_addr), *((ImVec2* )uv3_addr));
-*/
-    public static native void internal_native_AddImageQuad(long this_addr, long tex_ref_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, long uv1_addr, long uv2_addr, long uv3_addr);
+    public static void internal_native_AddImageQuad(long this_addr, long tex_ref_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, long uv1_addr, long uv2_addr, long uv3_addr) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddImageQuad(this_addr, tex_ref_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr, uv2_addr, uv3_addr);
+    }
 
     public void AddImageQuad(ImTextureRef tex_ref, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1, ImVec2 uv2) {
         internal_native_AddImageQuad(native_address, tex_ref.native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address, uv2.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImageQuad(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), *((ImVec2* )p4_addr), *((ImVec2* )uv1_addr), *((ImVec2* )uv2_addr));
-*/
-    public static native void internal_native_AddImageQuad(long this_addr, long tex_ref_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, long uv1_addr, long uv2_addr);
+    public static void internal_native_AddImageQuad(long this_addr, long tex_ref_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, long uv1_addr, long uv2_addr) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddImageQuad(this_addr, tex_ref_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr, uv2_addr);
+    }
 
     public void AddImageQuad(ImTextureRef tex_ref, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4, ImVec2 uv1) {
         internal_native_AddImageQuad(native_address, tex_ref.native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address, uv1.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImageQuad(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), *((ImVec2* )p4_addr), *((ImVec2* )uv1_addr));
-*/
-    public static native void internal_native_AddImageQuad(long this_addr, long tex_ref_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, long uv1_addr);
+    public static void internal_native_AddImageQuad(long this_addr, long tex_ref_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr, long uv1_addr) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddImageQuad(this_addr, tex_ref_addr, p1_addr, p2_addr, p3_addr, p4_addr, uv1_addr);
+    }
 
     public void AddImageQuad(ImTextureRef tex_ref, ImVec2 p1, ImVec2 p2, ImVec2 p3, ImVec2 p4) {
         internal_native_AddImageQuad(native_address, tex_ref.native_address, p1.native_address, p2.native_address, p3.native_address, p4.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImageQuad(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )p1_addr), *((ImVec2* )p2_addr), *((ImVec2* )p3_addr), *((ImVec2* )p4_addr));
-*/
-    public static native void internal_native_AddImageQuad(long this_addr, long tex_ref_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr);
+    public static void internal_native_AddImageQuad(long this_addr, long tex_ref_addr, long p1_addr, long p2_addr, long p3_addr, long p4_addr) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddImageQuad(this_addr, tex_ref_addr, p1_addr, p2_addr, p3_addr, p4_addr);
+    }
 
     public void AddImageRounded(ImTextureRef tex_ref, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max, int col, float rounding, ImDrawFlags flags) {
         internal_native_AddImageRounded(native_address, tex_ref.native_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address, col, rounding, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImageRounded(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), *((ImVec2* )uv_min_addr), *((ImVec2* )uv_max_addr), (int)col, (float)rounding, (::ImDrawFlags)flags);
-*/
-    public static native void internal_native_AddImageRounded(long this_addr, long tex_ref_addr, long p_min_addr, long p_max_addr, long uv_min_addr, long uv_max_addr, int col, float rounding, int flags);
+    public static void internal_native_AddImageRounded(long this_addr, long tex_ref_addr, long p_min_addr, long p_max_addr, long uv_min_addr, long uv_max_addr, int col, float rounding, int flags) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddImageRounded(this_addr, tex_ref_addr, p_min_addr, p_max_addr, uv_min_addr, uv_max_addr, col, rounding, flags);
+    }
 
     public void AddImageRounded(ImTextureRef tex_ref, ImVec2 p_min, ImVec2 p_max, ImVec2 uv_min, ImVec2 uv_max, int col, float rounding) {
         internal_native_AddImageRounded(native_address, tex_ref.native_address, p_min.native_address, p_max.native_address, uv_min.native_address, uv_max.native_address, col, rounding);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->AddImageRounded(*((ImTextureRef* )tex_ref_addr), *((ImVec2* )p_min_addr), *((ImVec2* )p_max_addr), *((ImVec2* )uv_min_addr), *((ImVec2* )uv_max_addr), (int)col, (float)rounding);
-*/
-    public static native void internal_native_AddImageRounded(long this_addr, long tex_ref_addr, long p_min_addr, long p_max_addr, long uv_min_addr, long uv_max_addr, int col, float rounding);
+    public static void internal_native_AddImageRounded(long this_addr, long tex_ref_addr, long p_min_addr, long p_max_addr, long uv_min_addr, long uv_max_addr, int col, float rounding) {
+        imgui.natives.JNI_ImDrawList.internal_native_AddImageRounded(this_addr, tex_ref_addr, p_min_addr, p_max_addr, uv_min_addr, uv_max_addr, col, rounding);
+    }
 
     public void PathClear() {
         internal_native_PathClear(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->PathClear();
-*/
-    public static native void internal_native_PathClear(long this_addr);
+    public static void internal_native_PathClear(long this_addr) {
+        imgui.natives.JNI_ImDrawList.internal_native_PathClear(this_addr);
+    }
 
     public void PathLineTo(ImVec2 pos) {
         internal_native_PathLineTo(native_address, pos.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->PathLineTo(*((ImVec2* )pos_addr));
-*/
-    public static native void internal_native_PathLineTo(long this_addr, long pos_addr);
+    public static void internal_native_PathLineTo(long this_addr, long pos_addr) {
+        imgui.natives.JNI_ImDrawList.internal_native_PathLineTo(this_addr, pos_addr);
+    }
 
     public void PathLineToMergeDuplicate(ImVec2 pos) {
         internal_native_PathLineToMergeDuplicate(native_address, pos.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->PathLineToMergeDuplicate(*((ImVec2* )pos_addr));
-*/
-    public static native void internal_native_PathLineToMergeDuplicate(long this_addr, long pos_addr);
+    public static void internal_native_PathLineToMergeDuplicate(long this_addr, long pos_addr) {
+        imgui.natives.JNI_ImDrawList.internal_native_PathLineToMergeDuplicate(this_addr, pos_addr);
+    }
 
     public void PathFillConvex(int col) {
         internal_native_PathFillConvex(native_address, col);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->PathFillConvex((int)col);
-*/
-    public static native void internal_native_PathFillConvex(long this_addr, int col);
+    public static void internal_native_PathFillConvex(long this_addr, int col) {
+        imgui.natives.JNI_ImDrawList.internal_native_PathFillConvex(this_addr, col);
+    }
 
     public void PathStroke(int col, ImDrawFlags flags, float thickness) {
         internal_native_PathStroke(native_address, col, flags.getValue(), thickness);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->PathStroke((int)col, (::ImDrawFlags)flags, (float)thickness);
-*/
-    public static native void internal_native_PathStroke(long this_addr, int col, int flags, float thickness);
+    public static void internal_native_PathStroke(long this_addr, int col, int flags, float thickness) {
+        imgui.natives.JNI_ImDrawList.internal_native_PathStroke(this_addr, col, flags, thickness);
+    }
 
     public void PathStroke(int col, ImDrawFlags flags) {
         internal_native_PathStroke(native_address, col, flags.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->PathStroke((int)col, (::ImDrawFlags)flags);
-*/
-    public static native void internal_native_PathStroke(long this_addr, int col, int flags);
+    public static void internal_native_PathStroke(long this_addr, int col, int flags) {
+        imgui.natives.JNI_ImDrawList.internal_native_PathStroke(this_addr, col, flags);
+    }
 
     public void PathStroke(int col) {
         internal_native_PathStroke(native_address, col);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->PathStroke((int)col);
-*/
-    public static native void internal_native_PathStroke(long this_addr, int col);
+    public static void internal_native_PathStroke(long this_addr, int col) {
+        imgui.natives.JNI_ImDrawList.internal_native_PathStroke(this_addr, col);
+    }
 
     public void ChannelsSplit(int count) {
         internal_native_ChannelsSplit(native_address, count);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->ChannelsSplit((int)count);
-*/
-    public static native void internal_native_ChannelsSplit(long this_addr, int count);
+    public static void internal_native_ChannelsSplit(long this_addr, int count) {
+        imgui.natives.JNI_ImDrawList.internal_native_ChannelsSplit(this_addr, count);
+    }
 
     public void ChannelsMerge() {
         internal_native_ChannelsMerge(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->ChannelsMerge();
-*/
-    public static native void internal_native_ChannelsMerge(long this_addr);
+    public static void internal_native_ChannelsMerge(long this_addr) {
+        imgui.natives.JNI_ImDrawList.internal_native_ChannelsMerge(this_addr);
+    }
 
     public void ChannelsSetCurrent(int n) {
         internal_native_ChannelsSetCurrent(native_address, n);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->ChannelsSetCurrent((int)n);
-*/
-    public static native void internal_native_ChannelsSetCurrent(long this_addr, int n);
+    public static void internal_native_ChannelsSetCurrent(long this_addr, int n) {
+        imgui.natives.JNI_ImDrawList.internal_native_ChannelsSetCurrent(this_addr, n);
+    }
 
     public ImVectorImDrawCmd get_CmdBuffer() {
         long addr = internal_native_get_CmdBuffer_addr(native_address);
@@ -741,21 +603,17 @@ nativeObject->ChannelsSetCurrent((int)n);
         return ImVectorImDrawCmd_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-return (jlong)&nativeObject->CmdBuffer;
-*/
-    public static native long internal_native_get_CmdBuffer_addr(long this_addr);
+    public static long internal_native_get_CmdBuffer_addr(long this_addr) {
+        return imgui.natives.JNI_ImDrawList.internal_native_get_CmdBuffer_addr(this_addr);
+    }
 
     public void set_CmdBuffer(ImVectorImDrawCmd CmdBuffer) {
         internal_native_set_CmdBuffer(native_address, CmdBuffer.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->CmdBuffer = *((ImVectorImDrawCmd*)CmdBuffer_addr);
-*/
-    public static native void internal_native_set_CmdBuffer(long this_addr, long CmdBuffer_addr);
+    public static void internal_native_set_CmdBuffer(long this_addr, long CmdBuffer_addr) {
+        imgui.natives.JNI_ImDrawList.internal_native_set_CmdBuffer(this_addr, CmdBuffer_addr);
+    }
 
     public ImVectorImDrawIdx get_IdxBuffer() {
         long addr = internal_native_get_IdxBuffer_addr(native_address);
@@ -767,21 +625,17 @@ nativeObject->CmdBuffer = *((ImVectorImDrawCmd*)CmdBuffer_addr);
         return ImVectorImDrawIdx_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-return (jlong)&nativeObject->IdxBuffer;
-*/
-    public static native long internal_native_get_IdxBuffer_addr(long this_addr);
+    public static long internal_native_get_IdxBuffer_addr(long this_addr) {
+        return imgui.natives.JNI_ImDrawList.internal_native_get_IdxBuffer_addr(this_addr);
+    }
 
     public void set_IdxBuffer(ImVectorImDrawIdx IdxBuffer) {
         internal_native_set_IdxBuffer(native_address, IdxBuffer.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->IdxBuffer = *((ImVectorImDrawIdx*)IdxBuffer_addr);
-*/
-    public static native void internal_native_set_IdxBuffer(long this_addr, long IdxBuffer_addr);
+    public static void internal_native_set_IdxBuffer(long this_addr, long IdxBuffer_addr) {
+        imgui.natives.JNI_ImDrawList.internal_native_set_IdxBuffer(this_addr, IdxBuffer_addr);
+    }
 
     public ImVectorImDrawVert get_VtxBuffer() {
         long addr = internal_native_get_VtxBuffer_addr(native_address);
@@ -793,19 +647,15 @@ nativeObject->IdxBuffer = *((ImVectorImDrawIdx*)IdxBuffer_addr);
         return ImVectorImDrawVert_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-return (jlong)&nativeObject->VtxBuffer;
-*/
-    public static native long internal_native_get_VtxBuffer_addr(long this_addr);
+    public static long internal_native_get_VtxBuffer_addr(long this_addr) {
+        return imgui.natives.JNI_ImDrawList.internal_native_get_VtxBuffer_addr(this_addr);
+    }
 
     public void set_VtxBuffer(ImVectorImDrawVert VtxBuffer) {
         internal_native_set_VtxBuffer(native_address, VtxBuffer.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawList* nativeObject = (ImDrawList*)this_addr;
-nativeObject->VtxBuffer = *((ImVectorImDrawVert*)VtxBuffer_addr);
-*/
-    public static native void internal_native_set_VtxBuffer(long this_addr, long VtxBuffer_addr);
+    public static void internal_native_set_VtxBuffer(long this_addr, long VtxBuffer_addr) {
+        imgui.natives.JNI_ImDrawList.internal_native_set_VtxBuffer(this_addr, VtxBuffer_addr);
+    }
 }

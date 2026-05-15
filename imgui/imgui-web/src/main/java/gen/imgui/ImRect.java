@@ -25,10 +25,6 @@ public class ImRect extends NativeObject {
         internal_reset(addr, true);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = new imgui.ImRect();
-return imgui.getPointer(jsObj);
-*/
     @org.teavm.jso.JSBody(script = "var jsObj = new imgui.ImRect();return imgui.getPointer(jsObj);")
     public static native int internal_native_create_addr();
 
@@ -37,10 +33,6 @@ return imgui.getPointer(jsObj);
         internal_reset(addr, true);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = new imgui.ImRect(x1, y1, x2, y2);
-return imgui.getPointer(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"x1", "y1", "x2", "y2"}, script = "var jsObj = new imgui.ImRect(x1, y1, x2, y2);return imgui.getPointer(jsObj);")
     public static native int internal_native_create_float_float_float_float_addr(float x1, float y1, float x2, float y2);
 
@@ -62,10 +54,6 @@ return imgui.getPointer(jsObj);
         internal_native_deleteNative(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImRect);
-imgui.destroy(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImRect);imgui.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
@@ -79,12 +67,6 @@ imgui.destroy(jsObj);
         return ImVec2_TEMP_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImRect);
-var returnedJSObj = jsObj.GetCenter();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImRect);var returnedJSObj = jsObj.GetCenter();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_GetCenter_addr(int this_addr);
 
@@ -98,12 +80,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec2_TEMP_GEN_1;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImRect);
-var returnedJSObj = jsObj.GetSize();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImRect);var returnedJSObj = jsObj.GetSize();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_GetSize_addr(int this_addr);
 
@@ -111,11 +87,6 @@ return imgui.getPointer(returnedJSObj);
         return internal_native_GetWidth(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImRect);
-var returnedJSObj = jsObj.GetWidth();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImRect);var returnedJSObj = jsObj.GetWidth();return returnedJSObj;")
     public static native float internal_native_GetWidth(int this_addr);
 
@@ -123,11 +94,6 @@ return returnedJSObj;
         return internal_native_GetHeight(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImRect);
-var returnedJSObj = jsObj.GetHeight();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImRect);var returnedJSObj = jsObj.GetHeight();return returnedJSObj;")
     public static native float internal_native_GetHeight(int this_addr);
 
@@ -135,11 +101,6 @@ return returnedJSObj;
         return internal_native_GetArea(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImRect);
-var returnedJSObj = jsObj.GetArea();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImRect);var returnedJSObj = jsObj.GetArea();return returnedJSObj;")
     public static native float internal_native_GetArea(int this_addr);
 
@@ -153,12 +114,6 @@ return returnedJSObj;
         return ImVec2_TEMP_GEN_2;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImRect);
-var returnedJSObj = jsObj.get_Min();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImRect);var returnedJSObj = jsObj.get_Min();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_Min_addr(int this_addr);
 
@@ -166,10 +121,6 @@ return imgui.getPointer(returnedJSObj);
         internal_native_set_Min(native_address, Min.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImRect);
-jsObj.set_Min(Min_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "Min_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImRect);jsObj.set_Min(Min_addr);")
     public static native void internal_native_set_Min(int this_addr, int Min_addr);
 
@@ -183,12 +134,6 @@ jsObj.set_Min(Min_addr);
         return ImVec2_TEMP_GEN_3;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImRect);
-var returnedJSObj = jsObj.get_Max();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImRect);var returnedJSObj = jsObj.get_Max();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_Max_addr(int this_addr);
 
@@ -196,10 +141,6 @@ return imgui.getPointer(returnedJSObj);
         internal_native_set_Max(native_address, Max.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImRect);
-jsObj.set_Max(Max_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "Max_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImRect);jsObj.set_Max(Max_addr);")
     public static native void internal_native_set_Max(int this_addr, int Max_addr);
 }

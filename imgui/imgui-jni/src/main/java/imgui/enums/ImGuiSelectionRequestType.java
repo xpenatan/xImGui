@@ -34,18 +34,15 @@ public enum ImGuiSelectionRequestType implements NativeEnum<ImGuiSelectionReques
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectionRequestType_None;
-*/
-    private static native int ImGuiSelectionRequestType_None_NATIVE();
+    private static int ImGuiSelectionRequestType_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSelectionRequestType.ImGuiSelectionRequestType_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectionRequestType_SetAll;
-*/
-    private static native int ImGuiSelectionRequestType_SetAll_NATIVE();
+    private static int ImGuiSelectionRequestType_SetAll_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSelectionRequestType.ImGuiSelectionRequestType_SetAll_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectionRequestType_SetRange;
-*/
-    private static native int ImGuiSelectionRequestType_SetRange_NATIVE();
+    private static int ImGuiSelectionRequestType_SetRange_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSelectionRequestType.ImGuiSelectionRequestType_SetRange_NATIVE();
+    }
 }

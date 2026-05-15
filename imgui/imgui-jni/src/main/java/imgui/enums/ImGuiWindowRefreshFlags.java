@@ -34,23 +34,19 @@ public enum ImGuiWindowRefreshFlags implements NativeEnum<ImGuiWindowRefreshFlag
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowRefreshFlags_None;
-*/
-    private static native int ImGuiWindowRefreshFlags_None_NATIVE();
+    private static int ImGuiWindowRefreshFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiWindowRefreshFlags.ImGuiWindowRefreshFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowRefreshFlags_TryToAvoidRefresh;
-*/
-    private static native int ImGuiWindowRefreshFlags_TryToAvoidRefresh_NATIVE();
+    private static int ImGuiWindowRefreshFlags_TryToAvoidRefresh_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiWindowRefreshFlags.ImGuiWindowRefreshFlags_TryToAvoidRefresh_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowRefreshFlags_RefreshOnHover;
-*/
-    private static native int ImGuiWindowRefreshFlags_RefreshOnHover_NATIVE();
+    private static int ImGuiWindowRefreshFlags_RefreshOnHover_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiWindowRefreshFlags.ImGuiWindowRefreshFlags_RefreshOnHover_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiWindowRefreshFlags_RefreshOnFocus;
-*/
-    private static native int ImGuiWindowRefreshFlags_RefreshOnFocus_NATIVE();
+    private static int ImGuiWindowRefreshFlags_RefreshOnFocus_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiWindowRefreshFlags.ImGuiWindowRefreshFlags_RefreshOnFocus_NATIVE();
+    }
 }

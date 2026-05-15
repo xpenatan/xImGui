@@ -44,63 +44,33 @@ public enum ImGuiBackendFlags implements NativeEnum<ImGuiBackendFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiBackendFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiBackendFlags_None;")
     private static native int ImGuiBackendFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiBackendFlags_HasGamepad;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiBackendFlags_HasGamepad;")
     private static native int ImGuiBackendFlags_HasGamepad_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiBackendFlags_HasMouseCursors;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiBackendFlags_HasMouseCursors;")
     private static native int ImGuiBackendFlags_HasMouseCursors_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiBackendFlags_HasSetMousePos;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiBackendFlags_HasSetMousePos;")
     private static native int ImGuiBackendFlags_HasSetMousePos_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiBackendFlags_RendererHasVtxOffset;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiBackendFlags_RendererHasVtxOffset;")
     private static native int ImGuiBackendFlags_RendererHasVtxOffset_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiBackendFlags_RendererHasTextures;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiBackendFlags_RendererHasTextures;")
     private static native int ImGuiBackendFlags_RendererHasTextures_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiBackendFlags_RendererHasViewports;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiBackendFlags_RendererHasViewports;")
     private static native int ImGuiBackendFlags_RendererHasViewports_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiBackendFlags_PlatformHasViewports;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiBackendFlags_PlatformHasViewports;")
     private static native int ImGuiBackendFlags_PlatformHasViewports_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiBackendFlags_HasMouseHoveredViewport;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiBackendFlags_HasMouseHoveredViewport;")
     private static native int ImGuiBackendFlags_HasMouseHoveredViewport_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiBackendFlags_HasParentViewport;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiBackendFlags_HasParentViewport;")
     private static native int ImGuiBackendFlags_HasParentViewport_NATIVE();
 }

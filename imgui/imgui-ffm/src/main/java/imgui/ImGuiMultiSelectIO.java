@@ -37,15 +37,11 @@ public class ImGuiMultiSelectIO extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiMultiSelectIO* nativeObject = (ImGuiMultiSelectIO*)this_addr;
-delete nativeObject;
-*/
     public static void internal_native_deleteNative(long this_addr) {
         try {
             FFMHandles.internal_native_deleteNative__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -53,15 +49,11 @@ delete nativeObject;
         return internal_native_get_NavIdSelected(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiMultiSelectIO* nativeObject = (ImGuiMultiSelectIO*)this_addr;
-return nativeObject->NavIdSelected;
-*/
     public static boolean internal_native_get_NavIdSelected(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_get_NavIdSelected__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -69,15 +61,11 @@ return nativeObject->NavIdSelected;
         internal_native_set_NavIdSelected(native_address, NavIdSelected);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiMultiSelectIO* nativeObject = (ImGuiMultiSelectIO*)this_addr;
-nativeObject->NavIdSelected = NavIdSelected;
-*/
     public static void internal_native_set_NavIdSelected(long this_addr, boolean NavIdSelected) {
         try {
             FFMHandles.internal_native_set_NavIdSelected__JZ.invokeExact(this_addr, NavIdSelected);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -85,15 +73,11 @@ nativeObject->NavIdSelected = NavIdSelected;
         return internal_native_get_RangeSrcReset(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiMultiSelectIO* nativeObject = (ImGuiMultiSelectIO*)this_addr;
-return nativeObject->RangeSrcReset;
-*/
     public static boolean internal_native_get_RangeSrcReset(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_get_RangeSrcReset__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -101,15 +85,11 @@ return nativeObject->RangeSrcReset;
         internal_native_set_RangeSrcReset(native_address, RangeSrcReset);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiMultiSelectIO* nativeObject = (ImGuiMultiSelectIO*)this_addr;
-nativeObject->RangeSrcReset = RangeSrcReset;
-*/
     public static void internal_native_set_RangeSrcReset(long this_addr, boolean RangeSrcReset) {
         try {
             FFMHandles.internal_native_set_RangeSrcReset__JZ.invokeExact(this_addr, RangeSrcReset);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -117,15 +97,11 @@ nativeObject->RangeSrcReset = RangeSrcReset;
         return internal_native_get_ItemsCount(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiMultiSelectIO* nativeObject = (ImGuiMultiSelectIO*)this_addr;
-return nativeObject->ItemsCount;
-*/
     public static int internal_native_get_ItemsCount(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_ItemsCount__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -133,62 +109,28 @@ return nativeObject->ItemsCount;
         internal_native_set_ItemsCount(native_address, ItemsCount);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiMultiSelectIO* nativeObject = (ImGuiMultiSelectIO*)this_addr;
-nativeObject->ItemsCount = ItemsCount;
-*/
     public static void internal_native_set_ItemsCount(long this_addr, int ItemsCount) {
         try {
             FFMHandles.internal_native_set_ItemsCount__JI.invokeExact(this_addr, ItemsCount);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_imguimultiselectio_deletenative", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle internal_native_get_NavIdSelected__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguimultiselectio_get_navidselected", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle internal_native_set_NavIdSelected__JZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguimultiselectio_set_navidselected", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle internal_native_get_RangeSrcReset__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguimultiselectio_get_rangesrcreset", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_set_RangeSrcReset__JZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguimultiselectio_set_rangesrcreset", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_get_ItemsCount__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguimultiselectio_get_itemscount", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
-
-        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = downcallDefault("jparser_imgui_ImGuiMultiSelectIO_internal_1native_1deleteNative__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_NavIdSelected__J = downcallDefault("jparser_imgui_ImGuiMultiSelectIO_internal_1native_1get_1NavIdSelected__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_NavIdSelected__JZ = downcallDefault("jparser_imgui_ImGuiMultiSelectIO_internal_1native_1set_1NavIdSelected__JZ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_RangeSrcReset__J = downcallDefault("jparser_imgui_ImGuiMultiSelectIO_internal_1native_1get_1RangeSrcReset__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_RangeSrcReset__JZ = downcallDefault("jparser_imgui_ImGuiMultiSelectIO_internal_1native_1set_1RangeSrcReset__JZ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_ItemsCount__J = downcallDefault("jparser_imgui_ImGuiMultiSelectIO_internal_1native_1get_1ItemsCount__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_ItemsCount__JI = downcallDefault("jparser_imgui_ImGuiMultiSelectIO_internal_1native_1set_1ItemsCount__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_set_ItemsCount__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguimultiselectio_set_itemscount", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
     }
 }

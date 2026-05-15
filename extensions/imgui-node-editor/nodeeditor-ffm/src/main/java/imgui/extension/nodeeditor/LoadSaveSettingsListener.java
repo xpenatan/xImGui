@@ -36,27 +36,6 @@ public class LoadSaveSettingsListener extends NativeObject {
 
     static public final LoadSaveSettingsListener NULL = LoadSaveSettingsListener.native_new();
 
-    /*[-FFM;-NATIVE]
-typedef void (*fp_LoadSaveSettingsListenerImpl_onLoad_J)(int64_t);
-typedef int32_t (*fp_LoadSaveSettingsListenerImpl_onSave_JI)(int64_t, int32_t);
-
-class LoadSaveSettingsListenerImpl : public LoadSaveSettingsListener {
-private:
-	fp_LoadSaveSettingsListenerImpl_onLoad_J onLoad_ptr;
-	fp_LoadSaveSettingsListenerImpl_onSave_JI onSave_ptr;
-public:
-	void setupCallback(fp_LoadSaveSettingsListenerImpl_onLoad_J onLoad, fp_LoadSaveSettingsListenerImpl_onSave_JI onSave) {
-		this->onLoad_ptr = onLoad;
-		this->onSave_ptr = onSave;
-	}
-	virtual void onLoad(NativeString* data) {
-		onLoad_ptr((int64_t)data);
-	}
-	virtual bool onSave(NativeString* data, SaveReasonFlags reason) {
-		return (bool)onSave_ptr((int64_t)data, static_cast<int32_t>(reason));
-	}
-};
-*/
     @Deprecated()
     protected LoadSaveSettingsListener(byte b, char c) {
     }
@@ -73,15 +52,11 @@ public:
         releaseUpcallResources();
     }
 
-    /*[-FFM;-NATIVE]
-LoadSaveSettingsListenerImpl* nativeObject = (LoadSaveSettingsListenerImpl*)this_addr;
-delete nativeObject;
-*/
     public static void internal_native_deleteNative(long this_addr) {
         try {
             FFMHandles.internal_native_deleteNative__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -135,14 +110,11 @@ delete nativeObject;
         return onSave(NativeString_TEMP_STATIC_GEN_1, reason_addr_enum);
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)new LoadSaveSettingsListenerImpl();
-*/
     public static long internal_native_create_addr() {
         try {
             return (long) FFMHandles.internal_native_create_addr__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -165,54 +137,20 @@ return (int64_t)new LoadSaveSettingsListenerImpl();
         }
     }
 
-    /*[-FFM;-NATIVE]
-LoadSaveSettingsListenerImpl* nativeObject = (LoadSaveSettingsListenerImpl*)this_addr;
-nativeObject->setupCallback((fp_LoadSaveSettingsListenerImpl_onLoad_J)onLoad_fp, (fp_LoadSaveSettingsListenerImpl_onSave_JI)onSave_fp);
-*/
     public static void internal_native_setupCallback(long this_addr, long onLoad_fp, long onSave_fp) {
         try {
             FFMHandles.internal_native_setupCallback__JJJ.invokeExact(this_addr, onLoad_fp, onSave_fp);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_loadsavesettingslistener_deletenative", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle internal_native_create_addr__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_nodeeditor_loadsavesettingslistener_create_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
-
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
-
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
-
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
-
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
-
-        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = downcallDefault("jparser_imgui_extension_nodeeditor_LoadSaveSettingsListener_internal_1native_1deleteNative__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_create_addr__ = downcallDefault("jparser_imgui_extension_nodeeditor_LoadSaveSettingsListener_internal_1native_1create_1addr__", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_setupCallback__JJJ = downcallDefault("jparser_imgui_extension_nodeeditor_LoadSaveSettingsListener_internal_1native_1setupCallback__JJJ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_setupCallback__JJJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_nodeeditor_loadsavesettingslistener_setupcallback", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
     }
 }

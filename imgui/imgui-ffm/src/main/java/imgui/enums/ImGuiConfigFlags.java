@@ -51,166 +51,106 @@ public enum ImGuiConfigFlags implements NativeEnum<ImGuiConfigFlags> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiConfigFlags_None;
-*/
     private static int ImGuiConfigFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiConfigFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiConfigFlags_NavEnableKeyboard;
-*/
     private static int ImGuiConfigFlags_NavEnableKeyboard_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiConfigFlags_NavEnableKeyboard_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiConfigFlags_NavEnableGamepad;
-*/
     private static int ImGuiConfigFlags_NavEnableGamepad_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiConfigFlags_NavEnableGamepad_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiConfigFlags_NoMouse;
-*/
     private static int ImGuiConfigFlags_NoMouse_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiConfigFlags_NoMouse_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiConfigFlags_NoMouseCursorChange;
-*/
     private static int ImGuiConfigFlags_NoMouseCursorChange_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiConfigFlags_NoMouseCursorChange_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiConfigFlags_NoKeyboard;
-*/
     private static int ImGuiConfigFlags_NoKeyboard_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiConfigFlags_NoKeyboard_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiConfigFlags_DockingEnable;
-*/
     private static int ImGuiConfigFlags_DockingEnable_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiConfigFlags_DockingEnable_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiConfigFlags_ViewportsEnable;
-*/
     private static int ImGuiConfigFlags_ViewportsEnable_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiConfigFlags_ViewportsEnable_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiConfigFlags_IsSRGB;
-*/
     private static int ImGuiConfigFlags_IsSRGB_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiConfigFlags_IsSRGB_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiConfigFlags_IsTouchScreen;
-*/
     private static int ImGuiConfigFlags_IsTouchScreen_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiConfigFlags_IsTouchScreen_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiConfigFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiconfigflags_imguiconfigflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiConfigFlags_NavEnableKeyboard_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiconfigflags_imguiconfigflags_navenablekeyboard_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiConfigFlags_NavEnableGamepad_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiconfigflags_imguiconfigflags_navenablegamepad_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiConfigFlags_NoMouse_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiconfigflags_imguiconfigflags_nomouse_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiConfigFlags_NoMouseCursorChange_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiconfigflags_imguiconfigflags_nomousecursorchange_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiConfigFlags_NoKeyboard_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiconfigflags_imguiconfigflags_nokeyboard_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiConfigFlags_DockingEnable_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiconfigflags_imguiconfigflags_dockingenable_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiConfigFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiConfigFlags_ImGuiConfigFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiConfigFlags_ViewportsEnable_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiconfigflags_imguiconfigflags_viewportsenable_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiConfigFlags_NavEnableKeyboard_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiConfigFlags_ImGuiConfigFlags_1NavEnableKeyboard_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiConfigFlags_IsSRGB_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiconfigflags_imguiconfigflags_issrgb_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiConfigFlags_NavEnableGamepad_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiConfigFlags_ImGuiConfigFlags_1NavEnableGamepad_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiConfigFlags_NoMouse_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiConfigFlags_ImGuiConfigFlags_1NoMouse_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiConfigFlags_NoMouseCursorChange_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiConfigFlags_ImGuiConfigFlags_1NoMouseCursorChange_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiConfigFlags_NoKeyboard_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiConfigFlags_ImGuiConfigFlags_1NoKeyboard_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiConfigFlags_DockingEnable_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiConfigFlags_ImGuiConfigFlags_1DockingEnable_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiConfigFlags_ViewportsEnable_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiConfigFlags_ImGuiConfigFlags_1ViewportsEnable_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiConfigFlags_IsSRGB_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiConfigFlags_ImGuiConfigFlags_1IsSRGB_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiConfigFlags_IsTouchScreen_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiConfigFlags_ImGuiConfigFlags_1IsTouchScreen_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiConfigFlags_IsTouchScreen_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiconfigflags_imguiconfigflags_istouchscreen_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

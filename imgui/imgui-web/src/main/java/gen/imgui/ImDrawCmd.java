@@ -34,10 +34,6 @@ public class ImDrawCmd extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);
-imgui.destroy(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);imgui.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
@@ -51,12 +47,6 @@ imgui.destroy(jsObj);
         return ImTextureIDRef_TEMP_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);
-var returnedJSObj = jsObj.GetTexID();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);var returnedJSObj = jsObj.GetTexID();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_GetTexID_addr(int this_addr);
 
@@ -70,12 +60,6 @@ return imgui.getPointer(returnedJSObj);
         return ImVec4_TEMP_GEN_0;
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);
-var returnedJSObj = jsObj.get_ClipRect();
-if(!returnedJSObj.hasOwnProperty('ptr')) return 0; 
-return imgui.getPointer(returnedJSObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);var returnedJSObj = jsObj.get_ClipRect();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imgui.getPointer(returnedJSObj);")
     public static native int internal_native_get_ClipRect_addr(int this_addr);
 
@@ -83,10 +67,6 @@ return imgui.getPointer(returnedJSObj);
         internal_native_set_ClipRect(native_address, ClipRect.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);
-jsObj.set_ClipRect(ClipRect_addr);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "ClipRect_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);jsObj.set_ClipRect(ClipRect_addr);")
     public static native void internal_native_set_ClipRect(int this_addr, int ClipRect_addr);
 
@@ -94,10 +74,6 @@ jsObj.set_ClipRect(ClipRect_addr);
         return internal_native_get_VtxOffset(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);
-return jsObj.get_VtxOffset();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);return jsObj.get_VtxOffset();")
     public static native int internal_native_get_VtxOffset(int this_addr);
 
@@ -105,10 +81,6 @@ return jsObj.get_VtxOffset();
         internal_native_set_VtxOffset(native_address, VtxOffset);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);
-jsObj.set_VtxOffset(VtxOffset);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "VtxOffset"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);jsObj.set_VtxOffset(VtxOffset);")
     public static native void internal_native_set_VtxOffset(int this_addr, int VtxOffset);
 
@@ -116,10 +88,6 @@ jsObj.set_VtxOffset(VtxOffset);
         return internal_native_get_IdxOffset(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);
-return jsObj.get_IdxOffset();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);return jsObj.get_IdxOffset();")
     public static native int internal_native_get_IdxOffset(int this_addr);
 
@@ -127,10 +95,6 @@ return jsObj.get_IdxOffset();
         internal_native_set_IdxOffset(native_address, IdxOffset);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);
-jsObj.set_IdxOffset(IdxOffset);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "IdxOffset"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);jsObj.set_IdxOffset(IdxOffset);")
     public static native void internal_native_set_IdxOffset(int this_addr, int IdxOffset);
 
@@ -138,10 +102,6 @@ jsObj.set_IdxOffset(IdxOffset);
         return internal_native_get_ElemCount(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);
-return jsObj.get_ElemCount();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);return jsObj.get_ElemCount();")
     public static native int internal_native_get_ElemCount(int this_addr);
 
@@ -149,10 +109,6 @@ return jsObj.get_ElemCount();
         internal_native_set_ElemCount(native_address, ElemCount);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);
-jsObj.set_ElemCount(ElemCount);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "ElemCount"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImDrawCmd);jsObj.set_ElemCount(ElemCount);")
     public static native void internal_native_set_ElemCount(int this_addr, int ElemCount);
 }

@@ -41,15 +41,11 @@ public class ImDrawCmd extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
-delete nativeObject;
-*/
     public static void internal_native_deleteNative(long this_addr) {
         try {
             FFMHandles.internal_native_deleteNative__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -63,16 +59,11 @@ delete nativeObject;
         return ImTextureIDRef_TEMP_GEN_0;
     }
 
-    /*[-FFM;-NATIVE]
-ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
-static ImTextureIDRef copy_addr;
-copy_addr = nativeObject->GetTexID();
-return (int64_t)&copy_addr;*/
     public static long internal_native_GetTexID_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_GetTexID_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -86,15 +77,11 @@ return (int64_t)&copy_addr;*/
         return ImVec4_TEMP_GEN_0;
     }
 
-    /*[-FFM;-NATIVE]
-ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
-return (int64_t)&nativeObject->ClipRect;
-*/
     public static long internal_native_get_ClipRect_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_ClipRect_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -102,15 +89,11 @@ return (int64_t)&nativeObject->ClipRect;
         internal_native_set_ClipRect(native_address, ClipRect.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
-nativeObject->ClipRect = *((ImVec4*)ClipRect_addr);
-*/
     public static void internal_native_set_ClipRect(long this_addr, long ClipRect_addr) {
         try {
             FFMHandles.internal_native_set_ClipRect__JJ.invokeExact(this_addr, ClipRect_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -118,15 +101,11 @@ nativeObject->ClipRect = *((ImVec4*)ClipRect_addr);
         return internal_native_get_VtxOffset(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
-return nativeObject->VtxOffset;
-*/
     public static int internal_native_get_VtxOffset(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_VtxOffset__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -134,15 +113,11 @@ return nativeObject->VtxOffset;
         internal_native_set_VtxOffset(native_address, VtxOffset);
     }
 
-    /*[-FFM;-NATIVE]
-ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
-nativeObject->VtxOffset = VtxOffset;
-*/
     public static void internal_native_set_VtxOffset(long this_addr, int VtxOffset) {
         try {
             FFMHandles.internal_native_set_VtxOffset__JI.invokeExact(this_addr, VtxOffset);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -150,15 +125,11 @@ nativeObject->VtxOffset = VtxOffset;
         return internal_native_get_IdxOffset(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
-return nativeObject->IdxOffset;
-*/
     public static int internal_native_get_IdxOffset(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_IdxOffset__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -166,15 +137,11 @@ return nativeObject->IdxOffset;
         internal_native_set_IdxOffset(native_address, IdxOffset);
     }
 
-    /*[-FFM;-NATIVE]
-ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
-nativeObject->IdxOffset = IdxOffset;
-*/
     public static void internal_native_set_IdxOffset(long this_addr, int IdxOffset) {
         try {
             FFMHandles.internal_native_set_IdxOffset__JI.invokeExact(this_addr, IdxOffset);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -182,15 +149,11 @@ nativeObject->IdxOffset = IdxOffset;
         return internal_native_get_ElemCount(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
-return nativeObject->ElemCount;
-*/
     public static int internal_native_get_ElemCount(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_ElemCount__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -198,68 +161,34 @@ return nativeObject->ElemCount;
         internal_native_set_ElemCount(native_address, ElemCount);
     }
 
-    /*[-FFM;-NATIVE]
-ImDrawCmd* nativeObject = (ImDrawCmd*)this_addr;
-nativeObject->ElemCount = ElemCount;
-*/
     public static void internal_native_set_ElemCount(long this_addr, int ElemCount) {
         try {
             FFMHandles.internal_native_set_ElemCount__JI.invokeExact(this_addr, ElemCount);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_imdrawcmd_deletenative", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle internal_native_GetTexID_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imdrawcmd_gettexid_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle internal_native_get_ClipRect_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imdrawcmd_get_cliprect_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle internal_native_set_ClipRect__JJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imdrawcmd_set_cliprect", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_get_VtxOffset__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imdrawcmd_get_vtxoffset", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_set_VtxOffset__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imdrawcmd_set_vtxoffset", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle internal_native_get_IdxOffset__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imdrawcmd_get_idxoffset", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = downcallDefault("jparser_imgui_ImDrawCmd_internal_1native_1deleteNative__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_IdxOffset__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imdrawcmd_set_idxoffset", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetTexID_addr__J = downcallDefault("jparser_imgui_ImDrawCmd_internal_1native_1GetTexID_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_ElemCount__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imdrawcmd_get_elemcount", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_ClipRect_addr__J = downcallDefault("jparser_imgui_ImDrawCmd_internal_1native_1get_1ClipRect_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_ClipRect__JJ = downcallDefault("jparser_imgui_ImDrawCmd_internal_1native_1set_1ClipRect__JJ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_VtxOffset__J = downcallDefault("jparser_imgui_ImDrawCmd_internal_1native_1get_1VtxOffset__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_VtxOffset__JI = downcallDefault("jparser_imgui_ImDrawCmd_internal_1native_1set_1VtxOffset__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_IdxOffset__J = downcallDefault("jparser_imgui_ImDrawCmd_internal_1native_1get_1IdxOffset__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_IdxOffset__JI = downcallDefault("jparser_imgui_ImDrawCmd_internal_1native_1set_1IdxOffset__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_ElemCount__J = downcallDefault("jparser_imgui_ImDrawCmd_internal_1native_1get_1ElemCount__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_ElemCount__JI = downcallDefault("jparser_imgui_ImDrawCmd_internal_1native_1set_1ElemCount__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_set_ElemCount__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imdrawcmd_set_elemcount", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
     }
 }

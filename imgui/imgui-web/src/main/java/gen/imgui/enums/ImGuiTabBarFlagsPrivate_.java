@@ -34,21 +34,12 @@ public enum ImGuiTabBarFlagsPrivate_ implements NativeEnum<ImGuiTabBarFlagsPriva
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabBarFlags_DockNode;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabBarFlags_DockNode;")
     private static native int ImGuiTabBarFlags_DockNode_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabBarFlags_IsFocused;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabBarFlags_IsFocused;")
     private static native int ImGuiTabBarFlags_IsFocused_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabBarFlags_SaveSettings;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabBarFlags_SaveSettings;")
     private static native int ImGuiTabBarFlags_SaveSettings_NATIVE();
 }

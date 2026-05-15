@@ -43,11 +43,9 @@ public class ImGuiLayout extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiLayout* nativeObject = (ImGuiLayout*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.extension.imlayout.natives.JNI_ImGuiLayout.internal_native_deleteNative(this_addr);
+    }
 
     public ImVec2 getAbsoluteSize() {
         long addr = internal_native_getAbsoluteSize_addr(native_address);
@@ -59,12 +57,9 @@ delete nativeObject;
         return ImVec2_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiLayout* nativeObject = (ImGuiLayout*)this_addr;
-static ImVec2 copy_addr;
-copy_addr = nativeObject->getAbsoluteSize();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_getAbsoluteSize_addr(long this_addr);
+    public static long internal_native_getAbsoluteSize_addr(long this_addr) {
+        return imgui.extension.imlayout.natives.JNI_ImGuiLayout.internal_native_getAbsoluteSize_addr(this_addr);
+    }
 
     public ImVec2 getAbsoluteSizePadding() {
         long addr = internal_native_getAbsoluteSizePadding_addr(native_address);
@@ -76,12 +71,9 @@ return (jlong)&copy_addr;*/
         return ImVec2_TEMP_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiLayout* nativeObject = (ImGuiLayout*)this_addr;
-static ImVec2 copy_addr;
-copy_addr = nativeObject->getAbsoluteSizePadding();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_getAbsoluteSizePadding_addr(long this_addr);
+    public static long internal_native_getAbsoluteSizePadding_addr(long this_addr) {
+        return imgui.extension.imlayout.natives.JNI_ImGuiLayout.internal_native_getAbsoluteSizePadding_addr(this_addr);
+    }
 
     public ImVec2 getContentSize() {
         long addr = internal_native_getContentSize_addr(native_address);
@@ -93,12 +85,9 @@ return (jlong)&copy_addr;*/
         return ImVec2_TEMP_GEN_2;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiLayout* nativeObject = (ImGuiLayout*)this_addr;
-static ImVec2 copy_addr;
-copy_addr = nativeObject->getContentSize();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_getContentSize_addr(long this_addr);
+    public static long internal_native_getContentSize_addr(long this_addr) {
+        return imgui.extension.imlayout.natives.JNI_ImGuiLayout.internal_native_getContentSize_addr(this_addr);
+    }
 
     public ImVec2 getPositionPadding() {
         long addr = internal_native_getPositionPadding_addr(native_address);
@@ -110,12 +99,9 @@ return (jlong)&copy_addr;*/
         return ImVec2_TEMP_GEN_3;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiLayout* nativeObject = (ImGuiLayout*)this_addr;
-static ImVec2 copy_addr;
-copy_addr = nativeObject->getPositionPadding();
-return (jlong)&copy_addr;*/
-    public static native long internal_native_getPositionPadding_addr(long this_addr);
+    public static long internal_native_getPositionPadding_addr(long this_addr) {
+        return imgui.extension.imlayout.natives.JNI_ImGuiLayout.internal_native_getPositionPadding_addr(this_addr);
+    }
 
     public ImVec2 get_position() {
         long addr = internal_native_get_position_addr(native_address);
@@ -127,21 +113,17 @@ return (jlong)&copy_addr;*/
         return ImVec2_TEMP_GEN_4;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiLayout* nativeObject = (ImGuiLayout*)this_addr;
-return (jlong)&nativeObject->position;
-*/
-    public static native long internal_native_get_position_addr(long this_addr);
+    public static long internal_native_get_position_addr(long this_addr) {
+        return imgui.extension.imlayout.natives.JNI_ImGuiLayout.internal_native_get_position_addr(this_addr);
+    }
 
     public void set_position(ImVec2 position) {
         internal_native_set_position(native_address, position.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiLayout* nativeObject = (ImGuiLayout*)this_addr;
-nativeObject->position = *((ImVec2*)position_addr);
-*/
-    public static native void internal_native_set_position(long this_addr, long position_addr);
+    public static void internal_native_set_position(long this_addr, long position_addr) {
+        imgui.extension.imlayout.natives.JNI_ImGuiLayout.internal_native_set_position(this_addr, position_addr);
+    }
 
     public ImVec2 get_size() {
         long addr = internal_native_get_size_addr(native_address);
@@ -153,19 +135,15 @@ nativeObject->position = *((ImVec2*)position_addr);
         return ImVec2_TEMP_GEN_5;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiLayout* nativeObject = (ImGuiLayout*)this_addr;
-return (jlong)&nativeObject->size;
-*/
-    public static native long internal_native_get_size_addr(long this_addr);
+    public static long internal_native_get_size_addr(long this_addr) {
+        return imgui.extension.imlayout.natives.JNI_ImGuiLayout.internal_native_get_size_addr(this_addr);
+    }
 
     public void set_size(ImVec2 size) {
         internal_native_set_size(native_address, size.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiLayout* nativeObject = (ImGuiLayout*)this_addr;
-nativeObject->size = *((ImVec2*)size_addr);
-*/
-    public static native void internal_native_set_size(long this_addr, long size_addr);
+    public static void internal_native_set_size(long this_addr, long size_addr) {
+        imgui.extension.imlayout.natives.JNI_ImGuiLayout.internal_native_set_size(this_addr, size_addr);
+    }
 }

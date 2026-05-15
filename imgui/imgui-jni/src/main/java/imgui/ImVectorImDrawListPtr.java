@@ -32,11 +32,9 @@ public class ImVectorImDrawListPtr extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorImDrawListPtr* nativeObject = (ImVectorImDrawListPtr*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ImVectorImDrawListPtr.internal_native_deleteNative(this_addr);
+    }
 
     public ImDrawList getData(int index) {
         long addr = internal_native_getData_addr(native_address, index);
@@ -48,20 +46,15 @@ delete nativeObject;
         return ImDrawList_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorImDrawListPtr* nativeObject = (ImVectorImDrawListPtr*)this_addr;
-ImDrawList* obj = (*nativeObject)[(int)index];
-return (jlong)obj;
-*/
-    public static native long internal_native_getData_addr(long this_addr, int index);
+    public static long internal_native_getData_addr(long this_addr, int index) {
+        return imgui.natives.JNI_ImVectorImDrawListPtr.internal_native_getData_addr(this_addr, index);
+    }
 
     public int size() {
         return internal_native_size(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorImDrawListPtr* nativeObject = (ImVectorImDrawListPtr*)this_addr;
-return nativeObject->size();
-*/
-    public static native int internal_native_size(long this_addr);
+    public static int internal_native_size(long this_addr) {
+        return imgui.natives.JNI_ImVectorImDrawListPtr.internal_native_size(this_addr);
+    }
 }

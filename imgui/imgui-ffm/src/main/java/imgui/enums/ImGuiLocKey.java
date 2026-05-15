@@ -55,218 +55,146 @@ public enum ImGuiLocKey implements NativeEnum<ImGuiLocKey> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiLocKey_VersionStr;
-*/
     private static int ImGuiLocKey_VersionStr_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiLocKey_VersionStr_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiLocKey_TableSizeOne;
-*/
     private static int ImGuiLocKey_TableSizeOne_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiLocKey_TableSizeOne_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiLocKey_TableSizeAllFit;
-*/
     private static int ImGuiLocKey_TableSizeAllFit_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiLocKey_TableSizeAllFit_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiLocKey_TableSizeAllDefault;
-*/
     private static int ImGuiLocKey_TableSizeAllDefault_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiLocKey_TableSizeAllDefault_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiLocKey_TableResetOrder;
-*/
     private static int ImGuiLocKey_TableResetOrder_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiLocKey_TableResetOrder_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiLocKey_WindowingMainMenuBar;
-*/
     private static int ImGuiLocKey_WindowingMainMenuBar_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiLocKey_WindowingMainMenuBar_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiLocKey_WindowingPopup;
-*/
     private static int ImGuiLocKey_WindowingPopup_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiLocKey_WindowingPopup_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiLocKey_WindowingUntitled;
-*/
     private static int ImGuiLocKey_WindowingUntitled_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiLocKey_WindowingUntitled_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiLocKey_OpenLink_s;
-*/
     private static int ImGuiLocKey_OpenLink_s_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiLocKey_OpenLink_s_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiLocKey_CopyLink;
-*/
     private static int ImGuiLocKey_CopyLink_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiLocKey_CopyLink_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiLocKey_DockingHideTabBar;
-*/
     private static int ImGuiLocKey_DockingHideTabBar_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiLocKey_DockingHideTabBar_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiLocKey_DockingHoldShiftToDock;
-*/
     private static int ImGuiLocKey_DockingHoldShiftToDock_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiLocKey_DockingHoldShiftToDock_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiLocKey_DockingDragToUndockOrMoveNode;
-*/
     private static int ImGuiLocKey_DockingDragToUndockOrMoveNode_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiLocKey_DockingDragToUndockOrMoveNode_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiLocKey_COUNT;
-*/
     private static int ImGuiLocKey_COUNT_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiLocKey_COUNT_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiLocKey_VersionStr_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguilockey_imguilockey_versionstr_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiLocKey_TableSizeOne_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguilockey_imguilockey_tablesizeone_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiLocKey_TableSizeAllFit_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguilockey_imguilockey_tablesizeallfit_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiLocKey_TableSizeAllDefault_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguilockey_imguilockey_tablesizealldefault_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiLocKey_TableResetOrder_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguilockey_imguilockey_tableresetorder_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiLocKey_WindowingMainMenuBar_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguilockey_imguilockey_windowingmainmenubar_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiLocKey_WindowingPopup_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguilockey_imguilockey_windowingpopup_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiLocKey_VersionStr_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiLocKey_ImGuiLocKey_1VersionStr_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiLocKey_WindowingUntitled_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguilockey_imguilockey_windowinguntitled_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiLocKey_TableSizeOne_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiLocKey_ImGuiLocKey_1TableSizeOne_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiLocKey_OpenLink_s_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguilockey_imguilockey_openlink_s_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiLocKey_TableSizeAllFit_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiLocKey_ImGuiLocKey_1TableSizeAllFit_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiLocKey_CopyLink_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguilockey_imguilockey_copylink_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiLocKey_TableSizeAllDefault_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiLocKey_ImGuiLocKey_1TableSizeAllDefault_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiLocKey_DockingHideTabBar_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguilockey_imguilockey_dockinghidetabbar_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiLocKey_TableResetOrder_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiLocKey_ImGuiLocKey_1TableResetOrder_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiLocKey_DockingHoldShiftToDock_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguilockey_imguilockey_dockingholdshifttodock_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiLocKey_WindowingMainMenuBar_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiLocKey_ImGuiLocKey_1WindowingMainMenuBar_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiLocKey_DockingDragToUndockOrMoveNode_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguilockey_imguilockey_dockingdragtoundockormovenode_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiLocKey_WindowingPopup_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiLocKey_ImGuiLocKey_1WindowingPopup_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiLocKey_WindowingUntitled_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiLocKey_ImGuiLocKey_1WindowingUntitled_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiLocKey_OpenLink_s_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiLocKey_ImGuiLocKey_1OpenLink_1s_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiLocKey_CopyLink_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiLocKey_ImGuiLocKey_1CopyLink_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiLocKey_DockingHideTabBar_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiLocKey_ImGuiLocKey_1DockingHideTabBar_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiLocKey_DockingHoldShiftToDock_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiLocKey_ImGuiLocKey_1DockingHoldShiftToDock_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiLocKey_DockingDragToUndockOrMoveNode_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiLocKey_ImGuiLocKey_1DockingDragToUndockOrMoveNode_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiLocKey_COUNT_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiLocKey_ImGuiLocKey_1COUNT_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiLocKey_COUNT_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguilockey_imguilockey_count_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

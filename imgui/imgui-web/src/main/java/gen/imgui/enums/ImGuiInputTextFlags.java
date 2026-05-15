@@ -60,159 +60,81 @@ public enum ImGuiInputTextFlags implements NativeEnum<ImGuiInputTextFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_None;")
     private static native int ImGuiInputTextFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_CharsDecimal;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_CharsDecimal;")
     private static native int ImGuiInputTextFlags_CharsDecimal_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_CharsHexadecimal;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_CharsHexadecimal;")
     private static native int ImGuiInputTextFlags_CharsHexadecimal_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_CharsScientific;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_CharsScientific;")
     private static native int ImGuiInputTextFlags_CharsScientific_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_CharsUppercase;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_CharsUppercase;")
     private static native int ImGuiInputTextFlags_CharsUppercase_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_CharsNoBlank;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_CharsNoBlank;")
     private static native int ImGuiInputTextFlags_CharsNoBlank_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_AllowTabInput;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_AllowTabInput;")
     private static native int ImGuiInputTextFlags_AllowTabInput_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_EnterReturnsTrue;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_EnterReturnsTrue;")
     private static native int ImGuiInputTextFlags_EnterReturnsTrue_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_EscapeClearsAll;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_EscapeClearsAll;")
     private static native int ImGuiInputTextFlags_EscapeClearsAll_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_CtrlEnterForNewLine;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_CtrlEnterForNewLine;")
     private static native int ImGuiInputTextFlags_CtrlEnterForNewLine_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_ReadOnly;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_ReadOnly;")
     private static native int ImGuiInputTextFlags_ReadOnly_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_Password;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_Password;")
     private static native int ImGuiInputTextFlags_Password_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_AlwaysOverwrite;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_AlwaysOverwrite;")
     private static native int ImGuiInputTextFlags_AlwaysOverwrite_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_AutoSelectAll;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_AutoSelectAll;")
     private static native int ImGuiInputTextFlags_AutoSelectAll_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_ParseEmptyRefVal;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_ParseEmptyRefVal;")
     private static native int ImGuiInputTextFlags_ParseEmptyRefVal_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_DisplayEmptyRefVal;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_DisplayEmptyRefVal;")
     private static native int ImGuiInputTextFlags_DisplayEmptyRefVal_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_NoHorizontalScroll;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_NoHorizontalScroll;")
     private static native int ImGuiInputTextFlags_NoHorizontalScroll_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_NoUndoRedo;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_NoUndoRedo;")
     private static native int ImGuiInputTextFlags_NoUndoRedo_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_ElideLeft;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_ElideLeft;")
     private static native int ImGuiInputTextFlags_ElideLeft_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_CallbackCompletion;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_CallbackCompletion;")
     private static native int ImGuiInputTextFlags_CallbackCompletion_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_CallbackHistory;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_CallbackHistory;")
     private static native int ImGuiInputTextFlags_CallbackHistory_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_CallbackAlways;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_CallbackAlways;")
     private static native int ImGuiInputTextFlags_CallbackAlways_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_CallbackCharFilter;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_CallbackCharFilter;")
     private static native int ImGuiInputTextFlags_CallbackCharFilter_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_CallbackResize;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_CallbackResize;")
     private static native int ImGuiInputTextFlags_CallbackResize_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_CallbackEdit;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_CallbackEdit;")
     private static native int ImGuiInputTextFlags_CallbackEdit_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputTextFlags_WordWrap;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputTextFlags_WordWrap;")
     private static native int ImGuiInputTextFlags_WordWrap_NATIVE();
 }

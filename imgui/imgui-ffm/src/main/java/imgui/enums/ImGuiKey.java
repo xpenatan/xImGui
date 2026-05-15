@@ -205,2168 +205,1646 @@ public enum ImGuiKey implements NativeEnum<ImGuiKey> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_None;
-*/
     private static int ImGuiKey_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_NamedKey_BEGIN;
-*/
     private static int ImGuiKey_NamedKey_BEGIN_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_NamedKey_BEGIN_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Tab;
-*/
     private static int ImGuiKey_Tab_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Tab_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_LeftArrow;
-*/
     private static int ImGuiKey_LeftArrow_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_LeftArrow_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_RightArrow;
-*/
     private static int ImGuiKey_RightArrow_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_RightArrow_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_UpArrow;
-*/
     private static int ImGuiKey_UpArrow_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_UpArrow_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_DownArrow;
-*/
     private static int ImGuiKey_DownArrow_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_DownArrow_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_PageUp;
-*/
     private static int ImGuiKey_PageUp_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_PageUp_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_PageDown;
-*/
     private static int ImGuiKey_PageDown_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_PageDown_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Home;
-*/
     private static int ImGuiKey_Home_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Home_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_End;
-*/
     private static int ImGuiKey_End_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_End_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Insert;
-*/
     private static int ImGuiKey_Insert_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Insert_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Delete;
-*/
     private static int ImGuiKey_Delete_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Delete_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Backspace;
-*/
     private static int ImGuiKey_Backspace_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Backspace_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Space;
-*/
     private static int ImGuiKey_Space_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Space_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Enter;
-*/
     private static int ImGuiKey_Enter_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Enter_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Escape;
-*/
     private static int ImGuiKey_Escape_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Escape_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_LeftCtrl;
-*/
     private static int ImGuiKey_LeftCtrl_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_LeftCtrl_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_LeftShift;
-*/
     private static int ImGuiKey_LeftShift_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_LeftShift_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_LeftAlt;
-*/
     private static int ImGuiKey_LeftAlt_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_LeftAlt_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_LeftSuper;
-*/
     private static int ImGuiKey_LeftSuper_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_LeftSuper_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_RightCtrl;
-*/
     private static int ImGuiKey_RightCtrl_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_RightCtrl_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_RightShift;
-*/
     private static int ImGuiKey_RightShift_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_RightShift_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_RightAlt;
-*/
     private static int ImGuiKey_RightAlt_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_RightAlt_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_RightSuper;
-*/
     private static int ImGuiKey_RightSuper_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_RightSuper_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Menu;
-*/
     private static int ImGuiKey_Menu_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Menu_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_0;
-*/
     private static int ImGuiKey_0_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_0_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_1;
-*/
     private static int ImGuiKey_1_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_1_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_2;
-*/
     private static int ImGuiKey_2_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_2_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_3;
-*/
     private static int ImGuiKey_3_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_3_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_4;
-*/
     private static int ImGuiKey_4_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_4_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_5;
-*/
     private static int ImGuiKey_5_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_5_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_6;
-*/
     private static int ImGuiKey_6_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_6_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_7;
-*/
     private static int ImGuiKey_7_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_7_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_8;
-*/
     private static int ImGuiKey_8_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_8_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_9;
-*/
     private static int ImGuiKey_9_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_9_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_A;
-*/
     private static int ImGuiKey_A_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_A_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_B;
-*/
     private static int ImGuiKey_B_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_B_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_C;
-*/
     private static int ImGuiKey_C_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_C_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_D;
-*/
     private static int ImGuiKey_D_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_D_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_E;
-*/
     private static int ImGuiKey_E_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_E_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F;
-*/
     private static int ImGuiKey_F_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_G;
-*/
     private static int ImGuiKey_G_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_G_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_H;
-*/
     private static int ImGuiKey_H_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_H_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_I;
-*/
     private static int ImGuiKey_I_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_I_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_J;
-*/
     private static int ImGuiKey_J_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_J_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_K;
-*/
     private static int ImGuiKey_K_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_K_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_L;
-*/
     private static int ImGuiKey_L_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_L_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_M;
-*/
     private static int ImGuiKey_M_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_M_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_N;
-*/
     private static int ImGuiKey_N_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_N_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_O;
-*/
     private static int ImGuiKey_O_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_O_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_P;
-*/
     private static int ImGuiKey_P_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_P_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Q;
-*/
     private static int ImGuiKey_Q_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Q_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_R;
-*/
     private static int ImGuiKey_R_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_R_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_S;
-*/
     private static int ImGuiKey_S_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_S_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_T;
-*/
     private static int ImGuiKey_T_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_T_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_U;
-*/
     private static int ImGuiKey_U_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_U_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_V;
-*/
     private static int ImGuiKey_V_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_V_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_W;
-*/
     private static int ImGuiKey_W_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_W_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_X;
-*/
     private static int ImGuiKey_X_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_X_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Y;
-*/
     private static int ImGuiKey_Y_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Y_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Z;
-*/
     private static int ImGuiKey_Z_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Z_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F1;
-*/
     private static int ImGuiKey_F1_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F1_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F2;
-*/
     private static int ImGuiKey_F2_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F2_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F3;
-*/
     private static int ImGuiKey_F3_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F3_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F4;
-*/
     private static int ImGuiKey_F4_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F4_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F5;
-*/
     private static int ImGuiKey_F5_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F5_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F6;
-*/
     private static int ImGuiKey_F6_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F6_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F7;
-*/
     private static int ImGuiKey_F7_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F7_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F8;
-*/
     private static int ImGuiKey_F8_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F8_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F9;
-*/
     private static int ImGuiKey_F9_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F9_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F10;
-*/
     private static int ImGuiKey_F10_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F10_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F11;
-*/
     private static int ImGuiKey_F11_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F11_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F12;
-*/
     private static int ImGuiKey_F12_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F12_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F13;
-*/
     private static int ImGuiKey_F13_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F13_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F14;
-*/
     private static int ImGuiKey_F14_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F14_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F15;
-*/
     private static int ImGuiKey_F15_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F15_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F16;
-*/
     private static int ImGuiKey_F16_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F16_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F17;
-*/
     private static int ImGuiKey_F17_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F17_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F18;
-*/
     private static int ImGuiKey_F18_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F18_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F19;
-*/
     private static int ImGuiKey_F19_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F19_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F20;
-*/
     private static int ImGuiKey_F20_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F20_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F21;
-*/
     private static int ImGuiKey_F21_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F21_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F22;
-*/
     private static int ImGuiKey_F22_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F22_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F23;
-*/
     private static int ImGuiKey_F23_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F23_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_F24;
-*/
     private static int ImGuiKey_F24_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_F24_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Apostrophe;
-*/
     private static int ImGuiKey_Apostrophe_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Apostrophe_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Comma;
-*/
     private static int ImGuiKey_Comma_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Comma_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Minus;
-*/
     private static int ImGuiKey_Minus_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Minus_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Period;
-*/
     private static int ImGuiKey_Period_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Period_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Slash;
-*/
     private static int ImGuiKey_Slash_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Slash_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Semicolon;
-*/
     private static int ImGuiKey_Semicolon_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Semicolon_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Equal;
-*/
     private static int ImGuiKey_Equal_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Equal_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_LeftBracket;
-*/
     private static int ImGuiKey_LeftBracket_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_LeftBracket_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Backslash;
-*/
     private static int ImGuiKey_Backslash_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Backslash_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_RightBracket;
-*/
     private static int ImGuiKey_RightBracket_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_RightBracket_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GraveAccent;
-*/
     private static int ImGuiKey_GraveAccent_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GraveAccent_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_CapsLock;
-*/
     private static int ImGuiKey_CapsLock_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_CapsLock_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_ScrollLock;
-*/
     private static int ImGuiKey_ScrollLock_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_ScrollLock_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_NumLock;
-*/
     private static int ImGuiKey_NumLock_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_NumLock_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_PrintScreen;
-*/
     private static int ImGuiKey_PrintScreen_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_PrintScreen_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Pause;
-*/
     private static int ImGuiKey_Pause_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Pause_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Keypad0;
-*/
     private static int ImGuiKey_Keypad0_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Keypad0_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Keypad1;
-*/
     private static int ImGuiKey_Keypad1_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Keypad1_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Keypad2;
-*/
     private static int ImGuiKey_Keypad2_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Keypad2_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Keypad3;
-*/
     private static int ImGuiKey_Keypad3_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Keypad3_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Keypad4;
-*/
     private static int ImGuiKey_Keypad4_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Keypad4_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Keypad5;
-*/
     private static int ImGuiKey_Keypad5_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Keypad5_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Keypad6;
-*/
     private static int ImGuiKey_Keypad6_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Keypad6_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Keypad7;
-*/
     private static int ImGuiKey_Keypad7_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Keypad7_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Keypad8;
-*/
     private static int ImGuiKey_Keypad8_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Keypad8_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Keypad9;
-*/
     private static int ImGuiKey_Keypad9_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Keypad9_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_KeypadDecimal;
-*/
     private static int ImGuiKey_KeypadDecimal_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_KeypadDecimal_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_KeypadDivide;
-*/
     private static int ImGuiKey_KeypadDivide_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_KeypadDivide_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_KeypadMultiply;
-*/
     private static int ImGuiKey_KeypadMultiply_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_KeypadMultiply_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_KeypadSubtract;
-*/
     private static int ImGuiKey_KeypadSubtract_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_KeypadSubtract_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_KeypadAdd;
-*/
     private static int ImGuiKey_KeypadAdd_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_KeypadAdd_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_KeypadEnter;
-*/
     private static int ImGuiKey_KeypadEnter_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_KeypadEnter_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_KeypadEqual;
-*/
     private static int ImGuiKey_KeypadEqual_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_KeypadEqual_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_AppBack;
-*/
     private static int ImGuiKey_AppBack_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_AppBack_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_AppForward;
-*/
     private static int ImGuiKey_AppForward_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_AppForward_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_Oem102;
-*/
     private static int ImGuiKey_Oem102_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_Oem102_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GamepadStart;
-*/
     private static int ImGuiKey_GamepadStart_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GamepadStart_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GamepadBack;
-*/
     private static int ImGuiKey_GamepadBack_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GamepadBack_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GamepadFaceLeft;
-*/
     private static int ImGuiKey_GamepadFaceLeft_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GamepadFaceLeft_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GamepadFaceRight;
-*/
     private static int ImGuiKey_GamepadFaceRight_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GamepadFaceRight_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GamepadFaceUp;
-*/
     private static int ImGuiKey_GamepadFaceUp_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GamepadFaceUp_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GamepadFaceDown;
-*/
     private static int ImGuiKey_GamepadFaceDown_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GamepadFaceDown_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GamepadDpadLeft;
-*/
     private static int ImGuiKey_GamepadDpadLeft_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GamepadDpadLeft_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GamepadDpadRight;
-*/
     private static int ImGuiKey_GamepadDpadRight_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GamepadDpadRight_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GamepadDpadUp;
-*/
     private static int ImGuiKey_GamepadDpadUp_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GamepadDpadUp_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GamepadDpadDown;
-*/
     private static int ImGuiKey_GamepadDpadDown_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GamepadDpadDown_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GamepadL1;
-*/
     private static int ImGuiKey_GamepadL1_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GamepadL1_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GamepadR1;
-*/
     private static int ImGuiKey_GamepadR1_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GamepadR1_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GamepadL2;
-*/
     private static int ImGuiKey_GamepadL2_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GamepadL2_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GamepadR2;
-*/
     private static int ImGuiKey_GamepadR2_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GamepadR2_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GamepadL3;
-*/
     private static int ImGuiKey_GamepadL3_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GamepadL3_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GamepadR3;
-*/
     private static int ImGuiKey_GamepadR3_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GamepadR3_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GamepadLStickLeft;
-*/
     private static int ImGuiKey_GamepadLStickLeft_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GamepadLStickLeft_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GamepadLStickRight;
-*/
     private static int ImGuiKey_GamepadLStickRight_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GamepadLStickRight_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GamepadLStickUp;
-*/
     private static int ImGuiKey_GamepadLStickUp_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GamepadLStickUp_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GamepadLStickDown;
-*/
     private static int ImGuiKey_GamepadLStickDown_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GamepadLStickDown_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GamepadRStickLeft;
-*/
     private static int ImGuiKey_GamepadRStickLeft_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GamepadRStickLeft_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GamepadRStickRight;
-*/
     private static int ImGuiKey_GamepadRStickRight_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GamepadRStickRight_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GamepadRStickUp;
-*/
     private static int ImGuiKey_GamepadRStickUp_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GamepadRStickUp_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_GamepadRStickDown;
-*/
     private static int ImGuiKey_GamepadRStickDown_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_GamepadRStickDown_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_MouseLeft;
-*/
     private static int ImGuiKey_MouseLeft_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_MouseLeft_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_MouseRight;
-*/
     private static int ImGuiKey_MouseRight_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_MouseRight_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_MouseMiddle;
-*/
     private static int ImGuiKey_MouseMiddle_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_MouseMiddle_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_MouseX1;
-*/
     private static int ImGuiKey_MouseX1_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_MouseX1_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_MouseX2;
-*/
     private static int ImGuiKey_MouseX2_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_MouseX2_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_MouseWheelX;
-*/
     private static int ImGuiKey_MouseWheelX_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_MouseWheelX_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_MouseWheelY;
-*/
     private static int ImGuiKey_MouseWheelY_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_MouseWheelY_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_ReservedForModCtrl;
-*/
     private static int ImGuiKey_ReservedForModCtrl_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_ReservedForModCtrl_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_ReservedForModShift;
-*/
     private static int ImGuiKey_ReservedForModShift_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_ReservedForModShift_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_ReservedForModAlt;
-*/
     private static int ImGuiKey_ReservedForModAlt_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_ReservedForModAlt_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_ReservedForModSuper;
-*/
     private static int ImGuiKey_ReservedForModSuper_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_ReservedForModSuper_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiKey_NamedKey_END;
-*/
     private static int ImGuiKey_NamedKey_END_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiKey_NamedKey_END_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMod_None;
-*/
     private static int ImGuiMod_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMod_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMod_Ctrl;
-*/
     private static int ImGuiMod_Ctrl_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMod_Ctrl_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMod_Shift;
-*/
     private static int ImGuiMod_Shift_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMod_Shift_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMod_Alt;
-*/
     private static int ImGuiMod_Alt_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMod_Alt_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMod_Super;
-*/
     private static int ImGuiMod_Super_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMod_Super_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiMod_Mask_;
-*/
     private static int ImGuiMod_Mask__NATIVE() {
         try {
             return (int) FFMHandles.ImGuiMod_Mask__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiKey_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiKey_NamedKey_BEGIN_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_namedkey_begin_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiKey_Tab_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_tab_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiKey_LeftArrow_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_leftarrow_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiKey_RightArrow_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_rightarrow_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiKey_UpArrow_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_uparrow_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiKey_DownArrow_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_downarrow_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_PageUp_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_pageup_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_NamedKey_BEGIN_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1NamedKey_1BEGIN_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_PageDown_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_pagedown_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Tab_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Tab_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Home_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_home_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_LeftArrow_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1LeftArrow_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_End_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_end_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_RightArrow_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1RightArrow_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Insert_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_insert_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_UpArrow_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1UpArrow_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Delete_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_delete_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_DownArrow_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1DownArrow_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Backspace_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_backspace_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_PageUp_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1PageUp_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Space_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_space_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_PageDown_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1PageDown_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Enter_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_enter_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Home_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Home_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Escape_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_escape_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_End_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1End_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_LeftCtrl_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_leftctrl_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Insert_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Insert_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_LeftShift_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_leftshift_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Delete_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Delete_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_LeftAlt_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_leftalt_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Backspace_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Backspace_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_LeftSuper_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_leftsuper_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Space_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Space_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_RightCtrl_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_rightctrl_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Enter_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Enter_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_RightShift_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_rightshift_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Escape_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Escape_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_RightAlt_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_rightalt_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_LeftCtrl_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1LeftCtrl_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_RightSuper_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_rightsuper_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_LeftShift_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1LeftShift_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Menu_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_menu_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_LeftAlt_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1LeftAlt_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_0_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_0_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_LeftSuper_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1LeftSuper_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_1_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_1_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_RightCtrl_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1RightCtrl_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_2_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_2_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_RightShift_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1RightShift_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_3_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_3_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_RightAlt_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1RightAlt_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_4_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_4_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_RightSuper_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1RightSuper_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_5_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_5_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Menu_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Menu_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_6_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_6_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_0_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_10_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_7_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_7_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_1_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_11_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_8_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_8_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_2_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_12_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_9_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_9_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_3_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_13_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_A_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_a_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_4_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_14_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_B_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_b_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_5_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_15_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_C_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_c_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_6_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_16_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_D_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_d_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_7_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_17_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_E_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_e_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_8_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_18_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_9_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_19_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_G_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_g_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_A_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1A_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_H_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_h_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_B_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1B_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_I_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_i_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_C_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1C_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_J_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_j_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_D_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1D_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_K_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_k_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_E_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1E_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_L_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_l_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_M_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_m_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_G_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1G_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_N_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_n_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_H_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1H_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_O_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_o_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_I_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1I_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_P_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_p_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_J_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1J_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Q_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_q_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_K_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1K_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_R_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_r_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_L_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1L_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_S_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_s_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_M_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1M_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_T_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_t_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_N_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1N_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_U_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_u_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_O_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1O_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_V_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_v_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_P_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1P_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_W_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_w_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Q_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Q_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_X_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_x_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_R_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1R_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Y_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_y_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_S_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1S_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Z_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_z_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_T_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1T_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F1_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f1_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_U_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1U_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F2_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f2_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_V_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1V_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F3_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f3_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_W_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1W_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F4_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f4_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_X_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1X_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F5_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f5_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Y_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Y_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F6_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f6_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Z_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Z_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F7_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f7_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F1_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F8_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f8_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F2_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F2_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F9_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f9_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F3_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F3_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F10_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f10_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F4_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F4_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F11_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f11_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F5_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F5_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F12_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f12_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F6_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F6_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F13_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f13_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F7_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F7_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F14_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f14_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F8_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F8_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F15_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f15_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F9_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F9_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F16_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f16_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F10_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F10_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F17_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f17_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F11_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F11_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F18_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f18_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F12_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F12_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F19_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f19_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F13_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F13_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F20_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f20_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F14_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F14_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F21_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f21_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F15_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F15_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F22_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f22_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F16_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F16_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F23_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f23_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F17_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F17_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_F24_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_f24_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F18_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F18_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Apostrophe_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_apostrophe_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F19_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F19_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Comma_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_comma_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F20_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F20_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Minus_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_minus_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F21_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F21_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Period_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_period_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F22_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F22_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Slash_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_slash_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F23_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F23_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Semicolon_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_semicolon_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_F24_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1F24_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Equal_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_equal_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Apostrophe_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Apostrophe_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_LeftBracket_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_leftbracket_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Comma_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Comma_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Backslash_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_backslash_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Minus_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Minus_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_RightBracket_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_rightbracket_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Period_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Period_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GraveAccent_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_graveaccent_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Slash_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Slash_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_CapsLock_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_capslock_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Semicolon_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Semicolon_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_ScrollLock_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_scrolllock_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Equal_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Equal_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_NumLock_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_numlock_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_LeftBracket_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1LeftBracket_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_PrintScreen_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_printscreen_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Backslash_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Backslash_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Pause_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_pause_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_RightBracket_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1RightBracket_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Keypad0_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_keypad0_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GraveAccent_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GraveAccent_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Keypad1_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_keypad1_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_CapsLock_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1CapsLock_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Keypad2_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_keypad2_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_ScrollLock_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1ScrollLock_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Keypad3_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_keypad3_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_NumLock_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1NumLock_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Keypad4_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_keypad4_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_PrintScreen_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1PrintScreen_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Keypad5_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_keypad5_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Pause_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Pause_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Keypad6_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_keypad6_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Keypad0_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Keypad0_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Keypad7_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_keypad7_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Keypad1_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Keypad1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Keypad8_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_keypad8_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Keypad2_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Keypad2_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Keypad9_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_keypad9_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Keypad3_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Keypad3_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_KeypadDecimal_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_keypaddecimal_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Keypad4_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Keypad4_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_KeypadDivide_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_keypaddivide_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Keypad5_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Keypad5_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_KeypadMultiply_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_keypadmultiply_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Keypad6_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Keypad6_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_KeypadSubtract_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_keypadsubtract_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Keypad7_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Keypad7_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_KeypadAdd_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_keypadadd_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Keypad8_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Keypad8_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_KeypadEnter_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_keypadenter_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Keypad9_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Keypad9_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_KeypadEqual_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_keypadequal_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_KeypadDecimal_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1KeypadDecimal_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_AppBack_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_appback_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_KeypadDivide_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1KeypadDivide_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_AppForward_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_appforward_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_KeypadMultiply_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1KeypadMultiply_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_Oem102_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_oem102_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_KeypadSubtract_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1KeypadSubtract_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadStart_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_gamepadstart_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_KeypadAdd_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1KeypadAdd_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadBack_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_gamepadback_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_KeypadEnter_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1KeypadEnter_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadFaceLeft_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_gamepadfaceleft_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_KeypadEqual_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1KeypadEqual_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadFaceRight_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_gamepadfaceright_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_AppBack_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1AppBack_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadFaceUp_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_gamepadfaceup_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_AppForward_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1AppForward_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadFaceDown_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_gamepadfacedown_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_Oem102_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1Oem102_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadDpadLeft_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_gamepaddpadleft_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadStart_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GamepadStart_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadDpadRight_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_gamepaddpadright_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadBack_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GamepadBack_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadDpadUp_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_gamepaddpadup_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadFaceLeft_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GamepadFaceLeft_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadDpadDown_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_gamepaddpaddown_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadFaceRight_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GamepadFaceRight_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadL1_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_gamepadl1_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadFaceUp_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GamepadFaceUp_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadR1_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_gamepadr1_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadFaceDown_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GamepadFaceDown_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadL2_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_gamepadl2_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadDpadLeft_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GamepadDpadLeft_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadR2_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_gamepadr2_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadDpadRight_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GamepadDpadRight_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadL3_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_gamepadl3_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadDpadUp_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GamepadDpadUp_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadR3_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_gamepadr3_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadDpadDown_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GamepadDpadDown_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadLStickLeft_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_gamepadlstickleft_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadL1_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GamepadL1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadLStickRight_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_gamepadlstickright_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadR1_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GamepadR1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadLStickUp_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_gamepadlstickup_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadL2_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GamepadL2_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadLStickDown_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_gamepadlstickdown_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadR2_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GamepadR2_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadRStickLeft_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_gamepadrstickleft_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadL3_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GamepadL3_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadRStickRight_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_gamepadrstickright_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadR3_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GamepadR3_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadRStickUp_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_gamepadrstickup_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadLStickLeft_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GamepadLStickLeft_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadRStickDown_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_gamepadrstickdown_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadLStickRight_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GamepadLStickRight_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_MouseLeft_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_mouseleft_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadLStickUp_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GamepadLStickUp_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_MouseRight_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_mouseright_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadLStickDown_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GamepadLStickDown_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_MouseMiddle_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_mousemiddle_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadRStickLeft_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GamepadRStickLeft_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_MouseX1_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_mousex1_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadRStickRight_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GamepadRStickRight_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_MouseX2_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_mousex2_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadRStickUp_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GamepadRStickUp_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_MouseWheelX_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_mousewheelx_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_GamepadRStickDown_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1GamepadRStickDown_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_MouseWheelY_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_mousewheely_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_MouseLeft_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1MouseLeft_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_ReservedForModCtrl_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_reservedformodctrl_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_MouseRight_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1MouseRight_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_ReservedForModShift_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_reservedformodshift_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_MouseMiddle_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1MouseMiddle_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_ReservedForModAlt_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_reservedformodalt_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_MouseX1_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1MouseX1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_ReservedForModSuper_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_reservedformodsuper_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_MouseX2_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1MouseX2_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiKey_NamedKey_END_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguikey_namedkey_end_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_MouseWheelX_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1MouseWheelX_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiMod_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguimod_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_MouseWheelY_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1MouseWheelY_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiMod_Ctrl_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguimod_ctrl_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_ReservedForModCtrl_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1ReservedForModCtrl_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiMod_Shift_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguimod_shift_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_ReservedForModShift_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1ReservedForModShift_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiMod_Alt_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguimod_alt_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_ReservedForModAlt_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1ReservedForModAlt_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiMod_Super_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguimod_super_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiKey_ReservedForModSuper_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1ReservedForModSuper_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiKey_NamedKey_END_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiKey_1NamedKey_1END_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiMod_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiMod_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiMod_Ctrl_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiMod_1Ctrl_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiMod_Shift_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiMod_1Shift_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiMod_Alt_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiMod_1Alt_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiMod_Super_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiMod_1Super_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiMod_Mask__NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiKey_ImGuiMod_1Mask_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiMod_Mask__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguikey_imguimod_mask__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

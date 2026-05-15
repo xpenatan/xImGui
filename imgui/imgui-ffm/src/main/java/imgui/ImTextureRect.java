@@ -37,15 +37,11 @@ public class ImTextureRect extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureRect* nativeObject = (ImTextureRect*)this_addr;
-delete nativeObject;
-*/
     public static void internal_native_deleteNative(long this_addr) {
         try {
             FFMHandles.internal_native_deleteNative__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -53,15 +49,11 @@ delete nativeObject;
         return internal_native_get_x(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureRect* nativeObject = (ImTextureRect*)this_addr;
-return nativeObject->x;
-*/
     public static short internal_native_get_x(long this_addr) {
         try {
             return (short) FFMHandles.internal_native_get_x__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -69,15 +61,11 @@ return nativeObject->x;
         internal_native_set_x(native_address, x);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureRect* nativeObject = (ImTextureRect*)this_addr;
-nativeObject->x = x;
-*/
     public static void internal_native_set_x(long this_addr, short x) {
         try {
             FFMHandles.internal_native_set_x__JS.invokeExact(this_addr, x);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -85,15 +73,11 @@ nativeObject->x = x;
         return internal_native_get_y(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureRect* nativeObject = (ImTextureRect*)this_addr;
-return nativeObject->y;
-*/
     public static short internal_native_get_y(long this_addr) {
         try {
             return (short) FFMHandles.internal_native_get_y__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -101,15 +85,11 @@ return nativeObject->y;
         internal_native_set_y(native_address, y);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureRect* nativeObject = (ImTextureRect*)this_addr;
-nativeObject->y = y;
-*/
     public static void internal_native_set_y(long this_addr, short y) {
         try {
             FFMHandles.internal_native_set_y__JS.invokeExact(this_addr, y);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -117,15 +97,11 @@ nativeObject->y = y;
         return internal_native_get_w(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureRect* nativeObject = (ImTextureRect*)this_addr;
-return nativeObject->w;
-*/
     public static short internal_native_get_w(long this_addr) {
         try {
             return (short) FFMHandles.internal_native_get_w__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -133,15 +109,11 @@ return nativeObject->w;
         internal_native_set_w(native_address, w);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureRect* nativeObject = (ImTextureRect*)this_addr;
-nativeObject->w = w;
-*/
     public static void internal_native_set_w(long this_addr, short w) {
         try {
             FFMHandles.internal_native_set_w__JS.invokeExact(this_addr, w);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -149,15 +121,11 @@ nativeObject->w = w;
         return internal_native_get_h(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureRect* nativeObject = (ImTextureRect*)this_addr;
-return nativeObject->h;
-*/
     public static short internal_native_get_h(long this_addr) {
         try {
             return (short) FFMHandles.internal_native_get_h__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -165,66 +133,32 @@ return nativeObject->h;
         internal_native_set_h(native_address, h);
     }
 
-    /*[-FFM;-NATIVE]
-ImTextureRect* nativeObject = (ImTextureRect*)this_addr;
-nativeObject->h = h;
-*/
     public static void internal_native_set_h(long this_addr, short h) {
         try {
             FFMHandles.internal_native_set_h__JS.invokeExact(this_addr, h);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_imtexturerect_deletenative", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle internal_native_get_x__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturerect_get_x", FunctionDescriptor.of(ValueLayout.JAVA_SHORT, ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle internal_native_set_x__JS = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturerect_set_x", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_SHORT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle internal_native_get_y__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturerect_get_y", FunctionDescriptor.of(ValueLayout.JAVA_SHORT, ValueLayout.JAVA_LONG));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_set_y__JS = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturerect_set_y", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_SHORT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_get_w__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturerect_get_w", FunctionDescriptor.of(ValueLayout.JAVA_SHORT, ValueLayout.JAVA_LONG));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle internal_native_set_w__JS = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturerect_set_w", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_SHORT));
 
-        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = downcallDefault("jparser_imgui_ImTextureRect_internal_1native_1deleteNative__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_h__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturerect_get_h", FunctionDescriptor.of(ValueLayout.JAVA_SHORT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_x__J = downcallDefault("jparser_imgui_ImTextureRect_internal_1native_1get_1x__J", FunctionDescriptor.of(ValueLayout.JAVA_SHORT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_x__JS = downcallDefault("jparser_imgui_ImTextureRect_internal_1native_1set_1x__JS", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_SHORT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_y__J = downcallDefault("jparser_imgui_ImTextureRect_internal_1native_1get_1y__J", FunctionDescriptor.of(ValueLayout.JAVA_SHORT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_y__JS = downcallDefault("jparser_imgui_ImTextureRect_internal_1native_1set_1y__JS", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_SHORT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_w__J = downcallDefault("jparser_imgui_ImTextureRect_internal_1native_1get_1w__J", FunctionDescriptor.of(ValueLayout.JAVA_SHORT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_w__JS = downcallDefault("jparser_imgui_ImTextureRect_internal_1native_1set_1w__JS", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_SHORT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_h__J = downcallDefault("jparser_imgui_ImTextureRect_internal_1native_1get_1h__J", FunctionDescriptor.of(ValueLayout.JAVA_SHORT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_h__JS = downcallDefault("jparser_imgui_ImTextureRect_internal_1native_1set_1h__JS", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_SHORT));
+        static final java.lang.invoke.MethodHandle internal_native_set_h__JS = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imtexturerect_set_h", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_SHORT));
     }
 }

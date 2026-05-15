@@ -34,15 +34,9 @@ public enum ImGuiPlotType implements NativeEnum<ImGuiPlotType> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiPlotType_Lines;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiPlotType_Lines;")
     private static native int ImGuiPlotType_Lines_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiPlotType_Histogram;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiPlotType_Histogram;")
     private static native int ImGuiPlotType_Histogram_NATIVE();
 }

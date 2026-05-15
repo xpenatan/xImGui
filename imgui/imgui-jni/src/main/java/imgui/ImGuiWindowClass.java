@@ -20,10 +20,9 @@ public class ImGuiWindowClass extends NativeObject {
         internal_reset(addr, true);
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)new ImGuiWindowClass();
-*/
-    public static native long internal_native_create_addr();
+    public static long internal_native_create_addr() {
+        return imgui.natives.JNI_ImGuiWindowClass.internal_native_create_addr();
+    }
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -43,71 +42,57 @@ return (jlong)new ImGuiWindowClass();
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ImGuiWindowClass.internal_native_deleteNative(this_addr);
+    }
 
     public int get_ClassId() {
         return internal_native_get_ClassId(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-return nativeObject->ClassId;
-*/
-    public static native int internal_native_get_ClassId(long this_addr);
+    public static int internal_native_get_ClassId(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindowClass.internal_native_get_ClassId(this_addr);
+    }
 
     public void set_ClassId(int ClassId) {
         internal_native_set_ClassId(native_address, ClassId);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-nativeObject->ClassId = ClassId;
-*/
-    public static native void internal_native_set_ClassId(long this_addr, int ClassId);
+    public static void internal_native_set_ClassId(long this_addr, int ClassId) {
+        imgui.natives.JNI_ImGuiWindowClass.internal_native_set_ClassId(this_addr, ClassId);
+    }
 
     public int get_ParentViewportId() {
         return internal_native_get_ParentViewportId(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-return nativeObject->ParentViewportId;
-*/
-    public static native int internal_native_get_ParentViewportId(long this_addr);
+    public static int internal_native_get_ParentViewportId(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindowClass.internal_native_get_ParentViewportId(this_addr);
+    }
 
     public void set_ParentViewportId(int ParentViewportId) {
         internal_native_set_ParentViewportId(native_address, ParentViewportId);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-nativeObject->ParentViewportId = ParentViewportId;
-*/
-    public static native void internal_native_set_ParentViewportId(long this_addr, int ParentViewportId);
+    public static void internal_native_set_ParentViewportId(long this_addr, int ParentViewportId) {
+        imgui.natives.JNI_ImGuiWindowClass.internal_native_set_ParentViewportId(this_addr, ParentViewportId);
+    }
 
     public int get_FocusRouteParentWindowId() {
         return internal_native_get_FocusRouteParentWindowId(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-return nativeObject->FocusRouteParentWindowId;
-*/
-    public static native int internal_native_get_FocusRouteParentWindowId(long this_addr);
+    public static int internal_native_get_FocusRouteParentWindowId(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindowClass.internal_native_get_FocusRouteParentWindowId(this_addr);
+    }
 
     public void set_FocusRouteParentWindowId(int FocusRouteParentWindowId) {
         internal_native_set_FocusRouteParentWindowId(native_address, FocusRouteParentWindowId);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-nativeObject->FocusRouteParentWindowId = FocusRouteParentWindowId;
-*/
-    public static native void internal_native_set_FocusRouteParentWindowId(long this_addr, int FocusRouteParentWindowId);
+    public static void internal_native_set_FocusRouteParentWindowId(long this_addr, int FocusRouteParentWindowId) {
+        imgui.natives.JNI_ImGuiWindowClass.internal_native_set_FocusRouteParentWindowId(this_addr, FocusRouteParentWindowId);
+    }
 
     public ImGuiViewportFlags get_ViewportFlagsOverrideSet() {
         int value = internal_native_get_ViewportFlagsOverrideSet(native_address);
@@ -120,21 +105,17 @@ nativeObject->FocusRouteParentWindowId = FocusRouteParentWindowId;
         return ImGuiViewportFlags.CUSTOM.setValue(value);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-return (jint)nativeObject->ViewportFlagsOverrideSet;
-*/
-    public static native int internal_native_get_ViewportFlagsOverrideSet(long this_addr);
+    public static int internal_native_get_ViewportFlagsOverrideSet(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindowClass.internal_native_get_ViewportFlagsOverrideSet(this_addr);
+    }
 
     public void set_ViewportFlagsOverrideSet(ImGuiViewportFlags ViewportFlagsOverrideSet) {
         internal_native_set_ViewportFlagsOverrideSet(native_address, ViewportFlagsOverrideSet.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-nativeObject->ViewportFlagsOverrideSet = (::ImGuiViewportFlags)ViewportFlagsOverrideSet;
-*/
-    public static native void internal_native_set_ViewportFlagsOverrideSet(long this_addr, int ViewportFlagsOverrideSet);
+    public static void internal_native_set_ViewportFlagsOverrideSet(long this_addr, int ViewportFlagsOverrideSet) {
+        imgui.natives.JNI_ImGuiWindowClass.internal_native_set_ViewportFlagsOverrideSet(this_addr, ViewportFlagsOverrideSet);
+    }
 
     public ImGuiViewportFlags get_ViewportFlagsOverrideClear() {
         int value = internal_native_get_ViewportFlagsOverrideClear(native_address);
@@ -147,21 +128,17 @@ nativeObject->ViewportFlagsOverrideSet = (::ImGuiViewportFlags)ViewportFlagsOver
         return ImGuiViewportFlags.CUSTOM.setValue(value);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-return (jint)nativeObject->ViewportFlagsOverrideClear;
-*/
-    public static native int internal_native_get_ViewportFlagsOverrideClear(long this_addr);
+    public static int internal_native_get_ViewportFlagsOverrideClear(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindowClass.internal_native_get_ViewportFlagsOverrideClear(this_addr);
+    }
 
     public void set_ViewportFlagsOverrideClear(ImGuiViewportFlags ViewportFlagsOverrideClear) {
         internal_native_set_ViewportFlagsOverrideClear(native_address, ViewportFlagsOverrideClear.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-nativeObject->ViewportFlagsOverrideClear = (::ImGuiViewportFlags)ViewportFlagsOverrideClear;
-*/
-    public static native void internal_native_set_ViewportFlagsOverrideClear(long this_addr, int ViewportFlagsOverrideClear);
+    public static void internal_native_set_ViewportFlagsOverrideClear(long this_addr, int ViewportFlagsOverrideClear) {
+        imgui.natives.JNI_ImGuiWindowClass.internal_native_set_ViewportFlagsOverrideClear(this_addr, ViewportFlagsOverrideClear);
+    }
 
     public ImGuiTabItemFlags get_TabItemFlagsOverrideSet() {
         int value = internal_native_get_TabItemFlagsOverrideSet(native_address);
@@ -174,21 +151,17 @@ nativeObject->ViewportFlagsOverrideClear = (::ImGuiViewportFlags)ViewportFlagsOv
         return ImGuiTabItemFlags.CUSTOM.setValue(value);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-return (jint)nativeObject->TabItemFlagsOverrideSet;
-*/
-    public static native int internal_native_get_TabItemFlagsOverrideSet(long this_addr);
+    public static int internal_native_get_TabItemFlagsOverrideSet(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindowClass.internal_native_get_TabItemFlagsOverrideSet(this_addr);
+    }
 
     public void set_TabItemFlagsOverrideSet(ImGuiTabItemFlags TabItemFlagsOverrideSet) {
         internal_native_set_TabItemFlagsOverrideSet(native_address, TabItemFlagsOverrideSet.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-nativeObject->TabItemFlagsOverrideSet = (::ImGuiTabItemFlags)TabItemFlagsOverrideSet;
-*/
-    public static native void internal_native_set_TabItemFlagsOverrideSet(long this_addr, int TabItemFlagsOverrideSet);
+    public static void internal_native_set_TabItemFlagsOverrideSet(long this_addr, int TabItemFlagsOverrideSet) {
+        imgui.natives.JNI_ImGuiWindowClass.internal_native_set_TabItemFlagsOverrideSet(this_addr, TabItemFlagsOverrideSet);
+    }
 
     public ImGuiDockNodeFlags get_DockNodeFlagsOverrideSet() {
         int value = internal_native_get_DockNodeFlagsOverrideSet(native_address);
@@ -201,59 +174,47 @@ nativeObject->TabItemFlagsOverrideSet = (::ImGuiTabItemFlags)TabItemFlagsOverrid
         return ImGuiDockNodeFlags.CUSTOM.setValue(value);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-return (jint)nativeObject->DockNodeFlagsOverrideSet;
-*/
-    public static native int internal_native_get_DockNodeFlagsOverrideSet(long this_addr);
+    public static int internal_native_get_DockNodeFlagsOverrideSet(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindowClass.internal_native_get_DockNodeFlagsOverrideSet(this_addr);
+    }
 
     public void set_DockNodeFlagsOverrideSet(ImGuiDockNodeFlags DockNodeFlagsOverrideSet) {
         internal_native_set_DockNodeFlagsOverrideSet(native_address, DockNodeFlagsOverrideSet.getValue());
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-nativeObject->DockNodeFlagsOverrideSet = (::ImGuiDockNodeFlags)DockNodeFlagsOverrideSet;
-*/
-    public static native void internal_native_set_DockNodeFlagsOverrideSet(long this_addr, int DockNodeFlagsOverrideSet);
+    public static void internal_native_set_DockNodeFlagsOverrideSet(long this_addr, int DockNodeFlagsOverrideSet) {
+        imgui.natives.JNI_ImGuiWindowClass.internal_native_set_DockNodeFlagsOverrideSet(this_addr, DockNodeFlagsOverrideSet);
+    }
 
     public boolean get_DockingAlwaysTabBar() {
         return internal_native_get_DockingAlwaysTabBar(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-return nativeObject->DockingAlwaysTabBar;
-*/
-    public static native boolean internal_native_get_DockingAlwaysTabBar(long this_addr);
+    public static boolean internal_native_get_DockingAlwaysTabBar(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindowClass.internal_native_get_DockingAlwaysTabBar(this_addr);
+    }
 
     public void set_DockingAlwaysTabBar(boolean DockingAlwaysTabBar) {
         internal_native_set_DockingAlwaysTabBar(native_address, DockingAlwaysTabBar);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-nativeObject->DockingAlwaysTabBar = DockingAlwaysTabBar;
-*/
-    public static native void internal_native_set_DockingAlwaysTabBar(long this_addr, boolean DockingAlwaysTabBar);
+    public static void internal_native_set_DockingAlwaysTabBar(long this_addr, boolean DockingAlwaysTabBar) {
+        imgui.natives.JNI_ImGuiWindowClass.internal_native_set_DockingAlwaysTabBar(this_addr, DockingAlwaysTabBar);
+    }
 
     public boolean get_DockingAllowUnclassed() {
         return internal_native_get_DockingAllowUnclassed(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-return nativeObject->DockingAllowUnclassed;
-*/
-    public static native boolean internal_native_get_DockingAllowUnclassed(long this_addr);
+    public static boolean internal_native_get_DockingAllowUnclassed(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindowClass.internal_native_get_DockingAllowUnclassed(this_addr);
+    }
 
     public void set_DockingAllowUnclassed(boolean DockingAllowUnclassed) {
         internal_native_set_DockingAllowUnclassed(native_address, DockingAllowUnclassed);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-nativeObject->DockingAllowUnclassed = DockingAllowUnclassed;
-*/
-    public static native void internal_native_set_DockingAllowUnclassed(long this_addr, boolean DockingAllowUnclassed);
+    public static void internal_native_set_DockingAllowUnclassed(long this_addr, boolean DockingAllowUnclassed) {
+        imgui.natives.JNI_ImGuiWindowClass.internal_native_set_DockingAllowUnclassed(this_addr, DockingAllowUnclassed);
+    }
 }

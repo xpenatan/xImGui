@@ -34,18 +34,15 @@ public enum ImGuiSortDirection implements NativeEnum<ImGuiSortDirection> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSortDirection_None;
-*/
-    private static native int ImGuiSortDirection_None_NATIVE();
+    private static int ImGuiSortDirection_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSortDirection.ImGuiSortDirection_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSortDirection_Ascending;
-*/
-    private static native int ImGuiSortDirection_Ascending_NATIVE();
+    private static int ImGuiSortDirection_Ascending_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSortDirection.ImGuiSortDirection_Ascending_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSortDirection_Descending;
-*/
-    private static native int ImGuiSortDirection_Descending_NATIVE();
+    private static int ImGuiSortDirection_Descending_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSortDirection.ImGuiSortDirection_Descending_NATIVE();
+    }
 }

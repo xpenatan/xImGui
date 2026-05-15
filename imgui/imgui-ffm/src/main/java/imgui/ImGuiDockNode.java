@@ -39,15 +39,11 @@ public class ImGuiDockNode extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiDockNode* nativeObject = (ImGuiDockNode*)this_addr;
-delete nativeObject;
-*/
     public static void internal_native_deleteNative(long this_addr) {
         try {
             FFMHandles.internal_native_deleteNative__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -55,15 +51,11 @@ delete nativeObject;
         return internal_native_get_LocalFlags(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiDockNode* nativeObject = (ImGuiDockNode*)this_addr;
-return nativeObject->LocalFlags;
-*/
     public static int internal_native_get_LocalFlags(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_LocalFlags__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -71,15 +63,11 @@ return nativeObject->LocalFlags;
         internal_native_set_LocalFlags(native_address, LocalFlags);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiDockNode* nativeObject = (ImGuiDockNode*)this_addr;
-nativeObject->LocalFlags = LocalFlags;
-*/
     public static void internal_native_set_LocalFlags(long this_addr, int LocalFlags) {
         try {
             FFMHandles.internal_native_set_LocalFlags__JI.invokeExact(this_addr, LocalFlags);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -87,15 +75,11 @@ nativeObject->LocalFlags = LocalFlags;
         return internal_native_get_SelectedTabId(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiDockNode* nativeObject = (ImGuiDockNode*)this_addr;
-return nativeObject->SelectedTabId;
-*/
     public static int internal_native_get_SelectedTabId(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_SelectedTabId__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -103,15 +87,11 @@ return nativeObject->SelectedTabId;
         internal_native_set_SelectedTabId(native_address, SelectedTabId);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiDockNode* nativeObject = (ImGuiDockNode*)this_addr;
-nativeObject->SelectedTabId = SelectedTabId;
-*/
     public static void internal_native_set_SelectedTabId(long this_addr, int SelectedTabId) {
         try {
             FFMHandles.internal_native_set_SelectedTabId__JI.invokeExact(this_addr, SelectedTabId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -125,16 +105,11 @@ nativeObject->SelectedTabId = SelectedTabId;
         return ImGuiTabBar_TEMP_GEN_0;
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiDockNode* nativeObject = (ImGuiDockNode*)this_addr;
-ImGuiTabBar* attr = nativeObject->TabBar;
-return (int64_t)attr;
-*/
     public static long internal_native_get_TabBar_addr(long this_addr) {
         try {
             return (long) FFMHandles.internal_native_get_TabBar_addr__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -142,62 +117,28 @@ return (int64_t)attr;
         internal_native_set_TabBar(native_address, TabBar.native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiDockNode* nativeObject = (ImGuiDockNode*)this_addr;
-nativeObject->TabBar = (ImGuiTabBar*)TabBar_addr;
-*/
     public static void internal_native_set_TabBar(long this_addr, long TabBar_addr) {
         try {
             FFMHandles.internal_native_set_TabBar__JJ.invokeExact(this_addr, TabBar_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_imguidocknode_deletenative", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle internal_native_get_LocalFlags__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguidocknode_get_localflags", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle internal_native_set_LocalFlags__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguidocknode_set_localflags", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle internal_native_get_SelectedTabId__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguidocknode_get_selectedtabid", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_set_SelectedTabId__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguidocknode_set_selectedtabid", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_get_TabBar_addr__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguidocknode_get_tabbar_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
-
-        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = downcallDefault("jparser_imgui_ImGuiDockNode_internal_1native_1deleteNative__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_LocalFlags__J = downcallDefault("jparser_imgui_ImGuiDockNode_internal_1native_1get_1LocalFlags__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_LocalFlags__JI = downcallDefault("jparser_imgui_ImGuiDockNode_internal_1native_1set_1LocalFlags__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_SelectedTabId__J = downcallDefault("jparser_imgui_ImGuiDockNode_internal_1native_1get_1SelectedTabId__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_SelectedTabId__JI = downcallDefault("jparser_imgui_ImGuiDockNode_internal_1native_1set_1SelectedTabId__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_TabBar_addr__J = downcallDefault("jparser_imgui_ImGuiDockNode_internal_1native_1get_1TabBar_1addr__J", FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_TabBar__JJ = downcallDefault("jparser_imgui_ImGuiDockNode_internal_1native_1set_1TabBar__JJ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_TabBar__JJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguidocknode_set_tabbar", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG));
     }
 }

@@ -47,114 +47,66 @@ public enum ImGuiOldColumnFlags implements NativeEnum<ImGuiOldColumnFlags> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiOldColumnFlags_None;
-*/
     private static int ImGuiOldColumnFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiOldColumnFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiOldColumnFlags_NoBorder;
-*/
     private static int ImGuiOldColumnFlags_NoBorder_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiOldColumnFlags_NoBorder_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiOldColumnFlags_NoResize;
-*/
     private static int ImGuiOldColumnFlags_NoResize_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiOldColumnFlags_NoResize_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiOldColumnFlags_NoPreserveWidths;
-*/
     private static int ImGuiOldColumnFlags_NoPreserveWidths_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiOldColumnFlags_NoPreserveWidths_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiOldColumnFlags_NoForceWithinWindow;
-*/
     private static int ImGuiOldColumnFlags_NoForceWithinWindow_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiOldColumnFlags_NoForceWithinWindow_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiOldColumnFlags_GrowParentContentsSize;
-*/
     private static int ImGuiOldColumnFlags_GrowParentContentsSize_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiOldColumnFlags_GrowParentContentsSize_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiOldColumnFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguioldcolumnflags_imguioldcolumnflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiOldColumnFlags_NoBorder_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguioldcolumnflags_imguioldcolumnflags_noborder_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiOldColumnFlags_NoResize_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguioldcolumnflags_imguioldcolumnflags_noresize_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiOldColumnFlags_NoPreserveWidths_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguioldcolumnflags_imguioldcolumnflags_nopreservewidths_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiOldColumnFlags_NoForceWithinWindow_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguioldcolumnflags_imguioldcolumnflags_noforcewithinwindow_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
-
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
-
-        static final java.lang.invoke.MethodHandle ImGuiOldColumnFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiOldColumnFlags_ImGuiOldColumnFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiOldColumnFlags_NoBorder_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiOldColumnFlags_ImGuiOldColumnFlags_1NoBorder_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiOldColumnFlags_NoResize_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiOldColumnFlags_ImGuiOldColumnFlags_1NoResize_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiOldColumnFlags_NoPreserveWidths_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiOldColumnFlags_ImGuiOldColumnFlags_1NoPreserveWidths_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiOldColumnFlags_NoForceWithinWindow_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiOldColumnFlags_ImGuiOldColumnFlags_1NoForceWithinWindow_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiOldColumnFlags_GrowParentContentsSize_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiOldColumnFlags_ImGuiOldColumnFlags_1GrowParentContentsSize_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiOldColumnFlags_GrowParentContentsSize_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguioldcolumnflags_imguioldcolumnflags_growparentcontentssize_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

@@ -46,63 +46,51 @@ public enum ImGuiMouseCursor implements NativeEnum<ImGuiMouseCursor> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseCursor_None;
-*/
-    private static native int ImGuiMouseCursor_None_NATIVE();
+    private static int ImGuiMouseCursor_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMouseCursor.ImGuiMouseCursor_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseCursor_Arrow;
-*/
-    private static native int ImGuiMouseCursor_Arrow_NATIVE();
+    private static int ImGuiMouseCursor_Arrow_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMouseCursor.ImGuiMouseCursor_Arrow_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseCursor_TextInput;
-*/
-    private static native int ImGuiMouseCursor_TextInput_NATIVE();
+    private static int ImGuiMouseCursor_TextInput_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMouseCursor.ImGuiMouseCursor_TextInput_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseCursor_ResizeAll;
-*/
-    private static native int ImGuiMouseCursor_ResizeAll_NATIVE();
+    private static int ImGuiMouseCursor_ResizeAll_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMouseCursor.ImGuiMouseCursor_ResizeAll_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseCursor_ResizeNS;
-*/
-    private static native int ImGuiMouseCursor_ResizeNS_NATIVE();
+    private static int ImGuiMouseCursor_ResizeNS_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMouseCursor.ImGuiMouseCursor_ResizeNS_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseCursor_ResizeEW;
-*/
-    private static native int ImGuiMouseCursor_ResizeEW_NATIVE();
+    private static int ImGuiMouseCursor_ResizeEW_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMouseCursor.ImGuiMouseCursor_ResizeEW_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseCursor_ResizeNESW;
-*/
-    private static native int ImGuiMouseCursor_ResizeNESW_NATIVE();
+    private static int ImGuiMouseCursor_ResizeNESW_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMouseCursor.ImGuiMouseCursor_ResizeNESW_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseCursor_ResizeNWSE;
-*/
-    private static native int ImGuiMouseCursor_ResizeNWSE_NATIVE();
+    private static int ImGuiMouseCursor_ResizeNWSE_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMouseCursor.ImGuiMouseCursor_ResizeNWSE_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseCursor_Hand;
-*/
-    private static native int ImGuiMouseCursor_Hand_NATIVE();
+    private static int ImGuiMouseCursor_Hand_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMouseCursor.ImGuiMouseCursor_Hand_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseCursor_Wait;
-*/
-    private static native int ImGuiMouseCursor_Wait_NATIVE();
+    private static int ImGuiMouseCursor_Wait_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMouseCursor.ImGuiMouseCursor_Wait_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseCursor_Progress;
-*/
-    private static native int ImGuiMouseCursor_Progress_NATIVE();
+    private static int ImGuiMouseCursor_Progress_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMouseCursor.ImGuiMouseCursor_Progress_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMouseCursor_NotAllowed;
-*/
-    private static native int ImGuiMouseCursor_NotAllowed_NATIVE();
+    private static int ImGuiMouseCursor_NotAllowed_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMouseCursor.ImGuiMouseCursor_NotAllowed_NATIVE();
+    }
 }

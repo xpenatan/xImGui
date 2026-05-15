@@ -49,93 +49,48 @@ public enum ImGuiNextWindowDataFlags implements NativeEnum<ImGuiNextWindowDataFl
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNextWindowDataFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNextWindowDataFlags_None;")
     private static native int ImGuiNextWindowDataFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNextWindowDataFlags_HasPos;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNextWindowDataFlags_HasPos;")
     private static native int ImGuiNextWindowDataFlags_HasPos_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNextWindowDataFlags_HasSize;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNextWindowDataFlags_HasSize;")
     private static native int ImGuiNextWindowDataFlags_HasSize_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNextWindowDataFlags_HasContentSize;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNextWindowDataFlags_HasContentSize;")
     private static native int ImGuiNextWindowDataFlags_HasContentSize_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNextWindowDataFlags_HasCollapsed;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNextWindowDataFlags_HasCollapsed;")
     private static native int ImGuiNextWindowDataFlags_HasCollapsed_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNextWindowDataFlags_HasSizeConstraint;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNextWindowDataFlags_HasSizeConstraint;")
     private static native int ImGuiNextWindowDataFlags_HasSizeConstraint_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNextWindowDataFlags_HasFocus;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNextWindowDataFlags_HasFocus;")
     private static native int ImGuiNextWindowDataFlags_HasFocus_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNextWindowDataFlags_HasBgAlpha;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNextWindowDataFlags_HasBgAlpha;")
     private static native int ImGuiNextWindowDataFlags_HasBgAlpha_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNextWindowDataFlags_HasScroll;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNextWindowDataFlags_HasScroll;")
     private static native int ImGuiNextWindowDataFlags_HasScroll_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNextWindowDataFlags_HasWindowFlags;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNextWindowDataFlags_HasWindowFlags;")
     private static native int ImGuiNextWindowDataFlags_HasWindowFlags_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNextWindowDataFlags_HasChildFlags;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNextWindowDataFlags_HasChildFlags;")
     private static native int ImGuiNextWindowDataFlags_HasChildFlags_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNextWindowDataFlags_HasRefreshPolicy;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNextWindowDataFlags_HasRefreshPolicy;")
     private static native int ImGuiNextWindowDataFlags_HasRefreshPolicy_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNextWindowDataFlags_HasViewport;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNextWindowDataFlags_HasViewport;")
     private static native int ImGuiNextWindowDataFlags_HasViewport_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNextWindowDataFlags_HasDock;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNextWindowDataFlags_HasDock;")
     private static native int ImGuiNextWindowDataFlags_HasDock_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiNextWindowDataFlags_HasWindowClass;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiNextWindowDataFlags_HasWindowClass;")
     private static native int ImGuiNextWindowDataFlags_HasWindowClass_NATIVE();
 }

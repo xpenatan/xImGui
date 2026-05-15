@@ -39,33 +39,18 @@ public enum ImGuiInputSource implements NativeEnum<ImGuiInputSource> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputSource_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputSource_None;")
     private static native int ImGuiInputSource_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputSource_Mouse;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputSource_Mouse;")
     private static native int ImGuiInputSource_Mouse_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputSource_Keyboard;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputSource_Keyboard;")
     private static native int ImGuiInputSource_Keyboard_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputSource_Gamepad;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputSource_Gamepad;")
     private static native int ImGuiInputSource_Gamepad_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputSource_COUNT;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputSource_COUNT;")
     private static native int ImGuiInputSource_COUNT_NATIVE();
 }

@@ -14,10 +14,6 @@ import com.github.xpenatan.jParser.loader.JParserLibraryLoaderListener;
  */
 public class NodeEditorLoader {
 
-    /*
-      [-FFM;-NATIVE]
-              #include "NodeEditorCustom.h"
-    */
     public static void init(JParserLibraryLoaderListener listener) {
         JParserLibraryLoader.load("nodeeditor", listener);
     }

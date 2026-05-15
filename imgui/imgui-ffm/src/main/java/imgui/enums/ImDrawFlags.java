@@ -55,218 +55,146 @@ public enum ImDrawFlags implements NativeEnum<ImDrawFlags> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImDrawFlags_None;
-*/
     private static int ImDrawFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImDrawFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImDrawFlags_Closed;
-*/
     private static int ImDrawFlags_Closed_NATIVE() {
         try {
             return (int) FFMHandles.ImDrawFlags_Closed_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImDrawFlags_RoundCornersTopLeft;
-*/
     private static int ImDrawFlags_RoundCornersTopLeft_NATIVE() {
         try {
             return (int) FFMHandles.ImDrawFlags_RoundCornersTopLeft_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImDrawFlags_RoundCornersTopRight;
-*/
     private static int ImDrawFlags_RoundCornersTopRight_NATIVE() {
         try {
             return (int) FFMHandles.ImDrawFlags_RoundCornersTopRight_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImDrawFlags_RoundCornersBottomLeft;
-*/
     private static int ImDrawFlags_RoundCornersBottomLeft_NATIVE() {
         try {
             return (int) FFMHandles.ImDrawFlags_RoundCornersBottomLeft_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImDrawFlags_RoundCornersBottomRight;
-*/
     private static int ImDrawFlags_RoundCornersBottomRight_NATIVE() {
         try {
             return (int) FFMHandles.ImDrawFlags_RoundCornersBottomRight_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImDrawFlags_RoundCornersNone;
-*/
     private static int ImDrawFlags_RoundCornersNone_NATIVE() {
         try {
             return (int) FFMHandles.ImDrawFlags_RoundCornersNone_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImDrawFlags_RoundCornersTop;
-*/
     private static int ImDrawFlags_RoundCornersTop_NATIVE() {
         try {
             return (int) FFMHandles.ImDrawFlags_RoundCornersTop_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImDrawFlags_RoundCornersBottom;
-*/
     private static int ImDrawFlags_RoundCornersBottom_NATIVE() {
         try {
             return (int) FFMHandles.ImDrawFlags_RoundCornersBottom_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImDrawFlags_RoundCornersLeft;
-*/
     private static int ImDrawFlags_RoundCornersLeft_NATIVE() {
         try {
             return (int) FFMHandles.ImDrawFlags_RoundCornersLeft_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImDrawFlags_RoundCornersRight;
-*/
     private static int ImDrawFlags_RoundCornersRight_NATIVE() {
         try {
             return (int) FFMHandles.ImDrawFlags_RoundCornersRight_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImDrawFlags_RoundCornersAll;
-*/
     private static int ImDrawFlags_RoundCornersAll_NATIVE() {
         try {
             return (int) FFMHandles.ImDrawFlags_RoundCornersAll_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImDrawFlags_RoundCornersDefault_;
-*/
     private static int ImDrawFlags_RoundCornersDefault__NATIVE() {
         try {
             return (int) FFMHandles.ImDrawFlags_RoundCornersDefault__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImDrawFlags_RoundCornersMask_;
-*/
     private static int ImDrawFlags_RoundCornersMask__NATIVE() {
         try {
             return (int) FFMHandles.ImDrawFlags_RoundCornersMask__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImDrawFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imdrawflags_imdrawflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImDrawFlags_Closed_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imdrawflags_imdrawflags_closed_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImDrawFlags_RoundCornersTopLeft_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imdrawflags_imdrawflags_roundcornerstopleft_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImDrawFlags_RoundCornersTopRight_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imdrawflags_imdrawflags_roundcornerstopright_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImDrawFlags_RoundCornersBottomLeft_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imdrawflags_imdrawflags_roundcornersbottomleft_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImDrawFlags_RoundCornersBottomRight_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imdrawflags_imdrawflags_roundcornersbottomright_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImDrawFlags_RoundCornersNone_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imdrawflags_imdrawflags_roundcornersnone_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImDrawFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImDrawFlags_ImDrawFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImDrawFlags_RoundCornersTop_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imdrawflags_imdrawflags_roundcornerstop_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImDrawFlags_Closed_NATIVE__ = downcallDefault("jparser_imgui_enums_ImDrawFlags_ImDrawFlags_1Closed_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImDrawFlags_RoundCornersBottom_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imdrawflags_imdrawflags_roundcornersbottom_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImDrawFlags_RoundCornersTopLeft_NATIVE__ = downcallDefault("jparser_imgui_enums_ImDrawFlags_ImDrawFlags_1RoundCornersTopLeft_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImDrawFlags_RoundCornersLeft_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imdrawflags_imdrawflags_roundcornersleft_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImDrawFlags_RoundCornersTopRight_NATIVE__ = downcallDefault("jparser_imgui_enums_ImDrawFlags_ImDrawFlags_1RoundCornersTopRight_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImDrawFlags_RoundCornersRight_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imdrawflags_imdrawflags_roundcornersright_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImDrawFlags_RoundCornersBottomLeft_NATIVE__ = downcallDefault("jparser_imgui_enums_ImDrawFlags_ImDrawFlags_1RoundCornersBottomLeft_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImDrawFlags_RoundCornersAll_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imdrawflags_imdrawflags_roundcornersall_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImDrawFlags_RoundCornersBottomRight_NATIVE__ = downcallDefault("jparser_imgui_enums_ImDrawFlags_ImDrawFlags_1RoundCornersBottomRight_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImDrawFlags_RoundCornersDefault__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imdrawflags_imdrawflags_roundcornersdefault__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImDrawFlags_RoundCornersNone_NATIVE__ = downcallDefault("jparser_imgui_enums_ImDrawFlags_ImDrawFlags_1RoundCornersNone_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImDrawFlags_RoundCornersTop_NATIVE__ = downcallDefault("jparser_imgui_enums_ImDrawFlags_ImDrawFlags_1RoundCornersTop_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImDrawFlags_RoundCornersBottom_NATIVE__ = downcallDefault("jparser_imgui_enums_ImDrawFlags_ImDrawFlags_1RoundCornersBottom_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImDrawFlags_RoundCornersLeft_NATIVE__ = downcallDefault("jparser_imgui_enums_ImDrawFlags_ImDrawFlags_1RoundCornersLeft_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImDrawFlags_RoundCornersRight_NATIVE__ = downcallDefault("jparser_imgui_enums_ImDrawFlags_ImDrawFlags_1RoundCornersRight_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImDrawFlags_RoundCornersAll_NATIVE__ = downcallDefault("jparser_imgui_enums_ImDrawFlags_ImDrawFlags_1RoundCornersAll_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImDrawFlags_RoundCornersDefault__NATIVE__ = downcallDefault("jparser_imgui_enums_ImDrawFlags_ImDrawFlags_1RoundCornersDefault_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImDrawFlags_RoundCornersMask__NATIVE__ = downcallDefault("jparser_imgui_enums_ImDrawFlags_ImDrawFlags_1RoundCornersMask_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImDrawFlags_RoundCornersMask__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imdrawflags_imdrawflags_roundcornersmask__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

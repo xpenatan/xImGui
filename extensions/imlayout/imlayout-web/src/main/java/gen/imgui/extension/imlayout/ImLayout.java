@@ -42,11 +42,6 @@ public class ImLayout extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImLayout);
-      imlayout.destroy(jsObj);
-    */
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImLayout);imlayout.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
@@ -54,10 +49,6 @@ public class ImLayout extends NativeObject {
         internal_native_DrawBoundingBox__1(x1, y1, x2, y2, r, g, b, a, clipping);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.DrawBoundingBox__1(x1, y1, x2, y2, r, g, b, a, clipping);
-    */
     @org.teavm.jso.JSBody(params = {"x1", "y1", "x2", "y2", "r", "g", "b", "a", "clipping"}, script = "imlayout.ImLayout.prototype.DrawBoundingBox__1(x1, y1, x2, y2, r, g, b, a, clipping);")
     public static native void internal_native_DrawBoundingBox__1(float x1, float y1, float x2, float y2, int r, int g, int b, int a, boolean clipping);
 
@@ -65,10 +56,6 @@ public class ImLayout extends NativeObject {
         internal_native_DrawBoundingBox__1(x1, y1, x2, y2, r, g, b, a);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.DrawBoundingBox__1(x1, y1, x2, y2, r, g, b, a);
-    */
     @org.teavm.jso.JSBody(params = {"x1", "y1", "x2", "y2", "r", "g", "b", "a"}, script = "imlayout.ImLayout.prototype.DrawBoundingBox__1(x1, y1, x2, y2, r, g, b, a);")
     public static native void internal_native_DrawBoundingBox__1(float x1, float y1, float x2, float y2, int r, int g, int b, int a);
 
@@ -76,10 +63,6 @@ public class ImLayout extends NativeObject {
         internal_native_DrawBoundingBox__1(x1, y1, x2, y2, r, g, b);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.DrawBoundingBox__1(x1, y1, x2, y2, r, g, b);
-    */
     @org.teavm.jso.JSBody(params = {"x1", "y1", "x2", "y2", "r", "g", "b"}, script = "imlayout.ImLayout.prototype.DrawBoundingBox__1(x1, y1, x2, y2, r, g, b);")
     public static native void internal_native_DrawBoundingBox__1(float x1, float y1, float x2, float y2, int r, int g, int b);
 
@@ -87,10 +70,6 @@ public class ImLayout extends NativeObject {
         internal_native_DrawBoundingBox__2(min.native_address, max.native_address, r, g, b, a, clipping);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.DrawBoundingBox__2(min_addr, max_addr, r, g, b, a, clipping);
-    */
     @org.teavm.jso.JSBody(params = {"min_addr", "max_addr", "r", "g", "b", "a", "clipping"}, script = "imlayout.ImLayout.prototype.DrawBoundingBox__2(min_addr, max_addr, r, g, b, a, clipping);")
     public static native void internal_native_DrawBoundingBox__2(int min_addr, int max_addr, int r, int g, int b, int a, boolean clipping);
 
@@ -98,10 +77,6 @@ public class ImLayout extends NativeObject {
         internal_native_DrawBoundingBox__2(min.native_address, max.native_address, r, g, b, a);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.DrawBoundingBox__2(min_addr, max_addr, r, g, b, a);
-    */
     @org.teavm.jso.JSBody(params = {"min_addr", "max_addr", "r", "g", "b", "a"}, script = "imlayout.ImLayout.prototype.DrawBoundingBox__2(min_addr, max_addr, r, g, b, a);")
     public static native void internal_native_DrawBoundingBox__2(int min_addr, int max_addr, int r, int g, int b, int a);
 
@@ -109,10 +84,6 @@ public class ImLayout extends NativeObject {
         internal_native_DrawBoundingBox__2(min.native_address, max.native_address, r, g, b);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.DrawBoundingBox__2(min_addr, max_addr, r, g, b);
-    */
     @org.teavm.jso.JSBody(params = {"min_addr", "max_addr", "r", "g", "b"}, script = "imlayout.ImLayout.prototype.DrawBoundingBox__2(min_addr, max_addr, r, g, b);")
     public static native void internal_native_DrawBoundingBox__2(int min_addr, int max_addr, int r, int g, int b);
 
@@ -120,10 +91,6 @@ public class ImLayout extends NativeObject {
         internal_native_DrawBoundingBox__3(rect.native_address, r, g, b, a, clipping);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.DrawBoundingBox__3(rect_addr, r, g, b, a, clipping);
-    */
     @org.teavm.jso.JSBody(params = {"rect_addr", "r", "g", "b", "a", "clipping"}, script = "imlayout.ImLayout.prototype.DrawBoundingBox__3(rect_addr, r, g, b, a, clipping);")
     public static native void internal_native_DrawBoundingBox__3(int rect_addr, int r, int g, int b, int a, boolean clipping);
 
@@ -131,10 +98,6 @@ public class ImLayout extends NativeObject {
         internal_native_DrawBoundingBox__3(rect.native_address, r, g, b, a);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.DrawBoundingBox__3(rect_addr, r, g, b, a);
-    */
     @org.teavm.jso.JSBody(params = {"rect_addr", "r", "g", "b", "a"}, script = "imlayout.ImLayout.prototype.DrawBoundingBox__3(rect_addr, r, g, b, a);")
     public static native void internal_native_DrawBoundingBox__3(int rect_addr, int r, int g, int b, int a);
 
@@ -142,10 +105,6 @@ public class ImLayout extends NativeObject {
         internal_native_DrawBoundingBox__3(rect.native_address, r, g, b);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.DrawBoundingBox__3(rect_addr, r, g, b);
-    */
     @org.teavm.jso.JSBody(params = {"rect_addr", "r", "g", "b"}, script = "imlayout.ImLayout.prototype.DrawBoundingBox__3(rect_addr, r, g, b);")
     public static native void internal_native_DrawBoundingBox__3(int rect_addr, int r, int g, int b);
 
@@ -153,10 +112,6 @@ public class ImLayout extends NativeObject {
         internal_native_ShowLayoutDebug();
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.ShowLayoutDebug();
-    */
     @org.teavm.jso.JSBody(script = "imlayout.ImLayout.prototype.ShowLayoutDebug();")
     public static native void internal_native_ShowLayoutDebug();
 
@@ -164,10 +119,6 @@ public class ImLayout extends NativeObject {
         internal_native_ShowLayoutDebugClipping();
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.ShowLayoutDebugClipping();
-    */
     @org.teavm.jso.JSBody(script = "imlayout.ImLayout.prototype.ShowLayoutDebugClipping();")
     public static native void internal_native_ShowLayoutDebugClipping();
 
@@ -175,10 +126,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginLayout__1(id, sizeX, sizeY, options.native_address);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginLayout__1(id, sizeX, sizeY, options_addr);
-    */
     @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "options_addr"}, script = "imlayout.ImLayout.prototype.BeginLayout__1(id, sizeX, sizeY, options_addr);")
     public static native void internal_native_BeginLayout__1(int id, float sizeX, float sizeY, int options_addr);
 
@@ -186,10 +133,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginLayout__1(id, sizeX, sizeY);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginLayout__1(id, sizeX, sizeY);
-    */
     @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY"}, script = "imlayout.ImLayout.prototype.BeginLayout__1(id, sizeX, sizeY);")
     public static native void internal_native_BeginLayout__1(int id, float sizeX, float sizeY);
 
@@ -197,10 +140,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginLayout__2(id, sizeX, sizeY, options.native_address);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginLayout__2(id, sizeX, sizeY, options_addr);
-    */
     @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "options_addr"}, script = "imlayout.ImLayout.prototype.BeginLayout__2(id, sizeX, sizeY, options_addr);")
     public static native void internal_native_BeginLayout__2(String id, float sizeX, float sizeY, int options_addr);
 
@@ -208,10 +147,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginLayout__2(id, sizeX, sizeY);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginLayout__2(id, sizeX, sizeY);
-    */
     @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY"}, script = "imlayout.ImLayout.prototype.BeginLayout__2(id, sizeX, sizeY);")
     public static native void internal_native_BeginLayout__2(String id, float sizeX, float sizeY);
 
@@ -225,12 +160,6 @@ public class ImLayout extends NativeObject {
         return ImGuiLayout_TEMP_STATIC_GEN_0;
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      var returnedJSObj = imlayout.ImLayout.prototype.GetCurrentLayout();
-      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
-      return imlayout.getPointer(returnedJSObj);
-    */
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imlayout.ImLayout.prototype.GetCurrentLayout();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imlayout.getPointer(returnedJSObj);")
     public static native int internal_native_GetCurrentLayout_addr();
 
@@ -238,10 +167,6 @@ public class ImLayout extends NativeObject {
         internal_native_SetOrientation(ImOrientation.getValue());
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.SetOrientation(ImOrientation);
-    */
     @org.teavm.jso.JSBody(params = {"ImOrientation"}, script = "imlayout.ImLayout.prototype.SetOrientation(ImOrientation);")
     public static native void internal_native_SetOrientation(int ImOrientation);
 
@@ -249,10 +174,6 @@ public class ImLayout extends NativeObject {
         internal_native_EndLayout();
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.EndLayout();
-    */
     @org.teavm.jso.JSBody(script = "imlayout.ImLayout.prototype.EndLayout();")
     public static native void internal_native_EndLayout();
 
@@ -260,10 +181,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginAlign__1(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY, options.native_address);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginAlign__1(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY, options_addr);
-    */
     @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX", "alignY", "offsetX", "offsetY", "options_addr"}, script = "imlayout.ImLayout.prototype.BeginAlign__1(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY, options_addr);")
     public static native void internal_native_BeginAlign__1(int id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY, int options_addr);
 
@@ -271,10 +188,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginAlign__1(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginAlign__1(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY);
-    */
     @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX", "alignY", "offsetX", "offsetY"}, script = "imlayout.ImLayout.prototype.BeginAlign__1(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY);")
     public static native void internal_native_BeginAlign__1(int id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY);
 
@@ -282,10 +195,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginAlign__1(id, sizeX, sizeY, alignX, alignY, offsetX);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginAlign__1(id, sizeX, sizeY, alignX, alignY, offsetX);
-    */
     @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX", "alignY", "offsetX"}, script = "imlayout.ImLayout.prototype.BeginAlign__1(id, sizeX, sizeY, alignX, alignY, offsetX);")
     public static native void internal_native_BeginAlign__1(int id, float sizeX, float sizeY, float alignX, float alignY, float offsetX);
 
@@ -293,10 +202,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginAlign__1(id, sizeX, sizeY, alignX, alignY);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginAlign__1(id, sizeX, sizeY, alignX, alignY);
-    */
     @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX", "alignY"}, script = "imlayout.ImLayout.prototype.BeginAlign__1(id, sizeX, sizeY, alignX, alignY);")
     public static native void internal_native_BeginAlign__1(int id, float sizeX, float sizeY, float alignX, float alignY);
 
@@ -304,10 +209,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginAlign__1(id, sizeX, sizeY, alignX);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginAlign__1(id, sizeX, sizeY, alignX);
-    */
     @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX"}, script = "imlayout.ImLayout.prototype.BeginAlign__1(id, sizeX, sizeY, alignX);")
     public static native void internal_native_BeginAlign__1(int id, float sizeX, float sizeY, float alignX);
 
@@ -315,10 +216,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginAlign__1(id, sizeX, sizeY);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginAlign__1(id, sizeX, sizeY);
-    */
     @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY"}, script = "imlayout.ImLayout.prototype.BeginAlign__1(id, sizeX, sizeY);")
     public static native void internal_native_BeginAlign__1(int id, float sizeX, float sizeY);
 
@@ -326,10 +223,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginAlign__2(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY, options.native_address);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginAlign__2(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY, options_addr);
-    */
     @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX", "alignY", "offsetX", "offsetY", "options_addr"}, script = "imlayout.ImLayout.prototype.BeginAlign__2(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY, options_addr);")
     public static native void internal_native_BeginAlign__2(String id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY, int options_addr);
 
@@ -337,10 +230,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginAlign__2(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginAlign__2(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY);
-    */
     @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX", "alignY", "offsetX", "offsetY"}, script = "imlayout.ImLayout.prototype.BeginAlign__2(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY);")
     public static native void internal_native_BeginAlign__2(String id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY);
 
@@ -348,10 +237,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginAlign__2(id, sizeX, sizeY, alignX, alignY, offsetX);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginAlign__2(id, sizeX, sizeY, alignX, alignY, offsetX);
-    */
     @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX", "alignY", "offsetX"}, script = "imlayout.ImLayout.prototype.BeginAlign__2(id, sizeX, sizeY, alignX, alignY, offsetX);")
     public static native void internal_native_BeginAlign__2(String id, float sizeX, float sizeY, float alignX, float alignY, float offsetX);
 
@@ -359,10 +244,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginAlign__2(id, sizeX, sizeY, alignX, alignY);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginAlign__2(id, sizeX, sizeY, alignX, alignY);
-    */
     @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX", "alignY"}, script = "imlayout.ImLayout.prototype.BeginAlign__2(id, sizeX, sizeY, alignX, alignY);")
     public static native void internal_native_BeginAlign__2(String id, float sizeX, float sizeY, float alignX, float alignY);
 
@@ -370,10 +251,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginAlign__2(id, sizeX, sizeY, alignX);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginAlign__2(id, sizeX, sizeY, alignX);
-    */
     @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY", "alignX"}, script = "imlayout.ImLayout.prototype.BeginAlign__2(id, sizeX, sizeY, alignX);")
     public static native void internal_native_BeginAlign__2(String id, float sizeX, float sizeY, float alignX);
 
@@ -381,10 +258,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginAlign__2(id, sizeX, sizeY);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginAlign__2(id, sizeX, sizeY);
-    */
     @org.teavm.jso.JSBody(params = {"id", "sizeX", "sizeY"}, script = "imlayout.ImLayout.prototype.BeginAlign__2(id, sizeX, sizeY);")
     public static native void internal_native_BeginAlign__2(String id, float sizeX, float sizeY);
 
@@ -392,10 +265,6 @@ public class ImLayout extends NativeObject {
         internal_native_AlignLayout(alignX, alignY, offsetX, offsetY);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.AlignLayout(alignX, alignY, offsetX, offsetY);
-    */
     @org.teavm.jso.JSBody(params = {"alignX", "alignY", "offsetX", "offsetY"}, script = "imlayout.ImLayout.prototype.AlignLayout(alignX, alignY, offsetX, offsetY);")
     public static native void internal_native_AlignLayout(float alignX, float alignY, float offsetX, float offsetY);
 
@@ -403,10 +272,6 @@ public class ImLayout extends NativeObject {
         internal_native_AlignLayout(alignX, alignY, offsetX);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.AlignLayout(alignX, alignY, offsetX);
-    */
     @org.teavm.jso.JSBody(params = {"alignX", "alignY", "offsetX"}, script = "imlayout.ImLayout.prototype.AlignLayout(alignX, alignY, offsetX);")
     public static native void internal_native_AlignLayout(float alignX, float alignY, float offsetX);
 
@@ -414,10 +279,6 @@ public class ImLayout extends NativeObject {
         internal_native_AlignLayout(alignX, alignY);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.AlignLayout(alignX, alignY);
-    */
     @org.teavm.jso.JSBody(params = {"alignX", "alignY"}, script = "imlayout.ImLayout.prototype.AlignLayout(alignX, alignY);")
     public static native void internal_native_AlignLayout(float alignX, float alignY);
 
@@ -425,10 +286,6 @@ public class ImLayout extends NativeObject {
         internal_native_EndAlign();
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.EndAlign();
-    */
     @org.teavm.jso.JSBody(script = "imlayout.ImLayout.prototype.EndAlign();")
     public static native void internal_native_EndAlign();
 
@@ -436,11 +293,6 @@ public class ImLayout extends NativeObject {
         return internal_native_BeginCollapseLayout(id, title, sizeX, sizeY);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      var returnedJSObj = imlayout.ImLayout.prototype.BeginCollapseLayout(id, title, sizeX, sizeY);
-      return returnedJSObj;
-    */
     @org.teavm.jso.JSBody(params = {"id", "title", "sizeX", "sizeY"}, script = "var returnedJSObj = imlayout.ImLayout.prototype.BeginCollapseLayout(id, title, sizeX, sizeY);return returnedJSObj;")
     public static native boolean internal_native_BeginCollapseLayout(String id, String title, float sizeX, float sizeY);
 
@@ -448,11 +300,6 @@ public class ImLayout extends NativeObject {
         return internal_native_BeginCollapseLayout(id, title, sizeX, sizeY, option.native_address);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      var returnedJSObj = imlayout.ImLayout.prototype.BeginCollapseLayout(id, title, sizeX, sizeY, option_addr);
-      return returnedJSObj;
-    */
     @org.teavm.jso.JSBody(params = {"id", "title", "sizeX", "sizeY", "option_addr"}, script = "var returnedJSObj = imlayout.ImLayout.prototype.BeginCollapseLayout(id, title, sizeX, sizeY, option_addr);return returnedJSObj;")
     public static native boolean internal_native_BeginCollapseLayout(String id, String title, float sizeX, float sizeY, int option_addr);
 
@@ -460,10 +307,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginCollapseLayout__2(id, isOpen.native_void_address, title, sizeX, sizeY);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginCollapseLayout__2(id, isOpen_addr, title, sizeX, sizeY);
-    */
     @org.teavm.jso.JSBody(params = {"id", "isOpen_addr", "title", "sizeX", "sizeY"}, script = "imlayout.ImLayout.prototype.BeginCollapseLayout__2(id, isOpen_addr, title, sizeX, sizeY);")
     public static native void internal_native_BeginCollapseLayout__2(String id, int isOpen_addr, String title, float sizeX, float sizeY);
 
@@ -471,10 +314,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginCollapseLayout__2(id, isOpen.native_void_address, title, sizeX, sizeY, option.native_address);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginCollapseLayout__2(id, isOpen_addr, title, sizeX, sizeY, option_addr);
-    */
     @org.teavm.jso.JSBody(params = {"id", "isOpen_addr", "title", "sizeX", "sizeY", "option_addr"}, script = "imlayout.ImLayout.prototype.BeginCollapseLayout__2(id, isOpen_addr, title, sizeX, sizeY, option_addr);")
     public static native void internal_native_BeginCollapseLayout__2(String id, int isOpen_addr, String title, float sizeX, float sizeY, int option_addr);
 
@@ -482,10 +321,6 @@ public class ImLayout extends NativeObject {
         internal_native_EndCollapseFrameLayout();
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.EndCollapseFrameLayout();
-    */
     @org.teavm.jso.JSBody(script = "imlayout.ImLayout.prototype.EndCollapseFrameLayout();")
     public static native void internal_native_EndCollapseFrameLayout();
 
@@ -493,10 +328,6 @@ public class ImLayout extends NativeObject {
         internal_native_EndCollapseLayout();
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.EndCollapseLayout();
-    */
     @org.teavm.jso.JSBody(script = "imlayout.ImLayout.prototype.EndCollapseLayout();")
     public static native void internal_native_EndCollapseLayout();
 
@@ -504,11 +335,6 @@ public class ImLayout extends NativeObject {
         return internal_native_BeginCollapseLayoutEx(id, title, sizeX, sizeY);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      var returnedJSObj = imlayout.ImLayout.prototype.BeginCollapseLayoutEx(id, title, sizeX, sizeY);
-      return returnedJSObj;
-    */
     @org.teavm.jso.JSBody(params = {"id", "title", "sizeX", "sizeY"}, script = "var returnedJSObj = imlayout.ImLayout.prototype.BeginCollapseLayoutEx(id, title, sizeX, sizeY);return returnedJSObj;")
     public static native boolean internal_native_BeginCollapseLayoutEx(String id, String title, float sizeX, float sizeY);
 
@@ -516,11 +342,6 @@ public class ImLayout extends NativeObject {
         return internal_native_BeginCollapseLayoutEx(id, title, sizeX, sizeY, option.native_address);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      var returnedJSObj = imlayout.ImLayout.prototype.BeginCollapseLayoutEx(id, title, sizeX, sizeY, option_addr);
-      return returnedJSObj;
-    */
     @org.teavm.jso.JSBody(params = {"id", "title", "sizeX", "sizeY", "option_addr"}, script = "var returnedJSObj = imlayout.ImLayout.prototype.BeginCollapseLayoutEx(id, title, sizeX, sizeY, option_addr);return returnedJSObj;")
     public static native boolean internal_native_BeginCollapseLayoutEx(String id, String title, float sizeX, float sizeY, int option_addr);
 
@@ -528,11 +349,6 @@ public class ImLayout extends NativeObject {
         return internal_native_BeginCollapseLayoutEx__2(id, title, sizeX, sizeY);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      var returnedJSObj = imlayout.ImLayout.prototype.BeginCollapseLayoutEx__2(id, title, sizeX, sizeY);
-      return returnedJSObj;
-    */
     @org.teavm.jso.JSBody(params = {"id", "title", "sizeX", "sizeY"}, script = "var returnedJSObj = imlayout.ImLayout.prototype.BeginCollapseLayoutEx__2(id, title, sizeX, sizeY);return returnedJSObj;")
     public static native boolean internal_native_BeginCollapseLayoutEx__2(int id, String title, float sizeX, float sizeY);
 
@@ -540,11 +356,6 @@ public class ImLayout extends NativeObject {
         return internal_native_BeginCollapseLayoutEx__2(id, title, sizeX, sizeY, option.native_address);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      var returnedJSObj = imlayout.ImLayout.prototype.BeginCollapseLayoutEx__2(id, title, sizeX, sizeY, option_addr);
-      return returnedJSObj;
-    */
     @org.teavm.jso.JSBody(params = {"id", "title", "sizeX", "sizeY", "option_addr"}, script = "var returnedJSObj = imlayout.ImLayout.prototype.BeginCollapseLayoutEx__2(id, title, sizeX, sizeY, option_addr);return returnedJSObj;")
     public static native boolean internal_native_BeginCollapseLayoutEx__2(int id, String title, float sizeX, float sizeY, int option_addr);
 
@@ -552,10 +363,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginCollapseLayoutEx__3(id, isOpen.native_void_address, title, sizeX, sizeY);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginCollapseLayoutEx__3(id, isOpen_addr, title, sizeX, sizeY);
-    */
     @org.teavm.jso.JSBody(params = {"id", "isOpen_addr", "title", "sizeX", "sizeY"}, script = "imlayout.ImLayout.prototype.BeginCollapseLayoutEx__3(id, isOpen_addr, title, sizeX, sizeY);")
     public static native void internal_native_BeginCollapseLayoutEx__3(String id, int isOpen_addr, String title, float sizeX, float sizeY);
 
@@ -563,10 +370,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginCollapseLayoutEx__3(id, isOpen.native_void_address, title, sizeX, sizeY, option.native_address);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginCollapseLayoutEx__3(id, isOpen_addr, title, sizeX, sizeY, option_addr);
-    */
     @org.teavm.jso.JSBody(params = {"id", "isOpen_addr", "title", "sizeX", "sizeY", "option_addr"}, script = "imlayout.ImLayout.prototype.BeginCollapseLayoutEx__3(id, isOpen_addr, title, sizeX, sizeY, option_addr);")
     public static native void internal_native_BeginCollapseLayoutEx__3(String id, int isOpen_addr, String title, float sizeX, float sizeY, int option_addr);
 
@@ -574,10 +377,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginBoundingBox();
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginBoundingBox();
-    */
     @org.teavm.jso.JSBody(script = "imlayout.ImLayout.prototype.BeginBoundingBox();")
     public static native void internal_native_BeginBoundingBox();
 
@@ -591,12 +390,6 @@ public class ImLayout extends NativeObject {
         return ImRect_TEMP_STATIC_GEN_0;
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      var returnedJSObj = imlayout.ImLayout.prototype.EndBoundingBox();
-      if(!returnedJSObj.hasOwnProperty('ptr')) return 0;
-      return imlayout.getPointer(returnedJSObj);
-    */
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imlayout.ImLayout.prototype.EndBoundingBox();if(!returnedJSObj.hasOwnProperty('ptr')) return 0; return imlayout.getPointer(returnedJSObj);")
     public static native int internal_native_EndBoundingBox_addr();
 
@@ -604,11 +397,6 @@ public class ImLayout extends NativeObject {
         return internal_native_GetTableContentHeight();
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      var returnedJSObj = imlayout.ImLayout.prototype.GetTableContentHeight();
-      return returnedJSObj;
-    */
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imlayout.ImLayout.prototype.GetTableContentHeight();return returnedJSObj;")
     public static native float internal_native_GetTableContentHeight();
 
@@ -616,10 +404,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginGlobalTree();
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginGlobalTree();
-    */
     @org.teavm.jso.JSBody(script = "imlayout.ImLayout.prototype.BeginGlobalTree();")
     public static native void internal_native_BeginGlobalTree();
 
@@ -627,10 +411,6 @@ public class ImLayout extends NativeObject {
         internal_native_EndGlobalTree();
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.EndGlobalTree();
-    */
     @org.teavm.jso.JSBody(script = "imlayout.ImLayout.prototype.EndGlobalTree();")
     public static native void internal_native_EndGlobalTree();
 
@@ -638,10 +418,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginTree__1(treeIdStr);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginTree__1(treeIdStr);
-    */
     @org.teavm.jso.JSBody(params = {"treeIdStr"}, script = "imlayout.ImLayout.prototype.BeginTree__1(treeIdStr);")
     public static native void internal_native_BeginTree__1(String treeIdStr);
 
@@ -649,10 +425,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginTree__2(id);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginTree__2(id);
-    */
     @org.teavm.jso.JSBody(params = {"id"}, script = "imlayout.ImLayout.prototype.BeginTree__2(id);")
     public static native void internal_native_BeginTree__2(int id);
 
@@ -660,10 +432,6 @@ public class ImLayout extends NativeObject {
         internal_native_EndTree();
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.EndTree();
-    */
     @org.teavm.jso.JSBody(script = "imlayout.ImLayout.prototype.EndTree();")
     public static native void internal_native_EndTree();
 
@@ -671,10 +439,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginTreeLayout(height, isLeaf, isSelected);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginTreeLayout(height, isLeaf, isSelected);
-    */
     @org.teavm.jso.JSBody(params = {"height", "isLeaf", "isSelected"}, script = "imlayout.ImLayout.prototype.BeginTreeLayout(height, isLeaf, isSelected);")
     public static native void internal_native_BeginTreeLayout(float height, boolean isLeaf, boolean isSelected);
 
@@ -682,10 +446,6 @@ public class ImLayout extends NativeObject {
         internal_native_BeginTreeLayout(height, isLeaf, isSelected, isOpen);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.BeginTreeLayout(height, isLeaf, isSelected, isOpen);
-    */
     @org.teavm.jso.JSBody(params = {"height", "isLeaf", "isSelected", "isOpen"}, script = "imlayout.ImLayout.prototype.BeginTreeLayout(height, isLeaf, isSelected, isOpen);")
     public static native void internal_native_BeginTreeLayout(float height, boolean isLeaf, boolean isSelected, boolean isOpen);
 
@@ -693,11 +453,6 @@ public class ImLayout extends NativeObject {
         return internal_native_EndTreeLayout();
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      var returnedJSObj = imlayout.ImLayout.prototype.EndTreeLayout();
-      return returnedJSObj;
-    */
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imlayout.ImLayout.prototype.EndTreeLayout();return returnedJSObj;")
     public static native boolean internal_native_EndTreeLayout();
 
@@ -705,11 +460,6 @@ public class ImLayout extends NativeObject {
         return internal_native_IsTreeOpen();
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      var returnedJSObj = imlayout.ImLayout.prototype.IsTreeOpen();
-      return returnedJSObj;
-    */
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imlayout.ImLayout.prototype.IsTreeOpen();return returnedJSObj;")
     public static native boolean internal_native_IsTreeOpen();
 
@@ -717,11 +467,6 @@ public class ImLayout extends NativeObject {
         return internal_native_GetTreeHeight(padding);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      var returnedJSObj = imlayout.ImLayout.prototype.GetTreeHeight(padding);
-      return returnedJSObj;
-    */
     @org.teavm.jso.JSBody(params = {"padding"}, script = "var returnedJSObj = imlayout.ImLayout.prototype.GetTreeHeight(padding);return returnedJSObj;")
     public static native float internal_native_GetTreeHeight(float padding);
 
@@ -729,11 +474,6 @@ public class ImLayout extends NativeObject {
         return internal_native_ButtonBehavior(id, bb.native_address, isSelected, selectedColor, hoveredColor, hoveredStrokeColor, ImGuiButtonFlags.getValue(), clickDelay);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      var returnedJSObj = imlayout.ImLayout.prototype.ButtonBehavior(id, bb_addr, isSelected, selectedColor, hoveredColor, hoveredStrokeColor, ImGuiButtonFlags, clickDelay);
-      return returnedJSObj;
-    */
     @org.teavm.jso.JSBody(params = {"id", "bb_addr", "isSelected", "selectedColor", "hoveredColor", "hoveredStrokeColor", "ImGuiButtonFlags", "clickDelay"}, script = "var returnedJSObj = imlayout.ImLayout.prototype.ButtonBehavior(id, bb_addr, isSelected, selectedColor, hoveredColor, hoveredStrokeColor, ImGuiButtonFlags, clickDelay);return returnedJSObj;")
     public static native int internal_native_ButtonBehavior(int id, int bb_addr, boolean isSelected, int selectedColor, int hoveredColor, int hoveredStrokeColor, int ImGuiButtonFlags, float clickDelay);
 
@@ -741,11 +481,6 @@ public class ImLayout extends NativeObject {
         return internal_native_ButtonBehavior(id, bb.native_address, isSelected, selectedColor, hoveredColor, hoveredStrokeColor, ImGuiButtonFlags.getValue());
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      var returnedJSObj = imlayout.ImLayout.prototype.ButtonBehavior(id, bb_addr, isSelected, selectedColor, hoveredColor, hoveredStrokeColor, ImGuiButtonFlags);
-      return returnedJSObj;
-    */
     @org.teavm.jso.JSBody(params = {"id", "bb_addr", "isSelected", "selectedColor", "hoveredColor", "hoveredStrokeColor", "ImGuiButtonFlags"}, script = "var returnedJSObj = imlayout.ImLayout.prototype.ButtonBehavior(id, bb_addr, isSelected, selectedColor, hoveredColor, hoveredStrokeColor, ImGuiButtonFlags);return returnedJSObj;")
     public static native int internal_native_ButtonBehavior(int id, int bb_addr, boolean isSelected, int selectedColor, int hoveredColor, int hoveredStrokeColor, int ImGuiButtonFlags);
 
@@ -753,11 +488,6 @@ public class ImLayout extends NativeObject {
         return internal_native_ButtonBehavior(id, bb.native_address, isSelected, selectedColor, hoveredColor, hoveredStrokeColor);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      var returnedJSObj = imlayout.ImLayout.prototype.ButtonBehavior(id, bb_addr, isSelected, selectedColor, hoveredColor, hoveredStrokeColor);
-      return returnedJSObj;
-    */
     @org.teavm.jso.JSBody(params = {"id", "bb_addr", "isSelected", "selectedColor", "hoveredColor", "hoveredStrokeColor"}, script = "var returnedJSObj = imlayout.ImLayout.prototype.ButtonBehavior(id, bb_addr, isSelected, selectedColor, hoveredColor, hoveredStrokeColor);return returnedJSObj;")
     public static native int internal_native_ButtonBehavior(int id, int bb_addr, boolean isSelected, int selectedColor, int hoveredColor, int hoveredStrokeColor);
 
@@ -765,11 +495,6 @@ public class ImLayout extends NativeObject {
         return internal_native_ButtonBehavior(id, bb.native_address, isSelected, selectedColor, hoveredColor);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      var returnedJSObj = imlayout.ImLayout.prototype.ButtonBehavior(id, bb_addr, isSelected, selectedColor, hoveredColor);
-      return returnedJSObj;
-    */
     @org.teavm.jso.JSBody(params = {"id", "bb_addr", "isSelected", "selectedColor", "hoveredColor"}, script = "var returnedJSObj = imlayout.ImLayout.prototype.ButtonBehavior(id, bb_addr, isSelected, selectedColor, hoveredColor);return returnedJSObj;")
     public static native int internal_native_ButtonBehavior(int id, int bb_addr, boolean isSelected, int selectedColor, int hoveredColor);
 
@@ -777,11 +502,6 @@ public class ImLayout extends NativeObject {
         return internal_native_ButtonBehavior(id, bb.native_address, isSelected, selectedColor);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      var returnedJSObj = imlayout.ImLayout.prototype.ButtonBehavior(id, bb_addr, isSelected, selectedColor);
-      return returnedJSObj;
-    */
     @org.teavm.jso.JSBody(params = {"id", "bb_addr", "isSelected", "selectedColor"}, script = "var returnedJSObj = imlayout.ImLayout.prototype.ButtonBehavior(id, bb_addr, isSelected, selectedColor);return returnedJSObj;")
     public static native int internal_native_ButtonBehavior(int id, int bb_addr, boolean isSelected, int selectedColor);
 
@@ -789,11 +509,6 @@ public class ImLayout extends NativeObject {
         return internal_native_ButtonBehavior(id, bb.native_address, isSelected);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      var returnedJSObj = imlayout.ImLayout.prototype.ButtonBehavior(id, bb_addr, isSelected);
-      return returnedJSObj;
-    */
     @org.teavm.jso.JSBody(params = {"id", "bb_addr", "isSelected"}, script = "var returnedJSObj = imlayout.ImLayout.prototype.ButtonBehavior(id, bb_addr, isSelected);return returnedJSObj;")
     public static native int internal_native_ButtonBehavior(int id, int bb_addr, boolean isSelected);
 
@@ -801,10 +516,6 @@ public class ImLayout extends NativeObject {
         internal_native_ScaleAllSizes(scale_factor);
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      imlayout.ImLayout.prototype.ScaleAllSizes(scale_factor);
-    */
     @org.teavm.jso.JSBody(params = {"scale_factor"}, script = "imlayout.ImLayout.prototype.ScaleAllSizes(scale_factor);")
     public static native void internal_native_ScaleAllSizes(float scale_factor);
 
@@ -812,11 +523,6 @@ public class ImLayout extends NativeObject {
         return internal_native_GetDPIScale();
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      var returnedJSObj = imlayout.ImLayout.prototype.GetDPIScale();
-      return returnedJSObj;
-    */
     @org.teavm.jso.JSBody(script = "var returnedJSObj = imlayout.ImLayout.prototype.GetDPIScale();return returnedJSObj;")
     public static native float internal_native_GetDPIScale();
 
@@ -824,10 +530,6 @@ public class ImLayout extends NativeObject {
         return internal_native_get_WRAP_PARENT();
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      return imlayout.ImLayout.prototype.get_WRAP_PARENT()
-    */
     @org.teavm.jso.JSBody(script = "return imlayout.ImLayout.prototype.get_WRAP_PARENT()")
     public static native int internal_native_get_WRAP_PARENT();
 
@@ -835,10 +537,6 @@ public class ImLayout extends NativeObject {
         return internal_native_get_MATCH_PARENT();
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      return imlayout.ImLayout.prototype.get_MATCH_PARENT()
-    */
     @org.teavm.jso.JSBody(script = "return imlayout.ImLayout.prototype.get_MATCH_PARENT()")
     public static native int internal_native_get_MATCH_PARENT();
 
@@ -846,10 +544,6 @@ public class ImLayout extends NativeObject {
         return internal_native_get_MATCH_WRAP_PARENT();
     }
 
-    /*
-      [-TEAVM;-NATIVE]
-      return imlayout.ImLayout.prototype.get_MATCH_WRAP_PARENT()
-    */
     @org.teavm.jso.JSBody(script = "return imlayout.ImLayout.prototype.get_MATCH_WRAP_PARENT()")
     public static native int internal_native_get_MATCH_WRAP_PARENT();
 }

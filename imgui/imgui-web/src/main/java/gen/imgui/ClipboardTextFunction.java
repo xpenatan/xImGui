@@ -35,10 +35,6 @@ public class ClipboardTextFunction extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ClipboardTextFunctionImpl);
-imgui.destroy(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ClipboardTextFunctionImpl);imgui.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
@@ -46,9 +42,6 @@ imgui.destroy(jsObj);
         internal_native_setClipboardTextFunction(io.native_address, clipboardFunction.native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-imgui.ClipboardTextFunction.prototype.setClipboardTextFunction(io_addr, clipboardFunction_addr);
-*/
     @org.teavm.jso.JSBody(params = {"io_addr", "clipboardFunction_addr"}, script = "imgui.ClipboardTextFunction.prototype.setClipboardTextFunction(io_addr, clipboardFunction_addr);")
     public static native void internal_native_setClipboardTextFunction(int io_addr, int clipboardFunction_addr);
 
@@ -94,10 +87,6 @@ imgui.ClipboardTextFunction.prototype.setClipboardTextFunction(io_addr, clipboar
         onSetClipboardText(NativeString_TEMP_STATIC_GEN_1);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = new imgui.ClipboardTextFunctionImpl();
-return imgui.getPointer(jsObj);
-*/
     @org.teavm.jso.JSBody(script = "var jsObj = new imgui.ClipboardTextFunctionImpl();return imgui.getPointer(jsObj);")
     public static native int internal_native_create_addr();
 

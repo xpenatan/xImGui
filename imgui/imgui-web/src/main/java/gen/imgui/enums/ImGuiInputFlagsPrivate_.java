@@ -58,147 +58,75 @@ public enum ImGuiInputFlagsPrivate_ implements NativeEnum<ImGuiInputFlagsPrivate
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_RepeatRateDefault;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_RepeatRateDefault;")
     private static native int ImGuiInputFlags_RepeatRateDefault_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_RepeatRateNavMove;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_RepeatRateNavMove;")
     private static native int ImGuiInputFlags_RepeatRateNavMove_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_RepeatRateNavTweak;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_RepeatRateNavTweak;")
     private static native int ImGuiInputFlags_RepeatRateNavTweak_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_RepeatUntilRelease;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_RepeatUntilRelease;")
     private static native int ImGuiInputFlags_RepeatUntilRelease_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_RepeatUntilKeyModsChange;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_RepeatUntilKeyModsChange;")
     private static native int ImGuiInputFlags_RepeatUntilKeyModsChange_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_RepeatUntilKeyModsChangeFromNone;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_RepeatUntilKeyModsChangeFromNone;")
     private static native int ImGuiInputFlags_RepeatUntilKeyModsChangeFromNone_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_RepeatUntilOtherKeyPress;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_RepeatUntilOtherKeyPress;")
     private static native int ImGuiInputFlags_RepeatUntilOtherKeyPress_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_LockThisFrame;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_LockThisFrame;")
     private static native int ImGuiInputFlags_LockThisFrame_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_LockUntilRelease;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_LockUntilRelease;")
     private static native int ImGuiInputFlags_LockUntilRelease_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_CondHovered;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_CondHovered;")
     private static native int ImGuiInputFlags_CondHovered_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_CondActive;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_CondActive;")
     private static native int ImGuiInputFlags_CondActive_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_CondDefault_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_CondDefault_;")
     private static native int ImGuiInputFlags_CondDefault__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_RepeatRateMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_RepeatRateMask_;")
     private static native int ImGuiInputFlags_RepeatRateMask__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_RepeatUntilMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_RepeatUntilMask_;")
     private static native int ImGuiInputFlags_RepeatUntilMask__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_RepeatMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_RepeatMask_;")
     private static native int ImGuiInputFlags_RepeatMask__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_CondMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_CondMask_;")
     private static native int ImGuiInputFlags_CondMask__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_RouteTypeMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_RouteTypeMask_;")
     private static native int ImGuiInputFlags_RouteTypeMask__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_RouteOptionsMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_RouteOptionsMask_;")
     private static native int ImGuiInputFlags_RouteOptionsMask__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_SupportedByIsKeyPressed;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_SupportedByIsKeyPressed;")
     private static native int ImGuiInputFlags_SupportedByIsKeyPressed_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_SupportedByIsMouseClicked;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_SupportedByIsMouseClicked;")
     private static native int ImGuiInputFlags_SupportedByIsMouseClicked_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_SupportedByShortcut;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_SupportedByShortcut;")
     private static native int ImGuiInputFlags_SupportedByShortcut_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_SupportedBySetNextItemShortcut;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_SupportedBySetNextItemShortcut;")
     private static native int ImGuiInputFlags_SupportedBySetNextItemShortcut_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_SupportedBySetKeyOwner;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_SupportedBySetKeyOwner;")
     private static native int ImGuiInputFlags_SupportedBySetKeyOwner_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_SupportedBySetItemKeyOwner;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_SupportedBySetItemKeyOwner;")
     private static native int ImGuiInputFlags_SupportedBySetItemKeyOwner_NATIVE();
 }

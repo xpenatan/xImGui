@@ -34,15 +34,9 @@ public enum ImGuiTableRowFlags implements NativeEnum<ImGuiTableRowFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTableRowFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTableRowFlags_None;")
     private static native int ImGuiTableRowFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTableRowFlags_Headers;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTableRowFlags_Headers;")
     private static native int ImGuiTableRowFlags_Headers_NATIVE();
 }

@@ -42,51 +42,27 @@ public enum ImGuiDockNodeFlags implements NativeEnum<ImGuiDockNodeFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_None;")
     private static native int ImGuiDockNodeFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_KeepAliveOnly;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_KeepAliveOnly;")
     private static native int ImGuiDockNodeFlags_KeepAliveOnly_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_NoDockingOverCentralNode;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_NoDockingOverCentralNode;")
     private static native int ImGuiDockNodeFlags_NoDockingOverCentralNode_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_PassthruCentralNode;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_PassthruCentralNode;")
     private static native int ImGuiDockNodeFlags_PassthruCentralNode_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_NoDockingSplit;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_NoDockingSplit;")
     private static native int ImGuiDockNodeFlags_NoDockingSplit_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_NoResize;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_NoResize;")
     private static native int ImGuiDockNodeFlags_NoResize_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_AutoHideTabBar;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_AutoHideTabBar;")
     private static native int ImGuiDockNodeFlags_AutoHideTabBar_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiDockNodeFlags_NoUndocking;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiDockNodeFlags_NoUndocking;")
     private static native int ImGuiDockNodeFlags_NoUndocking_NATIVE();
 }

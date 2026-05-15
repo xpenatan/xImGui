@@ -45,69 +45,36 @@ public enum ImGuiInputFlags implements NativeEnum<ImGuiInputFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_None;")
     private static native int ImGuiInputFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_Repeat;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_Repeat;")
     private static native int ImGuiInputFlags_Repeat_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_RouteActive;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_RouteActive;")
     private static native int ImGuiInputFlags_RouteActive_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_RouteFocused;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_RouteFocused;")
     private static native int ImGuiInputFlags_RouteFocused_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_RouteGlobal;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_RouteGlobal;")
     private static native int ImGuiInputFlags_RouteGlobal_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_RouteAlways;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_RouteAlways;")
     private static native int ImGuiInputFlags_RouteAlways_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_RouteOverFocused;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_RouteOverFocused;")
     private static native int ImGuiInputFlags_RouteOverFocused_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_RouteOverActive;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_RouteOverActive;")
     private static native int ImGuiInputFlags_RouteOverActive_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_RouteUnlessBgFocused;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_RouteUnlessBgFocused;")
     private static native int ImGuiInputFlags_RouteUnlessBgFocused_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_RouteFromRootWindow;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_RouteFromRootWindow;")
     private static native int ImGuiInputFlags_RouteFromRootWindow_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiInputFlags_Tooltip;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiInputFlags_Tooltip;")
     private static native int ImGuiInputFlags_Tooltip_NATIVE();
 }

@@ -102,829 +102,616 @@ public enum ImGuiCol implements NativeEnum<ImGuiCol> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_Text;
-*/
     private static int ImGuiCol_Text_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_Text_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_TextDisabled;
-*/
     private static int ImGuiCol_TextDisabled_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_TextDisabled_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_WindowBg;
-*/
     private static int ImGuiCol_WindowBg_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_WindowBg_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_ChildBg;
-*/
     private static int ImGuiCol_ChildBg_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_ChildBg_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_PopupBg;
-*/
     private static int ImGuiCol_PopupBg_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_PopupBg_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_Border;
-*/
     private static int ImGuiCol_Border_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_Border_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_BorderShadow;
-*/
     private static int ImGuiCol_BorderShadow_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_BorderShadow_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_FrameBg;
-*/
     private static int ImGuiCol_FrameBg_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_FrameBg_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_FrameBgHovered;
-*/
     private static int ImGuiCol_FrameBgHovered_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_FrameBgHovered_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_FrameBgActive;
-*/
     private static int ImGuiCol_FrameBgActive_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_FrameBgActive_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_TitleBg;
-*/
     private static int ImGuiCol_TitleBg_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_TitleBg_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_TitleBgActive;
-*/
     private static int ImGuiCol_TitleBgActive_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_TitleBgActive_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_TitleBgCollapsed;
-*/
     private static int ImGuiCol_TitleBgCollapsed_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_TitleBgCollapsed_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_MenuBarBg;
-*/
     private static int ImGuiCol_MenuBarBg_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_MenuBarBg_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_ScrollbarBg;
-*/
     private static int ImGuiCol_ScrollbarBg_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_ScrollbarBg_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_ScrollbarGrab;
-*/
     private static int ImGuiCol_ScrollbarGrab_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_ScrollbarGrab_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_ScrollbarGrabHovered;
-*/
     private static int ImGuiCol_ScrollbarGrabHovered_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_ScrollbarGrabHovered_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_ScrollbarGrabActive;
-*/
     private static int ImGuiCol_ScrollbarGrabActive_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_ScrollbarGrabActive_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_CheckMark;
-*/
     private static int ImGuiCol_CheckMark_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_CheckMark_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_SliderGrab;
-*/
     private static int ImGuiCol_SliderGrab_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_SliderGrab_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_SliderGrabActive;
-*/
     private static int ImGuiCol_SliderGrabActive_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_SliderGrabActive_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_Button;
-*/
     private static int ImGuiCol_Button_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_Button_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_ButtonHovered;
-*/
     private static int ImGuiCol_ButtonHovered_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_ButtonHovered_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_ButtonActive;
-*/
     private static int ImGuiCol_ButtonActive_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_ButtonActive_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_Header;
-*/
     private static int ImGuiCol_Header_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_Header_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_HeaderHovered;
-*/
     private static int ImGuiCol_HeaderHovered_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_HeaderHovered_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_HeaderActive;
-*/
     private static int ImGuiCol_HeaderActive_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_HeaderActive_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_Separator;
-*/
     private static int ImGuiCol_Separator_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_Separator_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_SeparatorHovered;
-*/
     private static int ImGuiCol_SeparatorHovered_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_SeparatorHovered_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_SeparatorActive;
-*/
     private static int ImGuiCol_SeparatorActive_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_SeparatorActive_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_ResizeGrip;
-*/
     private static int ImGuiCol_ResizeGrip_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_ResizeGrip_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_ResizeGripHovered;
-*/
     private static int ImGuiCol_ResizeGripHovered_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_ResizeGripHovered_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_ResizeGripActive;
-*/
     private static int ImGuiCol_ResizeGripActive_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_ResizeGripActive_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_InputTextCursor;
-*/
     private static int ImGuiCol_InputTextCursor_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_InputTextCursor_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_TabHovered;
-*/
     private static int ImGuiCol_TabHovered_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_TabHovered_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_Tab;
-*/
     private static int ImGuiCol_Tab_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_Tab_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_TabSelected;
-*/
     private static int ImGuiCol_TabSelected_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_TabSelected_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_TabSelectedOverline;
-*/
     private static int ImGuiCol_TabSelectedOverline_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_TabSelectedOverline_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_TabDimmed;
-*/
     private static int ImGuiCol_TabDimmed_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_TabDimmed_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_TabDimmedSelected;
-*/
     private static int ImGuiCol_TabDimmedSelected_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_TabDimmedSelected_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_TabDimmedSelectedOverline;
-*/
     private static int ImGuiCol_TabDimmedSelectedOverline_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_TabDimmedSelectedOverline_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_DockingPreview;
-*/
     private static int ImGuiCol_DockingPreview_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_DockingPreview_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_DockingEmptyBg;
-*/
     private static int ImGuiCol_DockingEmptyBg_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_DockingEmptyBg_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_PlotLines;
-*/
     private static int ImGuiCol_PlotLines_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_PlotLines_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_PlotLinesHovered;
-*/
     private static int ImGuiCol_PlotLinesHovered_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_PlotLinesHovered_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_PlotHistogram;
-*/
     private static int ImGuiCol_PlotHistogram_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_PlotHistogram_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_PlotHistogramHovered;
-*/
     private static int ImGuiCol_PlotHistogramHovered_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_PlotHistogramHovered_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_TableHeaderBg;
-*/
     private static int ImGuiCol_TableHeaderBg_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_TableHeaderBg_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_TableBorderStrong;
-*/
     private static int ImGuiCol_TableBorderStrong_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_TableBorderStrong_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_TableBorderLight;
-*/
     private static int ImGuiCol_TableBorderLight_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_TableBorderLight_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_TableRowBg;
-*/
     private static int ImGuiCol_TableRowBg_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_TableRowBg_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_TableRowBgAlt;
-*/
     private static int ImGuiCol_TableRowBgAlt_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_TableRowBgAlt_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_TextLink;
-*/
     private static int ImGuiCol_TextLink_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_TextLink_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_TextSelectedBg;
-*/
     private static int ImGuiCol_TextSelectedBg_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_TextSelectedBg_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_TreeLines;
-*/
     private static int ImGuiCol_TreeLines_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_TreeLines_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_DragDropTarget;
-*/
     private static int ImGuiCol_DragDropTarget_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_DragDropTarget_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_UnsavedMarker;
-*/
     private static int ImGuiCol_UnsavedMarker_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_UnsavedMarker_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_NavCursor;
-*/
     private static int ImGuiCol_NavCursor_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_NavCursor_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_NavWindowingHighlight;
-*/
     private static int ImGuiCol_NavWindowingHighlight_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_NavWindowingHighlight_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_NavWindowingDimBg;
-*/
     private static int ImGuiCol_NavWindowingDimBg_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_NavWindowingDimBg_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiCol_ModalWindowDimBg;
-*/
     private static int ImGuiCol_ModalWindowDimBg_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiCol_ModalWindowDimBg_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiCol_Text_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_text_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiCol_TextDisabled_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_textdisabled_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiCol_WindowBg_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_windowbg_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiCol_ChildBg_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_childbg_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiCol_PopupBg_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_popupbg_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiCol_Border_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_border_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiCol_BorderShadow_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_bordershadow_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_Text_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1Text_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_FrameBg_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_framebg_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_TextDisabled_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1TextDisabled_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_FrameBgHovered_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_framebghovered_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_WindowBg_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1WindowBg_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_FrameBgActive_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_framebgactive_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_ChildBg_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1ChildBg_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_TitleBg_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_titlebg_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_PopupBg_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1PopupBg_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_TitleBgActive_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_titlebgactive_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_Border_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1Border_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_TitleBgCollapsed_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_titlebgcollapsed_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_BorderShadow_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1BorderShadow_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_MenuBarBg_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_menubarbg_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_FrameBg_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1FrameBg_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_ScrollbarBg_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_scrollbarbg_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_FrameBgHovered_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1FrameBgHovered_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_ScrollbarGrab_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_scrollbargrab_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_FrameBgActive_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1FrameBgActive_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_ScrollbarGrabHovered_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_scrollbargrabhovered_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_TitleBg_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1TitleBg_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_ScrollbarGrabActive_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_scrollbargrabactive_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_TitleBgActive_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1TitleBgActive_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_CheckMark_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_checkmark_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_TitleBgCollapsed_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1TitleBgCollapsed_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_SliderGrab_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_slidergrab_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_MenuBarBg_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1MenuBarBg_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_SliderGrabActive_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_slidergrabactive_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_ScrollbarBg_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1ScrollbarBg_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_Button_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_button_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_ScrollbarGrab_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1ScrollbarGrab_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_ButtonHovered_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_buttonhovered_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_ScrollbarGrabHovered_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1ScrollbarGrabHovered_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_ButtonActive_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_buttonactive_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_ScrollbarGrabActive_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1ScrollbarGrabActive_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_Header_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_header_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_CheckMark_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1CheckMark_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_HeaderHovered_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_headerhovered_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_SliderGrab_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1SliderGrab_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_HeaderActive_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_headeractive_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_SliderGrabActive_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1SliderGrabActive_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_Separator_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_separator_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_Button_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1Button_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_SeparatorHovered_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_separatorhovered_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_ButtonHovered_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1ButtonHovered_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_SeparatorActive_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_separatoractive_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_ButtonActive_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1ButtonActive_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_ResizeGrip_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_resizegrip_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_Header_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1Header_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_ResizeGripHovered_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_resizegriphovered_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_HeaderHovered_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1HeaderHovered_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_ResizeGripActive_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_resizegripactive_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_HeaderActive_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1HeaderActive_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_InputTextCursor_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_inputtextcursor_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_Separator_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1Separator_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_TabHovered_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_tabhovered_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_SeparatorHovered_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1SeparatorHovered_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_Tab_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_tab_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_SeparatorActive_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1SeparatorActive_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_TabSelected_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_tabselected_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_ResizeGrip_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1ResizeGrip_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_TabSelectedOverline_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_tabselectedoverline_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_ResizeGripHovered_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1ResizeGripHovered_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_TabDimmed_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_tabdimmed_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_ResizeGripActive_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1ResizeGripActive_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_TabDimmedSelected_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_tabdimmedselected_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_InputTextCursor_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1InputTextCursor_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_TabDimmedSelectedOverline_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_tabdimmedselectedoverline_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_TabHovered_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1TabHovered_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_DockingPreview_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_dockingpreview_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_Tab_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1Tab_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_DockingEmptyBg_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_dockingemptybg_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_TabSelected_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1TabSelected_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_PlotLines_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_plotlines_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_TabSelectedOverline_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1TabSelectedOverline_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_PlotLinesHovered_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_plotlineshovered_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_TabDimmed_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1TabDimmed_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_PlotHistogram_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_plothistogram_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_TabDimmedSelected_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1TabDimmedSelected_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_PlotHistogramHovered_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_plothistogramhovered_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_TabDimmedSelectedOverline_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1TabDimmedSelectedOverline_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_TableHeaderBg_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_tableheaderbg_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_DockingPreview_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1DockingPreview_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_TableBorderStrong_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_tableborderstrong_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_DockingEmptyBg_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1DockingEmptyBg_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_TableBorderLight_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_tableborderlight_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_PlotLines_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1PlotLines_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_TableRowBg_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_tablerowbg_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_PlotLinesHovered_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1PlotLinesHovered_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_TableRowBgAlt_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_tablerowbgalt_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_PlotHistogram_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1PlotHistogram_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_TextLink_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_textlink_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_PlotHistogramHovered_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1PlotHistogramHovered_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_TextSelectedBg_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_textselectedbg_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_TableHeaderBg_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1TableHeaderBg_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_TreeLines_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_treelines_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_TableBorderStrong_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1TableBorderStrong_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_DragDropTarget_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_dragdroptarget_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_TableBorderLight_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1TableBorderLight_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_UnsavedMarker_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_unsavedmarker_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_TableRowBg_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1TableRowBg_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_NavCursor_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_navcursor_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_TableRowBgAlt_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1TableRowBgAlt_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_NavWindowingHighlight_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_navwindowinghighlight_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_TextLink_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1TextLink_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_NavWindowingDimBg_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_navwindowingdimbg_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiCol_TextSelectedBg_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1TextSelectedBg_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiCol_TreeLines_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1TreeLines_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiCol_DragDropTarget_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1DragDropTarget_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiCol_UnsavedMarker_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1UnsavedMarker_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiCol_NavCursor_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1NavCursor_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiCol_NavWindowingHighlight_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1NavWindowingHighlight_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiCol_NavWindowingDimBg_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1NavWindowingDimBg_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiCol_ModalWindowDimBg_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiCol_ImGuiCol_1ModalWindowDimBg_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiCol_ModalWindowDimBg_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguicol_imguicol_modalwindowdimbg_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

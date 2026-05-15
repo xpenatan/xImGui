@@ -39,33 +39,18 @@ public enum ImGuiTreeNodeFlagsPrivate_ implements NativeEnum<ImGuiTreeNodeFlagsP
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_NoNavFocus;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_NoNavFocus;")
     private static native int ImGuiTreeNodeFlags_NoNavFocus_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_ClipLabelForTrailingButton;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_ClipLabelForTrailingButton;")
     private static native int ImGuiTreeNodeFlags_ClipLabelForTrailingButton_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_UpsideDownArrow;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_UpsideDownArrow;")
     private static native int ImGuiTreeNodeFlags_UpsideDownArrow_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_OpenOnMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_OpenOnMask_;")
     private static native int ImGuiTreeNodeFlags_OpenOnMask__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTreeNodeFlags_DrawLinesMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTreeNodeFlags_DrawLinesMask_;")
     private static native int ImGuiTreeNodeFlags_DrawLinesMask__NATIVE();
 }

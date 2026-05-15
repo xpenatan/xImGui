@@ -49,16 +49,11 @@ public class ImLayout extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout* nativeObject = (ImLayout*)this_addr;
-      delete nativeObject;
-    */
     public static void internal_native_deleteNative(long this_addr) {
         try {
             FFMHandles.internal_native_deleteNative__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -66,15 +61,11 @@ public class ImLayout extends NativeObject {
         internal_native_DrawBoundingBox__1(x1, y1, x2, y2, r, g, b, a, clipping);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::DrawBoundingBox_1((float)x1, (float)y1, (float)x2, (float)y2, (int)r, (int)g, (int)b, (int)a, clipping);
-    */
     public static void internal_native_DrawBoundingBox__1(float x1, float y1, float x2, float y2, int r, int g, int b, int a, boolean clipping) {
         try {
             FFMHandles.internal_native_DrawBoundingBox__1__FFFFIIIIZ.invokeExact(x1, y1, x2, y2, r, g, b, a, clipping);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -82,15 +73,11 @@ public class ImLayout extends NativeObject {
         internal_native_DrawBoundingBox__1(x1, y1, x2, y2, r, g, b, a);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::DrawBoundingBox_1((float)x1, (float)y1, (float)x2, (float)y2, (int)r, (int)g, (int)b, (int)a);
-    */
     public static void internal_native_DrawBoundingBox__1(float x1, float y1, float x2, float y2, int r, int g, int b, int a) {
         try {
             FFMHandles.internal_native_DrawBoundingBox__1__FFFFIIII.invokeExact(x1, y1, x2, y2, r, g, b, a);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -98,15 +85,11 @@ public class ImLayout extends NativeObject {
         internal_native_DrawBoundingBox__1(x1, y1, x2, y2, r, g, b);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::DrawBoundingBox_1((float)x1, (float)y1, (float)x2, (float)y2, (int)r, (int)g, (int)b);
-    */
     public static void internal_native_DrawBoundingBox__1(float x1, float y1, float x2, float y2, int r, int g, int b) {
         try {
             FFMHandles.internal_native_DrawBoundingBox__1__FFFFIII.invokeExact(x1, y1, x2, y2, r, g, b);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -114,15 +97,11 @@ public class ImLayout extends NativeObject {
         internal_native_DrawBoundingBox__2(min.native_address, max.native_address, r, g, b, a, clipping);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::DrawBoundingBox_2(*((ImVec2* )min_addr), *((ImVec2* )max_addr), (int)r, (int)g, (int)b, (int)a, clipping);
-    */
     public static void internal_native_DrawBoundingBox__2(long min_addr, long max_addr, int r, int g, int b, int a, boolean clipping) {
         try {
             FFMHandles.internal_native_DrawBoundingBox__2__JJIIIIZ.invokeExact(min_addr, max_addr, r, g, b, a, clipping);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -130,15 +109,11 @@ public class ImLayout extends NativeObject {
         internal_native_DrawBoundingBox__2(min.native_address, max.native_address, r, g, b, a);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::DrawBoundingBox_2(*((ImVec2* )min_addr), *((ImVec2* )max_addr), (int)r, (int)g, (int)b, (int)a);
-    */
     public static void internal_native_DrawBoundingBox__2(long min_addr, long max_addr, int r, int g, int b, int a) {
         try {
             FFMHandles.internal_native_DrawBoundingBox__2__JJIIII.invokeExact(min_addr, max_addr, r, g, b, a);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -146,15 +121,11 @@ public class ImLayout extends NativeObject {
         internal_native_DrawBoundingBox__2(min.native_address, max.native_address, r, g, b);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::DrawBoundingBox_2(*((ImVec2* )min_addr), *((ImVec2* )max_addr), (int)r, (int)g, (int)b);
-    */
     public static void internal_native_DrawBoundingBox__2(long min_addr, long max_addr, int r, int g, int b) {
         try {
             FFMHandles.internal_native_DrawBoundingBox__2__JJIII.invokeExact(min_addr, max_addr, r, g, b);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -162,15 +133,11 @@ public class ImLayout extends NativeObject {
         internal_native_DrawBoundingBox__3(rect.native_address, r, g, b, a, clipping);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::DrawBoundingBox_3(*((ImRect* )rect_addr), (int)r, (int)g, (int)b, (int)a, clipping);
-    */
     public static void internal_native_DrawBoundingBox__3(long rect_addr, int r, int g, int b, int a, boolean clipping) {
         try {
             FFMHandles.internal_native_DrawBoundingBox__3__JIIIIZ.invokeExact(rect_addr, r, g, b, a, clipping);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -178,15 +145,11 @@ public class ImLayout extends NativeObject {
         internal_native_DrawBoundingBox__3(rect.native_address, r, g, b, a);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::DrawBoundingBox_3(*((ImRect* )rect_addr), (int)r, (int)g, (int)b, (int)a);
-    */
     public static void internal_native_DrawBoundingBox__3(long rect_addr, int r, int g, int b, int a) {
         try {
             FFMHandles.internal_native_DrawBoundingBox__3__JIIII.invokeExact(rect_addr, r, g, b, a);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -194,15 +157,11 @@ public class ImLayout extends NativeObject {
         internal_native_DrawBoundingBox__3(rect.native_address, r, g, b);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::DrawBoundingBox_3(*((ImRect* )rect_addr), (int)r, (int)g, (int)b);
-    */
     public static void internal_native_DrawBoundingBox__3(long rect_addr, int r, int g, int b) {
         try {
             FFMHandles.internal_native_DrawBoundingBox__3__JIII.invokeExact(rect_addr, r, g, b);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -210,15 +169,11 @@ public class ImLayout extends NativeObject {
         internal_native_ShowLayoutDebug();
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::ShowLayoutDebug();
-    */
     public static void internal_native_ShowLayoutDebug() {
         try {
             FFMHandles.internal_native_ShowLayoutDebug__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -226,15 +181,11 @@ public class ImLayout extends NativeObject {
         internal_native_ShowLayoutDebugClipping();
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::ShowLayoutDebugClipping();
-    */
     public static void internal_native_ShowLayoutDebugClipping() {
         try {
             FFMHandles.internal_native_ShowLayoutDebugClipping__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -242,15 +193,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginLayout__1(id, sizeX, sizeY, options.native_address);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginLayout_1((int)id, (float)sizeX, (float)sizeY, *((ImGuiLayoutOptions* )options_addr));
-    */
     public static void internal_native_BeginLayout__1(int id, float sizeX, float sizeY, long options_addr) {
         try {
             FFMHandles.internal_native_BeginLayout__1__IFFJ.invokeExact(id, sizeX, sizeY, options_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -258,15 +205,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginLayout__1(id, sizeX, sizeY);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginLayout_1((int)id, (float)sizeX, (float)sizeY);
-    */
     public static void internal_native_BeginLayout__1(int id, float sizeX, float sizeY) {
         try {
             FFMHandles.internal_native_BeginLayout__1__IFF.invokeExact(id, sizeX, sizeY);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -274,15 +217,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginLayout__2(id, sizeX, sizeY, options.native_address);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginLayout_2(id, (float)sizeX, (float)sizeY, *((ImGuiLayoutOptions* )options_addr));
-    */
     public static void internal_native_BeginLayout__2(String id, float sizeX, float sizeY, long options_addr) {
         try {
             FFMHandles.internal_native_BeginLayout__2__Ljava_lang_String_2FFJ.invokeExact(com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(id), sizeX, sizeY, options_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -290,15 +229,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginLayout__2(id, sizeX, sizeY);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginLayout_2(id, (float)sizeX, (float)sizeY);
-    */
     public static void internal_native_BeginLayout__2(String id, float sizeX, float sizeY) {
         try {
             FFMHandles.internal_native_BeginLayout__2__Ljava_lang_String_2FF.invokeExact(com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(id), sizeX, sizeY);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -312,15 +247,11 @@ public class ImLayout extends NativeObject {
         return ImGuiLayout_TEMP_STATIC_GEN_0;
     }
 
-    /*
-      [-FFM;-NATIVE]
-      return (int64_t)ImLayout::GetCurrentLayout();
-    */
     public static long internal_native_GetCurrentLayout_addr() {
         try {
             return (long) FFMHandles.internal_native_GetCurrentLayout_addr__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -328,15 +259,11 @@ public class ImLayout extends NativeObject {
         internal_native_SetOrientation(ImOrientation.getValue());
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::SetOrientation((::ImOrientation)ImOrientation);
-    */
     public static void internal_native_SetOrientation(int ImOrientation) {
         try {
             FFMHandles.internal_native_SetOrientation__I.invokeExact(ImOrientation);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -344,15 +271,11 @@ public class ImLayout extends NativeObject {
         internal_native_EndLayout();
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::EndLayout();
-    */
     public static void internal_native_EndLayout() {
         try {
             FFMHandles.internal_native_EndLayout__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -360,15 +283,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginAlign__1(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY, options.native_address);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginAlign_1((int)id, (float)sizeX, (float)sizeY, (float)alignX, (float)alignY, (float)offsetX, (float)offsetY, *((ImGuiLayoutOptions* )options_addr));
-    */
     public static void internal_native_BeginAlign__1(int id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY, long options_addr) {
         try {
             FFMHandles.internal_native_BeginAlign__1__IFFFFFFJ.invokeExact(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY, options_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -376,15 +295,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginAlign__1(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginAlign_1((int)id, (float)sizeX, (float)sizeY, (float)alignX, (float)alignY, (float)offsetX, (float)offsetY);
-    */
     public static void internal_native_BeginAlign__1(int id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY) {
         try {
             FFMHandles.internal_native_BeginAlign__1__IFFFFFF.invokeExact(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -392,15 +307,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginAlign__1(id, sizeX, sizeY, alignX, alignY, offsetX);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginAlign_1((int)id, (float)sizeX, (float)sizeY, (float)alignX, (float)alignY, (float)offsetX);
-    */
     public static void internal_native_BeginAlign__1(int id, float sizeX, float sizeY, float alignX, float alignY, float offsetX) {
         try {
             FFMHandles.internal_native_BeginAlign__1__IFFFFF.invokeExact(id, sizeX, sizeY, alignX, alignY, offsetX);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -408,15 +319,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginAlign__1(id, sizeX, sizeY, alignX, alignY);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginAlign_1((int)id, (float)sizeX, (float)sizeY, (float)alignX, (float)alignY);
-    */
     public static void internal_native_BeginAlign__1(int id, float sizeX, float sizeY, float alignX, float alignY) {
         try {
             FFMHandles.internal_native_BeginAlign__1__IFFFF.invokeExact(id, sizeX, sizeY, alignX, alignY);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -424,15 +331,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginAlign__1(id, sizeX, sizeY, alignX);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginAlign_1((int)id, (float)sizeX, (float)sizeY, (float)alignX);
-    */
     public static void internal_native_BeginAlign__1(int id, float sizeX, float sizeY, float alignX) {
         try {
             FFMHandles.internal_native_BeginAlign__1__IFFF.invokeExact(id, sizeX, sizeY, alignX);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -440,15 +343,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginAlign__1(id, sizeX, sizeY);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginAlign_1((int)id, (float)sizeX, (float)sizeY);
-    */
     public static void internal_native_BeginAlign__1(int id, float sizeX, float sizeY) {
         try {
             FFMHandles.internal_native_BeginAlign__1__IFF.invokeExact(id, sizeX, sizeY);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -456,15 +355,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginAlign__2(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY, options.native_address);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginAlign_2(id, (float)sizeX, (float)sizeY, (float)alignX, (float)alignY, (float)offsetX, (float)offsetY, *((ImGuiLayoutOptions* )options_addr));
-    */
     public static void internal_native_BeginAlign__2(String id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY, long options_addr) {
         try {
             FFMHandles.internal_native_BeginAlign__2__Ljava_lang_String_2FFFFFFJ.invokeExact(com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(id), sizeX, sizeY, alignX, alignY, offsetX, offsetY, options_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -472,15 +367,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginAlign__2(id, sizeX, sizeY, alignX, alignY, offsetX, offsetY);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginAlign_2(id, (float)sizeX, (float)sizeY, (float)alignX, (float)alignY, (float)offsetX, (float)offsetY);
-    */
     public static void internal_native_BeginAlign__2(String id, float sizeX, float sizeY, float alignX, float alignY, float offsetX, float offsetY) {
         try {
             FFMHandles.internal_native_BeginAlign__2__Ljava_lang_String_2FFFFFF.invokeExact(com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(id), sizeX, sizeY, alignX, alignY, offsetX, offsetY);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -488,15 +379,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginAlign__2(id, sizeX, sizeY, alignX, alignY, offsetX);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginAlign_2(id, (float)sizeX, (float)sizeY, (float)alignX, (float)alignY, (float)offsetX);
-    */
     public static void internal_native_BeginAlign__2(String id, float sizeX, float sizeY, float alignX, float alignY, float offsetX) {
         try {
             FFMHandles.internal_native_BeginAlign__2__Ljava_lang_String_2FFFFF.invokeExact(com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(id), sizeX, sizeY, alignX, alignY, offsetX);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -504,15 +391,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginAlign__2(id, sizeX, sizeY, alignX, alignY);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginAlign_2(id, (float)sizeX, (float)sizeY, (float)alignX, (float)alignY);
-    */
     public static void internal_native_BeginAlign__2(String id, float sizeX, float sizeY, float alignX, float alignY) {
         try {
             FFMHandles.internal_native_BeginAlign__2__Ljava_lang_String_2FFFF.invokeExact(com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(id), sizeX, sizeY, alignX, alignY);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -520,15 +403,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginAlign__2(id, sizeX, sizeY, alignX);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginAlign_2(id, (float)sizeX, (float)sizeY, (float)alignX);
-    */
     public static void internal_native_BeginAlign__2(String id, float sizeX, float sizeY, float alignX) {
         try {
             FFMHandles.internal_native_BeginAlign__2__Ljava_lang_String_2FFF.invokeExact(com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(id), sizeX, sizeY, alignX);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -536,15 +415,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginAlign__2(id, sizeX, sizeY);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginAlign_2(id, (float)sizeX, (float)sizeY);
-    */
     public static void internal_native_BeginAlign__2(String id, float sizeX, float sizeY) {
         try {
             FFMHandles.internal_native_BeginAlign__2__Ljava_lang_String_2FF.invokeExact(com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(id), sizeX, sizeY);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -552,15 +427,11 @@ public class ImLayout extends NativeObject {
         internal_native_AlignLayout(alignX, alignY, offsetX, offsetY);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::AlignLayout((float)alignX, (float)alignY, (float)offsetX, (float)offsetY);
-    */
     public static void internal_native_AlignLayout(float alignX, float alignY, float offsetX, float offsetY) {
         try {
             FFMHandles.internal_native_AlignLayout__FFFF.invokeExact(alignX, alignY, offsetX, offsetY);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -568,15 +439,11 @@ public class ImLayout extends NativeObject {
         internal_native_AlignLayout(alignX, alignY, offsetX);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::AlignLayout((float)alignX, (float)alignY, (float)offsetX);
-    */
     public static void internal_native_AlignLayout(float alignX, float alignY, float offsetX) {
         try {
             FFMHandles.internal_native_AlignLayout__FFF.invokeExact(alignX, alignY, offsetX);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -584,15 +451,11 @@ public class ImLayout extends NativeObject {
         internal_native_AlignLayout(alignX, alignY);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::AlignLayout((float)alignX, (float)alignY);
-    */
     public static void internal_native_AlignLayout(float alignX, float alignY) {
         try {
             FFMHandles.internal_native_AlignLayout__FF.invokeExact(alignX, alignY);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -600,15 +463,11 @@ public class ImLayout extends NativeObject {
         internal_native_EndAlign();
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::EndAlign();
-    */
     public static void internal_native_EndAlign() {
         try {
             FFMHandles.internal_native_EndAlign__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -616,15 +475,11 @@ public class ImLayout extends NativeObject {
         return internal_native_BeginCollapseLayout(id, title, sizeX, sizeY);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      return ImLayout::BeginCollapseLayout(id, title, (float)sizeX, (float)sizeY);
-    */
     public static boolean internal_native_BeginCollapseLayout(String id, String title, float sizeX, float sizeY) {
         try {
             return (boolean) FFMHandles.internal_native_BeginCollapseLayout__Ljava_lang_String_2Ljava_lang_String_2FF.invokeExact(com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(id), com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(title), sizeX, sizeY);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -632,15 +487,11 @@ public class ImLayout extends NativeObject {
         return internal_native_BeginCollapseLayout(id, title, sizeX, sizeY, option.native_address);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      return ImLayout::BeginCollapseLayout(id, title, (float)sizeX, (float)sizeY, *((ImGuiCollapseLayoutOptions* )option_addr));
-    */
     public static boolean internal_native_BeginCollapseLayout(String id, String title, float sizeX, float sizeY, long option_addr) {
         try {
             return (boolean) FFMHandles.internal_native_BeginCollapseLayout__Ljava_lang_String_2Ljava_lang_String_2FFJ.invokeExact(com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(id), com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(title), sizeX, sizeY, option_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -648,15 +499,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginCollapseLayout__2(id, isOpen.native_void_address, title, sizeX, sizeY);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginCollapseLayout_2(id, (bool*)isOpen_addr, title, (float)sizeX, (float)sizeY);
-    */
     public static void internal_native_BeginCollapseLayout__2(String id, long isOpen_addr, String title, float sizeX, float sizeY) {
         try {
             FFMHandles.internal_native_BeginCollapseLayout__2__Ljava_lang_String_2JLjava_lang_String_2FF.invokeExact(com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(id), isOpen_addr, com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(title), sizeX, sizeY);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -664,15 +511,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginCollapseLayout__2(id, isOpen.native_void_address, title, sizeX, sizeY, option.native_address);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginCollapseLayout_2(id, (bool*)isOpen_addr, title, (float)sizeX, (float)sizeY, *((ImGuiCollapseLayoutOptions* )option_addr));
-    */
     public static void internal_native_BeginCollapseLayout__2(String id, long isOpen_addr, String title, float sizeX, float sizeY, long option_addr) {
         try {
             FFMHandles.internal_native_BeginCollapseLayout__2__Ljava_lang_String_2JLjava_lang_String_2FFJ.invokeExact(com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(id), isOpen_addr, com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(title), sizeX, sizeY, option_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -680,15 +523,11 @@ public class ImLayout extends NativeObject {
         internal_native_EndCollapseFrameLayout();
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::EndCollapseFrameLayout();
-    */
     public static void internal_native_EndCollapseFrameLayout() {
         try {
             FFMHandles.internal_native_EndCollapseFrameLayout__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -696,15 +535,11 @@ public class ImLayout extends NativeObject {
         internal_native_EndCollapseLayout();
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::EndCollapseLayout();
-    */
     public static void internal_native_EndCollapseLayout() {
         try {
             FFMHandles.internal_native_EndCollapseLayout__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -712,15 +547,11 @@ public class ImLayout extends NativeObject {
         return internal_native_BeginCollapseLayoutEx(id, title, sizeX, sizeY);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      return ImLayout::BeginCollapseLayoutEx(id, title, (float)sizeX, (float)sizeY);
-    */
     public static boolean internal_native_BeginCollapseLayoutEx(String id, String title, float sizeX, float sizeY) {
         try {
             return (boolean) FFMHandles.internal_native_BeginCollapseLayoutEx__Ljava_lang_String_2Ljava_lang_String_2FF.invokeExact(com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(id), com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(title), sizeX, sizeY);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -728,15 +559,11 @@ public class ImLayout extends NativeObject {
         return internal_native_BeginCollapseLayoutEx(id, title, sizeX, sizeY, option.native_address);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      return ImLayout::BeginCollapseLayoutEx(id, title, (float)sizeX, (float)sizeY, *((ImGuiCollapseLayoutOptions* )option_addr));
-    */
     public static boolean internal_native_BeginCollapseLayoutEx(String id, String title, float sizeX, float sizeY, long option_addr) {
         try {
             return (boolean) FFMHandles.internal_native_BeginCollapseLayoutEx__Ljava_lang_String_2Ljava_lang_String_2FFJ.invokeExact(com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(id), com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(title), sizeX, sizeY, option_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -744,15 +571,11 @@ public class ImLayout extends NativeObject {
         return internal_native_BeginCollapseLayoutEx__2(id, title, sizeX, sizeY);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      return ImLayout::BeginCollapseLayoutEx_2((int)id, title, (float)sizeX, (float)sizeY);
-    */
     public static boolean internal_native_BeginCollapseLayoutEx__2(int id, String title, float sizeX, float sizeY) {
         try {
             return (boolean) FFMHandles.internal_native_BeginCollapseLayoutEx__2__ILjava_lang_String_2FF.invokeExact(id, com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(title), sizeX, sizeY);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -760,15 +583,11 @@ public class ImLayout extends NativeObject {
         return internal_native_BeginCollapseLayoutEx__2(id, title, sizeX, sizeY, option.native_address);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      return ImLayout::BeginCollapseLayoutEx_2((int)id, title, (float)sizeX, (float)sizeY, *((ImGuiCollapseLayoutOptions* )option_addr));
-    */
     public static boolean internal_native_BeginCollapseLayoutEx__2(int id, String title, float sizeX, float sizeY, long option_addr) {
         try {
             return (boolean) FFMHandles.internal_native_BeginCollapseLayoutEx__2__ILjava_lang_String_2FFJ.invokeExact(id, com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(title), sizeX, sizeY, option_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -776,15 +595,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginCollapseLayoutEx__3(id, isOpen.native_void_address, title, sizeX, sizeY);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginCollapseLayoutEx_3(id, (bool*)isOpen_addr, title, (float)sizeX, (float)sizeY);
-    */
     public static void internal_native_BeginCollapseLayoutEx__3(String id, long isOpen_addr, String title, float sizeX, float sizeY) {
         try {
             FFMHandles.internal_native_BeginCollapseLayoutEx__3__Ljava_lang_String_2JLjava_lang_String_2FF.invokeExact(com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(id), isOpen_addr, com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(title), sizeX, sizeY);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -792,15 +607,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginCollapseLayoutEx__3(id, isOpen.native_void_address, title, sizeX, sizeY, option.native_address);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginCollapseLayoutEx_3(id, (bool*)isOpen_addr, title, (float)sizeX, (float)sizeY, *((ImGuiCollapseLayoutOptions* )option_addr));
-    */
     public static void internal_native_BeginCollapseLayoutEx__3(String id, long isOpen_addr, String title, float sizeX, float sizeY, long option_addr) {
         try {
             FFMHandles.internal_native_BeginCollapseLayoutEx__3__Ljava_lang_String_2JLjava_lang_String_2FFJ.invokeExact(com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(id), isOpen_addr, com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(title), sizeX, sizeY, option_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -808,15 +619,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginBoundingBox();
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginBoundingBox();
-    */
     public static void internal_native_BeginBoundingBox() {
         try {
             FFMHandles.internal_native_BeginBoundingBox__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -830,15 +637,11 @@ public class ImLayout extends NativeObject {
         return ImRect_TEMP_STATIC_GEN_0;
     }
 
-    /*
-      [-FFM;-NATIVE]
-      return (int64_t)&ImLayout::EndBoundingBox();
-    */
     public static long internal_native_EndBoundingBox_addr() {
         try {
             return (long) FFMHandles.internal_native_EndBoundingBox_addr__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -846,15 +649,11 @@ public class ImLayout extends NativeObject {
         return internal_native_GetTableContentHeight();
     }
 
-    /*
-      [-FFM;-NATIVE]
-      return ImLayout::GetTableContentHeight();
-    */
     public static float internal_native_GetTableContentHeight() {
         try {
             return (float) FFMHandles.internal_native_GetTableContentHeight__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -862,15 +661,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginGlobalTree();
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginGlobalTree();
-    */
     public static void internal_native_BeginGlobalTree() {
         try {
             FFMHandles.internal_native_BeginGlobalTree__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -878,15 +673,11 @@ public class ImLayout extends NativeObject {
         internal_native_EndGlobalTree();
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::EndGlobalTree();
-    */
     public static void internal_native_EndGlobalTree() {
         try {
             FFMHandles.internal_native_EndGlobalTree__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -894,15 +685,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginTree__1(treeIdStr);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginTree_1(treeIdStr);
-    */
     public static void internal_native_BeginTree__1(String treeIdStr) {
         try {
             FFMHandles.internal_native_BeginTree__1__Ljava_lang_String_2.invokeExact(com.github.xpenatan.jparser.runtime.helper.NativeUtils.toCString(treeIdStr));
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -910,15 +697,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginTree__2(id);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginTree_2((int)id);
-    */
     public static void internal_native_BeginTree__2(int id) {
         try {
             FFMHandles.internal_native_BeginTree__2__I.invokeExact(id);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -926,15 +709,11 @@ public class ImLayout extends NativeObject {
         internal_native_EndTree();
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::EndTree();
-    */
     public static void internal_native_EndTree() {
         try {
             FFMHandles.internal_native_EndTree__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -942,15 +721,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginTreeLayout(height, isLeaf, isSelected);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginTreeLayout((float)height, isLeaf, isSelected);
-    */
     public static void internal_native_BeginTreeLayout(float height, boolean isLeaf, boolean isSelected) {
         try {
             FFMHandles.internal_native_BeginTreeLayout__FZZ.invokeExact(height, isLeaf, isSelected);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -958,15 +733,11 @@ public class ImLayout extends NativeObject {
         internal_native_BeginTreeLayout(height, isLeaf, isSelected, isOpen);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::BeginTreeLayout((float)height, isLeaf, isSelected, isOpen);
-    */
     public static void internal_native_BeginTreeLayout(float height, boolean isLeaf, boolean isSelected, boolean isOpen) {
         try {
             FFMHandles.internal_native_BeginTreeLayout__FZZZ.invokeExact(height, isLeaf, isSelected, isOpen);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -974,15 +745,11 @@ public class ImLayout extends NativeObject {
         return internal_native_EndTreeLayout();
     }
 
-    /*
-      [-FFM;-NATIVE]
-      return ImLayout::EndTreeLayout();
-    */
     public static boolean internal_native_EndTreeLayout() {
         try {
             return (boolean) FFMHandles.internal_native_EndTreeLayout__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -990,15 +757,11 @@ public class ImLayout extends NativeObject {
         return internal_native_IsTreeOpen();
     }
 
-    /*
-      [-FFM;-NATIVE]
-      return ImLayout::IsTreeOpen();
-    */
     public static boolean internal_native_IsTreeOpen() {
         try {
             return (boolean) FFMHandles.internal_native_IsTreeOpen__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1006,15 +769,11 @@ public class ImLayout extends NativeObject {
         return internal_native_GetTreeHeight(padding);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      return ImLayout::GetTreeHeight((float)padding);
-    */
     public static float internal_native_GetTreeHeight(float padding) {
         try {
             return (float) FFMHandles.internal_native_GetTreeHeight__F.invokeExact(padding);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1022,15 +781,11 @@ public class ImLayout extends NativeObject {
         return internal_native_ButtonBehavior(id, bb.native_address, isSelected, selectedColor, hoveredColor, hoveredStrokeColor, ImGuiButtonFlags.getValue(), clickDelay);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      return ImLayout::ButtonBehavior((int)id, *((ImRect* )bb_addr), isSelected, (int)selectedColor, (int)hoveredColor, (int)hoveredStrokeColor, ImGuiButtonFlags, (float)clickDelay);
-    */
     public static int internal_native_ButtonBehavior(int id, long bb_addr, boolean isSelected, int selectedColor, int hoveredColor, int hoveredStrokeColor, int ImGuiButtonFlags, float clickDelay) {
         try {
             return (int) FFMHandles.internal_native_ButtonBehavior__IJZIIIIF.invokeExact(id, bb_addr, isSelected, selectedColor, hoveredColor, hoveredStrokeColor, ImGuiButtonFlags, clickDelay);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1038,15 +793,11 @@ public class ImLayout extends NativeObject {
         return internal_native_ButtonBehavior(id, bb.native_address, isSelected, selectedColor, hoveredColor, hoveredStrokeColor, ImGuiButtonFlags.getValue());
     }
 
-    /*
-      [-FFM;-NATIVE]
-      return ImLayout::ButtonBehavior((int)id, *((ImRect* )bb_addr), isSelected, (int)selectedColor, (int)hoveredColor, (int)hoveredStrokeColor, ImGuiButtonFlags);
-    */
     public static int internal_native_ButtonBehavior(int id, long bb_addr, boolean isSelected, int selectedColor, int hoveredColor, int hoveredStrokeColor, int ImGuiButtonFlags) {
         try {
             return (int) FFMHandles.internal_native_ButtonBehavior__IJZIIII.invokeExact(id, bb_addr, isSelected, selectedColor, hoveredColor, hoveredStrokeColor, ImGuiButtonFlags);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1054,15 +805,11 @@ public class ImLayout extends NativeObject {
         return internal_native_ButtonBehavior(id, bb.native_address, isSelected, selectedColor, hoveredColor, hoveredStrokeColor);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      return ImLayout::ButtonBehavior((int)id, *((ImRect* )bb_addr), isSelected, (int)selectedColor, (int)hoveredColor, (int)hoveredStrokeColor);
-    */
     public static int internal_native_ButtonBehavior(int id, long bb_addr, boolean isSelected, int selectedColor, int hoveredColor, int hoveredStrokeColor) {
         try {
             return (int) FFMHandles.internal_native_ButtonBehavior__IJZIII.invokeExact(id, bb_addr, isSelected, selectedColor, hoveredColor, hoveredStrokeColor);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1070,15 +817,11 @@ public class ImLayout extends NativeObject {
         return internal_native_ButtonBehavior(id, bb.native_address, isSelected, selectedColor, hoveredColor);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      return ImLayout::ButtonBehavior((int)id, *((ImRect* )bb_addr), isSelected, (int)selectedColor, (int)hoveredColor);
-    */
     public static int internal_native_ButtonBehavior(int id, long bb_addr, boolean isSelected, int selectedColor, int hoveredColor) {
         try {
             return (int) FFMHandles.internal_native_ButtonBehavior__IJZII.invokeExact(id, bb_addr, isSelected, selectedColor, hoveredColor);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1086,15 +829,11 @@ public class ImLayout extends NativeObject {
         return internal_native_ButtonBehavior(id, bb.native_address, isSelected, selectedColor);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      return ImLayout::ButtonBehavior((int)id, *((ImRect* )bb_addr), isSelected, (int)selectedColor);
-    */
     public static int internal_native_ButtonBehavior(int id, long bb_addr, boolean isSelected, int selectedColor) {
         try {
             return (int) FFMHandles.internal_native_ButtonBehavior__IJZI.invokeExact(id, bb_addr, isSelected, selectedColor);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1102,15 +841,11 @@ public class ImLayout extends NativeObject {
         return internal_native_ButtonBehavior(id, bb.native_address, isSelected);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      return ImLayout::ButtonBehavior((int)id, *((ImRect* )bb_addr), isSelected);
-    */
     public static int internal_native_ButtonBehavior(int id, long bb_addr, boolean isSelected) {
         try {
             return (int) FFMHandles.internal_native_ButtonBehavior__IJZ.invokeExact(id, bb_addr, isSelected);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1118,15 +853,11 @@ public class ImLayout extends NativeObject {
         internal_native_ScaleAllSizes(scale_factor);
     }
 
-    /*
-      [-FFM;-NATIVE]
-      ImLayout::ScaleAllSizes((float)scale_factor);
-    */
     public static void internal_native_ScaleAllSizes(float scale_factor) {
         try {
             FFMHandles.internal_native_ScaleAllSizes__F.invokeExact(scale_factor);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1134,15 +865,11 @@ public class ImLayout extends NativeObject {
         return internal_native_GetDPIScale();
     }
 
-    /*
-      [-FFM;-NATIVE]
-      return ImLayout::GetDPIScale();
-    */
     public static float internal_native_GetDPIScale() {
         try {
             return (float) FFMHandles.internal_native_GetDPIScale__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1150,15 +877,11 @@ public class ImLayout extends NativeObject {
         return internal_native_get_WRAP_PARENT();
     }
 
-    /*
-      [-FFM;-NATIVE]
-      return ImLayout::WRAP_PARENT;
-    */
     public static int internal_native_get_WRAP_PARENT() {
         try {
             return (int) FFMHandles.internal_native_get_WRAP_PARENT__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1166,15 +889,11 @@ public class ImLayout extends NativeObject {
         return internal_native_get_MATCH_PARENT();
     }
 
-    /*
-      [-FFM;-NATIVE]
-      return ImLayout::MATCH_PARENT;
-    */
     public static int internal_native_get_MATCH_PARENT() {
         try {
             return (int) FFMHandles.internal_native_get_MATCH_PARENT__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -1182,190 +901,156 @@ public class ImLayout extends NativeObject {
         return internal_native_get_MATCH_WRAP_PARENT();
     }
 
-    /*
-      [-FFM;-NATIVE]
-      return ImLayout::MATCH_WRAP_PARENT;
-    */
     public static int internal_native_get_MATCH_WRAP_PARENT() {
         try {
             return (int) FFMHandles.internal_native_get_MATCH_WRAP_PARENT__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_deletenative", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle internal_native_DrawBoundingBox__1__FFFFIIIIZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_drawboundingbox__1_f_f_f_f_i_i_i_i_z", FunctionDescriptor.ofVoid(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_BOOLEAN));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle internal_native_DrawBoundingBox__1__FFFFIIII = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_drawboundingbox__1_f_f_f_f_i_i_i_i", FunctionDescriptor.ofVoid(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle internal_native_DrawBoundingBox__1__FFFFIII = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_drawboundingbox__1_f_f_f_f_i_i_i", FunctionDescriptor.ofVoid(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_DrawBoundingBox__2__JJIIIIZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_drawboundingbox__2_l_l_i_i_i_i_z", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_BOOLEAN));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_DrawBoundingBox__2__JJIIII = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_drawboundingbox__2_l_l_i_i_i_i", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle internal_native_DrawBoundingBox__2__JJIII = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_drawboundingbox__2_l_l_i_i_i", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1deleteNative__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_DrawBoundingBox__3__JIIIIZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_drawboundingbox__3_l_i_i_i_i_z", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_DrawBoundingBox__1__FFFFIIIIZ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1DrawBoundingBox_1_11__FFFFIIIIZ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_DrawBoundingBox__3__JIIII = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_drawboundingbox__3_l_i_i_i_i", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_DrawBoundingBox__1__FFFFIIII = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1DrawBoundingBox_1_11__FFFFIIII", FunctionDescriptor.ofVoid(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_DrawBoundingBox__3__JIII = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_drawboundingbox__3_l_i_i_i", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_DrawBoundingBox__1__FFFFIII = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1DrawBoundingBox_1_11__FFFFIII", FunctionDescriptor.ofVoid(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_ShowLayoutDebug__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_showlayoutdebug", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_DrawBoundingBox__2__JJIIIIZ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1DrawBoundingBox_1_12__JJIIIIZ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_ShowLayoutDebugClipping__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_showlayoutdebugclipping", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_DrawBoundingBox__2__JJIIII = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1DrawBoundingBox_1_12__JJIIII", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_BeginLayout__1__IFFJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_beginlayout__1_i_f_f_l", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_DrawBoundingBox__2__JJIII = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1DrawBoundingBox_1_12__JJIII", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_BeginLayout__1__IFF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_beginlayout__1_i_f_f", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_DrawBoundingBox__3__JIIIIZ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1DrawBoundingBox_1_13__JIIIIZ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_BeginLayout__2__Ljava_lang_String_2FFJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_beginlayout__2_str_f_f_l", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_DrawBoundingBox__3__JIIII = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1DrawBoundingBox_1_13__JIIII", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_BeginLayout__2__Ljava_lang_String_2FF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_beginlayout__2_str_f_f", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_DrawBoundingBox__3__JIII = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1DrawBoundingBox_1_13__JIII", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_GetCurrentLayout_addr__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imlayout_getcurrentlayout_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_ShowLayoutDebug__ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1ShowLayoutDebug__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_SetOrientation__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_setorientation", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_ShowLayoutDebugClipping__ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1ShowLayoutDebugClipping__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_EndLayout__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_endlayout", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginLayout__1__IFFJ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginLayout_1_11__IFFJ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_BeginAlign__1__IFFFFFFJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_beginalign__1_i_f_f_f_f_f_f_l", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginLayout__1__IFF = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginLayout_1_11__IFF", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_BeginAlign__1__IFFFFFF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_beginalign__1_i_f_f_f_f_f_f", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginLayout__2__Ljava_lang_String_2FFJ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginLayout_1_12__Ljava_lang_String_2FFJ", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_BeginAlign__1__IFFFFF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_beginalign__1_i_f_f_f_f_f", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginLayout__2__Ljava_lang_String_2FF = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginLayout_1_12__Ljava_lang_String_2FF", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_BeginAlign__1__IFFFF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_beginalign__1_i_f_f_f_f", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetCurrentLayout_addr__ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1GetCurrentLayout_1addr__", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_BeginAlign__1__IFFF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_beginalign__1_i_f_f_f", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_SetOrientation__I = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1SetOrientation__I", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_BeginAlign__1__IFF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_beginalign__1_i_f_f", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_EndLayout__ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1EndLayout__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_BeginAlign__2__Ljava_lang_String_2FFFFFFJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_beginalign__2_str_f_f_f_f_f_f_l", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginAlign__1__IFFFFFFJ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginAlign_1_11__IFFFFFFJ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_BeginAlign__2__Ljava_lang_String_2FFFFFF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_beginalign__2_str_f_f_f_f_f_f", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginAlign__1__IFFFFFF = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginAlign_1_11__IFFFFFF", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_BeginAlign__2__Ljava_lang_String_2FFFFF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_beginalign__2_str_f_f_f_f_f", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginAlign__1__IFFFFF = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginAlign_1_11__IFFFFF", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_BeginAlign__2__Ljava_lang_String_2FFFF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_beginalign__2_str_f_f_f_f", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginAlign__1__IFFFF = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginAlign_1_11__IFFFF", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_BeginAlign__2__Ljava_lang_String_2FFF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_beginalign__2_str_f_f_f", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginAlign__1__IFFF = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginAlign_1_11__IFFF", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_BeginAlign__2__Ljava_lang_String_2FF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_beginalign__2_str_f_f", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginAlign__1__IFF = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginAlign_1_11__IFF", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_AlignLayout__FFFF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_alignlayout_f_f_f_f", FunctionDescriptor.ofVoid(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginAlign__2__Ljava_lang_String_2FFFFFFJ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginAlign_1_12__Ljava_lang_String_2FFFFFFJ", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_AlignLayout__FFF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_alignlayout_f_f_f", FunctionDescriptor.ofVoid(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginAlign__2__Ljava_lang_String_2FFFFFF = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginAlign_1_12__Ljava_lang_String_2FFFFFF", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_AlignLayout__FF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_alignlayout_f_f", FunctionDescriptor.ofVoid(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginAlign__2__Ljava_lang_String_2FFFFF = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginAlign_1_12__Ljava_lang_String_2FFFFF", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_EndAlign__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_endalign", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginAlign__2__Ljava_lang_String_2FFFF = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginAlign_1_12__Ljava_lang_String_2FFFF", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_BeginCollapseLayout__Ljava_lang_String_2Ljava_lang_String_2FF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_begincollapselayout_str_str_f_f", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.ADDRESS, ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginAlign__2__Ljava_lang_String_2FFF = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginAlign_1_12__Ljava_lang_String_2FFF", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_BeginCollapseLayout__Ljava_lang_String_2Ljava_lang_String_2FFJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_begincollapselayout_str_str_f_f_l", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.ADDRESS, ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginAlign__2__Ljava_lang_String_2FF = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginAlign_1_12__Ljava_lang_String_2FF", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_BeginCollapseLayout__2__Ljava_lang_String_2JLjava_lang_String_2FF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_begincollapselayout__2_str_l_str_f_f", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_LONG, ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_AlignLayout__FFFF = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1AlignLayout__FFFF", FunctionDescriptor.ofVoid(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_BeginCollapseLayout__2__Ljava_lang_String_2JLjava_lang_String_2FFJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_begincollapselayout__2_str_l_str_f_f_l", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_LONG, ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_AlignLayout__FFF = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1AlignLayout__FFF", FunctionDescriptor.ofVoid(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_EndCollapseFrameLayout__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_endcollapseframelayout", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_AlignLayout__FF = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1AlignLayout__FF", FunctionDescriptor.ofVoid(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_EndCollapseLayout__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_endcollapselayout", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_EndAlign__ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1EndAlign__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_BeginCollapseLayoutEx__Ljava_lang_String_2Ljava_lang_String_2FF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_begincollapselayoutex_str_str_f_f", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.ADDRESS, ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginCollapseLayout__Ljava_lang_String_2Ljava_lang_String_2FF = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginCollapseLayout__Ljava_lang_String_2Ljava_lang_String_2FF", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.ADDRESS, ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_BeginCollapseLayoutEx__Ljava_lang_String_2Ljava_lang_String_2FFJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_begincollapselayoutex_str_str_f_f_l", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.ADDRESS, ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginCollapseLayout__Ljava_lang_String_2Ljava_lang_String_2FFJ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginCollapseLayout__Ljava_lang_String_2Ljava_lang_String_2FFJ", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.ADDRESS, ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_BeginCollapseLayoutEx__2__ILjava_lang_String_2FF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_begincollapselayoutex__2_i_str_f_f", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT, ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginCollapseLayout__2__Ljava_lang_String_2JLjava_lang_String_2FF = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginCollapseLayout_1_12__Ljava_lang_String_2JLjava_lang_String_2FF", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_LONG, ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_BeginCollapseLayoutEx__2__ILjava_lang_String_2FFJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_begincollapselayoutex__2_i_str_f_f_l", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT, ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginCollapseLayout__2__Ljava_lang_String_2JLjava_lang_String_2FFJ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginCollapseLayout_1_12__Ljava_lang_String_2JLjava_lang_String_2FFJ", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_LONG, ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_BeginCollapseLayoutEx__3__Ljava_lang_String_2JLjava_lang_String_2FF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_begincollapselayoutex__3_str_l_str_f_f", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_LONG, ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_EndCollapseFrameLayout__ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1EndCollapseFrameLayout__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_BeginCollapseLayoutEx__3__Ljava_lang_String_2JLjava_lang_String_2FFJ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_begincollapselayoutex__3_str_l_str_f_f_l", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_LONG, ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_EndCollapseLayout__ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1EndCollapseLayout__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_BeginBoundingBox__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_beginboundingbox", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginCollapseLayoutEx__Ljava_lang_String_2Ljava_lang_String_2FF = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginCollapseLayoutEx__Ljava_lang_String_2Ljava_lang_String_2FF", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.ADDRESS, ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_EndBoundingBox_addr__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imlayout_endboundingbox_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginCollapseLayoutEx__Ljava_lang_String_2Ljava_lang_String_2FFJ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginCollapseLayoutEx__Ljava_lang_String_2Ljava_lang_String_2FFJ", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.ADDRESS, ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_GetTableContentHeight__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_gettablecontentheight", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginCollapseLayoutEx__2__ILjava_lang_String_2FF = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginCollapseLayoutEx_1_12__ILjava_lang_String_2FF", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT, ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_BeginGlobalTree__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_beginglobaltree", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginCollapseLayoutEx__2__ILjava_lang_String_2FFJ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginCollapseLayoutEx_1_12__ILjava_lang_String_2FFJ", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT, ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_EndGlobalTree__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_endglobaltree", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginCollapseLayoutEx__3__Ljava_lang_String_2JLjava_lang_String_2FF = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginCollapseLayoutEx_1_13__Ljava_lang_String_2JLjava_lang_String_2FF", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_LONG, ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_BeginTree__1__Ljava_lang_String_2 = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_begintree__1", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginCollapseLayoutEx__3__Ljava_lang_String_2JLjava_lang_String_2FFJ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginCollapseLayoutEx_1_13__Ljava_lang_String_2JLjava_lang_String_2FFJ", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS, ValueLayout.JAVA_LONG, ValueLayout.ADDRESS, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_BeginTree__2__I = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_begintree__2", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginBoundingBox__ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginBoundingBox__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_EndTree__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_endtree", FunctionDescriptor.ofVoid());
 
-        static final java.lang.invoke.MethodHandle internal_native_EndBoundingBox_addr__ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1EndBoundingBox_1addr__", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_BeginTreeLayout__FZZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_begintreelayout_f_z_z", FunctionDescriptor.ofVoid(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetTableContentHeight__ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1GetTableContentHeight__", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_BeginTreeLayout__FZZZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_begintreelayout_f_z_z_z", FunctionDescriptor.ofVoid(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginGlobalTree__ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginGlobalTree__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_EndTreeLayout__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_endtreelayout", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_EndGlobalTree__ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1EndGlobalTree__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_IsTreeOpen__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_istreeopen", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginTree__1__Ljava_lang_String_2 = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginTree_1_11__Ljava_lang_String_2", FunctionDescriptor.ofVoid(ValueLayout.ADDRESS));
+        static final java.lang.invoke.MethodHandle internal_native_GetTreeHeight__F = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_gettreeheight", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginTree__2__I = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginTree_1_12__I", FunctionDescriptor.ofVoid(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_ButtonBehavior__IJZIIIIF = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_buttonbehavior_i_l_z_i_i_i_i_f", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_EndTree__ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1EndTree__", FunctionDescriptor.ofVoid());
+        static final java.lang.invoke.MethodHandle internal_native_ButtonBehavior__IJZIIII = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_buttonbehavior_i_l_z_i_i_i_i", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginTreeLayout__FZZ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginTreeLayout__FZZ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_ButtonBehavior__IJZIII = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_buttonbehavior_i_l_z_i_i_i", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_BeginTreeLayout__FZZZ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1BeginTreeLayout__FZZZ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_ButtonBehavior__IJZII = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_buttonbehavior_i_l_z_i_i", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_EndTreeLayout__ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1EndTreeLayout__", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_ButtonBehavior__IJZI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_buttonbehavior_i_l_z_i", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_IsTreeOpen__ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1IsTreeOpen__", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_ButtonBehavior__IJZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_buttonbehavior_i_l_z", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_GetTreeHeight__F = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1GetTreeHeight__F", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_ScaleAllSizes__F = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_scaleallsizes", FunctionDescriptor.ofVoid(ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_ButtonBehavior__IJZIIIIF = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1ButtonBehavior__IJZIIIIF", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_FLOAT));
+        static final java.lang.invoke.MethodHandle internal_native_GetDPIScale__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_extension_imlayout_imlayout_getdpiscale", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT));
 
-        static final java.lang.invoke.MethodHandle internal_native_ButtonBehavior__IJZIIII = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1ButtonBehavior__IJZIIII", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_get_WRAP_PARENT__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imlayout_get_wrap_parent", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_ButtonBehavior__IJZIII = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1ButtonBehavior__IJZIII", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_get_MATCH_PARENT__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imlayout_get_match_parent", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_ButtonBehavior__IJZII = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1ButtonBehavior__IJZII", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT, ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle internal_native_ButtonBehavior__IJZI = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1ButtonBehavior__IJZI", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle internal_native_ButtonBehavior__IJZ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1ButtonBehavior__IJZ", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
-
-        static final java.lang.invoke.MethodHandle internal_native_ScaleAllSizes__F = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1ScaleAllSizes__F", FunctionDescriptor.ofVoid(ValueLayout.JAVA_FLOAT));
-
-        static final java.lang.invoke.MethodHandle internal_native_GetDPIScale__ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1GetDPIScale__", FunctionDescriptor.of(ValueLayout.JAVA_FLOAT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_WRAP_PARENT__ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1get_1WRAP_1PARENT__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_MATCH_PARENT__ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1get_1MATCH_1PARENT__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_MATCH_WRAP_PARENT__ = downcallDefault("jparser_imgui_extension_imlayout_ImLayout_internal_1native_1get_1MATCH_1WRAP_1PARENT__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_get_MATCH_WRAP_PARENT__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_extension_imlayout_imlayout_get_match_wrap_parent", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

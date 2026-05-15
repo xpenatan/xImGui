@@ -51,88 +51,71 @@ public enum ImGuiMultiSelectFlags implements NativeEnum<ImGuiMultiSelectFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_None;
-*/
-    private static native int ImGuiMultiSelectFlags_None_NATIVE();
+    private static int ImGuiMultiSelectFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMultiSelectFlags.ImGuiMultiSelectFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_SingleSelect;
-*/
-    private static native int ImGuiMultiSelectFlags_SingleSelect_NATIVE();
+    private static int ImGuiMultiSelectFlags_SingleSelect_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMultiSelectFlags.ImGuiMultiSelectFlags_SingleSelect_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_NoSelectAll;
-*/
-    private static native int ImGuiMultiSelectFlags_NoSelectAll_NATIVE();
+    private static int ImGuiMultiSelectFlags_NoSelectAll_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMultiSelectFlags.ImGuiMultiSelectFlags_NoSelectAll_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_NoRangeSelect;
-*/
-    private static native int ImGuiMultiSelectFlags_NoRangeSelect_NATIVE();
+    private static int ImGuiMultiSelectFlags_NoRangeSelect_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMultiSelectFlags.ImGuiMultiSelectFlags_NoRangeSelect_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_NoAutoSelect;
-*/
-    private static native int ImGuiMultiSelectFlags_NoAutoSelect_NATIVE();
+    private static int ImGuiMultiSelectFlags_NoAutoSelect_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMultiSelectFlags.ImGuiMultiSelectFlags_NoAutoSelect_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_NoAutoClear;
-*/
-    private static native int ImGuiMultiSelectFlags_NoAutoClear_NATIVE();
+    private static int ImGuiMultiSelectFlags_NoAutoClear_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMultiSelectFlags.ImGuiMultiSelectFlags_NoAutoClear_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_NoAutoClearOnReselect;
-*/
-    private static native int ImGuiMultiSelectFlags_NoAutoClearOnReselect_NATIVE();
+    private static int ImGuiMultiSelectFlags_NoAutoClearOnReselect_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMultiSelectFlags.ImGuiMultiSelectFlags_NoAutoClearOnReselect_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_BoxSelect1d;
-*/
-    private static native int ImGuiMultiSelectFlags_BoxSelect1d_NATIVE();
+    private static int ImGuiMultiSelectFlags_BoxSelect1d_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMultiSelectFlags.ImGuiMultiSelectFlags_BoxSelect1d_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_BoxSelect2d;
-*/
-    private static native int ImGuiMultiSelectFlags_BoxSelect2d_NATIVE();
+    private static int ImGuiMultiSelectFlags_BoxSelect2d_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMultiSelectFlags.ImGuiMultiSelectFlags_BoxSelect2d_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_BoxSelectNoScroll;
-*/
-    private static native int ImGuiMultiSelectFlags_BoxSelectNoScroll_NATIVE();
+    private static int ImGuiMultiSelectFlags_BoxSelectNoScroll_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMultiSelectFlags.ImGuiMultiSelectFlags_BoxSelectNoScroll_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_ClearOnEscape;
-*/
-    private static native int ImGuiMultiSelectFlags_ClearOnEscape_NATIVE();
+    private static int ImGuiMultiSelectFlags_ClearOnEscape_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMultiSelectFlags.ImGuiMultiSelectFlags_ClearOnEscape_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_ClearOnClickVoid;
-*/
-    private static native int ImGuiMultiSelectFlags_ClearOnClickVoid_NATIVE();
+    private static int ImGuiMultiSelectFlags_ClearOnClickVoid_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMultiSelectFlags.ImGuiMultiSelectFlags_ClearOnClickVoid_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_ScopeWindow;
-*/
-    private static native int ImGuiMultiSelectFlags_ScopeWindow_NATIVE();
+    private static int ImGuiMultiSelectFlags_ScopeWindow_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMultiSelectFlags.ImGuiMultiSelectFlags_ScopeWindow_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_ScopeRect;
-*/
-    private static native int ImGuiMultiSelectFlags_ScopeRect_NATIVE();
+    private static int ImGuiMultiSelectFlags_ScopeRect_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMultiSelectFlags.ImGuiMultiSelectFlags_ScopeRect_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_SelectOnClick;
-*/
-    private static native int ImGuiMultiSelectFlags_SelectOnClick_NATIVE();
+    private static int ImGuiMultiSelectFlags_SelectOnClick_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMultiSelectFlags.ImGuiMultiSelectFlags_SelectOnClick_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_SelectOnClickRelease;
-*/
-    private static native int ImGuiMultiSelectFlags_SelectOnClickRelease_NATIVE();
+    private static int ImGuiMultiSelectFlags_SelectOnClickRelease_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMultiSelectFlags.ImGuiMultiSelectFlags_SelectOnClickRelease_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiMultiSelectFlags_NavWrapX;
-*/
-    private static native int ImGuiMultiSelectFlags_NavWrapX_NATIVE();
+    private static int ImGuiMultiSelectFlags_NavWrapX_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiMultiSelectFlags.ImGuiMultiSelectFlags_NavWrapX_NATIVE();
+    }
 }

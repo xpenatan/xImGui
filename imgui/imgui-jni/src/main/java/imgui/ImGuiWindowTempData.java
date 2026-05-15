@@ -38,29 +38,23 @@ public class ImGuiWindowTempData extends NativeObject {
         return ImVec2_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindowTempData* nativeObject = (ImGuiWindowTempData*)this_addr;
-return (jlong)&nativeObject->CursorPos;
-*/
-    public static native long internal_native_get_CursorPos_addr(long this_addr);
+    public static long internal_native_get_CursorPos_addr(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindowTempData.internal_native_get_CursorPos_addr(this_addr);
+    }
 
     public int get_TreeDepth() {
         return internal_native_get_TreeDepth(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindowTempData* nativeObject = (ImGuiWindowTempData*)this_addr;
-return nativeObject->TreeDepth;
-*/
-    public static native int internal_native_get_TreeDepth(long this_addr);
+    public static int internal_native_get_TreeDepth(long this_addr) {
+        return imgui.natives.JNI_ImGuiWindowTempData.internal_native_get_TreeDepth(this_addr);
+    }
 
     public void set_TreeDepth(int TreeDepth) {
         internal_native_set_TreeDepth(native_address, TreeDepth);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiWindowTempData* nativeObject = (ImGuiWindowTempData*)this_addr;
-nativeObject->TreeDepth = TreeDepth;
-*/
-    public static native void internal_native_set_TreeDepth(long this_addr, int TreeDepth);
+    public static void internal_native_set_TreeDepth(long this_addr, int TreeDepth) {
+        imgui.natives.JNI_ImGuiWindowTempData.internal_native_set_TreeDepth(this_addr, TreeDepth);
+    }
 }

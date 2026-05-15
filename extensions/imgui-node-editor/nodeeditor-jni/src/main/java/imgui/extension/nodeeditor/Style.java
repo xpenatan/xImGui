@@ -30,9 +30,7 @@ public class Style extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-Style* nativeObject = (Style*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.extension.nodeeditor.natives.JNI_Style.internal_native_deleteNative(this_addr);
+    }
 }

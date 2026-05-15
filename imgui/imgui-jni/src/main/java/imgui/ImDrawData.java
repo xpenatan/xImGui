@@ -35,56 +35,41 @@ public final class ImDrawData extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*
-      [-JNI;-NATIVE]
-      ImDrawData* nativeObject = (ImDrawData*)this_addr;
-      delete nativeObject;
-    */
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ImDrawData.internal_native_deleteNative(this_addr);
+    }
 
     public int get_CmdListsCount() {
         return internal_native_get_CmdListsCount(native_address);
     }
 
-    /*
-      [-JNI;-NATIVE]
-      ImDrawData* nativeObject = (ImDrawData*)this_addr;
-      return nativeObject->CmdListsCount;
-    */
-    public static native int internal_native_get_CmdListsCount(long this_addr);
+    public static int internal_native_get_CmdListsCount(long this_addr) {
+        return imgui.natives.JNI_ImDrawData.internal_native_get_CmdListsCount(this_addr);
+    }
 
     public int get_TotalIdxCount() {
         return internal_native_get_TotalIdxCount(native_address);
     }
 
-    /*
-      [-JNI;-NATIVE]
-      ImDrawData* nativeObject = (ImDrawData*)this_addr;
-      return nativeObject->TotalIdxCount;
-    */
-    public static native int internal_native_get_TotalIdxCount(long this_addr);
+    public static int internal_native_get_TotalIdxCount(long this_addr) {
+        return imgui.natives.JNI_ImDrawData.internal_native_get_TotalIdxCount(this_addr);
+    }
 
     public int get_TotalVtxCount() {
         return internal_native_get_TotalVtxCount(native_address);
     }
 
-    /*
-      [-JNI;-NATIVE]
-      ImDrawData* nativeObject = (ImDrawData*)this_addr;
-      return nativeObject->TotalVtxCount;
-    */
-    public static native int internal_native_get_TotalVtxCount(long this_addr);
+    public static int internal_native_get_TotalVtxCount(long this_addr) {
+        return imgui.natives.JNI_ImDrawData.internal_native_get_TotalVtxCount(this_addr);
+    }
 
     public boolean get_Valid() {
         return internal_native_get_Valid(native_address);
     }
 
-    /*
-      [-JNI;-NATIVE]
-      ImDrawData* nativeObject = (ImDrawData*)this_addr;
-      return nativeObject->Valid;
-    */
-    public static native boolean internal_native_get_Valid(long this_addr);
+    public static boolean internal_native_get_Valid(long this_addr) {
+        return imgui.natives.JNI_ImDrawData.internal_native_get_Valid(this_addr);
+    }
 
     public ImVectorImTextureDataPtr get_Textures() {
         long addr = internal_native_get_Textures_addr(native_address);
@@ -96,13 +81,9 @@ public final class ImDrawData extends NativeObject {
         return ImVectorImTextureDataPtr_TEMP_GEN_0;
     }
 
-    /*
-      [-JNI;-NATIVE]
-      ImDrawData* nativeObject = (ImDrawData*)this_addr;
-      ImVectorImTextureDataPtr* attr = nativeObject->Textures;
-      return (jlong)attr;
-    */
-    public static native long internal_native_get_Textures_addr(long this_addr);
+    public static long internal_native_get_Textures_addr(long this_addr) {
+        return imgui.natives.JNI_ImDrawData.internal_native_get_Textures_addr(this_addr);
+    }
 
     public ImVectorImDrawListPtr get_CmdLists() {
         long addr = internal_native_get_CmdLists_addr(native_address);
@@ -114,12 +95,9 @@ public final class ImDrawData extends NativeObject {
         return ImVectorImDrawListPtr_TEMP_GEN_0;
     }
 
-    /*
-      [-JNI;-NATIVE]
-      ImDrawData* nativeObject = (ImDrawData*)this_addr;
-      return (jlong)&nativeObject->CmdLists;
-    */
-    public static native long internal_native_get_CmdLists_addr(long this_addr);
+    public static long internal_native_get_CmdLists_addr(long this_addr) {
+        return imgui.natives.JNI_ImDrawData.internal_native_get_CmdLists_addr(this_addr);
+    }
 
     public ImVec2 get_DisplayPos() {
         long addr = internal_native_get_DisplayPos_addr(native_address);
@@ -131,12 +109,9 @@ public final class ImDrawData extends NativeObject {
         return ImVec2_TEMP_GEN_0;
     }
 
-    /*
-      [-JNI;-NATIVE]
-      ImDrawData* nativeObject = (ImDrawData*)this_addr;
-      return (jlong)&nativeObject->DisplayPos;
-    */
-    public static native long internal_native_get_DisplayPos_addr(long this_addr);
+    public static long internal_native_get_DisplayPos_addr(long this_addr) {
+        return imgui.natives.JNI_ImDrawData.internal_native_get_DisplayPos_addr(this_addr);
+    }
 
     public ImVec2 get_DisplaySize() {
         long addr = internal_native_get_DisplaySize_addr(native_address);
@@ -148,12 +123,9 @@ public final class ImDrawData extends NativeObject {
         return ImVec2_TEMP_GEN_1;
     }
 
-    /*
-      [-JNI;-NATIVE]
-      ImDrawData* nativeObject = (ImDrawData*)this_addr;
-      return (jlong)&nativeObject->DisplaySize;
-    */
-    public static native long internal_native_get_DisplaySize_addr(long this_addr);
+    public static long internal_native_get_DisplaySize_addr(long this_addr) {
+        return imgui.natives.JNI_ImDrawData.internal_native_get_DisplaySize_addr(this_addr);
+    }
 
     public ImVec2 get_FramebufferScale() {
         long addr = internal_native_get_FramebufferScale_addr(native_address);
@@ -165,12 +137,9 @@ public final class ImDrawData extends NativeObject {
         return ImVec2_TEMP_GEN_2;
     }
 
-    /*
-      [-JNI;-NATIVE]
-      ImDrawData* nativeObject = (ImDrawData*)this_addr;
-      return (jlong)&nativeObject->FramebufferScale;
-    */
-    public static native long internal_native_get_FramebufferScale_addr(long this_addr);
+    public static long internal_native_get_FramebufferScale_addr(long this_addr) {
+        return imgui.natives.JNI_ImDrawData.internal_native_get_FramebufferScale_addr(this_addr);
+    }
 
     public ImGuiViewport get_OwnerViewport() {
         long addr = internal_native_get_OwnerViewport_addr(native_address);
@@ -182,11 +151,7 @@ public final class ImDrawData extends NativeObject {
         return ImGuiViewport_TEMP_GEN_0;
     }
 
-    /*
-      [-JNI;-NATIVE]
-      ImDrawData* nativeObject = (ImDrawData*)this_addr;
-      ImGuiViewport* attr = nativeObject->OwnerViewport;
-      return (jlong)attr;
-    */
-    public static native long internal_native_get_OwnerViewport_addr(long this_addr);
+    public static long internal_native_get_OwnerViewport_addr(long this_addr) {
+        return imgui.natives.JNI_ImDrawData.internal_native_get_OwnerViewport_addr(this_addr);
+    }
 }

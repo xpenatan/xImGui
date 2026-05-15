@@ -57,244 +57,166 @@ public enum ImGuiDebugLogFlags implements NativeEnum<ImGuiDebugLogFlags> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDebugLogFlags_None;
-*/
     private static int ImGuiDebugLogFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDebugLogFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDebugLogFlags_EventError;
-*/
     private static int ImGuiDebugLogFlags_EventError_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDebugLogFlags_EventError_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDebugLogFlags_EventActiveId;
-*/
     private static int ImGuiDebugLogFlags_EventActiveId_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDebugLogFlags_EventActiveId_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDebugLogFlags_EventFocus;
-*/
     private static int ImGuiDebugLogFlags_EventFocus_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDebugLogFlags_EventFocus_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDebugLogFlags_EventPopup;
-*/
     private static int ImGuiDebugLogFlags_EventPopup_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDebugLogFlags_EventPopup_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDebugLogFlags_EventNav;
-*/
     private static int ImGuiDebugLogFlags_EventNav_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDebugLogFlags_EventNav_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDebugLogFlags_EventClipper;
-*/
     private static int ImGuiDebugLogFlags_EventClipper_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDebugLogFlags_EventClipper_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDebugLogFlags_EventSelection;
-*/
     private static int ImGuiDebugLogFlags_EventSelection_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDebugLogFlags_EventSelection_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDebugLogFlags_EventIO;
-*/
     private static int ImGuiDebugLogFlags_EventIO_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDebugLogFlags_EventIO_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDebugLogFlags_EventFont;
-*/
     private static int ImGuiDebugLogFlags_EventFont_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDebugLogFlags_EventFont_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDebugLogFlags_EventInputRouting;
-*/
     private static int ImGuiDebugLogFlags_EventInputRouting_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDebugLogFlags_EventInputRouting_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDebugLogFlags_EventDocking;
-*/
     private static int ImGuiDebugLogFlags_EventDocking_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDebugLogFlags_EventDocking_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDebugLogFlags_EventViewport;
-*/
     private static int ImGuiDebugLogFlags_EventViewport_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDebugLogFlags_EventViewport_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDebugLogFlags_EventMask_;
-*/
     private static int ImGuiDebugLogFlags_EventMask__NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDebugLogFlags_EventMask__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDebugLogFlags_OutputToTTY;
-*/
     private static int ImGuiDebugLogFlags_OutputToTTY_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDebugLogFlags_OutputToTTY_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiDebugLogFlags_OutputToTestEngine;
-*/
     private static int ImGuiDebugLogFlags_OutputToTestEngine_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiDebugLogFlags_OutputToTestEngine_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidebuglogflags_imguidebuglogflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventError_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidebuglogflags_imguidebuglogflags_eventerror_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventActiveId_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidebuglogflags_imguidebuglogflags_eventactiveid_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventFocus_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidebuglogflags_imguidebuglogflags_eventfocus_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventPopup_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidebuglogflags_imguidebuglogflags_eventpopup_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventNav_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidebuglogflags_imguidebuglogflags_eventnav_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventClipper_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidebuglogflags_imguidebuglogflags_eventclipper_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDebugLogFlags_ImGuiDebugLogFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventSelection_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidebuglogflags_imguidebuglogflags_eventselection_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventError_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDebugLogFlags_ImGuiDebugLogFlags_1EventError_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventIO_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidebuglogflags_imguidebuglogflags_eventio_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventActiveId_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDebugLogFlags_ImGuiDebugLogFlags_1EventActiveId_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventFont_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidebuglogflags_imguidebuglogflags_eventfont_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventFocus_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDebugLogFlags_ImGuiDebugLogFlags_1EventFocus_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventInputRouting_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidebuglogflags_imguidebuglogflags_eventinputrouting_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventPopup_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDebugLogFlags_ImGuiDebugLogFlags_1EventPopup_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventDocking_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidebuglogflags_imguidebuglogflags_eventdocking_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventNav_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDebugLogFlags_ImGuiDebugLogFlags_1EventNav_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventViewport_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidebuglogflags_imguidebuglogflags_eventviewport_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventClipper_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDebugLogFlags_ImGuiDebugLogFlags_1EventClipper_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventMask__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidebuglogflags_imguidebuglogflags_eventmask__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventSelection_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDebugLogFlags_ImGuiDebugLogFlags_1EventSelection_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_OutputToTTY_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidebuglogflags_imguidebuglogflags_outputtotty_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventIO_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDebugLogFlags_ImGuiDebugLogFlags_1EventIO_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventFont_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDebugLogFlags_ImGuiDebugLogFlags_1EventFont_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventInputRouting_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDebugLogFlags_ImGuiDebugLogFlags_1EventInputRouting_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventDocking_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDebugLogFlags_ImGuiDebugLogFlags_1EventDocking_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventViewport_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDebugLogFlags_ImGuiDebugLogFlags_1EventViewport_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_EventMask__NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDebugLogFlags_ImGuiDebugLogFlags_1EventMask_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_OutputToTTY_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDebugLogFlags_ImGuiDebugLogFlags_1OutputToTTY_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_OutputToTestEngine_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiDebugLogFlags_ImGuiDebugLogFlags_1OutputToTestEngine_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiDebugLogFlags_OutputToTestEngine_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguidebuglogflags_imguidebuglogflags_outputtotestengine_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

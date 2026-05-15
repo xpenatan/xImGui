@@ -30,10 +30,6 @@ public class ImGuiTabItem extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiTabItem);
-imgui.destroy(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImGuiTabItem);imgui.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 }

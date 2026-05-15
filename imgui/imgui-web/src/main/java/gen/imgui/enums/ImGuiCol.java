@@ -95,369 +95,186 @@ public enum ImGuiCol implements NativeEnum<ImGuiCol> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_Text;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_Text;")
     private static native int ImGuiCol_Text_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_TextDisabled;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_TextDisabled;")
     private static native int ImGuiCol_TextDisabled_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_WindowBg;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_WindowBg;")
     private static native int ImGuiCol_WindowBg_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_ChildBg;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_ChildBg;")
     private static native int ImGuiCol_ChildBg_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_PopupBg;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_PopupBg;")
     private static native int ImGuiCol_PopupBg_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_Border;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_Border;")
     private static native int ImGuiCol_Border_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_BorderShadow;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_BorderShadow;")
     private static native int ImGuiCol_BorderShadow_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_FrameBg;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_FrameBg;")
     private static native int ImGuiCol_FrameBg_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_FrameBgHovered;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_FrameBgHovered;")
     private static native int ImGuiCol_FrameBgHovered_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_FrameBgActive;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_FrameBgActive;")
     private static native int ImGuiCol_FrameBgActive_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_TitleBg;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_TitleBg;")
     private static native int ImGuiCol_TitleBg_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_TitleBgActive;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_TitleBgActive;")
     private static native int ImGuiCol_TitleBgActive_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_TitleBgCollapsed;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_TitleBgCollapsed;")
     private static native int ImGuiCol_TitleBgCollapsed_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_MenuBarBg;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_MenuBarBg;")
     private static native int ImGuiCol_MenuBarBg_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_ScrollbarBg;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_ScrollbarBg;")
     private static native int ImGuiCol_ScrollbarBg_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_ScrollbarGrab;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_ScrollbarGrab;")
     private static native int ImGuiCol_ScrollbarGrab_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_ScrollbarGrabHovered;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_ScrollbarGrabHovered;")
     private static native int ImGuiCol_ScrollbarGrabHovered_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_ScrollbarGrabActive;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_ScrollbarGrabActive;")
     private static native int ImGuiCol_ScrollbarGrabActive_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_CheckMark;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_CheckMark;")
     private static native int ImGuiCol_CheckMark_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_SliderGrab;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_SliderGrab;")
     private static native int ImGuiCol_SliderGrab_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_SliderGrabActive;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_SliderGrabActive;")
     private static native int ImGuiCol_SliderGrabActive_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_Button;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_Button;")
     private static native int ImGuiCol_Button_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_ButtonHovered;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_ButtonHovered;")
     private static native int ImGuiCol_ButtonHovered_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_ButtonActive;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_ButtonActive;")
     private static native int ImGuiCol_ButtonActive_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_Header;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_Header;")
     private static native int ImGuiCol_Header_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_HeaderHovered;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_HeaderHovered;")
     private static native int ImGuiCol_HeaderHovered_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_HeaderActive;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_HeaderActive;")
     private static native int ImGuiCol_HeaderActive_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_Separator;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_Separator;")
     private static native int ImGuiCol_Separator_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_SeparatorHovered;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_SeparatorHovered;")
     private static native int ImGuiCol_SeparatorHovered_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_SeparatorActive;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_SeparatorActive;")
     private static native int ImGuiCol_SeparatorActive_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_ResizeGrip;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_ResizeGrip;")
     private static native int ImGuiCol_ResizeGrip_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_ResizeGripHovered;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_ResizeGripHovered;")
     private static native int ImGuiCol_ResizeGripHovered_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_ResizeGripActive;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_ResizeGripActive;")
     private static native int ImGuiCol_ResizeGripActive_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_InputTextCursor;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_InputTextCursor;")
     private static native int ImGuiCol_InputTextCursor_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_TabHovered;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_TabHovered;")
     private static native int ImGuiCol_TabHovered_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_Tab;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_Tab;")
     private static native int ImGuiCol_Tab_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_TabSelected;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_TabSelected;")
     private static native int ImGuiCol_TabSelected_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_TabSelectedOverline;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_TabSelectedOverline;")
     private static native int ImGuiCol_TabSelectedOverline_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_TabDimmed;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_TabDimmed;")
     private static native int ImGuiCol_TabDimmed_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_TabDimmedSelected;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_TabDimmedSelected;")
     private static native int ImGuiCol_TabDimmedSelected_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_TabDimmedSelectedOverline;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_TabDimmedSelectedOverline;")
     private static native int ImGuiCol_TabDimmedSelectedOverline_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_DockingPreview;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_DockingPreview;")
     private static native int ImGuiCol_DockingPreview_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_DockingEmptyBg;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_DockingEmptyBg;")
     private static native int ImGuiCol_DockingEmptyBg_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_PlotLines;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_PlotLines;")
     private static native int ImGuiCol_PlotLines_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_PlotLinesHovered;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_PlotLinesHovered;")
     private static native int ImGuiCol_PlotLinesHovered_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_PlotHistogram;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_PlotHistogram;")
     private static native int ImGuiCol_PlotHistogram_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_PlotHistogramHovered;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_PlotHistogramHovered;")
     private static native int ImGuiCol_PlotHistogramHovered_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_TableHeaderBg;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_TableHeaderBg;")
     private static native int ImGuiCol_TableHeaderBg_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_TableBorderStrong;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_TableBorderStrong;")
     private static native int ImGuiCol_TableBorderStrong_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_TableBorderLight;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_TableBorderLight;")
     private static native int ImGuiCol_TableBorderLight_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_TableRowBg;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_TableRowBg;")
     private static native int ImGuiCol_TableRowBg_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_TableRowBgAlt;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_TableRowBgAlt;")
     private static native int ImGuiCol_TableRowBgAlt_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_TextLink;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_TextLink;")
     private static native int ImGuiCol_TextLink_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_TextSelectedBg;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_TextSelectedBg;")
     private static native int ImGuiCol_TextSelectedBg_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_TreeLines;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_TreeLines;")
     private static native int ImGuiCol_TreeLines_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_DragDropTarget;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_DragDropTarget;")
     private static native int ImGuiCol_DragDropTarget_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_UnsavedMarker;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_UnsavedMarker;")
     private static native int ImGuiCol_UnsavedMarker_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_NavCursor;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_NavCursor;")
     private static native int ImGuiCol_NavCursor_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_NavWindowingHighlight;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_NavWindowingHighlight;")
     private static native int ImGuiCol_NavWindowingHighlight_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_NavWindowingDimBg;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_NavWindowingDimBg;")
     private static native int ImGuiCol_NavWindowingDimBg_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiCol_ModalWindowDimBg;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiCol_ModalWindowDimBg;")
     private static native int ImGuiCol_ModalWindowDimBg_NATIVE();
 }

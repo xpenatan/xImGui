@@ -46,63 +46,51 @@ public enum ImGuiItemStatusFlags implements NativeEnum<ImGuiItemStatusFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemStatusFlags_None;
-*/
-    private static native int ImGuiItemStatusFlags_None_NATIVE();
+    private static int ImGuiItemStatusFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiItemStatusFlags.ImGuiItemStatusFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemStatusFlags_HoveredRect;
-*/
-    private static native int ImGuiItemStatusFlags_HoveredRect_NATIVE();
+    private static int ImGuiItemStatusFlags_HoveredRect_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiItemStatusFlags.ImGuiItemStatusFlags_HoveredRect_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemStatusFlags_HasDisplayRect;
-*/
-    private static native int ImGuiItemStatusFlags_HasDisplayRect_NATIVE();
+    private static int ImGuiItemStatusFlags_HasDisplayRect_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiItemStatusFlags.ImGuiItemStatusFlags_HasDisplayRect_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemStatusFlags_Edited;
-*/
-    private static native int ImGuiItemStatusFlags_Edited_NATIVE();
+    private static int ImGuiItemStatusFlags_Edited_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiItemStatusFlags.ImGuiItemStatusFlags_Edited_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemStatusFlags_ToggledSelection;
-*/
-    private static native int ImGuiItemStatusFlags_ToggledSelection_NATIVE();
+    private static int ImGuiItemStatusFlags_ToggledSelection_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiItemStatusFlags.ImGuiItemStatusFlags_ToggledSelection_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemStatusFlags_ToggledOpen;
-*/
-    private static native int ImGuiItemStatusFlags_ToggledOpen_NATIVE();
+    private static int ImGuiItemStatusFlags_ToggledOpen_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiItemStatusFlags.ImGuiItemStatusFlags_ToggledOpen_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemStatusFlags_HasDeactivated;
-*/
-    private static native int ImGuiItemStatusFlags_HasDeactivated_NATIVE();
+    private static int ImGuiItemStatusFlags_HasDeactivated_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiItemStatusFlags.ImGuiItemStatusFlags_HasDeactivated_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemStatusFlags_Deactivated;
-*/
-    private static native int ImGuiItemStatusFlags_Deactivated_NATIVE();
+    private static int ImGuiItemStatusFlags_Deactivated_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiItemStatusFlags.ImGuiItemStatusFlags_Deactivated_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemStatusFlags_HoveredWindow;
-*/
-    private static native int ImGuiItemStatusFlags_HoveredWindow_NATIVE();
+    private static int ImGuiItemStatusFlags_HoveredWindow_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiItemStatusFlags.ImGuiItemStatusFlags_HoveredWindow_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemStatusFlags_Visible;
-*/
-    private static native int ImGuiItemStatusFlags_Visible_NATIVE();
+    private static int ImGuiItemStatusFlags_Visible_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiItemStatusFlags.ImGuiItemStatusFlags_Visible_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemStatusFlags_HasClipRect;
-*/
-    private static native int ImGuiItemStatusFlags_HasClipRect_NATIVE();
+    private static int ImGuiItemStatusFlags_HasClipRect_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiItemStatusFlags.ImGuiItemStatusFlags_HasClipRect_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemStatusFlags_HasShortcut;
-*/
-    private static native int ImGuiItemStatusFlags_HasShortcut_NATIVE();
+    private static int ImGuiItemStatusFlags_HasShortcut_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiItemStatusFlags.ImGuiItemStatusFlags_HasShortcut_NATIVE();
+    }
 }

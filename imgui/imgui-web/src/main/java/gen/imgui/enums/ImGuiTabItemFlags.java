@@ -44,63 +44,33 @@ public enum ImGuiTabItemFlags implements NativeEnum<ImGuiTabItemFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabItemFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabItemFlags_None;")
     private static native int ImGuiTabItemFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabItemFlags_UnsavedDocument;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabItemFlags_UnsavedDocument;")
     private static native int ImGuiTabItemFlags_UnsavedDocument_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabItemFlags_SetSelected;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabItemFlags_SetSelected;")
     private static native int ImGuiTabItemFlags_SetSelected_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabItemFlags_NoCloseWithMiddleMouseButton;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabItemFlags_NoCloseWithMiddleMouseButton;")
     private static native int ImGuiTabItemFlags_NoCloseWithMiddleMouseButton_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabItemFlags_NoPushId;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabItemFlags_NoPushId;")
     private static native int ImGuiTabItemFlags_NoPushId_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabItemFlags_NoTooltip;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabItemFlags_NoTooltip;")
     private static native int ImGuiTabItemFlags_NoTooltip_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabItemFlags_NoReorder;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabItemFlags_NoReorder;")
     private static native int ImGuiTabItemFlags_NoReorder_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabItemFlags_Leading;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabItemFlags_Leading;")
     private static native int ImGuiTabItemFlags_Leading_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabItemFlags_Trailing;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabItemFlags_Trailing;")
     private static native int ImGuiTabItemFlags_Trailing_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTabItemFlags_NoAssumedClosure;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTabItemFlags_NoAssumedClosure;")
     private static native int ImGuiTabItemFlags_NoAssumedClosure_NATIVE();
 }

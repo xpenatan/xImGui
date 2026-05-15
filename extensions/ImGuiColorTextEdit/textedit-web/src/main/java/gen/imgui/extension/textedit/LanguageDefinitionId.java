@@ -45,69 +45,36 @@ public enum LanguageDefinitionId implements NativeEnum<LanguageDefinitionId> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return textedit.None;
-*/
     @org.teavm.jso.JSBody(script = "return textedit.None;")
     private static native int None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return textedit.Cpp;
-*/
     @org.teavm.jso.JSBody(script = "return textedit.Cpp;")
     private static native int Cpp_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return textedit.C;
-*/
     @org.teavm.jso.JSBody(script = "return textedit.C;")
     private static native int C_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return textedit.Cs;
-*/
     @org.teavm.jso.JSBody(script = "return textedit.Cs;")
     private static native int Cs_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return textedit.Python;
-*/
     @org.teavm.jso.JSBody(script = "return textedit.Python;")
     private static native int Python_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return textedit.Lua;
-*/
     @org.teavm.jso.JSBody(script = "return textedit.Lua;")
     private static native int Lua_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return textedit.Json;
-*/
     @org.teavm.jso.JSBody(script = "return textedit.Json;")
     private static native int Json_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return textedit.Sql;
-*/
     @org.teavm.jso.JSBody(script = "return textedit.Sql;")
     private static native int Sql_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return textedit.AngelScript;
-*/
     @org.teavm.jso.JSBody(script = "return textedit.AngelScript;")
     private static native int AngelScript_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return textedit.Glsl;
-*/
     @org.teavm.jso.JSBody(script = "return textedit.Glsl;")
     private static native int Glsl_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return textedit.Hlsl;
-*/
     @org.teavm.jso.JSBody(script = "return textedit.Hlsl;")
     private static native int Hlsl_NATIVE();
 }

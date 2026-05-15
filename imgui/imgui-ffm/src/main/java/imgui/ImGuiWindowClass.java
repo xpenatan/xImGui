@@ -27,14 +27,11 @@ public class ImGuiWindowClass extends NativeObject {
         internal_reset(addr, true);
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)new ImGuiWindowClass();
-*/
     public static long internal_native_create_addr() {
         try {
             return (long) FFMHandles.internal_native_create_addr__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -56,15 +53,11 @@ return (int64_t)new ImGuiWindowClass();
         internal_native_deleteNative(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-delete nativeObject;
-*/
     public static void internal_native_deleteNative(long this_addr) {
         try {
             FFMHandles.internal_native_deleteNative__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -72,15 +65,11 @@ delete nativeObject;
         return internal_native_get_ClassId(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-return nativeObject->ClassId;
-*/
     public static int internal_native_get_ClassId(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_ClassId__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -88,15 +77,11 @@ return nativeObject->ClassId;
         internal_native_set_ClassId(native_address, ClassId);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-nativeObject->ClassId = ClassId;
-*/
     public static void internal_native_set_ClassId(long this_addr, int ClassId) {
         try {
             FFMHandles.internal_native_set_ClassId__JI.invokeExact(this_addr, ClassId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -104,15 +89,11 @@ nativeObject->ClassId = ClassId;
         return internal_native_get_ParentViewportId(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-return nativeObject->ParentViewportId;
-*/
     public static int internal_native_get_ParentViewportId(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_ParentViewportId__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -120,15 +101,11 @@ return nativeObject->ParentViewportId;
         internal_native_set_ParentViewportId(native_address, ParentViewportId);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-nativeObject->ParentViewportId = ParentViewportId;
-*/
     public static void internal_native_set_ParentViewportId(long this_addr, int ParentViewportId) {
         try {
             FFMHandles.internal_native_set_ParentViewportId__JI.invokeExact(this_addr, ParentViewportId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -136,15 +113,11 @@ nativeObject->ParentViewportId = ParentViewportId;
         return internal_native_get_FocusRouteParentWindowId(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-return nativeObject->FocusRouteParentWindowId;
-*/
     public static int internal_native_get_FocusRouteParentWindowId(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_FocusRouteParentWindowId__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -152,15 +125,11 @@ return nativeObject->FocusRouteParentWindowId;
         internal_native_set_FocusRouteParentWindowId(native_address, FocusRouteParentWindowId);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-nativeObject->FocusRouteParentWindowId = FocusRouteParentWindowId;
-*/
     public static void internal_native_set_FocusRouteParentWindowId(long this_addr, int FocusRouteParentWindowId) {
         try {
             FFMHandles.internal_native_set_FocusRouteParentWindowId__JI.invokeExact(this_addr, FocusRouteParentWindowId);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -175,15 +144,11 @@ nativeObject->FocusRouteParentWindowId = FocusRouteParentWindowId;
         return ImGuiViewportFlags.CUSTOM.setValue(value);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-return (int32_t)nativeObject->ViewportFlagsOverrideSet;
-*/
     public static int internal_native_get_ViewportFlagsOverrideSet(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_ViewportFlagsOverrideSet__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -191,15 +156,11 @@ return (int32_t)nativeObject->ViewportFlagsOverrideSet;
         internal_native_set_ViewportFlagsOverrideSet(native_address, ViewportFlagsOverrideSet.getValue());
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-nativeObject->ViewportFlagsOverrideSet = (::ImGuiViewportFlags)ViewportFlagsOverrideSet;
-*/
     public static void internal_native_set_ViewportFlagsOverrideSet(long this_addr, int ViewportFlagsOverrideSet) {
         try {
             FFMHandles.internal_native_set_ViewportFlagsOverrideSet__JI.invokeExact(this_addr, ViewportFlagsOverrideSet);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -214,15 +175,11 @@ nativeObject->ViewportFlagsOverrideSet = (::ImGuiViewportFlags)ViewportFlagsOver
         return ImGuiViewportFlags.CUSTOM.setValue(value);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-return (int32_t)nativeObject->ViewportFlagsOverrideClear;
-*/
     public static int internal_native_get_ViewportFlagsOverrideClear(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_ViewportFlagsOverrideClear__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -230,15 +187,11 @@ return (int32_t)nativeObject->ViewportFlagsOverrideClear;
         internal_native_set_ViewportFlagsOverrideClear(native_address, ViewportFlagsOverrideClear.getValue());
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-nativeObject->ViewportFlagsOverrideClear = (::ImGuiViewportFlags)ViewportFlagsOverrideClear;
-*/
     public static void internal_native_set_ViewportFlagsOverrideClear(long this_addr, int ViewportFlagsOverrideClear) {
         try {
             FFMHandles.internal_native_set_ViewportFlagsOverrideClear__JI.invokeExact(this_addr, ViewportFlagsOverrideClear);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -253,15 +206,11 @@ nativeObject->ViewportFlagsOverrideClear = (::ImGuiViewportFlags)ViewportFlagsOv
         return ImGuiTabItemFlags.CUSTOM.setValue(value);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-return (int32_t)nativeObject->TabItemFlagsOverrideSet;
-*/
     public static int internal_native_get_TabItemFlagsOverrideSet(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_TabItemFlagsOverrideSet__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -269,15 +218,11 @@ return (int32_t)nativeObject->TabItemFlagsOverrideSet;
         internal_native_set_TabItemFlagsOverrideSet(native_address, TabItemFlagsOverrideSet.getValue());
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-nativeObject->TabItemFlagsOverrideSet = (::ImGuiTabItemFlags)TabItemFlagsOverrideSet;
-*/
     public static void internal_native_set_TabItemFlagsOverrideSet(long this_addr, int TabItemFlagsOverrideSet) {
         try {
             FFMHandles.internal_native_set_TabItemFlagsOverrideSet__JI.invokeExact(this_addr, TabItemFlagsOverrideSet);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -292,15 +237,11 @@ nativeObject->TabItemFlagsOverrideSet = (::ImGuiTabItemFlags)TabItemFlagsOverrid
         return ImGuiDockNodeFlags.CUSTOM.setValue(value);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-return (int32_t)nativeObject->DockNodeFlagsOverrideSet;
-*/
     public static int internal_native_get_DockNodeFlagsOverrideSet(long this_addr) {
         try {
             return (int) FFMHandles.internal_native_get_DockNodeFlagsOverrideSet__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -308,15 +249,11 @@ return (int32_t)nativeObject->DockNodeFlagsOverrideSet;
         internal_native_set_DockNodeFlagsOverrideSet(native_address, DockNodeFlagsOverrideSet.getValue());
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-nativeObject->DockNodeFlagsOverrideSet = (::ImGuiDockNodeFlags)DockNodeFlagsOverrideSet;
-*/
     public static void internal_native_set_DockNodeFlagsOverrideSet(long this_addr, int DockNodeFlagsOverrideSet) {
         try {
             FFMHandles.internal_native_set_DockNodeFlagsOverrideSet__JI.invokeExact(this_addr, DockNodeFlagsOverrideSet);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -324,15 +261,11 @@ nativeObject->DockNodeFlagsOverrideSet = (::ImGuiDockNodeFlags)DockNodeFlagsOver
         return internal_native_get_DockingAlwaysTabBar(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-return nativeObject->DockingAlwaysTabBar;
-*/
     public static boolean internal_native_get_DockingAlwaysTabBar(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_get_DockingAlwaysTabBar__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -340,15 +273,11 @@ return nativeObject->DockingAlwaysTabBar;
         internal_native_set_DockingAlwaysTabBar(native_address, DockingAlwaysTabBar);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-nativeObject->DockingAlwaysTabBar = DockingAlwaysTabBar;
-*/
     public static void internal_native_set_DockingAlwaysTabBar(long this_addr, boolean DockingAlwaysTabBar) {
         try {
             FFMHandles.internal_native_set_DockingAlwaysTabBar__JZ.invokeExact(this_addr, DockingAlwaysTabBar);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -356,15 +285,11 @@ nativeObject->DockingAlwaysTabBar = DockingAlwaysTabBar;
         return internal_native_get_DockingAllowUnclassed(native_address);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-return nativeObject->DockingAllowUnclassed;
-*/
     public static boolean internal_native_get_DockingAllowUnclassed(long this_addr) {
         try {
             return (boolean) FFMHandles.internal_native_get_DockingAllowUnclassed__J.invokeExact(this_addr);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
@@ -372,88 +297,54 @@ return nativeObject->DockingAllowUnclassed;
         internal_native_set_DockingAllowUnclassed(native_address, DockingAllowUnclassed);
     }
 
-    /*[-FFM;-NATIVE]
-ImGuiWindowClass* nativeObject = (ImGuiWindowClass*)this_addr;
-nativeObject->DockingAllowUnclassed = DockingAllowUnclassed;
-*/
     public static void internal_native_set_DockingAllowUnclassed(long this_addr, boolean DockingAllowUnclassed) {
         try {
             FFMHandles.internal_native_set_DockingAllowUnclassed__JZ.invokeExact(this_addr, DockingAllowUnclassed);
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle internal_native_create_addr__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiwindowclass_create_addr", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallDefault("imgui_imguiwindowclass_deletenative", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle internal_native_get_ClassId__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiwindowclass_get_classid", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle internal_native_set_ClassId__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiwindowclass_set_classid", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_get_ParentViewportId__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiwindowclass_get_parentviewportid", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle internal_native_set_ParentViewportId__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiwindowclass_set_parentviewportid", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle internal_native_get_FocusRouteParentWindowId__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiwindowclass_get_focusrouteparentwindowid", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_create_addr__ = downcallDefault("jparser_imgui_ImGuiWindowClass_internal_1native_1create_1addr__", FunctionDescriptor.of(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_FocusRouteParentWindowId__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiwindowclass_set_focusrouteparentwindowid", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_deleteNative__J = downcallDefault("jparser_imgui_ImGuiWindowClass_internal_1native_1deleteNative__J", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_get_ViewportFlagsOverrideSet__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiwindowclass_get_viewportflagsoverrideset", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_ClassId__J = downcallDefault("jparser_imgui_ImGuiWindowClass_internal_1native_1get_1ClassId__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_ViewportFlagsOverrideSet__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiwindowclass_set_viewportflagsoverrideset", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_set_ClassId__JI = downcallDefault("jparser_imgui_ImGuiWindowClass_internal_1native_1set_1ClassId__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_get_ViewportFlagsOverrideClear__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiwindowclass_get_viewportflagsoverrideclear", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_ParentViewportId__J = downcallDefault("jparser_imgui_ImGuiWindowClass_internal_1native_1get_1ParentViewportId__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_ViewportFlagsOverrideClear__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiwindowclass_set_viewportflagsoverrideclear", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_set_ParentViewportId__JI = downcallDefault("jparser_imgui_ImGuiWindowClass_internal_1native_1set_1ParentViewportId__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_get_TabItemFlagsOverrideSet__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiwindowclass_get_tabitemflagsoverrideset", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_FocusRouteParentWindowId__J = downcallDefault("jparser_imgui_ImGuiWindowClass_internal_1native_1get_1FocusRouteParentWindowId__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_TabItemFlagsOverrideSet__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiwindowclass_set_tabitemflagsoverrideset", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_set_FocusRouteParentWindowId__JI = downcallDefault("jparser_imgui_ImGuiWindowClass_internal_1native_1set_1FocusRouteParentWindowId__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_get_DockNodeFlagsOverrideSet__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiwindowclass_get_docknodeflagsoverrideset", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_ViewportFlagsOverrideSet__J = downcallDefault("jparser_imgui_ImGuiWindowClass_internal_1native_1get_1ViewportFlagsOverrideSet__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_DockNodeFlagsOverrideSet__JI = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiwindowclass_set_docknodeflagsoverrideset", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle internal_native_set_ViewportFlagsOverrideSet__JI = downcallDefault("jparser_imgui_ImGuiWindowClass_internal_1native_1set_1ViewportFlagsOverrideSet__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_get_DockingAlwaysTabBar__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiwindowclass_get_dockingalwaystabbar", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_ViewportFlagsOverrideClear__J = downcallDefault("jparser_imgui_ImGuiWindowClass_internal_1native_1get_1ViewportFlagsOverrideClear__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
+        static final java.lang.invoke.MethodHandle internal_native_set_DockingAlwaysTabBar__JZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiwindowclass_set_dockingalwaystabbar", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
 
-        static final java.lang.invoke.MethodHandle internal_native_set_ViewportFlagsOverrideClear__JI = downcallDefault("jparser_imgui_ImGuiWindowClass_internal_1native_1set_1ViewportFlagsOverrideClear__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle internal_native_get_DockingAllowUnclassed__J = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiwindowclass_get_dockingallowunclassed", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
 
-        static final java.lang.invoke.MethodHandle internal_native_get_TabItemFlagsOverrideSet__J = downcallDefault("jparser_imgui_ImGuiWindowClass_internal_1native_1get_1TabItemFlagsOverrideSet__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_TabItemFlagsOverrideSet__JI = downcallDefault("jparser_imgui_ImGuiWindowClass_internal_1native_1set_1TabItemFlagsOverrideSet__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_DockNodeFlagsOverrideSet__J = downcallDefault("jparser_imgui_ImGuiWindowClass_internal_1native_1get_1DockNodeFlagsOverrideSet__J", FunctionDescriptor.of(ValueLayout.JAVA_INT, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_DockNodeFlagsOverrideSet__JI = downcallDefault("jparser_imgui_ImGuiWindowClass_internal_1native_1set_1DockNodeFlagsOverrideSet__JI", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_DockingAlwaysTabBar__J = downcallDefault("jparser_imgui_ImGuiWindowClass_internal_1native_1get_1DockingAlwaysTabBar__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_DockingAlwaysTabBar__JZ = downcallDefault("jparser_imgui_ImGuiWindowClass_internal_1native_1set_1DockingAlwaysTabBar__JZ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
-
-        static final java.lang.invoke.MethodHandle internal_native_get_DockingAllowUnclassed__J = downcallDefault("jparser_imgui_ImGuiWindowClass_internal_1native_1get_1DockingAllowUnclassed__J", FunctionDescriptor.of(ValueLayout.JAVA_BOOLEAN, ValueLayout.JAVA_LONG));
-
-        static final java.lang.invoke.MethodHandle internal_native_set_DockingAllowUnclassed__JZ = downcallDefault("jparser_imgui_ImGuiWindowClass_internal_1native_1set_1DockingAllowUnclassed__JZ", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
+        static final java.lang.invoke.MethodHandle internal_native_set_DockingAllowUnclassed__JZ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_imguiwindowclass_set_dockingallowunclassed", FunctionDescriptor.ofVoid(ValueLayout.JAVA_LONG, ValueLayout.JAVA_BOOLEAN));
     }
 }

@@ -41,75 +41,36 @@ public enum ImGuiHoveredFlagsPrivate_ implements NativeEnum<ImGuiHoveredFlagsPri
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiHoveredFlags_DelayMask_;
-*/
     private static int ImGuiHoveredFlags_DelayMask__NATIVE() {
         try {
             return (int) FFMHandles.ImGuiHoveredFlags_DelayMask__NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiHoveredFlags_AllowedMaskForIsWindowHovered;
-*/
     private static int ImGuiHoveredFlags_AllowedMaskForIsWindowHovered_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiHoveredFlags_AllowedMaskForIsWindowHovered_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiHoveredFlags_AllowedMaskForIsItemHovered;
-*/
     private static int ImGuiHoveredFlags_AllowedMaskForIsItemHovered_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiHoveredFlags_AllowedMaskForIsItemHovered_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_DelayMask__NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguihoveredflagsprivate__imguihoveredflags_delaymask__native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_AllowedMaskForIsWindowHovered_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguihoveredflagsprivate__imguihoveredflags_allowedmaskforiswindowhovered_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
-
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
-
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
-
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
-
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
-
-        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_DelayMask__NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiHoveredFlagsPrivate_1_ImGuiHoveredFlags_1DelayMask_1_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_AllowedMaskForIsWindowHovered_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiHoveredFlagsPrivate_1_ImGuiHoveredFlags_1AllowedMaskForIsWindowHovered_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_AllowedMaskForIsItemHovered_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiHoveredFlagsPrivate_1_ImGuiHoveredFlags_1AllowedMaskForIsItemHovered_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_AllowedMaskForIsItemHovered_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguihoveredflagsprivate__imguihoveredflags_allowedmaskforisitemhovered_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

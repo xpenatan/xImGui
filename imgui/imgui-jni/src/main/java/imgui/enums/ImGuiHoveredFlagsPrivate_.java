@@ -34,18 +34,15 @@ public enum ImGuiHoveredFlagsPrivate_ implements NativeEnum<ImGuiHoveredFlagsPri
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_DelayMask_;
-*/
-    private static native int ImGuiHoveredFlags_DelayMask__NATIVE();
+    private static int ImGuiHoveredFlags_DelayMask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiHoveredFlagsPrivate_.ImGuiHoveredFlags_DelayMask__NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_AllowedMaskForIsWindowHovered;
-*/
-    private static native int ImGuiHoveredFlags_AllowedMaskForIsWindowHovered_NATIVE();
+    private static int ImGuiHoveredFlags_AllowedMaskForIsWindowHovered_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiHoveredFlagsPrivate_.ImGuiHoveredFlags_AllowedMaskForIsWindowHovered_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiHoveredFlags_AllowedMaskForIsItemHovered;
-*/
-    private static native int ImGuiHoveredFlags_AllowedMaskForIsItemHovered_NATIVE();
+    private static int ImGuiHoveredFlags_AllowedMaskForIsItemHovered_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiHoveredFlagsPrivate_.ImGuiHoveredFlags_AllowedMaskForIsItemHovered_NATIVE();
+    }
 }

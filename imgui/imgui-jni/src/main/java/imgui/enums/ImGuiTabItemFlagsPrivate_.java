@@ -39,28 +39,23 @@ public enum ImGuiTabItemFlagsPrivate_ implements NativeEnum<ImGuiTabItemFlagsPri
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_SectionMask_;
-*/
-    private static native int ImGuiTabItemFlags_SectionMask__NATIVE();
+    private static int ImGuiTabItemFlags_SectionMask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabItemFlagsPrivate_.ImGuiTabItemFlags_SectionMask__NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_NoCloseButton;
-*/
-    private static native int ImGuiTabItemFlags_NoCloseButton_NATIVE();
+    private static int ImGuiTabItemFlags_NoCloseButton_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabItemFlagsPrivate_.ImGuiTabItemFlags_NoCloseButton_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_Button;
-*/
-    private static native int ImGuiTabItemFlags_Button_NATIVE();
+    private static int ImGuiTabItemFlags_Button_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabItemFlagsPrivate_.ImGuiTabItemFlags_Button_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_Invisible;
-*/
-    private static native int ImGuiTabItemFlags_Invisible_NATIVE();
+    private static int ImGuiTabItemFlags_Invisible_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabItemFlagsPrivate_.ImGuiTabItemFlags_Invisible_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_Unsorted;
-*/
-    private static native int ImGuiTabItemFlags_Unsorted_NATIVE();
+    private static int ImGuiTabItemFlags_Unsorted_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabItemFlagsPrivate_.ImGuiTabItemFlags_Unsorted_NATIVE();
+    }
 }

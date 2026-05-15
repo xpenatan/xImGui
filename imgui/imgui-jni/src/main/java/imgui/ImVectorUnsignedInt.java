@@ -30,48 +30,39 @@ public class ImVectorUnsignedInt extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorUnsignedInt* nativeObject = (ImVectorUnsignedInt*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ImVectorUnsignedInt.internal_native_deleteNative(this_addr);
+    }
 
     public int getData(int index) {
         return internal_native_getData(native_address, index);
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorUnsignedInt* nativeObject = (ImVectorUnsignedInt*)this_addr;
-return ((*nativeObject)[(int)index]);*/
-    public static native int internal_native_getData(long this_addr, int index);
+    public static int internal_native_getData(long this_addr, int index) {
+        return imgui.natives.JNI_ImVectorUnsignedInt.internal_native_getData(this_addr, index);
+    }
 
     public int size() {
         return internal_native_size(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorUnsignedInt* nativeObject = (ImVectorUnsignedInt*)this_addr;
-return nativeObject->size();
-*/
-    public static native int internal_native_size(long this_addr);
+    public static int internal_native_size(long this_addr) {
+        return imgui.natives.JNI_ImVectorUnsignedInt.internal_native_size(this_addr);
+    }
 
     public int front() {
         return internal_native_front(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorUnsignedInt* nativeObject = (ImVectorUnsignedInt*)this_addr;
-return nativeObject->front();
-*/
-    public static native int internal_native_front(long this_addr);
+    public static int internal_native_front(long this_addr) {
+        return imgui.natives.JNI_ImVectorUnsignedInt.internal_native_front(this_addr);
+    }
 
     public int back() {
         return internal_native_back(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImVectorUnsignedInt* nativeObject = (ImVectorUnsignedInt*)this_addr;
-return nativeObject->back();
-*/
-    public static native int internal_native_back(long this_addr);
+    public static int internal_native_back(long this_addr) {
+        return imgui.natives.JNI_ImVectorUnsignedInt.internal_native_back(this_addr);
+    }
 }

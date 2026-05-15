@@ -17,10 +17,6 @@ public class ImTextureRef extends NativeObject {
         internal_reset(addr, true);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = new imgui.ImTextureRef();
-return imgui.getPointer(jsObj);
-*/
     @org.teavm.jso.JSBody(script = "var jsObj = new imgui.ImTextureRef();return imgui.getPointer(jsObj);")
     public static native int internal_native_create_addr();
 
@@ -29,10 +25,6 @@ return imgui.getPointer(jsObj);
         internal_reset(addr, true);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = new imgui.ImTextureRef(tex_id);
-return imgui.getPointer(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"tex_id"}, script = "var jsObj = new imgui.ImTextureRef(tex_id);return imgui.getPointer(jsObj);")
     public static native int internal_native_create_long_addr(long tex_id);
 
@@ -54,10 +46,6 @@ return imgui.getPointer(jsObj);
         internal_native_deleteNative(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImTextureRef);
-imgui.destroy(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImTextureRef);imgui.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
@@ -65,11 +53,6 @@ imgui.destroy(jsObj);
         return internal_native_GetTexID(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imgui.wrapPointer(this_addr, imgui.ImTextureRef);
-var returnedJSObj = jsObj.GetTexID();
-return returnedJSObj;
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imgui.wrapPointer(this_addr, imgui.ImTextureRef);var returnedJSObj = jsObj.GetTexID();return returnedJSObj;")
     public static native long internal_native_GetTexID(int this_addr);
 }

@@ -34,27 +34,15 @@ public enum PaletteId implements NativeEnum<PaletteId> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return textedit.Dark;
-*/
     @org.teavm.jso.JSBody(script = "return textedit.Dark;")
     private static native int Dark_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return textedit.Light;
-*/
     @org.teavm.jso.JSBody(script = "return textedit.Light;")
     private static native int Light_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return textedit.Mariana;
-*/
     @org.teavm.jso.JSBody(script = "return textedit.Mariana;")
     private static native int Mariana_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return textedit.RetroBlue;
-*/
     @org.teavm.jso.JSBody(script = "return textedit.RetroBlue;")
     private static native int RetroBlue_NATIVE();
 }

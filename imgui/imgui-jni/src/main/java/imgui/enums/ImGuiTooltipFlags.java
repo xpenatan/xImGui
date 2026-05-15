@@ -34,13 +34,11 @@ public enum ImGuiTooltipFlags implements NativeEnum<ImGuiTooltipFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTooltipFlags_None;
-*/
-    private static native int ImGuiTooltipFlags_None_NATIVE();
+    private static int ImGuiTooltipFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTooltipFlags.ImGuiTooltipFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTooltipFlags_OverridePrevious;
-*/
-    private static native int ImGuiTooltipFlags_OverridePrevious_NATIVE();
+    private static int ImGuiTooltipFlags_OverridePrevious_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTooltipFlags.ImGuiTooltipFlags_OverridePrevious_NATIVE();
+    }
 }

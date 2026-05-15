@@ -52,93 +52,75 @@ public enum ImGuiButtonFlagsPrivate_ implements NativeEnum<ImGuiButtonFlagsPriva
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_PressedOnClick;
-*/
-    private static native int ImGuiButtonFlags_PressedOnClick_NATIVE();
+    private static int ImGuiButtonFlags_PressedOnClick_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiButtonFlagsPrivate_.ImGuiButtonFlags_PressedOnClick_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_PressedOnClickRelease;
-*/
-    private static native int ImGuiButtonFlags_PressedOnClickRelease_NATIVE();
+    private static int ImGuiButtonFlags_PressedOnClickRelease_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiButtonFlagsPrivate_.ImGuiButtonFlags_PressedOnClickRelease_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_PressedOnClickReleaseAnywhere;
-*/
-    private static native int ImGuiButtonFlags_PressedOnClickReleaseAnywhere_NATIVE();
+    private static int ImGuiButtonFlags_PressedOnClickReleaseAnywhere_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiButtonFlagsPrivate_.ImGuiButtonFlags_PressedOnClickReleaseAnywhere_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_PressedOnRelease;
-*/
-    private static native int ImGuiButtonFlags_PressedOnRelease_NATIVE();
+    private static int ImGuiButtonFlags_PressedOnRelease_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiButtonFlagsPrivate_.ImGuiButtonFlags_PressedOnRelease_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_PressedOnDoubleClick;
-*/
-    private static native int ImGuiButtonFlags_PressedOnDoubleClick_NATIVE();
+    private static int ImGuiButtonFlags_PressedOnDoubleClick_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiButtonFlagsPrivate_.ImGuiButtonFlags_PressedOnDoubleClick_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_PressedOnDragDropHold;
-*/
-    private static native int ImGuiButtonFlags_PressedOnDragDropHold_NATIVE();
+    private static int ImGuiButtonFlags_PressedOnDragDropHold_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiButtonFlagsPrivate_.ImGuiButtonFlags_PressedOnDragDropHold_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_FlattenChildren;
-*/
-    private static native int ImGuiButtonFlags_FlattenChildren_NATIVE();
+    private static int ImGuiButtonFlags_FlattenChildren_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiButtonFlagsPrivate_.ImGuiButtonFlags_FlattenChildren_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_AllowOverlap;
-*/
-    private static native int ImGuiButtonFlags_AllowOverlap_NATIVE();
+    private static int ImGuiButtonFlags_AllowOverlap_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiButtonFlagsPrivate_.ImGuiButtonFlags_AllowOverlap_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_AlignTextBaseLine;
-*/
-    private static native int ImGuiButtonFlags_AlignTextBaseLine_NATIVE();
+    private static int ImGuiButtonFlags_AlignTextBaseLine_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiButtonFlagsPrivate_.ImGuiButtonFlags_AlignTextBaseLine_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_NoKeyModsAllowed;
-*/
-    private static native int ImGuiButtonFlags_NoKeyModsAllowed_NATIVE();
+    private static int ImGuiButtonFlags_NoKeyModsAllowed_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiButtonFlagsPrivate_.ImGuiButtonFlags_NoKeyModsAllowed_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_NoHoldingActiveId;
-*/
-    private static native int ImGuiButtonFlags_NoHoldingActiveId_NATIVE();
+    private static int ImGuiButtonFlags_NoHoldingActiveId_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiButtonFlagsPrivate_.ImGuiButtonFlags_NoHoldingActiveId_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_NoNavFocus;
-*/
-    private static native int ImGuiButtonFlags_NoNavFocus_NATIVE();
+    private static int ImGuiButtonFlags_NoNavFocus_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiButtonFlagsPrivate_.ImGuiButtonFlags_NoNavFocus_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_NoHoveredOnFocus;
-*/
-    private static native int ImGuiButtonFlags_NoHoveredOnFocus_NATIVE();
+    private static int ImGuiButtonFlags_NoHoveredOnFocus_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiButtonFlagsPrivate_.ImGuiButtonFlags_NoHoveredOnFocus_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_NoSetKeyOwner;
-*/
-    private static native int ImGuiButtonFlags_NoSetKeyOwner_NATIVE();
+    private static int ImGuiButtonFlags_NoSetKeyOwner_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiButtonFlagsPrivate_.ImGuiButtonFlags_NoSetKeyOwner_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_NoTestKeyOwner;
-*/
-    private static native int ImGuiButtonFlags_NoTestKeyOwner_NATIVE();
+    private static int ImGuiButtonFlags_NoTestKeyOwner_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiButtonFlagsPrivate_.ImGuiButtonFlags_NoTestKeyOwner_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_NoFocus;
-*/
-    private static native int ImGuiButtonFlags_NoFocus_NATIVE();
+    private static int ImGuiButtonFlags_NoFocus_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiButtonFlagsPrivate_.ImGuiButtonFlags_NoFocus_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_PressedOnMask_;
-*/
-    private static native int ImGuiButtonFlags_PressedOnMask__NATIVE();
+    private static int ImGuiButtonFlags_PressedOnMask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiButtonFlagsPrivate_.ImGuiButtonFlags_PressedOnMask__NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiButtonFlags_PressedOnDefault_;
-*/
-    private static native int ImGuiButtonFlags_PressedOnDefault__NATIVE();
+    private static int ImGuiButtonFlags_PressedOnDefault__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiButtonFlagsPrivate_.ImGuiButtonFlags_PressedOnDefault__NATIVE();
+    }
 }

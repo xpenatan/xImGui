@@ -34,15 +34,9 @@ public enum FlowDirection implements NativeEnum<FlowDirection> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.Forward;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.Forward;")
     private static native int Forward_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.Backward;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.Backward;")
     private static native int Backward_NATIVE();
 }

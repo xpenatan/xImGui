@@ -42,51 +42,27 @@ public enum SaveReasonFlags implements NativeEnum<SaveReasonFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.None;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.None;")
     private static native int None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.Navigation;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.Navigation;")
     private static native int Navigation_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.Position;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.Position;")
     private static native int Position_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.Size;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.Size;")
     private static native int Size_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.Selection;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.Selection;")
     private static native int Selection_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.AddNode;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.AddNode;")
     private static native int AddNode_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.RemoveNode;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.RemoveNode;")
     private static native int RemoveNode_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return nodeeditor.User;
-*/
     @org.teavm.jso.JSBody(script = "return nodeeditor.User;")
     private static native int User_NATIVE();
 }

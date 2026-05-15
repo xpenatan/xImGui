@@ -56,231 +56,156 @@ public enum ImGuiNextWindowDataFlags implements NativeEnum<ImGuiNextWindowDataFl
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNextWindowDataFlags_None;
-*/
     private static int ImGuiNextWindowDataFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNextWindowDataFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNextWindowDataFlags_HasPos;
-*/
     private static int ImGuiNextWindowDataFlags_HasPos_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNextWindowDataFlags_HasPos_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNextWindowDataFlags_HasSize;
-*/
     private static int ImGuiNextWindowDataFlags_HasSize_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNextWindowDataFlags_HasSize_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNextWindowDataFlags_HasContentSize;
-*/
     private static int ImGuiNextWindowDataFlags_HasContentSize_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNextWindowDataFlags_HasContentSize_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNextWindowDataFlags_HasCollapsed;
-*/
     private static int ImGuiNextWindowDataFlags_HasCollapsed_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNextWindowDataFlags_HasCollapsed_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNextWindowDataFlags_HasSizeConstraint;
-*/
     private static int ImGuiNextWindowDataFlags_HasSizeConstraint_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNextWindowDataFlags_HasSizeConstraint_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNextWindowDataFlags_HasFocus;
-*/
     private static int ImGuiNextWindowDataFlags_HasFocus_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNextWindowDataFlags_HasFocus_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNextWindowDataFlags_HasBgAlpha;
-*/
     private static int ImGuiNextWindowDataFlags_HasBgAlpha_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNextWindowDataFlags_HasBgAlpha_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNextWindowDataFlags_HasScroll;
-*/
     private static int ImGuiNextWindowDataFlags_HasScroll_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNextWindowDataFlags_HasScroll_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNextWindowDataFlags_HasWindowFlags;
-*/
     private static int ImGuiNextWindowDataFlags_HasWindowFlags_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNextWindowDataFlags_HasWindowFlags_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNextWindowDataFlags_HasChildFlags;
-*/
     private static int ImGuiNextWindowDataFlags_HasChildFlags_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNextWindowDataFlags_HasChildFlags_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNextWindowDataFlags_HasRefreshPolicy;
-*/
     private static int ImGuiNextWindowDataFlags_HasRefreshPolicy_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNextWindowDataFlags_HasRefreshPolicy_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNextWindowDataFlags_HasViewport;
-*/
     private static int ImGuiNextWindowDataFlags_HasViewport_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNextWindowDataFlags_HasViewport_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNextWindowDataFlags_HasDock;
-*/
     private static int ImGuiNextWindowDataFlags_HasDock_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNextWindowDataFlags_HasDock_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiNextWindowDataFlags_HasWindowClass;
-*/
     private static int ImGuiNextWindowDataFlags_HasWindowClass_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiNextWindowDataFlags_HasWindowClass_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinextwindowdataflags_imguinextwindowdataflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasPos_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinextwindowdataflags_imguinextwindowdataflags_haspos_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasSize_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinextwindowdataflags_imguinextwindowdataflags_hassize_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasContentSize_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinextwindowdataflags_imguinextwindowdataflags_hascontentsize_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasCollapsed_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinextwindowdataflags_imguinextwindowdataflags_hascollapsed_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasSizeConstraint_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinextwindowdataflags_imguinextwindowdataflags_hassizeconstraint_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasFocus_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinextwindowdataflags_imguinextwindowdataflags_hasfocus_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNextWindowDataFlags_ImGuiNextWindowDataFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasBgAlpha_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinextwindowdataflags_imguinextwindowdataflags_hasbgalpha_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasPos_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNextWindowDataFlags_ImGuiNextWindowDataFlags_1HasPos_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasScroll_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinextwindowdataflags_imguinextwindowdataflags_hasscroll_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasSize_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNextWindowDataFlags_ImGuiNextWindowDataFlags_1HasSize_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasWindowFlags_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinextwindowdataflags_imguinextwindowdataflags_haswindowflags_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasContentSize_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNextWindowDataFlags_ImGuiNextWindowDataFlags_1HasContentSize_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasChildFlags_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinextwindowdataflags_imguinextwindowdataflags_haschildflags_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasCollapsed_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNextWindowDataFlags_ImGuiNextWindowDataFlags_1HasCollapsed_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasRefreshPolicy_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinextwindowdataflags_imguinextwindowdataflags_hasrefreshpolicy_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasSizeConstraint_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNextWindowDataFlags_ImGuiNextWindowDataFlags_1HasSizeConstraint_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasViewport_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinextwindowdataflags_imguinextwindowdataflags_hasviewport_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasFocus_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNextWindowDataFlags_ImGuiNextWindowDataFlags_1HasFocus_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasDock_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinextwindowdataflags_imguinextwindowdataflags_hasdock_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasBgAlpha_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNextWindowDataFlags_ImGuiNextWindowDataFlags_1HasBgAlpha_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasScroll_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNextWindowDataFlags_ImGuiNextWindowDataFlags_1HasScroll_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasWindowFlags_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNextWindowDataFlags_ImGuiNextWindowDataFlags_1HasWindowFlags_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasChildFlags_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNextWindowDataFlags_ImGuiNextWindowDataFlags_1HasChildFlags_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasRefreshPolicy_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNextWindowDataFlags_ImGuiNextWindowDataFlags_1HasRefreshPolicy_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasViewport_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNextWindowDataFlags_ImGuiNextWindowDataFlags_1HasViewport_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasDock_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNextWindowDataFlags_ImGuiNextWindowDataFlags_1HasDock_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasWindowClass_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiNextWindowDataFlags_ImGuiNextWindowDataFlags_1HasWindowClass_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiNextWindowDataFlags_HasWindowClass_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguinextwindowdataflags_imguinextwindowdataflags_haswindowclass_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

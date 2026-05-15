@@ -42,43 +42,35 @@ public enum ImGuiSelectableFlags implements NativeEnum<ImGuiSelectableFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_None;
-*/
-    private static native int ImGuiSelectableFlags_None_NATIVE();
+    private static int ImGuiSelectableFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSelectableFlags.ImGuiSelectableFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_NoAutoClosePopups;
-*/
-    private static native int ImGuiSelectableFlags_NoAutoClosePopups_NATIVE();
+    private static int ImGuiSelectableFlags_NoAutoClosePopups_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSelectableFlags.ImGuiSelectableFlags_NoAutoClosePopups_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_SpanAllColumns;
-*/
-    private static native int ImGuiSelectableFlags_SpanAllColumns_NATIVE();
+    private static int ImGuiSelectableFlags_SpanAllColumns_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSelectableFlags.ImGuiSelectableFlags_SpanAllColumns_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_AllowDoubleClick;
-*/
-    private static native int ImGuiSelectableFlags_AllowDoubleClick_NATIVE();
+    private static int ImGuiSelectableFlags_AllowDoubleClick_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSelectableFlags.ImGuiSelectableFlags_AllowDoubleClick_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_Disabled;
-*/
-    private static native int ImGuiSelectableFlags_Disabled_NATIVE();
+    private static int ImGuiSelectableFlags_Disabled_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSelectableFlags.ImGuiSelectableFlags_Disabled_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_AllowOverlap;
-*/
-    private static native int ImGuiSelectableFlags_AllowOverlap_NATIVE();
+    private static int ImGuiSelectableFlags_AllowOverlap_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSelectableFlags.ImGuiSelectableFlags_AllowOverlap_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_Highlight;
-*/
-    private static native int ImGuiSelectableFlags_Highlight_NATIVE();
+    private static int ImGuiSelectableFlags_Highlight_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSelectableFlags.ImGuiSelectableFlags_Highlight_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_SelectOnNav;
-*/
-    private static native int ImGuiSelectableFlags_SelectOnNav_NATIVE();
+    private static int ImGuiSelectableFlags_SelectOnNav_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSelectableFlags.ImGuiSelectableFlags_SelectOnNav_NATIVE();
+    }
 }

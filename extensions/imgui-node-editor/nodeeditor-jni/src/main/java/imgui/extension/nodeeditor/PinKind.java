@@ -34,13 +34,11 @@ public enum PinKind implements NativeEnum<PinKind> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)PinKind::Input;
-*/
-    private static native int Input_NATIVE();
+    private static int Input_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_PinKind.Input_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)PinKind::Output;
-*/
-    private static native int Output_NATIVE();
+    private static int Output_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_PinKind.Output_NATIVE();
+    }
 }

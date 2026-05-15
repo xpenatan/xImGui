@@ -34,21 +34,12 @@ public enum ImGuiPopupPositionPolicy implements NativeEnum<ImGuiPopupPositionPol
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiPopupPositionPolicy_Default;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiPopupPositionPolicy_Default;")
     private static native int ImGuiPopupPositionPolicy_Default_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiPopupPositionPolicy_ComboBox;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiPopupPositionPolicy_ComboBox;")
     private static native int ImGuiPopupPositionPolicy_ComboBox_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiPopupPositionPolicy_Tooltip;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiPopupPositionPolicy_Tooltip;")
     private static native int ImGuiPopupPositionPolicy_Tooltip_NATIVE();
 }

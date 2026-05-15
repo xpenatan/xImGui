@@ -52,111 +52,57 @@ public enum ImGuiButtonFlagsPrivate_ implements NativeEnum<ImGuiButtonFlagsPriva
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiButtonFlags_PressedOnClick;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiButtonFlags_PressedOnClick;")
     private static native int ImGuiButtonFlags_PressedOnClick_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiButtonFlags_PressedOnClickRelease;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiButtonFlags_PressedOnClickRelease;")
     private static native int ImGuiButtonFlags_PressedOnClickRelease_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiButtonFlags_PressedOnClickReleaseAnywhere;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiButtonFlags_PressedOnClickReleaseAnywhere;")
     private static native int ImGuiButtonFlags_PressedOnClickReleaseAnywhere_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiButtonFlags_PressedOnRelease;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiButtonFlags_PressedOnRelease;")
     private static native int ImGuiButtonFlags_PressedOnRelease_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiButtonFlags_PressedOnDoubleClick;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiButtonFlags_PressedOnDoubleClick;")
     private static native int ImGuiButtonFlags_PressedOnDoubleClick_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiButtonFlags_PressedOnDragDropHold;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiButtonFlags_PressedOnDragDropHold;")
     private static native int ImGuiButtonFlags_PressedOnDragDropHold_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiButtonFlags_FlattenChildren;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiButtonFlags_FlattenChildren;")
     private static native int ImGuiButtonFlags_FlattenChildren_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiButtonFlags_AllowOverlap;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiButtonFlags_AllowOverlap;")
     private static native int ImGuiButtonFlags_AllowOverlap_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiButtonFlags_AlignTextBaseLine;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiButtonFlags_AlignTextBaseLine;")
     private static native int ImGuiButtonFlags_AlignTextBaseLine_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiButtonFlags_NoKeyModsAllowed;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiButtonFlags_NoKeyModsAllowed;")
     private static native int ImGuiButtonFlags_NoKeyModsAllowed_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiButtonFlags_NoHoldingActiveId;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiButtonFlags_NoHoldingActiveId;")
     private static native int ImGuiButtonFlags_NoHoldingActiveId_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiButtonFlags_NoNavFocus;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiButtonFlags_NoNavFocus;")
     private static native int ImGuiButtonFlags_NoNavFocus_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiButtonFlags_NoHoveredOnFocus;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiButtonFlags_NoHoveredOnFocus;")
     private static native int ImGuiButtonFlags_NoHoveredOnFocus_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiButtonFlags_NoSetKeyOwner;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiButtonFlags_NoSetKeyOwner;")
     private static native int ImGuiButtonFlags_NoSetKeyOwner_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiButtonFlags_NoTestKeyOwner;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiButtonFlags_NoTestKeyOwner;")
     private static native int ImGuiButtonFlags_NoTestKeyOwner_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiButtonFlags_NoFocus;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiButtonFlags_NoFocus;")
     private static native int ImGuiButtonFlags_NoFocus_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiButtonFlags_PressedOnMask_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiButtonFlags_PressedOnMask_;")
     private static native int ImGuiButtonFlags_PressedOnMask__NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiButtonFlags_PressedOnDefault_;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiButtonFlags_PressedOnDefault_;")
     private static native int ImGuiButtonFlags_PressedOnDefault__NATIVE();
 }

@@ -30,9 +30,7 @@ public class ImFontBaked extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImFontBaked* nativeObject = (ImFontBaked*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ImFontBaked.internal_native_deleteNative(this_addr);
+    }
 }

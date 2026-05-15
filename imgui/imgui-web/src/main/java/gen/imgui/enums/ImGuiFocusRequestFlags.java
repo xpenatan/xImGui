@@ -34,21 +34,12 @@ public enum ImGuiFocusRequestFlags implements NativeEnum<ImGuiFocusRequestFlags>
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiFocusRequestFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiFocusRequestFlags_None;")
     private static native int ImGuiFocusRequestFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiFocusRequestFlags_RestoreFocusedChild;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiFocusRequestFlags_RestoreFocusedChild;")
     private static native int ImGuiFocusRequestFlags_RestoreFocusedChild_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiFocusRequestFlags_UnlessBelowModal;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiFocusRequestFlags_UnlessBelowModal;")
     private static native int ImGuiFocusRequestFlags_UnlessBelowModal_NATIVE();
 }

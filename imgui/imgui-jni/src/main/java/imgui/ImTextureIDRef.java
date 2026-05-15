@@ -17,20 +17,18 @@ public class ImTextureIDRef extends NativeObject {
         internal_reset(addr, true);
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)new ImTextureIDRef(value);
-*/
-    public static native long internal_native_create_long_addr(long value);
+    public static long internal_native_create_long_addr(long value) {
+        return imgui.natives.JNI_ImTextureIDRef.internal_native_create_long_addr(value);
+    }
 
     public ImTextureIDRef() {
         long addr = internal_native_create_addr();
         internal_reset(addr, true);
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)new ImTextureIDRef();
-*/
-    public static native long internal_native_create_addr();
+    public static long internal_native_create_addr() {
+        return imgui.natives.JNI_ImTextureIDRef.internal_native_create_addr();
+    }
 
     /**
      * Dummy constructor, used internally to creates objects without C++ pointer
@@ -50,19 +48,15 @@ return (jlong)new ImTextureIDRef();
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureIDRef* nativeObject = (ImTextureIDRef*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ImTextureIDRef.internal_native_deleteNative(this_addr);
+    }
 
     public long Get() {
         return internal_native_Get(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImTextureIDRef* nativeObject = (ImTextureIDRef*)this_addr;
-return nativeObject->Get();
-*/
-    public static native long internal_native_Get(long this_addr);
+    public static long internal_native_Get(long this_addr) {
+        return imgui.natives.JNI_ImTextureIDRef.internal_native_Get(this_addr);
+    }
 }

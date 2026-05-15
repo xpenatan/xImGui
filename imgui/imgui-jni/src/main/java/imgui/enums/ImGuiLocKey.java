@@ -48,73 +48,59 @@ public enum ImGuiLocKey implements NativeEnum<ImGuiLocKey> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_VersionStr;
-*/
-    private static native int ImGuiLocKey_VersionStr_NATIVE();
+    private static int ImGuiLocKey_VersionStr_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiLocKey.ImGuiLocKey_VersionStr_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_TableSizeOne;
-*/
-    private static native int ImGuiLocKey_TableSizeOne_NATIVE();
+    private static int ImGuiLocKey_TableSizeOne_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiLocKey.ImGuiLocKey_TableSizeOne_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_TableSizeAllFit;
-*/
-    private static native int ImGuiLocKey_TableSizeAllFit_NATIVE();
+    private static int ImGuiLocKey_TableSizeAllFit_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiLocKey.ImGuiLocKey_TableSizeAllFit_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_TableSizeAllDefault;
-*/
-    private static native int ImGuiLocKey_TableSizeAllDefault_NATIVE();
+    private static int ImGuiLocKey_TableSizeAllDefault_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiLocKey.ImGuiLocKey_TableSizeAllDefault_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_TableResetOrder;
-*/
-    private static native int ImGuiLocKey_TableResetOrder_NATIVE();
+    private static int ImGuiLocKey_TableResetOrder_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiLocKey.ImGuiLocKey_TableResetOrder_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_WindowingMainMenuBar;
-*/
-    private static native int ImGuiLocKey_WindowingMainMenuBar_NATIVE();
+    private static int ImGuiLocKey_WindowingMainMenuBar_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiLocKey.ImGuiLocKey_WindowingMainMenuBar_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_WindowingPopup;
-*/
-    private static native int ImGuiLocKey_WindowingPopup_NATIVE();
+    private static int ImGuiLocKey_WindowingPopup_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiLocKey.ImGuiLocKey_WindowingPopup_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_WindowingUntitled;
-*/
-    private static native int ImGuiLocKey_WindowingUntitled_NATIVE();
+    private static int ImGuiLocKey_WindowingUntitled_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiLocKey.ImGuiLocKey_WindowingUntitled_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_OpenLink_s;
-*/
-    private static native int ImGuiLocKey_OpenLink_s_NATIVE();
+    private static int ImGuiLocKey_OpenLink_s_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiLocKey.ImGuiLocKey_OpenLink_s_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_CopyLink;
-*/
-    private static native int ImGuiLocKey_CopyLink_NATIVE();
+    private static int ImGuiLocKey_CopyLink_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiLocKey.ImGuiLocKey_CopyLink_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_DockingHideTabBar;
-*/
-    private static native int ImGuiLocKey_DockingHideTabBar_NATIVE();
+    private static int ImGuiLocKey_DockingHideTabBar_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiLocKey.ImGuiLocKey_DockingHideTabBar_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_DockingHoldShiftToDock;
-*/
-    private static native int ImGuiLocKey_DockingHoldShiftToDock_NATIVE();
+    private static int ImGuiLocKey_DockingHoldShiftToDock_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiLocKey.ImGuiLocKey_DockingHoldShiftToDock_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_DockingDragToUndockOrMoveNode;
-*/
-    private static native int ImGuiLocKey_DockingDragToUndockOrMoveNode_NATIVE();
+    private static int ImGuiLocKey_DockingDragToUndockOrMoveNode_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiLocKey.ImGuiLocKey_DockingDragToUndockOrMoveNode_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiLocKey_COUNT;
-*/
-    private static native int ImGuiLocKey_COUNT_NATIVE();
+    private static int ImGuiLocKey_COUNT_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiLocKey.ImGuiLocKey_COUNT_NATIVE();
+    }
 }

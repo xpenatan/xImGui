@@ -16,10 +16,6 @@ public class ImGuiCollapseLayoutOptions extends ImGuiLayoutOptions {
         internal_reset(addr, true);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = new imlayout.ImGuiCollapseLayoutOptions();
-return imlayout.getPointer(jsObj);
-*/
     @org.teavm.jso.JSBody(script = "var jsObj = new imlayout.ImGuiCollapseLayoutOptions();return imlayout.getPointer(jsObj);")
     public static native int internal_native_create_addr();
 
@@ -42,10 +38,6 @@ return imlayout.getPointer(jsObj);
         internal_native_deleteNative(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);
-imlayout.destroy(jsObj);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);imlayout.destroy(jsObj);")
     public static native void internal_native_deleteNative(int this_addr);
 
@@ -53,10 +45,6 @@ imlayout.destroy(jsObj);
         return internal_native_get_arrowColor(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);
-return jsObj.get_arrowColor();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);return jsObj.get_arrowColor();")
     public static native int internal_native_get_arrowColor(int this_addr);
 
@@ -64,10 +52,6 @@ return jsObj.get_arrowColor();
         internal_native_set_arrowColor(native_address, arrowColor);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);
-jsObj.set_arrowColor(arrowColor);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "arrowColor"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);jsObj.set_arrowColor(arrowColor);")
     public static native void internal_native_set_arrowColor(int this_addr, int arrowColor);
 
@@ -75,10 +59,6 @@ jsObj.set_arrowColor(arrowColor);
         return internal_native_get_arrowBackgroundHoveredColor(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);
-return jsObj.get_arrowBackgroundHoveredColor();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);return jsObj.get_arrowBackgroundHoveredColor();")
     public static native int internal_native_get_arrowBackgroundHoveredColor(int this_addr);
 
@@ -86,10 +66,6 @@ return jsObj.get_arrowBackgroundHoveredColor();
         internal_native_set_arrowBackgroundHoveredColor(native_address, arrowBackgroundHoveredColor);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);
-jsObj.set_arrowBackgroundHoveredColor(arrowBackgroundHoveredColor);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "arrowBackgroundHoveredColor"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);jsObj.set_arrowBackgroundHoveredColor(arrowBackgroundHoveredColor);")
     public static native void internal_native_set_arrowBackgroundHoveredColor(int this_addr, int arrowBackgroundHoveredColor);
 
@@ -97,10 +73,6 @@ jsObj.set_arrowBackgroundHoveredColor(arrowBackgroundHoveredColor);
         return internal_native_get_arrowBackgroundClickedColor(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);
-return jsObj.get_arrowBackgroundClickedColor();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);return jsObj.get_arrowBackgroundClickedColor();")
     public static native int internal_native_get_arrowBackgroundClickedColor(int this_addr);
 
@@ -108,10 +80,6 @@ return jsObj.get_arrowBackgroundClickedColor();
         internal_native_set_arrowBackgroundClickedColor(native_address, arrowBackgroundClickedColor);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);
-jsObj.set_arrowBackgroundClickedColor(arrowBackgroundClickedColor);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "arrowBackgroundClickedColor"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);jsObj.set_arrowBackgroundClickedColor(arrowBackgroundClickedColor);")
     public static native void internal_native_set_arrowBackgroundClickedColor(int this_addr, int arrowBackgroundClickedColor);
 
@@ -119,10 +87,6 @@ jsObj.set_arrowBackgroundClickedColor(arrowBackgroundClickedColor);
         return internal_native_get_frameColor(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);
-return jsObj.get_frameColor();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);return jsObj.get_frameColor();")
     public static native int internal_native_get_frameColor(int this_addr);
 
@@ -130,10 +94,6 @@ return jsObj.get_frameColor();
         internal_native_set_frameColor(native_address, frameColor);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);
-jsObj.set_frameColor(frameColor);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "frameColor"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);jsObj.set_frameColor(frameColor);")
     public static native void internal_native_set_frameColor(int this_addr, int frameColor);
 
@@ -141,10 +101,6 @@ jsObj.set_frameColor(frameColor);
         return internal_native_get_borderColor(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);
-return jsObj.get_borderColor();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);return jsObj.get_borderColor();")
     public static native int internal_native_get_borderColor(int this_addr);
 
@@ -152,10 +108,6 @@ return jsObj.get_borderColor();
         internal_native_set_borderColor(native_address, borderColor);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);
-jsObj.set_borderColor(borderColor);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "borderColor"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);jsObj.set_borderColor(borderColor);")
     public static native void internal_native_set_borderColor(int this_addr, int borderColor);
 
@@ -163,10 +115,6 @@ jsObj.set_borderColor(borderColor);
         return internal_native_get_borderRound(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);
-return jsObj.get_borderRound();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);return jsObj.get_borderRound();")
     public static native int internal_native_get_borderRound(int this_addr);
 
@@ -174,10 +122,6 @@ return jsObj.get_borderRound();
         internal_native_set_borderRound(native_address, borderRound);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);
-jsObj.set_borderRound(borderRound);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "borderRound"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);jsObj.set_borderRound(borderRound);")
     public static native void internal_native_set_borderRound(int this_addr, int borderRound);
 
@@ -185,10 +129,6 @@ jsObj.set_borderRound(borderRound);
         return internal_native_get_roundingCorners(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);
-return jsObj.get_roundingCorners();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);return jsObj.get_roundingCorners();")
     public static native int internal_native_get_roundingCorners(int this_addr);
 
@@ -196,10 +136,6 @@ return jsObj.get_roundingCorners();
         internal_native_set_roundingCorners(native_address, roundingCorners);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);
-jsObj.set_roundingCorners(roundingCorners);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "roundingCorners"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);jsObj.set_roundingCorners(roundingCorners);")
     public static native void internal_native_set_roundingCorners(int this_addr, int roundingCorners);
 
@@ -207,10 +143,6 @@ jsObj.set_roundingCorners(roundingCorners);
         return internal_native_get_openDefault(native_address);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);
-return jsObj.get_openDefault();
-*/
     @org.teavm.jso.JSBody(params = {"this_addr"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);return jsObj.get_openDefault();")
     public static native boolean internal_native_get_openDefault(int this_addr);
 
@@ -218,10 +150,6 @@ return jsObj.get_openDefault();
         internal_native_set_openDefault(native_address, openDefault);
     }
 
-    /*[-TEAVM;-NATIVE]
-var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);
-jsObj.set_openDefault(openDefault);
-*/
     @org.teavm.jso.JSBody(params = {"this_addr", "openDefault"}, script = "var jsObj = imlayout.wrapPointer(this_addr, imlayout.ImGuiCollapseLayoutOptions);jsObj.set_openDefault(openDefault);")
     public static native void internal_native_set_openDefault(int this_addr, boolean openDefault);
 }

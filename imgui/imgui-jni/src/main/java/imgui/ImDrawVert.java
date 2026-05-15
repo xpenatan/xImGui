@@ -34,11 +34,9 @@ public class ImDrawVert extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawVert* nativeObject = (ImDrawVert*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ImDrawVert.internal_native_deleteNative(this_addr);
+    }
 
     public ImVec2 get_pos() {
         long addr = internal_native_get_pos_addr(native_address);
@@ -50,21 +48,17 @@ delete nativeObject;
         return ImVec2_TEMP_GEN_0;
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawVert* nativeObject = (ImDrawVert*)this_addr;
-return (jlong)&nativeObject->pos;
-*/
-    public static native long internal_native_get_pos_addr(long this_addr);
+    public static long internal_native_get_pos_addr(long this_addr) {
+        return imgui.natives.JNI_ImDrawVert.internal_native_get_pos_addr(this_addr);
+    }
 
     public void set_pos(ImVec2 pos) {
         internal_native_set_pos(native_address, pos.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawVert* nativeObject = (ImDrawVert*)this_addr;
-nativeObject->pos = *((ImVec2*)pos_addr);
-*/
-    public static native void internal_native_set_pos(long this_addr, long pos_addr);
+    public static void internal_native_set_pos(long this_addr, long pos_addr) {
+        imgui.natives.JNI_ImDrawVert.internal_native_set_pos(this_addr, pos_addr);
+    }
 
     public ImVec2 get_uv() {
         long addr = internal_native_get_uv_addr(native_address);
@@ -76,39 +70,31 @@ nativeObject->pos = *((ImVec2*)pos_addr);
         return ImVec2_TEMP_GEN_1;
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawVert* nativeObject = (ImDrawVert*)this_addr;
-return (jlong)&nativeObject->uv;
-*/
-    public static native long internal_native_get_uv_addr(long this_addr);
+    public static long internal_native_get_uv_addr(long this_addr) {
+        return imgui.natives.JNI_ImDrawVert.internal_native_get_uv_addr(this_addr);
+    }
 
     public void set_uv(ImVec2 uv) {
         internal_native_set_uv(native_address, uv.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawVert* nativeObject = (ImDrawVert*)this_addr;
-nativeObject->uv = *((ImVec2*)uv_addr);
-*/
-    public static native void internal_native_set_uv(long this_addr, long uv_addr);
+    public static void internal_native_set_uv(long this_addr, long uv_addr) {
+        imgui.natives.JNI_ImDrawVert.internal_native_set_uv(this_addr, uv_addr);
+    }
 
     public int get_col() {
         return internal_native_get_col(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawVert* nativeObject = (ImDrawVert*)this_addr;
-return nativeObject->col;
-*/
-    public static native int internal_native_get_col(long this_addr);
+    public static int internal_native_get_col(long this_addr) {
+        return imgui.natives.JNI_ImDrawVert.internal_native_get_col(this_addr);
+    }
 
     public void set_col(int col) {
         internal_native_set_col(native_address, col);
     }
 
-    /*[-JNI;-NATIVE]
-ImDrawVert* nativeObject = (ImDrawVert*)this_addr;
-nativeObject->col = col;
-*/
-    public static native void internal_native_set_col(long this_addr, int col);
+    public static void internal_native_set_col(long this_addr, int col) {
+        imgui.natives.JNI_ImDrawVert.internal_native_set_col(this_addr, col);
+    }
 }

@@ -41,38 +41,31 @@ public enum ImGuiItemFlags implements NativeEnum<ImGuiItemFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_None;
-*/
-    private static native int ImGuiItemFlags_None_NATIVE();
+    private static int ImGuiItemFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiItemFlags.ImGuiItemFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_NoTabStop;
-*/
-    private static native int ImGuiItemFlags_NoTabStop_NATIVE();
+    private static int ImGuiItemFlags_NoTabStop_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiItemFlags.ImGuiItemFlags_NoTabStop_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_NoNav;
-*/
-    private static native int ImGuiItemFlags_NoNav_NATIVE();
+    private static int ImGuiItemFlags_NoNav_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiItemFlags.ImGuiItemFlags_NoNav_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_NoNavDefaultFocus;
-*/
-    private static native int ImGuiItemFlags_NoNavDefaultFocus_NATIVE();
+    private static int ImGuiItemFlags_NoNavDefaultFocus_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiItemFlags.ImGuiItemFlags_NoNavDefaultFocus_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_ButtonRepeat;
-*/
-    private static native int ImGuiItemFlags_ButtonRepeat_NATIVE();
+    private static int ImGuiItemFlags_ButtonRepeat_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiItemFlags.ImGuiItemFlags_ButtonRepeat_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_AutoClosePopups;
-*/
-    private static native int ImGuiItemFlags_AutoClosePopups_NATIVE();
+    private static int ImGuiItemFlags_AutoClosePopups_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiItemFlags.ImGuiItemFlags_AutoClosePopups_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiItemFlags_AllowDuplicateId;
-*/
-    private static native int ImGuiItemFlags_AllowDuplicateId_NATIVE();
+    private static int ImGuiItemFlags_AllowDuplicateId_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiItemFlags.ImGuiItemFlags_AllowDuplicateId_NATIVE();
+    }
 }

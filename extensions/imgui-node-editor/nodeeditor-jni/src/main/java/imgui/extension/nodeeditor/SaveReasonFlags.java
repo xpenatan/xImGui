@@ -42,43 +42,35 @@ public enum SaveReasonFlags implements NativeEnum<SaveReasonFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)SaveReasonFlags::None;
-*/
-    private static native int None_NATIVE();
+    private static int None_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_SaveReasonFlags.None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)SaveReasonFlags::Navigation;
-*/
-    private static native int Navigation_NATIVE();
+    private static int Navigation_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_SaveReasonFlags.Navigation_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)SaveReasonFlags::Position;
-*/
-    private static native int Position_NATIVE();
+    private static int Position_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_SaveReasonFlags.Position_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)SaveReasonFlags::Size;
-*/
-    private static native int Size_NATIVE();
+    private static int Size_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_SaveReasonFlags.Size_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)SaveReasonFlags::Selection;
-*/
-    private static native int Selection_NATIVE();
+    private static int Selection_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_SaveReasonFlags.Selection_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)SaveReasonFlags::AddNode;
-*/
-    private static native int AddNode_NATIVE();
+    private static int AddNode_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_SaveReasonFlags.AddNode_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)SaveReasonFlags::RemoveNode;
-*/
-    private static native int RemoveNode_NATIVE();
+    private static int RemoveNode_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_SaveReasonFlags.RemoveNode_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)SaveReasonFlags::User;
-*/
-    private static native int User_NATIVE();
+    private static int User_NATIVE() {
+        return imgui.extension.nodeeditor.natives.JNI_SaveReasonFlags.User_NATIVE();
+    }
 }

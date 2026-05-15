@@ -56,231 +56,156 @@ public enum ImGuiViewportFlags implements NativeEnum<ImGuiViewportFlags> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiViewportFlags_None;
-*/
     private static int ImGuiViewportFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiViewportFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiViewportFlags_IsPlatformWindow;
-*/
     private static int ImGuiViewportFlags_IsPlatformWindow_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiViewportFlags_IsPlatformWindow_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiViewportFlags_IsPlatformMonitor;
-*/
     private static int ImGuiViewportFlags_IsPlatformMonitor_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiViewportFlags_IsPlatformMonitor_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiViewportFlags_OwnedByApp;
-*/
     private static int ImGuiViewportFlags_OwnedByApp_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiViewportFlags_OwnedByApp_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiViewportFlags_NoDecoration;
-*/
     private static int ImGuiViewportFlags_NoDecoration_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiViewportFlags_NoDecoration_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiViewportFlags_NoTaskBarIcon;
-*/
     private static int ImGuiViewportFlags_NoTaskBarIcon_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiViewportFlags_NoTaskBarIcon_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiViewportFlags_NoFocusOnAppearing;
-*/
     private static int ImGuiViewportFlags_NoFocusOnAppearing_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiViewportFlags_NoFocusOnAppearing_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiViewportFlags_NoFocusOnClick;
-*/
     private static int ImGuiViewportFlags_NoFocusOnClick_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiViewportFlags_NoFocusOnClick_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiViewportFlags_NoInputs;
-*/
     private static int ImGuiViewportFlags_NoInputs_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiViewportFlags_NoInputs_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiViewportFlags_NoRendererClear;
-*/
     private static int ImGuiViewportFlags_NoRendererClear_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiViewportFlags_NoRendererClear_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiViewportFlags_NoAutoMerge;
-*/
     private static int ImGuiViewportFlags_NoAutoMerge_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiViewportFlags_NoAutoMerge_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiViewportFlags_TopMost;
-*/
     private static int ImGuiViewportFlags_TopMost_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiViewportFlags_TopMost_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiViewportFlags_CanHostOtherWindows;
-*/
     private static int ImGuiViewportFlags_CanHostOtherWindows_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiViewportFlags_CanHostOtherWindows_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiViewportFlags_IsMinimized;
-*/
     private static int ImGuiViewportFlags_IsMinimized_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiViewportFlags_IsMinimized_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiViewportFlags_IsFocused;
-*/
     private static int ImGuiViewportFlags_IsFocused_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiViewportFlags_IsFocused_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiviewportflags_imguiviewportflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_IsPlatformWindow_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiviewportflags_imguiviewportflags_isplatformwindow_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_IsPlatformMonitor_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiviewportflags_imguiviewportflags_isplatformmonitor_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_OwnedByApp_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiviewportflags_imguiviewportflags_ownedbyapp_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_NoDecoration_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiviewportflags_imguiviewportflags_nodecoration_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_NoTaskBarIcon_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiviewportflags_imguiviewportflags_notaskbaricon_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_NoFocusOnAppearing_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiviewportflags_imguiviewportflags_nofocusonappearing_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiViewportFlags_ImGuiViewportFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_NoFocusOnClick_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiviewportflags_imguiviewportflags_nofocusonclick_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_IsPlatformWindow_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiViewportFlags_ImGuiViewportFlags_1IsPlatformWindow_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_NoInputs_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiviewportflags_imguiviewportflags_noinputs_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_IsPlatformMonitor_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiViewportFlags_ImGuiViewportFlags_1IsPlatformMonitor_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_NoRendererClear_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiviewportflags_imguiviewportflags_norendererclear_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_OwnedByApp_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiViewportFlags_ImGuiViewportFlags_1OwnedByApp_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_NoAutoMerge_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiviewportflags_imguiviewportflags_noautomerge_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_NoDecoration_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiViewportFlags_ImGuiViewportFlags_1NoDecoration_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_TopMost_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiviewportflags_imguiviewportflags_topmost_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_NoTaskBarIcon_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiViewportFlags_ImGuiViewportFlags_1NoTaskBarIcon_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_CanHostOtherWindows_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiviewportflags_imguiviewportflags_canhostotherwindows_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_NoFocusOnAppearing_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiViewportFlags_ImGuiViewportFlags_1NoFocusOnAppearing_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_IsMinimized_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiviewportflags_imguiviewportflags_isminimized_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_NoFocusOnClick_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiViewportFlags_ImGuiViewportFlags_1NoFocusOnClick_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_NoInputs_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiViewportFlags_ImGuiViewportFlags_1NoInputs_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_NoRendererClear_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiViewportFlags_ImGuiViewportFlags_1NoRendererClear_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_NoAutoMerge_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiViewportFlags_ImGuiViewportFlags_1NoAutoMerge_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_TopMost_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiViewportFlags_ImGuiViewportFlags_1TopMost_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_CanHostOtherWindows_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiViewportFlags_ImGuiViewportFlags_1CanHostOtherWindows_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_IsMinimized_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiViewportFlags_ImGuiViewportFlags_1IsMinimized_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_IsFocused_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiViewportFlags_ImGuiViewportFlags_1IsFocused_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiViewportFlags_IsFocused_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguiviewportflags_imguiviewportflags_isfocused_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

@@ -62,309 +62,216 @@ public enum ImGuiHoveredFlags implements NativeEnum<ImGuiHoveredFlags> {
         return CUSTOM;
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiHoveredFlags_None;
-*/
     private static int ImGuiHoveredFlags_None_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiHoveredFlags_None_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiHoveredFlags_ChildWindows;
-*/
     private static int ImGuiHoveredFlags_ChildWindows_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiHoveredFlags_ChildWindows_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiHoveredFlags_RootWindow;
-*/
     private static int ImGuiHoveredFlags_RootWindow_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiHoveredFlags_RootWindow_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiHoveredFlags_AnyWindow;
-*/
     private static int ImGuiHoveredFlags_AnyWindow_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiHoveredFlags_AnyWindow_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiHoveredFlags_NoPopupHierarchy;
-*/
     private static int ImGuiHoveredFlags_NoPopupHierarchy_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiHoveredFlags_NoPopupHierarchy_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiHoveredFlags_DockHierarchy;
-*/
     private static int ImGuiHoveredFlags_DockHierarchy_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiHoveredFlags_DockHierarchy_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiHoveredFlags_AllowWhenBlockedByPopup;
-*/
     private static int ImGuiHoveredFlags_AllowWhenBlockedByPopup_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiHoveredFlags_AllowWhenBlockedByPopup_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiHoveredFlags_AllowWhenBlockedByActiveItem;
-*/
     private static int ImGuiHoveredFlags_AllowWhenBlockedByActiveItem_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiHoveredFlags_AllowWhenBlockedByActiveItem_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiHoveredFlags_AllowWhenOverlappedByItem;
-*/
     private static int ImGuiHoveredFlags_AllowWhenOverlappedByItem_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiHoveredFlags_AllowWhenOverlappedByItem_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiHoveredFlags_AllowWhenOverlappedByWindow;
-*/
     private static int ImGuiHoveredFlags_AllowWhenOverlappedByWindow_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiHoveredFlags_AllowWhenOverlappedByWindow_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiHoveredFlags_AllowWhenDisabled;
-*/
     private static int ImGuiHoveredFlags_AllowWhenDisabled_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiHoveredFlags_AllowWhenDisabled_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiHoveredFlags_NoNavOverride;
-*/
     private static int ImGuiHoveredFlags_NoNavOverride_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiHoveredFlags_NoNavOverride_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiHoveredFlags_AllowWhenOverlapped;
-*/
     private static int ImGuiHoveredFlags_AllowWhenOverlapped_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiHoveredFlags_AllowWhenOverlapped_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiHoveredFlags_RectOnly;
-*/
     private static int ImGuiHoveredFlags_RectOnly_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiHoveredFlags_RectOnly_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiHoveredFlags_RootAndChildWindows;
-*/
     private static int ImGuiHoveredFlags_RootAndChildWindows_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiHoveredFlags_RootAndChildWindows_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiHoveredFlags_ForTooltip;
-*/
     private static int ImGuiHoveredFlags_ForTooltip_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiHoveredFlags_ForTooltip_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiHoveredFlags_Stationary;
-*/
     private static int ImGuiHoveredFlags_Stationary_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiHoveredFlags_Stationary_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiHoveredFlags_DelayNone;
-*/
     private static int ImGuiHoveredFlags_DelayNone_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiHoveredFlags_DelayNone_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiHoveredFlags_DelayShort;
-*/
     private static int ImGuiHoveredFlags_DelayShort_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiHoveredFlags_DelayShort_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiHoveredFlags_DelayNormal;
-*/
     private static int ImGuiHoveredFlags_DelayNormal_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiHoveredFlags_DelayNormal_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
-    /*[-FFM;-NATIVE]
-return (int64_t)ImGuiHoveredFlags_NoSharedDelay;
-*/
     private static int ImGuiHoveredFlags_NoSharedDelay_NATIVE() {
         try {
             return (int) FFMHandles.ImGuiHoveredFlags_NoSharedDelay_NATIVE__.invokeExact();
         } catch (Throwable e) {
-            throw FFMHandles.rethrow(e);
+            throw com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.rethrow(e);
         }
     }
 
     private static final class FFMHandles {
 
-        private static final java.lang.foreign.SymbolLookup LOOKUP = java.lang.foreign.SymbolLookup.loaderLookup();
+        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_None_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguihoveredflags_imguihoveredflags_none_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_CRITICAL = new java.lang.foreign.Linker.Option[] { java.lang.foreign.Linker.Option.critical(true) };
+        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_ChildWindows_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguihoveredflags_imguihoveredflags_childwindows_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker.Option[] LINKER_OPTIONS_DEFAULT = new java.lang.foreign.Linker.Option[0];
+        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_RootWindow_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguihoveredflags_imguihoveredflags_rootwindow_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        private static final java.lang.foreign.Linker LINKER = java.lang.foreign.Linker.nativeLinker();
+        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_AnyWindow_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguihoveredflags_imguihoveredflags_anywindow_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static RuntimeException rethrow(Throwable e) {
-            if (e instanceof RuntimeException)
-                return (RuntimeException) e;
-            if (e instanceof Error)
-                throw (Error) e;
-            return new RuntimeException(e);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_NoPopupHierarchy_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguihoveredflags_imguihoveredflags_nopopuphierarchy_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallDefault(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-        }
+        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_DockHierarchy_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguihoveredflags_imguihoveredflags_dockhierarchy_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static java.lang.invoke.MethodHandle downcallCritical(String symbolName, java.lang.foreign.FunctionDescriptor descriptor) {
-            java.lang.foreign.MemorySegment symbol = LOOKUP.find(symbolName).orElseThrow();
-            try {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_CRITICAL);
-            } catch (Throwable ignored) {
-                return LINKER.downcallHandle(symbol, descriptor, LINKER_OPTIONS_DEFAULT);
-            }
-        }
+        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_AllowWhenBlockedByPopup_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguihoveredflags_imguihoveredflags_allowwhenblockedbypopup_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_None_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiHoveredFlags_ImGuiHoveredFlags_1None_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_AllowWhenBlockedByActiveItem_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguihoveredflags_imguihoveredflags_allowwhenblockedbyactiveitem_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_ChildWindows_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiHoveredFlags_ImGuiHoveredFlags_1ChildWindows_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_AllowWhenOverlappedByItem_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguihoveredflags_imguihoveredflags_allowwhenoverlappedbyitem_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_RootWindow_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiHoveredFlags_ImGuiHoveredFlags_1RootWindow_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_AllowWhenOverlappedByWindow_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguihoveredflags_imguihoveredflags_allowwhenoverlappedbywindow_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_AnyWindow_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiHoveredFlags_ImGuiHoveredFlags_1AnyWindow_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_AllowWhenDisabled_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguihoveredflags_imguihoveredflags_allowwhendisabled_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_NoPopupHierarchy_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiHoveredFlags_ImGuiHoveredFlags_1NoPopupHierarchy_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_NoNavOverride_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguihoveredflags_imguihoveredflags_nonavoverride_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_DockHierarchy_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiHoveredFlags_ImGuiHoveredFlags_1DockHierarchy_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_AllowWhenOverlapped_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguihoveredflags_imguihoveredflags_allowwhenoverlapped_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_AllowWhenBlockedByPopup_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiHoveredFlags_ImGuiHoveredFlags_1AllowWhenBlockedByPopup_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_RectOnly_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguihoveredflags_imguihoveredflags_rectonly_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_AllowWhenBlockedByActiveItem_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiHoveredFlags_ImGuiHoveredFlags_1AllowWhenBlockedByActiveItem_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_RootAndChildWindows_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguihoveredflags_imguihoveredflags_rootandchildwindows_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_AllowWhenOverlappedByItem_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiHoveredFlags_ImGuiHoveredFlags_1AllowWhenOverlappedByItem_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_ForTooltip_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguihoveredflags_imguihoveredflags_fortooltip_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_AllowWhenOverlappedByWindow_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiHoveredFlags_ImGuiHoveredFlags_1AllowWhenOverlappedByWindow_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_Stationary_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguihoveredflags_imguihoveredflags_stationary_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_AllowWhenDisabled_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiHoveredFlags_ImGuiHoveredFlags_1AllowWhenDisabled_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_DelayNone_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguihoveredflags_imguihoveredflags_delaynone_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_NoNavOverride_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiHoveredFlags_ImGuiHoveredFlags_1NoNavOverride_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_DelayShort_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguihoveredflags_imguihoveredflags_delayshort_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_AllowWhenOverlapped_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiHoveredFlags_ImGuiHoveredFlags_1AllowWhenOverlapped_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_DelayNormal_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguihoveredflags_imguihoveredflags_delaynormal_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
 
-        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_RectOnly_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiHoveredFlags_ImGuiHoveredFlags_1RectOnly_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_RootAndChildWindows_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiHoveredFlags_ImGuiHoveredFlags_1RootAndChildWindows_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_ForTooltip_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiHoveredFlags_ImGuiHoveredFlags_1ForTooltip_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_Stationary_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiHoveredFlags_ImGuiHoveredFlags_1Stationary_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_DelayNone_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiHoveredFlags_ImGuiHoveredFlags_1DelayNone_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_DelayShort_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiHoveredFlags_ImGuiHoveredFlags_1DelayShort_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_DelayNormal_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiHoveredFlags_ImGuiHoveredFlags_1DelayNormal_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
-
-        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_NoSharedDelay_NATIVE__ = downcallDefault("jparser_imgui_enums_ImGuiHoveredFlags_ImGuiHoveredFlags_1NoSharedDelay_1NATIVE__", FunctionDescriptor.of(ValueLayout.JAVA_INT));
+        static final java.lang.invoke.MethodHandle ImGuiHoveredFlags_NoSharedDelay_NATIVE__ = com.github.xpenatan.jparser.runtime.helper.FFMDowncallHelper.downcallCritical("imgui_enums_imguihoveredflags_imguihoveredflags_noshareddelay_native", FunctionDescriptor.of(ValueLayout.JAVA_INT));
     }
 }

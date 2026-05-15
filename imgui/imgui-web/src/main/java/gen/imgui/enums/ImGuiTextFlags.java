@@ -34,15 +34,9 @@ public enum ImGuiTextFlags implements NativeEnum<ImGuiTextFlags> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTextFlags_None;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTextFlags_None;")
     private static native int ImGuiTextFlags_None_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiTextFlags_NoWidthForLargeClippedText;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiTextFlags_NoWidthForLargeClippedText;")
     private static native int ImGuiTextFlags_NoWidthForLargeClippedText_NATIVE();
 }

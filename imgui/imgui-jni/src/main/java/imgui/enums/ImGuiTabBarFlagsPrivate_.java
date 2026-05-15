@@ -34,18 +34,15 @@ public enum ImGuiTabBarFlagsPrivate_ implements NativeEnum<ImGuiTabBarFlagsPriva
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabBarFlags_DockNode;
-*/
-    private static native int ImGuiTabBarFlags_DockNode_NATIVE();
+    private static int ImGuiTabBarFlags_DockNode_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabBarFlagsPrivate_.ImGuiTabBarFlags_DockNode_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabBarFlags_IsFocused;
-*/
-    private static native int ImGuiTabBarFlags_IsFocused_NATIVE();
+    private static int ImGuiTabBarFlags_IsFocused_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabBarFlagsPrivate_.ImGuiTabBarFlags_IsFocused_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabBarFlags_SaveSettings;
-*/
-    private static native int ImGuiTabBarFlags_SaveSettings_NATIVE();
+    private static int ImGuiTabBarFlags_SaveSettings_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabBarFlagsPrivate_.ImGuiTabBarFlags_SaveSettings_NATIVE();
+    }
 }

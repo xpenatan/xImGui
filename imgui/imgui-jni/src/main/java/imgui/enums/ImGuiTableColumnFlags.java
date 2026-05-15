@@ -62,143 +62,115 @@ public enum ImGuiTableColumnFlags implements NativeEnum<ImGuiTableColumnFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_None;
-*/
-    private static native int ImGuiTableColumnFlags_None_NATIVE();
+    private static int ImGuiTableColumnFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_Disabled;
-*/
-    private static native int ImGuiTableColumnFlags_Disabled_NATIVE();
+    private static int ImGuiTableColumnFlags_Disabled_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_Disabled_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_DefaultHide;
-*/
-    private static native int ImGuiTableColumnFlags_DefaultHide_NATIVE();
+    private static int ImGuiTableColumnFlags_DefaultHide_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_DefaultHide_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_DefaultSort;
-*/
-    private static native int ImGuiTableColumnFlags_DefaultSort_NATIVE();
+    private static int ImGuiTableColumnFlags_DefaultSort_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_DefaultSort_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_WidthStretch;
-*/
-    private static native int ImGuiTableColumnFlags_WidthStretch_NATIVE();
+    private static int ImGuiTableColumnFlags_WidthStretch_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_WidthStretch_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_WidthFixed;
-*/
-    private static native int ImGuiTableColumnFlags_WidthFixed_NATIVE();
+    private static int ImGuiTableColumnFlags_WidthFixed_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_WidthFixed_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_NoResize;
-*/
-    private static native int ImGuiTableColumnFlags_NoResize_NATIVE();
+    private static int ImGuiTableColumnFlags_NoResize_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_NoResize_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_NoReorder;
-*/
-    private static native int ImGuiTableColumnFlags_NoReorder_NATIVE();
+    private static int ImGuiTableColumnFlags_NoReorder_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_NoReorder_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_NoHide;
-*/
-    private static native int ImGuiTableColumnFlags_NoHide_NATIVE();
+    private static int ImGuiTableColumnFlags_NoHide_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_NoHide_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_NoClip;
-*/
-    private static native int ImGuiTableColumnFlags_NoClip_NATIVE();
+    private static int ImGuiTableColumnFlags_NoClip_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_NoClip_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_NoSort;
-*/
-    private static native int ImGuiTableColumnFlags_NoSort_NATIVE();
+    private static int ImGuiTableColumnFlags_NoSort_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_NoSort_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_NoSortAscending;
-*/
-    private static native int ImGuiTableColumnFlags_NoSortAscending_NATIVE();
+    private static int ImGuiTableColumnFlags_NoSortAscending_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_NoSortAscending_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_NoSortDescending;
-*/
-    private static native int ImGuiTableColumnFlags_NoSortDescending_NATIVE();
+    private static int ImGuiTableColumnFlags_NoSortDescending_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_NoSortDescending_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_NoHeaderLabel;
-*/
-    private static native int ImGuiTableColumnFlags_NoHeaderLabel_NATIVE();
+    private static int ImGuiTableColumnFlags_NoHeaderLabel_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_NoHeaderLabel_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_NoHeaderWidth;
-*/
-    private static native int ImGuiTableColumnFlags_NoHeaderWidth_NATIVE();
+    private static int ImGuiTableColumnFlags_NoHeaderWidth_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_NoHeaderWidth_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_PreferSortAscending;
-*/
-    private static native int ImGuiTableColumnFlags_PreferSortAscending_NATIVE();
+    private static int ImGuiTableColumnFlags_PreferSortAscending_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_PreferSortAscending_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_PreferSortDescending;
-*/
-    private static native int ImGuiTableColumnFlags_PreferSortDescending_NATIVE();
+    private static int ImGuiTableColumnFlags_PreferSortDescending_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_PreferSortDescending_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_IndentEnable;
-*/
-    private static native int ImGuiTableColumnFlags_IndentEnable_NATIVE();
+    private static int ImGuiTableColumnFlags_IndentEnable_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_IndentEnable_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_IndentDisable;
-*/
-    private static native int ImGuiTableColumnFlags_IndentDisable_NATIVE();
+    private static int ImGuiTableColumnFlags_IndentDisable_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_IndentDisable_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_AngledHeader;
-*/
-    private static native int ImGuiTableColumnFlags_AngledHeader_NATIVE();
+    private static int ImGuiTableColumnFlags_AngledHeader_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_AngledHeader_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_IsEnabled;
-*/
-    private static native int ImGuiTableColumnFlags_IsEnabled_NATIVE();
+    private static int ImGuiTableColumnFlags_IsEnabled_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_IsEnabled_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_IsVisible;
-*/
-    private static native int ImGuiTableColumnFlags_IsVisible_NATIVE();
+    private static int ImGuiTableColumnFlags_IsVisible_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_IsVisible_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_IsSorted;
-*/
-    private static native int ImGuiTableColumnFlags_IsSorted_NATIVE();
+    private static int ImGuiTableColumnFlags_IsSorted_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_IsSorted_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_IsHovered;
-*/
-    private static native int ImGuiTableColumnFlags_IsHovered_NATIVE();
+    private static int ImGuiTableColumnFlags_IsHovered_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_IsHovered_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_WidthMask_;
-*/
-    private static native int ImGuiTableColumnFlags_WidthMask__NATIVE();
+    private static int ImGuiTableColumnFlags_WidthMask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_WidthMask__NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_IndentMask_;
-*/
-    private static native int ImGuiTableColumnFlags_IndentMask__NATIVE();
+    private static int ImGuiTableColumnFlags_IndentMask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_IndentMask__NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_StatusMask_;
-*/
-    private static native int ImGuiTableColumnFlags_StatusMask__NATIVE();
+    private static int ImGuiTableColumnFlags_StatusMask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_StatusMask__NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableColumnFlags_NoDirectResize_;
-*/
-    private static native int ImGuiTableColumnFlags_NoDirectResize__NATIVE();
+    private static int ImGuiTableColumnFlags_NoDirectResize__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableColumnFlags.ImGuiTableColumnFlags_NoDirectResize__NATIVE();
+    }
 }

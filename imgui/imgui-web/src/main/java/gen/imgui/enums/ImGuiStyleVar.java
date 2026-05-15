@@ -74,243 +74,123 @@ public enum ImGuiStyleVar implements NativeEnum<ImGuiStyleVar> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_Alpha;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_Alpha;")
     private static native int ImGuiStyleVar_Alpha_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_DisabledAlpha;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_DisabledAlpha;")
     private static native int ImGuiStyleVar_DisabledAlpha_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_WindowPadding;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_WindowPadding;")
     private static native int ImGuiStyleVar_WindowPadding_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_WindowRounding;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_WindowRounding;")
     private static native int ImGuiStyleVar_WindowRounding_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_WindowBorderSize;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_WindowBorderSize;")
     private static native int ImGuiStyleVar_WindowBorderSize_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_WindowMinSize;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_WindowMinSize;")
     private static native int ImGuiStyleVar_WindowMinSize_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_WindowTitleAlign;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_WindowTitleAlign;")
     private static native int ImGuiStyleVar_WindowTitleAlign_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_ChildRounding;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_ChildRounding;")
     private static native int ImGuiStyleVar_ChildRounding_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_ChildBorderSize;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_ChildBorderSize;")
     private static native int ImGuiStyleVar_ChildBorderSize_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_PopupRounding;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_PopupRounding;")
     private static native int ImGuiStyleVar_PopupRounding_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_PopupBorderSize;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_PopupBorderSize;")
     private static native int ImGuiStyleVar_PopupBorderSize_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_FramePadding;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_FramePadding;")
     private static native int ImGuiStyleVar_FramePadding_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_FrameRounding;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_FrameRounding;")
     private static native int ImGuiStyleVar_FrameRounding_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_FrameBorderSize;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_FrameBorderSize;")
     private static native int ImGuiStyleVar_FrameBorderSize_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_ItemSpacing;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_ItemSpacing;")
     private static native int ImGuiStyleVar_ItemSpacing_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_ItemInnerSpacing;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_ItemInnerSpacing;")
     private static native int ImGuiStyleVar_ItemInnerSpacing_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_IndentSpacing;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_IndentSpacing;")
     private static native int ImGuiStyleVar_IndentSpacing_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_CellPadding;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_CellPadding;")
     private static native int ImGuiStyleVar_CellPadding_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_ScrollbarSize;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_ScrollbarSize;")
     private static native int ImGuiStyleVar_ScrollbarSize_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_ScrollbarRounding;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_ScrollbarRounding;")
     private static native int ImGuiStyleVar_ScrollbarRounding_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_ScrollbarPadding;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_ScrollbarPadding;")
     private static native int ImGuiStyleVar_ScrollbarPadding_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_GrabMinSize;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_GrabMinSize;")
     private static native int ImGuiStyleVar_GrabMinSize_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_GrabRounding;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_GrabRounding;")
     private static native int ImGuiStyleVar_GrabRounding_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_ImageBorderSize;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_ImageBorderSize;")
     private static native int ImGuiStyleVar_ImageBorderSize_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_TabRounding;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_TabRounding;")
     private static native int ImGuiStyleVar_TabRounding_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_TabBorderSize;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_TabBorderSize;")
     private static native int ImGuiStyleVar_TabBorderSize_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_TabMinWidthBase;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_TabMinWidthBase;")
     private static native int ImGuiStyleVar_TabMinWidthBase_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_TabMinWidthShrink;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_TabMinWidthShrink;")
     private static native int ImGuiStyleVar_TabMinWidthShrink_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_TabBarBorderSize;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_TabBarBorderSize;")
     private static native int ImGuiStyleVar_TabBarBorderSize_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_TabBarOverlineSize;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_TabBarOverlineSize;")
     private static native int ImGuiStyleVar_TabBarOverlineSize_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_TableAngledHeadersAngle;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_TableAngledHeadersAngle;")
     private static native int ImGuiStyleVar_TableAngledHeadersAngle_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_TableAngledHeadersTextAlign;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_TableAngledHeadersTextAlign;")
     private static native int ImGuiStyleVar_TableAngledHeadersTextAlign_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_TreeLinesSize;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_TreeLinesSize;")
     private static native int ImGuiStyleVar_TreeLinesSize_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_TreeLinesRounding;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_TreeLinesRounding;")
     private static native int ImGuiStyleVar_TreeLinesRounding_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_ButtonTextAlign;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_ButtonTextAlign;")
     private static native int ImGuiStyleVar_ButtonTextAlign_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_SelectableTextAlign;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_SelectableTextAlign;")
     private static native int ImGuiStyleVar_SelectableTextAlign_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_SeparatorTextBorderSize;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_SeparatorTextBorderSize;")
     private static native int ImGuiStyleVar_SeparatorTextBorderSize_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_SeparatorTextAlign;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_SeparatorTextAlign;")
     private static native int ImGuiStyleVar_SeparatorTextAlign_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_SeparatorTextPadding;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_SeparatorTextPadding;")
     private static native int ImGuiStyleVar_SeparatorTextPadding_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiStyleVar_DockingSeparatorSize;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiStyleVar_DockingSeparatorSize;")
     private static native int ImGuiStyleVar_DockingSeparatorSize_NATIVE();
 }

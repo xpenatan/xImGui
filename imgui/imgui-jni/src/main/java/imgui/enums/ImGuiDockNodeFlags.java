@@ -42,43 +42,35 @@ public enum ImGuiDockNodeFlags implements NativeEnum<ImGuiDockNodeFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_None;
-*/
-    private static native int ImGuiDockNodeFlags_None_NATIVE();
+    private static int ImGuiDockNodeFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlags.ImGuiDockNodeFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_KeepAliveOnly;
-*/
-    private static native int ImGuiDockNodeFlags_KeepAliveOnly_NATIVE();
+    private static int ImGuiDockNodeFlags_KeepAliveOnly_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlags.ImGuiDockNodeFlags_KeepAliveOnly_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoDockingOverCentralNode;
-*/
-    private static native int ImGuiDockNodeFlags_NoDockingOverCentralNode_NATIVE();
+    private static int ImGuiDockNodeFlags_NoDockingOverCentralNode_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlags.ImGuiDockNodeFlags_NoDockingOverCentralNode_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_PassthruCentralNode;
-*/
-    private static native int ImGuiDockNodeFlags_PassthruCentralNode_NATIVE();
+    private static int ImGuiDockNodeFlags_PassthruCentralNode_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlags.ImGuiDockNodeFlags_PassthruCentralNode_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoDockingSplit;
-*/
-    private static native int ImGuiDockNodeFlags_NoDockingSplit_NATIVE();
+    private static int ImGuiDockNodeFlags_NoDockingSplit_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlags.ImGuiDockNodeFlags_NoDockingSplit_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoResize;
-*/
-    private static native int ImGuiDockNodeFlags_NoResize_NATIVE();
+    private static int ImGuiDockNodeFlags_NoResize_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlags.ImGuiDockNodeFlags_NoResize_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_AutoHideTabBar;
-*/
-    private static native int ImGuiDockNodeFlags_AutoHideTabBar_NATIVE();
+    private static int ImGuiDockNodeFlags_AutoHideTabBar_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlags.ImGuiDockNodeFlags_AutoHideTabBar_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDockNodeFlags_NoUndocking;
-*/
-    private static native int ImGuiDockNodeFlags_NoUndocking_NATIVE();
+    private static int ImGuiDockNodeFlags_NoUndocking_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDockNodeFlags.ImGuiDockNodeFlags_NoUndocking_NATIVE();
+    }
 }

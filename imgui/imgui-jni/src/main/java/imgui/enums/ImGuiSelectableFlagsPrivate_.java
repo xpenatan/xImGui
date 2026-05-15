@@ -41,38 +41,31 @@ public enum ImGuiSelectableFlagsPrivate_ implements NativeEnum<ImGuiSelectableFl
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_NoHoldingActiveID;
-*/
-    private static native int ImGuiSelectableFlags_NoHoldingActiveID_NATIVE();
+    private static int ImGuiSelectableFlags_NoHoldingActiveID_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSelectableFlagsPrivate_.ImGuiSelectableFlags_NoHoldingActiveID_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_SelectOnClick;
-*/
-    private static native int ImGuiSelectableFlags_SelectOnClick_NATIVE();
+    private static int ImGuiSelectableFlags_SelectOnClick_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSelectableFlagsPrivate_.ImGuiSelectableFlags_SelectOnClick_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_SelectOnRelease;
-*/
-    private static native int ImGuiSelectableFlags_SelectOnRelease_NATIVE();
+    private static int ImGuiSelectableFlags_SelectOnRelease_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSelectableFlagsPrivate_.ImGuiSelectableFlags_SelectOnRelease_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_SpanAvailWidth;
-*/
-    private static native int ImGuiSelectableFlags_SpanAvailWidth_NATIVE();
+    private static int ImGuiSelectableFlags_SpanAvailWidth_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSelectableFlagsPrivate_.ImGuiSelectableFlags_SpanAvailWidth_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_SetNavIdOnHover;
-*/
-    private static native int ImGuiSelectableFlags_SetNavIdOnHover_NATIVE();
+    private static int ImGuiSelectableFlags_SetNavIdOnHover_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSelectableFlagsPrivate_.ImGuiSelectableFlags_SetNavIdOnHover_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_NoPadWithHalfSpacing;
-*/
-    private static native int ImGuiSelectableFlags_NoPadWithHalfSpacing_NATIVE();
+    private static int ImGuiSelectableFlags_NoPadWithHalfSpacing_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSelectableFlagsPrivate_.ImGuiSelectableFlags_NoPadWithHalfSpacing_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiSelectableFlags_NoSetKeyOwner;
-*/
-    private static native int ImGuiSelectableFlags_NoSetKeyOwner_NATIVE();
+    private static int ImGuiSelectableFlags_NoSetKeyOwner_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiSelectableFlagsPrivate_.ImGuiSelectableFlags_NoSetKeyOwner_NATIVE();
+    }
 }

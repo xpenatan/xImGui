@@ -17,33 +17,6 @@ public class ClipboardTextFunction extends NativeObject {
 
     static public final ClipboardTextFunction NULL = ClipboardTextFunction.native_new();
 
-    /*[-JNI;-NATIVE]
-	static jmethodID ClipboardTextFunctionImpl_onGetClipboardTextJ_ID;
-	static jmethodID ClipboardTextFunctionImpl_onSetClipboardTextJ_ID;
-
-class ClipboardTextFunctionImpl : public ClipboardTextFunction {
-private:
-	JNIEnv* env;
-	jobject obj;
-public:
-void setupCallback(JNIEnv* env, jobject obj) {
-	this->env = env;
-	this->obj = env->NewGlobalRef(obj);
-	static jclass jClassID = 0;
-	if(jClassID == 0) {
-		jClassID = (jclass)env->NewGlobalRef(env->GetObjectClass(obj));
-		ClipboardTextFunctionImpl_onGetClipboardTextJ_ID = env->GetMethodID(jClassID, "internal_onGetClipboardText", "(J)V");
-		ClipboardTextFunctionImpl_onSetClipboardTextJ_ID = env->GetMethodID(jClassID, "internal_onSetClipboardText", "(J)V");
-	}
-}
-virtual void onGetClipboardText(NativeString* strOut) {
-   env->CallVoidMethod(obj, ClipboardTextFunctionImpl_onGetClipboardTextJ_ID, (jlong)strOut);
-}
-virtual void onSetClipboardText(NativeString* text) {
-   env->CallVoidMethod(obj, ClipboardTextFunctionImpl_onSetClipboardTextJ_ID, (jlong)text);
-}
-};
-*/
     @Deprecated()
     protected ClipboardTextFunction(byte b, char c) {
     }
@@ -59,20 +32,17 @@ virtual void onSetClipboardText(NativeString* text) {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ClipboardTextFunctionImpl* nativeObject = (ClipboardTextFunctionImpl*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ClipboardTextFunction.internal_native_deleteNative(this_addr);
+    }
 
     public static void setClipboardTextFunction(ImGuiPlatformIO io, ClipboardTextFunction clipboardFunction) {
         internal_native_setClipboardTextFunction(io.native_address, clipboardFunction.native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ClipboardTextFunction::setClipboardTextFunction((ImGuiPlatformIO* )io_addr, (ClipboardTextFunction* )clipboardFunction_addr);
-*/
-    public static native void internal_native_setClipboardTextFunction(long io_addr, long clipboardFunction_addr);
+    public static void internal_native_setClipboardTextFunction(long io_addr, long clipboardFunction_addr) {
+        imgui.natives.JNI_ClipboardTextFunction.internal_native_setClipboardTextFunction(io_addr, clipboardFunction_addr);
+    }
 
     public ClipboardTextFunction() {
         long addr = internal_native_create_addr();
@@ -104,14 +74,9 @@ ClipboardTextFunction::setClipboardTextFunction((ImGuiPlatformIO* )io_addr, (Cli
         onSetClipboardText(NativeString_TEMP_STATIC_GEN_1);
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)new ClipboardTextFunctionImpl();
-*/
-    public static native long internal_native_create_addr();
+    public static long internal_native_create_addr() {
+        return imgui.natives.JNI_ClipboardTextFunction.internal_native_create_addr();
+    }
 
-    /*[-JNI;-NATIVE]
-ClipboardTextFunctionImpl* nativeObject = (ClipboardTextFunctionImpl*)this_addr;
-nativeObject->setupCallback(env, object);
-*/
     public native void internal_native_setupCallback(long this_addr);
 }

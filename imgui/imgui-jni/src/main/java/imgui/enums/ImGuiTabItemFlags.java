@@ -44,53 +44,43 @@ public enum ImGuiTabItemFlags implements NativeEnum<ImGuiTabItemFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_None;
-*/
-    private static native int ImGuiTabItemFlags_None_NATIVE();
+    private static int ImGuiTabItemFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabItemFlags.ImGuiTabItemFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_UnsavedDocument;
-*/
-    private static native int ImGuiTabItemFlags_UnsavedDocument_NATIVE();
+    private static int ImGuiTabItemFlags_UnsavedDocument_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabItemFlags.ImGuiTabItemFlags_UnsavedDocument_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_SetSelected;
-*/
-    private static native int ImGuiTabItemFlags_SetSelected_NATIVE();
+    private static int ImGuiTabItemFlags_SetSelected_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabItemFlags.ImGuiTabItemFlags_SetSelected_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_NoCloseWithMiddleMouseButton;
-*/
-    private static native int ImGuiTabItemFlags_NoCloseWithMiddleMouseButton_NATIVE();
+    private static int ImGuiTabItemFlags_NoCloseWithMiddleMouseButton_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabItemFlags.ImGuiTabItemFlags_NoCloseWithMiddleMouseButton_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_NoPushId;
-*/
-    private static native int ImGuiTabItemFlags_NoPushId_NATIVE();
+    private static int ImGuiTabItemFlags_NoPushId_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabItemFlags.ImGuiTabItemFlags_NoPushId_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_NoTooltip;
-*/
-    private static native int ImGuiTabItemFlags_NoTooltip_NATIVE();
+    private static int ImGuiTabItemFlags_NoTooltip_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabItemFlags.ImGuiTabItemFlags_NoTooltip_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_NoReorder;
-*/
-    private static native int ImGuiTabItemFlags_NoReorder_NATIVE();
+    private static int ImGuiTabItemFlags_NoReorder_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabItemFlags.ImGuiTabItemFlags_NoReorder_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_Leading;
-*/
-    private static native int ImGuiTabItemFlags_Leading_NATIVE();
+    private static int ImGuiTabItemFlags_Leading_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabItemFlags.ImGuiTabItemFlags_Leading_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_Trailing;
-*/
-    private static native int ImGuiTabItemFlags_Trailing_NATIVE();
+    private static int ImGuiTabItemFlags_Trailing_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabItemFlags.ImGuiTabItemFlags_Trailing_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTabItemFlags_NoAssumedClosure;
-*/
-    private static native int ImGuiTabItemFlags_NoAssumedClosure_NATIVE();
+    private static int ImGuiTabItemFlags_NoAssumedClosure_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTabItemFlags.ImGuiTabItemFlags_NoAssumedClosure_NATIVE();
+    }
 }

@@ -50,83 +50,67 @@ public enum ImGuiDebugLogFlags implements NativeEnum<ImGuiDebugLogFlags> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_None;
-*/
-    private static native int ImGuiDebugLogFlags_None_NATIVE();
+    private static int ImGuiDebugLogFlags_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDebugLogFlags.ImGuiDebugLogFlags_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventError;
-*/
-    private static native int ImGuiDebugLogFlags_EventError_NATIVE();
+    private static int ImGuiDebugLogFlags_EventError_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDebugLogFlags.ImGuiDebugLogFlags_EventError_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventActiveId;
-*/
-    private static native int ImGuiDebugLogFlags_EventActiveId_NATIVE();
+    private static int ImGuiDebugLogFlags_EventActiveId_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDebugLogFlags.ImGuiDebugLogFlags_EventActiveId_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventFocus;
-*/
-    private static native int ImGuiDebugLogFlags_EventFocus_NATIVE();
+    private static int ImGuiDebugLogFlags_EventFocus_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDebugLogFlags.ImGuiDebugLogFlags_EventFocus_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventPopup;
-*/
-    private static native int ImGuiDebugLogFlags_EventPopup_NATIVE();
+    private static int ImGuiDebugLogFlags_EventPopup_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDebugLogFlags.ImGuiDebugLogFlags_EventPopup_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventNav;
-*/
-    private static native int ImGuiDebugLogFlags_EventNav_NATIVE();
+    private static int ImGuiDebugLogFlags_EventNav_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDebugLogFlags.ImGuiDebugLogFlags_EventNav_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventClipper;
-*/
-    private static native int ImGuiDebugLogFlags_EventClipper_NATIVE();
+    private static int ImGuiDebugLogFlags_EventClipper_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDebugLogFlags.ImGuiDebugLogFlags_EventClipper_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventSelection;
-*/
-    private static native int ImGuiDebugLogFlags_EventSelection_NATIVE();
+    private static int ImGuiDebugLogFlags_EventSelection_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDebugLogFlags.ImGuiDebugLogFlags_EventSelection_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventIO;
-*/
-    private static native int ImGuiDebugLogFlags_EventIO_NATIVE();
+    private static int ImGuiDebugLogFlags_EventIO_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDebugLogFlags.ImGuiDebugLogFlags_EventIO_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventFont;
-*/
-    private static native int ImGuiDebugLogFlags_EventFont_NATIVE();
+    private static int ImGuiDebugLogFlags_EventFont_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDebugLogFlags.ImGuiDebugLogFlags_EventFont_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventInputRouting;
-*/
-    private static native int ImGuiDebugLogFlags_EventInputRouting_NATIVE();
+    private static int ImGuiDebugLogFlags_EventInputRouting_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDebugLogFlags.ImGuiDebugLogFlags_EventInputRouting_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventDocking;
-*/
-    private static native int ImGuiDebugLogFlags_EventDocking_NATIVE();
+    private static int ImGuiDebugLogFlags_EventDocking_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDebugLogFlags.ImGuiDebugLogFlags_EventDocking_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventViewport;
-*/
-    private static native int ImGuiDebugLogFlags_EventViewport_NATIVE();
+    private static int ImGuiDebugLogFlags_EventViewport_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDebugLogFlags.ImGuiDebugLogFlags_EventViewport_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_EventMask_;
-*/
-    private static native int ImGuiDebugLogFlags_EventMask__NATIVE();
+    private static int ImGuiDebugLogFlags_EventMask__NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDebugLogFlags.ImGuiDebugLogFlags_EventMask__NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_OutputToTTY;
-*/
-    private static native int ImGuiDebugLogFlags_OutputToTTY_NATIVE();
+    private static int ImGuiDebugLogFlags_OutputToTTY_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDebugLogFlags.ImGuiDebugLogFlags_OutputToTTY_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiDebugLogFlags_OutputToTestEngine;
-*/
-    private static native int ImGuiDebugLogFlags_OutputToTestEngine_NATIVE();
+    private static int ImGuiDebugLogFlags_OutputToTestEngine_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiDebugLogFlags.ImGuiDebugLogFlags_OutputToTestEngine_NATIVE();
+    }
 }

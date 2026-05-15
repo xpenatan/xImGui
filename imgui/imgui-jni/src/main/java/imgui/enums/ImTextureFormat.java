@@ -34,13 +34,11 @@ public enum ImTextureFormat implements NativeEnum<ImTextureFormat> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTextureFormat_RGBA32;
-*/
-    private static native int ImTextureFormat_RGBA32_NATIVE();
+    private static int ImTextureFormat_RGBA32_NATIVE() {
+        return imgui.enums.natives.JNI_ImTextureFormat.ImTextureFormat_RGBA32_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImTextureFormat_Alpha8;
-*/
-    private static native int ImTextureFormat_Alpha8_NATIVE();
+    private static int ImTextureFormat_Alpha8_NATIVE() {
+        return imgui.enums.natives.JNI_ImTextureFormat.ImTextureFormat_Alpha8_NATIVE();
+    }
 }

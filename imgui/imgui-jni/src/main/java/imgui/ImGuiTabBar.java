@@ -30,49 +30,39 @@ public class ImGuiTabBar extends NativeObject {
         internal_native_deleteNative(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiTabBar* nativeObject = (ImGuiTabBar*)this_addr;
-delete nativeObject;
-*/
-    public static native void internal_native_deleteNative(long this_addr);
+    public static void internal_native_deleteNative(long this_addr) {
+        imgui.natives.JNI_ImGuiTabBar.internal_native_deleteNative(this_addr);
+    }
 
     public int get_SelectedTabId() {
         return internal_native_get_SelectedTabId(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiTabBar* nativeObject = (ImGuiTabBar*)this_addr;
-return nativeObject->SelectedTabId;
-*/
-    public static native int internal_native_get_SelectedTabId(long this_addr);
+    public static int internal_native_get_SelectedTabId(long this_addr) {
+        return imgui.natives.JNI_ImGuiTabBar.internal_native_get_SelectedTabId(this_addr);
+    }
 
     public void set_SelectedTabId(int SelectedTabId) {
         internal_native_set_SelectedTabId(native_address, SelectedTabId);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiTabBar* nativeObject = (ImGuiTabBar*)this_addr;
-nativeObject->SelectedTabId = SelectedTabId;
-*/
-    public static native void internal_native_set_SelectedTabId(long this_addr, int SelectedTabId);
+    public static void internal_native_set_SelectedTabId(long this_addr, int SelectedTabId) {
+        imgui.natives.JNI_ImGuiTabBar.internal_native_set_SelectedTabId(this_addr, SelectedTabId);
+    }
 
     public int get_NextSelectedTabId() {
         return internal_native_get_NextSelectedTabId(native_address);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiTabBar* nativeObject = (ImGuiTabBar*)this_addr;
-return nativeObject->NextSelectedTabId;
-*/
-    public static native int internal_native_get_NextSelectedTabId(long this_addr);
+    public static int internal_native_get_NextSelectedTabId(long this_addr) {
+        return imgui.natives.JNI_ImGuiTabBar.internal_native_get_NextSelectedTabId(this_addr);
+    }
 
     public void set_NextSelectedTabId(int NextSelectedTabId) {
         internal_native_set_NextSelectedTabId(native_address, NextSelectedTabId);
     }
 
-    /*[-JNI;-NATIVE]
-ImGuiTabBar* nativeObject = (ImGuiTabBar*)this_addr;
-nativeObject->NextSelectedTabId = NextSelectedTabId;
-*/
-    public static native void internal_native_set_NextSelectedTabId(long this_addr, int NextSelectedTabId);
+    public static void internal_native_set_NextSelectedTabId(long this_addr, int NextSelectedTabId) {
+        imgui.natives.JNI_ImGuiTabBar.internal_native_set_NextSelectedTabId(this_addr, NextSelectedTabId);
+    }
 }

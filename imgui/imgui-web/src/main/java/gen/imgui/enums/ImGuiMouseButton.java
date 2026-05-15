@@ -34,21 +34,12 @@ public enum ImGuiMouseButton implements NativeEnum<ImGuiMouseButton> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiMouseButton_Left;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiMouseButton_Left;")
     private static native int ImGuiMouseButton_Left_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiMouseButton_Right;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiMouseButton_Right;")
     private static native int ImGuiMouseButton_Right_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imgui.ImGuiMouseButton_Middle;
-*/
     @org.teavm.jso.JSBody(script = "return imgui.ImGuiMouseButton_Middle;")
     private static native int ImGuiMouseButton_Middle_NATIVE();
 }

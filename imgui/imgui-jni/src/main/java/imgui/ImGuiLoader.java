@@ -15,10 +15,6 @@ import com.github.xpenatan.jparser.runtime.RuntimeLoader;
  */
 public class ImGuiLoader {
 
-    /*
-      [-JNI;-NATIVE]
-              #include "ImGuiCustom.h"
-    */
     public static void init(JParserLibraryLoaderListener listener) {
         RuntimeLoader.init(new JParserLibraryLoaderListener() {
 

@@ -34,23 +34,19 @@ public enum ImGuiTableBgTarget implements NativeEnum<ImGuiTableBgTarget> {
         return CUSTOM;
     }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableBgTarget_None;
-*/
-    private static native int ImGuiTableBgTarget_None_NATIVE();
+    private static int ImGuiTableBgTarget_None_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableBgTarget.ImGuiTableBgTarget_None_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableBgTarget_RowBg0;
-*/
-    private static native int ImGuiTableBgTarget_RowBg0_NATIVE();
+    private static int ImGuiTableBgTarget_RowBg0_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableBgTarget.ImGuiTableBgTarget_RowBg0_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableBgTarget_RowBg1;
-*/
-    private static native int ImGuiTableBgTarget_RowBg1_NATIVE();
+    private static int ImGuiTableBgTarget_RowBg1_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableBgTarget.ImGuiTableBgTarget_RowBg1_NATIVE();
+    }
 
-    /*[-JNI;-NATIVE]
-return (jlong)ImGuiTableBgTarget_CellBg;
-*/
-    private static native int ImGuiTableBgTarget_CellBg_NATIVE();
+    private static int ImGuiTableBgTarget_CellBg_NATIVE() {
+        return imgui.enums.natives.JNI_ImGuiTableBgTarget.ImGuiTableBgTarget_CellBg_NATIVE();
+    }
 }

@@ -34,21 +34,12 @@ public enum ImOrientation implements NativeEnum<ImOrientation> {
         return CUSTOM;
     }
 
-    /*[-TEAVM;-NATIVE]
-return imlayout.NONE;
-*/
     @org.teavm.jso.JSBody(script = "return imlayout.NONE;")
     private static native int NONE_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imlayout.HORIZONTAL;
-*/
     @org.teavm.jso.JSBody(script = "return imlayout.HORIZONTAL;")
     private static native int HORIZONTAL_NATIVE();
 
-    /*[-TEAVM;-NATIVE]
-return imlayout.VERTICAL;
-*/
     @org.teavm.jso.JSBody(script = "return imlayout.VERTICAL;")
     private static native int VERTICAL_NATIVE();
 }
