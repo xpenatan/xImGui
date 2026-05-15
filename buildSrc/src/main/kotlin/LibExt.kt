@@ -16,7 +16,7 @@ object LibExt {
 
     const val gdxVersion = "1.14.0"
     const val gdxTeaVMVersion = "1.5.6"
-    const val jParserVersion = "1.1.3"
+    const val jParserVersion = "1.1.4"
 
     const val gdxWebGPUGroup = "io.github.monstroussoftware.gdx-webgpu"
 //    const val gdxWebGPUGroup = "com.github.xpenatan.gdx-webgpu"
