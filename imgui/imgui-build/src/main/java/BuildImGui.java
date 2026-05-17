@@ -34,6 +34,8 @@ public class BuildImGui {
         BuildToolOptions op = new BuildToolOptions(data, args);
         op.addAdditionalIDLRefPath(IDLReader.getRuntimeHelperFile());
 
+        op.ffmClassData.logMethod = true;
+
         BuilderTool.build(op, new BuildToolListener() {
             @Override
             public void onAddTarget(BuildToolOptions op, IDLReader idlReader, ArrayList<BuildMultiTarget> targets) {
