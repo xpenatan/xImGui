@@ -11,10 +11,7 @@ val macArmFile = "$libDir/mac/arm/ffm/libtexteditarm64.dylib"
 val macFile = "$libDir/mac/ffm/libtextedit64.dylib"
 
 dependencies {
-    implementation(project(":imgui:imgui-core"))
-    implementation("com.github.xpenatan.jParser:api-core:${LibExt.jParserVersion}")
-    implementation("com.github.xpenatan.jParser:loader-core:${LibExt.jParserVersion}")
-    implementation("com.github.xpenatan.jParser:runtime-core:${LibExt.jParserVersion}")
+    implementation(project(":imgui:imgui-ffm"))
 }
 
 val platforms: MutableMap<String, Jar.() -> Unit> = mutableMapOf()

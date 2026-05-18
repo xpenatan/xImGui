@@ -11,13 +11,13 @@ val macArmFile = "$imguiDir/imgui-build/build/c++/libs/mac/arm/ffm/libimguiarm64
 val macFile = "$imguiDir/imgui-build/build/c++/libs/mac/ffm/libimgui64.dylib"
 
 dependencies {
-    implementation("com.github.xpenatan.jParser:api-core:${LibExt.jParserVersion}")
-    implementation("com.github.xpenatan.jParser:loader-core:${LibExt.jParserVersion}")
-    implementation("com.github.xpenatan.jParser:runtime-ffm:${LibExt.jParserVersion}")
-    implementation("com.github.xpenatan.jParser:runtime-ffm_windows_x64:${LibExt.jParserVersion}")
-    implementation("com.github.xpenatan.jParser:runtime-ffm_linux_x64:${LibExt.jParserVersion}")
-    implementation("com.github.xpenatan.jParser:runtime-ffm_mac_x64:${LibExt.jParserVersion}")
-    implementation("com.github.xpenatan.jParser:runtime-ffm_mac_arm64:${LibExt.jParserVersion}")
+    api("com.github.xpenatan.jParser:api-core:${LibExt.jParserVersion}")
+    api("com.github.xpenatan.jParser:loader-core:${LibExt.jParserVersion}")
+    api("com.github.xpenatan.jParser:runtime-ffm:${LibExt.jParserVersion}")
+    api("com.github.xpenatan.jParser:runtime-ffm_windows_x64:${LibExt.jParserVersion}")
+    api("com.github.xpenatan.jParser:runtime-ffm_linux_x64:${LibExt.jParserVersion}")
+    api("com.github.xpenatan.jParser:runtime-ffm_mac_x64:${LibExt.jParserVersion}")
+    api("com.github.xpenatan.jParser:runtime-ffm_mac_arm64:${LibExt.jParserVersion}")
 }
 
 val platforms: MutableMap<String, Jar.() -> Unit> = mutableMapOf()

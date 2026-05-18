@@ -20,11 +20,6 @@ java {
 
 dependencies {
     implementation(project(":imgui:imgui-web"))
-    implementation("com.badlogicgames.gdx:gdx:${LibExt.gdxVersion}")
-    implementation("com.github.xpenatan.jParser:loader-core:${LibExt.jParserVersion}")
-    implementation("com.github.xpenatan.jParser:loader-web:${LibExt.jParserVersion}")
-    implementation("com.github.xpenatan.jParser:api-core:${LibExt.jParserVersion}")
-    implementation("com.github.xpenatan.jParser:api-web:${LibExt.jParserVersion}")
 }
 
 tasks.named("clean") {
