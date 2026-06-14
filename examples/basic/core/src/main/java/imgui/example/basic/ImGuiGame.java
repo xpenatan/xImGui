@@ -1,11 +1,16 @@
 package imgui.example.basic;
 
-import com.badlogic.gdx.Game;
+import imgui.example.renderer.ImGuiExampleApplication;
+import imgui.example.renderer.ImGuiRenderer;
+import io.github.libfdx.imgui.FdxImGuiRenderer;
 
-public class ImGuiGame extends Game {
+public class ImGuiGame extends ImGuiExampleApplication {
+    public ImGuiGame(FdxImGuiRenderer renderer) {
+        super(renderer);
+    }
 
     @Override
-    public void create() {
-        setScreen(new ImGuiInitScreen(this));
+    protected ImGuiRenderer createScreen() {
+        return new BasicExample();
     }
 }

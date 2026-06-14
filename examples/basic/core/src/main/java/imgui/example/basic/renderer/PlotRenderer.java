@@ -1,9 +1,9 @@
 package imgui.example.basic.renderer;
 
-import com.badlogic.gdx.Gdx;
 import com.github.xpenatan.jparser.runtime.helper.NativeFloatArray;
 import imgui.ImGui;
 import imgui.ImTemp;
+import imgui.example.renderer.ImGuiShared;
 
 public class PlotRenderer implements UIRenderer {
 
@@ -21,7 +21,7 @@ public class PlotRenderer implements UIRenderer {
             refresh_time = ImGui.GetTime();
         }
         int size = floatArray.getSize();
-        int framesPerSecond = Gdx.graphics.getFramesPerSecond();
+        int framesPerSecond = ImGuiShared.framesPerSecond();
         float updateRate = 5f;
         while (refresh_time < ImGui.GetTime()) // Create data at fixed 60 Hz rate for the demo
         {

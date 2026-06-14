@@ -1,7 +1,5 @@
 package imgui.example.imlayout.views;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Texture;
 import com.github.xpenatan.jparser.runtime.helper.NativeBoolArray;
 import com.github.xpenatan.jparser.runtime.helper.NativeFloatArray;
 import com.github.xpenatan.jparser.runtime.helper.NativeIntArray;
@@ -10,12 +8,13 @@ import imgui.ImGuiContext;
 import imgui.ImTemp;
 import imgui.ImTextureRef;
 import imgui.enums.ImGuiDir;
+import imgui.example.renderer.ExampleTexture;
 import imgui.example.renderer.ImGuiShared;
 import imgui.extension.imlayout.ImLayout;
 
 public class CollapseView {
 
-    private Texture buttonTexture;
+    private ExampleTexture buttonTexture;
 
     private NativeBoolArray isDebug = new NativeBoolArray(1);
 
@@ -36,11 +35,11 @@ public class CollapseView {
         offsetX.setValue(0, 0.0f);
         alignY.setValue(0, 0.5f);
         offsetY.setValue(0, 0.0f);
-        buttonTexture = new Texture(Gdx.files.internal("data/badlogicsmall.jpg"));
+        buttonTexture = ImGuiShared.createCheckerTexture("imlayout button", 32, 32);
     }
 
     public void dispose() {
-        buttonTexture.dispose();
+        buttonTexture.close();
     }
 
     public void render() {
@@ -111,7 +110,7 @@ public class CollapseView {
                 ImLayout.ShowLayoutDebug();
             }
 
-            ImTextureRef textureRef = ImGuiShared.instance.getTextureRef(buttonTexture);
+            ImTextureRef textureRef = ImGuiShared.textureRef(buttonTexture);
             ImGui.Image(textureRef, ImTemp.ImVec2_1(32, 32));
             ImGui.ImageButton("##textId", textureRef, ImTemp.ImVec2_1(42, 42));
 

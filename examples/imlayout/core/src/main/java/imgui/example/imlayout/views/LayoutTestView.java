@@ -1,7 +1,5 @@
 package imgui.example.imlayout.views;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Color;
 import imgui.ImGui;
 import imgui.ImRect;
 import imgui.ImTemp;
@@ -10,6 +8,7 @@ import imgui.enums.ImGuiButtonFlags;
 import imgui.enums.ImGuiButtonFlagsPrivate_;
 import imgui.enums.ImGuiTableColumnFlags;
 import imgui.enums.ImGuiTableFlags;
+import imgui.example.renderer.ImGuiShared;
 import imgui.extension.imlayout.ImGuiLayout;
 import imgui.extension.imlayout.ImLayout;
 import imgui.extension.imlayout.ImOrientation;
@@ -19,8 +18,8 @@ public class LayoutTestView {
     boolean selected;
 
     public void render() {
-        float mouseX = Gdx.input.getX();
-        float mouseY = Gdx.input.getY();
+        float mouseX = ImGui.GetMousePos().get_x();
+        float mouseY = ImGui.GetMousePos().get_y();
 
         ImLayout.BeginLayout("Stuff", ImLayout.WRAP_PARENT, ImLayout.WRAP_PARENT);
         ImLayout.ShowLayoutDebug();
@@ -70,9 +69,9 @@ public class LayoutTestView {
         ImLayout.EndLayout();
 
         ImRect rect = ImTemp.ImRect_1(ImGui.GetItemRectMin(), ImGui.GetItemRectMax());
-        int selectedColor = Color.toIntBits(255, 255, 255, 60);
-        int houveredColor = Color.toIntBits(255, 255, 255, 60);
-        int houveredStrokeColor = Color.toIntBits(255, 255, 255, 100);
+        int selectedColor = ImGuiShared.rgba(255, 255, 255, 60);
+        int houveredColor = ImGuiShared.rgba(255, 255, 255, 60);
+        int houveredStrokeColor = ImGuiShared.rgba(255, 255, 255, 100);
         ImGuiButtonFlags.CUSTOM.setValue(ImGuiButtonFlagsPrivate_.PressedOnRelease.getValue());
         int click = ImLayout.ButtonBehavior(199, rect, selected, selectedColor, houveredColor, houveredStrokeColor, ImGuiButtonFlags.CUSTOM, 0.160f);
         if (click > 0) {

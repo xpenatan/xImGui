@@ -1,7 +1,5 @@
 package imgui.example.basic;
 
-import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.utils.Array;
 import com.github.xpenatan.jparser.runtime.helper.NativeBoolArray;
 import com.github.xpenatan.jparser.runtime.helper.NativeInt;
 import com.github.xpenatan.jparser.runtime.helper.NativeIntArray;
@@ -31,13 +29,14 @@ import imgui.example.basic.renderer.TableRenderer;
 import imgui.example.basic.renderer.UIRenderer;
 import imgui.example.renderer.ImGuiRenderer;
 
-public class BasicExample extends ImGuiRenderer {
+import java.util.ArrayList;
+import java.util.List;
 
-    private OrthographicCamera uiCam;
+public class BasicExample extends ImGuiRenderer {
 
     private boolean init = false;
 
-    private Array<UIRenderer> renderers = new Array<>();
+    private List<UIRenderer> renderers = new ArrayList<>();
 
     private StringBuilder stringBuilder = new StringBuilder();
 
@@ -54,9 +53,6 @@ public class BasicExample extends ImGuiRenderer {
         renderers.add(new DragAndDropRenderer());
         renderers.add(new ModalRenderer());
 
-        uiCam = new OrthographicCamera();
-        uiCam.setToOrtho(true);
-
         ImGuiStyle style = ImGui.GetStyle();
 
         ImVec4 headerColor = style.get_Colors(ImGuiCol.Header.getValue());
@@ -66,8 +62,6 @@ public class BasicExample extends ImGuiRenderer {
 
     @Override
     public void renderImGui() {
-        uiCam.update();
-
         boolean showDocking = true;
 
         if(showDocking) {

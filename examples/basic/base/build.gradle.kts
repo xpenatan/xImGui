@@ -1,19 +1,19 @@
 plugins {
-    id("java")
+    id("java-library")
 }
 
 java {
-    sourceCompatibility = JavaVersion.toVersion(LibExt.javaMainTarget)
-    targetCompatibility = JavaVersion.toVersion(LibExt.javaMainTarget)
+    sourceCompatibility = JavaVersion.toVersion(LibExt.javaFFMTarget)
+    targetCompatibility = JavaVersion.toVersion(LibExt.javaFFMTarget)
 }
 
 dependencies {
-    implementation("com.badlogicgames.gdx:gdx:${LibExt.gdxVersion}")
-
     if(LibExt.useRepoLibs) {
-        implementation("com.github.xpenatan.xImGui:imgui-core:-SNAPSHOT")
+        api("com.github.xpenatan.xImGui:imgui-core:-SNAPSHOT")
+        api("com.github.xpenatan.xImGui:fdx-shared-impl:-SNAPSHOT")
     }
     else {
-        implementation(project(":imgui:imgui-core"))
+        api(project(":imgui:imgui-core"))
+        api(project(":fdx:fdx-shared-impl"))
     }
 }

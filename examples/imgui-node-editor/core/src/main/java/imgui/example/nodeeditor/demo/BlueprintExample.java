@@ -1,23 +1,25 @@
 package imgui.example.nodeeditor.demo;
 
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.utils.Array;
 import imgui.ImGui;
 import imgui.ImTemp;
 import imgui.ImVec2;
 import imgui.example.nodeeditor.blueprint.BlueprintNodeBuilder;
 import imgui.example.nodeeditor.blueprint.Drawing;
+import imgui.example.nodeeditor.blueprint.ExampleVec2;
+import imgui.example.renderer.ImGuiShared;
 import imgui.extension.nodeeditor.EditorContext;
 import imgui.extension.nodeeditor.NodeEditor;
 import imgui.extension.nodeeditor.PinKind;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class BlueprintExample {
 
     public static String MENU_CREATE_NODE = "Create New Node";
 
-    private Array<Node> nodes = new Array<>();
-    private Array<Link> links = new Array<>();
+    private List<Node> nodes = new ArrayList<>();
+    private List<Link> links = new ArrayList<>();
 
     private int nextId = 1;
 
@@ -191,19 +193,19 @@ public class BlueprintExample {
     {
         switch (type) {
             default:
-            case Flow:     return Color.toIntBits(255, 255, 255, alpha);
-            case Bool:     return Color.toIntBits(220,  48,  48, alpha);
-            case Int:      return Color.toIntBits( 68, 201, 156, alpha);
-            case Float:    return Color.toIntBits(147, 226,  74, alpha);
-            case String:   return Color.toIntBits(124,  21, 153, alpha);
-            case Object:   return Color.toIntBits( 51, 150, 215, alpha);
-            case Function: return Color.toIntBits(218,   0, 183, alpha);
-            case Delegate: return Color.toIntBits(255,  48,  48, alpha);
+            case Flow:     return ImGuiShared.rgba(255, 255, 255, alpha);
+            case Bool:     return ImGuiShared.rgba(220,  48,  48, alpha);
+            case Int:      return ImGuiShared.rgba( 68, 201, 156, alpha);
+            case Float:    return ImGuiShared.rgba(147, 226,  74, alpha);
+            case String:   return ImGuiShared.rgba(124,  21, 153, alpha);
+            case Object:   return ImGuiShared.rgba( 51, 150, 215, alpha);
+            case Function: return ImGuiShared.rgba(218,   0, 183, alpha);
+            case Delegate: return ImGuiShared.rgba(255,  48,  48, alpha);
         }
     }
 
     public Node SpawnInputActionNode() {
-        Node node = new Node(GetNextId(), "InputAction Fire", Color.toIntBits(255, 128, 128, 255));
+        Node node = new Node(GetNextId(), "InputAction Fire", ImGuiShared.rgba(255, 128, 128, 255));
         nodes.add(node);
         node.outputs.add(new Pin(GetNextId(), "", PinType.Delegate));
         node.outputs.add(new Pin(GetNextId(), "Pressed", PinType.Flow));
@@ -254,11 +256,11 @@ public class BlueprintExample {
     public static class Node {
         public int id;
         public String name;
-        public Array<Pin> inputs = new Array<>();
-        public Array<Pin> outputs = new Array<>();
-        public int color = Color.toIntBits(255, 255, 255, 255);
+        public List<Pin> inputs = new ArrayList<>();
+        public List<Pin> outputs = new ArrayList<>();
+        public int color = ImGuiShared.rgba(255, 255, 255, 255);
         public NodeType type = NodeType.Blueprint;
-        public Vector2 size = new Vector2(0, 0);
+        public ExampleVec2 size = new ExampleVec2(0, 0);
 
         public Node() {
         }
@@ -274,7 +276,7 @@ public class BlueprintExample {
         public int id;
         public int startPinID;
         public int endPinID;
-        public int color = Color.toIntBits(255, 255, 255, 255);
+        public int color = ImGuiShared.rgba(255, 255, 255, 255);
     }
 
     public static class Pin {

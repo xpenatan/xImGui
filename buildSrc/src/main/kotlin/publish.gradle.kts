@@ -3,14 +3,15 @@ import java.nio.file.Paths
 import java.net.URLEncoder
 
 var libProjects = mutableSetOf(
-    project(":gdx:gdx-shared-impl"),
-    project(":gdx:gdx-gl-impl"),
-    project(":gdx:gdx-wgpu-impl"),
+    project(":fdx:fdx-shared-impl"),
+    project(":fdx:fdx-gl-impl"),
+    project(":fdx:fdx-wgpu-impl"),
+    project(":fdx:fdx-vulkan-impl"),
     project(":imgui:imgui-core"),
     project(":imgui:imgui-jni"),
     project(":imgui:imgui-ffm"),
     project(":imgui:imgui-web"),
-//    project(":imgui:imgui-android"),
+    project(":imgui:imgui-android"),
     project(":extensions:imlayout:imlayout-core"),
     project(":extensions:imlayout:imlayout-jni"),
     project(":extensions:imlayout:imlayout-ffm"),

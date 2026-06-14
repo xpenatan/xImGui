@@ -1,16 +1,18 @@
 package imgui.example.basic.renderer;
 
-import com.badlogic.gdx.utils.Array;
 import imgui.ImGui;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SelectListRenderer implements UIRenderer {
 
-    private Array<String> items;
+    private List<String> items;
 
     private int currentIndex = 0;
 
     public SelectListRenderer() {
-        items = new Array<>();
+        items = new ArrayList<>();
         items.add("Item01");
         items.add("Item02");
         items.add("Item03");
@@ -21,7 +23,7 @@ public class SelectListRenderer implements UIRenderer {
     public void render() {
         String selectedText = items.get(currentIndex);
         if(ImGui.BeginCombo("##selectListId", selectedText)) {
-            for(int i = 0; i < items.size; i++) {
+            for(int i = 0; i < items.size(); i++) {
                 String item = items.get(i);
                 boolean selected = i == currentIndex;
                 if(ImGui.Selectable(item, selected)) {

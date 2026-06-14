@@ -16,11 +16,6 @@ It's meant to be small and 1-1 to C++. ImGui::Begin() is ImGui.Begin() and so on
 [ImGuiColorTextEdit](https://github.com/santaclose/ImGuiColorTextEdit/) <br>
 [ImLayout](https://github.com/xpenatan/xImGui/tree/master/extensions/imlayout) <br>
 
-## Examples
-| Examples |                                                      WebGPU                                                       |                                                    WebGL                                                     
-|:--------:|:-----------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------:|
-|  Basic   | [JS](https://xpenatan.github.io/xImGui/wgpu/basic/js) / [WASM](https://xpenatan.github.io/xImGui/wgpu/basic/wasm) | [JS](https://xpenatan.github.io/xImGui/gl/basic/js) / [WASM](https://xpenatan.github.io/xImGui/gl/basic/wasm) | 
-
 ### ImGui current state:
 
 | Emscripten | Windows | Linux | Mac | Android | iOS |
@@ -34,19 +29,11 @@ It's meant to be small and 1-1 to C++. ImGui::Begin() is ImGui.Begin() and so on
 Note: 
 ```
 * Only snapshot builds are currently available. 
-* It's best to try the examples first to see how it works before adding to your project.
 * There are 2 ImGui builds. The first contains ImGui only. The second (Ext) contains ImGui with extensions. 
 ```
 
-## How to run examples
-There are two ways to run examples. 
-* Build the source and run:
-```./gradlew :examples:basic:desktop:basic-run-desktop```
-* Change LibExt.exampleUseRepoLibs to true in Dependencies.kt and that will make all examples use snapshot from repository
-
 ## Setup
 
-    gdxVersion = "1.13.5"
     xImGuiVersion = "-SNAPSHOT"
 
 ```groovy
@@ -62,9 +49,11 @@ repositories {
 ### Core module
 ```groovy
 dependencies {
-    implementation("com.github.xpenatan.xImGui:gdx-gl-impl:$project.xImGuiVersion")   // OpenGL
-    implementation("com.github.xpenatan.xImGui:gdx-wgpu-impl:$project.xImGuiVersion") // WebGPU
     implementation("com.github.xpenatan.xImGui:imgui-core:$project.xImGuiVersion")
+    implementation("com.github.xpenatan.xImGui:fdx-shared-impl:$project.xImGuiVersion")
+    implementation("com.github.xpenatan.xImGui:fdx-gl-impl:$project.xImGuiVersion")     // OpenGL
+    implementation("com.github.xpenatan.xImGui:fdx-wgpu-impl:$project.xImGuiVersion")   // WebGPU
+    implementation("com.github.xpenatan.xImGui:fdx-vulkan-impl:$project.xImGuiVersion") // Vulkan
 
     // Extensions
     implementation "com.github.xpenatan.xImGui:imlayout-core:$project.xImGuiVersion"

@@ -1,11 +1,31 @@
 package imgui.example.imlayout;
 
-import com.badlogic.gdx.Game;
+import imgui.example.renderer.ImGuiExampleApplication;
+import imgui.example.renderer.ImGuiRenderer;
+import imgui.extension.imlayout.ImLayoutLoader;
+import io.github.libfdx.core.FdxException;
+import io.github.libfdx.imgui.FdxImGuiRenderer;
 
-public class ImGuiGame extends Game {
+public class ImGuiGame extends ImGuiExampleApplication {
+    public ImGuiGame(FdxImGuiRenderer renderer) {
+        super(renderer);
+    }
 
     @Override
-    public void create() {
-        setScreen(new ImGuiInitScreen(this));
+    protected void loadExtensions(Runnable ready) {
+        ImLayoutLoader.init((success, error) -> {
+            if (error != null) {
+                throw new FdxException("Could not load ImLayout", error);
+            }
+            if (!success) {
+                throw new FdxException("Could not load ImLayout");
+            }
+            ready.run();
+        });
+    }
+
+    @Override
+    protected ImGuiRenderer createScreen() {
+        return new ImLayoutExample();
     }
 }

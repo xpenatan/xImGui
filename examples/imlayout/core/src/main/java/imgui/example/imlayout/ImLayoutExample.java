@@ -44,8 +44,8 @@ public class ImLayoutExample extends ImGuiRenderer {
     }
 
     @Override
-    public void hide() {
+    public void dispose() {
         view.dispose();
-        super.hide();
+        super.dispose();
     }
 }

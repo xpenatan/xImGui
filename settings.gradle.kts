@@ -7,11 +7,31 @@ include(":imgui:imgui-ffm")
 include(":imgui:imgui-web")
 include(":imgui:imgui-android")
 
-// Implementation
-include(":gdx:gdx-shared-impl")
-include(":gdx:gdx-gl-impl")
-include(":gdx:gdx-wgpu-impl")
-//include(":gdx:lwjgl3-impl")
+// FDX implementation
+include(":fdx:fdx-shared-impl")
+include(":fdx:fdx-gl-impl")
+include(":fdx:fdx-wgpu-impl")
+include(":fdx:fdx-vulkan-impl")
+
+// Examples
+include(":examples:basic:base")
+include(":examples:basic:core")
+include(":examples:basic:platform:desktop-gl-jni")
+include(":examples:basic:platform:desktop-gl-ffm")
+include(":examples:basic:platform:desktop-wgpu-jni")
+include(":examples:basic:platform:desktop-wgpu-ffm")
+include(":examples:basic:platform:web-gl")
+include(":examples:basic:platform:web-wgpu")
+include(":examples:basic:platform:android")
+include(":examples:imlayout:core")
+include(":examples:imlayout:platform:desktop")
+include(":examples:imlayout:platform:teavm")
+include(":examples:ImGuiColorTextEdit:core")
+include(":examples:ImGuiColorTextEdit:platform:desktop")
+include(":examples:ImGuiColorTextEdit:platform:teavm")
+include(":examples:imgui-node-editor:core")
+include(":examples:imgui-node-editor:platform:desktop")
+include(":examples:imgui-node-editor:platform:teavm")
 
 // Extension ImLayout
 include(":extensions:imlayout:imlayout-build")
@@ -37,44 +57,6 @@ include(":extensions:imgui-node-editor:nodeeditor-jni")
 include(":extensions:imgui-node-editor:nodeeditor-ffm")
 include(":extensions:imgui-node-editor:nodeeditor-web")
 
-// Examples
-include(":examples:impl:gdx")
-include(":examples:impl:gdx-wgpu")
-
-include(":examples:basic:base")
-include(":examples:basic:core")
-include(":examples:basic:desktop-gl-jni")
-include(":examples:basic:desktop-gl-ffm")
-include(":examples:basic:desktop-wgpu-jni")
-include(":examples:basic:desktop-wgpu-ffm")
-include(":examples:basic:web-gl")
-include(":examples:basic:web-wgpu")
-include(":examples:basic:android")
-
-include(":examples:imlayout:core")
-include(":examples:imlayout:desktop")
-include(":examples:imlayout:teavm")
-
-include(":examples:ImGuiColorTextEdit:core")
-include(":examples:ImGuiColorTextEdit:desktop")
-include(":examples:ImGuiColorTextEdit:teavm")
-
-include(":examples:imgui-node-editor:core")
-include(":examples:imgui-node-editor:desktop")
-include(":examples:imgui-node-editor:teavm")
-
-//include ":examples:gdx-tests:core"
-//include ":examples:gdx-tests:desktop"
-//includeBuild('D:\\Dev\\Projects\\java\\libgdx') {
-//}
-
-//includeBuild("E:\\Dev\\Projects\\java\\gdx-teavm") {
-//    dependencySubstitution {
-//        substitute(module("com.github.xpenatan.gdx-teavm:backend-web")).using(project(":backends:backend-web"))
-//        substitute(module("com.github.xpenatan.gdx-teavm:backend-shared")).using(project(":backends:backend-shared"))
-//    }
-//}
-
 //includeBuild("E:\\Dev\\Projects\\java\\jParser") {
 //    dependencySubstitution {
 //        substitute(module("com.github.xpenatan.jParser:gen-build")).using(project(":jParser:gen:gen-build"))
@@ -94,24 +76,5 @@ include(":examples:imgui-node-editor:teavm")
 //        substitute(module("com.github.xpenatan.jParser:runtime-jni")).using(project(":jParser:runtime:runtime-jni"))
 //        substitute(module("com.github.xpenatan.jParser:runtime-ffm")).using(project(":jParser:runtime:runtime-ffm"))
 ////        substitute(module("com.github.xpenatan.jParser:runtime-android")).using(project(":jParser:runtime:runtime-android"))
-//    }
-//}
-
-//includeBuild("E:\\Dev\\Projects\\java\\jWebGPU") {
-//    dependencySubstitution {
-////        substitute(module("com.github.xpenatan.jWebGPU:webgpu-android")).using(project(":webgpu:webgpu-android"))
-//        substitute(module("com.github.xpenatan.jWebGPU:webgpu-web")).using(project(":webgpu:webgpu-web"))
-//        substitute(module("com.github.xpenatan.jWebGPU:webgpu-core")).using(project(":webgpu:webgpu-core"))
-//        substitute(module("com.github.xpenatan.jWebGPU:webgpu-ffm")).using(project(":webgpu:webgpu-ffm"))
-//        substitute(module("com.github.xpenatan.jWebGPU:webgpu-jni")).using(project(":webgpu:webgpu-jni"))
-//    }
-//}
-
-
-//includeBuild("E:\\Dev\\Projects\\java\\gdx-webgpu") {
-//    dependencySubstitution {
-//        substitute(module("io.github.monstroussoftware.gdx-webgpu:gdx-webgpu")).using(project(":gdx-webgpu"))
-//        substitute(module("io.github.monstroussoftware.gdx-webgpu:backend-desktop")).using(project(":backends:backend-desktop"))
-//        substitute(module("io.github.monstroussoftware.gdx-webgpu:backend-teavm")).using(project(":backends:backend-teavm"))
 //    }
 //}

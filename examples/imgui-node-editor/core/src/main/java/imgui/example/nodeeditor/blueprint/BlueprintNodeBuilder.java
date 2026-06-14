@@ -1,6 +1,5 @@
 package imgui.example.nodeeditor.blueprint;
 
-import com.badlogic.gdx.math.Vector2;
 import imgui.extension.nodeeditor.PinKind;
 
 public class BlueprintNodeBuilder {
@@ -63,12 +62,12 @@ public class BlueprintNodeBuilder {
     int          CurrentNodeId;
     Stage        CurrentStage;
     int          HeaderColor;
-    Vector2      NodeMin;
-    Vector2      NodeMax;
-    Vector2      HeaderMin;
-    Vector2      HeaderMax;
-    Vector2      ContentMin;
-    Vector2      ContentMax;
+    ExampleVec2  NodeMin;
+    ExampleVec2  NodeMax;
+    ExampleVec2  HeaderMin;
+    ExampleVec2  HeaderMax;
+    ExampleVec2  ContentMin;
+    ExampleVec2  ContentMax;
     boolean      HasHeader;
 
     public enum Stage {

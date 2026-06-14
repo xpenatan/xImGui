@@ -1,7 +1,5 @@
 package imgui.example.nodeeditor;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Preferences;
 import com.github.xpenatan.jparser.runtime.helper.NativeString;
 import imgui.example.nodeeditor.demo.BlueprintExample;
 import imgui.example.nodeeditor.demo.SimpleExample;
@@ -25,17 +23,10 @@ public class NodeEditorExample extends ImGuiRenderer {
         editorContext = NodeEditor.CreateEditor(new LoadSaveSettingsListener() {
             @Override
             public void onLoad(NativeString data) {
-//                Preferences preferences = Gdx.app.getPreferences("NodeEditorData");
-//                String jsonData = preferences.getString("jsonData", "");
-//                data.append(jsonData);
             }
 
             @Override
             public boolean onSave(NativeString data, SaveReasonFlags reason) {
-                Preferences preferences = Gdx.app.getPreferences("NodeEditorData");
-                String str = data.c_str();
-                preferences.putString("jsonData", str);
-                preferences.flush();
                 return true;
             }
         });
