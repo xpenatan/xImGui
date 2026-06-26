@@ -24,7 +24,7 @@ dependencies {
     else {
         implementation(project(":imgui:imgui-web"))
         wasmLibraries(project(path = ":imgui:imgui-web", configuration = "wasmRuntimeElements"))
-        implementation(project(":fdx:fdx-gl-impl"))
+        implementation(project(":backends:fdx:fdx-gl-impl"))
     }
 
     implementation("io.github.libfdx:backend_web:${LibExt.libFdxVersion}")

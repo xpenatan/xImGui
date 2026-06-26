@@ -53,7 +53,7 @@ dependencies {
 
     implementation(project(":examples:basic:base"))
     implementation(project(":examples:basic:core"))
-    implementation(project(":fdx:fdx-gl-impl"))
+    implementation(project(":backends:fdx:fdx-gl-impl"))
     implementation("io.github.libfdx:backend_android:${LibExt.libFdxVersion}")
     implementation("io.github.libfdx:fdx_android:${LibExt.libFdxVersion}")
 }

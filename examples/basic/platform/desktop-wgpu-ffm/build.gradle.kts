@@ -24,7 +24,7 @@ dependencies {
         implementation(project(":imgui:imgui-ffm"))
     }
 
-    implementation(project(":fdx:fdx-wgpu-impl"))
+    implementation(project(":backends:fdx:fdx-wgpu-impl"))
     implementation("io.github.libfdx:backend_desktop:${LibExt.libFdxVersion}")
     implementation("io.github.libfdx:wgpu_desktop_ffm:${LibExt.libFdxVersion}")
     runtimeOnly("io.github.libfdx:backend_desktop_native:${LibExt.libFdxVersion}")

@@ -14,6 +14,6 @@ dependencies {
     }
     else {
         api(project(":imgui:imgui-core"))
-        api(project(":fdx:fdx-shared-impl"))
+        api(project(":backends:fdx:fdx-shared-impl"))
     }
 }

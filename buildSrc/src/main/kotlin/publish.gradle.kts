@@ -3,10 +3,10 @@ import java.nio.file.Paths
 import java.net.URLEncoder
 
 var libProjects = mutableSetOf(
-    project(":fdx:fdx-shared-impl"),
-    project(":fdx:fdx-gl-impl"),
-    project(":fdx:fdx-wgpu-impl"),
-    project(":fdx:fdx-vulkan-impl"),
+    project(":backends:fdx:fdx-shared-impl"),
+    project(":backends:fdx:fdx-gl-impl"),
+    project(":backends:fdx:fdx-wgpu-impl"),
+    project(":backends:fdx:fdx-vulkan-impl"),
     project(":imgui:imgui-core"),
     project(":imgui:imgui-jni"),
     project(":imgui:imgui-ffm"),

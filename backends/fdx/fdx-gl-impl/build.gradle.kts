@@ -3,15 +3,15 @@ plugins {
     id("maven-publish")
 }
 
-val moduleName = "fdx-vulkan-impl"
+val moduleName = "fdx-gl-impl"
 val javaVersion = JavaVersion.toVersion(LibExt.javaFFMTarget)
 
 group = LibExt.groupId
 version = LibExt.libVersion
 
 dependencies {
-    api(project(":fdx:fdx-shared-impl"))
-    api("io.github.libfdx:vulkan_core:${LibExt.libFdxVersion}")
+    api(project(":backends:fdx:fdx-shared-impl"))
+    api("io.github.libfdx:gl_core:${LibExt.libFdxVersion}")
 }
 
 java {

@@ -7,11 +7,11 @@ include(":imgui:imgui-ffm")
 include(":imgui:imgui-web")
 include(":imgui:imgui-android")
 
-// FDX implementation
-include(":fdx:fdx-shared-impl")
-include(":fdx:fdx-gl-impl")
-include(":fdx:fdx-wgpu-impl")
-include(":fdx:fdx-vulkan-impl")
+// Backend implementations
+include(":backends:fdx:fdx-shared-impl")
+include(":backends:fdx:fdx-gl-impl")
+include(":backends:fdx:fdx-wgpu-impl")
+include(":backends:fdx:fdx-vulkan-impl")
 
 // Examples
 include(":examples:basic:base")

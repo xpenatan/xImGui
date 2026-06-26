@@ -10,7 +10,7 @@ group = LibExt.groupId
 version = LibExt.libVersion
 
 dependencies {
-    api(project(":fdx:fdx-shared-impl"))
+    api(project(":backends:fdx:fdx-shared-impl"))
     api("io.github.libfdx:wgpu_core:${LibExt.libFdxVersion}")
 }
 

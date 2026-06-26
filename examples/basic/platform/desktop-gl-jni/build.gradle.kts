@@ -24,7 +24,7 @@ dependencies {
         implementation(project(":imgui:imgui-jni"))
     }
 
-    implementation(project(":fdx:fdx-gl-impl"))
+    implementation(project(":backends:fdx:fdx-gl-impl"))
     implementation("io.github.libfdx:backend_desktop:${LibExt.libFdxVersion}")
     runtimeOnly("io.github.libfdx:backend_desktop_native:${LibExt.libFdxVersion}")
     runtimeOnly("io.github.libfdx:gl_desktop_native:${LibExt.libFdxVersion}")
