@@ -2,6 +2,11 @@ plugins {
     id("java")
 }
 
+val wasmLibraries by configurations.creating {
+    isCanBeConsumed = false
+    isCanBeResolved = true
+}
+
 java {
     sourceCompatibility = JavaVersion.toVersion(LibExt.javaFFMTarget)
     targetCompatibility = JavaVersion.toVersion(LibExt.javaFFMTarget)
@@ -15,14 +20,16 @@ dependencies {
 
     if(LibExt.useRepoLibs) {
         implementation("com.github.xpenatan.xImGui:imgui-web:-SNAPSHOT")
-        implementation("com.github.xpenatan.xImGui:imgui-web_wasm:-SNAPSHOT")
+        wasmLibraries("com.github.xpenatan.xImGui:imgui-web_wasm:-SNAPSHOT")
         implementation("com.github.xpenatan.xImGui:imlayout-web:-SNAPSHOT")
-        implementation("com.github.xpenatan.xImGui:imlayout-web_wasm:-SNAPSHOT")
+        wasmLibraries("com.github.xpenatan.xImGui:imlayout-web_wasm:-SNAPSHOT")
         implementation("com.github.xpenatan.xImGui:fdx-gl-impl:-SNAPSHOT")
     }
     else {
         implementation(project(":imgui:imgui-web"))
+        wasmLibraries(project(path = ":imgui:imgui-web", configuration = "wasmRuntimeElements"))
         implementation(project(":extensions:imlayout:imlayout-web"))
+        wasmLibraries(project(path = ":extensions:imlayout:imlayout-web", configuration = "wasmRuntimeElements"))
         implementation(project(":fdx:fdx-gl-impl"))
     }
 
@@ -34,5 +41,14 @@ tasks.register<JavaExec>("imlayout_web_run") {
     group = "example-teavm"
     description = "Build basic example"
     mainClass.set(mainClassName)
-    classpath = sourceSets["main"].runtimeClasspath
+    classpath = sourceSets["main"].runtimeClasspath + wasmLibraries
+    inputs.files(wasmLibraries)
+    doLast {
+        copy {
+            from(wasmLibraries.map { zipTree(it) }) {
+                include("*.js", "*.wasm")
+            }
+            into(layout.buildDirectory.dir("dist/scripts"))
+        }
+    }
 }

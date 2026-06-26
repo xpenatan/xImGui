@@ -28,6 +28,11 @@ dependencies {
     implementation("io.github.libfdx:backend_desktop:${LibExt.libFdxVersion}")
     runtimeOnly("io.github.libfdx:backend_desktop_native:${LibExt.libFdxVersion}")
     runtimeOnly("io.github.libfdx:gl_desktop_native:${LibExt.libFdxVersion}")
+    runtimeOnly("org.lwjgl:lwjgl-opengl:3.4.1")
+    runtimeOnly("org.lwjgl:lwjgl-opengl:3.4.1:natives-linux")
+    runtimeOnly("org.lwjgl:lwjgl-opengl:3.4.1:natives-macos")
+    runtimeOnly("org.lwjgl:lwjgl-opengl:3.4.1:natives-macos-arm64")
+    runtimeOnly("org.lwjgl:lwjgl-opengl:3.4.1:natives-windows")
 }
 
 val mainClassName = "imgui.example.textedit.Main"

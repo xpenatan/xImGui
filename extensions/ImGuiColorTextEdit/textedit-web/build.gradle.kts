@@ -13,6 +13,15 @@ val wasmJar = tasks.register<Jar>("wasmJar") {
     archiveClassifier.set("")
 }
 
+val wasmRuntimeElements by configurations.creating {
+    isCanBeConsumed = true
+    isCanBeResolved = false
+}
+
+artifacts {
+    add(wasmRuntimeElements.name, wasmJar)
+}
+
 java {
     sourceCompatibility = JavaVersion.toVersion(LibExt.javaWebTarget)
     targetCompatibility = JavaVersion.toVersion(LibExt.javaWebTarget)

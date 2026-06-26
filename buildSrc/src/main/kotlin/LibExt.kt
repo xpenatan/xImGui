@@ -11,11 +11,11 @@ object LibExt {
         }
 
     const val javaMainTarget = "1.8"
-    const val javaWebTarget = "11"
+    const val javaWebTarget = "17"
     const val javaModernTarget = "17"
     const val javaFFMTarget = "25"
 
-    const val jParserVersion = "1.1.4"
+    const val jParserVersion = "-SNAPSHOT"
     const val libFdxVersion = "-SNAPSHOT"
 
     const val jUnitVersion = "4.12"

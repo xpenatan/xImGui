@@ -9,6 +9,7 @@ import imgui.enums.ImGuiCond;
 import imgui.enums.ImGuiDir;
 import imgui.ImGuiDockNode;
 import imgui.enums.ImGuiDockNodeFlags;
+import imgui.enums.ImGuiDockNodeFlagsPrivate_;
 import imgui.ImGuiInternal;
 import imgui.ImGuiStyle;
 import imgui.enums.ImGuiStyleVar;
@@ -125,6 +126,11 @@ public class BasicExample extends ImGuiRenderer {
         ImGui.PopStyleVar();
 
         dockspace_id = ImGui.GetID("MyDockSpace");
+        if (!first) {
+            // Dock all windows when app start
+            first = true;
+            resetLayout(0);
+        }
         ImGui.DockSpace(dockspace_id, ImTemp.ImVec2_1(0f, 0f), dockspace_flags);
 
         ImGui.End();
@@ -152,37 +158,57 @@ public class BasicExample extends ImGuiRenderer {
         ImGui.Begin("GUI Editor");
         ImGui.End();
 
-        if (!first) {
-            // Dock all windows when app start
-            first = true;
-            resetLayout(0);
-        }
     }
 
-    private void resetLayout(int layout) {
+    private boolean resetLayout(int layout) {
         ImGuiViewport imGuiViewport = ImGui.GetMainViewport();
 
         ImGui.SetWindowFocus(null);
         ImGuiInternal.DockBuilderRemoveNode(dockspace_id); // clear any previous layout
-        ImGuiInternal.DockBuilderAddNode(dockspace_id, dockspace_flags);
+        dockspace_id = ImGuiInternal.DockBuilderAddNode(dockspace_id, dockspace_flags.getCustom().setValue(
+                dockspace_flags.getValue() | ImGuiDockNodeFlagsPrivate_.DockSpace.getValue()));
+        ImGuiDockNode rootNode = ImGuiInternal.DockBuilderGetNode(dockspace_id);
+        if(rootNode == null || rootNode.native_isNULL()) {
+            return false;
+        }
         ImGuiInternal.DockBuilderSetNodeSize(dockspace_id, imGuiViewport.get_Size());
 
         int centralID = 0;
 
         if(layout == 0 ) {
-            int rightId = ImGuiInternal.DockBuilderSplitNode(dockspace_id, ImGuiDir.Right, 0.2f, NativeIntArray.NULL.NULL, tmp01);
+            int rightId = splitNode(dockspace_id, ImGuiDir.Right, 0.2f, tmp01);
             int leftId = tmp01.getValue();
+            if(rightId == 0 || leftId == 0) {
+                ImGuiInternal.DockBuilderFinish(dockspace_id);
+                return false;
+            }
 
-            int bottomId = ImGuiInternal.DockBuilderSplitNode(leftId, ImGuiDir.Down, 0.3f, NativeIntArray.NULL, tmp01);
+            int bottomId = splitNode(leftId, ImGuiDir.Down, 0.3f, tmp01);
             int topId = tmp01.getValue();
-            int topLeft = ImGuiInternal.DockBuilderSplitNode(topId, ImGuiDir.Left, 0.4f, NativeIntArray.NULL, tmp01);
+            if(bottomId == 0 || topId == 0) {
+                ImGuiInternal.DockBuilderFinish(dockspace_id);
+                return false;
+            }
+            int topLeft = splitNode(topId, ImGuiDir.Left, 0.4f, tmp01);
             centralID = tmp01.getValue();
+            if(topLeft == 0 || centralID == 0) {
+                ImGuiInternal.DockBuilderFinish(dockspace_id);
+                return false;
+            }
 
-            int rightTopId = ImGuiInternal.DockBuilderSplitNode(rightId, ImGuiDir.Up, 0.5f, NativeIntArray.NULL, tmp01);
+            int rightTopId = splitNode(rightId, ImGuiDir.Up, 0.5f, tmp01);
             int rightBottomId = tmp01.getValue();
+            if(rightTopId == 0 || rightBottomId == 0) {
+                ImGuiInternal.DockBuilderFinish(dockspace_id);
+                return false;
+            }
 
-            int bottomLeftId = ImGuiInternal.DockBuilderSplitNode(bottomId, ImGuiDir.Left, 0.4f, NativeIntArray.NULL, tmp01);
+            int bottomLeftId = splitNode(bottomId, ImGuiDir.Left, 0.4f, tmp01);
             int bottomRightId = tmp01.getValue();
+            if(bottomLeftId == 0 || bottomRightId == 0) {
+                ImGuiInternal.DockBuilderFinish(dockspace_id);
+                return false;
+            }
 
             // Plug in all layout ids to window title
             ImGuiInternal.DockBuilderDockWindow("Game Editor", centralID);
@@ -194,21 +220,41 @@ public class BasicExample extends ImGuiRenderer {
             ImGuiInternal.DockBuilderDockWindow("Assets", bottomLeftId);
         }
         else {
-            int rightId = ImGuiInternal.DockBuilderSplitNode(dockspace_id, ImGuiDir.Right, 0.2f, NativeIntArray.NULL, tmp01);
+            int rightId = splitNode(dockspace_id, ImGuiDir.Right, 0.2f, tmp01);
 
             int leftId = tmp01.getValue();
+            if(rightId == 0 || leftId == 0) {
+                ImGuiInternal.DockBuilderFinish(dockspace_id);
+                return false;
+            }
 
-            int bottomId = ImGuiInternal.DockBuilderSplitNode(leftId, ImGuiDir.Down, 0.2f, NativeIntArray.NULL, tmp01);
+            int bottomId = splitNode(leftId, ImGuiDir.Down, 0.2f, tmp01);
             int topId = tmp01.getValue();
+            if(bottomId == 0 || topId == 0) {
+                ImGuiInternal.DockBuilderFinish(dockspace_id);
+                return false;
+            }
 
-            int leftLeftId = ImGuiInternal.DockBuilderSplitNode(topId, ImGuiDir.Left, 0.2f, NativeIntArray.NULL, tmp01);
+            int leftLeftId = splitNode(topId, ImGuiDir.Left, 0.2f, tmp01);
             int middleId = tmp01.getValue();
+            if(leftLeftId == 0 || middleId == 0) {
+                ImGuiInternal.DockBuilderFinish(dockspace_id);
+                return false;
+            }
 
-            int middleLeftId = ImGuiInternal.DockBuilderSplitNode(middleId, ImGuiDir.Left, 0.5f, NativeIntArray.NULL, tmp01);
+            int middleLeftId = splitNode(middleId, ImGuiDir.Left, 0.5f, tmp01);
             centralID = tmp01.getValue();
+            if(middleLeftId == 0 || centralID == 0) {
+                ImGuiInternal.DockBuilderFinish(dockspace_id);
+                return false;
+            }
 
-            int rightTopId = ImGuiInternal.DockBuilderSplitNode(rightId, ImGuiDir.Up, 0.5f, NativeIntArray.NULL, tmp01);
+            int rightTopId = splitNode(rightId, ImGuiDir.Up, 0.5f, tmp01);
             int rightBottomId = tmp01.getValue();
+            if(rightTopId == 0 || rightBottomId == 0) {
+                ImGuiInternal.DockBuilderFinish(dockspace_id);
+                return false;
+            }
 
             ImGuiInternal.DockBuilderDockWindow("Game Editor", centralID);
             ImGuiInternal.DockBuilderDockWindow("GUI Editor", centralID);
@@ -220,12 +266,32 @@ public class BasicExample extends ImGuiRenderer {
         }
 
         ImGuiDockNode node = ImGuiInternal.DockBuilderGetNode(centralID);
-        // Select Game editor tab
-        int gameEditor = ImGuiInternal.ImHashStr("Game Editor", 0, 0);
-        int id = ImGuiInternal.ImHashStr("#TAB", 0, gameEditor);
-        node.set_SelectedTabId(id);
+        if(node != null && !node.native_isNULL()) {
+            // Select Game editor tab
+            int gameEditor = ImGuiInternal.ImHashStr("Game Editor", 0, 0);
+            int id = ImGuiInternal.ImHashStr("#TAB", 0, gameEditor);
+            node.set_SelectedTabId(id);
+        }
 
         ImGuiInternal.DockBuilderFinish(dockspace_id);
+        return true;
+    }
+
+    private int splitNode(int nodeId, ImGuiDir splitDir, float sizeRatio, NativeInt outIdAtOppositeDir) {
+        if(!hasDockNode(nodeId)) {
+            outIdAtOppositeDir.set(0);
+            return 0;
+        }
+        outIdAtOppositeDir.set(0);
+        return ImGuiInternal.DockBuilderSplitNode(nodeId, splitDir, sizeRatio, NativeIntArray.NULL, outIdAtOppositeDir);
+    }
+
+    private boolean hasDockNode(int nodeId) {
+        if(nodeId == 0) {
+            return false;
+        }
+        ImGuiDockNode node = ImGuiInternal.DockBuilderGetNode(nodeId);
+        return node != null && !node.native_isNULL();
     }
 
     private void renderMenu() {

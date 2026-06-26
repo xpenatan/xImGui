@@ -1,6 +1,7 @@
 package imgui.example.nodeeditor;
 
 import io.github.libfdx.backend.web.WebBuilder;
+import org.teavm.tooling.ConsoleTeaVMToolLog;
 
 import java.nio.file.Path;
 
@@ -14,8 +15,10 @@ public class Build {
                 .asset(Path.of("../../../assets"))
                 .mainClass(Launcher.class.getName())
                 .title("imgui-node-editor WebGL Example")
+                .canvasId("canvas")
                 .fillWindow()
                 .obfuscated(true)
+                .log(new ConsoleTeaVMToolLog(false))
                 .build();
     }
 }

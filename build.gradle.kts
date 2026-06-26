@@ -20,6 +20,35 @@ buildscript {
 }
 
 allprojects  {
+    val jParserSnapshotModules = setOf(
+        "api-core",
+        "api-web",
+        "gen-build",
+        "gen-build-tool",
+        "gen-c",
+        "gen-core",
+        "gen-ffm",
+        "gen-idl",
+        "gen-jni",
+        "gen-web",
+        "loader-core",
+        "loader-web",
+        "runtime-android",
+        "runtime-base",
+        "runtime-core",
+        "runtime-ffm",
+        "runtime-ffm_linux_x64",
+        "runtime-ffm_mac_arm64",
+        "runtime-ffm_mac_x64",
+        "runtime-ffm_windows_x64",
+        "runtime-jni",
+        "runtime-jni_linux_x64",
+        "runtime-jni_mac_arm64",
+        "runtime-jni_mac_x64",
+        "runtime-jni_windows_x64",
+        "runtime-web",
+        "runtime-web_wasm"
+    )
 
     repositories {
         mavenLocal()
@@ -37,6 +66,12 @@ allprojects  {
     configurations.configureEach {
         // Check for updates every sync
         resolutionStrategy.cacheChangingModulesFor(0, "seconds")
+        resolutionStrategy.eachDependency {
+            if(requested.group == "com.github.xpenatan.jParser" && requested.name in jParserSnapshotModules) {
+                useVersion(LibExt.jParserVersion)
+                because("xImGui targets the jParser snapshot TeaVM 0.15 service-based substitutions")
+            }
+        }
 //        resolutionStrategy {
 //            force("com.github.xpenatan.jWebGPU:webgpu-core:-SNAPSHOT")
 //            force("com.github.xpenatan.jWebGPU:webgpu-jni:-SNAPSHOT")

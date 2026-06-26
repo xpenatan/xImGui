@@ -40,6 +40,10 @@ android {
 dependencies {
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.3")
 
+    configurations.configureEach {
+        exclude(module = "imgui-core")
+    }
+
     if(LibExt.useRepoLibs) {
         implementation("com.github.xpenatan.xImGui:imgui-android:-SNAPSHOT")
     }
@@ -51,4 +55,5 @@ dependencies {
     implementation(project(":examples:basic:core"))
     implementation(project(":fdx:fdx-gl-impl"))
     implementation("io.github.libfdx:backend_android:${LibExt.libFdxVersion}")
+    implementation("io.github.libfdx:fdx_android:${LibExt.libFdxVersion}")
 }

@@ -13,6 +13,14 @@ val wasmJar = tasks.register<Jar>("wasmJar") {
     archiveClassifier.set("")
 }
 
+val wasmRuntimeElements by configurations.creating {
+    isCanBeConsumed = true
+    isCanBeResolved = false
+}
+
+artifacts {
+    add(wasmRuntimeElements.name, wasmJar)
+}
 
 dependencies {
     api("com.github.xpenatan.jParser:runtime-core:${LibExt.jParserVersion}")

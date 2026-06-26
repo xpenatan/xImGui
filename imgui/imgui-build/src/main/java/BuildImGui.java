@@ -306,10 +306,10 @@ public class BuildImGui {
             // Make a static library
             AndroidTarget compileStaticTarget = new AndroidTarget(target, apiLevel);
             compileStaticTarget.isStatic = true;
-            compileStaticTarget.cppCompiler.add("-fPIC");
+            compileStaticTarget.cppFlags.add("-fPIC");
             compileStaticTarget.cppFlags.add("-std=c++17");
             compileStaticTarget.headerDirs.add("-I" + sourceDir);
-            compileStaticTarget.cppInclude.add(sourceDir + "/imgui/**.cpp");
+            compileStaticTarget.cppInclude.add(sourceDir + "/*.cpp");
             compileStaticTarget.cppFlags.add("-Wno-error=format-security");
             compileStaticTarget.cppFlags.add("-DIMGUI_DISABLE_FILE_FUNCTIONS");
             compileStaticTarget.cppFlags.add("-DIMGUI_DEFINE_MATH_OPERATORS");
@@ -319,7 +319,7 @@ public class BuildImGui {
             AndroidTarget linkTarget = new AndroidTarget(target, apiLevel);
             linkTarget.setupJNIGlueCode(libBuildCPPPath);
             linkTarget.cppFlags.add("-std=c++17");
-            linkTarget.cppCompiler.add("-fPIC");
+            linkTarget.cppFlags.add("-fPIC");
             linkTarget.headerDirs.add("-I" + sourceDir);
             linkTarget.headerDirs.add("-I" + op.getCustomSourceDir());
             linkTarget.linkerFlags.add(libBuildCPPPath + "/libs/android/" + target.getFolder() +"/lib" + op.libName + ".a");

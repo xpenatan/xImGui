@@ -199,8 +199,6 @@ public abstract class FdxImGuiGraphicsRenderer implements FdxImGuiRenderer {
     private static final ShaderBundle IMGUI_SHADER = ShaderBundle.builder("imgui")
             .profile(ShaderProfile.PORTABLE_WEBGPU)
             .wgsl(IMGUI_WGSL)
-            .glsl(IMGUI_VERTEX_GLSL, IMGUI_FRAGMENT_GLSL)
-            .spirv(IMGUI_VULKAN_VERTEX_SPIRV, IMGUI_VULKAN_FRAGMENT_SPIRV)
             .reflection(ShaderReflection.of(
                     new ShaderBinding[] {
                             ShaderBinding.of(0, 0, "u_texture", ShaderBindingType.TEXTURE),
